@@ -2,7 +2,7 @@ MODULE M_Tower_Of_Hanoi
     !*****************************************************
     !Module Name:   M_Tower_Of_Hanoi
     !Version:       1.01
-    !Description:   Robot program to solve Tower of Haanoi
+    !Description:   Robot program to solve Tower of Haanoi, Works for up to 10 discs.
     !Date:          2024-08-01
     !Author:        @ManicZanic
     !               @ELIICE
@@ -75,46 +75,28 @@ MODULE M_Tower_Of_Hanoi
 
         !SHAFT 1 WORKING DATA
 
-        !Shaft Approach Side.
-        NShaft1X1:=-(NDD/2);
-        !Shaft Approach Above. Calculate from values to clear the shaft holding disk
-        NShaft1Z1:=NSL+GOFz+GSafe;
-        !Shaft Drop Position Start
-        NShaft1Z2:=NSL-(NDH/2);
-        !Shaft Drop Position End
-        NShaft1Z3:=NSL-(NDH);
-        !Shaft Pick Position. Reset to zero.
-        NShaft1Z4:=-0;
+        !Shaft Approach Side. NShaft1X1:=-(NDD/2);
+        !Shaft Approach Above. Calculate from values to clear the shaft holding disk NShaft1Z1:=NSL+GOFz+GSafe;
+        !Shaft Drop Position Start NShaft1Z2:=NSL-(NDH/2);
+        !Shaft Drop Position End NShaft1Z3:=NSL-(NDH);
+        !Shaft Pick Position. Reset to zero. NShaft1Z4:=-0;
 
         !SHAFT 2 WORKING DATA
-        !Shaft Approach Side.
-        NShaft2X1:=-(NDD/2);
-        !Shaft Approach Above. Calculate from values to clear the shaft holding disk
-        NShaft2Z1:=NSL+GOFz+GSafe;
-        !Shaft Drop Position Start
-        NShaft2Z2:=NSL-(NDH/2);
-        !Shaft Drop Position End
-        NShaft2Z3:=NSL-(NDH);
-        !Shaft Pick Position. Reset to zero.
-        NShaft2Z4:=-0;
+        !Shaft Approach Side. NShaft2X1:=-(NDD/2);
+        !Shaft Approach Above. Calculate from values to clear the shaft holding disk NShaft2Z1:=NSL+GOFz+GSafe;
+        !Shaft Drop Position Start NShaft2Z2:=NSL-(NDH/2);
+        !Shaft Drop Position End NShaft2Z3:=NSL-(NDH);
+        !Shaft Pick Position. Reset to zero. NShaft2Z4:=-0;
 
         !SHAFT 3  WORKING DATA
-        !Shaft Approach Side.
-        NShaft3X1:=-(NDD/2);
-        !Shaft Approach Above. Calculate from values to clear the shaft holding disk
-        NShaft3Z1:=NSL+GOFz+GSafe;
-        !Shaft Drop Position Start
-        NShaft3Z2:=NSL-(NDH/2);
-        !Shaft Drop Position End
-        NShaft3Z3:=NSL-(NDH);
-        !Shaft Pick Position. Reset to zero.
-        NShaft3Z4:=-0;
+        !Shaft Approach Side. NShaft3X1:=-(NDD/2);
+        !Shaft Approach Above. Calculate from values to clear the shaft holding disk NShaft3Z1:=NSL+GOFz+GSafe;
+        !Shaft Drop Position Start NShaft3Z2:=NSL-(NDH/2);
+        !Shaft Drop Position End NShaft3Z3:=NSL-(NDH);
+        !Shaft Pick Position. Reset to zero. NShaft3Z4:=-0;
 
         !Calculate pick height
-        !Number of Disks x Nominal Disk Height
-        NShaft1Z4:=NOD*NDH-GOFz;
-        NShaft2Z4:=(0);
-        NShaft3Z4:=(0);
+        !Number of Disks x Nominal Disk Height NShaft1Z4:=NOD*NDH-GOFz; NShaft2Z4:=(0); NShaft3Z4:=(0);
 
     ENDPROC
 
@@ -127,11 +109,7 @@ MODULE M_Tower_Of_Hanoi
     ENDPROC
 
     PROC R_Shaft_Stroke_Test()
-        MoveAbsJ jHomePos,v500,fine,tGripperTool;
-        NOD:=5;!Set number of discs at start
-        NCountActive:=1;!Set to 1 to disable motion. Set to 0 to resume motion.
-        NStepCount:=0;!Resets NStepCount to 0
-        NLoop:=1;!Resets NLoop to 0
+        MoveAbsJ jHomePos,v500,fine,tGripperTool; NOD:=5;!Set number of discs at start NCountActive:=1;!Set to 1 to disable motion. Set to 0 to resume motion. NStepCount:=0;!Resets NStepCount to 0 NLoop:=1;!Resets NLoop to 0
     IF NOD=1 THEN
             R_Tier1;
         ENDIF
@@ -177,8 +155,7 @@ MODULE M_Tower_Of_Hanoi
             !        PulseDO \PLength:=1, DO_GripperClose;
             WaitTime 0.2;
             !WaitDI DI_GripperClosed,1 \MaxTime:=0.5;
-            MoveL offs(Shaft1,0,0,NShaft1Z1),v500,z5,tGripperTool\Wobj:=wobjTower;
-            NShaft1Z4:=NShaft1Z4-NDH;
+            MoveL offs(Shaft1,0,0,NShaft1Z1),v500,z5,tGripperTool\Wobj:=wobjTower; NShaft1Z4:=NShaft1Z4-NDH;
         ENDIF
         if NStart=2 then
             MoveJ offs(Shaft2,NShaft2X1,0,NShaft2Z1),v500,z5,tGripperTool\Wobj:=wobjTower;
@@ -188,8 +165,7 @@ MODULE M_Tower_Of_Hanoi
             !        PulseDO \PLength:=1, DO_GripperClose;
             WaitTime 0.2;
             !WaitDI DI_GripperClosed,1 \MaxTime:=0.5;
-            MoveL offs(Shaft2,0,0,NShaft2Z1),v500,z5,tGripperTool\Wobj:=wobjTower;
-            NShaft2Z4:=NShaft2Z4-NDH;
+            MoveL offs(Shaft2,0,0,NShaft2Z1),v500,z5,tGripperTool\Wobj:=wobjTower; NShaft2Z4:=NShaft2Z4-NDH;
         ENDIF
         if NStart=3 then
             MoveJ offs(Shaft3,NShaft3X1,0,NShaft3Z1),v500,z5,tGripperTool\Wobj:=wobjTower;
@@ -199,8 +175,7 @@ MODULE M_Tower_Of_Hanoi
             !        PulseDO \PLength:=1, DO_GripperClose;
             WaitTime 0.2;
             !WaitDI DI_GripperClosed,1 \MaxTime:=0.5;
-            MoveL offs(Shaft3,0,0,NShaft3Z1),v500,z5,tGripperTool\Wobj:=wobjTower;
-            NShaft3Z4:=NShaft3Z4-NDH;
+            MoveL offs(Shaft3,0,0,NShaft3Z1),v500,z5,tGripperTool\Wobj:=wobjTower; NShaft3Z4:=NShaft3Z4-NDH;
         ENDIF
         if NEnd=1 then
             MoveJ offs(Shaft1,0,0,NShaft1Z1),v500,z5,tGripperTool\Wobj:=wobjTower;
@@ -210,8 +185,7 @@ MODULE M_Tower_Of_Hanoi
             WaitTime 0.2;
             !WaitDI DI_GripperOpened,1 \MaxTime:=0.5;
             MoveL offs(Shaft1,NShaft1X1,0,NShaft1Z3),v500,z0,tGripperTool\Wobj:=wobjTower;
-            MoveL offs(Shaft1,0,0,NShaft1Z1),v500,z5,tGripperTool\Wobj:=wobjTower;
-            NShaft1Z4:=NShaft1Z4+NDH;
+            MoveL offs(Shaft1,0,0,NShaft1Z1),v500,z5,tGripperTool\Wobj:=wobjTower; NShaft1Z4:=NShaft1Z4+NDH;
         ENDIF
         if NEnd=2 THEN
             MoveJ offs(Shaft2,0,0,NShaft2Z1),v500,z5,tGripperTool\Wobj:=wobjTower;
@@ -221,8 +195,7 @@ MODULE M_Tower_Of_Hanoi
             WaitTime 0.2;
             !WaitDI DI_GripperOpened,1 \MaxTime:=0.5;
             MoveL offs(Shaft2,NShaft2X1,0,NShaft2Z3),v500,z0,tGripperTool\Wobj:=wobjTower;
-            MoveL offs(Shaft2,0,0,NShaft2Z1),v500,z5,tGripperTool\Wobj:=wobjTower;
-            NShaft2Z4:=NShaft2Z4+NDH;
+            MoveL offs(Shaft2,0,0,NShaft2Z1),v500,z5,tGripperTool\Wobj:=wobjTower; NShaft2Z4:=NShaft2Z4+NDH;
         ENDIF
         IF NEnd=3 THEN
             MoveJ offs(Shaft3,0,0,NShaft3Z1),v500,z5,tGripperTool\Wobj:=wobjTower;
@@ -232,47 +205,30 @@ MODULE M_Tower_Of_Hanoi
             WaitTime 0.2;
             !WaitDI DI_GripperOpened,1 \MaxTime:=0.5;
             MoveL offs(Shaft3,NShaft3X1,0,NShaft3Z3),v500,z0,tGripperTool\Wobj:=wobjTower;
-            MoveL offs(Shaft3,0,0,NShaft3Z1),v500,z5,tGripperTool\Wobj:=wobjTower;
-            NShaft3Z4:=NShaft3Z4+NDH;
+            MoveL offs(Shaft3,0,0,NShaft3Z1),v500,z5,tGripperTool\Wobj:=wobjTower; NShaft3Z4:=NShaft3Z4+NDH;
         ENDIF
     ENDIF 
         incr NStepCount;
     ENDPROC
 
     PROC R_Tier1()
-        IF NOD=1 THEN
-            NStart:=1;
-            NEnd:=3;
+        IF NOD=1 THEN NStart:=1; NEnd:=3;
             R_Pick_N_Place;
         ENDIF
-        IF NOD>1 THEN
-            NStart:=1;
-            NEnd:=2;
+        IF NOD>1 THEN NStart:=1; NEnd:=2;
             R_Pick_N_Place;
         ENDIF
     ENDPROC
 
     PROC R_Tier2()
-        IF NOD>=2 AND NLoop=1 THEN
-            NStart:=1;
-            NEnd:=2;
-            R_Pick_N_Place;
-            NStart:=1;
-            NEnd:=3;
-            R_Pick_N_Place;
-            NStart:=2;
-            NEnd:=3;
+        IF NOD>=2 AND NLoop=1 THEN NStart:=1; NEnd:=2;
+            R_Pick_N_Place; NStart:=1; NEnd:=3;
+            R_Pick_N_Place; NStart:=2; NEnd:=3;
             R_Pick_N_Place;
         ENDIF
-        IF NOD>2 AND NLoop=2 THEN
-            NStart:=3;
-            NEnd:=2;
-            R_Pick_N_Place;
-            NStart:=3;
-            NEnd:=1;
-            R_Pick_N_Place;
-            NStart:=2;
-            NEnd:=1;
+        IF NOD>2 AND NLoop=2 THEN NStart:=3; NEnd:=2;
+            R_Pick_N_Place; NStart:=3; NEnd:=1;
+            R_Pick_N_Place; NStart:=2; NEnd:=1;
             R_Pick_N_Place;
         ENDIF
     ENDPROC
@@ -280,29 +236,17 @@ MODULE M_Tower_Of_Hanoi
     PROC R_Tier3()
         !Move tier 3 to the right tower
         IF NOD>=3 AND NLoop=1 THEN
-            R_Tier2;
-            NLoop:=2;
-            NStart:=1;
-            NEnd:=2;
+            R_Tier2; NLoop:=2; NStart:=1; NEnd:=2;
             R_Pick_N_Place;
-            R_Tier2;
-            NLoop:=1;
-            NStart:=2;
-            NEnd:=3;
+            R_Tier2; NLoop:=1; NStart:=2; NEnd:=3;
             R_Pick_N_Place;
             R_Tier2;
         ENDIF
         !Move tier 3 to the left tower
         IF NOD>3 AND NLoop=2 THEN
-            R_Tier2;
-            NLoop:=1;
-            NStart:=3;
-            NEnd:=2;
+            R_Tier2; NLoop:=1; NStart:=3; NEnd:=2;
             R_Pick_N_Place;
-            R_Tier2;
-            NLoop:=2;
-            NStart:=2;
-            NEnd:=1;
+            R_Tier2; NLoop:=2; NStart:=2; NEnd:=1;
             R_Pick_N_Place;
             R_Tier2;
         ENDIF
@@ -311,29 +255,17 @@ MODULE M_Tower_Of_Hanoi
     PROC R_Tier4()
         !Move tier 4 to the right tower
         IF NOD>=4 AND NLoop=1 THEN
-            R_Tier3;
-            NLoop:=2;
-            NStart:=1;
-            NEnd:=2;
+            R_Tier3; NLoop:=2; NStart:=1; NEnd:=2;
             R_Pick_N_Place;
-            R_Tier3;
-            NLoop:=1;
-            NStart:=2;
-            NEnd:=3;
+            R_Tier3; NLoop:=1; NStart:=2; NEnd:=3;
             R_Pick_N_Place;
             R_Tier3;
         ENDIF
         !Move tier 4 to the left tower
         IF NOD>4 AND NLoop=2 THEN
-            R_Tier3;
-            NLoop:=1;
-            NStart:=3;
-            NEnd:=2;
+            R_Tier3; NLoop:=1; NStart:=3; NEnd:=2;
             R_Pick_N_Place;
-            R_Tier3;
-            NLoop:=2;
-            NStart:=2;
-            NEnd:=1;
+            R_Tier3; NLoop:=2; NStart:=2; NEnd:=1;
             R_Pick_N_Place;
             R_Tier3;
         ENDIF
@@ -342,29 +274,17 @@ MODULE M_Tower_Of_Hanoi
     PROC R_Tier5()
         !Move tier 5 to the right tower
         IF NOD>=5 AND NLoop=1 THEN
-            R_Tier4;
-            NLoop:=2;
-            NStart:=1;
-            NEnd:=2;
+            R_Tier4; NLoop:=2; NStart:=1; NEnd:=2;
             R_Pick_N_Place;
-            R_Tier4;
-            NLoop:=1;
-            NStart:=2;
-            NEnd:=3;
+            R_Tier4; NLoop:=1; NStart:=2; NEnd:=3;
             R_Pick_N_Place;
             R_Tier4;
         ENDIF
         !Move tier 5 to the left tower
         IF NOD>5 AND NLoop=2 THEN
-            R_Tier4;
-            NLoop:=1;
-            NStart:=3;
-            NEnd:=2;
+            R_Tier4; NLoop:=1; NStart:=3; NEnd:=2;
             R_Pick_N_Place;
-            R_Tier4;
-            NLoop:=2;
-            NStart:=2;
-            NEnd:=1;
+            R_Tier4; NLoop:=2; NStart:=2; NEnd:=1;
             R_Pick_N_Place;
             R_Tier4;
         ENDIF
@@ -373,29 +293,17 @@ MODULE M_Tower_Of_Hanoi
     PROC R_Tier6()
         !Move Tier 6 to the right tower
         IF NOD>=6 AND NLoop=1 THEN
-            R_Tier5;
-            NLoop:=2;
-            NStart:=1;
-            NEnd:=2;
+            R_Tier5; NLoop:=2; NStart:=1; NEnd:=2;
             R_Pick_N_Place;
-            R_Tier5;
-            NLoop:=1;
-            NStart:=2;
-            NEnd:=3;
+            R_Tier5; NLoop:=1; NStart:=2; NEnd:=3;
             R_Pick_N_Place;
             R_Tier5;
         ENDIF
         !Move Tier 6 to the left tower
         IF NOD>6 AND NLoop=2 THEN
-            R_Tier5;
-            NLoop:=1;
-            NStart:=3;
-            NEnd:=2;
+            R_Tier5; NLoop:=1; NStart:=3; NEnd:=2;
             R_Pick_N_Place;
-            R_Tier5;
-            NLoop:=2;
-            NStart:=2;
-            NEnd:=1;
+            R_Tier5; NLoop:=2; NStart:=2; NEnd:=1;
             R_Pick_N_Place;
             R_Tier5;
         ENDIF
@@ -404,29 +312,17 @@ MODULE M_Tower_Of_Hanoi
     PROC R_Tier7()
         !Move Tier 7 to the right tower
         IF NOD>=7 AND NLoop=1 THEN
-            R_Tier6;
-            NLoop:=2;
-            NStart:=1;
-            NEnd:=2;
+            R_Tier6; NLoop:=2; NStart:=1; NEnd:=2;
             R_Pick_N_Place;
-            R_Tier6;
-            NLoop:=1;
-            NStart:=2;
-            NEnd:=3;
+            R_Tier6; NLoop:=1; NStart:=2; NEnd:=3;
             R_Pick_N_Place;
             R_Tier6;
         ENDIF
         !Move Tier 7 to the left tower
         IF NOD>7 AND NLoop=2 THEN
-            R_Tier6;
-            NLoop:=1;
-            NStart:=3;
-            NEnd:=2;
+            R_Tier6; NLoop:=1; NStart:=3; NEnd:=2;
             R_Pick_N_Place;
-            R_Tier6;
-            NLoop:=2;
-            NStart:=2;
-            NEnd:=1;
+            R_Tier6; NLoop:=2; NStart:=2; NEnd:=1;
             R_Pick_N_Place;
             R_Tier6;
         ENDIF
@@ -435,29 +331,17 @@ MODULE M_Tower_Of_Hanoi
     PROC R_Tier8()
         !Move Tier 8 to the right tower
         IF NOD>=8 AND NLoop=1 THEN
-            R_Tier7;
-            NLoop:=2;
-            NStart:=1;
-            NEnd:=2;
+            R_Tier7; NLoop:=2; NStart:=1; NEnd:=2;
             R_Pick_N_Place;
-            R_Tier7;
-            NLoop:=1;
-            NStart:=2;
-            NEnd:=3;
+            R_Tier7; NLoop:=1; NStart:=2; NEnd:=3;
             R_Pick_N_Place;
             R_Tier7;
         ENDIF
         !Move Tier 8 to the left tower
         IF NOD>8 AND NLoop=2 THEN
-            R_Tier7;
-            NLoop:=1;
-            NStart:=3;
-            NEnd:=2;
+            R_Tier7; NLoop:=1; NStart:=3; NEnd:=2;
             R_Pick_N_Place;
-            R_Tier7;
-            NLoop:=2;
-            NStart:=2;
-            NEnd:=1;
+            R_Tier7; NLoop:=2; NStart:=2; NEnd:=1;
             R_Pick_N_Place;
             R_Tier7;
         ENDIF
@@ -466,29 +350,17 @@ MODULE M_Tower_Of_Hanoi
     PROC R_Tier9()
         !Move Tier 9 to the right tower
         IF NOD>=9 AND NLoop=1 THEN
-            R_Tier8;
-            NLoop:=2;
-            NStart:=1;
-            NEnd:=2;
+            R_Tier8; NLoop:=2; NStart:=1; NEnd:=2;
             R_Pick_N_Place;
-            R_Tier8;
-            NLoop:=1;
-            NStart:=2;
-            NEnd:=3;
+            R_Tier8; NLoop:=1; NStart:=2; NEnd:=3;
             R_Pick_N_Place;
             R_Tier8;
         ENDIF
         !Move Tier 9 to the left tower
         IF NOD>9 AND NLoop=2 THEN
-            R_Tier8;
-            NLoop:=1;
-            NStart:=3;
-            NEnd:=2;
+            R_Tier8; NLoop:=1; NStart:=3; NEnd:=2;
             R_Pick_N_Place;
-            R_Tier8;
-            NLoop:=2;
-            NStart:=2;
-            NEnd:=1;
+            R_Tier8; NLoop:=2; NStart:=2; NEnd:=1;
             R_Pick_N_Place;
             R_Tier8;
         ENDIF
@@ -497,29 +369,17 @@ MODULE M_Tower_Of_Hanoi
     PROC R_Tier10()
         !Move Tier 10 to the right tower
         IF NOD>=10 AND NLoop=1 THEN
-            R_Tier9;
-            NLoop:=2;
-            NStart:=1;
-            NEnd:=2;
+            R_Tier9; NLoop:=2; NStart:=1; NEnd:=2;
             R_Pick_N_Place;
-            R_Tier9;
-            NLoop:=1;
-            NStart:=2;
-            NEnd:=3;
+            R_Tier9; NLoop:=1; NStart:=2; NEnd:=3;
             R_Pick_N_Place;
             R_Tier9;
         ENDIF
         !Move Tier 10 to the left tower
         IF NOD>10 AND NLoop=2 THEN
-            R_Tier9;
-            NLoop:=1;
-            NStart:=3;
-            NEnd:=2;
+            R_Tier9; NLoop:=1; NStart:=3; NEnd:=2;
             R_Pick_N_Place;
-            R_Tier9;
-            NLoop:=2;
-            NStart:=2;
-            NEnd:=1;
+            R_Tier9; NLoop:=2; NStart:=2; NEnd:=1;
             R_Pick_N_Place;
             R_Tier9;
         ENDIF
