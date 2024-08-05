@@ -35,7 +35,7 @@ local var robtarget robTEST:= [[928.6752,554.3275,-177.9826],[-0.08751068,-0.589
         nZ1 := Base_z + Pole_height;
 
         ! Move to the top of pole1
-        ! this is the proper lo
+        ! this is the proper format for MOVEL
         MoveL [[nX1,nY1,nZ1],[1,0,0,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]],v10,fine,tool0;
 
         ! Calculate coordinates for the top disk on pole1
