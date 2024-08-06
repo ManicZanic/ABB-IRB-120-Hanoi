@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Version>
+	<Major>5</Major>
+	<Minor>15</Minor>
+	<Build>5001</Build>
+	<Revision>05</Revision>
+	<SubRevision>00</SubRevision>
+	<BuildTag>
+	</BuildTag>
+	<RobAPICompatibilityRevision>0</RobAPICompatibilityRevision>
+	<Title>RobotWare</Title>
+	<Type>RobotWare</Type>
+	<Description>Controller Software</Description>
+	<Date>2014-01-31</Date>
+	<MCTimeStamp>#17:49:32/jan 30 2014#</MCTimeStamp>
+</Version>
