@@ -1,8 +1,6 @@
 # Tower of Hanoi with ABB IRB 120
 Re: Chris Boden @Physicsduck
 
-# Tower of Hanoi with ABB IRB 120
-Re: Chris Boden @Physicsduck
 
 ## Project Description
 - Get “Topsy” / “Turvy”, two ABB IRB 120 M2004 robots working and solve the Tower of Hanoi problem.\
