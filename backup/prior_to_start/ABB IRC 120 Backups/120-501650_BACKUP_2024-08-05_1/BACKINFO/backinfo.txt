@@ -1,0 +1,49 @@
+#
+# Generated backup file, do not edit.
+#
+# Originally at: /hd0a/temp/c67eb319
+# 00-01-06  06:39:03
+#
+>>SYSTEM_ID:
+120-501650
+
+>>PRODUCTS_ID:
+RobotWare Version: 5.15.5001.05
+
+  RW Control module key
+  RobotWare OS and English
+  644-5 Chinese
+  748-1 DeviceNet Lean
+  608-1 World Zones
+  616-1 PC Interface
+  623-1 Multitasking
+  RW Drive module 1 key
+  ABB standard manipulator
+  IRB 120
+  120-0.58/3
+  Drive System 09 120/140/1400/1600/260 Compact
+  1-Phase Power Supply
+  No additional drive
+
+>>ROBOT_TYPE:
+120-0.58/3
+
+>>HOME:
+All public files and directories
+
+>>SYSPAR:
+SYS.cfg
+PROC.cfg
+EIO.cfg
+SIO.cfg
+MOC.cfg
+MMC.cfg
+
+
+>>TASK1: (T_ROB1,NewProgramName,)
+SYSMOD/user.sys @ user.sys
+PROGMOD/MainModule.mod @ mainmodule.mod
+PROGMOD/M_Tower_Of_Hanoi.mod @ m_tower_of_hanoi.mod
+
+
+>>EOF:

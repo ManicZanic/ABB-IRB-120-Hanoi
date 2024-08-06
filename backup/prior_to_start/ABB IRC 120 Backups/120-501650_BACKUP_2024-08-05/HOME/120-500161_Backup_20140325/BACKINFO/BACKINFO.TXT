@@ -1,0 +1,57 @@
+#
+# Generated backup file, do not edit.
+#
+# Originally at: F:/120-500161_Backup_20140325
+# 14-04-25  21:32:14
+#
+>>SYSTEM_ID:
+12-80335
+
+>>PRODUCTS_ID:
+RobotWare Version: 5.15.2005.02
+
+  RW Control module key
+  RobotWare OS and English
+  644-5 Chinese
+  748-1 DeviceNet Lean
+  608-1 World Zones
+  614-1 FTP and NFS client
+  616-1 PC Interface
+  617-1 FlexPendant Interface
+  623-1 Multitasking
+  RW Drive module 1 key
+  ABB standard manipulator
+  IRB 120
+  120-0.58/3
+  Drive System 09 120/140/1400/1600/260 Compact
+  1-Phase Power Supply
+  No additional drive
+
+>>ROBOT_TYPE:
+120-0.58/3
+
+>>HOME:
+All public files and directories
+
+>>SYSPAR:
+SYS.cfg
+PROC.cfg
+EIO.cfg
+SIO.cfg
+MOC.cfg
+MMC.cfg
+
+
+>>TASK1: (T_ROB1,,)
+PROGMOD\Utility.mod @ utility.mod
+SYSMOD\user.sys @ user.sys
+PROGMOD\PosMoudle.mod @ posmoudle.mod
+PROGMOD\MainModule.mod @ mainmodule.mod
+PROGMOD\RobData.mod @ robdata.mod
+
+>>TASK2: (Socket,,)
+SYSMOD\user.sys @ user.sys
+PROGMOD\Socket.mod @ socket.mod
+
+
+>>EOF:
