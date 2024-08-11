@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain elogDomain="EIO" domainNo="7" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="1451" max="1535">
+  <Message number="1451" eDefine="SYS_EIO_EN_ETH_OPTION_NOT_INSTALLED">
+    <Title>Ethernet extra port option not installed</Title>
+    <Description>A EtherNet/IP I/O bus is configured to use the extra Ethernet port, but the Ethernet extra port option has not been installed.</Description>
+    <Consequences>No communication on the EtherNet/IP bus is possible.</Consequences>
+    <Causes>An attempt may have been made to add the EtherNet/IP functionality, without installing the correct option.</Causes>
+    <Actions>1. If the Ethernet extra port option is required: configure a new system with this option, and install the system.<p />2. If the Ethernet extra port option is not required: change the configuration and restart the system.</Actions>
+  </Message>
+  <Message number="1452" eDefine="SYS_EIO_EN_TOO_MANY_BUSES_CONFIGURED">
+    <Title>Too many EtherNet/IP buses are configured</Title>
+    <Description>Too many EtherNet/IP I/O buses are configured. There is only possibly to have one I/O bus for EtherNet/IP Master/Slave.</Description>
+    <Actions>1. Remove one the EtherNet/IP buses from the configuration.<p />2. Restart the system.</Actions>
+  </Message>
+  <Message number="1453" eDefine="SYS_EIO_EN_IDENTITY_MISMATCH">
+    <Title>Wrong identity for EtherNet/IP I/O unit</Title>
+    <Description>The identity for the I/O unit &lt;<arg format="%s" ordinal="1" />&gt; in the configuration is not correct.<p /><p />The correct identity is:<p />Vendor ID &lt;<arg format="%d" ordinal="2" />&gt;<p />Device Type &lt;<arg format="%d" ordinal="3" />&gt;<p />Product Code &lt;<arg format="%d" ordinal="4" />&gt;</Description>
+    <Consequences>No contact will be established with this I/O unit.</Consequences>
+    <Actions>Correct the configuration for the I/O unit type with the identity information above.</Actions>
+  </Message>
+  <Message number="1454" eDefine="SYS_EIO_EN_NO_IP_ADDRESS_SPECIFIED">
+    <Title>The <arg format="%s" ordinal="1" /> address is missing</Title>
+    <Description>No IP address is specified for the <arg format="%s" ordinal="1" /> I/O bus.</Description>
+    <Consequences>No communication on the <arg format="%s" ordinal="1" /> I/O bus is possible.</Consequences>
+    <Actions>1. Specify a valid IP address in the I/O bus configuration.<p />2. Restart the system.</Actions>
+  </Message>
+  <Message number="1455" eDefine="SYS_EIO_EN_CNX_TYPE_INVALID">
+    <Title>EtherNet/IP connection type unknown</Title>
+    <Description>The I/O configuration is invalid.<p />The unit type &lt;<arg format="%s" ordinal="1" />&gt; has an invalid/unknown connection type &lt;<arg format="%s" ordinal="2" />&gt;. <p /><p />The connection type must be one of the following:<p />- MULTICAST<p />- POINT2POINT</Description>
+    <Consequences>This unit type has been rejected.</Consequences>
+    <Actions>1. Correct the connection type of the unit type.<p />2. Restart the system.</Actions>
+  </Message>
+  <Message number="1456" eDefine="SYS_EIO_EN_HARDWARE_MISSING">
+    <Title>EtherNet/IP hardware is missing</Title>
+    <Description>The DSQC 612 hardware needed for running EtherNet/IP is missing.</Description>
+    <Consequences>No communication on the EtherNet/IP bus is possible.</Consequences>
+    <Causes>An attempt may have been made to add EtherNet/IP functionality on the first Ethernet port, without installing the correct hardware.<p />Note: If you are running MultiMove two DSQC 612 boards are required, otherwise one board.</Causes>
+    <Actions>1. Install a DSQC 612 board in the controller.<p />2. Restart the system.</Actions>
+  </Message>
+  <Message number="1457" eDefine="SYS_EIO_EN_INVALID_GATEWAY">
+    <Title>The EtherNet/IP gateway address is invalid</Title>
+    <Description>It is not possible to have the gateway address same as the IP address.<p /><p />Or the gateway address can not be same as the default destination &lt;0.0.0.0&gt;.</Description>
+    <Consequences>The default controller gateway address &lt;<arg format="%s" ordinal="1" />&gt; will be used and not the specified gateway address &lt;<arg format="%s" ordinal="2" />&gt;.</Consequences>
+    <Actions>1. If no physical gateway is used, do not specify any gateway address in the configuration.<p />2. Restart the system.</Actions>
+  </Message>
+  <Message number="1458" eDefine="SYS_EIO_EN_COULD_NOT_SET_GATEWAY">
+    <Title>Could not change the default gateway address</Title>
+    <Description>If no destination address is specified in the Ethernet/IP configuration, the default controller gateway address will be changed. The destination address was not given and the specified gateway address &lt;<arg format="%s" ordinal="1" />&gt; was not valid and could not be used..</Description>
+    <Consequences>No communication on the EtherNet/IP bus is possible.</Consequences>
+    <Actions>1. Correct the gateway in the EtherNet/IP I/O bus configuration.<p />2. Restart the system.</Actions>
+  </Message>
+  <Message number="1459" eDefine="SYS_EIO_EN_ILLEGAL_BUS_ADDRESS">
+    <Title>Illegal address for EtherNet/IP</Title>
+    <Description>The address &lt;<arg format="%s" ordinal="1" />&gt; for the EtherNet/IP bus is illegal.</Description>
+    <Consequences>No communication on the EtherNet/IP bus is possible.</Consequences>
+    <Actions>1. Correct the address in the EtherNet/IP bus configuration.<p />2. Restart the system.</Actions>
+  </Message>
+  <Message number="1460" eDefine="SYS_EIO_EN_CAN_NOT_CONNECT_TO_UNIT">
+    <Title>Not able to connect to EtherNet/IP I/O unit</Title>
+    <Description>The configured I/O unit &lt;<arg format="%s" ordinal="1" />&gt; with address &lt;<arg format="%s" ordinal="2" />&gt; does not physically exist on the EtherNet/IP bus.</Description>
+    <Consequences>It is not possible to access the I/O unit or I/O signals on it, since it is currently not communicating with the controller. The system will go to state SYS FAIL, if the I/O unit has been assigned Unit Trust level Required (0) in the configuration.</Consequences>
+    <Causes>The I/O unit does not exist physically.<p />The I/O unit address is wrong.<p />The I/O unit is malfunctioning.</Causes>
+    <Actions>1. Check if the I/O unit physically exist on the EtherNet/IP bus or if the address is correct.<p />2. If the address has been changed, restart the system.</Actions>
+  </Message>
+  <Message number="1461" eDefine="SYS_EIO_EN_UNIT_ADDR_SAME_AS_MASTER">
+    <Title>Duplicated address on the EtherNet/IP I/O bus</Title>
+    <Description>The I/O unit &lt;<arg format="%s" ordinal="1" />&gt; and the EtherNet/IP master have been configured with the same address in the controller.</Description>
+    <Consequences>It is not possible to access the I/O unit or I/O signals on it, since it is currently not communicating with the controller.</Consequences>
+    <Actions>1. Change the address for the I/O unit &lt;<arg format="%s" ordinal="1" />&gt; or the address for the EtherNet/IP master in the configuration. If changing the I/O unit address and it have this address physically it must also be changed in the I/O unit.<p />2. Restart the system.</Actions>
+  </Message>
+  <Message number="1462" eDefine="SYS_EIO_EN_ILLEGAL_BUS_SUBNET_MASK">
+    <Title>Illegal subnet mask for EtherNet/IP</Title>
+    <Description>The subnet mask &lt;<arg format="%s" ordinal="1" />&gt; for the EtherNet/IP bus is illegal.</Description>
+    <Consequences>No communication on the EtherNet/IP bus is possible.</Consequences>
+    <Actions>1. Correct the subnet mask in the EtherNet/IP bus configuration.<p />2. Restart the system.</Actions>
+  </Message>
+  <Message number="1463" eDefine="SYS_EIO_EN_RESERVED_ADDRESS">
+    <Title>Illegal address for EtherNet/IP bus</Title>
+    <Description>The EtherNet/IP address &lt;<arg format="%s" ordinal="1" />&gt; is reserved.</Description>
+    <Consequences>No communication on the EtherNet/IP bus is possible.</Consequences>
+    <Causes>The specified address is on a subnet reserved by another Ethernet port. Two Ethernet ports on the controller can not be on the same subnet.<p /><p />Example:<p />EtherNet/IP port: 192.168.125.x<p />Service port: 192.168.125.x<p /><p />Note:<p />The subnets within the range 192.168.125.xxx - 192.168.130.xxx are predefined and can not be used.</Causes>
+    <Actions>1. Change the address to another subnet. <p />2. Restart the system.</Actions>
+  </Message>
+  <Message number="1464" eDefine="SYS_EIO_EN_COULD_NOT_ADD_GATEWAY">
+    <Title>Could not add a new gateway for EtherNet/IP</Title>
+    <Description>Could not add the gateway address &lt;<arg format="%s" ordinal="1" />&gt; with the destination address &lt;<arg format="%s" ordinal="2" />&gt; for EtherNet/IP.</Description>
+    <Consequences>No communication on the EtherNet/IP bus is possible.</Consequences>
+    <Causes>1. The gateway address or the destination address are invalid.<p />2. No destination address have been specified.</Causes>
+    <Actions>1. Correct the gateway address or the destination address in the EtherNet/IP bus configuration.<p />2. Restart the system.</Actions>
+  </Message>
+  <Message number="1465" eDefine="SYS_EIO_DNLE_ERROR_RSP">
+    <Title>DeviceNet Lean error response</Title>
+    <Description>The I/O unit &lt;<arg format="%s" ordinal="1" />&gt; has reported an error response.<p /><p />General Error Code <arg format="%ld" ordinal="2" />.<p />Additional Code <arg format="%ld" ordinal="3" /></Description>
+    <Actions>1. Read about the General Error Code in the DeviceNet Lean application manual or the DeviceNet specification Appendix H .<p />2. The I/O unit might be occupied by another master.<p />3. Cycle the power of the I/O unit.</Actions>
+  </Message>
+  <Message number="1466" eDefine="SYS_EIO_PNET_CONFIG_FAILED">
+    <Title>Profinet configuration failed</Title>
+    <Description>The configuration file &lt;<arg format="%s" ordinal="1" />&gt; was not accepted by the DSQC 678.<p /><p />Error code returned <arg format="%ld" ordinal="2" />.</Description>
+    <Consequences>No new configuration will be stored in the DSQC 678.</Consequences>
+    <Actions>Make sure that the correct filetype is used.</Actions>
+  </Message>
+  <Message number="1467" eDefine="SYS_EIO_PNET_CONFIG_MISSING">
+    <Title>Profinet configuration file missing</Title>
+    <Description>The configuration file &lt;<arg format="%s" ordinal="1" />&gt; was not found.</Description>
+    <Consequences>No new configuration will be stored in the DSQC 678.</Consequences>
+    <Actions>1. Make sure the file exists.<p />2. Make sure that the configuration file is placed in the HOME directory of your current system.</Actions>
+  </Message>
+  <Message number="1468" eDefine="SYS_EIO_PNET_FIRMWARE_UPGRADE">
+    <Title>Profinet board DSQC 678 upgraded</Title>
+    <Description>The Profinet board DSQC 678 have been upgraded to a new firmware with version &lt;<arg format="%s" ordinal="1" />&gt;</Description>
+    <Consequences>The new firmware might affect some of the configuration parameters or other communication behaviour.</Consequences>
+    <Actions>1. Make sure that no configuration changes are needed for connecting controllers.<p />2. Make sure that current Step 7 configuration in the DSQC 678 is compatible with the new firmware.</Actions>
+  </Message>
+  <Message number="1469" eDefine="SYS_EIO_INTERNAL_SIG_TABLE_ERR">
+    <Title>Max number of internal I/O signals exceeded</Title>
+    <Description>The I/O configuration is invalid.<p />The maximum number, <arg format="%d" ordinal="1" />, of internal I/O signals in the I/O system has been exceeded.</Description>
+    <Actions>Modify the configuration of the I/O system (by reducing the number of I/O signals specfied in the additional option configuration) so that the maximum limit is not exceeded. </Actions>
+  </Message>
+  <Message number="1470" eDefine="SYS_EIO_DNLE_CONFIG_ERR_ID">
+    <Title>Wrong unit type</Title>
+    <Description>The I/O unit &lt;<arg format="%s" ordinal="1" />&gt; connected to the DeviceNet Lean bus is not of the same type as configured.<p />Reported vendor ID was <arg format="%d" ordinal="2" />, expected was <arg format="%d" ordinal="3" />.</Description>
+    <Consequences>No communication to the I/O unit is possible.</Consequences>
+    <Actions>Change the I/O unit configuration.</Actions>
+  </Message>
+  <Message number="1471" eDefine="SYS_EIO_DNLE_MASTER_UNIT_ADDRESS_ERR">
+    <Title>Duplicated address on DeviceNet Lean bus</Title>
+    <Description>The I/O unit &lt;<arg format="%s" ordinal="1" />&gt; and the DeviceNet Lean master is configured with the same address.</Description>
+    <Consequences>The I/O unit &lt;<arg format="%s" ordinal="1" />&gt; has been rejected.</Consequences>
+    <Actions>1. Change address for I/O unit &lt;<arg format="%s" ordinal="1" />&gt; or the DeviceNet Lean master.<p /></Actions>
+  </Message>
+  <Message number="1473" eDefine="SYS_EIO_DNLE_BUS_SCAN">
+    <Title>DeviceNet Lean bus scan result</Title>
+    <Description>Address:      Product:      Vendor ID:      Product code:<p /><p /><arg format="%s" ordinal="1" /></Description>
+  </Message>
+  <Message number="1474" eDefine="SYS_EIO_CMD_GET_DISPLAY">
+    <Title>Fieldbus command response message</Title>
+    <Description>An 'Get data response' message &lt;<arg format="%s" ordinal="1" />&gt; from I/O unit &lt;<arg format="%s" ordinal="2" />&gt; was received.<p /><p />Response message as raw data:<p /><arg format="%s" ordinal="4" /><p /><p />Response message as string:<p /><arg format="%s" ordinal="3" /></Description>
+  </Message>
+  <Message number="1475" eDefine="SYS_EIO_FCI_ERROR_DISPLAY">
+    <Title>Fieldbus command error response</Title>
+    <Description>The fieldbus command &lt;<arg format="%s" ordinal="1" />&gt; sent to I/O unit &lt;<arg format="%s" ordinal="2" />&gt; returned an error response.<p />Error code: &lt;<arg format="%s" ordinal="3" />&gt;</Description>
+    <Consequences>The fieldbus command was not accepted by the I/O unit.</Consequences>
+    <Actions>Read about the General Error Code in the DeviceNet Lean application manual or the DeviceNet specification Appendix H.</Actions>
+  </Message>
+  <Message number="1476" eDefine="SYS_EIO_DN_NO_FWFILE_FOUND">
+    <Title>DeviceNet firmware file not found</Title>
+    <Description>The DeviceNet &lt;<arg format="%s" ordinal="1" />&gt; firmware file not found or not readable.<p />The board firmware may be out of date.</Description>
+    <Actions>Reinstall the system.<p /></Actions>
+  </Message>
+  <Message number="1477" eDefine="SYS_EIO_EN_INVALID_CONNECTION_SIZE">
+    <Title>Invalid connection size for EtherNet/IP I/O unit</Title>
+    <Description>The I/O unit &lt;<arg format="%s" ordinal="1" />&gt; is configured with a invalid input and/or output size.</Description>
+    <Consequences>No communication with the I/O unit is possible.</Consequences>
+    <Actions>Correct the size for the I/O unit in the unit type configuration.</Actions>
+  </Message>
+  <Message number="1478" eDefine="SYS_EIO_EN_INVALID_INPUT_OUTPUT_ASSEMBLY">
+    <Title>Invalid input or output assembly for EtherNet/IP I/O unit</Title>
+    <Description>The I/O unit &lt;<arg format="%s" ordinal="1" />&gt; have a invalid input and/or output assembly.</Description>
+    <Consequences>No communication with the I/O unit is possible.</Consequences>
+    <Actions>Correct the input/output assembly for the I/O unit in the unit type configuration.</Actions>
+  </Message>
+  <Message number="1479" eDefine="SYS_EIO_EN_INVALID_CONFIGURATION_ASSEMBLY">
+    <Title>Invalid configuration assembly for EtherNet/IP I/O unit</Title>
+    <Description>The I/O unit &lt;<arg format="%s" ordinal="1" />&gt; have a invalid configuration assembly.</Description>
+    <Consequences>No communication with the I/O unit is possible.</Consequences>
+    <Actions>Correct the configuration assembly for the I/O unit in the unit type configuration.</Actions>
+  </Message>
+  <Message number="1480" eDefine="SYS_EIO_EN_OWNERSHIP_CONFLICT">
+    <Title>I/O unit occupied by another master</Title>
+    <Description>It is not possible to connect to the I/O unit &lt;<arg format="%s" ordinal="1" />&gt; because it has already an active connection.</Description>
+    <Consequences>No communication with the I/O unit &lt;<arg format="%s" ordinal="1" />&gt; is possible as long as the I/O unit is occupied by another master. </Consequences>
+    <Actions>Release the connection from the other master to the I/O unit &lt;<arg format="%s" ordinal="1" />&gt; or change the address.</Actions>
+  </Message>
+  <Message number="1481" eDefine="SYS_EIO_PNSW_NO_CFG_PATH_FOUND">
+    <Title>Profinet configuration file error</Title>
+    <Description>The Profinet configuration file &lt;<arg format="%s" ordinal="1" />&gt; could not be found or opened.</Description>
+    <Consequences>The configuration file is needed to be able to use the I/O units defined on the &lt;<arg format="%s" ordinal="2" />&gt; I/O bus.</Consequences>
+    <Actions>1. Make sure the file exists.<p />2. Make sure that the configuration file is placed in the HOME directory of your current system if filename without path is used.</Actions>
+  </Message>
+  <Message number="1482" eDefine="SYS_EIO_PNSW_CFG_CHANGED_ON_BUS">
+    <Title>Profinet bus configuration changed</Title>
+    <Description>System parameters on I/O bus &lt;<arg format="%s" ordinal="4" />&gt; have been changed by an external configuration tool or a connecting master.<p />The following values have been changed:<p /><p />IP Address: &lt;<arg format="%s" ordinal="1" />&gt;<p />Subnet mask: &lt;<arg format="%s" ordinal="2" />&gt;<p />Gateway address: &lt;<arg format="%s" ordinal="3" />&gt;</Description>
+    <Consequences>The changed parameter values are not valid until a warmstart of the controller is performed.</Consequences>
+    <Actions>Perform a warmstart.</Actions>
+  </Message>
+  <Message number="1483" eDefine="SYS_EIO_PNSW_LED_FLASH">
+    <Title>Profinet identification request received</Title>
+    <Description>A Profinet identification request has been received from an external configuration tool.<p /><p />The MAC address on the &lt;<arg format="%s" ordinal="2" />&gt; I/O bus is &lt;<arg format="%s" ordinal="1" />&gt;.</Description>
+  </Message>
+  <Message number="1484" eDefine="SYS_EIO_PNSW_HARDWARE_MISSING">
+    <Title>Profinet hardware missing</Title>
+    <Description>The DSQC 612 board needed to run the &lt;<arg format="%s" ordinal="1" />&gt; I/O bus on the selected connector id is missing.</Description>
+    <Consequences>No communication on the &lt;<arg format="%s" ordinal="1" />&gt; I/O bus is possible.<p /></Consequences>
+    <Actions>Install a DSQC 612 board in the controller or use the LAN connector id instead.</Actions>
+  </Message>
+  <Message number="1485" eDefine="SYS_EIO_PNSW_ILLEGAL_BUS_SUBNET_MASK">
+    <Title>Illegal subnet mask</Title>
+    <Description>The subnet mask &lt;<arg format="%s" ordinal="1" />&gt; for the &lt;<arg format="%s" ordinal="2" />&gt; I/O bus is illegal. The allowed subnet mask range is &lt;255.255.255.xxx&gt;.</Description>
+    <Consequences>The subnet mask on the &lt;<arg format="%s" ordinal="2" />&gt; I/O bus was not changed.</Consequences>
+    <Actions>1. Correct the subnet mask for the &lt;<arg format="%s" ordinal="2" />&gt; I/O bus.</Actions>
+  </Message>
+  <Message number="1486" eDefine="SYS_EIO_PNSW_ILLEGAL_BUS_ADDRESS">
+    <Title>Illegal address for &lt;<arg format="%s" ordinal="2" />&gt; I/O bus</Title>
+    <Description>The IP address &lt;<arg format="%s" ordinal="1" />&gt; for the &lt;<arg format="%s" ordinal="2" />&gt; I/O bus is illegal.</Description>
+    <Consequences>The &lt;<arg format="%s" ordinal="2" />&gt; I/O bus can not be used.</Consequences>
+    <Actions>Correct the address for the &lt;<arg format="%s" ordinal="2" />&gt; I/O bus.</Actions>
+  </Message>
+  <Message number="1487" eDefine="SYS_EIO_PNSW_RESERVED_ADDRESS">
+    <Title>Illegal IP address for &lt;<arg format="%s" ordinal="2" />&gt; I/O bus</Title>
+    <Description>The &lt;<arg format="%s" ordinal="2" />&gt; I/O bus address &lt;<arg format="%s" ordinal="1" />&gt; is reserved.</Description>
+    <Consequences>No communication on the &lt;<arg format="%s" ordinal="2" />&gt; I/O bus is possible.</Consequences>
+    <Causes>The specified address is on a subnet reserved by another Ethernet port. Two Ethernet ports on the controller cannot be on the same subnet.<p /><p />Example:<p />&lt;<arg format="%s" ordinal="2" />&gt; port: 192.168.125.xxx<p />Service port: 192.168.125.xxx<p /><p />Note:<p />The subnets within the range 192.168.125.xxx - 192.168.130.xxx are predefined and cannot be used.</Causes>
+    <Actions>Change the address to another subnet.</Actions>
+  </Message>
+  <Message number="1488" eDefine="SYS_EIO_PNSW_COULD_NOT_SET_GATEWAY">
+    <Title>Illegal gateway address for &lt;<arg format="%s" ordinal="3" />&gt; I/O bus</Title>
+    <Description>The specified gateway address &lt;<arg format="%s" ordinal="2" />&gt; is not valid and can not be used.</Description>
+    <Consequences>The gateway address is not changed.</Consequences>
+    <Causes>The specified gateway address might not be within the range of the &lt;<arg format="%s" ordinal="3" />&gt; I/O bus subnet mask &lt;<arg format="%s" ordinal="1" />&gt;.</Causes>
+    <Actions>Correct the gateway address in the &lt;<arg format="%s" ordinal="3" />&gt; I/O bus configuration.</Actions>
+  </Message>
+  <Message number="1489" eDefine="SYS_EIO_PNSW_CONFIG_MISSMATCH">
+    <Title>Profinet internal slave configuration warning </Title>
+    <Description>A Profinet master has established a connection with the Profinet internal slave on the &lt;<arg format="%s" ordinal="3" />&gt; I/O bus. The connecting Profinet master and the internal Profinet slave slot configuration differs.<p />The internal Profinet slave is currently configured with the following modules:<p /><p />Slot 1: DI <arg format="%ld" ordinal="1" /> bytes<p />Slot 2: DO <arg format="%ld" ordinal="2" /> bytes<p /></Description>
+    <Consequences>Not all I/O signals will be possible to use.</Consequences>
+    <Actions>1. Reconfigure the connecting Profinet master to match the internal Profinet slave.<p />2. Reconfigure the internal Profinet slave in the Robot controller to match the connecting Profinet master.</Actions>
+  </Message>
+  <Message number="1490" eDefine="SYS_EIO_PNSW_NO_CFG_UNIT_FOUND">
+    <Title>Profinet I/O unit configuration warning</Title>
+    <Description>The I/O unit &lt;<arg format="%s" ordinal="1" />&gt; on the &lt;<arg format="%s" ordinal="3" />&gt; I/O bus is configured in the Profinet configuration file &lt;<arg format="%s" ordinal="2" />&gt; but not in the system parameters.</Description>
+    <Actions>Add the I/O unit &lt;<arg format="%s" ordinal="1" />&gt; to the system parameters or remove the I/O unit from the Profinet configuration file.</Actions>
+  </Message>
+  <Message number="1491" eDefine="SYS_EIO_PNSW_NO_STACK_CONFIG_FOR_UNIT">
+    <Title>Profinet I/O unit configuration missing</Title>
+    <Description>The I/O unit &lt;<arg format="%s" ordinal="1" />&gt; on the &lt;<arg format="%s" ordinal="3" />&gt; I/O bus is configured in the system parameters but not in the Profinet configuration file &lt;<arg format="%s" ordinal="2" />&gt;.</Description>
+    <Consequences>No communication with I/O unit &lt;<arg format="%s" ordinal="1" />&gt; is possible.</Consequences>
+    <Actions>Add the I/O unit &lt;<arg format="%s" ordinal="1" />&gt; to the Profinet configuration file or remove the I/O unit from the system parameters.</Actions>
+  </Message>
+  <Message number="1492" eDefine="SYS_EIO_PNSW_UNIT_ALARM_WARNING">
+    <Title>Profinet I/O unit alarm</Title>
+    <Description>The I/O unit &lt;<arg format="%s" ordinal="1" />&gt; has reported an alarm in slot &lt;<arg format="%ld" ordinal="2" />&gt;:<p /><p /><arg format="%s" ordinal="3" /></Description>
+  </Message>
+  <Message number="1493" eDefine="SYS_EIO_PNSW_NEW_UNIT_ADDED_IN_CFG">
+    <Title>Profinet I/O unit auto configured</Title>
+    <Description>A new I/O unit has been found in the Profinet configuration file. This I/O unit has been auto configured in the controller with the following parameters:<p /><p />Unit name: <arg format="%s" ordinal="1" /><p />Input bytes: <arg format="%d" ordinal="2" /><p />Output bytes: <arg format="%s" ordinal="3" /></Description>
+    <Actions>1. Edit or delete the configuration.<p />2. Restart the controller to activate the I/O unit configuration.</Actions>
+  </Message>
+  <Message number="1494" eDefine="SYS_EIO_PNSW_OPTION_ERR">
+    <Title>Profinet option key missing</Title>
+    <Description>The option key needed to run the &lt;<arg format="%s" ordinal="1" />&gt; I/O bus on the controller was not detected.</Description>
+    <Consequences>No communication on &lt;<arg format="%s" ordinal="1" />&gt; I/O bus is possible.</Consequences>
+    <Causes>An attempt may have been made to add the Profinet functionality, without installing the option correctly.</Causes>
+    <Actions>1. Configure a new system with the Profinet SW option, and install that system.<p />2. If Profinet SW is not required, configure a new system without this option, and install that system.</Actions>
+  </Message>
+  <Message number="1495" eDefine="SYS_EIO_PNSW_ONLY_SLAVE_OPTION_ERROR">
+    <Title>Profinet master option key missing</Title>
+    <Description>The option key needed to run the &lt;<arg format="%s" ordinal="2" />&gt; I/O bus as a Profinet master on the controller was not detected. The I/O unit &lt;<arg format="%s" ordinal="1" />&gt; is not defined as an internal Profinet slave.</Description>
+    <Consequences>No communication with the I/O unit &lt;<arg format="%s" ordinal="1" />&gt; is possible.</Consequences>
+    <Causes>The installed option key for the &lt;<arg format="%s" ordinal="2" />&gt; I/O bus only support one internal Profinet slave I/O unit.</Causes>
+    <Actions>Configure a new system with the Profinet SW master/slave option or remove the I/O unit &lt;<arg format="%s" ordinal="1" />&gt; from the system parameters.</Actions>
+  </Message>
+  <Message number="1496" eDefine="SYS_EIO_UNT_REQUIRED_CONTACT_LOST">
+    <Title>Lost communication with required unit</Title>
+    <Description>The previously working communication with I/O unit <arg format="%s" ordinal="1" /> with address <arg format="%s" ordinal="3" /> on I/O bus <arg format="%s" ordinal="2" /> has been lost.</Description>
+    <Consequences>The I/O unit has been assigned Unit Trustlevel Required (0) in the configuration. The system will go to system failure state.</Consequences>
+    <Causes>The I/O unit may have been disconnected from the system.</Causes>
+    <Actions>1. Make sure that the bus cable is connected to the controller.<p />2. Make sure the I/O unit has is correctly powered. <p />3. Make sure the cabling to the I/O unit is correctly connected.</Actions>
+  </Message>
+  <Message number="1497" eDefine="SYS_EIO_UNT_REQUIRED_NO_CONTACT">
+    <Title>No communication with I/O unit</Title>
+    <Description>During start-up, no communication was established with I/O unit <arg format="%s" ordinal="1" /> with address <arg format="%s" ordinal="3" /> on the I/O bus <arg format="%s" ordinal="2" /></Description>
+    <Consequences>The I/O unit has been assigned Unit Trustlevel Required (0) in the configuration. The system will go to system failure state.</Consequences>
+    <Causes>The I/O unit is either not connected to the system, or it is connected, but has been assigned the wrong address.</Causes>
+    <Actions>1. Make sure all I/O unit addresses match the configuration. <p />2. Make sure all addresses are unique, and not used by more than one I/O unit. <p />3. Change the address and/or connect the missing I/O unit. <p />4. If you changed the address, the power supply to the I/O unit must be cycled (switched OFF and then back ON), to make sure the address has been changed. <p />5. Make sure that the field bus is working <p /></Actions>
+  </Message>
+  <Message number="1498" eDefine="SYS_EIO_PNSW_CFG_NAME_CHANGED_ON_BUS">
+    <Title>Profinet bus configuration changed</Title>
+    <Description>Bus type system parameters on I/O bus &lt;<arg format="%s" ordinal="2" />&gt; have been changed by an external configuration tool or a connecting master.<p />The following values have been changed:<p /><p />Station name: &lt;<arg format="%s" ordinal="1" />&gt;</Description>
+    <Consequences>The changed parameter values are not valid until a warmstart of the controller is performed.</Consequences>
+    <Actions>Perform a warmstart.</Actions>
+  </Message>
+  <Message number="1499" eDefine="SYS_EIO_CRS_SIGNAL_UNITMAP_OVERLAP">
+    <Title>I/O signals in cross connection has overlapping unit map</Title>
+    <Description>The resultant I/O signal &lt;<arg format="%s" ordinal="1" />&gt; has an overlapping unit map with the inverted actor I/O signal &lt;<arg format="%s" ordinal="2" />&gt;.</Description>
+    <Consequences>Using I/O signals with overlapping unit map in a cross connection can cause infinity signal setting loops.</Consequences>
+    <Actions>Correct the unit map or define one of the I/O signals as virtual.</Actions>
+  </Message>
+  <Message number="1500" eDefine="SYS_EIO_EN_GEN_UCMM_RSP_CON_FAILURE_ERROR">
+    <Title>EtherNet/IP connection failure</Title>
+    <Description>
+            Not able to connect to the I/O unit &lt;<arg format="%s" ordinal="1" />&gt;.<p /><p /><arg format="%s" ordinal="2" /></Description>
+    <Consequences>No communication with the I/O unit is possible.</Consequences>
+  </Message>
+  <Message number="1501" eDefine="SYS_EIO_PNSW_CONFIG_FILE_ERROR">
+    <Title>Profinet configuration file error</Title>
+    <Description>The Profinet configuration file &lt;<arg format="%s" ordinal="1" />&gt; was not valid. Internal error code &lt;<arg format="%ld" ordinal="2" />&gt;.</Description>
+    <Consequences>No communication on &lt;<arg format="%s" ordinal="3" />&gt; I/O bus is possible.</Consequences>
+    <Causes>The Profinet configuration file may be corrupted or have been created with a incompatible file format.</Causes>
+    <Actions>Generate a new Profinet configuration file.</Actions>
+  </Message>
+  <Message number="1502" eDefine="SYS_EIO_PNSW_CONFIG_MISMATCH_MASTER">
+    <Title>Profinet configuration mismatch</Title>
+    <Description>The I/O unit &lt;<arg format="%s" ordinal="1" />&gt; reported a different slot configuration compared with the configuration for this I/O unit in the Profinet configuration file &lt;<arg format="%s" ordinal="2" />&gt;.<p /><p />First slot mismatch reported on slot &lt;<arg format="%ld" ordinal="3" />&gt;<p />&lt;<arg format="%ld" ordinal="4" />&gt; slot mismatches found.</Description>
+    <Consequences>Some I/O signals might not be possible to use.</Consequences>
+    <Causes>The module type used in slot &lt;<arg format="%ld" ordinal="3" />&gt; may be of wrong type or of a different version compared to the actual hardware on the I/O unit.</Causes>
+    <Actions>1. Update the Profinet configuration file &lt;<arg format="%s" ordinal="2" />&gt;<p />2. Check the I/O unit hardware.</Actions>
+  </Message>
+  <Message number="1503" eDefine="SYS_EIO_PNSW_STATION_NAME_ERROR">
+    <Title>Profinet station name error</Title>
+    <Description>The I/O bus system parameter &lt;Station Name&gt; on the &lt;<arg format="%s" ordinal="2" />&gt; I/O bus contains one or more illegal characters. The character at position &lt;<arg format="%ld" ordinal="1" />&gt; is not allowed.</Description>
+    <Consequences>The &lt;<arg format="%s" ordinal="2" />&gt; I/O bus is not possible to use.</Consequences>
+    <Actions>Change the &lt;Station Name&gt; system parameter to an allowed string.</Actions>
+  </Message>
+  <Message number="1504" eDefine="SYS_EIO_FTP_FILE_TOO_LARGE">
+    <Title>File size exceeds max file size</Title>
+    <Description>Unable to copy file data to the controller. The file <arg format="%s" ordinal="1" /> is too large.<p />File size: <arg format="%d" ordinal="2" /><p />Max file size: <arg format="%d" ordinal="3" /></Description>
+    <Causes>The file size is larger than the allowed file size.</Causes>
+    <Actions>Check the FTP client configuration and increase the system parameter MaxFileSize to be able to transfer the file to the controller.</Actions>
+  </Message>
+  <Message number="1505" eDefine="SYS_EIO_FCI_PATH_ERROR_MISSING_COMMA">
+    <Title>Fieldbus command syntax error</Title>
+    <Description>Could not send fieldbus command to I/O unit &lt;<arg format="%s" ordinal="1" />&gt; because there is a syntax error in the command path string.<p /><p />Fieldbus command type name &lt;<arg format="%s" ordinal="2" />&gt;.<p />The syntax error: Missing comma.</Description>
+    <Consequences>The fieldbus command was not sent.</Consequences>
+    <Actions>Correct the fieldbus command path string.</Actions>
+  </Message>
+  <Message number="1506" eDefine="SYS_EIO_FCI_PATH_ERROR_BAD_PATH_SIZE">
+    <Title>Fieldbus command syntax error</Title>
+    <Description>Could not send fieldbus command to I/O unit &lt;<arg format="%s" ordinal="1" />&gt; because there is a syntax error in the command path string.<p /><p />Fieldbus command type name &lt;<arg format="%s" ordinal="2" />&gt;.<p />The syntax error: Bad path size specified.</Description>
+    <Consequences>The fieldbus command was not sent.</Consequences>
+    <Actions>Correct the fieldbus command path string.</Actions>
+  </Message>
+  <Message number="1507" eDefine="SYS_EIO_FCI_PATH_ERROR_INCORRECT_PATH_SIZE">
+    <Title>Fieldbus command syntax error</Title>
+    <Description>Could not send fieldbus command to I/O unit &lt;<arg format="%s" ordinal="1" />&gt; because there is a syntax error in the command path string.<p /><p />Fieldbus command type name &lt;<arg format="%s" ordinal="2" />&gt;.<p />The syntax error: Incorrect path size.</Description>
+    <Consequences>The fieldbus command was not sent.</Consequences>
+    <Actions>Correct the fieldbus command path string.</Actions>
+  </Message>
+  <Message number="1508" eDefine="SYS_EIO_FCI_PATH_ERROR_BAD_DATA_TYPE">
+    <Title>Fieldbus command syntax error</Title>
+    <Description>Could not send fieldbus command to I/O unit &lt;<arg format="%s" ordinal="1" />&gt; because there is a syntax error in the command path string.<p /><p />Fieldbus command type name &lt;<arg format="%s" ordinal="2" />&gt;.<p />The syntax error: Bad data type.</Description>
+    <Consequences>The fieldbus command was not sent.</Consequences>
+    <Actions>Correct the fieldbus command path string.</Actions>
+  </Message>
+  <Message number="1509" eDefine="SYS_EIO_FCI_PATH_ERROR_MISSING_SPACE">
+    <Title>Fieldbus command syntax error</Title>
+    <Description>Could not send fieldbus command to I/O unit &lt;<arg format="%s" ordinal="1" />&gt; because there is a syntax error in the command path string.<p /><p />Fieldbus command type name &lt;<arg format="%s" ordinal="2" />&gt;.<p />The syntax error: Missing space.</Description>
+    <Consequences>The fieldbus command was not sent.</Consequences>
+    <Actions>Correct the fieldbus command path string.</Actions>
+  </Message>
+  <Message number="1510" eDefine="SYS_EIO_FCI_PATH_ERROR_INCORRECT_BYTE_SIZE">
+    <Title>Fieldbus command syntax error</Title>
+    <Description>Could not send fieldbus command to I/O unit &lt;<arg format="%s" ordinal="1" />&gt; because there is a syntax error in the command path string.<p /><p />Fieldbus command type name &lt;<arg format="%s" ordinal="2" />&gt;.<p />The syntax error: Incorrect byte size.</Description>
+    <Consequences>The fieldbus command was not sent.</Consequences>
+    <Actions>Correct the fieldbus command path string.</Actions>
+  </Message>
+  <Message number="1511" eDefine="SYS_EIO_FCI_PATH_ERROR_INCORRECT_DATA_SIZE">
+    <Title>Fieldbus command syntax error</Title>
+    <Description>Could not send fieldbus command to I/O unit &lt;<arg format="%s" ordinal="1" />&gt; because there is a syntax error in the command path string.<p /><p />Fieldbus command type name &lt;<arg format="%s" ordinal="2" />&gt;.<p />The syntax error: Incorrect data size.</Description>
+    <Consequences>The fieldbus command was not sent.</Consequences>
+    <Actions>Correct the fieldbus command path string.</Actions>
+  </Message>
+  <Message number="1512" eDefine="SYS_EIO_FCI_SERVICE_INVALID">
+    <Title>Invalid service identifier in fieldbus command</Title>
+    <Description>Could not send fieldbus command to I/O unit &lt;<arg format="%s" ordinal="1" />&gt; because of invalid service identifier &lt;<arg format="%ld" ordinal="2" />&gt;.<p />Valid service identifiers are:<p />&lt;<arg format="%s" ordinal="3" />&gt;<p /></Description>
+    <Actions>Correct the service identifier.</Actions>
+  </Message>
+  <Message number="1513" eDefine="SYS_EIO_FCI_RESPONSE_TIMEOUT">
+    <Title>Fieldbus command response timeout</Title>
+    <Description>A timeout occurred when sending fieldbus command &lt;<arg format="%s" ordinal="1" />&gt; to the I/O unit &lt;<arg format="%s" ordinal="2" />&gt;</Description>
+    <Consequences>The fieldbus command was not sent.</Consequences>
+    <Actions>1. Check the fieldbus command syntax.<p /> 2. Make sure that the bus cable is connected to the controller.<p />2. Make sure the I/O unit has is correctly powered. <p />3. Make sure the cabling to the I/O unit is correctly connected.</Actions>
+  </Message>
+  <Message number="1514" eDefine="SYS_EIO_FCI_NO_ACTIVE_CONNECTION">
+    <Title>Fieldbus command connection error</Title>
+    <Description>Could not send fieldbus command &lt;<arg format="%s" ordinal="1" />&gt; to the I/O unit &lt;<arg format="%s" ordinal="2" />&gt; because no active connection was present.</Description>
+    <Consequences>The fieldbus command was not sent.</Consequences>
+    <Actions>1. Check the fieldbus command syntax.<p /> 2. Make sure that the bus cable is connected to the controller.<p />2. Make sure the I/O unit has is correctly powered. <p />3. Make sure the cabling to the I/O unit is correctly connected.</Actions>
+  </Message>
+  <Message number="1515" eDefine="SYS_EIO_FCI_SEND_ERROR">
+    <Title>Fieldbus command send error</Title>
+    <Description>Could not send fieldbus command &lt;<arg format="%s" ordinal="1" />&gt; to the I/O unit &lt;<arg format="%s" ordinal="2" />&gt;.<p /><p /><arg format="%s" ordinal="3" /></Description>
+    <Consequences>The fieldbus command was not sent.</Consequences>
+    <Actions>1. Check the fieldbus command syntax.<p /> 2. Make sure that the bus cable is connected to the controller.<p />2. Make sure the I/O unit has is correctly powered. <p />3. Make sure the cabling to the I/O unit is correctly connected.</Actions>
+  </Message>
+  <Message number="1516" eDefine="SYS_EIO_EN_NO_QUICK_CONNECT_SUPPORT">
+    <Title>An EtherNet/IP I/O unit does not support Quick Connect</Title>
+    <Description>The I/O unit &lt;<arg format="%s" ordinal="1" />&gt; does not support Quick Connect.</Description>
+    <Actions>1. Set the unit type parameter Quick Connect to "Not used" for the I/O unit in the I/O configuration.<p />2. Restart the system.</Actions>
+  </Message>
+  <Message number="1517" eDefine="SYS_EIO_EN_ATTR_CHANGED">
+    <Title>An attribute is changed for an EtherNet/IP I/O unit</Title>
+    <Description>The attribute <arg format="%s" ordinal="2" /> is changed to "<arg format="%s" ordinal="3" />" for the I/O unit &lt;<arg format="%s" ordinal="1" />&gt;.</Description>
+  </Message>
+  <Message number="1518" eDefine="SYS_EIO_PNET_CONFIG_MISMATCH_MASTER">
+    <Title>Profinet configuration mismatch</Title>
+    <Description>The I/O unit &lt;<arg format="%s" ordinal="1" />&gt; reported a different slot configuration compared with the configuration loaded for this I/O unit.<p /><p />First slot mismatch reported on slot &lt;<arg format="%ld" ordinal="2" />&gt;<p />&lt;<arg format="%ld" ordinal="3" />&gt; slot mismatches found.</Description>
+    <Consequences>Some I/O signals might not be possible to use.</Consequences>
+    <Causes>The module type used in slot &lt;<arg format="%ld" ordinal="2" />&gt; may be of wrong type or of a different version compared to the actual hardware on the I/O unit.</Causes>
+    <Actions>1. Update the Profinet configuration<p />2. Check the I/O unit hardware.</Actions>
+  </Message>
+  <Message number="1519" eDefine="SYS_EIO_PNSW_TOO_MANY_BUSES_CONFIGURED">
+    <Title>Too many Profinet Master/Slave SW buses are configured</Title>
+    <Description>Too many Profinet Master/Slave SW I/O buses are configured. It is only possible to have one I/O bus for Profinet Master/Slave SW.</Description>
+    <Actions>1. Remove all but one of the Profinet Master/Slave SW buses from the configuration.<p />2. Restart the system.</Actions>
+  </Message>
+  <Message number="1520" eDefine="SYS_EIO_PNET_IOPS_BAD">
+    <Title>Input data invalid</Title>
+    <Description>The unit &lt;<arg format="%s" ordinal="1" />&gt; indicates input data invalid from slot&lt;<arg format="%d" ordinal="2" />&gt;.</Description>
+    <Consequences>The input data is discarded.</Consequences>
+    <Causes>Internal error in unit.</Causes>
+  </Message>
+  <Message number="1521" eDefine="SYS_EIO_PNET_IOCS_BAD">
+    <Title>Output data not processed</Title>
+    <Description>The unit &lt;<arg format="%s" ordinal="1" />&gt; indicates output data to slot &lt;<arg format="%d" ordinal="2" />&gt; cannot be processed.</Description>
+    <Consequences>The output data is discarded by the unit.</Consequences>
+    <Causes>Internal error in unit.</Causes>
+  </Message>
+  <Message number="1522" eDefine="SYS_EIO_EN_ETH_PORT_OCCUPIED">
+    <Title>Ethernet port occupied by another client</Title>
+    <Description>The specified Ethernet port for EtherNet/IP bus is occupied by another client. </Description>
+    <Consequences>No communication on the EtherNet/IP bus is possible.</Consequences>
+    <Causes>A MultiMove system is installed and occupies the specified Ethernet port.</Causes>
+    <Actions>Select another Ethernet port by changing the connector ID for the EtherNet/IP bus.</Actions>
+  </Message>
+  <Message number="1524" eDefine="SYS_EIO_PNET_ALARM_UNKNOWN">
+    <Title>Profinet I/O unit unknown alarm</Title>
+    <Description>The I/O unit &lt;<arg format="%s" ordinal="1" />&gt; has reported an unknown alarm in slot &lt;<arg format="%ld" ordinal="2" />&gt;<p />Use I/O unit specific documentation for explanation on the alarm code.<p /><p />Alarm code: <arg format="%s" ordinal="3" /></Description>
+  </Message>
+  <Message number="1525" eDefine="SYS_EIO_PNSW_UNIT_ALARM_DIAG">
+    <Title>Profinet I/O unit diagnostics</Title>
+    <Description>The I/O unit &lt;<arg format="%s" ordinal="1" />&gt; has reported diagnostic data in slot &lt;<arg format="%ld" ordinal="2" />&gt;.<p />Use I/O unit specific documentation for more explanation on the diagnostic data.<p /><p /><arg format="%s" ordinal="3" /></Description>
+  </Message>
+  <Message number="1526" eDefine="SYS_EIO_PNSW_UNIT_ALARM_UNKNOWN">
+    <Title>Profinet I/O unit unknown alarm</Title>
+    <Description>The I/O unit &lt;<arg format="%s" ordinal="1" />&gt; has reported an unknown alarm in slot &lt;<arg format="%ld" ordinal="2" />&gt;<p />Use I/O unit specific documentation for explanation on the alarm code.<p /><p />Alarm code: <arg format="%s" ordinal="3" /></Description>
+  </Message>
+  <Message number="1527" eDefine="SYS_EIO_EN_DEVICE_STATE_CONFLICT">
+    <Title>EtherNet/IP device state conflict</Title>
+    <Description>The current state of the I/O unit &lt;<arg format="%s" ordinal="1" />&gt; prevents communication from being established or the execution of a specific service. This is a device specific behavior documented by the vendor. </Description>
+    <Consequences>No communication with the I/O unit &lt;<arg format="%s" ordinal="1" />&gt; is possible as long as the I/O unit is in this state. </Consequences>
+    <Actions>1. Verify the current state of the I/O unit &lt;<arg format="%s" ordinal="1" />&gt;. <p />2. If the state is error, check the I/O configuration or hardware setup of the I/O unit and consult the vendor documentation. If the state is running, the I/O unit was earlier temporarily busy during communication attempt but has now recovered, no further actions are necessary.</Actions>
+  </Message>
+  <Message number="1528" eDefine="SYS_EIO_EN_GENERAL_UCMM_RESPONSE_ERROR">
+    <Title>EtherNet/IP general failure</Title>
+    <Description>Not able to connect to  the I/O unit &lt;<arg format="%s" ordinal="1" />&gt;. <p /><p /><arg format="%s" ordinal="2" /></Description>
+    <Consequences>No communication with the I/O unit is possible. </Consequences>
+  </Message>
+  <Message number="1533" eDefine="SYS_EIO_EN_INVALID_CONFIGURATION_SIZE">
+    <Title>Invalid configuration size for EtherNet/IP I/O unit</Title>
+    <Description> The I/O unit &lt;<arg format="%s" ordinal="1" />&gt; has an invalid configuration size. Maximum configuration size supported are &lt;<arg format="%s" ordinal="2" />&gt; bytes.</Description>
+    <Consequences>No communication with the I/O unit is possible.</Consequences>
+    <Actions>Correct the configuration size for the I/O unit in the unit type configuration.</Actions>
+  </Message>
+  <Message number="1534" eDefine="SYS_EIO_EN_INVALID_OUTPUT_SIZE">
+    <Title>Invalid output size for EtherNet/IP I/O unit</Title>
+    <Description>The I/O unit &lt;<arg format="%s" ordinal="1" />&gt; has an invalid output size. Maximum output size supported are &lt;<arg format="%s" ordinal="2" />&gt; bytes.</Description>
+    <Consequences>No communication with the I/O unit is possible.</Consequences>
+    <Actions>Correct the output size for the I/O unit in the unit type configuration.</Actions>
+  </Message>
+  <Message number="1535" eDefine="SYS_EIO_EN_INVALID_INPUT_SIZE">
+    <Title>Invalid input size for EtherNet/IP I/O unit</Title>
+    <Description>The I/O unit &lt;<arg format="%s" ordinal="1" />&gt; has an invalid input size. Maximum input size supported are &lt;<arg format="%s" ordinal="2" />&gt; bytes.</Description>
+    <Consequences>No communication with the I/O unit is possible.</Consequences>
+    <Actions>Correct the input size for the I/O unit in the unit type configuration.</Actions>
+  </Message>
+</Domain>

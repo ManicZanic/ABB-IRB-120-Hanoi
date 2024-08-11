@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.TPU.Screens.RobotBase">
+  <Forms>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.RobotBase.TpuPopupRemoteMaster" Text="" Width="270" Height="150">
+      <Controls>
+        <Control ID="lblTitleLocation" Text="位置：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="41" Top="41" Width="70" Height="18" />
+        <Control ID="lblTitleAlias" Text="别名：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="41" Top="22" Width="70" Height="18" />
+        <Control ID="lblTitleApplication" Text="应用：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="41" Top="3" Width="70" Height="18" />
+        <Control ID="lblText" Text="用户对控制器有写权限.请点’撤回’来取回写权限" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="2" Top="61" Width="263" Height="56" />
+        <Control ID="btnRevoke" Text="撤回" Name="ABB.Robotics.Paint.TPU.Controls.TpuButton" Left="203" Top="123" Width="64" Height="24" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.RobotBase.TpuPopupRemoteRequest" Text="" Width="270" Height="150">
+      <Controls>
+        <Control ID="lblTitleLocation" Text="位置：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="43" Top="41" Width="70" Height="18" />
+        <Control ID="lblTitleAlias" Text="别名：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="43" Top="22" Width="70" Height="18" />
+        <Control ID="lblTitleApplication" Text="应用：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="43" Top="3" Width="70" Height="18" />
+        <Control ID="btnGrant" Text="授予" Name="ABB.Robotics.Paint.TPU.Controls.TpuButton" Left="133" Top="123" Width="64" Height="24" />
+        <Control ID="btnDeny" Text="拒绝" Name="ABB.Robotics.Paint.TPU.Controls.TpuButton" Left="203" Top="123" Width="64" Height="24" />
+        <Control ID="lblText" Text="用户对控制器请求写权限.点‘授予’来允许或点‘拒绝'来拒绝" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="4" Top="61" Width="263" Height="56" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.RobotBase.TpuPopupSelectStorage" Text="" Width="181" Height="101">
+      <Controls>
+        <Control ID="lblText" Text="选择存储设备" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="5" Top="5" Width="171" Height="20" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.RobotBase.TpuMenuUasHookUp" Text="" Width="150" Height="150">
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.RobotBase.TpuWndUserScreens" Text="" Width="320" Height="192">
+      <Controls />
+    </Form>
+  </Forms>
+  <Menus />
+  <Strings>
+    <String ID="RestrictedByControllerMode" Text="被控制器模式限制" />
+    <String ID="RestrictedByControllerState" Text="被控制器状态限制" />
+    <String ID="AccessRestricted" Text="访问限制！请求：{0}" />
+    <String ID="RestrictedByIpsNotOnline" Text="访问限制.Ips不在线！" />
+    <String ID="ResourceHeldByOther" Text="资源被另一个用户占用" />
+    <String ID="SystemFailure" Text="检查系统状态..." />
+    <String ID="CheckingMechanicalUnits" Text="检查机械单元..." />
+    <String ID="SystemFailure_Message" Text="您的机器人系统失败.不能进行正常操作" />
+    <String ID="UnitsNotCalibrated" Text="单元{0}未校准" />
+    <String ID="UnitsMissingCounter" Text="单元{0}上的转数计数器未更新" />
+    <String ID="Diagnosis.SyntaxError" Text="检查语法错误" />
+    <String ID="Diagnosis.Message.SyntaxError" Text="这里有这些语法错误：{0}" />
+    <String ID="Diagnosis.Message.RAPIDError" Text="检查RAPID错误报告细节" />
+    <String ID="Service.ResetPP" Text="重置PP" />
+    <String ID="Service.FullSpeed" Text="全速" />
+    <String ID="Service.ResetPP.Succeeded" Text="程序指针被重置" />
+    <String ID="Service.FullSpeed.Succeeded" Text="速度已被设为{0}%" />
+  </Strings>
+</Resources>

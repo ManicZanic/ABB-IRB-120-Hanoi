@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.TPU.Screens.Tool">
+  <Forms>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Tool.TpuWndDefineTool" Text="定义工具" Width="320" Height="192" Icon="Configuration32.gif">
+      <Menu ref="menuTpuWndDefineTool" />
+      <Controls>
+        <Control ID="lblTxtMethod" Text="方法：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="3" Top="27" Width="60" Height="18" />
+        <Control ID="lblTxtTool" Text="工具：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="3" Top="3" Width="60" Height="18" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Tool.TpuPopupTeachResult" Text="" Width="220" Height="161">
+      <Controls>
+        <Control ID="btnCancel" Text="取消" Name="ABB.Robotics.Paint.TPU.Controls.TpuButton" Left="148" Top="129" Width="64" Height="24" />
+        <Control ID="btnOK" Text="确认" Name="ABB.Robotics.Paint.TPU.Controls.TpuButton" Left="76" Top="129" Width="64" Height="24" />
+      </Controls>
+    </Form>
+  </Forms>
+  <Menus>
+    <Menu ID="menuTpuWndDefineTool">
+      <MenuItem ID="OK" Text="确认" />
+      <MenuItem ID="Cancel" Text="取消" />
+      <MenuItem ID="ModPos" Text="修改点坐标" />
+      <MenuItem ID="Method" Text="方法" />
+    </Menu>
+  </Menus>
+  <Strings>
+    <String ID="Method" Text="方法" />
+    <String ID="Point" Text="点坐标" />
+    <String ID="Status" Text="状态" />
+    <String ID="Point1" Text="点坐标1" />
+    <String ID="Point2" Text="点坐标2" />
+    <String ID="Point3" Text="点坐标3" />
+    <String ID="ElongatorPointX" Text="拉伸器点坐标X" />
+    <String ID="ElongatorPointZ" Text="拉伸器点坐标Z" />
+    <String ID="Undefined" Text="-" />
+    <String ID="Modified" Text="已修改" />
+    <String ID="MilliMeter" Text="mm" />
+    <String ID="MinError" Text="最小错误" />
+    <String ID="MaxError" Text="最大错误" />
+    <String ID="MeanError" Text="中等错误" />
+    <String ID="X" Text="X:" />
+    <String ID="Y" Text="Y:" />
+    <String ID="Z" Text="Z:" />
+    <String ID="UnableToTeachTCP" Text="无法使用当前点坐标示教TCP。" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Rapid.TcpCalibrationMode.Translation" Text="TCP（默认方向）" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Rapid.TcpCalibrationMode.OrientationY" Text="TCP &amp; Z" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Rapid.TcpCalibrationMode.OrientationYZ" Text="TCP &amp; Z、X" />
+  </Strings>
+</Resources>

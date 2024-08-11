@@ -1,0 +1,442 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="SYS" domainNo="2" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="10" max="150">
+  <Message number="10" eDefine="SYS_ERR_SYS_MSTATE_EMRESET">
+    <Title>Emergency stop state</Title>
+    <Description>The emergency stop circuit has previously been broken, and while broken, an attempt was made to operate the robot.</Description>
+    <Consequences>The system remains in state "Waiting for Motors ON after emergency stop".</Consequences>
+    <Causes>An attempt has been made to maneuvre a control, before switching the system back to status Motors ON.</Causes>
+    <Actions>1) To resume operation, switch the system back to state Motors ON by pressing the Motors ON button on the Control Module.</Actions>
+  </Message>
+  <Message number="11" eDefine="SYS_ERR_SYS_MSTATE_EMSTOP">
+    <Title>Emergency stop state.</Title>
+    <Description>Emergency stop reset is required.<p /></Description>
+    <Actions>First release the Em stop button<p />and then press the panel button.</Actions>
+  </Message>
+  <Message number="12" eDefine="SYS_ERR_SYS_MSTATE_SYSFAIL">
+    <Title>Sys failure state active</Title>
+    <Description>Fatal non-recoverable system error.<p />Warm start is required.<p /></Description>
+    <Actions>Turn the mains switch off and on<p />again if the soft restart command is<p />ignored or not possible to reach.</Actions>
+  </Message>
+  <Message number="25" eDefine="SYS_ERR_SYS_STOP_TIMEOUT">
+    <Title>Stop order timeout</Title>
+    <Description>The stop order was carried out<p />as a forced guard stop when<p />no acknowledgement was received<p />within the expected time<p /></Description>
+    <Actions />
+  </Message>
+  <Message number="30" eDefine="SYS_ERR_SYS_MECSTA_NOT_COMM">
+    <Title>Axis not commutated</Title>
+    <Description>One or several internal drive unit<p />axes are not commutated.<p /></Description>
+    <Actions />
+  </Message>
+  <Message number="31" eDefine="SYS_ERR_SYS_MECSTA_NOT_CALIB">
+    <Title>Axis not calibrated.</Title>
+    <Description>One or several absolute/relative<p />measurement axes are not calibrated.<p /></Description>
+    <Actions>Check what axis that are not<p />calibrated and calibrate them.</Actions>
+  </Message>
+  <Message number="32" eDefine="SYS_ERR_SYS_MECSTA_NOT_A_SYNC">
+    <Title>Rev. counter not updated</Title>
+    <Description>Revolution counter is not updated.<p />One or several absolute measurement<p />axes are not synchronized.<p /></Description>
+    <Actions>Move the axes to the sync position<p />and update the revolution counters.</Actions>
+  </Message>
+  <Message number="33" eDefine="SYS_ERR_SYS_MECSTA_NOT_S_SYNC">
+    <Title>Axis not synchronized.</Title>
+    <Description>One or several relative measurement<p />axes are not synchronized.<p /></Description>
+    <Actions>Order Motors On and synchronize all<p />mechanical units in the list.</Actions>
+  </Message>
+  <Message number="34" eDefine="SYS_ERR_SYS_MECSTA_NOT_SMB">
+    <Title>SMB memory is not OK</Title>
+    <Description>This action or state is not allowed since data in the Serial Measurement Board (SMB) memory is not OK.</Description>
+    <Consequences>All data must be OK before automatic operation is possible. Manually jogging the robot is possible.</Consequences>
+    <Causes>There are differences between the data stored on the SMB and the data stored in the controller. This may be due to replacement of SMB, controller or both, or manually cleared SMB.</Causes>
+    <Actions>1) Update the Serial Measurement Board data as detailed in Operator's Manual, IRC5.</Actions>
+  </Message>
+  <Message number="51" eDefine="SYS_ERR_SYS_REJECT_MASTER">
+    <Title>Not allowed command</Title>
+    <Description>The command is only allowed when the client is in control of the resource (program/motion).</Description>
+    <Consequences>The system remains in the same status, and the requested action will not be performed.</Consequences>
+    <Actions>1) Check if the client is in control, by checking "Write Access" in RobotStudio. <p />2) Check if the client who ought to be in control really is.</Actions>
+  </Message>
+  <Message number="54" eDefine="SYS_ERR_SYS_REJECT_PGM">
+    <Title>Not allowed command</Title>
+    <Description>The command is NOT allowed when the program is executing.</Description>
+    <Consequences>The system remains in the same status, and the requested action will not be performed.</Consequences>
+    <Actions>1) Make sure the program is not executing. </Actions>
+  </Message>
+  <Message number="60" eDefine="SYS_ERR_SYS_REJ_OPMODE_AUTO">
+    <Title>Not allowed command</Title>
+    <Description>The command is not allowed in Auto mode.</Description>
+    <Consequences>The system remains in the same status, and the requested action will not be performed.</Consequences>
+    <Actions>1) Make sure the system is NOT in Auto Mode. </Actions>
+  </Message>
+  <Message number="61" eDefine="SYS_ERR_SYS_REJ_OPMODE_AUTO_CH">
+    <Title>Not allowed command</Title>
+    <Description>The command is not allowed when changing to Auto mode.</Description>
+    <Consequences>The system remains in the same status, and the requested action will not be performed.</Consequences>
+    <Actions>1) Make sure the system is NOT changing to Auto Mode. </Actions>
+  </Message>
+  <Message number="62" eDefine="SYS_ERR_SYS_REJ_OPMODE_MANRS">
+    <Title>Not allowed command</Title>
+    <Description>The command is not allowed in Manual mode.</Description>
+    <Consequences>The system remains in the same status, and the requested action will not be performed.</Consequences>
+    <Actions>1) Make sure the system is NOT in Manual Mode. </Actions>
+  </Message>
+  <Message number="63" eDefine="SYS_ERR_SYS_REJ_OPMODE_MANFS">
+    <Title>Not allowed command</Title>
+    <Description>The command is not allowed in Manual full speed mode.</Description>
+    <Consequences>The system remains in the same status, and the requested action will not be performed.</Consequences>
+    <Actions>1) Make sure the system is NOT in Manual full speed Mode. </Actions>
+  </Message>
+  <Message number="64" eDefine="SYS_ERR_SYS_REJ_OPMODE_MANFS_CH">
+    <Title>Not allowed command</Title>
+    <Description>The command is not allowed when changing to Manual full speed mode.</Description>
+    <Consequences>The system remains in the same status, and the requested action will not be performed.</Consequences>
+    <Actions>1) Make sure the system is NOT changing to Manual full speed Mode. </Actions>
+  </Message>
+  <Message number="65" eDefine="SYS_ERR_SYS_REJ_OPMODE_NOT_MAN">
+    <Title>Not allowed command</Title>
+    <Description>The command is only allowed in Manual mode (reduced or full speed).</Description>
+    <Consequences>The system remains in the same status, and the requested action will not be performed.</Consequences>
+    <Actions>1) Make sure the system is NOT in Auto mode or changing to Manual Mode (reduced or full speed). </Actions>
+  </Message>
+  <Message number="66" eDefine="SYS_ERR_SYS_REJECT_OPMODE_MANFS">
+    <Title>Not allowed command</Title>
+    <Description>The system input action <arg format="%s" ordinal="1" /> is not allowed in Manual full speed mode.</Description>
+    <Consequences>The system remains in the same status, and the requested action will not be performed.</Consequences>
+    <Actions>1) Make sure the system is NOT in Manual full speed Mode. </Actions>
+  </Message>
+  <Message number="67" eDefine="SYS_ERR_SYS_REJECT_OPMODE_MANFS_CH">
+    <Title>Not allowed command</Title>
+    <Description>The system input action <arg format="%s" ordinal="1" /> is not allowed when changing to Manual full speed mode.</Description>
+    <Consequences>The system remains in the same status, and the requested action will not be performed.</Consequences>
+    <Actions>1) Make sure the system is NOT changing to Manual full speed Mode. </Actions>
+  </Message>
+  <Message number="70" eDefine="SYS_ERR_SYS_REJ_CABSTA_RUN">
+    <Title>Not allowed command</Title>
+    <Description>The command is not allowed in Motors ON state.</Description>
+    <Consequences>The system remains in the same status, and the requested action will not be performed.</Consequences>
+    <Actions>1) Make sure the system is in Motors OFF state.</Actions>
+  </Message>
+  <Message number="71" eDefine="SYS_ERR_SYS_REJ_CABSTA_POW_ON">
+    <Title>Not allowed command</Title>
+    <Description>The command is not allowed while changing to Motors ON state.</Description>
+    <Consequences>The system remains in the same status, and the requested action will not be performed.</Consequences>
+    <Actions>1) Investigate by whom and why the action was requested, and, if required, correct the reason.</Actions>
+  </Message>
+  <Message number="72" eDefine="SYS_ERR_SYS_REJ_CABSTA_STB">
+    <Title>Not allowed command</Title>
+    <Description>The command is not allowed in Motors OFF state.</Description>
+    <Consequences>The system remains in the same status, and the requested action will not be performed.</Consequences>
+    <Actions>1) Make sure the system is in Motors ON state.</Actions>
+  </Message>
+  <Message number="73" eDefine="SYS_ERR_SYS_REJ_CABSTA_POW_OFF">
+    <Title>Not allowed command</Title>
+    <Description>The command is not allowed while changing to Motors OFF state.</Description>
+    <Consequences>The system remains in the same status, and the requested action will not be performed.</Consequences>
+    <Actions>1) Investigate by whom and why the action was requested, and, if required, correct the reason.</Actions>
+  </Message>
+  <Message number="74" eDefine="SYS_ERR_SYS_REJ_CABSTA_GRDSTOP">
+    <Title>Not allowed command</Title>
+    <Description>The command is not allowed in Guard Stop state.</Description>
+    <Consequences>The system remains in the same status, and the requested action will not be performed.</Consequences>
+    <Actions>1) Make sure the system is NOT in Guard Stop state. </Actions>
+  </Message>
+  <Message number="75" eDefine="SYS_ERR_SYS_REJ_CABSTA_EMSTOP">
+    <Title>Not allowed command</Title>
+    <Description>The command is not allowed in Emergency Stop state. </Description>
+    <Consequences>Emergency stop reset is required.</Consequences>
+    <Actions>1) Make sure the system is NOT in Emergency Stop state. </Actions>
+  </Message>
+  <Message number="76" eDefine="SYS_ERR_SYS_REJ_CABSTA_SYSFAIL">
+    <Title>Not allowed command</Title>
+    <Description>The command is not allowed in System Failure state.<p /></Description>
+    <Consequences>A non-recoverable system error has resulted, and a warm start is required.</Consequences>
+    <Actions>1) Make sure the system is NOT in Emergency Stop state. <p />2) Perform a restart as detailed in the Operator's Manual, IRC5. <p />3) If restarting is not possible, switch the main power OFF and then back ON.</Actions>
+  </Message>
+  <Message number="80" eDefine="SYS_ERR_SYS_REJ_MECSTA_N_COMM">
+    <Title>Not allowed command</Title>
+    <Description>The command is not allowed when axis has not been commutated.</Description>
+    <Consequences>The system remains in the same status, and the requested action will not be performed.</Consequences>
+    <Actions>1) Commutate the axis as detailed in the Additional Axes Manual. <p />2) Investigate by whom and why the action was requested, and, if required, correct the reason.</Actions>
+  </Message>
+  <Message number="81" eDefine="SYS_ERR_SYS_REJ_MECSTA_N_CALIB">
+    <Title>Not allowed command</Title>
+    <Description>The command is not allowed when axis is not calibrated.</Description>
+    <Consequences>The system remains in the same status, and the requested action will not be performed.</Consequences>
+    <Actions>1) Calibrate the axis as detailed in the Calibration Pendulum Instruction or the Instructions for Levelmeter calibration, depending on which equipment to be used.</Actions>
+  </Message>
+  <Message number="82" eDefine="SYS_ERR_SYS_REJ_MECSTA_N_ASYNC">
+    <Title>Not allowed command</Title>
+    <Description>The command is not allowed when axis revolution counter is not updated.</Description>
+    <Consequences>The system remains in the same status, and the requested action will not be performed.</Consequences>
+    <Actions>1) Update the revolution counter as detailed in Operator's Manual, IRC5.</Actions>
+  </Message>
+  <Message number="83" eDefine="SYS_ERR_SYS_REJ_MECSTA_N_SSYNC">
+    <Title>Not allowed command</Title>
+    <Description>The command is not allowed when axis is not synchronized.</Description>
+    <Consequences>The system remains in the same status, and the requested action will not be performed.</Consequences>
+    <Actions>1) Synchronize the axis as detailed in the Calibration Pendulum Instruction or the Instructions for Levelmeter calibration, depending on which equipment to be used.</Actions>
+  </Message>
+  <Message number="84" eDefine="SYS_ERR_SYS_REJ_MECSTA_N_SMB">
+    <Title>Not allowed command</Title>
+    <Description>This command is not allowed since data in the Serial Measurement Board (SMB) memory is not OK.</Description>
+    <Consequences>All data must be OK before automatic operation is possible. Manually jogging the robot is possible.</Consequences>
+    <Actions>1) Update the Serial Measurement Board data as detailed in Operator's Manual, IRC5.</Actions>
+  </Message>
+  <Message number="88" eDefine="SYS_ERR_SYS_SPEED_OVERRIDE">
+    <Title>Automatic Mode Rejected</Title>
+    <Description>The speed could not be set to 100% when automatic mode was requested.</Description>
+    <Consequences>The system can not enter automatic mode.</Consequences>
+    <Causes>The speed could not be set to 100%.</Causes>
+    <Actions>1) Switch back to manual mode	<p />2a) Set the speed in the QuickSet menu	<p />2b) or set System Parameter Controller/Auto Condition Reset/AllDebugSettings/Reset to No if the system should be in debug mode when switching to auto.	<p />3) Switch back to automatic mode and confirm.	<p /></Actions>
+  </Message>
+  <Message number="89" eDefine="SYS_ERR_SYS_NOT_ORIG_MAIN">
+    <Title>Automatic Mode Rejected</Title>
+    <Description>The call chain was altered to begin at a routine other than main and could not be reset to main when automatic mode was requested.</Description>
+    <Consequences>The system can not enter automatic mode.</Consequences>
+    <Causes>Program pointer could not be set to Main.</Causes>
+    <Actions>1) Switch back to manual mode.	<p />2a) Move PP to main.	<p />2b) or if the program always shall start at the new routine, change System Parameter "Main entry" (Domain Controller, Type Task) to the new routine name.	<p />2c) or set System Parameter Controller/Auto Condition Reset/AllDebugSettings/Reset to No if the system should be in debug mode when switching to auto.	<p />3) Switch back to automatic mode and confirm.	<p /></Actions>
+  </Message>
+  <Message number="92" eDefine="SYS_ERR_SYS_REJ_SYSIO_ERROR">
+    <Title>Not allowed command</Title>
+    <Description>Not allowed in state<p />System IO Start Blocked.<p /><p /></Description>
+    <Actions />
+  </Message>
+  <Message number="93" eDefine="SYS_ERR_SYS_TASK_PANEL_STATE_OFF">
+    <Title>Automatic Mode Rejected</Title>
+    <Description>One or more of the NORMAL tasks were disabled and could not be enabled when automatic mode was requested.</Description>
+    <Consequences>The system can not enter automatic mode.</Consequences>
+    <Causes>It is not possible to reset Task Selection Panel in synchronized block.</Causes>
+    <Actions>1) Switch back to manual mode. <p />2a) Set PP to main. <p />2b) or step out of synchronized block. <p />2c) or set System Parameter Controller/Auto Condition Reset/AllDebugSettings/Reset to No if the system should be in debug mode when switching to auto. <p />3) Switch back to automatic mode and confirm. <p /></Actions>
+  </Message>
+  <Message number="94" eDefine="SYS_ERR_SYS_NO_LOAD_NAME">
+    <Title>Load name could not be found</Title>
+    <Description>Load name <arg format="%s" ordinal="1" /> could not be found.</Description>
+    <Consequences>It is not possible to jog without a correct defined load.</Consequences>
+    <Causes>The module with the load definition is probably deleted.</Causes>
+    <Actions>Load module with load definition.<p />Choose other load.</Actions>
+  </Message>
+  <Message number="95" eDefine="SYS_ERR_SYS_NO_TOOL_NAME">
+    <Title>Tool name could not be found</Title>
+    <Description>Tool name <arg format="%s" ordinal="1" /> could not be found.</Description>
+    <Consequences>It is not possible to jog without a correct defined tool.</Consequences>
+    <Causes>The module with the tool definition is probably deleted.</Causes>
+    <Actions>Load module with tool definition.<p />Choose other tool.</Actions>
+  </Message>
+  <Message number="96" eDefine="SYS_ERR_SYS_NO_WOBJ_NAME">
+    <Title>WorkObject name could not be found</Title>
+    <Description>WorkObject name <arg format="%s" ordinal="1" /> could not be found.</Description>
+    <Consequences>It is not possible to jog without a correct defined workobject.</Consequences>
+    <Causes>The module with the workobject definition is probably deleted.</Causes>
+    <Actions>Load module with workobject definition.<p />Choose other workobject.</Actions>
+  </Message>
+  <Message number="97" eDefine="SYS_ERR_SYS_LOCAL_PERS_LOAD">
+    <Title>Not allowed to jog with LOCAL PERS Load</Title>
+    <Description>The object <arg format="%s" ordinal="1" /> is of type LOCAL PERS and is not possible to jog.
+    </Description>
+    <Actions>Change Load.</Actions>
+  </Message>
+  <Message number="98" eDefine="SYS_ERR_SYS_LOCAL_PERS_TOOL">
+    <Title>Not allowed to jog with LOCAL PERS Tool</Title>
+    <Description>The object <arg format="%s" ordinal="1" /> is of type LOCAL PERS and is not possible to jog.
+    </Description>
+    <Actions>Change Tool.</Actions>
+  </Message>
+  <Message number="99" eDefine="SYS_ERR_SYS_LOCAL_PERS_WOBJ">
+    <Title>Not allowed to jog with LOCAL PERS Work Object</Title>
+    <Description>The object <arg format="%s" ordinal="1" /> is of type LOCAL PERS and is not possible to jog.
+    </Description>
+    <Actions>Change Work Object.</Actions>
+  </Message>
+  <Message number="101" eDefine="SYS_ERR_SYS_MASTCL_LOC_HIA">
+    <Title>TP (program) in control.</Title>
+    <Description>The teachpendant programming<p />window has focus and is in control<p />of the program server.<p /></Description>
+    <Actions>Change to the production window<p />and perform the command again.</Actions>
+  </Message>
+  <Message number="103" eDefine="SYS_ERR_SYS_TASK_PANEL_CHANGE">
+    <Title> Controller busy updating Task Selection Panel.</Title>
+    <Description>The Task Selection Panel is having an update.<p />It is not possible to do the requested command.<p /><p /></Description>
+    <Actions>Perform the command again or<p />make a warm start and perform the command again. </Actions>
+  </Message>
+  <Message number="104" eDefine="SYS_ERR_SYS_PATH_TOO_LONG">
+    <Title> The system path is too long.</Title>
+    <Description>
+            The system path is too long.<p />It is not possible for the system to act in a safe way.<p /></Description>
+    <Consequences>The system will enter System Failure state.</Consequences>
+    <Actions>
+            Move the system to a location with a shorter file path.
+        </Actions>
+  </Message>
+  <Message number="105" eDefine="SYS_ERR_SYS_BACKUP_IN_PROGRESS">
+    <Title>Backup already in progress</Title>
+    <Description>A backup is already in progress.</Description>
+    <Consequences>The command "Backup" from System Input Signal will be rejected.</Consequences>
+    <Actions>Use System Output Signal "Backup in progress" to control if a backup can be started.</Actions>
+  </Message>
+  <Message number="106" eDefine="SYS_ERR_SYS_BACKUP_PATH">
+    <Title>Backup path</Title>
+    <Description>There are errors in the backup path or the backup name in the configuration for the System Input Backup. The directory for the backup can not be created. <p />Backup path: <arg format="%s" ordinal="1" /><p />Backup name: <arg format="%s" ordinal="2" /></Description>
+    <Consequences>The command "Backup" from System Input Signal will be rejected. </Consequences>
+    <Actions>Verify that configured path and name for the System Input Backup are correct.</Actions>
+  </Message>
+  <Message number="111" eDefine="SYS_ERR_SYS_MASTCL_INT_HIA">
+    <Title>TP (program) in control</Title>
+    <Description>The teachpendant programming<p />window has focus and is in control<p />of the program server.<p /></Description>
+    <Actions>Change to the production window<p />and perform the command again.</Actions>
+  </Message>
+  <Message number="120" eDefine="SYS_ERR_SYS_MASTCL_REM_SYSEVT">
+    <Title>System IO in control</Title>
+    <Description>See Title</Description>
+    <Actions />
+  </Message>
+  <Message number="126" eDefine="SYS_ERR_SYS_LOAD_NAME_CHANGED">
+    <Title>Load data has changed</Title>
+    <Description>The active load <arg format="%s" ordinal="3" /> was removed and replaced with <arg format="%s" ordinal="4" />. The load data was located in task: <arg format="%s" ordinal="1" /> connected to mechanical unit <arg format="%s" ordinal="2" />.</Description>
+    <Consequences>The load definition for jogging may not be correct.</Consequences>
+    <Causes>The load data was removed. The module containing the original tool definition may have been deleted.</Causes>
+    <Actions>If you require the old definition, locate the program or module of the original load data and load it. </Actions>
+  </Message>
+  <Message number="127" eDefine="SYS_ERR_SYS_TOOL_NAME_CHANGED">
+    <Title>Tool data has changed</Title>
+    <Description>The active tool <arg format="%s" ordinal="3" /> was removed and replaced with <arg format="%s" ordinal="4" />. The tool data was located in task: <arg format="%s" ordinal="1" /> connected to mechanical unit <arg format="%s" ordinal="2" />. </Description>
+    <Consequences>The tool definition for jogging may not be correct.</Consequences>
+    <Causes>The tool data was removed. The module containing the original tool definition may have been deleted.</Causes>
+    <Actions>If you require the old definition, locate the program or module of the original tool data and load it. </Actions>
+  </Message>
+  <Message number="128" eDefine="SYS_ERR_SYS_WOBJ_NAME_CHANGED">
+    <Title>Work object data has changed</Title>
+    <Description>The active work object <arg format="%s" ordinal="3" /> was removed and replaced with <arg format="%s" ordinal="4" />. The work object data was located in task: <arg format="%s" ordinal="1" /> connected to mechanical unit <arg format="%s" ordinal="2" />.</Description>
+    <Consequences>The work object definition for jogging may not be correct.</Consequences>
+    <Causes>The work object data was removed. The module containing the original tool definition may have been deleted.</Causes>
+    <Actions>If you require the old definition, locate the program or module of the original work object data and load it. </Actions>
+  </Message>
+  <Message number="130" eDefine="SYS_ERR_SYS_TSP_RESTORED">
+    <Title>Active Task Menu is restored</Title>
+    <Description>During warm start, the "Active Task Menu" is restored in Auto mode.</Description>
+    <Consequences>If one or several tasks were unchecked, they are now checked again after the warm start in Auto mode.</Consequences>
+    <Causes>A warm start has been performed</Causes>
+    <Actions>Go to manual mode. <p />2. Uncheck the not wanted tasks <p />3. Go back to Auto mode.</Actions>
+  </Message>
+  <Message number="131" eDefine="SYS_ERR_SYS_BLOCKED_SIGNALS">
+    <Title>Automatic Mode Rejected</Title>
+    <Description>One or more logical I/O signals were blocked and could not be unblocked when automatic mode was requested.</Description>
+    <Consequences>The system can not enter automatic mode.</Consequences>
+    <Causes>Some blocked I/O signal could not be unblocked.</Causes>
+    <Actions>1) Switch back to manual mode. <p />2a) Check Event Log for errors related to I/O. <p />2b) or set System Parameter Controller/Auto Condition Reset/AllDebugSettings/Reset to No if the system should be in debug mode when switching to auto. <p />3) Switch back to automatic mode and confirm. <p /></Actions>
+  </Message>
+  <Message number="132" eDefine="SYS_ERR_SYS_BLOCKED_SIGNALS_RESET">
+    <Title>Blocked I/O signals</Title>
+    <Description>One or more logical I/O signals were blocked during startup in automatic mode.</Description>
+    <Consequences>Blocked signals will be unblocked.</Consequences>
+    <Causes>System was switched to automatic mode during warm start. <p />System parameter AllDebugSettings is set to Yes. </Causes>
+    <Actions>None, system has automatically reset debug settings. <p /><p />To keep debug settings in auto: <p />1) Switch back to manual mode <p />2) Set system parameter Controller/Auto Condition Reset/AllDebugSettings/Reset to NO. <p />3) Switch back to automatic mode and confirm. <p />4) For more info, see the Technical Reference Manual - System Parameters. <p /></Actions>
+  </Message>
+  <Message number="133" eDefine="SYS_ERR_SYS_BLOCKED_SIGNALS_KEEP">
+    <Title>Debug Settings in Auto</Title>
+    <Description>One or more logical I/O signals were blocked during startup in automatic mode.</Description>
+    <Consequences>Blocked I/O signals will stay blocked. <p />System will not be in full production mode in auto. </Consequences>
+    <Actions>For full production mode: <p />1) Switch back to manual mode <p />2) Set system parameter Controller/Auto Condition Reset/AllDebugSettings/Reset to YES. <p />3) Switch back to automatic mode and confirm. <p />4) For more info, see the Technical Reference Manual - System Parameters. <p /></Actions>
+  </Message>
+  <Message number="134" eDefine="SYS_ERR_SYS_NOT_ORIG_MAIN_RESET">
+    <Title>Call Chain</Title>
+    <Description>The call chain has been altered to begin at a routine other than main.</Description>
+    <Consequences>Program pointer will be reset to main routine.</Consequences>
+    <Causes>System was switched to automatic mode during warm start. <p />System parameter AllDebugSettings is set to Yes. </Causes>
+    <Actions>For debug mode in auto: <p />1) Switch back to manual mode <p />2) Set system parameter AllDebugSetting, reset to NO. <p />3) Switch back to automatic mode and confirm. <p />4) For more info, see the Technical Reference Manual - System Parameters. <p /></Actions>
+  </Message>
+  <Message number="135" eDefine="SYS_ERR_SYS_NOT_ORIG_MAIN_KEEP">
+    <Title>Debug Settings in Auto</Title>
+    <Description>The call chain has been altered to begin at a routine other than main.</Description>
+    <Consequences>Program pointer will not be set to main. <p />System will not be in full production mode in auto. <p /></Consequences>
+    <Actions>For full production mode: <p />1) Switch back to manual mode <p />2) Set system parameter Controller/Auto Condition Reset/AllDebugSettings/Reset to YES. <p />3) Switch back to automatic mode and confirm. <p />4) For more info, see the Technical Reference Manual - System Parameters. <p /></Actions>
+  </Message>
+  <Message number="136" eDefine="SYS_ERR_SYS_SPEED_OVERRIDE_RESET">
+    <Title>Reduced Speed</Title>
+    <Description>The system was running at reduced speed during startup in automatic mode.</Description>
+    <Consequences>Speed will be set to 100%.</Consequences>
+    <Causes>System was switched to automatic mode during warm start.</Causes>
+    <Actions>None, system has automatically reset debug settings. <p /><p />To keep debug settings in auto: <p />1) Switch back to manual mode <p />2) Set system parameter Controller/Auto Condition Reset/AllDebugSettings/Reset to NO. <p />3) Switch back to automatic mode and confirm. <p />4) For more info, see the Technical Reference Manual - System Parameters. <p /><p /></Actions>
+  </Message>
+  <Message number="137" eDefine="SYS_ERR_SYS_SPEED_OVERRIDE_KEEP">
+    <Title>Debug Settings in Auto</Title>
+    <Description>The system was running at reduced speed during startup in automatic mode.</Description>
+    <Consequences>Speed will stay unchanged. <p />System will not be in full production mode in auto. <p /></Consequences>
+    <Actions>For full production mode: <p />1) Switch back to manual mode <p />2) Set system parameter Controller/Auto Condition Reset/AllDebugSettings/Reset to YES. <p />3) Switch back to automatic mode and confirm. <p />4) For more info, see the Technical Reference Manual - System Parameters. <p /></Actions>
+  </Message>
+  <Message number="138" eDefine="SYS_ERR_SYS_TASK_PANEL_STATE_OFF_RESET">
+    <Title>Disabled Tasks</Title>
+    <Description>One or more of the NORMAL tasks were disabled during the startup when in automatic mode.</Description>
+    <Consequences>All disabled normal tasks will be enabled.</Consequences>
+    <Causes>System was switched to automatic mode during warm start <p />System parameter AllDebugSettings is set to Yes. <p /></Causes>
+    <Actions>None, system has automatically reset debug settings.	<p /><p />To keep debug settings in auto:	<p />1) Switch back to manual mode	<p />2) Set system parameter Controller/Auto Condition Reset/AllDebugSettings/Reset to NO.	<p />3) Switch back to automatic mode and confirm.	<p />4) For more info, see the Technical Reference Manual - System Parameters.	<p /></Actions>
+  </Message>
+  <Message number="139" eDefine="SYS_ERR_SYS_TASK_PANEL_STATE_OFF_KEEP">
+    <Title>Debug Settings in Auto</Title>
+    <Description>One or more of the NORMAL tasks were disabled during startup in automatic mode.</Description>
+    <Consequences>Disabled tasks will stay disabled. <p />System will not be in full production mode in auto. <p /></Consequences>
+    <Actions>For full production mode: <p />1) Switch back to manual mode <p />2) Set system parameter Controller/Auto Condition Reset/AllDebugSettings/Reset to YES. <p />3) Switch back to automatic mode and confirm. <p />4) For more info, see the Technical Reference Manual - System Parameters. <p /></Actions>
+  </Message>
+  <Message number="140" eDefine="SYS_ERR_SYS_REJ_MOTORS_ON">
+    <Title>Motors On rejected</Title>
+    <Description>Motors On, via System IO, was rejected.</Description>
+    <Actions />
+  </Message>
+  <Message number="141" eDefine="SYS_ERR_SYS_REJ_MOTORS_OFF">
+    <Title>Motors Off rejected</Title>
+    <Description>Motors Off, via System IO, was rejected.</Description>
+    <Actions />
+  </Message>
+  <Message number="142" eDefine="SYS_ERR_SYS_REJ_START">
+    <Title>Start rejected</Title>
+    <Description>Start/restart of program, via System IO, was rejected.</Description>
+    <Consequences>Program will not be possible to start.</Consequences>
+    <Causes>- The reason could be that the robot is outside of regain distance.<p />- The program was executing.<p />- An ongoing Backup operation.</Causes>
+    <Actions>- Jog robot into regain zone or move the program pointer.<p />- Stop program before activating System Input Start.</Actions>
+  </Message>
+  <Message number="143" eDefine="SYS_ERR_SYS_REJ_START_MAIN">
+    <Title>Start at main rejected</Title>
+    <Description>Start of program at main, via System IO, was rejected.<p /></Description>
+    <Consequences>Program will not be possible to start.</Consequences>
+    <Causes>- The program was executing.<p />- An ongoing Backup operation.</Causes>
+    <Actions>Stop program before activating System Input Start at Main.</Actions>
+  </Message>
+  <Message number="144" eDefine="SYS_ERR_SYS_REJ_STOP">
+    <Title>Stop rejected</Title>
+    <Description>Stop of program, via System IO, was rejected.<p /></Description>
+    <Actions />
+  </Message>
+  <Message number="145" eDefine="SYS_ERR_SYS_REJ_STOP_CYCLE">
+    <Title>Stop cycle rejected</Title>
+    <Description>Stop of program after cycle, via System IO, was rejected.<p /></Description>
+    <Actions />
+  </Message>
+  <Message number="146" eDefine="SYS_ERR_SYS_REJ_MANINT">
+    <Title>Manual interrupt rejected</Title>
+    <Description>Manual interrupt of program, via System IO, was rejected.<p /></Description>
+    <Consequences>The manual interrupt will not be executed.</Consequences>
+    <Causes>- The program was executing.<p />- An ongoing Backup operation.</Causes>
+    <Actions>Stop program before activating System Input Interrupt.</Actions>
+  </Message>
+  <Message number="147" eDefine="SYS_ERR_SYS_REJ_LOADSTART">
+    <Title>Load and start rejected</Title>
+    <Description>Load and start of program, via System IO, was rejected.<p /></Description>
+    <Consequences>Program will not be possible to start.</Consequences>
+    <Causes>- The arguments for the System Input Load and Start are wrong.<p />- The module was loaded, but the system failed to set the program pointer.<p />- The program was executing.<p />- An ongoing Backup operation.</Causes>
+    <Actions>Check the following:<p />- correct arguments for System Input Load and Start.<p />- defined and correct name of the program file to be loaded (including mass memory unit).<p />- defined and correct name of the task that the program should be loaded in.<p />- program stopped before activating System Input Load and Start.</Actions>
+  </Message>
+  <Message number="148" eDefine="SYS_ERR_SYS_REJ_EMSTRECONF">
+    <Title>Confirm rejected</Title>
+    <Description>Emergency Stop reset confirm, via System IO, was rejected.<p /></Description>
+    <Actions />
+  </Message>
+  <Message number="149" eDefine="SYS_ERR_SYS_REJ_PRG_EXECERR">
+    <Title>Error reset rejected</Title>
+    <Description>Program execution error reset, via System IO, was rejected.<p /></Description>
+    <Actions />
+  </Message>
+  <Message number="150" eDefine="SYS_ERR_SYS_REJ_LOAD">
+    <Title>Load failure</Title>
+    <Description>Load of program, via System IO, failed.</Description>
+    <Consequences>Program will not be possible to start.</Consequences>
+    <Causes>- The arguments for the System Input Load are wrong.<p />- The module was loaded, but the system failed to set the program pointer.<p />- The program was executing.<p />- An ongoing Backup operation.<p /></Causes>
+    <Actions>Check the following:<p />- correct arguments for System Input Load.<p />- defined and correct name of the program file to be loaded (including mass memory unit).<p />- defined and correct name of the task that the program should be loaded in.<p />- program stopped before activating System Input Load.</Actions>
+  </Message>
+</Domain>

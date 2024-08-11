@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="ARL" domainNo="4" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="573" max="712">
+  <Message number="573" eDefine="SYS_ERR_ARL_ARG_ACCONLOW">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The value of argument On is too low.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Increase the value of argument On. <p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="574" eDefine="SYS_ERR_ARL_CONTSEARCH">
+    <Title>Search Warning</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Number of hits during search was <arg format="%s" ordinal="2" />.<p />Before performing next search, make sure that TCP is moved back to the start position of the search path. <p />Program Ref. <arg format="%s" ordinal="3" /></Description>
+    <Consequences>If no repositioning is done, before restart of circular search, movement that can cause damage might occur. </Consequences>
+    <Actions>Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="576" eDefine="SYS_ERR_ARL_PARID_ARR">
+    <Title>ParId Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The array size of argument AxValid is not equal to number of axes. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check the size of the array.</Actions>
+  </Message>
+  <Message number="577" eDefine="SYS_ERR_ARL_PARID_ROB">
+    <Title>ParId Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Function ParIdRobValid needs to be executed before function ParIdPosValid.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>Function ParIdRobValid needs to be executed before function ParIdPosValid.</Causes>
+    <Actions>Check that function ParIdRobValid has been executed before ParIdPosValid.</Actions>
+  </Message>
+  <Message number="578" eDefine="SYS_ERR_ARL_PARID_PAYLD">
+    <Title>ParId Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The optional argument PayLoad is missing. For PayLoad identification the argument must be given.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Give a value to the argument PayLoad.</Actions>
+  </Message>
+  <Message number="579" eDefine="SYS_ERR_ARL_PARID_NOPAYLD">
+    <Title>ParId Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The optional argument PayLoad may only be used for PayLoad identification. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Remove the argument PayLoad.</Actions>
+  </Message>
+  <Message number="580" eDefine="SYS_ERR_ARL_PARID_LDIINI">
+    <Title>ParId Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Faulty state for LoadIdInit. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check the whole ParId sequence.</Actions>
+  </Message>
+  <Message number="581" eDefine="SYS_ERR_ARL_PARID_MOVSEQ">
+    <Title>ParId Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Faulty state for ParIdMoveSeq. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check the whole ParId sequence.</Actions>
+  </Message>
+  <Message number="582" eDefine="SYS_ERR_ARL_PARID_LDIRES">
+    <Title>ParId Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Faulty state for LoadIdInit. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check the whole ParId sequence.</Actions>
+  </Message>
+  <Message number="583" eDefine="SYS_ERR_ARL_PARID_BWD">
+    <Title>ParId Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Backward execution not allowed. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="584" eDefine="SYS_ERR_ARL_PARID_NXTMOV">
+    <Title>ParId Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />ParIdMoveSeq / Parameter NextMove: <p />Faulty array size. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check the size of the array.</Actions>
+  </Message>
+  <Message number="585" eDefine="SYS_ERR_ARL_PARID_WOBFTCP">
+    <Title>ParId Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Missed argument WObj in LoadId for PayLoad with roomfix TCP. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Add argument WObj.</Actions>
+  </Message>
+  <Message number="586" eDefine="SYS_ERR_ARL_PARID_NOWOBFTCP">
+    <Title>ParId Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Not allowed argument WObj. The argument is only to be used for PayLoad with roomfix TCP.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Remove argument WObj.</Actions>
+  </Message>
+  <Message number="587" eDefine="SYS_ERR_ARL_PARID_MOVDAT">
+    <Title>ParId error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />ParIdMoveSeq / Parameter MoveData: <p />Faulty array size. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check the size of the array.</Actions>
+  </Message>
+  <Message number="588" eDefine="SYS_ERR_ARL_PARID_SINDFLT">
+    <Title>ParId Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />ParIdMove / Parameter StartIndex: <p />Faulty StartIndex. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check the StartIndex.</Actions>
+  </Message>
+  <Message number="589" eDefine="SYS_ERR_ARL_PARID_SINDNEG">
+    <Title>ParId Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />ParIdMove / Parameter StartIndex: <p />Point at negative move type. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="590" eDefine="SYS_ERR_ARL_PARID">
+    <Title>ParId error</Title>
+    <Description>
+      <arg format="%s" ordinal="1" />
+      <p />
+      <arg format="%s" ordinal="2" />
+      <p />
+    </Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="591" eDefine="SYS_ERR_ARL_PARIDTYPE">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unknown type of parameter identification. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check the argument ParIdType.</Actions>
+  </Message>
+  <Message number="592" eDefine="SYS_ERR_ARL_PARIDSTOP">
+    <Title>Program Stop During Load Identification</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />No type of program stop is allowed during load identification. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Start the identification procedure from the beginning again. <p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="593" eDefine="SYS_ERR_ARL_PARIDPF">
+    <Title>Power Fail During Load Identification</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />A Power Fail during load identification results in faulty load result. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Restart the program execution again with the same run mode (without PP move) for load identification from the beginning. <p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="594" eDefine="SYS_ERR_ARL_PARID_RAISEPP">
+    <Title>User Error During Load Identification</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Error resulting in raise of PP to the beginning of the load identification procedure. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Start the identification procedure from the beginning again. <p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="595" eDefine="SYS_ERR_ARL_PARID_LOADTYPE">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unknown type of load identification. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check the argument LoadIdType.</Actions>
+  </Message>
+  <Message number="596" eDefine="SYS_ERR_ARL_PARID_UNDO">
+    <Title>Program Stop During Load Identification</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Any type of program stop during load identification is not allowed. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Restart the program execution again for load identification from beginning.</Actions>
+  </Message>
+  <Message number="597" eDefine="SYS_ERR_ARL_PARID_SPEEDERR">
+    <Title>Speed Override</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Speed override is not 100 percent. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>- Change the speed override to 100. <p />- Restart the program execution again for load identification from beginning. </Actions>
+  </Message>
+  <Message number="598" eDefine="SYS_ERR_ARL_PARID_PROC_STOP">
+    <Title>Program Stop during Load Identification</Title>
+    <Description>No type of Program Stop is allowed during the Load Identification movements.</Description>
+    <Consequences>It is not possible to complete the Load Identification sequence.<p />Note that some axes for the actual mechanical unit are now in independent mode.</Consequences>
+    <Causes>Interrupt of the Load Identification sequence with Program Stop or release of the Enable Device.</Causes>
+    <Actions>1) Restart the program. It will then be possible to return to the Load Identification<p />start position. Then the movement sequence can be started again. <p />2) Also possible to cancel the Service Routine to completly skip the Load Identification.</Actions>
+  </Message>
+  <Message number="599" eDefine="SYS_ERR_ARL_PARID_DATA_LOGGER_ERROR">
+    <Title>Program Stop during Load Identification</Title>
+    <Description>No type of Program Stop is allowed during the Load Identification movements.</Description>
+    <Consequences>It is not possible to complete the Load Identification sequence.<p />Note that some axes for the actual mechanical unit are now in independent mode. </Consequences>
+    <Causes>A program stop caused errors in the measurements, and this was detected when restarting the Load Identification movements.</Causes>
+    <Actions>1) Restart the program. It will then be possible to return to the Load Identification<p />start position. Then the movement sequence can be started again. <p />2) Also possible to cancel the Service Routine to completly skip the Load Identification. </Actions>
+  </Message>
+  <Message number="603" eDefine="SYS_ERR_ARL_ARG_NEG">
+    <Title>Argument Error</Title>
+    <Description>Argument <arg format="%s" ordinal="1" /> may not have a negative value. <p /></Description>
+    <Actions>Set argument <arg format="%s" ordinal="2" /> to a positive value. </Actions>
+  </Message>
+  <Message number="607" eDefine="SYS_ERR_ARL_CIRC_NEWMOD">
+    <Title>Execution Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Not allowed to change run mode from forward to backward or vice versa <p />when running a circular movement. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>If possible, select the original run mode and press start to continue the <p />stopped circular movement. If this is not possible, move robot and program pointer for a new start. </Actions>
+  </Message>
+  <Message number="608" eDefine="SYS_ERR_ARL_ORI_ERR">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Orientation definition error in <arg format="%s" ordinal="2" />. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>All used orientations must be normalized i.e. the sum of the quaternion elements squares must equal 1. </Actions>
+  </Message>
+  <Message number="609" eDefine="SYS_ERR_ARL_MEC_LONG">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument \WObj specifies a mechanical unit with too long name. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Use max. 16 characters to specify the name of a mechanical coordinated unit. </Actions>
+  </Message>
+  <Message number="611" eDefine="SYS_ERR_ARL_BWD_TOOLWOBJ">
+    <Title>Execution Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Not allowed to step backwards with this move instruction. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>Step backwards to a position defined with another tool or work object could result in faulty path. <p /></Consequences>
+    <Actions>Check tool and work object.</Actions>
+  </Message>
+  <Message number="612" eDefine="SYS_ERR_ARL_NO_IOARG">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />No argument programmed for the name of the output signal. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Possible to set one position fix IO such as digital, group of digital or analog output signals during the robot movement. </Actions>
+  </Message>
+  <Message number="613" eDefine="SYS_ERR_ARL_IOARG_COMB">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Optional argument <arg format="%s" ordinal="2" /> can only be combined with output signal argument <arg format="%s" ordinal="3" />. <p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Check and change the arguments.</Actions>
+  </Message>
+  <Message number="614" eDefine="SYS_ERR_ARL_DO_LIM">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> is not 0 or 1. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Digital signals can only be set or checked to 0 or 1. </Actions>
+  </Message>
+  <Message number="615" eDefine="SYS_ERR_ARL_GO_NOTINT">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> is not an integer value. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Digital group of in/out signals, process identity or process selector can only have an integer value. </Actions>
+  </Message>
+  <Message number="616" eDefine="SYS_ERR_ARL_GO_LIM">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> is outside allowed limits. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Used group of digital in/out signals can only be set or checked within 0 to <arg format="%s" ordinal="4" /> according to configuration in system parameters. <p />Recovery: <arg format="%s" ordinal="5" /><p /></Actions>
+  </Message>
+  <Message number="617" eDefine="SYS_ERR_ARL_AO_LIM">
+    <Title>Argument Error</Title>
+    <Description>Task <arg format="%s" ordinal="1" />: <p />One of the arguments SetValue, SetDvalue, ScaleValue, CheckValue or CheckDvalue is outside allowed limits. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>The analog signal can only be set/checked within <arg format="%s" ordinal="3" /> and <arg format="%s" ordinal="4" /> according to the I/O system parameter configuration. </Causes>
+    <Actions>Check the RAPID program or the I/O configuration.<p />Recovery: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="620" eDefine="SYS_ERR_ARL_ARG_TOLNEG">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> have too large negative value. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Set argument <arg format="%s" ordinal="4" /> to <arg format="%s" ordinal="5" /> or more. </Actions>
+  </Message>
+  <Message number="622" eDefine="SYS_ERR_ARL_LOW_CYC">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The value of argument Time is too low for cyclic interrupts. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Change the value for Time, to a value greater than or equal to 0.1 s.</Actions>
+  </Message>
+  <Message number="623" eDefine="SYS_ERR_ARL_LOW_SING">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The value of argument Time is too low for single interrupts. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Change the value for Time to a value greater than or equal to 0.01 s.</Actions>
+  </Message>
+  <Message number="624" eDefine="SYS_ERR_ARL_DO_LIM2">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> is not between 0 and 2. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Specify the flank to generate the interrupt. <p />0 = Negative flank (high -&gt; low). <p />1 = Positive flank (low -&gt; high). <p />2 = Both negative and positive flank. </Actions>
+  </Message>
+  <Message number="625" eDefine="SYS_ERR_ARL_ROB_LIMIT">
+    <Title>Limit Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The robot is outside its limits.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>- Axis outside working area.<p />- Limits exceeded for at least one coupled joint.</Causes>
+    <Actions>Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="631" eDefine="SYS_ERR_ARL_CONC_BASE">
+    <Title>Instruction Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Too many move instructions in sequence with concurrent RAPID program execution. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Edit the program to max. 5 MoveX \Conc in sequence on the basic execution level of the program.<p />Recovery: <arg format="%s" ordinal="3" /><p /></Actions>
+  </Message>
+  <Message number="632" eDefine="SYS_ERR_ARL_CONC_TRAP">
+    <Title>Instruction Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />No move instructions with concurrent RAPID program execution are allowed within the StorePath-RestoPath part of the program. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Edit the program so it does not contain any MoveX \Conc instructions within the StorePath-RestoPath part of the program. </Actions>
+  </Message>
+  <Message number="634" eDefine="SYS_ERR_ARL_SIG_UNDEF">
+    <Title>Reference Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The signal <arg format="%s" ordinal="2" /> is unknown in the system.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>If the signal is defined in the RAPID program, it must be connected to the configured signal with instruction AliasIO.<p /></Causes>
+    <Actions>All signals (except AliasIO signals) must be defined in the system parameters and cannot be defined in the RAPID program. </Actions>
+  </Message>
+  <Message number="636" eDefine="SYS_ERR_ARL_SEN_NO_MEAS">
+    <Title>Sensor Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />No measurement from sensor.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Requested data is not available.<p />Recovery: <arg format="%s" ordinal="3" /><p /></Actions>
+  </Message>
+  <Message number="637" eDefine="SYS_ERR_ARL_SEN_NOREADY">
+    <Title>Sensor Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Not ready yet.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Requested function is not ready yet.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="638" eDefine="SYS_ERR_ARL_SEN_GENERRO">
+    <Title>Sensor Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />General error.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>General error has occurred which is not specifically connected to the requested action. Read the block "Error log" if the function is available.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="639" eDefine="SYS_ERR_ARL_SEN_BUSY">
+    <Title>Sensor Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Sensor busy, try later.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>The sensor is busy with an other function.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="640" eDefine="SYS_ERR_ARL_SEN_UNKNOWN">
+    <Title>Sensor Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unknown command.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>The function requested from the sensor is unknown.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="641" eDefine="SYS_ERR_ARL_SEN_ILLEGAL">
+    <Title>Sensor Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Illegal variable or block number.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Requested variable or block is not defined in the sensor.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="642" eDefine="SYS_ERR_ARL_SEN_EXALARM">
+    <Title>Sensor Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />External alarm.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Alarm from external equipment.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="643" eDefine="SYS_ERR_ARL_SEN_CAALARM">
+    <Title>Sensor Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Camera alarm.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Some error has been detected in the camera. Run Camcheck to test if the <p />camera is OK.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="644" eDefine="SYS_ERR_ARL_SEN_TEMP">
+    <Title>Sensor Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Temperature alarm.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>The camera is overheated it needs more cooling air or water.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="645" eDefine="SYS_ERR_ARL_SEN_VALUE">
+    <Title>Sensor Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Value out of range.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>The value of the data sent to the sensor is out of range.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="646" eDefine="SYS_ERR_ARL_SEN_CAMCHECK">
+    <Title>Sensor Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Camera check failed.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>The CAMCHECK function failed. The camera is broken. Send it for repair.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="647" eDefine="SYS_ERR_ARL_SEN_TIMEOUT">
+    <Title>Sensor Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Communication time out. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Increase the time out time and check the connections to the sensor.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="648" eDefine="SYS_ERR_ARL_TRAP_SEARCH">
+    <Title>Search Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Not allowed to do StorePath while searching is active on motion base path level. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>Program is stopped.</Consequences>
+    <Causes>Executing of instruction StorePath while searching is active.</Causes>
+    <Actions>Not possible to use StorePath in TRAP, event or service routine while searching is active on motion base path level.<p />If using interrupts in the program for execution of TRAPs, such interrupt must be deactivated during any search. <p />E.g. ISleep - SearchL - IWatch </Actions>
+  </Message>
+  <Message number="649" eDefine="SYS_ERR_ARL_PATH_LIMIT">
+    <Title>Path Limitation</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> is already done or executing. Instruction <arg format="%s" ordinal="4" /> must first be executed, before a new <arg format="%s" ordinal="5" /> can be done. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check the RAPID program. </Actions>
+  </Message>
+  <Message number="650" eDefine="SYS_ERR_ARL_PAR_COMB">
+    <Title>Wrong Combination Of Parameters</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Optional parameters and switches are not used in a correct combination. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>- No optional parameters and no switch keep the old coordinate system. <p />- The switch Old has the same function. <p />- RefPos or RefNum has to be defined with Short, Fwd or Bwd. </Actions>
+  </Message>
+  <Message number="651" eDefine="SYS_ERR_ARL_NUM_INPUT">
+    <Title>Use Numeric Input</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Use numeric input for the position instead of a robtarget. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>The position cannot be defined with a robtarget for robot axes. <p /> Use the optional parameter for numeric input of the position. </Actions>
+  </Message>
+  <Message number="652" eDefine="SYS_ERR_ARL_AXIS_MOVING">
+    <Title>Axis Is Moving</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />A Robot axis, an external axis or an independent axis is moving. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>All Robot axes, external axes and independent axes have to stand still. <p />Use MoveL with Fine argument for the Robot and external axes.<p />Use IndRMove for the independent axes.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="654" eDefine="SYS_ERR_ARL_AXIS_ACT">
+    <Title>Axis Not Active</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The axis destination position to move to is undefined (9E9) or<p />the axis to move is not active at present.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>1) The position to move to has been programmed with no active mechanical unit.<p />2) The position to move to has been modified with the mechanical unit deactivated.<p />3) The mechanical unit is not active at present.</Causes>
+    <Actions>The mechanical unit has to be activated before modifying or moving to the destination position.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="655" eDefine="SYS_ERR_ARL_AXIS_IND">
+    <Title>Axis Is Not Independent</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The axis is not in independent mode. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>It is only possible to get the status from an axis in independent mode. </Consequences>
+    <Actions>Set the axis to independent.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="658" eDefine="SYS_ERR_ARL_TRIGG_DIPLAG">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Parameter <arg format="%s" ordinal="2" /> can only be used, if parameter <arg format="%s" ordinal="3" /> is greater than zero. <p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Parameter <arg format="%s" ordinal="5" /> has effect only in the first TriggX instruction, in a sequence of several TriggX instructions, that controls the speed proportional AO signal. </Actions>
+  </Message>
+  <Message number="661" eDefine="SYS_ERR_ARL_SIGSUP_SEARCH">
+    <Title>Search Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The signal <arg format="%s" ordinal="2" /> for the SearchX instruction is already set to the specified value (high or low) at the start of searching, or the I/O-unit for the signal isn't up and running for the occasion.<p />Before performing next search, make sure that TCP is moved back to the start position of the search path.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>If no repositioning is done, before restart of circular search, movement that can cause damage might occur.</Consequences>
+    <Actions>Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="662" eDefine="SYS_ERR_ARL_BADWZONE">
+    <Title>Invalid Worldzone Type</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The switch \<arg format="%s" ordinal="2" /> must be associated with a <arg format="%s" ordinal="3" /> worldzone. <p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>If use of switch \Temp, the datatype must be wztemporary in WorldZone. <p />If use of switch \Stat, the datatype must be wzstationary in WorldZone. </Actions>
+  </Message>
+  <Message number="663" eDefine="SYS_ERR_ARL_WZONE_UNUSED">
+    <Title>World Zone Not In Use</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The argument <arg format="%s" ordinal="2" /> of the instruction <arg format="%s" ordinal="3" /> refers to a not used worldzone. <p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>The worldzone must have been defined and activated by a WZLimSup or WZDOSet instruction. </Actions>
+  </Message>
+  <Message number="664" eDefine="SYS_ERR_ARL_WZONE_IN_USE">
+    <Title>World Zone Already In Use</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The '<arg format="%s" ordinal="2" />' worldzone has already been defined and activated. <p />A world zone can only be defined once. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Use a worldzone with another name.</Actions>
+  </Message>
+  <Message number="665" eDefine="SYS_ERR_ARL_WZONE_FULL">
+    <Title>Too Many World Zones</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />It is not possible to add the world zone <arg format="%s" ordinal="2" /> . The world zone table is full.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check the RAPID program to see if any word zone might be removed.</Actions>
+  </Message>
+  <Message number="666" eDefine="SYS_ERR_ARL_LOCAL_WZONE">
+    <Title>Illegal World Zones</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Worldzone '<arg format="%s" ordinal="2" />' is defined locally in current routine.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Define the world zone as global or local in module.</Actions>
+  </Message>
+  <Message number="667" eDefine="SYS_ERR_ARL_WZ_NOTENTIRE">
+    <Title>Illegal World Zones</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />WorldZone <arg format="%s" ordinal="2" /> is not entire data reference. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check the value of argument WorldZone.</Actions>
+  </Message>
+  <Message number="668" eDefine="SYS_ERR_ARL_SHAPE_UNUSED">
+    <Title>Shapedata Not In Use</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The '<arg format="%s" ordinal="2" />' argument of the instruction <arg format="%s" ordinal="3" /> must refer to a defined shapedata. <p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>A shapedata is used to store a volume definition. It must have been defined <p />by WZBoxDef, WZSphDef or WZCylDef before it can be used by WZLimSup or WZDOSet. </Actions>
+  </Message>
+  <Message number="669" eDefine="SYS_ERR_ARL_INVALID_SHAPE">
+    <Title>World Zone Too Small</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />At least one side or radius is less than the minimal allowed in instruction <arg format="%s" ordinal="2" /> . <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check previous volume definition instruction. </Actions>
+  </Message>
+  <Message number="670" eDefine="SYS_ERR_ARL_INVALID_WZONE">
+    <Title>Invalid World Zone</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The index of the world zone argument <arg format="%s" ordinal="2" /> in <arg format="%s" ordinal="3" /> is not a valid index defined by WZLimSup or WZDOSet. <p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Check the RAPID program.</Actions>
+  </Message>
+  <Message number="671" eDefine="SYS_ERR_ARL_STAT_WZONE">
+    <Title>Illegal Use Of World Zone</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The argument '<arg format="%s" ordinal="2" />' for <arg format="%s" ordinal="3" /> must be a temporary world zone. <p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Check the argument..</Actions>
+  </Message>
+  <Message number="672" eDefine="SYS_ERR_ARL_WZONE_EQNAME">
+    <Title>World Zone Already In Use</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />It is not possible to add the world zone <arg format="%s" ordinal="2" /> . Another world zone with the same name is already defined in the system. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check the name of the world zone.</Actions>
+  </Message>
+  <Message number="673" eDefine="SYS_ERR_ARL_IO_ACCESS">
+    <Title>I/O Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The signal given in parameter <arg format="%s" ordinal="2" /> is write protected for RAPID access. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Select other user signal or change the access mode for the signal.</Actions>
+  </Message>
+  <Message number="674" eDefine="SYS_ERR_ARL_NOTWRITEPROT">
+    <Title>I/O Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The signal given in parameter <arg format="%s" ordinal="2" /> is not write protected for user access from teach pendant or RAPID. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Change the access mode to system type for the signal in the I/O configuration. </Actions>
+  </Message>
+  <Message number="675" eDefine="SYS_ERR_ARL_TRAP_NOTBWD">
+    <Title>Execution Error</Title>
+    <Description>Not allowed changing the run mode from forward to backward or vice versa when running an invisible trap routine. <p /></Description>
+    <Actions>If possible, select the original run mode and press start to continue. </Actions>
+  </Message>
+  <Message number="676" eDefine="SYS_ERR_ARL_HOMEJOINT_ROB">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The DeltaJointVal for robot axis <arg format="%s" ordinal="2" /> is &lt;= 0. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check the value for DeltaJointVal. The DeltaJointVal for all axes to supervise must be &gt; 0 mm or degrees. </Actions>
+  </Message>
+  <Message number="677" eDefine="SYS_ERR_ARL_HOMEJOINT_EXT">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The DeltaJointVal for external axis <arg format="%s" ordinal="2" /> is &lt;= 0. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check the value for DeltaJointVal. The DeltaJointVal for all axes to supervise must be &gt; 0 mm or degrees. </Actions>
+  </Message>
+  <Message number="678" eDefine="SYS_ERR_ARL_LIMJOINT_ROB">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />LowJointVal is higher than or equal to HighJointVal for robot axis <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>Check the values for HighJointVal and LowJointVal. The HighJointVal must be higher than the LowJointVal for all axes with defined high or/and low limits. </Actions>
+  </Message>
+  <Message number="679" eDefine="SYS_ERR_ARL_LIMJOINT_EXT">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />LowJointVal is higher than or equal to HighJointVal for external axis <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>Check the values for HighJointVal and LowJointVal. The HighJointVal must be higher than the LowJointVal for all axes with defined high or/and low limits. </Actions>
+  </Message>
+  <Message number="680" eDefine="SYS_ERR_ARL_HOMEJOINT_NOTACT">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Error in used WZHomeJointDef. It is not allowed to specify supervision of not active axis <arg format="%s" ordinal="2" /><p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Set the argument MiddleJointVal to 9E9 for the actual axis. </Actions>
+  </Message>
+  <Message number="681" eDefine="SYS_ERR_ARL_LIMJOINT_NOTACT">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Error in used WZLimJointDef. It is not allowed to specify limitation of not active axis <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Set the argument LowJointVal and HighJointVal to 9E9 for the actual axis. </Actions>
+  </Message>
+  <Message number="698" eDefine="SYS_ERR_ARL_FILREADERR">
+    <Title>Read error</Title>
+    <Description>Task <arg format="%s" ordinal="1" /> is trying to read file <arg format="%s" ordinal="2" />, but is failing.</Description>
+    <Consequences>It was not possible to read/load <arg format="%s" ordinal="2" />.</Consequences>
+    <Causes>If trying to access file on FTP mounted disc, make sure that the size of <arg format="%s" ordinal="2" /> isn't larger then the maximum file size configured in the FTP protocol settings.</Causes>
+  </Message>
+  <Message number="699" eDefine="SYS_ERR_ARL_LOAD_MEMFULL">
+    <Title>Program Memory Full</Title>
+    <Description>The task <arg format="%s" ordinal="1" />, has only <arg format="%s" ordinal="2" /> bytes in its program memory.</Description>
+    <Consequences>It was not possible to load module <arg format="%s" ordinal="3" />.</Consequences>
+    <Actions>1. Remove some other module and try again. <p />2. Check if large data structures could be split into smaller blocks<p />3. Use of installed modules can save program memory. <p /></Actions>
+  </Message>
+  <Message number="700" eDefine="SYS_ERR_ARL_SYNTAX">
+    <Title>Syntax Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Syntax error.<p /><arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="701" eDefine="SYS_ERR_ARL_MAN_MEMFULL">
+    <Title>Program Memory Full</Title>
+    <Description>The task <arg format="%s" ordinal="1" /> , has only <arg format="%i" ordinal="2" /> free bytes in its user space.</Description>
+    <Consequences>The ordered operation could not be completed.</Consequences>
+    <Actions>1. Remove some modules and try again. <p />2. Check if large data structures could be split into smaller blocks<p />3. Use of installed modules can save program memory. </Actions>
+  </Message>
+  <Message number="702" eDefine="SYS_ERR_ARL_FILNOTFND">
+    <Title>File Not Found</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The file <arg format="%s" ordinal="2" /> was not found.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>- Check the file path and the file name. <p />- Check if the file exists. <p /> Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="703" eDefine="SYS_ERR_ARL_NOTSAVED">
+    <Title>Unload Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The program module could not be unloaded.<p />The reason is that the module is changed but not saved.<p />Program Ref. <arg format="%s" ordinal="2" /><p /><p /><p /><p /></Description>
+    <Actions>The instruction UnLoad:<p />Use the optional switch ErrIfChanged, without recover from this situation, in an Error handler.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="704" eDefine="SYS_ERR_ARL_UNLOAD">
+    <Title>UnLoad Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /><p />The program module couldn't be unloaded. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>- Module not loaded with Load instr. <p />- Not same file path as used for Load <p /></Causes>
+    <Actions>- Check if the program module has been loaded with the instruction Load. <p />- Check if the file path and name are the same in the UnLoad and Load instruction. <p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="705" eDefine="SYS_ERR_ARL_SYNTAX_CONT">
+    <Title>Syntax Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Syntax error <p /><arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>More syntax errors will follow this.</Actions>
+  </Message>
+  <Message number="706" eDefine="SYS_ERR_ARL_LOADED">
+    <Title>Load Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The program module is already loaded.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>The module name in the head of the file <arg format="%s" ordinal="3" /> already exists in the program memory.</Causes>
+    <Actions>Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="707" eDefine="SYS_ERR_ARL_NAME_INVALID">
+    <Title>I/O Unit Name Invalid</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The unit name <arg format="%s" ordinal="2" /> does not exist. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>- Check if the unit name is misspelled.<p />- Check if the unit is defined. <p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="708" eDefine="SYS_ERR_ARL_IOENABLE">
+    <Title>I/O Unit Is Not Enabled</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /> I/O unit <arg format="%s" ordinal="2" /> was not enabled. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>The maximum period of waiting time was too short.</Causes>
+    <Actions>Increase the waiting time or make a retry. <p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="709" eDefine="SYS_ERR_ARL_IODISABLE">
+    <Title>I/O Unit Is Not Disabled</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />I/O unit <arg format="%s" ordinal="2" /> was not disabled. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>The maximum period of waiting time was too short. </Causes>
+    <Actions>Increase the waiting time or make a retry. <p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="710" eDefine="SYS_ERR_ARL_ARGNAME">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The argument <arg format="%s" ordinal="2" /> is an expression value, is not present or is of the type switch. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Change the parameter <arg format="%s" ordinal="4" /> to a valid one. <p />Recovery: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="711" eDefine="SYS_ERR_ARL_ALIAS_TYPE">
+    <Title>Alias Type Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The data types for the arguments FromSignal and ToSignal must be the same and must be of signalxx type. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Change the type to a valid one (signalai/ao, signaldi/do, signalgi/go).<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="712" eDefine="SYS_ERR_ARL_NOSHELF">
+    <Title>Event Routine Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Too many event routines, the routine <arg format="%s" ordinal="2" /> will not be executed.<p /></Description>
+    <Actions>Encapsulate the routine in one of the others that are specified for the same event. </Actions>
+  </Message>
+</Domain>

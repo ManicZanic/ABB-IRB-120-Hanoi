@@ -1,0 +1,423 @@
+MODULE BASE_SHARED (SYSMODULE, NOVIEW)
+
+ ! System module with basic predefined system data
+ !************************************************
+ 
+ ! System data ROB_ID, with reference to the TCP-robot (if any)
+ ! for the actual motion program task 
+ ! Do not translate or delete ROB_ID
+ TASK VAR mecunit ROB_ID;
+
+ ! Constant empty string
+ ! (stEmpty hard coded in MMC, do not change the name)
+ CONST string stEmpty:="";
+ 
+ CONST string stSpace:=" ";
+
+ ! Declaration of stoppoint types
+ CONST stoppoint inpos := 1;
+ CONST stoppoint stoptime := 2;
+ CONST stoppoint fllwtime := 3;
+
+ ! Declaration of stoppointdata
+ CONST stoppointdata inpos20     := [inpos,    TRUE,  [ 20,  20, 0, 2],   0,   0, stEmpty, 0, 0];
+ CONST stoppointdata inpos50     := [inpos,    TRUE,  [ 50,  50, 0, 2],   0,   0, stEmpty, 0, 0];
+ CONST stoppointdata inpos100    := [inpos,    TRUE,  [100, 100, 0, 2],   0,   0, stEmpty, 0, 0];
+ CONST stoppointdata stoptime0_5 := [stoptime, FALSE, [  0,   0, 0, 0], 0.5,   0, stEmpty, 0, 0];
+ CONST stoppointdata stoptime1_0 := [stoptime, FALSE, [  0,   0, 0, 0], 1.0,   0, stEmpty, 0, 0];
+ CONST stoppointdata stoptime1_5 := [stoptime, FALSE, [  0,   0, 0, 0], 1.5,   0, stEmpty, 0, 0];
+ CONST stoppointdata fllwtime0_5 := [fllwtime, TRUE,  [  0,   0, 0, 0],   0, 0.5, stEmpty, 0, 0];
+ CONST stoppointdata fllwtime1_0 := [fllwtime, TRUE,  [  0,   0, 0, 0],   0, 1.0, stEmpty, 0, 0];
+ CONST stoppointdata fllwtime1_5 := [fllwtime, TRUE,  [  0,   0, 0, 0],   0, 1.5, stEmpty, 0, 0];
+
+ ! Declaration of zonedata
+ CONST zonedata fine := [TRUE,    0,   0,   0,    0,   0,    0];
+ CONST zonedata z0   := [FALSE, 0.3, 0.3, 0.3, 0.03, 0.3, 0.03];
+ CONST zonedata z1   := [FALSE,   1,   1,   1,  0.1,   1,  0.1];
+ CONST zonedata z5   := [FALSE,   5,   8,   8,  0.8,   8,  0.8];
+ CONST zonedata z10  := [FALSE,  10,  15,  15,  1.5,  15,  1.5];
+ CONST zonedata z15  := [FALSE,  15,  23,  23,  2.3,  23,  2.3];
+ CONST zonedata z20  := [FALSE,  20,  30,  30,    3,  30,    3];
+ CONST zonedata z30  := [FALSE,  30,  45,  45,  4.5,  45,  4.5];
+ CONST zonedata z40  := [FALSE,  40,  60,  60,    6,  60,    6];
+ CONST zonedata z50  := [FALSE,  50,  75,  75,  7.5,  75,  7.5];
+ CONST zonedata z60  := [FALSE,  60,  90,  90,    9,  90,    9];
+ CONST zonedata z80  := [FALSE,  80, 120, 120,   12, 120,   12];
+ CONST zonedata z100 := [FALSE, 100, 150, 150,   15, 150,   15];
+ CONST zonedata z150 := [FALSE, 150, 225, 225,   23, 225,   23];
+ CONST zonedata z200 := [FALSE, 200, 300, 300,   30, 300,   30];
+
+ ! Declaration of speeddata
+ CONST speeddata v5    := [   5, 500, 5000, 1000];
+ CONST speeddata v10   := [  10, 500, 5000, 1000];
+ CONST speeddata v20   := [  20, 500, 5000, 1000];
+ CONST speeddata v30   := [  30, 500, 5000, 1000];
+ CONST speeddata v40   := [  40, 500, 5000, 1000];
+ CONST speeddata v50   := [  50, 500, 5000, 1000];
+ CONST speeddata v60   := [  60, 500, 5000, 1000];
+ CONST speeddata v80   := [  80, 500, 5000, 1000];
+ CONST speeddata v100  := [ 100, 500, 5000, 1000];
+ CONST speeddata v150  := [ 150, 500, 5000, 1000];
+ CONST speeddata v200  := [ 200, 500, 5000, 1000];
+ CONST speeddata v300  := [ 300, 500, 5000, 1000];
+ CONST speeddata v400  := [ 400, 500, 5000, 1000];
+ CONST speeddata v500  := [ 500, 500, 5000, 1000];
+ CONST speeddata v600  := [ 600, 500, 5000, 1000];
+ CONST speeddata v800  := [ 800, 500, 5000, 1000];
+ CONST speeddata v1000 := [1000, 500, 5000, 1000];
+ CONST speeddata v1500 := [1500, 500, 5000, 1000];
+ CONST speeddata v2000 := [2000, 500, 5000, 1000];
+ CONST speeddata v2500 := [2500, 500, 5000, 1000];
+ CONST speeddata v3000 := [3000, 500, 5000, 1000];
+ CONST speeddata v4000 := [4000, 500, 5000, 1000];
+ CONST speeddata v5000 := [5000, 500, 5000, 1000];
+ CONST speeddata v6000 := [6000, 500, 5000, 1000];
+ CONST speeddata v7000 := [7000, 500, 5000, 1000];
+ TASK VAR   speeddata vmax  := [5000, 500, 5000, 1000];
+
+ ! Declaration of speeddata for external axis
+ CONST speeddata vrot1    := [0, 0, 0,   1];
+ CONST speeddata vrot2    := [0, 0, 0,   2];
+ CONST speeddata vrot5    := [0, 0, 0,   5];
+ CONST speeddata vrot10   := [0, 0, 0,  10];
+ CONST speeddata vrot20   := [0, 0, 0,  20];
+ CONST speeddata vrot50   := [0, 0, 0,  50];
+ CONST speeddata vrot100  := [0, 0, 0, 100];
+
+ CONST speeddata vlin10   := [0, 0,   10, 0];
+ CONST speeddata vlin20   := [0, 0,   20, 0];
+ CONST speeddata vlin50   := [0, 0,   50, 0];
+ CONST speeddata vlin100  := [0, 0,  100, 0];
+ CONST speeddata vlin200  := [0, 0,  200, 0];
+ CONST speeddata vlin500  := [0, 0,  500, 0];
+ CONST speeddata vlin1000 := [0, 0, 1000, 0];
+ 
+ ! Declaration of symbolical data for digital signals value
+ CONST dionum high := 1;
+ CONST dionum low  := 0;
+ CONST dionum edge := 2;  
+
+ ! Instruction Open parameter Object
+ CONST string diskhome := "HOME:";
+ CONST string disktemp := "TEMP:";
+ CONST string usbdisk1 := "RemovableDisk1:";
+ CONST string usbdisk2 := "RemovableDisk2:";
+ CONST string usbdisk3 := "RemovableDisk3:";
+ CONST string usbdisk4 := "RemovableDisk4:";
+ CONST string usbdisk5 := "RemovableDisk5:";
+ CONST string usbdisk6 := "RemovableDisk6:";
+ CONST string usbdisk7 := "RemovableDisk7:";
+ CONST string usbdisk8 := "RemovableDisk8:";
+ CONST string usbdisk9 := "RemovableDisk9:";
+ CONST string usbdisk10 := "RemovableDisk10:";
+
+
+ ! Constant pi
+ CONST num pi := 3.1415926;
+ 
+ ! Used for ReadCfgData/WriteCfgData
+ CONST num END_OF_LIST := -1;
+ 
+  ! Can be used as argument for parameter \num Time/TimeOut in many instructions
+ CONST num WAIT_MAX := 8388608;
+
+ ! Event routine for RESET and START
+ ! Setup default motion settings
+ ! Do not translate or delete SYS_RESET
+ PROC SYS_RESET()
+   VAR wztemporary wz_clear := [0];
+   SysInit7;
+   IF TaskRunMec() THEN
+     IF TaskRunRob() THEN
+       VelSet 100, MaxRobSpeed();
+       vmax.v_tcp := MaxRobSpeed();
+       PathAccLim FALSE, FALSE;
+       WorldAccLim \Off;
+       CirPathMode \PathFrame;
+       IF SingAreaWrist() THEN
+         SingArea\Wrist;
+       ELSE
+         SingArea\Off;
+       ENDIF
+       ConfJ \On;
+       ConfL \On;
+       GripLoad load0;
+       PDispOff;
+       IF IsOptId("FCCSS")  %"SysInit11"%;
+     ELSE
+       VelSet 100, 5000;
+     ENDIF
+     SysInit9;
+     AccSet 100,100;
+     EOffsOff;
+     TuneReset;
+     SoftDeact;
+     PathResol 100;
+     SysInit2 "wztemporary" \Hidden, wz_clear;
+     SpeedPrioDeact;
+     SysInit1 \On \TuneValue:=100;
+     ProbeReset;
+     DataLogReset;
+     DitherDeact;
+     StopMoveReset;
+     SpeedRefresh CSpeedOverride();
+     IF EventType() = EVENT_START THEN
+     	IF IsStopMoveAct(\FromNonMoveTask) = TRUE THEN
+     		! Generate warning
+     		SysFun1 PROGRAM_ERR, 1658, TYPE_WARN, ERRSTR_TASK, ERRSTR_UNUSED, ERRSTR_UNUSED, ERRSTR_UNUSED, ERRSTR_UNUSED;
+     	ENDIF
+     ENDIF
+     ActEventBuffer;
+   ENDIF
+   SpyStop;
+   SysInit8;
+   SysInit10;
+   SysInit12;
+   IF TaskRunMec() THEN
+     SysInit13;
+     SysFun29;
+   ENDIF
+ ENDPROC
+
+ ! Event routine for POWER ON 
+ ! Restore motion settings 
+ ! Do not translate or delete SYS_POWERON
+ PROC SYS_POWERON()
+   SysInit7;
+   SysInit4;
+   SysInit6;
+   
+   IF tool0 <> [TRUE, [[0, 0, 0], [1, 0, 0, 0]], [0.001, [0, 0, 0.001],[1, 0, 0, 0], 0, 0, 0]] THEN
+      tool0 := [TRUE, [[0, 0, 0], [1, 0, 0, 0]], [0.001, [0, 0, 0.001],[1, 0, 0, 0], 0, 0, 0]];
+      SysFun1 PROGRAM_ERR, 1553, TYPE_ERR, rolhidden_tool0, rolhidden_tool0, ERRSTR_UNUSED, ERRSTR_UNUSED, ERRSTR_UNUSED;		
+   ENDIF
+
+   IF wobj0 <> [FALSE, TRUE, stEmpty, [[0, 0, 0],[1, 0, 0, 0]], [[0, 0, 0],[1, 0, 0, 0]]] THEN
+      wobj0 := [FALSE, TRUE, stEmpty, [[0, 0, 0],[1, 0, 0, 0]], [[0, 0, 0],[1, 0, 0, 0]]];
+      SysFun1 PROGRAM_ERR, 1553, TYPE_ERR, rolhidden_wobj0, rolhidden_wobj0, ERRSTR_UNUSED, ERRSTR_UNUSED, ERRSTR_UNUSED;		
+	ENDIF
+
+   IF load0 <> [0.001, [0, 0, 0.001],[1, 0, 0, 0], 0, 0, 0] THEN
+     load0 := [0.001, [0, 0, 0.001],[1, 0, 0, 0], 0, 0, 0];
+     SysFun1 PROGRAM_ERR, 1553, TYPE_ERR, rolhidden_load0, rolhidden_load0, ERRSTR_UNUSED, ERRSTR_UNUSED, ERRSTR_UNUSED;		
+	ENDIF
+	
+	! Unload any load identify modules and set exit flag to false	
+   RunLoadId := FALSE;
+   LoadIdTerminate;
+ ENDPROC
+
+ ! Load Identification
+ !********************
+  
+ PROC LoadIdentifyProc()
+   VAR num LIdTextTab;
+   
+   RunLoadId := FALSE;
+   EndWithExit := TRUE;
+   
+   IF mockitLoaded = FALSE THEN	
+     Load \Dynamic, "RELEASE:/system/mockit.sys";
+     mockitLoaded := TRUE;
+   ENDIF  
+   
+   %":RunLoadIdentify"% RunLoadId, TRUE;
+   IF RunLoadID THEN
+     IF mockit1Loaded = FALSE THEN
+       ! Use CheckRef optional argument only when testing new implementations.
+       ! If customer has unsolved references in his program, we should not give errors for that 
+       !Load \Dynamic, "RELEASE:/system/mockit1.sys" \CheckRef;
+       Load \Dynamic, "RELEASE:/system/mockit1.sys";
+       mockit1Loaded := TRUE;
+     ENDIF  
+   
+     %":LoadIdentProc"%;
+   
+   ENDIF
+   
+   LoadIdTerminate;
+   
+   ERROR
+     TEST ERRNO
+     CASE ERR_FILNOTFND:
+       RAISE;
+     CASE ERR_LOADED:
+       TRYNEXT;
+     DEFAULT:
+       SysFun1 PROGRAM_ERR, 1517, TYPE_ERR, ERRSTR_TASK, ERRSTR_CONTEXT, ERRSTR_UNUSED, ERRSTR_UNUSED, ERRSTR_UNUSED;
+       Stop;
+       RETRY;
+     ENDTEST
+ ENDPROC
+
+ ! System module for option Load Identification
+ ! Service routine for ext. manipulators
+ !***************************************************
+ !***************************************************
+
+ PROC ManLoadIdProc(\paridnum ParIdType,
+                    \VAR mecunit MechUnit | string MechUnitName,
+                    \num AxisNumber,
+                    \INOUT loaddata PayLoad,
+                    \num ConfigAngle,
+                    \switch DeactAll | switch AlreadyActive,
+                    \VAR bool DefinedFlag,
+                    \bool DoExit)
+   VAR num LIdTextTab;
+
+   RunLoadId := FALSE;
+   IF Present(DoExit) THEN
+   	 EndWithExit := DOExit;	
+   ELSE
+	 EndWithExit := FALSE;	
+   ENDIF
+
+   IF NOT Present(PayLoad) THEN
+     IF mockitLoaded = FALSE THEN
+       Load \Dynamic, "RELEASE:/system/mockit.sys";
+       mockitLoaded := TRUE;
+     ENDIF  
+   
+     %":RunLoadIdentify"% RunLoadId, EndWithExit;
+     IF RunLoadID THEN
+       IF mulidmocLoaded = FALSE THEN
+         Load \Dynamic, "RELEASE:/system/mulidmoc.sys";
+         mulidmocLoaded := TRUE;
+       ENDIF  
+     
+       IF mulidmmiLoaded = FALSE THEN
+         ! Use CheckRef optional argument only when testing new implementations.
+         ! If customer has unsolved references in his program, we should not give errors for that 
+         !Load \Dynamic, "RELEASE:/system/mulidmmi.mod" \CheckRef;
+         Load \Dynamic, "RELEASE:/system/mulidmmi.mod";
+         mulidmmiLoaded := TRUE;
+       ENDIF  
+     
+       %":ManLoadId"% \ParIdType?ParIdType,
+                     \MechUnit?MechUnit,
+                     \MechUnitName?MechUnitName,
+                     \AxisNumber?AxisNumber,
+                     \PayLoad?PayLoad,
+                     \ConfigAngle?ConfigAngle,
+                     \DeactAll?DeactAll,
+                     \AlreadyActive?AlreadyActive,
+                     \DefinedFlag?DefinedFlag;
+   
+     ENDIF
+   ELSE
+     IF NOT IsPersLocal(PayLoad) THEN
+       IF mockitLoaded = FALSE THEN
+         Load \Dynamic, "RELEASE:/system/mockit.sys";
+         mockitLoaded := TRUE;
+       ENDIF  
+     
+       %":RunLoadIdentify"% RunLoadId, EndWithExit;
+       IF RunLoadID THEN
+         IF mulidmocLoaded = FALSE THEN
+           Load \Dynamic, "RELEASE:/system/mulidmoc.sys";
+           mulidmocLoaded := TRUE;
+         ENDIF  
+   
+         IF mulidmmiLoaded = FALSE THEN
+           ! Use CheckRef optional argument only when testing new implementations.
+           ! If customer has unsolved references in his program, we should not give errors for that 
+           !Load \Dynamic, "RELEASE:/system/mulidmmi.mod" \CheckRef;
+           Load \Dynamic, "RELEASE:/system/mulidmmi.mod";
+           mulidmmiLoaded := TRUE;
+         ENDIF  
+       
+         %":ManLoadId"% \ParIdType?ParIdType,
+                     \MechUnit?MechUnit,
+                     \MechUnitName?MechUnitName,
+                     \AxisNumber?AxisNumber,
+                     \PayLoad?PayLoad,
+                     \ConfigAngle?ConfigAngle,
+                     \DeactAll?DeactAll,
+                     \AlreadyActive?AlreadyActive,
+                     \DefinedFlag?DefinedFlag;
+
+       ENDIF
+     ELSE
+       BookErrNo ERR_INT_PERS_LOCAL;
+       RAISE ERR_INT_PERS_LOCAL;
+     ENDIF
+   ENDIF
+   
+   LoadIdTerminate;
+   
+   ERROR
+     TEST ERRNO
+     CASE ERR_FILNOTFND:
+       RAISE;
+     CASE ERR_LOADED:
+       TRYNEXT;
+     CASE ERR_INT_PERS_LOCAL:
+       SysFun1 PROGRAM_ERR, 1545, TYPE_ERR, ERRSTR_TASK, "PayLoad", ERRSTR_CONTEXT, ERRSTR_UNUSED, ERRSTR_UNUSED;
+       TRYNEXT;
+     DEFAULT:
+       SysFun1 PROGRAM_ERR, 1517, TYPE_ERR, ERRSTR_TASK, ERRSTR_CONTEXT, ERRSTR_UNUSED, ERRSTR_UNUSED, ERRSTR_UNUSED;
+       Stop;
+       RETRY;
+     ENDTEST
+ ENDPROC
+
+ ! Undo the load identify proc
+ !*****************************
+
+ PROC LoadIdTerminate()
+     IF mockitLoaded THEN
+       UnLoad "RELEASE:/system/mockit.sys";
+       mockitLoaded := FALSE;
+     ENDIF
+     
+     IF mockit1Loaded THEN
+       UnLoad "RELEASE:/system/mockit1.sys";
+       mockit1Loaded := FALSE;
+     ENDIF
+     
+     IF mulidmocLoaded THEN
+       UnLoad "RELEASE:/system/mulidmoc.sys";
+       mulidmocLoaded := FALSE;
+     ENDIF
+     
+     IF mulidmmiLoaded THEN
+       UnLoad "RELEASE:/system/mulidmmi.mod";
+       mulidmmiLoaded := FALSE;
+     ENDIF
+
+     IF RunLoadID THEN
+       RunLoadID := FALSE;
+       IF EndWithExit = TRUE THEN
+         EXIT;
+       ENDIF
+     ENDIF
+     
+     ERROR
+       IF ERRNO = ERR_UNLOAD THEN
+         SkipWarn;
+         TRYNEXT;
+       ELSE
+         RAISE;
+       ENDIF
+ ENDPROC
+
+
+ ! Instruction CallByVar
+ !***********************
+
+ PROC CallByVar(string Name,
+                 num Number)
+
+   IF (Number - Trunc(Number) <> 0) OR (Number < 0) THEN
+     SysFun5 "ERR_ARGVALERR", PROGRAM_ERR, 1523, ERRSTR_TASK, "Number", ERRSTR_CONTEXT,
+             "ERR_ARGVALERR", ERRSTR_UNUSED;			
+   ENDIF
+
+   %":" + Name + NumToStr(Number, 0)%;   
+  
+   ERROR
+     RAISE;
+  
+ ENDPROC
+
+ENDMODULE

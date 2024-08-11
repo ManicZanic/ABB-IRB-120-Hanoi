@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="ARL" domainNo="4" lang="zh" elogTextVersion="1.0" min="107" max="257">
+  <Message number="107" eDefine="SYS_ERR_ARL_UNDVARTYP">
+    <Title>数据声明错误</Title>
+    <Description> 无法确定 <p /> 变量值（循环<p /> 常量参考值？）类型<p /></Description>
+    <Actions> 检查是否正确定义了<p /> 所有引用常量。如果这样，程序就会<p /> 过于复杂。请尝试重写<p /> 声明。 </Actions>
+  </Message>
+  <Message number="108" eDefine="SYS_ERR_ARL_UNKAGGTYP">
+    <Title>类型错误</Title>
+    <Description> 未知集合<p /> 类型 <p /></Description>
+    <Actions> 由于不存在预期数据类型，<p /> 集合不能用于<p /> 此位置。用期望的数据类型<p /> 和集合值说明数据。使用数据名称，<p /> 而不是集合名称。 </Actions>
+  </Message>
+  <Message number="109" eDefine="SYS_ERR_ARL_UNDRCPTYP">
+    <Title>类型定义错误</Title>
+    <Description> 无法确定 <p /> 记录组件类型<p /><arg format="%.16s" ordinal="1" /><p /> （循环类型定义？）<p /></Description>
+    <Actions> 检查组件类型是否<p /> 得到正确定义。如果得到正确定义，它就是<p /> 一个循环定义，组件的类型<p /> 不能引用其<p /> 自身的记录类型。 </Actions>
+  </Message>
+  <Message number="110" eDefine="SYS_ERR_ARL_NAMAMBREC">
+    <Title>引用错误</Title>
+    <Description> 记录名称<p /><arg format="%.16s" ordinal="1" /> 不明确<p /></Description>
+    <Actions> 在该程序位置至少<p /> 可以看见另外一个<p /> 与引用记录同名的对象。确保<p /> 所有对象名称满足<p /> 唯一性命名规则。 </Actions>
+  </Message>
+  <Message number="111" eDefine="SYS_ERR_ARL_NAMAMBGREC">
+    <Title>名称错误</Title>
+    <Description> 全局记录<p /> 名称 <arg format="%.16s" ordinal="1" /> 不明确<p /></Description>
+    <Actions> 在整个程序的所有全局类型、数据、<p /> 全局例行程序和模块中，全局类型必须<p /> 拥有唯一的名称<p /> 。重命名记录<p /> 或更改不一致的名称。 </Actions>
+  </Message>
+  <Message number="112" eDefine="SYS_ERR_ARL_NAMAMBALI">
+    <Title>引用错误</Title>
+    <Description> 别名<p /><arg format="%.16s" ordinal="1" /> 不明确<p /></Description>
+    <Actions> 在该程序位置至少<p /> 可以看见另外一个<p /> 与引用别名同名的对象。确保<p /> 所有对象名称满足<p /> 唯一性命名规则。 </Actions>
+  </Message>
+  <Message number="113" eDefine="SYS_ERR_ARL_NAMAMBGALI">
+    <Title>名称错误</Title>
+    <Description> 全局别名<p /> 名称 <arg format="%.16s" ordinal="1" /> 不明确<p /></Description>
+    <Actions> 在整个程序的所有全局类型、数据、<p /> 全局例行程序和模块中，全局类型必须<p /> 拥有唯一的名称<p /> 。重命名别名<p /> 或更改不一致的名称。 </Actions>
+  </Message>
+  <Message number="114" eDefine="SYS_ERR_ARL_ALITOALI">
+    <Title>类型定义错误</Title>
+    <Description> 别名 <arg format="%.16s" ordinal="1" />的<p /> 类型引用<p /> 属于别名类型<p /></Description>
+    <Actions> 检查组件类型是否<p /> 得到正确定义。如果得到正确定义，它就是<p /> 一个循环定义。组件类型<p /> 不能引用其<p /> 自身的记录类型。 </Actions>
+  </Message>
+  <Message number="115" eDefine="SYS_ERR_ARL_UNDALITYP">
+    <Title>类型定义错误</Title>
+    <Description> 无法确定 <p /> 别名 <arg format="%.16s" ordinal="1" />的类型<p /> （循环类型定义？）<p /></Description>
+    <Actions> 检查别名类型是否<p /> 得到正确定义。如果得到正确定义，它就是<p /> 一个循环定义，别名的类型<p /> 不能引用将该别名用作<p /> 组件的记录。 </Actions>
+  </Message>
+  <Message number="116" eDefine="SYS_ERR_ARL_NAMAMBRCP">
+    <Title>引用错误</Title>
+    <Description>记录组件名称<p /><arg format="%.16s" ordinal="2" /> 不明确<p /></Description>
+    <Actions>在该程序位置至少能看见另外一个<p />与引用组件同名<p />的对象。确保<p />所有对象名称能满足<p />唯一性命名规则。</Actions>
+  </Message>
+  <Message number="117" eDefine="SYS_ERR_ARL_PHRRECRCP">
+    <Title>类型定义错误</Title>
+    <Description> 记录组件的<p /> 占位符不允许出现在<p /> 指定记录的定义中<p /></Description>
+    <Actions> 完成定义或将<p /> 数据名称改为占位符。 </Actions>
+  </Message>
+  <Message number="119" eDefine="SYS_ERR_ARL_SEMIRCP">
+    <Title>引用错误</Title>
+    <Description> 不能将半值类型 <arg format="%.16s" ordinal="1" /> 用于<p />记录组件<p /></Description>
+  </Message>
+  <Message number="120" eDefine="SYS_ERR_ARL_ILLREFTASK">
+    <Title>引用错误</Title>
+    <Description> 非法引用<p /> 共享对象的<p />已安装任务对象 <arg format="%.16s" ordinal="1" /> 。<p /></Description>
+    <Actions> 安装共享引用对象 ，或<p /> 在每个任务中安装引用 ReaL <p /> 对象/档案或 RAPID 模块<p /> （非共享）。 </Actions>
+  </Message>
+  <Message number="121" eDefine="SYS_ERR_ARL_SEMIARR">
+    <Title>引用错误</Title>
+    <Description> 不能将半值类型用于数组<p /></Description>
+  </Message>
+  <Message number="122" eDefine="SYS_ERR_ARL_REFNOTPRC_LNK">
+    <Title>引用错误</Title>
+    <Description>
+      <arg format="%.16s" ordinal="1" /> 不是过程引用<p /></Description>
+    <Actions> 指定的名称确认了一个非过程对象。<p /> 检查期望的过程是否被其它同名对象隐藏。</Actions>
+  </Message>
+  <Message number="123" eDefine="SYS_ERR_ARL_ARGNOTPER_LNK">
+    <Title>自变量错误</Title>
+    <Description> 'PERS' 参数 <arg format="%.16s" ordinal="1" /> 的自变量不是持续变量参考值，而是只读值。<p /></Description>
+    <Actions> 确保自变量为持续变量参考值或持续参数参考值，且处于可写状态。<p /> 不要用 () 将自变量括住。</Actions>
+  </Message>
+  <Message number="124" eDefine="SYS_ERR_ARL_ARGNOTVAR_LNK">
+    <Title>自变量错误</Title>
+    <Description> "VAR" 参数 <arg format="%.16s" ordinal="1" /> 的自变量不是可变参考值，而是只读值。<p /></Description>
+    <Actions> 确保自变量为变量或变量参数参考值，且处于可写状态。<p /> 不要用 () 将自变量括住。</Actions>
+  </Message>
+  <Message number="125" eDefine="SYS_ERR_ARL_CNTNOTVAR_LNK">
+    <Title>指令错误</Title>
+    <Description> 中断号不是静态变量参考值，而是共享值或只读值<p /></Description>
+    <Actions> 确保中断号为变量或变量参数参考值。变量必须是静态变量，且不被共享。变量可以<p /> 不是只读变量。</Actions>
+  </Message>
+  <Message number="126" eDefine="SYS_ERR_ARL_MAXINTVAL_LNK">
+    <Title>值错误</Title>
+    <Description> 整数值 <arg format="%G" ordinal="1" /> 过大<p /></Description>
+    <Actions> 表达式的值必须为整数值。当前值超出整数范围。</Actions>
+  </Message>
+  <Message number="127" eDefine="SYS_ERR_ARL_NOTINTVAL_LNK">
+    <Title>值错误</Title>
+    <Description>
+      <arg format="%G" ordinal="1" /> 不是整数值<p /></Description>
+    <Actions> 表达式的值必须为纯整数值。当前值存在小数。</Actions>
+  </Message>
+  <Message number="128" eDefine="SYS_ERR_ARL_REFUNKDAT_LNK">
+    <Title>引用错误</Title>
+    <Description> 引用了未知完整数据 <arg format="%.16s" ordinal="1" /><p /></Description>
+    <Actions> 在该程序位置不能看见具有指定名称的数据<p /> （或其它对象）。</Actions>
+  </Message>
+  <Message number="129" eDefine="SYS_ERR_ARL_REFUNKFUN_LNK">
+    <Title>引用错误</Title>
+    <Description> 引用了未知函数 <arg format="%.16s" ordinal="1" /><p /></Description>
+    <Actions> 在该程序位置不能观察到具有指定名称的函数（或其它对象）。</Actions>
+  </Message>
+  <Message number="130" eDefine="SYS_ERR_ARL_REFUNKPRC_LNK">
+    <Title>引用错误</Title>
+    <Description> 引用了未知过程 <arg format="%.16s" ordinal="1" /><p /></Description>
+    <Actions> 在该程序位置不能观察到具有指定名称的过程（或其它对象）。</Actions>
+  </Message>
+  <Message number="131" eDefine="SYS_ERR_ARL_REFUNKTRP_LNK">
+    <Title>引用错误</Title>
+    <Description> 引用了未知陷阱 <arg format="%.16s" ordinal="1" /><p /></Description>
+    <Actions> 在该程序位置不能观察到具有指定名称的中断程序（或其它对象）。</Actions>
+  </Message>
+  <Message number="135" eDefine="SYS_ERR_ARL_EXPECTED">
+    <Title>语法错误</Title>
+    <Description> 预期值 <arg format="%.16s" ordinal="1" /><p /></Description>
+  </Message>
+  <Message number="136" eDefine="SYS_ERR_ARL_UNEXPECTED">
+    <Title>语法错误</Title>
+    <Description> 意外值 <arg format="%.16s" ordinal="1" /></Description>
+  </Message>
+  <Message number="137" eDefine="SYS_ERR_ARL_EXPECTED_OTHER">
+    <Title>语法错误</Title>
+    <Description> 预期值为 <arg format="%.16s" ordinal="1" /> ，但找到的是 <arg format="%.16s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="138" eDefine="SYS_ERR_ARL_STACK_BACKEDUP">
+    <Title>语法错误
+</Title>
+    <Description>语法错误，堆栈已备份
+</Description>
+    <Actions />
+  </Message>
+  <Message number="139" eDefine="SYS_ERR_ARL_PARSING_TERM">
+    <Title>语法错误
+</Title>
+    <Description>语法错误，分析中止
+</Description>
+    <Actions />
+  </Message>
+  <Message number="140" eDefine="SYS_ERR_ARL_NUM_LIT_OUT_RANGE">
+    <Title>符号 <arg format="%s" ordinal="1" /> 的数值超出范围。</Title>
+    <Description>符号 <arg format="%s" ordinal="1" /> 的数值超出范围。</Description>
+    <Actions>缩小该值</Actions>
+  </Message>
+  <Message number="141" eDefine="SYS_ERR_ARL_STR_TOO_LONG">
+    <Title>字串过长</Title>
+    <Description> 字串 <arg format="%s" ordinal="1" /> 过长。</Description>
+    <Actions>缩短字串。</Actions>
+  </Message>
+  <Message number="142" eDefine="SYS_ERR_ARL_TXID_OUT_RANGE">
+    <Title>TxId 超出范围</Title>
+    <Description>文本标识符 <arg format="%s" ordinal="1" /> 超出范围。</Description>
+  </Message>
+  <Message number="143" eDefine="SYS_ERR_ARL_AGG_OUT_RANGE">
+    <Title>集合超出范围</Title>
+    <Description>集合 <arg format="%s" ordinal="1" /> 超出范围。</Description>
+    <Actions>减小集合</Actions>
+  </Message>
+  <Message number="144" eDefine="SYS_ERR_ARL_INT_OUT_RANGE">
+    <Title>整数超出范围</Title>
+    <Description>整数 <arg format="%s" ordinal="1" /> 超出范围。</Description>
+    <Actions>减小整数。 </Actions>
+  </Message>
+  <Message number="145" eDefine="SYS_ERR_ARL_PARSE_STACK_FULL">
+    <Title>分析程序堆栈已满
+</Title>
+    <Description>分析程序堆栈已满。
+</Description>
+    <Actions>降低程序复杂性
+</Actions>
+  </Message>
+  <Message number="146" eDefine="SYS_ERR_ARL_HEAP_SPACE_EMPTY">
+    <Title>无足够的堆栈空间。
+</Title>
+    <Description>无足够的堆栈空间来完成动作。
+</Description>
+    <Actions>请重写您的程序
+</Actions>
+  </Message>
+  <Message number="147" eDefine="SYS_ERR_ARL_RESERVED_WORD">
+    <Title>在当前语言中标识符为保留字符
+</Title>
+    <Description>在当前语言中标识符 <arg format="%s" ordinal="1" /> 为保留字符。
+</Description>
+    <Actions>更改标识符的名称
+</Actions>
+  </Message>
+  <Message number="148" eDefine="SYS_ERR_ARL_ID_TOO_LONG">
+    <Title>标识符过长</Title>
+    <Description>标识符 <arg format="%s" ordinal="1" /> 的名称过长。</Description>
+    <Actions>以更短的名称重命名标识符。</Actions>
+  </Message>
+  <Message number="149" eDefine="SYS_ERR_ARL_PLACEHOLD_TOO_LONG">
+    <Title>占位符过长</Title>
+    <Description>占位符 <arg format="%s" ordinal="1" /> 过长。</Description>
+    <Actions>以更短的名称重命名占位符。</Actions>
+  </Message>
+  <Message number="150" eDefine="SYS_ERR_ARL_UNEXP_UNKN">
+    <Title>意外未知权标</Title>
+    <Description>意外未知权标。</Description>
+    <Actions>删除未知权标。</Actions>
+  </Message>
+  <Message number="151" eDefine="SYS_ERR_ARL_ALREADY_INIT_PERS">
+    <Title>PERS 的初始值未更新。</Title>
+    <Description>PERS 的初始值： <arg format="%s" ordinal="1" /> 将不会更新。<p />其他任务中的同名 PERS 已存在 PERS 初始值。</Description>
+    <Actions> 检查程序数据窗口的值，以查看 PERS 的值是否正确。<p />如有必要，卸载所有任务中具有该 PERS 的模块并重新加载具有新的初始值的模块。<p />PERS 的类型为： <arg format="%s" ordinal="2" />。 </Actions>
+  </Message>
+  <Message number="152" eDefine="SYS_ERR_ARL_LOCTSKVAR">
+    <Title>数据声明错误</Title>
+    <Description>例程变量声明中 TASK 非法</Description>
+    <Actions>只有程序数据声明可以有 TASK 属性。删除 TASK 属性或者将该声明移到例程外面。</Actions>
+  </Message>
+  <Message number="155" eDefine="SYS_ERR_ARL_ARGNOTPER">
+    <Title>变量错误
+</Title>
+    <Description>任务 <arg format="%.16s" ordinal="1" />：'PERS’参数<p />的变元 <arg format="%.16s" ordinal="2" /> 不是<p />持续变量参考值，或者是只读值<p /></Description>
+    <Actions>确保变元仅为持续变量参考值或持续参数参考值，且处于可写状态。不要用 () 括住变元。
+</Actions>
+  </Message>
+  <Message number="156" eDefine="SYS_ERR_ARL_ARGNOTVAR">
+    <Title>变量错误 </Title>
+    <Description>任务 <arg format="%.16s" ordinal="1" />："VAR" 参数的变元 <arg format="%.16s" ordinal="2" /> 不是可变参考值，而是只读值 </Description>
+    <Actions>确保该变元<p />仅为变量或变量<p />参数参考值，并且<p />处于可写状态。<p />不要用 () 括住变元。 </Actions>
+  </Message>
+  <Message number="157" eDefine="SYS_ERR_ARL_CNTNOTVAR">
+    <Title>指令错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：中断号不是静态变量参考值，<p /> 而是共享值，或只读值。<p /></Description>
+    <Actions> 确保中断号仅为<p /> 变量或变量参数<p /> 参考值。变量必须为<p /> 静态变量，而不是共享变量。变量可以<p /> 不是只读变量。 </Actions>
+  </Message>
+  <Message number="158" eDefine="SYS_ERR_ARL_MAXINTVAL">
+    <Title>值错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：整数值<p /><arg format="%G" ordinal="2" /> 过大<p /></Description>
+    <Actions> 表达式的值必须是<p /> 整数值。当前值超出<p /> 整数范围。 </Actions>
+  </Message>
+  <Message number="159" eDefine="SYS_ERR_ARL_NOTINTVAL">
+    <Title>值错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />： <arg format="%G" ordinal="2" /> 不是<p /> 整数值<p /></Description>
+    <Actions> 表达式的值必须是<p /> 纯整数值。当前值<p /> 包含小数部分。 </Actions>
+  </Message>
+  <Message number="160" eDefine="SYS_ERR_RAPID_CODE_ERROR">
+    <Title>RAPID 程序中存在错误。</Title>
+    <Description>任务 <arg format="%.16s" ordinal="1" />：RAPID 程序中存在错误。 </Description>
+    <Actions>使用“程序”编辑器中的“检查”<p />程序检查 RAPID 错误，并更正<p />该程序。</Actions>
+  </Message>
+  <Message number="161" eDefine="SYS_ERR_ARL_OPTION_MISSING">
+    <Title>选项缺失。</Title>
+    <Description>指令 <arg format="%.16s" ordinal="1" /> 需要选项 <arg format="%.16s" ordinal="2" />。</Description>
+    <Consequences>程序不能正常执行。</Consequences>
+    <Causes>系统映像不包括所需选项。</Causes>
+    <Actions>用所需选项更新系统映像。</Actions>
+  </Message>
+  <Message number="162" eDefine="SYS_ERR_ARL_RAPID_CODE_ERROR_BACK">
+    <Title>RAPID 程序中存在错误。</Title>
+    <Description>任务 <arg format="%.16s" ordinal="1" />： RAPID 程序中存在错误。</Description>
+    <Actions>采取以下动作可调试程序：<p />1 将任务类型更改为“正常”。 <p />2 重启控制器。 <p />3 检查 RAPID 错误并修正程序。 </Actions>
+  </Message>
+  <Message number="165" eDefine="SYS_ERR_ARL_REFUNKDAT">
+    <Title>引用错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：引用了<p /> 未知完整数据 <arg format="%.16s" ordinal="2" /><p /></Description>
+    <Actions> 从该程序位置不能看见 <p /> 具有指定名称的数据<p /> （或其它对象）。 </Actions>
+  </Message>
+  <Message number="166" eDefine="SYS_ERR_ARL_REFUNKFUN">
+    <Title>引用错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：引用了未知函数 <arg format="%.16s" ordinal="2" /><p /></Description>
+    <Actions> 从该程序位置不能看见 <p /> 具有指定名称的函数<p /> （或其它对象）。 </Actions>
+  </Message>
+  <Message number="168" eDefine="SYS_ERR_ARL_REFUNKPRC">
+    <Title>引用错误
+</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：引用了未知过程 <arg format="%.16s" ordinal="2" /><p /></Description>
+    <Actions>在该程序位置不能观察到具有指定名称的过程（或其它对象）。<p />要避免这种运行时错误，请在错误处理程序中添加代码。<p /> ERRNO 将设置为 "ERR_REFUNKPRC"。
+</Actions>
+  </Message>
+  <Message number="170" eDefine="SYS_ERR_ARL_REFUNKTRP">
+    <Title>引用错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：引用了未知中断程序 <arg format="%.16s" ordinal="2" /><p /></Description>
+    <Actions> 从该程序位置不能看见 <p /> 具有指定名称的中断程序<p /> （或其它对象）。 </Actions>
+  </Message>
+  <Message number="171" eDefine="SYS_ERR_ARL_REFUNKSYM">
+    <Title>引用错误</Title>
+    <Description> 任务 <arg format="%s" ordinal="1" />：<p />执行模块 <arg format="%s" ordinal="2" />时引用了未知数据（或其它对象）。</Description>
+    <Actions>检查程序中是否存在非分辨引用。</Actions>
+  </Message>
+  <Message number="172" eDefine="SYS_ERR_ARL_REFUNKMOD">
+    <Title>引用错误</Title>
+    <Description> 任务 <arg format="%s" ordinal="1" />：<p />引用了未知模块 <arg format="%s" ordinal="2" /></Description>
+    <Actions>在该程序位置不能看见具有指定名称的模块（或其它对象）。检查程序中是否存在错误的模块参考值或模块是否缺失。<p /></Actions>
+  </Message>
+  <Message number="173" eDefine="SYS_ERR_ARL_REFNOTMOD">
+    <Title>引用错误</Title>
+    <Description> 任务 <arg format="%s" ordinal="1" />：<p />引用了非模块对象 <arg format="%s" ordinal="2" /> 。</Description>
+    <Actions> 指定的名称确认了一个非模块对象。<p />检查程序中是否存在错误的模块参考值。</Actions>
+  </Message>
+  <Message number="174" eDefine="SYS_ERR_ARL_REFAMBMOD">
+    <Title>引用错误</Title>
+    <Description> 任务 <arg format="%s" ordinal="1" />：<p />引用了不明确的模块 <arg format="%s" ordinal="2" /> 。</Description>
+    <Actions>在该程序位置至少能看见另外一个与引用模块同名的对象。确保所有对象名称能满足唯一性命名规则。</Actions>
+  </Message>
+  <Message number="175" eDefine="SYS_ERR_ARL_REFAMBPRC2">
+    <Title>引用错误</Title>
+    <Description> 任务 <arg format="%s" ordinal="1" />：<p />引用了不明确的过程 <arg format="%s" ordinal="2" /> 。</Description>
+    <Actions>在该程序位置至少能看见另外一个与引用过程同名的对象。确保所有对象名称能满足唯一性命名规则。</Actions>
+  </Message>
+  <Message number="191" eDefine="SYS_ERR_ARL_ALRDYCNT">
+    <Title>指令错误
+</Title>
+    <Description>任务 <arg format="%.16s" ordinal="1" />：变量和陷阱<p />例行程序已连接<p /></Description>
+    <Actions>将特定变量与陷阱例行程序<p />连接一次以上<p />是非法的。
+</Actions>
+  </Message>
+  <Message number="192" eDefine="SYS_ERR_ARL_ARGDUPCND">
+    <Title>自变量错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />： <arg format="%.16s" ordinal="2" /><p /> 是赋予互斥参数<p /> 的第二个条件自变量<p /></Description>
+    <Actions> 在互斥参数列表中不能<p /> 将参数赋予<p /> 多个参数。 </Actions>
+  </Message>
+  <Message number="193" eDefine="SYS_ERR_ARL_CALLPROC">
+    <Title>执行错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：后期绑定<p /> 过程调用错误 <arg format="%i" ordinal="2" /><p /></Description>
+    <Actions> 过程调用指令存在<p /> 错误。请参阅前项消息了解<p /> 实际原因。 </Actions>
+  </Message>
+  <Message number="194" eDefine="SYS_ERR_ARL_DIVZERO">
+    <Title>值错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：除以零<p /></Description>
+    <Actions> 不能除以零。请重写程序<p /> 以便在除数为 0 时<p /> 不执行除法运算。</Actions>
+  </Message>
+  <Message number="195" eDefine="SYS_ERR_ARL_EXCRTYMAX">
+    <Title>限制错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：<p /> RETRY (<arg format="%i" ordinal="2" /> retries) 的数量<p /> 超过最大配置数<p /> 。<p /></Description>
+    <Actions> 在执行 RETRY 指令前进行的错误纠正<p /> 可能不足以<p /> 修正错误。<p /> 检查错误处理程序。 </Actions>
+  </Message>
+  <Message number="196" eDefine="SYS_ERR_ARL_EXECPHR">
+    <Title>指令错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：试图<p /> 执行占位符<p /></Description>
+    <Actions> 删除占位符或<p /> 包含占位符的指令，或完善<p /> 指令。然后继续<p /> 执行操作。 </Actions>
+  </Message>
+  <Message number="197" eDefine="SYS_ERR_ARL_FNCNORET">
+    <Title>执行错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：函数未<p /> 返回任何值<p /></Description>
+    <Actions> 已达函数末端，<p /> 但未执行 RETURN <p /> 指令。添加一个指定函数返回值的<p /> RETURN 指令。 </Actions>
+  </Message>
+  <Message number="198" eDefine="SYS_ERR_ARL_ILLQUAT">
+    <Title>值错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：非法<p /> 姿态值<p /><arg format="%.40s" ordinal="2" /><p /></Description>
+    <Actions> 尝试使用非法姿态<p /> （四元数）值 </Actions>
+  </Message>
+  <Message number="199" eDefine="SYS_ERR_ARL_ILLRAISE">
+    <Title>值错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />： <arg format="%s" ordinal="3" /> 中存在非法错误编号 <arg format="%i" ordinal="2" /> 。</Description>
+    <Actions>请使用 1-90 范围内的错误编号，或用指令 BookErrNo 注册错误编号。</Actions>
+  </Message>
+  <Message number="200" eDefine="SYS_ERR_ARL_INOMAX">
+    <Title>限制错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：无更多<p /> 可用中断号<p /></Description>
+    <Actions> 可用中断号的数量<p /> 有限。请重写程序，<p /> 以减少中断号的使用量。这一<p /> 信息也可能会在系统<p /> 出错时出现。 </Actions>
+  </Message>
+  <Message number="202" eDefine="SYS_ERR_ARL_NOTEQDIM">
+    <Title>类型错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：维数 <arg format="%i" ordinal="2" /><p /> 和一致数组维数 <arg format="%i" ordinal="4" /><p /> 的 <arg format="%i" ordinal="3" /> 不一致<p /></Description>
+    <Actions> 数组大小与预期大小不符。<p /> 可能只会在大小相同的数组上<p /> 执行数组赋值。 </Actions>
+  </Message>
+  <Message number="203" eDefine="SYS_ERR_ARL_NOTPRES">
+    <Title>引用错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：可选<p /> 参数 <arg format="%.16s" ordinal="2" /> 不存在<p /></Description>
+    <Actions> 不能引用当前不存在<p /> 的可选参数的值使用该值前<p /> 请用预定义函数 "Present" <p /> 检查该参数<p /> 是否存在。 </Actions>
+  </Message>
+  <Message number="204" eDefine="SYS_ERR_ARL_OUTOFBND">
+    <Title>值错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：维数 <arg format="%i" ordinal="3" /> 的<p /> 数组索引 <arg format="%i" ordinal="2" /> 超出范围<p /> (1- <arg format="%i" ordinal="4" /> ) <p /></Description>
+    <Actions> 数组索引值为非正值，或<p /> 不符合数组的说明大小。 </Actions>
+  </Message>
+  <Message number="205" eDefine="SYS_ERR_ARL_STRTOOLNG">
+    <Title>值错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：RAPID 字串 <arg format="%.16s" ordinal="2" /> 太长 </Description>
+    <Actions> 字串值超过最大允许长度。重写程序，使用更短的字串。 </Actions>
+  </Message>
+  <Message number="206" eDefine="SYS_ERR_ARL_INTQUEFULL">
+    <Title>中断队列已满</Title>
+    <Description>所有正常任务已停止执行。执行陷阱例行程序时， <arg format="%.16s" ordinal="1" /> 发生的中断次数过多。</Description>
+    <Consequences>系统进入锁定状态，将程序指针移至任意位置之前，系统无法重新启动。</Consequences>
+    <Causes>执行陷阱例行程序时，中断次数过多。这可能是因为 CPU 负荷过重造成的。<p /></Causes>
+    <Actions>1) 最大限度地缩短陷阱例行程序的执行时间。<p />2) 执行陷阱例行程序时，使用 Isleep 或 Iwatch 命令禁用/启用中断。</Actions>
+  </Message>
+  <Message number="207" eDefine="SYS_ERR_ARL_ILLRERAISE">
+    <Title>值错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />： <arg format="%s" ordinal="3" /> 中存在非法错误数量 <arg format="%i" ordinal="2" /></Description>
+    <Actions>用于 错误处理程序的错误数量必须是正值。</Actions>
+  </Message>
+  <Message number="208" eDefine="SYS_ERR_ARL_ERREVT_QUEFULL">
+    <Title>错误事件队列已满</Title>
+    <Description> 任务 <arg format="%s" ordinal="1" />：新的事件发生时程序已在执行错误事件。</Description>
+    <Actions>查明发生错误事件的原因并重新启动程序。</Actions>
+  </Message>
+  <Message number="209" eDefine="SYS_ERR_ARL_ERR_CONTEXT_CONSUMED">
+    <Title>错误上下文已耗尽</Title>
+    <Description>任务 <arg format="%s" ordinal="1" /> 中的错误事件已发生。但产生该事件的 RAPID 指令上下文已耗尽。因此无法执行错误处理。</Description>
+    <Actions>查明发生错误事件的原因并重新启动程序。</Actions>
+  </Message>
+  <Message number="210" eDefine="SYS_ERR_ARL_INTERRUPT_REMOVED">
+    <Title>已从队列中移除中断</Title>
+    <Description>已在任务 <arg format="%s" ordinal="1" /> 中删除中断队列的所有中断。 </Description>
+    <Consequences>与中断连接的中断例行程序无法执行。</Consequences>
+    <Causes>- 程序已停止<p />- 可能正在执行检修例行程序或事件例行程序。<p />- 程序正以单步模式执行。</Causes>
+    <Actions>- </Actions>
+  </Message>
+  <Message number="221" eDefine="SYS_ERR_ARL_ABORT">
+    <Title>执行错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：执行异常中止<p /></Description>
+    <Actions> 执行过程因某一致命错误而<p /> 异常中止。 </Actions>
+  </Message>
+  <Message number="222" eDefine="SYS_ERR_ARL_EXSTOVFL">
+    <Title>限制错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：执行堆栈<p /> 溢出<p /></Description>
+    <Actions> 程序因过于复杂而无法执行。<p /> 可能程序包含递归<p /> 例行程序。 </Actions>
+  </Message>
+  <Message number="223" eDefine="SYS_ERR_ARL_FATAL">
+    <Title>执行错误</Title>
+    <Description>任务 <arg format="%.16s" ordinal="1" /> 的执行因某一运行时错误而停止。</Description>
+    <Consequences>立即停止程序执行。</Consequences>
+    <Causes>由于程序错误被视为 UNRECOVERABLE （不可恢复）错误，因此不允许错误处理例行程序（如果采用的话）尝试错误恢复。出错实际原因可能存在差异，并可能在与该消息同时记录的事件日志消息中得到详细说明。</Causes>
+    <Actions>1) 检查同一时间出现的其它事件日志信息，以确定实际原因。</Actions>
+  </Message>
+  <Message number="224" eDefine="SYS_ERR_ARL_ILLREAL">
+    <Title>执行错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：非法返回<p /> ReaL 例行程序的代码 <arg format="%i" ordinal="2" /> 。<p /> 导致这一情况的原因始终是<p /> ReaL 例行程序中发生内部错误。 <p /></Description>
+  </Message>
+  <Message number="225" eDefine="SYS_ERR_ARL_NORESTART">
+    <Title>执行错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：无法重新<p /> 执行<p /> 停电后将无法继续<p /> 执行程序。<p /></Description>
+    <Actions> 重新启动程序。</Actions>
+  </Message>
+  <Message number="226" eDefine="SYS_ERR_ARL_PRCNOTARLID">
+    <Title>名称错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：程序名称<p /><arg format="%.40s" ordinal="2" /><p /> 不是排斥保留字的<p /> RAPID 标识符。<p /></Description>
+    <Actions> 过程名称必须是不等于<p /> 任何 RAPID 语言保留字<p /> 的合法 RAPID <p /> 标识符。更改名称表达式。 </Actions>
+  </Message>
+  <Message number="227" eDefine="SYS_ERR_ARL_RTSTOVFL">
+    <Title>限制错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" /> ：例行程序堆栈<p /> 溢出<p /> 程序因过于复杂而无法执行。<p /> 可能程序包含递归<p /> 例行程序。 <p /></Description>
+  </Message>
+  <Message number="228" eDefine="SYS_ERR_ARL_UNHANDLOGW">
+    <Title>执行错误</Title>
+    <Description>任务 <arg format="%.16s" ordinal="1" /> 的执行因某一运行时错误 <arg format="%i" ordinal="2" />而停止。</Description>
+    <Consequences>立即停止程序执行。</Consequences>
+    <Causes>程序错误被视为 RECOVERABLE（可恢复），但并未恢复错误。出错实际原因可能存在差异，并可能在与该消息同时记录的事件日志信息中得到详细说明。</Causes>
+    <Actions>1) 检查同一时间出现的其它事件日志信息，以确定实际原因。</Actions>
+  </Message>
+  <Message number="229" eDefine="SYS_ERR_ARL_UNHANDRAISE">
+    <Title>执行错误</Title>
+    <Description>任务 <arg format="%.16s" ordinal="1" /> ： 未处理的错误 <p /></Description>
+    <Actions>调用指令中出现错误，但程序中无任何 ERROR 子句已对其进行处理。 <p />检查子句的普通日志中以前的错误或者警告。<p /></Actions>
+  </Message>
+  <Message number="230" eDefine="SYS_ERR_ARL_UNHANDUNKW">
+    <Title>执行错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：未处理的<p /> 非致命运行时错误<p /></Description>
+    <Actions> 出现非致命运行时错误， <p /> 但无任何 ERROR 子句<p /> 处理这一错误。 </Actions>
+  </Message>
+  <Message number="241" eDefine="SYS_ERR_ARL_ILLDIM">
+    <Title>值错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：数组维数<p /> 编号 <arg format="%G" ordinal="2" /> 超出范围(1- <arg format="%i" ordinal="3" /> )<p /></Description>
+    <Actions> 'Dim' 函数的 'DimNo' 参数值<p /> 必须是指定范围内<p /> 的整数值。 </Actions>
+  </Message>
+  <Message number="242" eDefine="SYS_ERR_ARL_NOTARR">
+    <Title>类型错误
+</Title>
+    <Description>任务 <arg format="%.16s" ordinal="1" />：数据不是数组
+</Description>
+    <Actions>'Dim' 功能的 'DatObj' 参数必须是数组。
+</Actions>
+  </Message>
+  <Message number="243" eDefine="SYS_ERR_ARL_UNKINO">
+    <Title>值错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：未知中断<p /> 号<p /></Description>
+    <Actions> 检查 CONNECT 是否已<p /> 初始化指定中断变量，<p /> 以及是否用 ISignalDI 或其它<p /> 中断定义指令定义了<p /> 这一中断。 </Actions>
+  </Message>
+  <Message number="244" eDefine="SYS_ERR_ARL_NONVAL">
+    <Title>值错误</Title>
+    <Description>任务 <arg format="%.16s" ordinal="1" />：<p />对象 <arg format="%.16s" ordinal="2" /> 不是数值类型<p /></Description>
+    <Actions>使用值或半值类型的表达式或数据对象。 </Actions>
+  </Message>
+  <Message number="245" eDefine="SYS_ERR_ARL_NOTMATCH">
+    <Title>参数错误</Title>
+    <Description>
+      <arg format="%.16s" ordinal="1" /> 和 <arg format="%.16s" ordinal="2" /> 中的参数 <arg format="%.16s" ordinal="1" /><p /> 不匹配<p /> （后期绑定）<p /></Description>
+    <Actions> 确保从同一后期绑定节点调用<p /> 的所有过程拥有<p /> 匹配的参数。即它们<p /> 应该在基类型、模式<p /> 和必要/可选参数方面匹配。 </Actions>
+  </Message>
+  <Message number="246" eDefine="SYS_ERR_ARL_INOISSAFE">
+    <Title>无法停用“安全中断”</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />不能对指令 ISleep 停用“安全中断”。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="251" eDefine="SYS_ERR_ARL_AMBSYMNAM">
+    <Title>名称错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：不明确的符号<p /> 名称 <arg format="%.16s" ordinal="2" /><p /></Description>
+    <Actions> 安装的对象必须具有<p /> 唯一的名称。重命名对象或更改<p /> 不一致的名称。 </Actions>
+  </Message>
+  <Message number="252" eDefine="SYS_ERR_ARL_ERRPERSDB">
+    <Title>限制错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：为 <arg format="%.16s" ordinal="3" /> 创建<p /> sdb 项目时出现错误 <arg format="%i" ordinal="2" /><p /></Description>
+    <Actions> 将持续变量值插入<p /> 共享数据库时<p /> 出错。可能是数据库已满。 </Actions>
+  </Message>
+  <Message number="253" eDefine="SYS_ERR_ARL_ILLALIOFALI">
+    <Title>类型定义错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：不允许<p /><arg format="%.16s" ordinal="2" /> 别名 <arg format="%.16s" ordinal="2" /> 拥有<p />别名 <arg format="%.16s" ordinal="2" /><p /></Description>
+    <Actions> 不能定义两个<p /> 相同的别名类型。<p /> 不过，可定义与同一原子或记录类型<p /> 相同的两个别名类型。 </Actions>
+  </Message>
+  <Message number="254" eDefine="SYS_ERR_ARL_ILLANYDIM">
+    <Title>符号定义错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：不能设定<p /> "ANYTYPE#" 参数 <arg format="%.16s" ordinal="2" /> 的<p /> 维数 <p /></Description>
+    <Actions> 删除维数规范。<p /> "ANYTYPE#" 包括数组类型。 </Actions>
+  </Message>
+  <Message number="255" eDefine="SYS_ERR_ARL_ILLANYTYP">
+    <Title>符号定义错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />："ANYTYPE#" 仅<p /> 适用于参数（而不是<p /><arg format="%.16s" ordinal="2" /> ) <p /></Description>
+    <Actions>请使用其它类型。</Actions>
+  </Message>
+  <Message number="256" eDefine="SYS_ERR_ARL_ILLFIRSTALT">
+    <Title>参数错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：不要在选项列表中<p /> 为第一个可选参数<p /><arg format="%.16s" ordinal="2" /> 设置 "alt"。<p /></Description>
+    <Actions> 确保每个互斥可选参数列表中<p /> 只有第二个和其后的参数<p /> 标记为可选参数<p /> 。 </Actions>
+  </Message>
+  <Message number="257" eDefine="SYS_ERR_ARL_ILLREFDIM">
+    <Title>参数错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：不能设定<p /> REF 模式参数 <arg format="%.16s" ordinal="2" /> 的<p /> 维数 <p /></Description>
+    <Actions> 删除数组维<p /> 规范，或更改参数的<p /> 模式。 </Actions>
+  </Message>
+</Domain>

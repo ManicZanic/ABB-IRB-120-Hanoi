@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="SYS" domainNo="2" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="493" max="636">
+  <Message number="493" eDefine="SYS_ERR_SYS_PSC_43">
+    <Title> SC <arg format="%d" ordinal="1" /> SBR triggered </Title>
+    <Description> Safe Brake Ramp (SBR) on Safety Controller (SC) was interrupted by a Class 0 stop due to slow deceleration on Mechanical unit <arg format="%s" ordinal="2" />. This is normal and occurs in cases when a stop1 is to slow. Check for other safety controller elog. </Description>
+    <Actions> - Change parameter value for SBR in Motion configuration<p /> - Trigger a new stop to test the Brake Ramp.<p /> - If this happens frequently, check the Application manual for Mechanical units configuration. </Actions>
+  </Message>
+  <Message number="494" eDefine="SYS_ERR_SYS_PSC_44">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Tool change incorrect
+    </Title>
+    <Description>
+      Incorrect tool change with Tool <arg format="%d" ordinal="3" /> on Mechanical unit <arg format="%s" ordinal="2" /></Description>
+    <Actions>
+      - Check if correct tool.<p />
+      - Decrease speed if needed.<p />
+      - Perform a new tool change. <p /></Actions>
+  </Message>
+  <Message number="501" eDefine="SYS_ERR_SYS_OPEN_ES_PANL">
+    <Title>ES panel open</Title>
+    <Description>The emergency stop panel has previously been broken, and while broken, an attempt was made to operate the robot.</Description>
+    <Consequences>The system remains in the Emergency Stop status.</Consequences>
+    <Causes>An attempt has been made to manoeuvre a control, e.g. the enabling device.</Causes>
+    <Actions>1) To resume operation, first reset the emergency stop panel button. <p />2) Then switch the system back to state Motors ON by pressing the Motors ON button on the Control Module.</Actions>
+  </Message>
+  <Message number="502" eDefine="SYS_ERR_SYS_OPEN_ES_PEND">
+    <Title>ES pendant open</Title>
+    <Description>The emergency stop pendant has previously been broken, and while broken, an attempt was made to operate the robot.</Description>
+    <Consequences>The system remains in the Emergency Stop status.</Consequences>
+    <Causes>An attempt has been made to manoeuvre a control, e.g. the enabling device.</Causes>
+    <Actions>1) To resume operation, first reset the emergency stop pendant button. <p />2) Then switch the system back to state Motors ON by pressing the Motors ON button on the Control Module.</Actions>
+  </Message>
+  <Message number="503" eDefine="SYS_ERR_SYS_OPEN_ES_EXT">
+    <Title>ES ext.cat.0 open</Title>
+    <Description>The emergency stop external has previously been broken, and while broken, an attempt was made to operate the robot.</Description>
+    <Consequences>The system remains in the Emergency Stop status.</Consequences>
+    <Causes>An attempt has been made to manoeuvre a control, e.g. the enabling device.</Causes>
+    <Actions>1) To resume operation, first reset the emergency stop external button. <p />2) Then switch the system back to state Motors ON by pressing the Motors ON button on the Control Module.</Actions>
+  </Message>
+  <Message number="505" eDefine="SYS_ERR_SYS_OPEN_DEL_STP">
+    <Title>Delayed stop open</Title>
+    <Description>Delayed stop open.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1) To resume operation, first reset the delayed stop button. <p />2) Then switch the system back to state Motors ON by pressing the Motors ON button on the Control Module.</Actions>
+  </Message>
+  <Message number="506" eDefine="SYS_ERR_SYS_OPEN_TS">
+    <Title>Test Stop open</Title>
+    <Description>The Test Mode Safeguarded Stop circuit has been broken.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>One or more of the switch connected in series with the Test Mode Safeguarded Stop circuit have been opened, which may be causes by a large number of faults. This is only possible while in the Manual operational mode</Causes>
+    <Actions>1) Locate the switch, reset it and restart the system. <p />2) Check cables and connections.</Actions>
+  </Message>
+  <Message number="507" eDefine="SYS_ERR_SYS_OPEN_HW">
+    <Title>Hardware chain open</Title>
+    <Description>Relays (KA16 and KA17) on Safety Interface Board (SIB) not activated.</Description>
+    <Consequences>Motor on command rejected.</Consequences>
+    <Actions>Press motor ON button to close the chain.</Actions>
+  </Message>
+  <Message number="521" eDefine="SYS_ERR_SYS_CONFLICT_TS">
+    <Title>Test Stop conflict</Title>
+    <Description>Status conflict for the Test Stop chain.<p /></Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>Please check the two-channel safety guard that caused the status conflict.</Actions>
+  </Message>
+  <Message number="525" eDefine="SYS_ERR_SYS_CONFLICT_ES_PANL">
+    <Title>ES panel conflict</Title>
+    <Description>Status conflict for the Emergency Stop panel chain.<p /></Description>
+    <Consequences>The system goes to status emergency stop.</Consequences>
+    <Actions>Please check the two-channel safety guard that caused the status conflict.</Actions>
+  </Message>
+  <Message number="526" eDefine="SYS_ERR_SYS_CONFLICT_ES_PEND">
+    <Title>ES pendant conflict</Title>
+    <Description>Status conflict for the Emergency Stop pendant chain.<p /></Description>
+    <Consequences>The system goes to status emergency stop.</Consequences>
+    <Actions>Please check the two-channel safety guard that caused the status conflict.</Actions>
+  </Message>
+  <Message number="527" eDefine="SYS_ERR_SYS_CONFLICT_ES_EXT">
+    <Title>ES ext.cat.0 conflict</Title>
+    <Description>Status conflict for the Emergency Stop ext.cat.0 chain.<p /></Description>
+    <Consequences>The system goes to status emergency stop.</Consequences>
+    <Actions>Please check the two-channel safety guard that caused the status conflict.</Actions>
+  </Message>
+  <Message number="528" eDefine="SYS_ERR_SYS_CONFLICT_PNT_SW_HV">
+    <Title>HV Interlock input conflict</Title>
+    <Description>Only one of the two input signals in the high voltage chains is opened.</Description>
+    <Consequences>Paint enable chain opens.</Consequences>
+    <Actions>Please check the two-channel safety guard that caused the status conflict.</Actions>
+  </Message>
+  <Message number="529" eDefine="SYS_ERR_SYS_CONFLICT_PNT_INT">
+    <Title>Cabin Interlock input conflict</Title>
+    <Description>Only one of the two input signals in cabin interlock chains is opened.</Description>
+    <Consequences>Paint enable chain opens.</Consequences>
+    <Actions>Check cables and connections.</Actions>
+  </Message>
+  <Message number="531" eDefine="SYS_ERR_SYS_CONFLICT_DEL_STP">
+    <Title>Delayed Stop conflict</Title>
+    <Description>Status conflict for the delayed stop circuit.<p /></Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>Check cables and connections.</Actions>
+  </Message>
+  <Message number="534" eDefine="SYS_ERR_SYS_CONFLICT_MODE_SEL">
+    <Title>Mode selector conflict</Title>
+    <Description>Any of the connections to the mode selector are faulty.<p /></Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>Check cables and connections.</Actions>
+  </Message>
+  <Message number="535" eDefine="SYS_ERR_SYS_CONFLICT_AUX_RUN_CH">
+    <Title>AUX Interlock conflict</Title>
+    <Description>Only one of the two AUX interlock chains was opened. Normally used on CBS door interlock.</Description>
+    <Consequences>Paint enable chain opens.</Consequences>
+    <Actions>Check cables and connections.</Actions>
+  </Message>
+  <Message number="536" eDefine="SYS_ERR_SYS_CONFLICT_MON">
+    <Title>Motor on chain conflict</Title>
+    <Description>Only one of the two motor on chain signals in run chain is opened.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>Check cables and connections.</Actions>
+  </Message>
+  <Message number="550" eDefine="SYS_ERR_SYS_ACTIVE_GLITCH_TEST">
+    <Title>Glitch test fault</Title>
+    <Description>Status active when firmware on Process Interface Board (PIB) did not detect any glitch test pulse for 30 seconds.<p /></Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check other error messages for primary fault reason.<p />2. Check for communication problems between PIB and Main Computer (MC).</Actions>
+  </Message>
+  <Message number="556" eDefine="SYS_ERR_SYS_ACTIVE_AXC1_ENABLE2">
+    <Title>Enable 2 AXC 1 open</Title>
+    <Description>Status active when enable from Axis Computer 1 open.<p /></Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check other error messages for primary fault reason.<p />2. If no other error messages, please check line voltage for one phase missing.</Actions>
+  </Message>
+  <Message number="557" eDefine="SYS_ERR_SYS_ACTIVE_AXC2_ENABLE2">
+    <Title>Enable 2 AXC 2 open</Title>
+    <Description>Status active when enable from Axis Computer 2 open.<p /></Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check other error messages for primary fault reason.<p />2. If no other error messages, please check line voltage for one phase missing.</Actions>
+  </Message>
+  <Message number="558" eDefine="SYS_ERR_SYS_ACTIVE_MAN_ENA">
+    <Title>Manipulator fault</Title>
+    <Description>Status active when power to manipulator <arg format="%i" ordinal="1" /> connected to Manipulator Interface Board (MIB) <arg format="%i" ordinal="2" /> is lost, or manipulator's enable chain conditions is not OK.<p /></Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check the power to the manipulator.<p />2. Check that the enable chain on Manipulator Controller Board (MCOB/MCB) is OK. <p />3. Check for over temperature in Manipulator motors.<p />4. Check manipulator signals through Power Distribution Board (PDB). See the Circuit Diagram.<p /></Actions>
+  </Message>
+  <Message number="559" eDefine="SYS_ERR_SYS_ACTIVE_MCOB_COLL_OK">
+    <Title>Collision sensor active</Title>
+    <Description>Status active when digital collision sensor on Manipulator Controller Board (MCOB) <arg format="%i" ordinal="1" /> is active.<p /></Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>Check the collision sensors connected to MCOB.</Actions>
+  </Message>
+  <Message number="560" eDefine="SYS_ERR_SYS_ACTIVE_MCOB_LIMITS">
+    <Title>Axis limit on MCOB</Title>
+    <Description>Status active when limit sensor on Manipulator Controller Board (MCOB) <arg format="%i" ordinal="1" /> is active.<p /></Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>Check the limit sensors connected to MCOB.</Actions>
+  </Message>
+  <Message number="561" eDefine="SYS_ERR_SYS_ACTIVE_AMA_SW_OK">
+    <Title>Manipulator software has opened enable chain</Title>
+    <Description>Status active when Manipulator Controller Board (MCOB/MCB) <arg format="%i" ordinal="1" /> software has opened the enable chain.<p /></Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check other error messages for primary fault reason.<p />2. Check for brake fault.</Actions>
+  </Message>
+  <Message number="562" eDefine="SYS_ERR_SYS_ACTIVE_ES_RES_FLT">
+    <Title>Reset ES fault</Title>
+    <Description>Status active when Reset Emergency Stop input is activated for more than 3 seconds.<p /></Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check the connection of external reset of Emergency Stop.<p />2. Check the motor on push button.</Actions>
+  </Message>
+  <Message number="563" eDefine="SYS_ERR_SYS_ACTIVE_SVO_DISC_FB">
+    <Title>Servo disconnect open</Title>
+    <Description>Status active when Servo disconnect switch on system <arg format="%i" ordinal="1" /> is off.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>If Servo disconnect switch is not installed, check the disable link on Manipulator Interface Board (MIB).</Actions>
+  </Message>
+  <Message number="564" eDefine="SYS_ERR_SYS_ACTIVE_BRK_REL_1_7">
+    <Title>Brake rel. on axes 1 &amp; 7</Title>
+    <Description>Status active when manual brake release on axes 1 and 7 enabled.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>Check switch for manual brake release of axes 1 and 7.</Actions>
+  </Message>
+  <Message number="565" eDefine="SYS_ERR_SYS_ACTIVE_EXT1_OK">
+    <Title>External enable 1 open</Title>
+    <Description>Status active when external enable 1 on Manipulator Controller Board (MCOB) <arg format="%i" ordinal="1" /> is open.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>Check connection on MCCB X25.</Actions>
+  </Message>
+  <Message number="566" eDefine="SYS_ERR_SYS_ACTIVE_EXT2_OK">
+    <Title>External enable 2 open</Title>
+    <Description>Status active when external enable 2 on Manipulator Controller Board (MCOB) <arg format="%i" ordinal="1" /> is open.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>Check connection on MCCB X43.</Actions>
+  </Message>
+  <Message number="567" eDefine="SYS_ERR_SYS_ACTIVE_PWR_OK">
+    <Title>Power low on MCOB</Title>
+    <Description>Status active when power below 16V on Manipulator Controller Board (MCOB) <arg format="%i" ordinal="1" />.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>Check power on MCOB.</Actions>
+  </Message>
+  <Message number="568" eDefine="SYS_ERR_SYS_ACTIVE_HW_OK">
+    <Title>Hardware enable open on MCOB/MCB</Title>
+    <Description>Status active when firmware on Manipulator Controller Board (MCOB/MCB) <arg format="%i" ordinal="1" /> has opened the enable chain.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+  </Message>
+  <Message number="569" eDefine="SYS_ERR_SYS_ACTIVE_WD_OK">
+    <Title>Watchdog fault on MCOB/MCB</Title>
+    <Description>Status active when watchdog on Manipulator Controller Board (MCOB/MCB) <arg format="%i" ordinal="1" /> fails.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+  </Message>
+  <Message number="570" eDefine="SYS_ERR_SYS_ACTIVE_TPU_ERROR">
+    <Title>TPU wiring error</Title>
+    <Description>Status active when Process Interface Board (PIB) detects fault on emergency stop pendant and enabling device signals (glitch test).</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check cables and connections to Teach Pendant Unit (TPU).<p />2. Check Pendant Interface Board (TIB) and Manipulator Interface Board (MIB).</Actions>
+  </Message>
+  <Message number="571" eDefine="SYS_ERR_SYS_OPEN_SAF_SW_HV">
+    <Title>HV Interlock open</Title>
+    <Description>Paint system High Voltage (HV) interlock is opened by external interlock connection.<p /></Description>
+    <Consequences>Paint enable chain opens.</Consequences>
+    <Actions>Check manual switch for disconnecting of the HV system.</Actions>
+  </Message>
+  <Message number="572" eDefine="SYS_ERR_SYS_OPEN_CAB_ILCK">
+    <Title>Cabin Interlock open</Title>
+    <Description>Cabin Interlock is opened by external interlock connection.</Description>
+    <Consequences>Paint enable chain opens.</Consequences>
+    <Actions>Check cabin ventilation and other cabin safety functions.</Actions>
+  </Message>
+  <Message number="573" eDefine="SYS_ERR_SYS_CTRLID_MISSING_WARNING">
+    <Title>Controller ID is Missing</Title>
+    <Description>Controller ID is the controller's unique identity. It is by default equal to the serial number of the controller's cabinet. The software configuration of the controller is missing this identity information.</Description>
+    <Causes>This may happen if the storage media of the controller has been replaced or reformatted.</Causes>
+    <Actions>Read the serial number of the controller from the controller cabinet to find out what the controller ID should be. Use RobotStudio tools to set this value for the controller.</Actions>
+  </Message>
+  <Message number="574" eDefine="SYS_ERR_SYS_OPEN_PROCESS">
+    <Title>Process Interlock open</Title>
+    <Description>Process Interlock is opened by external interlock connection.</Description>
+    <Consequences>Paint enable chain opens.</Consequences>
+    <Actions>Check manual switch for disconnecting of the process system.</Actions>
+  </Message>
+  <Message number="575" eDefine="SYS_ERR_SYS_OPEN_AUX">
+    <Title>AUX Interlock open</Title>
+    <Description>AUX Interlock is opened by external interlock connection. Normally used for Cartridge Bell System (CBS).</Description>
+    <Consequences>Paint enable chain opens.</Consequences>
+    <Actions>Check cables and equipments connected to AUX inputs. </Actions>
+  </Message>
+  <Message number="576" eDefine="SYS_ERR_SYS_OPEN_SYS2">
+    <Title>System 2 Interlock open</Title>
+    <Description>System 2 Interlock is opened. Normally used for Cartridge Bell System (CBS) or paint pumps</Description>
+    <Consequences>Paint enable chain opens.</Consequences>
+    <Actions>Check cables and equipments connected to system 2.</Actions>
+  </Message>
+  <Message number="577" eDefine="SYS_ERR_SYS_OPEN_HV_ON">
+    <Title>HV ON open</Title>
+    <Description>High Voltage (HV) switch on operating panel is opened.</Description>
+    <Consequences>Paint enable chain opens.</Consequences>
+    <Actions>Give acknowledge on motor ON and switch on the HV key to close the HV interlock chain.</Actions>
+  </Message>
+  <Message number="581" eDefine="SYS_ERR_SYS_ACTIVE_SIB_COM">
+    <Title>SPI communication towards SIB is down</Title>
+    <Description>Status active when cyclic enable 1 test fails from Safety Interface Board (SIB).<p /><p /></Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check status on Serial Peripheral Interface (SPI) status.<p /> 2. Check cables between Process Interface Board (PIB) abd SIB.</Actions>
+  </Message>
+  <Message number="582" eDefine="SYS_ERR_SYS_ACTIVE_MIB_COM">
+    <Title>SPI communication towards MIB is down</Title>
+    <Description>Status active when cyclic enable 1 test fails from Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" />.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>Check cables and Serial Peripheral Interface (SPI) status.<p /> 2. Check cables between SIB and Manipulator Interface Board (MIB).</Actions>
+  </Message>
+  <Message number="583" eDefine="SYS_ERR_SYS_ACTIVE_SCMC_SW_WD">
+    <Title>Watchdog towards PIB software fails</Title>
+    <Description>Status active when firmware on Process Interface Board (PIB) discover watchdog fault between PIB firmware and PIB software.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>Too high processor load on PIB software.</Causes>
+  </Message>
+  <Message number="584" eDefine="SYS_ERR_SYS_ACTIVE_PIB_SIB_WD">
+    <Title>Fault on internal SPI</Title>
+    <Description>Status active when firmware on Process Interface Board (PIB) discover watchdog fault towards Safety Interface Board (SIB) and Manipulator Interface Board (MIB).</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>Serial Peripheral Interface (SPI) communication is down on SPI 1.</Causes>
+    <Actions>Check cables between PIB, SIB and MIB.</Actions>
+  </Message>
+  <Message number="585" eDefine="SYS_ERR_SYS_ACTIVE_PIB_SW_ENA_EXT">
+    <Title>Enable chain opened from IPS</Title>
+    <Description>Status active when enable chain is opened from signal Safety/PibSw/Enable.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>Check the actuator connected to signal Safety/PibSw/Enable.</Actions>
+  </Message>
+  <Message number="586" eDefine="SYS_ERR_SYS_ACTIVE_PIB_SW_FPGA_WD">
+    <Title>Watchdog fault towards PIB firmware</Title>
+    <Description>Status active when software on Process Interface Board (PIB) discover watchdog fault towards PIB firmware caused by fault on FPGA.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+  </Message>
+  <Message number="587" eDefine="SYS_ERR_SYS_ACTIVE_PIB_SW_SCMC_WD">
+    <Title>Watchdog fault towards PIB firmware</Title>
+    <Description>Status active when software on Process Interface Board (PIB) discover watchdog fault towards PIB firmware caused by fault on the In-System Micro Controller.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>Firmware not running.</Causes>
+  </Message>
+  <Message number="588" eDefine="SYS_ERR_SYS_ACTIVE_PIB_EIO_SOCKET">
+    <Title>Watchdog fault between PIB and MC</Title>
+    <Description>Process Interface Board (PIB) has detected a watchdog fault towards Main Computer (MC).</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>1. Broken ethernet cable between PIB and MC.<p />2. High network load.</Causes>
+    <Actions>If problem persists: <p />1. Check MC.<p />2. Check ethernet cable between PIB and MC. <p />3. Restart controller.</Actions>
+  </Message>
+  <Message number="589" eDefine="SYS_ERR_SYS_ACTIVE_PIB_MCOB_AGENT">
+    <Title>Watchdog fault between PIB and MCOB</Title>
+    <Description>Status active when agent connection on CAN between Process Interface Board (PIB) and Manipulator Controller Board (MCOB) is down.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check CAN cables.<p />2. Check MCOB status.</Actions>
+  </Message>
+  <Message number="590" eDefine="SYS_ERR_SYS_OPEN_CIR_MASK">
+    <Title>Open circuit mask not set</Title>
+    <Description>The open circuit mask for brakes on Manipulator Controller Board (MCOB/MCB) <arg format="%i" ordinal="1" /> is not set. The mask should be set from Process Interface Board (PIB) during start-up.</Description>
+    <Consequences>This message will be given every time the brakes are released, until the open circuit mask on MCOB/MCB is set.</Consequences>
+    <Causes>IPS configuration on PIB is not loaded or configuration file for brake settings is missing.</Causes>
+    <Actions>1. Check that IPS configuration is loaded during start-up.<p />2. Check that IPS configuration file for brake settings are installed on PIB.</Actions>
+  </Message>
+  <Message number="591" eDefine="SYS_ERR_SYS_ACTIVE_TPU_HOT_PLUG">
+    <Title>TPU hot plug timeout</Title>
+    <Description>The TPU hot plug button is pressed for too long time.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>Press motor ON button to close the chain.</Actions>
+  </Message>
+  <Message number="592" eDefine="SYS_ERR_SYS_ACTIVE_EXT_OK">
+    <Title>External process enable open</Title>
+    <Description>Status active when external process enable connection on Manipulator Controller Board (MCB) <arg format="%i" ordinal="1" /> is open.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>Check connection on MCB X2.</Actions>
+  </Message>
+  <Message number="593" eDefine="SYS_ERR_SYS_ACTIVE_IO_PWR_OK">
+    <Title>IO power low on MCB</Title>
+    <Description>Status active when IO power below 16V on Manipulator Controller Board (MCB) <arg format="%i" ordinal="1" />.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>Check power on MCB.</Actions>
+  </Message>
+  <Message number="594" eDefine="SYS_ERR_SYS_ACTIVE_PIB_EIO_COMM_FAULT">
+    <Title>Communication fault between PIB and MC</Title>
+    <Description>Process Interface Board (PIB) has detected a communication fault towards Main Computer (MC).</Description>
+    <Consequences>The system goes to status SYS FAIL.</Consequences>
+    <Causes>1. Broken ethernet cable between PIB and MC.<p />2. High network load.</Causes>
+    <Actions>1. Check ethernet cable between PIB and MC.<p />2. Check MC.<p />3. Restart controller.</Actions>
+  </Message>
+  <Message number="600" eDefine="SYS_ERR_SYS_UNOFFICIAL_RW_RELEASE">
+    <Title>Unofficial RobotWare release</Title>
+    <Description>The current RobotWare is not an officially supported release. <p />Unofficial RobotWare releases may only be used for time-limited test and validation purposes.</Description>
+    <Consequences>ABB will not provide long-term support on unofficial releases.</Consequences>
+    <Actions>If this is a production system, install an official RobotWare release as soon as possible.</Actions>
+  </Message>
+  <Message number="601" eDefine="SYS_ERR_SYS_INBOX_ERROR_NAMES_TOO_LONG">
+    <Title>Too long paths when unpacking RobotWare files</Title>
+    <Description>The RobotWare installation package was not properly unpacked on the controller. Some files in the package have a path that is too long and could not be handled by the controller software.<p />During the installation process the controller software was upgraded to handle longer paths, so a re-installation of the system should solve the problem.</Description>
+    <Consequences>Some RobotWare files are missing on the controller and your system may not be able to operate properly.</Consequences>
+    <Actions>Re-install the system by using SystemBuilder. If the error is still present after the re-installation, contact customer support. </Actions>
+  </Message>
+  <Message number="602" eDefine="SYS_ERR_SYS_UNOFFICIAL_RW_IMAGE">
+    <Title>Unofficial RobotWare image</Title>
+    <Description>The current RobotWare main computer image is not the original, and is hence not officially supported.</Description>
+    <Consequences>ABB will not provide long-term support on unofficial RobotWare releases.</Consequences>
+    <Causes>The officially released main computer image has been replaced, e.g., for the purpose of collecting diagnostic data for a specific problem.</Causes>
+    <Actions>If this is a production system, install an official RobotWare release as soon as possible.</Actions>
+  </Message>
+  <Message number="610" eDefine="SYS_ERR_SYS_INV_SHORT_CIRCUIT_ERROR">
+    <Title>Motor phase short circuit</Title>
+    <Description>
+        The drive unit for joint <arg format="%s" ordinal="2" /> has reported short circuit. The joint is connected to drive module <arg format="%d" ordinal="1" /> with unit position <arg format="%d" ordinal="3" /> and node <arg format="%d" ordinal="4" />.
+    </Description>
+    <Consequences>No operation will be possible until the fault is corrected. The system goes to Motors Off state with zero torque.</Consequences>
+    <Causes>
+        1) Short circuit in cables or connectors between the phases or to ground.<p />2) Short circuit in motor between the phases or to ground.
+    </Causes>
+    <Actions>
+        1) Check/replace cables and connectors.<p />2) Check/replace motor.
+    </Actions>
+  </Message>
+  <Message number="620" eDefine="SYS_ERR_SYS_INTERNAL_TEST_MODE_ENABLED">
+    <Title>The system has entered an internal test mode</Title>
+    <Description>
+         A feature to perform ABB Robotics internal tests has been enabled in <arg format="%s" ordinal="1" />.
+   </Description>
+    <Consequences>The system may not behave as expected.</Consequences>
+    <Actions>
+         Restart the system when the test has been performed. If this was an unexpected message, please contact your contact your local ABB representative for assistance.
+      </Actions>
+  </Message>
+  <Message number="630" eDefine="SYS_ERR_SYS_IV_NO_VALID_JOB_LOADED">
+    <Title>Camera job is not valid</Title>
+    <Description>The camera <arg format="%s" ordinal="1" /> is in running mode but the job loaded into it is not a valid ABB job. </Description>
+    <Consequences>All camera results will be lost.</Consequences>
+    <Causes>The camera job is not a valid ABB job or the parameters produced by the camera job for each acquired image has not been converted to RAPID variables.</Causes>
+    <Actions>- Set the camera in program mode. Load a valid ABB job into the camera or use Robot Studio to create one. <p />- In RobotStudio in the "Vision"-sheet, select "Output to RAPID" to convert parameters to RAPID variables.</Actions>
+  </Message>
+  <Message number="631" eDefine="SYS_ERR_SYS_IV_COMMUNICATION_ERROR">
+    <Title>Communication failure with camera</Title>
+    <Description>
+            The robot controller failed to communicate with camera <arg format="%s" ordinal="1" />.
+        </Description>
+    <Consequences>Camera results may be lost.</Consequences>
+    <Actions>
+            1) Check camera status. <p />2) Check cabling between the robot controller and the camera.
+        </Actions>
+  </Message>
+  <Message number="632" eDefine="SYS_ERR_SYS_IV_RESTART_CONTROLLER">
+    <Title>IP address of the camera has changed</Title>
+    <Description>The IP address of the camera has changed. It is necessary to warm start the controller to use the Integrated Vision functionality.</Description>
+    <Actions>Warm start the controller</Actions>
+  </Message>
+  <Message number="633" eDefine="SYS_ERR_SYS_IV_OPTION_NOT_INSTALLED">
+    <Title>Integrated Vision not installed</Title>
+    <Description>The option Integrated Vision is not installed on this system.</Description>
+    <Consequences>No communication with the camera is possible.</Consequences>
+    <Causes>The Integrated Vision functionality have been used or configured without the Integrated Vision option installed.</Causes>
+    <Actions>
+      1) If the Integrated Vision option is needed: configure a new system with this option, and install the system.<p />2)  If the Integrated Vision option is not needed: remove the use of Integrated Vision functionality, i.e. RAPID or configuration data.
+    </Actions>
+  </Message>
+  <Message number="634" eDefine="SYS_ERR_SYS_IV_NO_RESULT">
+    <Title>No result for current camera job</Title>
+    <Description>
+      The robot controller did not receive any result for camera <arg format="%s" ordinal="1" />.
+    </Description>
+    <Consequences>The robot controller will not recognize any positional data in the image.</Consequences>
+    <Causes>
+      No part tools have been defined for the current job loaded in camera <arg format="%s" ordinal="1" />.
+    </Causes>
+    <Actions>
+      Use RobotStudio to add a Part Location Tool or a Part Inspection Tool to the job. Follow the instruction in the RobotStudio
+      context menu and save the job.
+    </Actions>
+  </Message>
+  <Message number="635" eDefine="SYS_ERR_SYS_IV_TOO_MANY_CAMERAS">
+    <Title>Too many cameras connected</Title>
+    <Description>
+      Number of cameras connected to the robot controller is <arg format="%d" ordinal="1" />. Max number of cameras for a robot controller is <arg format="%d" ordinal="1" />.
+    </Description>
+    <Consequences>The robot controller will not communicate with all the cameras.</Consequences>
+    <Causes>Maximum number of cameras for a robot controller have been exceeded.</Causes>
+    <Actions>Reduce the number of cameras connected to the robot controller.</Actions>
+  </Message>
+  <Message number="636" eDefine="SYS_ERR_SYS_IV_CAMERA_ALREADY_EXISTS">
+    <Title>Duplicated camera name</Title>
+    <Description>
+      The camera configuration is invalid. The camera name <arg format="%s" ordinal="1" /> have been used for more than one camera.
+    </Description>
+    <Consequences>The robot controller will not communicate with cameras with the same name.</Consequences>
+    <Causes>Two or more cameras with the same name have been configured.</Causes>
+    <Actions>Rename the cameras so that they have unique names and warm start the controller.</Actions>
+  </Message>
+</Domain>

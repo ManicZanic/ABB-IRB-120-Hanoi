@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="ARL" domainNo="4" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="1" max="106">
+  <Message number="1" eDefine="SYS_ERR_ARL_ARGDUPOPT">
+    <Title>Argument error</Title>
+    <Description>The optional argument <arg format="%.16s" ordinal="1" /> has been used more than once in the same routine call.</Description>
+    <Actions>1) Make sure the optional parameter is not used more than once in the same routine call. </Actions>
+  </Message>
+  <Message number="2" eDefine="SYS_ERR_ARL_ARGEXCVAL">
+    <Title>Argument error</Title>
+    <Description>The argument <arg format="%.16s" ordinal="1" /> has been specified  for more than one  parameter. </Description>
+    <Actions>The parameter list, from which the parameter is selected, contains parameters mutually exclusive. <p />1) Make sure the argument is used for one parameter only.</Actions>
+  </Message>
+  <Message number="3" eDefine="SYS_ERR_ARL_ARGEXPRQA">
+    <Title>Argument error</Title>
+    <Description>An argument for the required parameter <arg format="%.16s" ordinal="1" /> was expected, but the optional argument <arg format="%.16s" ordinal="2" /> was found.</Description>
+    <Actions>1) Make sure all arguments are specified in the same order as the parameters for the routine called.</Actions>
+  </Message>
+  <Message number="4" eDefine="SYS_ERR_ARL_ARGNOTREF">
+    <Title>Argument error</Title>
+    <Description>The argument for REF parameter <arg format="%.16s" ordinal="1" /> is not a data reference.</Description>
+    <Actions>1) Make sure the argument is a data or a parameter reference.</Actions>
+  </Message>
+  <Message number="5" eDefine="SYS_ERR_ARL_ARGNOTVP">
+    <Title>Argument error</Title>
+    <Description>The argument for INOUT parameter <arg format="%.16s" ordinal="1" /> is not a variable or persistent reference, or it is read-only.</Description>
+    <Actions>1) Make sure the argument is a variable or a persistent variable parameter or a persistent parameter reference and that it is NOT read-only. <p />2) Also make sure the argument is NOT written within brackets ().</Actions>
+  </Message>
+  <Message number="6" eDefine="SYS_ERR_ARL_ARGOPAVAL">
+    <Title>Argument error</Title>
+    <Description>Parameter <arg format="%.16s" ordinal="1" /> is missing an optional argument value. </Description>
+    <Actions>The only parameters that may be specified by a name only are "switch" parameters. All others must be assigned a value. <p />1) Make sure parameter has a value.</Actions>
+  </Message>
+  <Message number="7" eDefine="SYS_ERR_ARL_ARGOPAW">
+    <Title>Argument error</Title>
+    <Description>The optional argument <arg format="%.16s" ordinal="1" /> is not found in its correct position in the argument list.</Description>
+    <Actions>1) Make sure all arguments are specified in the same order as the parameters for the routine called.</Actions>
+  </Message>
+  <Message number="8" eDefine="SYS_ERR_ARL_ARGREFOPP">
+    <Title>Argument error</Title>
+    <Description>A reference to the optional parameter <arg format="%.16s" ordinal="1" /> is missing. </Description>
+    <Actions>Each optional parameter must have a reference argument, specified with a leading backslash character (\). <p />1) Change the required argument into an optional argument. </Actions>
+  </Message>
+  <Message number="9" eDefine="SYS_ERR_ARL_ARGREFRQC">
+    <Title>Argument error</Title>
+    <Description>A reference to the required parameter <arg format="%.16s" ordinal="1" /> in a conditional argument is missing. </Description>
+    <Actions>Each conditional value for an optional parameter must refer to an optional parameter in the calling routine.  <p />1) Change the conditional value.</Actions>
+  </Message>
+  <Message number="10" eDefine="SYS_ERR_ARL_ARGREFRQP">
+    <Title>Argument error</Title>
+    <Description>A reference to the required parameter <arg format="%.16s" ordinal="1" /> in an optional argument is missing. </Description>
+    <Actions>Each required parameter must have a reference argument, specified with a leading backslash character (\). <p />1) Change the optional argument into a required argument. </Actions>
+  </Message>
+  <Message number="11" eDefine="SYS_ERR_ARL_ARGRQAW">
+    <Title>Argument error</Title>
+    <Description>The required argument <arg format="%.16s" ordinal="1" /> is not found in its correct position in the argument list.</Description>
+    <Actions>Make sure all arguments are specified in the same order as the parameters for the routine called.</Actions>
+  </Message>
+  <Message number="12" eDefine="SYS_ERR_ARL_ARGSWTVAL">
+    <Title>Argument error</Title>
+    <Description>The "switch" argument <arg format="%.16s" ordinal="1" /> has a value.
+</Description>
+    <Causes>An argument corresponding to a "switch" parameter may not be assigned a value. </Causes>
+    <Actions>1) Remove the value.</Actions>
+  </Message>
+  <Message number="13" eDefine="SYS_ERR_ARL_ARGTFA">
+    <Title>Argument error</Title>
+    <Description>The call to routine <arg format="%.16s" ordinal="1" /> has too few arguments. </Description>
+    <Actions>A routine call must supply values for all required parameters of the routine being called.  The argument list must have as many arguments, as the parameter list has parameters. <p />1) Add more arguments to fit the parameter list.</Actions>
+  </Message>
+  <Message number="14" eDefine="SYS_ERR_ARL_ARGTMA">
+    <Title>Argument error</Title>
+    <Description>The call to routine <arg format="%.16s" ordinal="1" /> has too many arguments.</Description>
+    <Actions>No arguments, more than those defined by the called routine parameter list, must be supplied.  The argument list must have as many arguments, as the parameter list has parameters. <p />1) Remove excessive arguments from the argument list.</Actions>
+  </Message>
+  <Message number="15" eDefine="SYS_ERR_ARL_ARRDIMPOS">
+    <Title>Data declaration error</Title>
+    <Description>The number of array dimensions is <arg format="%i" ordinal="1" />, but may be 1, 2 or 3 only.</Description>
+    <Actions>1) Change the dimension expression. </Actions>
+  </Message>
+  <Message number="16" eDefine="SYS_ERR_ARL_ARRTMD">
+    <Title>Data declaration error</Title>
+    <Description>Too many dimensions in array definition.</Description>
+    <Actions>An array may have at most 3 dimensions.<p />Rewrite the program so that no more than 3 dimensions are needed.</Actions>
+  </Message>
+  <Message number="17" eDefine="SYS_ERR_ARL_DATNOTARR">
+    <Title>Type error</Title>
+    <Description>Indexed data <arg format="%.18s" ordinal="1" />, <arg format="%.18s" ordinal="2" /> is not of array type.  </Description>
+    <Actions>Only data that have been declared to be arrays may be indexed. <p />1) Remove the index or indices. <p />2) Declare the data to be an array.</Actions>
+  </Message>
+  <Message number="18" eDefine="SYS_ERR_ARL_DATNOTREC">
+    <Title>Type error</Title>
+    <Description>Data <arg format="%.18s" ordinal="1" />, <arg format="%.18s" ordinal="2" /> is not of record type.</Description>
+    <Actions>Components are only available for data of record type. <p />1) Check the type and name of the referenced data. </Actions>
+  </Message>
+  <Message number="19" eDefine="SYS_ERR_ARL_ERRSDB">
+    <Title>Limit error</Title>
+    <Description>Task <arg format="%s" ordinal="1" />: Error when creating the persistent variable <arg format="%s" ordinal="4" />.<p />The error occurred when the persistent variable was to be inserted into the<p />database.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Consequences>The created persistent variable can not be used in a RAPID program.</Consequences>
+    <Causes>The program memory is full or fragmentated.</Causes>
+    <Actions>Check if large data structures could be split into smaller blocks.<p />Use of installed modules can save program memory.</Actions>
+  </Message>
+  <Message number="20" eDefine="SYS_ERR_ARL_EXPNOTCON">
+    <Title>Data declaration error</Title>
+    <Description>Expression <arg format="%.16s" ordinal="1" /> is not a constant expression.</Description>
+    <Actions>Any expression contained within a data declaration must be a constant expression. <p />1) Make sure no expression contains variables or persistent references, or function calls. </Actions>
+  </Message>
+  <Message number="21" eDefine="SYS_ERR_ARL_FUNRETEXP">
+    <Title>Instruction error</Title>
+    <Description>Missing expression in RETURN instruction.</Description>
+    <Causes>A RETURN instruction within a function must specify a value to be returned. </Causes>
+    <Actions>1) Add a value expression. </Actions>
+  </Message>
+  <Message number="22" eDefine="SYS_ERR_ARL_ICTMULOPS">
+    <Title>Type error</Title>
+    <Description>Illegal combination of operand types <arg format="%.18s" ordinal="1" /> and <arg format="%.18s" ordinal="2" /> for the '*' operator.</Description>
+    <Actions>Allowed operand type combinations are: "num"*"num", "num"*"pos", "pos"*"num", "pos"*"pos" and "orient"*"orient".  <p />1) Check the operand types.</Actions>
+  </Message>
+  <Message number="23" eDefine="SYS_ERR_ARL_ILLGOTO">
+    <Title>Instruction error</Title>
+    <Description>Cannot transfer control into another instruction list.</Description>
+    <Actions>It is not possible to jump into a program flow instruction.  <p />1) Make sure that the label is located in the same instruction list as the GOTO instruction, at the same or an outer level.</Actions>
+  </Message>
+  <Message number="24" eDefine="SYS_ERR_ARL_ILTADDLOP">
+    <Title>Type error</Title>
+    <Description>Illegal type <arg format="%.18s" ordinal="1" /> for left operand of binary '+' or '-' operator.</Description>
+    <Actions>Allowed operand types for the binary "+" operator are "num", "pos" and "string", and for the binary "-" operator "num" and "pos".  <p />1) Check the operand types.</Actions>
+  </Message>
+  <Message number="25" eDefine="SYS_ERR_ARL_ILTADDOP">
+    <Title>Type error</Title>
+    <Description>Illegal type <arg format="%.18s" ordinal="1" /> for operand of unary '+' or '-' operator.</Description>
+    <Actions>Allowed operand types for the unary "+" and "-" operators are "num" and "pos".  <p />1) Check the operand types.</Actions>
+  </Message>
+  <Message number="26" eDefine="SYS_ERR_ARL_ILTADDROP">
+    <Title>Type error</Title>
+    <Description>Illegal type <arg format="%.18s" ordinal="1" /> for right operand of binary '+' or '-' operator.</Description>
+    <Actions>Allowed operand types for the binary "+" operator are "num", "pos" and "string", and for the binary "-" operator "num" and "pos".  <p />1) Check the operand types.</Actions>
+  </Message>
+  <Message number="27" eDefine="SYS_ERR_ARL_ILTDIVLOP">
+    <Title>Type error</Title>
+    <Description>Illegal type <arg format="%.18s" ordinal="1" /> for left operand of '/', 'DIV' or 'MOD' operator.</Description>
+    <Actions>Allowed operand type for the "/", "DIV" or "MOD" operators is "num".  <p />1) Check the operand types.</Actions>
+  </Message>
+  <Message number="28" eDefine="SYS_ERR_ARL_ILTDIVROP">
+    <Title>Type error</Title>
+    <Description>Illegal type <arg format="%.18s" ordinal="1" /> for right operand of '/', 'DIV' or 'MOD' operator.</Description>
+    <Actions>Allowed operand type for the "/", "DIV" or "MOD" operators is "num".  <p />1) Check the operand types.</Actions>
+  </Message>
+  <Message number="29" eDefine="SYS_ERR_ARL_ILTLTLOP">
+    <Title>Type error</Title>
+    <Description>Illegal type <arg format="%.18s" ordinal="1" /> for left operand of '&lt;', '&lt;=', '&gt;' or '&gt;=' operator.</Description>
+    <Actions>Allowed operand type for the "&lt;", "&lt;=", "&gt;" or "&gt;=" operators is "num".  <p />1) Check the operand types.</Actions>
+  </Message>
+  <Message number="30" eDefine="SYS_ERR_ARL_ILTLTROP">
+    <Title>Type error</Title>
+    <Description>Illegal type <arg format="%.18s" ordinal="1" /> for right operand of '&lt;', '&lt;=', '&gt;' or '&gt;=' operator.</Description>
+    <Actions>Allowed operand type for the "&lt;", "&lt;=", "&gt;" or "&gt;=" operators is "num".  <p />1) Check the operand types.</Actions>
+  </Message>
+  <Message number="31" eDefine="SYS_ERR_ARL_ILTMULLOP">
+    <Title>Type error</Title>
+    <Description>Illegal type <arg format="%.18s" ordinal="1" /> for left operand of '*' operator.</Description>
+    <Actions>Allowed operand types for the "*" operator are "num", "pos" or "orient".  <p />1) Check the operand types.</Actions>
+  </Message>
+  <Message number="32" eDefine="SYS_ERR_ARL_ILTMULROP">
+    <Title>Type error</Title>
+    <Description>Illegal type <arg format="%.18s" ordinal="1" /> for right operand of '*' operator.</Description>
+    <Actions>Allowed operand types for the "*" operator are "num", "pos" or "orient".  <p />1) Check the operand types.</Actions>
+  </Message>
+  <Message number="33" eDefine="SYS_ERR_ARL_ILTNOTOP">
+    <Title>Type error</Title>
+    <Description>Illegal type <arg format="%.18s" ordinal="1" /> for operand of 'NOT' operator.</Description>
+    <Actions>Allowed operand type for the "NOT" operator is "bool".  <p />1) Check the operand types.</Actions>
+  </Message>
+  <Message number="34" eDefine="SYS_ERR_ARL_ILTORLOP">
+    <Title>Type error</Title>
+    <Description>Illegal type <arg format="%.18s" ordinal="1" /> for left operand of 'OR', 'XOR' or 'AND' operator.</Description>
+    <Actions>Allowed operand type for the "OR", "XOR" or "AND" operators is "bool".  <p />1) Check the operand types.</Actions>
+  </Message>
+  <Message number="35" eDefine="SYS_ERR_ARL_ILTORROP">
+    <Title>Type error</Title>
+    <Description>Illegal type <arg format="%.18s" ordinal="1" /> for right operand of 'OR', 'XOR' or 'AND' operator.</Description>
+    <Actions>Allowed operand type for the "OR", "XOR" or "AND" operators is "bool". <p />1) Check the operand types.</Actions>
+  </Message>
+  <Message number="36" eDefine="SYS_ERR_ARL_INCNIND">
+    <Title>Type error</Title>
+    <Description>Incorrect number of indices in index list for array <arg format="%.18s" ordinal="1" /> with <arg format="%i" ordinal="2" /> dimension(s).</Description>
+    <Actions>1) Make sure that the number of indices in the index list corresponds to the number of dimensions of the indexed data array. </Actions>
+  </Message>
+  <Message number="37" eDefine="SYS_ERR_ARL_LOCRTNCON">
+    <Title>Data declaration error</Title>
+    <Description>LOCAL illegal in routine constant declaration.</Description>
+    <Actions>Only program data declarations may have the LOCAL attribute. Remove the LOCAL attribute or move the declaration outside of the routine.</Actions>
+  </Message>
+  <Message number="38" eDefine="SYS_ERR_ARL_LOCRTNVAR">
+    <Title>Data declaration error</Title>
+    <Description>LOCAL illegal in routine variable declaration</Description>
+    <Actions>Only program data declarations may have the LOCAL attribute. Remove the LOCAL attribute or move the declaration outside of the routine.</Actions>
+  </Message>
+  <Message number="39" eDefine="SYS_ERR_ARL_NAMAMBCON">
+    <Title>Name error</Title>
+    <Description>Constant name <arg format="%.16s" ordinal="1" /> ambiguous.</Description>
+    <Actions>Routine data must have names that are unique within the routine. Program data  must have names that are unique within the module. Rename the data or change the conflicting name.</Actions>
+  </Message>
+  <Message number="40" eDefine="SYS_ERR_ARL_NAMAMBGC">
+    <Title>Name error</Title>
+    <Description>Global constant name <arg format="%.16s" ordinal="1" /> ambiguous.</Description>
+    <Actions>Global data must have names that are unique among all the global types, data, global routines and modules in the entire program. Rename the data or change the conflicting name.</Actions>
+  </Message>
+  <Message number="41" eDefine="SYS_ERR_ARL_NAMAMBGP">
+    <Title>Name error</Title>
+    <Description>Global persistent name <arg format="%.16s" ordinal="1" /> ambiguous.</Description>
+    <Actions>Global data must have names that are unique among all the global types, data, global routines and modules in the entire program. Rename the data or change the conflicting name.</Actions>
+  </Message>
+  <Message number="42" eDefine="SYS_ERR_ARL_NAMAMBGR">
+    <Title>Name error</Title>
+    <Description>Global routine  name <arg format="%.16s" ordinal="1" /> ambiguous.</Description>
+    <Actions>Global routines must have names that are unique among all the global types, data, global routines and modules in the entire program. Rename the routine or change the conflicting name.</Actions>
+  </Message>
+  <Message number="43" eDefine="SYS_ERR_ARL_NAMAMBGV">
+    <Title>Name error</Title>
+    <Description>Global variable name  <arg format="%.16s" ordinal="1" /> ambiguous.</Description>
+    <Actions>Global data must have names that are unique among all the global types, data, global routines and modules in the entire program. Rename the data or change the conflicting name.</Actions>
+  </Message>
+  <Message number="44" eDefine="SYS_ERR_ARL_NAMAMBLAB">
+    <Title>Name error</Title>
+    <Description>Label name <arg format="%.16s" ordinal="1" /> ambiguous.</Description>
+    <Actions>Labels must have names that are unique within the routine. Rename the label or change the conflicting name.</Actions>
+  </Message>
+  <Message number="45" eDefine="SYS_ERR_ARL_NAMAMBMOD">
+    <Title>Name error</Title>
+    <Description>Module name <arg format="%.16s" ordinal="1" /> ambiguous.</Description>
+    <Actions>Modules must have names that are unique among all the global types, global data, global routines and modules in the entire program. Rename the module or change the conflicting name.</Actions>
+  </Message>
+  <Message number="46" eDefine="SYS_ERR_ARL_NAMAMBPAR">
+    <Title>Name error</Title>
+    <Description>Parameter name <arg format="%.16s" ordinal="1" /> ambiguous.</Description>
+    <Actions>Parameters must have names that are unique within the routine. Rename the parameter or change the conflicting  name.</Actions>
+  </Message>
+  <Message number="47" eDefine="SYS_ERR_ARL_NAMAMBPER">
+    <Title>Name error</Title>
+    <Description>Persistent name <arg format="%.16s" ordinal="1" /> ambiguous </Description>
+    <Actions>Program data must have names that are unique within the module. Rename the data or change the conflicting name.</Actions>
+  </Message>
+  <Message number="48" eDefine="SYS_ERR_ARL_NAMAMBRTN">
+    <Title>Name error</Title>
+    <Description>Routine name <arg format="%.16s" ordinal="1" /> ambiguous.</Description>
+    <Actions>Routines must have names that are unique within the module. Rename the routine or change the conflicting name.</Actions>
+  </Message>
+  <Message number="49" eDefine="SYS_ERR_ARL_NAMAMBVAR">
+    <Title>Name error</Title>
+    <Description>Variable name <arg format="%.16s" ordinal="1" /> ambiguous.</Description>
+    <Actions>Routine data must have names that are unique within the routine. Program data must have names that are unique within the module. Rename the data or change the conflicting name.</Actions>
+  </Message>
+  <Message number="50" eDefine="SYS_ERR_ARL_NETADDOPS">
+    <Title>Type error</Title>
+    <Description>Operand types <arg format="%.18s" ordinal="1" />  and <arg format="%.18s" ordinal="2" /> for binary '+' or '-' operator not equal </Description>
+    <Actions>The two operands of the '+' and '-' operators must have equal type. Check the operand types.</Actions>
+  </Message>
+  <Message number="51" eDefine="SYS_ERR_ARL_NETEQOPS">
+    <Title>Type error</Title>
+    <Description>Operand types <arg format="%.18s" ordinal="1" /> and <arg format="%.18s" ordinal="2" /> for '=' or '&lt;&gt;' operator not equal </Description>
+    <Actions>The two operands of the '=' and '&lt;&gt;' operators must have equal type. Check the operand types.</Actions>
+  </Message>
+  <Message number="52" eDefine="SYS_ERR_ARL_NOTRETEXP">
+    <Title>Instruction error</Title>
+    <Description>RETURN with expression only allowed in function </Description>
+    <Actions>In a procedure or trap the return instruction must not specify a return value expression. Remove the expression.</Actions>
+  </Message>
+  <Message number="54" eDefine="SYS_ERR_ARL_NSDARRAGG">
+    <Title>Type error</Title>
+    <Description>Different dimension of array type (<arg format="%i" ordinal="1" />) and aggregate (<arg format="%i" ordinal="2" />)</Description>
+    <Actions>Make sure that the number of expressions in the aggregate is the same as the dimension of the data array.</Actions>
+  </Message>
+  <Message number="55" eDefine="SYS_ERR_ARL_NVTATGT">
+    <Title>Type error</Title>
+    <Description>Assignment target type <arg format="%.18s" ordinal="1" /> is not value or semi-value type.</Description>
+    <Actions>The type, of the data to be assigned a value, must be a value or semi-value type. Data of non-value types may only be set by special type specific predefined instructions or functions.</Actions>
+  </Message>
+  <Message number="56" eDefine="SYS_ERR_ARL_NVTEQLOP">
+    <Title>Type error</Title>
+    <Description>Type <arg format="%.18s" ordinal="1" /> for left operand of '=' or '&lt;&gt;' operator not value or semi-value type</Description>
+    <Actions>The '=' and '&lt;&gt;' operators may only be applied to expressions of value or semi-value type. If comparisons are to be made, special type specific predefined functions are needed.</Actions>
+  </Message>
+  <Message number="57" eDefine="SYS_ERR_ARL_NVTEQROP">
+    <Title>Type error</Title>
+    <Description>Type <arg format="%.18s" ordinal="1" /> for right operand of '=' or '&lt;&gt;' operator not value or semi-value type </Description>
+    <Actions>The '=' and '&lt;&gt;' operators may only be applied to expressions of value or semi-value type. If comparisons are to be made, special type specific predefined functions are needed.</Actions>
+  </Message>
+  <Message number="58" eDefine="SYS_ERR_ARL_NVTTSTEXP">
+    <Title>Type error</Title>
+    <Description>TEST expression type <arg format="%.18s" ordinal="1" /> not value or semi-value type</Description>
+    <Actions>The TEST instruction may only be applied to an expression of value or semi-value type. If comparisons are to be made, special type specific predefined functions are needed.</Actions>
+  </Message>
+  <Message number="59" eDefine="SYS_ERR_ARL_PHRCONVAL">
+    <Title>Data declaration error</Title>
+    <Description>Place holder for value expression not allowed in definition of named constant</Description>
+    <Actions>Complete the data declaration or change the data name to a place holder.</Actions>
+  </Message>
+  <Message number="60" eDefine="SYS_ERR_ARL_PHRDDNDIM">
+    <Title>Data declaration error</Title>
+    <Description>Place holder for array dimension not allowed in definition of named constant or variable</Description>
+    <Actions>Complete the data declaration or change the data name to a place holder.</Actions>
+  </Message>
+  <Message number="61" eDefine="SYS_ERR_ARL_PHRPARDIM">
+    <Title>Routine declaration error</Title>
+    <Description>Place holder for parameter array dimensions not allowed in definition of named routine</Description>
+    <Actions>Complete the parameter declaration or change the routine name to a place holder.</Actions>
+  </Message>
+  <Message number="62" eDefine="SYS_ERR_ARL_PHRPARNAM">
+    <Title>Name error</Title>
+    <Description>Place holder for parameter name not allowed in definition of named routine</Description>
+    <Actions>Complete the routine declaration or change the routine name to a place holder.</Actions>
+  </Message>
+  <Message number="63" eDefine="SYS_ERR_ARL_PHRPERVAL">
+    <Title>Data declaration error</Title>
+    <Description>Place holder for initial value expression not allowed in definition of named persistent</Description>
+    <Actions>Complete the data declaration or change the data name to a place holder.</Actions>
+  </Message>
+  <Message number="64" eDefine="SYS_ERR_ARL_PHRRTNPAR">
+    <Title>Routine declaration error</Title>
+    <Description>Place holder for parameter not allowed in definition of named routine </Description>
+    <Actions>Complete the parameter declaration, remove the place holder or change the routine name to a place holder.</Actions>
+  </Message>
+  <Message number="65" eDefine="SYS_ERR_ARL_PHRTYP">
+    <Title>Reference error</Title>
+    <Description>Place holder for type not allowed in definition of named data, record component or routine</Description>
+    <Actions>Complete the data or routine declaration or change the data or routine name to a place holder.</Actions>
+  </Message>
+  <Message number="66" eDefine="SYS_ERR_ARL_PHRVARVAL">
+    <Title>Data declaration error</Title>
+    <Description>Place holder for initial value expression not allowed in definition of named variable</Description>
+    <Actions>Complete the data declaration or change the data name to a place holder.</Actions>
+  </Message>
+  <Message number="67" eDefine="SYS_ERR_ARL_RECAGGTFC">
+    <Title>Type error</Title>
+    <Description>Too few components in record aggregate of type <arg format="%.18s" ordinal="1" /></Description>
+    <Actions>Make sure that the number of expressions in the aggregate is the same as the number of components in the record type.</Actions>
+  </Message>
+  <Message number="68" eDefine="SYS_ERR_ARL_RECAGGTMC">
+    <Title>Type error</Title>
+    <Description>Too many components in record aggregate of type <arg format="%.18s" ordinal="1" /></Description>
+    <Actions>Make sure that the number of expressions in the aggregate is the same as the number of components in the record type.</Actions>
+  </Message>
+  <Message number="69" eDefine="SYS_ERR_ARL_REFAMBDAT">
+    <Title>Reference error</Title>
+    <Description>Data reference <arg format="%.16s" ordinal="1" /> is ambiguous</Description>
+    <Actions>At least one other object sharing the same name as the referred data is visible from this program position. Make sure that all object names fulfill the naming rules regarding uniqueness.</Actions>
+  </Message>
+  <Message number="70" eDefine="SYS_ERR_ARL_REFAMBFUN">
+    <Title>Reference error</Title>
+    <Description>function reference <arg format="%.16s" ordinal="1" /> is ambiguous</Description>
+    <Actions>At least one other object sharing the same name as the referred function is visible from this program position. Make sure that all object names fulfill the naming rules regarding uniqueness.</Actions>
+  </Message>
+  <Message number="71" eDefine="SYS_ERR_ARL_REFAMBLAB">
+    <Title>Reference error</Title>
+    <Description>Label reference <arg format="%.16s" ordinal="1" /> is ambiguous</Description>
+    <Actions>At least one other object sharing the same name as the referred label is visible from this program position. Make sure that all object names fulfill the naming rules regarding uniqueness.</Actions>
+  </Message>
+  <Message number="72" eDefine="SYS_ERR_ARL_REFAMBPRC">
+    <Title>Reference error</Title>
+    <Description>Procedure reference <arg format="%.16s" ordinal="1" /> is ambiguous</Description>
+    <Actions>At least one other object sharing the same name as the referred procedure is visible from this program position. Make sure that all object names fulfill the naming rules regarding uniqueness.</Actions>
+  </Message>
+  <Message number="73" eDefine="SYS_ERR_ARL_REFAMBTRP">
+    <Title>Reference error</Title>
+    <Description>Trap reference <arg format="%.16s" ordinal="1" /> is ambiguous.</Description>
+    <Actions>At least one other object sharing the <p />same name as the referred trap is <p />visible from this program position. Make <p />sure that all object names fulfill the <p />naming rules regarding uniqueness.</Actions>
+  </Message>
+  <Message number="74" eDefine="SYS_ERR_ARL_REFNOTDAT">
+    <Title>Reference error</Title>
+    <Description>
+      <arg format="%.16s" ordinal="1" />
+      <p />not entire data reference <p /></Description>
+    <Actions>The specified name identifies an object <p />other than data. Check if the desired <p />data is hidden by some other object with <p />the same name.</Actions>
+  </Message>
+  <Message number="75" eDefine="SYS_ERR_ARL_REFNOTFUN">
+    <Title>Reference error</Title>
+    <Description>
+      <arg format="%.16s" ordinal="1" />
+      <p />not function reference <p /></Description>
+    <Actions>The specified name identifies an object <p />other than a function. Check if the <p />desired function is hidden by some other <p />object with the same name.</Actions>
+  </Message>
+  <Message number="76" eDefine="SYS_ERR_ARL_REFNOTLAB">
+    <Title>Reference error</Title>
+    <Description>
+      <arg format="%.16s" ordinal="1" />
+      <p />not label reference<p /></Description>
+    <Actions>The specified name identifies an object <p />other than a label. Check if the desired <p />label is hidden by some other object <p />with the same name.</Actions>
+  </Message>
+  <Message number="77" eDefine="SYS_ERR_ARL_REFNOTOPC">
+    <Title>Reference error</Title>
+    <Description>
+      <arg format="%.16s" ordinal="1" />
+      <p />not optional parameter reference in <p />conditional argument value <p /></Description>
+    <Actions>The specified name identifies an object <p />other than an optional parameter. Change <p />the name to refer to an optional <p />parameter.</Actions>
+  </Message>
+  <Message number="78" eDefine="SYS_ERR_ARL_REFNOTOPP">
+    <Title>Reference error</Title>
+    <Description>
+      <arg format="%.16s" ordinal="1" />
+      <p />not optional parameter reference <p /></Description>
+    <Actions>The specified name identifies an object <p />other than an optional parameter. Change <p />the name to refer to an optional <p />parameter.</Actions>
+  </Message>
+  <Message number="79" eDefine="SYS_ERR_ARL_REFNOTPRC">
+    <Title>Reference error</Title>
+    <Description> Task <arg format="%.16s" ordinal="1" />: <arg format="%.16s" ordinal="2" /> is not a procedure reference<p /></Description>
+    <Actions> The specified name identifies an object <p /> other than a procedure. Check if the <p /> desired procedure is hidden by some <p /> other object with the same name. </Actions>
+  </Message>
+  <Message number="80" eDefine="SYS_ERR_ARL_REFNOTRQP">
+    <Title>Reference error</Title>
+    <Description>
+      <arg format="%.16s" ordinal="1" />
+      <p />not required parameter reference <p /></Description>
+    <Actions>The specified name identifies an object <p />other than a required parameter. Change <p />the name to refer to a required <p />parameter.</Actions>
+  </Message>
+  <Message number="81" eDefine="SYS_ERR_ARL_REFNOTTRP">
+    <Title>Reference error</Title>
+    <Description>
+      <arg format="%.16s" ordinal="1" />
+      <p />not trap reference <p /></Description>
+    <Actions>The specified name identifies an object <p />other than a trap. Check if the desired <p />trap is hidden by some other object with <p />the same name.</Actions>
+  </Message>
+  <Message number="82" eDefine="SYS_ERR_ARL_REFNOTTYP">
+    <Title>Reference error</Title>
+    <Description>
+      <arg format="%.16s" ordinal="1" />
+      <p />not type name <p /></Description>
+    <Actions>The specified name identifies an object <p />other than a type. Check if the desired <p />type is hidden by some other object with <p />the same name.</Actions>
+  </Message>
+  <Message number="83" eDefine="SYS_ERR_ARL_REFNOTVT">
+    <Title>Type error</Title>
+    <Description>
+      <arg format="%.16s" ordinal="1" />
+      <p />not value type <p /></Description>
+    <Actions>Only variables that lack initial value, <p />and 'VAR' mode parameters may be of <p />semi-value or non-value type. </Actions>
+  </Message>
+  <Message number="86" eDefine="SYS_ERR_ARL_REFUNKLAB">
+    <Title>Reference error</Title>
+    <Description>Reference to <p />unknown label <arg format="%.16s" ordinal="1" /><p /></Description>
+    <Actions>The routine contains no label (or other <p /> object) with the specified name.</Actions>
+  </Message>
+  <Message number="87" eDefine="SYS_ERR_ARL_REFUNKOPP">
+    <Title>Reference error</Title>
+    <Description>Reference to <p />unknown optional parameter <p /><arg format="%.16s" ordinal="1" /><p /></Description>
+    <Actions>The called routine contains no optional <p />parameter (or other object) with the <p />specified name.</Actions>
+  </Message>
+  <Message number="89" eDefine="SYS_ERR_ARL_REFUNKRCP">
+    <Title>Reference error</Title>
+    <Description>Reference to <p />unknown record component <p /><arg format="%.16s" ordinal="1" /><p /></Description>
+    <Actions>The record type contains no record <p />component with the specified name.</Actions>
+  </Message>
+  <Message number="90" eDefine="SYS_ERR_ARL_REFUNKRQP">
+    <Title>Reference error</Title>
+    <Description>Reference to <p />unknown required parameter <p /><arg format="%.16s" ordinal="1" /><p /></Description>
+    <Actions>The called routine contains no required <p />parameter (or other object) with the <p />specified name.</Actions>
+  </Message>
+  <Message number="92" eDefine="SYS_ERR_ARL_REFUNKTYP">
+    <Title>Reference error</Title>
+    <Description>Unknown type name <p /><arg format="%.16s" ordinal="1" /><p /></Description>
+    <Actions>No data type (or other object) with the <p />specified name is visible from this <p />program position.</Actions>
+  </Message>
+  <Message number="93" eDefine="SYS_ERR_ARL_ROATGT">
+    <Title>Instruction error</Title>
+    <Description>Assignment target <p />is read only <p /></Description>
+    <Actions>The data to be assigned a value may not <p />be a constant, read only variable or <p />read only persistent.</Actions>
+  </Message>
+  <Message number="94" eDefine="SYS_ERR_ARL_RTNPER">
+    <Title>Data declaration error</Title>
+    <Description>Persistent <p />declaration not allowed in routine <p /></Description>
+    <Actions>Persistents may only be declared at <p />module level. Move the persistent <p />declaration from the routine.</Actions>
+  </Message>
+  <Message number="95" eDefine="SYS_ERR_ARL_RTNRSEEXP">
+    <Title>Instruction error</Title>
+    <Description>RAISE without <p />expression only allowed in error handler <p /></Description>
+    <Actions>Add an error number expression to the <p />RAISE instruction.</Actions>
+  </Message>
+  <Message number="96" eDefine="SYS_ERR_ARL_RTNRTY">
+    <Title>Instruction error</Title>
+    <Description>RETRY only <p />allowed in error handler <p /></Description>
+    <Actions>The RETRY instruction may only be used <p />in error handlers. Remove it.</Actions>
+  </Message>
+  <Message number="97" eDefine="SYS_ERR_ARL_RTNTNX">
+    <Title>Instruction error</Title>
+    <Description>TRYNEXT only <p />allowed in error handler <p /></Description>
+    <Actions>The TRYNEXT instruction may only be used <p />in error handlers. Remove it.</Actions>
+  </Message>
+  <Message number="98" eDefine="SYS_ERR_ARL_SWTIN">
+    <Title>Parameter error</Title>
+    <Description>'switch' <p />parameter must have transfer mode IN <p /></Description>
+    <Actions>Remove the parameter transfer mode <p />specifier. If IN transfer mode is not <p />sufficient, change the data type of the <p />parameter.</Actions>
+  </Message>
+  <Message number="99" eDefine="SYS_ERR_ARL_SWTNOTDIM">
+    <Title>Parameter error</Title>
+    <Description>'switch' <p />parameter cannot be dimensioned <p /></Description>
+    <Actions>Remove the array dimension <p />specification, or change the data type <p />of the parameter.</Actions>
+  </Message>
+  <Message number="100" eDefine="SYS_ERR_ARL_SWTOPP">
+    <Title>Parameter error</Title>
+    <Description>'switch' only <p />allowed for optional parameter <p /></Description>
+    <Actions>Change the parameter into an optional <p />parameter, or change the data type of <p />the parameter. If the object is not a <p />parameter, change the data type.</Actions>
+  </Message>
+  <Message number="101" eDefine="SYS_ERR_ARL_TYPMM">
+    <Title>Type error</Title>
+    <Description>Type mismatch of <p />expected type <arg format="%.18s" ordinal="1" /> and <p />found type <arg format="%.18s" ordinal="2" /><p /></Description>
+    <Actions>The expression is not of the expected <p />data type.</Actions>
+  </Message>
+  <Message number="102" eDefine="SYS_ERR_ARL_TYPMMAGG">
+    <Title>Type error</Title>
+    <Description>Type mismatch of <p />aggregate, expected type <p /><arg format="%.18s" ordinal="1" /><p /></Description>
+    <Actions>The aggregate does not match the <p />expected data type.</Actions>
+  </Message>
+  <Message number="103" eDefine="SYS_ERR_ARL_TYPMMSDB">
+    <Title>Type error</Title>
+    <Description>Persistent <p /><arg format="%.18s" ordinal="1" />, <arg format="%.16s" ordinal="2" /> type <p />mismatch <p /></Description>
+    <Actions>There is already a persistent data with <p />the same name but with another data <p />type. Rename the persistent, or change <p />its data type.</Actions>
+  </Message>
+  <Message number="104" eDefine="SYS_ERR_ARL_UNDARRDIM">
+    <Title>Data declaration error</Title>
+    <Description>Cannot determine <p />array dimensions (circular constant <p />references ?) <p /></Description>
+    <Actions>Check that any referred constants are <p />correctly defined. If so, the program is <p />too complex. Try to rewrite the <p />declarations. </Actions>
+  </Message>
+  <Message number="105" eDefine="SYS_ERR_ARL_UNDCONTYP">
+    <Title>Data declaration error</Title>
+    <Description>Cannot determine <p />type of constant value (circular <p />constant references ?) <p /></Description>
+    <Actions>Check that any referred constants are <p />correctly defined. If so, the program is <p />too complex. Try to rewrite the <p />declarations.</Actions>
+  </Message>
+  <Message number="106" eDefine="SYS_ERR_ARL_UNDCONVAL">
+    <Title>Data declaration error</Title>
+    <Description>Cannot evaluate <p />constant value expression (circular <p />constant references ?) <p /></Description>
+    <Actions>Check that any referred constants are <p />correctly defined. If so, the program is <p />too complex. Try to rewrite the <p />declarations.</Actions>
+  </Message>
+</Domain>

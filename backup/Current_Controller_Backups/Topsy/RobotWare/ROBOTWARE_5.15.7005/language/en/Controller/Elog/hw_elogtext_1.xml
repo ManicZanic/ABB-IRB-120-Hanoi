@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="HW" domainNo="3" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="1810" max="4200">
+  <Message number="1810" eDefine="SYS_ERR_HW_D603_BOARD_NOT_FOUND">
+    <Title>DeviceNet master/slave board is missing</Title>
+    <Description>The DeviceNet master/slave board does not work.</Description>
+    <Consequences>No communication on the Devicenet is possible.</Consequences>
+    <Causes>The DeviceNet master/slave board is either malfunctioning or missing.</Causes>
+    <Actions>1. Make sure a DeviceNet master/slave board is installed. <p />2. Replace the board if faulty.</Actions>
+  </Message>
+  <Message number="1811" eDefine="SYS_ERR_HW_D603_SECOND_BOARD_NOT_FOUND">
+    <Title>Second DeviceNet master/slave board is missing</Title>
+    <Description>Dual option is configured but only one DeviceNet master/slave board is installed.</Description>
+    <Consequences>Only one DeviceNet bus is available.</Consequences>
+    <Causes>The Second DeviceNet master/slave board is either malfunctioning or missing.</Causes>
+    <Actions>1. Make sure a Second DeviceNet master/slave board is installed. <p />2. Replace the Second board if faulty.</Actions>
+  </Message>
+  <Message number="1812" eDefine="SYS_ERR_HW_D603_INCOMPATIBLE_BOARDS">
+    <Title>Incompatible DeviceNet Boards</Title>
+    <Description>The system has detected incompatible types of DeviceNet boards.</Description>
+    <Consequences>No communication on the DeviceNet is possible.</Consequences>
+    <Causes>Incompatible types of DeviceNet boards have been installed in the system.</Causes>
+    <Actions>Make sure that compatible board types are installed.</Actions>
+  </Message>
+  <Message number="1910" eDefine="SYS_ERR_HW_D510_BOARD_NOT_FOUND">
+    <Title>Profibus-DP master/slave board is missing</Title>
+    <Description>The Profibus-DP master/slave board does not work.</Description>
+    <Consequences>No communication on the Profibus is possible.</Consequences>
+    <Causes>The Profibus-DP master/slave board is either malfunctioning or missing.</Causes>
+    <Actions>1. Make sure a Profibus-DP master/slave board is installed. <p />2. Replace the board if faulty.</Actions>
+  </Message>
+  <Message number="1911" eDefine="SYS_ERR_HW_D510_PROGRAM_ERR">
+    <Title>Profibus board update error</Title>
+    <Description>The RobotWare software was not able to download new driver software to the Profibus-DP master/slave board. The <arg format="%s" ordinal="1" /> channel (ch <arg format="%i" ordinal="2" />) of the Profibus board could not be programmed. Internal error code:<arg format="%i" ordinal="3" />.</Description>
+    <Consequences>No communication on the Profibus is possible.</Consequences>
+    <Causes>The RobotWare software may be corrupt or the board hardware may be malfunctioning.</Causes>
+    <Actions>1. Restart the system to reattempt downloading the software. <p />2. Reinstall the present system files. <p />3. Create and run a new system to download the driver software. <p />4. Replace the board if faulty.</Actions>
+  </Message>
+  <Message number="1912" eDefine="SYS_ERR_HW_D510_STARTUP_ERR">
+    <Title>Profibus-DP master/slave  board failure</Title>
+    <Description>The Profibus-DP master/slave board did not start up correctly. </Description>
+    <Consequences>No communication on the Profibus is possible.</Consequences>
+    <Causes>The Profibus-DP master/slave board hardware may be malfunctioning.</Causes>
+    <Actions>1. Restart the system. <p />2. Replace the Profibus-DP master/slave board if faulty.</Actions>
+  </Message>
+  <Message number="1913" eDefine="SYS_ERR_HW_D510_BOARD_ERR">
+    <Title>Profibus-DP master/slave  board internal error</Title>
+    <Description>The Profibus-DP master/slave board reported internal error <arg format="%i" ordinal="1" />. </Description>
+    <Consequences>No communication on the Profibus is possible.</Consequences>
+    <Causes>The Profibus-DP master/slave board hardware may be malfunctioning.</Causes>
+    <Actions>1. Restart the system. <p />2. Replace the Profibus-DP master/slave board if faulty.</Actions>
+  </Message>
+  <Message number="1914" eDefine="SYS_ERR_HW_D510_BUS_ERROR">
+    <Title>Profibus startup error</Title>
+    <Description>- Profibus master bus error Error code <arg format="%i" ordinal="1" />. Check cabling, terminators and modules then restart. </Description>
+    <Actions />
+  </Message>
+  <Message number="1915" eDefine="SYS_ERR_HW_D510_TO_MANY_ERRORS">
+    <Title>Profibus Bus Error</Title>
+    <Description>Profibus master bus error.<p /><p />Internal error<p />Error code <arg format="%i" ordinal="1" />.</Description>
+    <Consequences>Certain expected associated errors may be delayed.</Consequences>
+    <Causes>Faulty profibus cabling, terminators and/or module(s).<p />Duplicated profibus addresses.</Causes>
+    <Actions>Check cabling, terminators and modules.</Actions>
+  </Message>
+  <Message number="1916" eDefine="SYS_ERR_HW_D510_BUS_OK">
+    <Title>Profibus bus OK</Title>
+    <Description>- Profibus regained contact   on the master bus. </Description>
+    <Actions />
+  </Message>
+  <Message number="1917" eDefine="SYS_ERR_HW_D510_EXCEPTION">
+    <Title>Profibus-DP master/slave board exception</Title>
+    <Description>A fatal error has occurred on the Profibus-DP master/slave board. <arg format="%s" ordinal="1" /> channel in task <arg format="%i" ordinal="2" />. Parameters <arg format="%s" ordinal="3" /></Description>
+    <Consequences>No communication on the Profibus is possible.</Consequences>
+    <Causes>The Profibus-DP master/slave board hardware may be malfunctioning.</Causes>
+    <Actions>1. Restart the system. <p />2. Replace the Profibus-DP master/slave board if faulty.</Actions>
+  </Message>
+  <Message number="2500" eDefine="SYS_ERR_HW_RCC_NOT_FOUND">
+    <Title>Robot Communication Card is missing</Title>
+    <Description>The system cannot contact the Robot Communication Card. </Description>
+    <Consequences>No communication with the Safety System is possible. The system goes to status SYS FAIL.</Consequences>
+    <Causes>The Robot Communication Card is either malfunctioning or missing.</Causes>
+    <Actions>1. Make sure a Robot Communication Card is installed. <p />2. Replace the unit if faulty.</Actions>
+  </Message>
+  <Message number="2501" eDefine="SYS_ERR_HW_RCC_WRONG_REVISION">
+    <Title>Incorrect RCC firmware</Title>
+    <Description>The FPGAR11-Firmware on the RCC (DSQC602) is of an incompatible version. Current version: <arg format="%s" ordinal="1" />.<arg format="%s" ordinal="2" /> Requested version: <arg format="%s" ordinal="3" />.<arg format="%s" ordinal="4" /></Description>
+    <Actions>1. Replace the DSQC602 board <p />2. Restart the system</Actions>
+  </Message>
+  <Message number="2502" eDefine="SYS_ERR_HW_RCC_XML_FILE_NOT_FOUND">
+    <Title>Can't find file</Title>
+    <Description>The system cannot find the file: [<arg format="%s" ordinal="1" />]</Description>
+    <Actions>Reinstall the system</Actions>
+  </Message>
+  <Message number="2503" eDefine="SYS_ERR_HW_RCC_HW_NOT_IN_XML_FILE">
+    <Title>Requested info not in file</Title>
+    <Description>The system cannot find information about what software to download to HardWare ID="<arg format="%s" ordinal="1" />", Version="<arg format="%s" ordinal="2" />", Revision="<arg format="%s" ordinal="3" />" in file [<arg format="%s" ordinal="4" />].</Description>
+    <Causes>The file has either been damaged, or the actual hardware version of the unit is not supported.</Causes>
+    <Actions>1. Reinstall the system <p />2. Replace the unit to a version which is supported by this SW-release.</Actions>
+  </Message>
+  <Message number="2530" eDefine="SYS_ERR_HW_PU_FATAL_ERROR">
+    <Title>No Communication With The Safety System</Title>
+    <Description>There is no serial communication between the Safety System and the robot communication card. </Description>
+    <Consequences>The system goes to status SYS FAIL.</Consequences>
+    <Causes>Probably hardware fault in cable between Safety System and Robot Communication Card. The Safety System, or it's power supply, may also be faulty.</Causes>
+    <Actions>1) Restart the system to resume operation. <p />2) Make sure the cable between robot communication card and Safety System is working and correctly connected. <p />3) Check the Safety System power supply. <p />4) Replace the unit if faulty.</Actions>
+  </Message>
+  <Message number="2540" eDefine="SYS_ERR_HW_FW_UPGRADE_DU_STARTED">
+    <Title>Drive unit firmware reflash started</Title>
+    <Description>In drive module <arg format="%d" ordinal="1" />, a required upgrade of the firmware in the drive unit at unit position <arg format="%d" ordinal="2" /> has started. The old firmware revision <arg format="%d" ordinal="3" /> is replaced with revision <arg format="%d" ordinal="4" />.</Description>
+    <Actions>Wait for the firmware upgrade process to complete. Do not turn off system power!</Actions>
+  </Message>
+  <Message number="2541" eDefine="SYS_ERR_HW_FW_UPGRADE_DU_COMPLETE">
+    <Title>Drive unit firmware reflash complete</Title>
+    <Description>In drive module <arg format="%d" ordinal="1" />, the upgrade of the firmware in the drive unit with unit position <arg format="%d" ordinal="2" /> is completed. New revision is <arg format="%d" ordinal="3" />.</Description>
+  </Message>
+  <Message number="2542" eDefine="SYS_ERR_HW_FW_UPGRADE_DU_NOT_SUPPORTED">
+    <Title>Drive unit hardware not supported</Title>
+    <Description>In drive module <arg format="%d" ordinal="1" />, the system cannot use the drive unit with hardware identity <arg format="%s" ordinal="2" /> because the hardware revision <arg format="%d" ordinal="3" /> is not supported.</Description>
+    <Consequences>The system is unable to use the drive unit. The system goes to System Failure state.</Consequences>
+    <Causes>The RobotWare version is too old to support the drive unit.</Causes>
+    <Actions>1) Upgrade the system to a RobotWare version supporting the drive unit revision.<p />2) Replace the drive unit to one with compatible revision.</Actions>
+  </Message>
+  <Message number="2543" eDefine="SYS_ERR_HW_FW_UPGRADE_DU_FAILED">
+    <Title>Drive unit firmware reflash failed</Title>
+    <Description>In drive module <arg format="%d" ordinal="1" />, the upgrade of the firmware in the drive unit at unit position <arg format="%d" ordinal="2" /> failed.</Description>
+    <Consequences>The required upgrade of the drive unit firmware is not performed. </Consequences>
+    <Actions>1) Check other hardware eventlog messages for detailed explanation of the error condition.<p />2) Try again by restart the system using the main power switch.</Actions>
+  </Message>
+  <Message number="2544" eDefine="SYS_ERR_HW_FW_UPGRADE_DU_FILE_NOT_FOUND">
+    <Title>Drive unit firmware file not found</Title>
+    <Description>The file <arg format="%s" ordinal="1" />, required to upgrade a drive unit’s firmware, is not found.</Description>
+    <Consequences>The required upgrade of the drive unit firmware is not performed.</Consequences>
+    <Causes>The RobotWare installation does not contain the firmware file.</Causes>
+    <Actions>Reinstall the system.</Actions>
+  </Message>
+  <Message number="2545" eDefine="SYS_ERR_HW_FW_UPGRADE_DU_FILE_TYPE_ERROR">
+    <Title>Drive unit firmware file type error</Title>
+    <Description>The file <arg format="%s" ordinal="1" />, required to upgrade a drive unit’s firmware, is of wrong type.</Description>
+    <Consequences>The required upgrade of the drive unit firmware is not performed.</Consequences>
+    <Causes>The RobotWare installation is faulty.</Causes>
+    <Actions>Reinstall the system.</Actions>
+  </Message>
+  <Message number="2546" eDefine="SYS_ERR_HW_FW_UPGRADE_DU_FILE_CORRUPT">
+    <Title>Drive unit firmware file error</Title>
+    <Description>The file <arg format="%s" ordinal="1" />, required to upgrade a drive unit’s firmware, is not usable because it failed the integrity check. </Description>
+    <Consequences>The required upgrade of the drive unit firmware is not performed.</Consequences>
+    <Causes>The RobotWare installation is faulty.</Causes>
+    <Actions>Reinstall the system.</Actions>
+  </Message>
+  <Message number="2550" eDefine="SYS_ERR_HW_FW_REFLASH_STARTED">
+    <Title>Firmware reflash started</Title>
+    <Description>A required update of the <arg format="%s" ordinal="1" /> firmware has started. File used: [<arg format="%s" ordinal="2" />].</Description>
+    <Actions>Wait for the reflash to complete</Actions>
+  </Message>
+  <Message number="2551" eDefine="SYS_ERR_HW_FW_REFLASH_COMPLETE">
+    <Title>Firmware reflash completed</Title>
+    <Description>The update of <arg format="%s" ordinal="1" /> firmware has completed successfully.</Description>
+  </Message>
+  <Message number="2552" eDefine="SYS_ERR_HW_FW_REFLASH_FAILED">
+    <Title>Firmware reflash failed</Title>
+    <Description>The update of <arg format="%s" ordinal="1" /> firmware failed.<p />Internal errorcode:<arg format="%d" ordinal="2" /></Description>
+    <Actions>1. Check other error messages for detailed explanation<p />2. Restart the system<p />3. Reinstall the system<p />4. Replace the <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="2553" eDefine="SYS_ERR_HW_FW_FILE_CORRUPT">
+    <Title>Firmware file is corrupt</Title>
+    <Description>The firmware file [<arg format="%s" ordinal="1" />] is corrupt. Internal errorcode:<arg format="%d" ordinal="2" /></Description>
+    <Actions>Reinstall the system</Actions>
+  </Message>
+  <Message number="2554" eDefine="SYS_ERR_HW_FW_FILE_NOT_FOUND">
+    <Title>Firmware file not found</Title>
+    <Description>The firmware file [<arg format="%s" ordinal="1" />] is not found.</Description>
+    <Actions>Reinstall the system</Actions>
+  </Message>
+  <Message number="2555" eDefine="SYS_ERR_HW_FW_PU_UNUSABLE">
+    <Title>Safety System Unit Not Supported</Title>
+    <Description>The system cannot use the Safety System unit <arg format="%s" ordinal="1" />, revision <arg format="%d" ordinal="2" />.</Description>
+    <Consequences>The system is unable to use the affected hardware.</Consequences>
+    <Actions>1. Change the affected hardware to a compatible version.</Actions>
+  </Message>
+  <Message number="2560" eDefine="SYS_ERR_HW_FW_SC_REFLASH_STARTED">
+    <Title>Axis computer firmware reflash started</Title>
+    <Description>In drive module <arg format="%d" ordinal="1" />, a required upgrade of the firmware in the axis computer <arg format="%s" ordinal="2" /> with hardware identity <arg format="%s" ordinal="3" /> has started. The old firmware revision <arg format="%d" ordinal="4" /> is replaced with revision <arg format="%d" ordinal="5" />.</Description>
+    <Actions>Wait for the firmware upgrade process to complete. Do not turn off system power!</Actions>
+  </Message>
+  <Message number="2561" eDefine="SYS_ERR_HW_FW_SC_REFLASH_COMPLETE">
+    <Title>Axis computer firmware reflash complete</Title>
+    <Description>In drive module <arg format="%d" ordinal="1" />, the upgrade of the firmware in the axis computer <arg format="%s" ordinal="2" /> with hardware identity <arg format="%s" ordinal="3" /> is completed. New revision is <arg format="%d" ordinal="4" />.</Description>
+  </Message>
+  <Message number="2562" eDefine="SYS_ERR_HW_FW_AXC_COMMUNICATION">
+    <Title>Axis computer communication error</Title>
+    <Description>The system failed to communicate with the axis computer in drive module <arg format="%d" ordinal="1" /> when trying to read firmware information.</Description>
+    <Consequences>The system is unable to determine if an upgrade is required of the firmware in the affected drive module. The system goes to System Failure state.</Consequences>
+    <Causes>This may be due to a cable break, bad connector or high levels of interference in the cable between the main computer and the axis computer.</Causes>
+    <Actions>1) Make sure the cable between the main computer and the axis computer is not damaged and that both connectors are correctly connected. <p />2) Make sure no extreme levels of electromagnetic interference are emitted close to the robot cabling.</Actions>
+  </Message>
+  <Message number="2563" eDefine="SYS_ERR_HW_FW_AXC_NOT_SUPPORTED">
+    <Title>Axis computer hardware not supported</Title>
+    <Description>In drive module <arg format="%d" ordinal="2" />, the system cannot use the axis computer with hardware identity <arg format="%s" ordinal="1" /> because the hardware revision <arg format="%d" ordinal="3" /> is not supported.</Description>
+    <Consequences>The system is unable to use the axis computer. The system goes to System Failure state.</Consequences>
+    <Causes>The RobotWare version is too old to support the axis computer unit.</Causes>
+    <Actions>1) Replace the axis computer to one with compatible revision.<p />2) Upgrade the system to a RobotWare version supporting the axis computer revision.</Actions>
+  </Message>
+  <Message number="2564" eDefine="SYS_ERR_HW_FW_SC_REFLASH_FAILED">
+    <Title>Axis computer firmware reflash failed</Title>
+    <Description>In drive module <arg format="%d" ordinal="1" />, the upgrade of the firmware in the axis computer <arg format="%s" ordinal="2" /> with hardware identity <arg format="%s" ordinal="3" /> failed.</Description>
+    <Consequences>The required upgrade of the axis computer firmware is not performed.</Consequences>
+    <Actions>1) Check other hardware eventlog messages for detailed explanation of the error condition.<p />2) Retry again by restarting the system using the main power switch.</Actions>
+  </Message>
+  <Message number="2565" eDefine="SYS_ERR_HW_FW_SC_REFLASH_FILE_NOT_FOUND">
+    <Title>Axis computer firmware file not found</Title>
+    <Description>The file <arg format="%s" ordinal="1" />, required to upgrade an axis computer’s firmware, is not found.</Description>
+    <Consequences>The required upgrade of the axis computer firmware is not performed.</Consequences>
+    <Causes>The RobotWare installation does not contain the firmware file.</Causes>
+    <Actions>Reinstall the system.</Actions>
+  </Message>
+  <Message number="2567" eDefine="SYS_ERR_HW_FW_SC_REFLASH_FILE_TYPE_ERROR">
+    <Title>Axis computer firmware file type error</Title>
+    <Description>The file <arg format="%s" ordinal="1" />, required to upgrade an axis computer firmware, is of wrong type.</Description>
+    <Consequences>The required upgrade of the axis computer’s firmware is not performed. </Consequences>
+    <Causes>The firmware file is corrupt. </Causes>
+    <Actions>Reinstall the system.</Actions>
+  </Message>
+  <Message number="2568" eDefine="SYS_ERR_HW_FW_SC_REFLASH_FILE_CORRUPT">
+    <Title>Axis computer firmware file error</Title>
+    <Description>The file <arg format="%s" ordinal="1" />, required to upgrade an axis computer’s firmware, is not usable because it failed the integrity check.</Description>
+    <Consequences>The required upgrade of the axis computer firmware is not performed.</Consequences>
+    <Causes>The firmware file is corrupt.</Causes>
+    <Actions>Reinstall the system.</Actions>
+  </Message>
+  <Message number="2569" eDefine="SYS_ERR_HW_FW_SC_CORRUPT_FLASH">
+    <Title>Corrupt axis computer hardware</Title>
+    <Description>
+         In drive module <arg format="%d" ordinal="1" />, the axis computer flash memory has a corrupt content.
+      </Description>
+    <Actions>
+         1. Retry again by restarting the system using the main power switch.<p />2. If the problem remains then replace the axis computer.
+      </Actions>
+  </Message>
+  <Message number="2570" eDefine="SYS_ERR_HW_FW_AXC_REFLASH_STARTED">
+    <Title>Firmware reflash started</Title>
+    <Description>A required update of the <arg format="%s" ordinal="1" /> firmware has started. Replacing old firmware version: [<arg format="%d" ordinal="2" />].</Description>
+    <Actions>Wait for the reflash to complete</Actions>
+  </Message>
+  <Message number="2571" eDefine="SYS_ERR_HW_FW_AXC_REFLASH_COMPLETE">
+    <Title>Firmware reflash completed</Title>
+    <Description>The update of <arg format="%s" ordinal="1" /> firmware has completed successfully. New version: [<arg format="%d" ordinal="2" />]. Internal code:[<arg format="%d" ordinal="3" />]</Description>
+  </Message>
+  <Message number="2572" eDefine="SYS_ERR_HW_FW_AXC_REFLASH_FAILED">
+    <Title>Firmware reflash failed</Title>
+    <Description>The upgrade of <arg format="%s" ordinal="1" /> firmware failed.<p /> Current version:<arg format="%d" ordinal="2" />. Internal errorcode:<arg format="%d" ordinal="3" />.</Description>
+    <Actions>1. Check other hardware eventlog messages for detailed explanation of the error condition.<p />2. Reinstall the system.<p /></Actions>
+  </Message>
+  <Message number="2573" eDefine="SYS_ERR_HW_FW_AXC_FILE_ERROR">
+    <Title>Unable to download firmware file</Title>
+    <Description>The firmware file <arg format="%s" ordinal="1" /> is not found. Internal error code:<arg format="%d" ordinal="2" />.</Description>
+    <Actions>Reinstall the system.</Actions>
+  </Message>
+  <Message number="2574" eDefine="SYS_ERR_HW_FW_AXC_CORRUPT_FLASH">
+    <Title>Corrupt axis computer hardware</Title>
+    <Description>The <arg format="%s" ordinal="1" /> flash memory has a corrupt content. Internal error code:<arg format="%d" ordinal="2" />.</Description>
+    <Actions>1. Check other hardware eventlog messages for detailed explanation of the error condition.<p />2. Restart the system.<p />3. If failure occurs again, replace the axis computer.</Actions>
+  </Message>
+  <Message number="2575" eDefine="SYS_ERR_HW_FW_AXC_NO_BOARD_PRESENT">
+    <Title>Found no axis computer board</Title>
+    <Description>System failed to detect any connected axis computer.</Description>
+    <Actions>1. Check system for axis computer board.<p />2. Check ethernet cables between the main computer and the axis computer.<p />3. Restart the system.</Actions>
+  </Message>
+  <Message number="2576" eDefine="SYS_ERR_HW_FW_AXC_NO_CONTACT">
+    <Title>Axis firmware: No communication</Title>
+    <Description>The system failed to communicate with axis board <arg format="%d" ordinal="1" /> when trying to check the firmware version.</Description>
+    <Consequences>The system is unable to check and if necessary upgrade the firmware in the affected axis computer.</Consequences>
+    <Actions>1. Check system for axis computer board.<p />2. Check ethernet cables between the main computer and the axis computer.<p />3. Restart system.<p /></Actions>
+  </Message>
+  <Message number="2577" eDefine="SYS_ERR_HW_FW_AXC_HW_EEPROM_ERROR">
+    <Title>Axis computer hardware data error</Title>
+    <Description>
+         In drive module <arg format="%d" ordinal="1" />, the axis computer has corrupt information stored on the unit.
+      </Description>
+    <Consequences>The system goes to System Failure state. </Consequences>
+    <Causes>The integrity check of the axis computer information stored on the unit has failed.</Causes>
+    <Actions>
+         1) Retry again by restarting the system using the main power switch.<p />2) Replace the faulty axis computer.
+      </Actions>
+  </Message>
+  <Message number="2580" eDefine="SYS_ERR_HW_FW_CB_REFLASH_STARTED">
+    <Title>Firmware reflash started</Title>
+    <Description>A required update of the <arg format="%s" ordinal="1" /> firmware has started. Internal code: [<arg format="%d" ordinal="2" />].<p />File: [<arg format="%s" ordinal="3" />].<p /></Description>
+    <Actions>Wait for the reflash to complete</Actions>
+  </Message>
+  <Message number="2581" eDefine="SYS_ERR_HW_FW_CB_REFLASH_COMPLETE">
+    <Title>Firmware reflash completed</Title>
+    <Description>The update of <arg format="%s" ordinal="1" /> firmware has completed successfully . Internal code:[<arg format="%d" ordinal="2" />]</Description>
+    <Actions>No action required</Actions>
+  </Message>
+  <Message number="2582" eDefine="SYS_ERR_HW_FW_CB_REFLASH_FAILED">
+    <Title>Firmware reflash failed</Title>
+    <Description>The update of <arg format="%s" ordinal="1" /> firmware failed.<p />Internal errorcode:<arg format="%d" ordinal="2" /><p /></Description>
+    <Actions>1. Check other error messages for detailed explanation.<p />2. Reinstall the system.<p /></Actions>
+  </Message>
+  <Message number="2583" eDefine="SYS_ERR_HW_FW_CB_FILE_CORRUPT">
+    <Title>Firmware file corrupt</Title>
+    <Description>The update of <arg format="%s" ordinal="1" /> firmware failed.<p />The firmware file [<arg format="%s" ordinal="3" />] is corrupt.<p />Internal errorcode:<arg format="%d" ordinal="2" />.<p /></Description>
+    <Actions>Reinstall the system</Actions>
+  </Message>
+  <Message number="2584" eDefine="SYS_ERR_HW_FW_CB_FILE_NOT_FOUND">
+    <Title>Firmware file not found</Title>
+    <Description>The update of <arg format="%s" ordinal="1" /> firmware failed.<p />The firmware file [<arg format="%s" ordinal="3" />] is not found.<p />Internal errorcode:<arg format="%d" ordinal="2" />.<p /></Description>
+    <Actions>Reinstall the system</Actions>
+  </Message>
+  <Message number="2585" eDefine="SYS_ERR_HW_FW_NO_CB_BOARD_PRESENT">
+    <Title>No Safety System Found By Axis Computer</Title>
+    <Description>Axis computer failed to detect the Safety System.</Description>
+    <Actions>1. Check communication cables between the axis computer and the Safety System.<p />2. Check power supply to the Safety System.<p />3. Restart the system<p /></Actions>
+  </Message>
+  <Message number="2590" eDefine="SYS_ERR_HW_FW_DU_REFLASH_STARTED">
+    <Title>Firmware reflash started</Title>
+    <Description>A required update of the <arg format="%s" ordinal="1" /> firmware in drive module <arg format="%d" ordinal="2" /> has started.<p />File: [<arg format="%s" ordinal="3" />].<p /></Description>
+    <Actions>Wait for the reflash to complete, this will take approximately 3.5 minutes. </Actions>
+  </Message>
+  <Message number="2591" eDefine="SYS_ERR_HW_FW_DU_REFLASH_COMPLETE">
+    <Title>Firmware reflash completed</Title>
+    <Description>The update of <arg format="%s" ordinal="1" /> firmware in drive module <arg format="%d" ordinal="2" /> has sucessfully completed. </Description>
+    <Actions>No action required</Actions>
+  </Message>
+  <Message number="2592" eDefine="SYS_ERR_HW_FW_DU_REFLASH_FAILED">
+    <Title>Firmware reflash failed</Title>
+    <Description>The update of <arg format="%s" ordinal="1" /> firmware in drive module <arg format="%d" ordinal="2" /> has failed.<p /></Description>
+    <Actions>1. Check other error messages for detailed explanation.<p />2. Reinstall the system.<p /></Actions>
+  </Message>
+  <Message number="2593" eDefine="SYS_ERR_HW_FW_DU_FILE_CORRUPT">
+    <Title>Firmware file corrupt</Title>
+    <Description>The update of <arg format="%s" ordinal="1" /> firmware in drive module <arg format="%d" ordinal="2" /> has failed.<p />The firmware file [<arg format="%s" ordinal="3" />] is corrupt.<p /></Description>
+    <Actions>Reinstall the system</Actions>
+  </Message>
+  <Message number="2594" eDefine="SYS_ERR_HW_FW_DU_FILE_NOT_FOUND">
+    <Title>Firmware file not found</Title>
+    <Description>The update of <arg format="%s" ordinal="1" /> firmware in drive module <arg format="%d" ordinal="2" /> has failed.<p />The firmware file [<arg format="%s" ordinal="3" />] is not found.<p /></Description>
+    <Actions>Reinstall the system</Actions>
+  </Message>
+  <Message number="2601" eDefine="SYS_ERR_HW_IBS_BOARD_NOT_FOUND">
+    <Title>Interbus master/slave board is missing</Title>
+    <Description>The Interbus master/slave board does not work.</Description>
+    <Consequences>No communication on the Interbus is possible.</Consequences>
+    <Causes>The Interbus master/slave board is either malfunctioning or missing.</Causes>
+    <Actions>1) Make sure a Interbus master/slave board is installed. <p />2) Replace the board if faulty.</Actions>
+  </Message>
+  <Message number="2651" eDefine="SYS_ERR_HW_SERIAL_BOARD_NOT_FOUND">
+    <Title>Serial port hardware is not accessible</Title>
+    <Description>The system has tried to address the serial port <arg format="%s" ordinal="1" />, and failed. </Description>
+    <Consequences>The optional serial port hardware can not be accessed. The connector and the physical channel using the connector will not be available for use.</Consequences>
+    <Causes>The serial port hardware is missing or malfunctioning.</Causes>
+    <Actions>1) Make sure the required serial port hardware has been correctly installed and is not faulty. <p />2) Replace the serial port hardware.</Actions>
+  </Message>
+  <Message number="3503" eDefine="SYS_ERR_HW_MOC_IO_SYNCH_FAILED">
+    <Title>Revolution counter update failure</Title>
+    <Description>Update of the revolution counter for joint <arg format="%s" ordinal="1" /> failed.<p /></Description>
+    <Consequences>Joint not synchronized</Consequences>
+    <Causes>1. Joint missing or not active<p />2. Measurement system error</Causes>
+    <Actions>1. Check if joint active<p />2. Check configuration files<p />3. Check measurement system</Actions>
+  </Message>
+  <Message number="3601" eDefine="SYS_ERR_HW_AB_MODULE_NOT_FOUND">
+    <Title>Fieldbus Adapter is missing</Title>
+    <Description>The Fieldbus Adapter is missing.</Description>
+    <Consequences>No communication with the Fieldbus Adapter is possible.</Consequences>
+    <Causes>The Fieldbus Adapter is either malfunctioning or missing.</Causes>
+    <Actions>
+      1. Make sure a Fieldbus Adapter is installed.<p />2. Replace the module if faulty.
+    </Actions>
+  </Message>
+  <Message number="4100" eDefine="SYS_ERR_HW_FOX_NOT_SUPPORTED">
+    <Title>Drive system not supported</Title>
+    <Description>The configured drive system in drive module <arg format="%d" ordinal="1" /> is not of type Drive System '04.</Description>
+    <Consequences>The system goes to System Failure state.</Consequences>
+    <Causes>1. Wrong drive module key used, i.e., the configuration does not match hardware.<p />2. Wrong hardware used in the system.</Causes>
+    <Actions>1. Reinstall the system with a drive module key that matches the hardware.<p />2. Replace the drive module with one that supports Drive System '04.</Actions>
+  </Message>
+  <Message number="4101" eDefine="SYS_ERR_HW_ROBODRIVE_NOT_SUPPORTED">
+    <Title>Drive system not supported</Title>
+    <Description>The configured drive system in drive module <arg format="%d" ordinal="1" /> is not of type Drive System '09.</Description>
+    <Consequences>The system goes to System Failure state.</Consequences>
+    <Causes>1. Wrong drive module key used, i.e., the configuration does not match hardware.<p />2. Wrong hardware used in the system.</Causes>
+    <Actions>1. Reinstall the system with a drive module key that matches the hardware.<p />2. Replace the drive module with one that supports Drive System '09.</Actions>
+  </Message>
+  <Message number="4200" eDefine="SYS_ERR_HW_DRIVES_COMMUNICATION_ERROR">
+    <Title>Lost communication with all drive units</Title>
+    <Description>
+      In drive module <arg format="%d" ordinal="1" />, the axis computer has lost communication with all drive units.
+    </Description>
+    <Consequences>No operation will be possible until the fault is corrected. The system goes to Motors Off state with zero torque.</Consequences>
+    <Causes>Communication problem between drive units and the axis computer.</Causes>
+    <Actions>
+      1) Check that all cables are properly connected.<p />2) Check that the drive units have logic power.<p />3) Check/replace Ethernet cables.<p />4) Check for other hardware eventlog messages.<p />5) Check the event log for power supply unit error messages. <p />6) Check the cabling between the power supply unit and the drive unit.<p />7) Check the 24V output from the power supply unit. 
+  </Actions>
+  </Message>
+</Domain>

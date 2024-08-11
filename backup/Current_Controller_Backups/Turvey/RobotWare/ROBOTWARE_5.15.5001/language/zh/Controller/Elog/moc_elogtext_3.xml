@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="MOC" domainNo="5" lang="zh" elogTextVersion="1.0" min="280" max="366">
+  <Message number="280" eDefine="SYS_ERR_MOC_MULTIPLE_MECH_UNIT_IN_ONE_PGM">
+    <Title>系统配置</Title>
+    <Description>机械单元 <arg format="%s" ordinal="1" /> 在多个 RAPID 程序中定义。</Description>
+    <Actions>检查配置文件。 <p />使用正确的参数对系统执行 I-启动。</Actions>
+  </Message>
+  <Message number="281" eDefine="SYS_ERR_MOC_IPOL_STOP_PROCESS_EVENT">
+    <Title>进程失败</Title>
+    <Description>任务： <arg format="%.16s" ordinal="1" /><p />任务 <arg format="%.16s" ordinal="1" /> 中的进程失败。如果使用 MultiMove，则这种错误是由于该任务或同步任务中的某个进程失败而造成。<p /><arg format="%.40s" ordinal="2" /></Description>
+    <Actions>查看同时出现的其它消息以查找原因。<p />恢复： <arg format="%.16s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="282" eDefine="SYS_ERR_MOC_CNV_REC_NOT_READY">
+    <Title>记录未就绪</Title>
+    <Description> 记录启动未就绪</Description>
+    <Actions>确保在完成记录之后再启动。<p />检查 sensor_start_signal </Actions>
+  </Message>
+  <Message number="283" eDefine="SYS_ERR_MOC_CNV_REC_FILE_UNKNOWN">
+    <Title>未知记录文件名</Title>
+    <Description>记录文件名：  <arg format="%s" ordinal="1" /> 未知。</Description>
+    <Actions>检查文件管理器中的文件名或它是否存在。<p />记录新文件</Actions>
+  </Message>
+  <Message number="284" eDefine="SYS_ERR_MOC_CANNOT_ACTIVATE_MECH_UNIT">
+    <Title>无法启动机械单元 </Title>
+    <Description>由于未连接到 RAPID 任务，机械单元 <arg format="%s" ordinal="1" /> 无法启动。</Description>
+    <Actions>检查控制器配置中是否已正确连接了机械单元与 RAPID 任务。</Actions>
+  </Message>
+  <Message number="285" eDefine="SYS_ERR_MOC_DITHER_CTRLMA">
+    <Title>无法使用 DitherAct</Title>
+    <Description>无法启动抖动。<p /></Description>
+    <Actions>检验是否已选择能与 DitherAct 一起使用的关节。</Actions>
+  </Message>
+  <Message number="286" eDefine="SYS_ERR_MOC_COORDINATED_FRAME_CHAIN">
+    <Title>多个坐标系混合 </Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />有多个单元移动坐标系框架，原因 <arg format="%d" ordinal="3" />:<p />：不允许使用坐标系链。<p />在cornerzone上,不允许交换操控坐标系的单元。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>重新排列单元，使执行协调移动的全部单元都跟随同一个单元运动。<p /> 在两个协调移动之间插入小点或非协调移动。 </Actions>
+  </Message>
+  <Message number="287" eDefine="SYS_ERR_MOC_UNIT_NOT_STOPPED_COORDINATED_FRAME">
+    <Title>单元未停止在受控制的位置</Title>
+    <Description>机器人 <arg format="%s" ordinal="2" /> 通过另一任务与单元 <arg format="%s" ordinal="1" /> 进行半协调，但此单元已被移动或者无法重新获得其路径。</Description>
+    <Consequences>程序运行或重新启动将被中断。</Consequences>
+    <Actions>检查所有程序，以确定半协调运动是否通过精细点分隔、是否在半协调运动之前和之后执行 WaitSyncTask 指令以及单元是否在此期间发生了移动。 请注意，在半协调之后到 SyncMoveOn 和 SyncMoveResume 之前这段时间也需要执行 WaitSyncTask。<p />检查单元是否在半协调运动之前移至所需的位置。 在 SyncMoveOff、SyncMoveSuspend、ActUnit、DeactUnit 或 ClearPath 之后，单元必须（通过新运动指令）移至某一位置以定义框架，使其他任务可对其进行读取。 此位置可以是新的位置，也可是单元的当前位置。<p />检查单元程序是否在任务选择面板中处于活动状态。</Actions>
+  </Message>
+  <Message number="288" eDefine="SYS_ERR_MOC_SYNC_ID_MISSMATCH">
+    <Title>同步 ID 不匹配</Title>
+    <Description>移动指令的特定 ID 编号必须适应所有协作程序任务。<p />当前 ID 编号不匹配： <arg format="%d" ordinal="1" />， <arg format="%d" ordinal="2" />。</Description>
+    <Actions>检验特定 ID 编号适用，以及程序启动之前所有 PP 均被同步。</Actions>
+  </Message>
+  <Message number="289" eDefine="SYS_ERR_MOC_POINT_TYPE_MISSMATCH">
+    <Title>同步时点类型不匹配</Title>
+    <Description>syncId = <arg format="%d" ordinal="1" /> 的移动指令中，静止点与转弯点存在混淆。 </Description>
+    <Actions>确保所有协作程序任务中的移动指令指定了相同的点类型，即静止点或转弯点。</Actions>
+  </Message>
+  <Message number="290" eDefine="SYS_ERR_MOC_RCS_GET_NEXTSTEP_NO_LICENSE">
+    <Title>服务不可用</Title>
+    <Description>无法获得正确的许可。</Description>
+    <Actions>请检查许可设置。</Actions>
+  </Message>
+  <Message number="294" eDefine="SYS_ERR_MOC_SENSOR_MEMORY_TRANSMISSION_ERROR">
+    <Title>数据传输错误</Title>
+    <Description>在机柜与 SMB 内存间传输数据失败。</Description>
+    <Causes>电缆或传输电子装置出现故障。电性干扰太强。</Causes>
+    <Actions>－ 重新启动后再试。<p />- 检查电缆。<p />- 检查 SMB 电路板。<p />- 检查驱动模块。</Actions>
+  </Message>
+  <Message number="295" eDefine="SYS_ERR_MOC_SENSOR_MEMORY_DATA_MISSING">
+    <Title>缺少动作数据</Title>
+    <Description>SMB 与机柜内存中缺少机械单元 <arg format="%s" ordinal="1" /> 的数据。</Description>
+    <Causes>缺少配置文件。新的 SMB 电路板与新机柜一起使用。</Causes>
+    <Actions>- 加载新的配置文件。</Actions>
+  </Message>
+  <Message number="296" eDefine="SYS_ERR_MOC_SENSOR_MEMORY_DATA_DIFFERENCE">
+    <Title>SMB 内存数据差异</Title>
+    <Description>机械单元 <arg format="%s" ordinal="1" /> SMB 内存与机柜内存中的数据不一致。</Description>
+    <Causes>SMB 内存与机柜内存中的数据或序列号不一致。操纵器（SMB 模块）或机柜已交换或配置参数已更改。</Causes>
+    <Actions>使用教导器查阅状态，检查机柜是否加载正确的配置数据（序列号）。检查序列号是否属于连接于机柜之上的操纵器。如果不是，更换配置文件或在机柜已交换的情况下手动将 SMB 内存中的数据传送到机柜。<p />如果使用另一个操纵器电路板（序列号不一致）更换串行测量电路板，则首先通过教导器清除 SMB 内存，然后将数据从机柜传送至 SMB。</Actions>
+  </Message>
+  <Message number="297" eDefine="SYS_ERR_MOC_SENSOR_MEMORY_DATA_UPDATED_IN_SMB">
+    <Title>SMB 内存已更新</Title>
+    <Description>机械单元 <arg format="%s" ordinal="1" /> 的数据已由机柜移至 SMB 内存。</Description>
+  </Message>
+  <Message number="298" eDefine="SYS_ERR_MOC_SENSOR_MEMORY_DATA_UPDATED_IN_CAB">
+    <Title>机柜内存已更新</Title>
+    <Description>机械单元 <arg format="%s" ordinal="1" /> 的数据已由 SMB 内存移至机柜。</Description>
+  </Message>
+  <Message number="299" eDefine="SYS_ERR_MOC_SPEED_CONTROL_WARNING">
+    <Title>速度控制警告</Title>
+    <Description>由于限速单元 <arg format="%s" ordinal="2" /> 的原因，单元 <arg format="%s" ordinal="1" /> 的速度已降低。<p />任务： <arg format="%.16s" ordinal="3" /> 指令行： <arg format="%.40s" ordinal="4" /></Description>
+    <Causes>该单元的编程速度过快，或限速单元的移动距离过长</Causes>
+    <Actions>更改路径或编程速度。<p />关闭速度控制 </Actions>
+  </Message>
+  <Message number="300" eDefine="SYS_ERR_MOC_SENSOR_MEMORY_MISSING">
+    <Title>未使用 SMB 内存</Title>
+    <Description>该机械单元未使用 SMB 内存。</Description>
+    <Causes>附加轴不能也不应使用 SMB 内存。</Causes>
+    <Actions />
+  </Message>
+  <Message number="301" eDefine="SYS_ERR_MOC_SENSOR_MEMORY_HEADER_MISSING">
+    <Title>所有 SMB 数据已丢失</Title>
+    <Description>电路板 <arg format="%d" ordinal="3" />、链接 <arg format="%d" ordinal="2" />、驱动模块 <arg format="%d" ordinal="1" /> 的 SMB 内存中的所有数据丢失。 </Description>
+    <Causes>SMB 内存与通信出现错误。数据已清除。</Causes>
+    <Actions>如果机柜中存在适用的数据 - 将数据传送至 SMB 内存。如果问题依然存在 - 检查 SMB 电路板的通信电缆。 Replace SMB-board.</Actions>
+  </Message>
+  <Message number="302" eDefine="SYS_ERR_MOC_SENSOR_MEMORY_SN_MISSING">
+    <Title>传感器数据丢失</Title>
+    <Description>SMB 内存中未定义机械单元 <arg format="%s" ordinal="1" /> 的序列号。</Description>
+    <Causes>SMB 内存已清除，或安装了新的 SMB 电路板。</Causes>
+    <Actions>如果机柜中存在适用的数据 - 将数据传送至 SMB 内存。</Actions>
+  </Message>
+  <Message number="303" eDefine="SYS_ERR_MOC_SENSOR_MEMORY_SN_MISSING_IN_CAB">
+    <Title>机柜数据丢失</Title>
+    <Description>机柜中未定义机械单元 <arg format="%s" ordinal="1" /> 的序列号。</Description>
+    <Causes>机柜内存已清除，或安装了新的机柜。</Causes>
+    <Actions>如果 SMB 内存中存在适用的数据 - 将数据传送至机柜内存。</Actions>
+  </Message>
+  <Message number="305" eDefine="SYS_ERR_MOC_SENSOR_MEMORY_OLD_BOARD_USED">
+    <Title>使用旧 SMB 电路板</Title>
+    <Description>使用没有数据内存的旧 SMB 电路板。</Description>
+    <Actions>使用带有数据内存的新电路板更换旧电路板，或在配置 MOTION/ROBOT 中设置参数 "Use old SMB" 。</Actions>
+  </Message>
+  <Message number="306" eDefine="SYS_ERR_MOC_LOAD_IDENTIFICATION_SINGULAR">
+    <Title>负荷确认错误</Title>
+    <Description>由于配置角度使惯性矩阵成为单数，因此无法执行负荷确认。</Description>
+    <Actions>- 以任何方向移动机器人上的轴 6 大约 30 度。</Actions>
+  </Message>
+  <Message number="307" eDefine="SYS_ERR_MOC_EXTRANGE_INSTALLED">
+    <Title>扩大工作范围</Title>
+    <Description>已安装 Extended working range 选件。<p /> 确保机械停止已删除。</Description>
+  </Message>
+  <Message number="308" eDefine="SYS_ERR_MOC_TIMEOUT_WAITING_FOR_INPOS">
+    <Title>In Position 超时</Title>
+    <Description>在 <arg format="%.3f" ordinal="1" /> 秒内未满足小点条件。</Description>
+    <Actions>检查 In Position（In Position Range, Zero Speed）下附加轴的调节情况，然后检查分解器电缆是否受到干扰。</Actions>
+  </Message>
+  <Message number="309" eDefine="SYS_ERR_MOC_SENSOR_MEMORY_ABSACC_ERROR">
+    <Title>AbsAcc 错误</Title>
+    <Description>从 SMB 内存移至机柜的数据。在 SMB 内存中无效的 AbsAcc 数据。机械单元 <arg format="%s" ordinal="1" /> 的机柜中已清除的 AbsAcc。 </Description>
+    <Actions>加载新的 AbsAcc 可用数据。</Actions>
+  </Message>
+  <Message number="310" eDefine="SYS_ERR_MOC_INDEPENDENT_JOINT_NOT_ACTIVE">
+    <Title>处于非激活状态的独立关节</Title>
+    <Description>带独立关节的机械单元 <arg format="%s" ordinal="1" /> 处于非激活状态。</Description>
+    <Actions>执行独立关节指令之前激活机械单元。</Actions>
+  </Message>
+  <Message number="311" eDefine="SYS_ERR_MOC_CANNOT_ACTIVATE_MECH_UNIT_IN_TASK">
+    <Title>无法在任务中启动机械单元</Title>
+    <Description>机械单元 <arg format="%s" ordinal="1" /> 无法在指定任务中启动。<p /></Description>
+    <Actions>检查控制器配置中是否建立了机械单元与 RAPID 任务的连接。<p /></Actions>
+  </Message>
+  <Message number="312" eDefine="SYS_ERR_MOC_MECH_UNIT_ALREADY_ACTIVE_IN_TASK">
+    <Title>已在其它任务中处于激活状态的机械单元</Title>
+    <Description>无法激活机械单元 <arg format="%s" ordinal="1" />，因为它已在另一个 RAPID 任务中处于激活状态。</Description>
+  </Message>
+  <Message number="313" eDefine="SYS_ERR_MOC_SG_MOVE_ERROR">
+    <Title>独立移动重置失败</Title>
+    <Description>
+      <arg format="%s" ordinal="1" /> 独立重置移动失败，在独立重置移动过程中出现伺服工具同步移动(MoveL/MoveJ)。</Description>
+    <Actions>确保独立重置移动执行时伺服工具的同步速度为零。</Actions>
+  </Message>
+  <Message number="314" eDefine="SYS_ERR_MOC_SG_MOVE_OUT_OF_REACH">
+    <Title>独立移动超出可达范围</Title>
+    <Description>
+      <arg format="%s" ordinal="1" /> 编程独立移动位置超出可达范围。编程位置 = <arg format="%f" ordinal="2" /> mm。</Description>
+    <Actions>调整独立移动位置。<p /> 检查伺服工具的工作范围。</Actions>
+  </Message>
+  <Message number="315" eDefine="SYS_ERR_MOC_STOP_PROCESS_SEGMENT_EXPECTED">
+    <Title>转角路径故障</Title>
+    <Description>任务： <arg format="%.16s" ordinal="1" /><p /> 由于以下原因，插补和过程在转角路径前停止：<p />- 延时。<p />- 编程点太近。<p />-系统要求较高的 CPU 负载。<p /><arg format="%.40s" ordinal="2" /></Description>
+    <Actions>-减少连续移动的指令之间的指令数量。<p />-降低速度，使用间隔更大的点，使用 /CONC 选项。<p />-增加 ipol_prefetch_time。<p /> 恢复： <arg format="%.16s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="316" eDefine="SYS_ERR_MOC_ABSACC_NOT_ACTIVATED">
+    <Title>绝对精度功能未激活</Title>
+    <Description>绝对精度功能未激活。</Description>
+    <Consequences>机器人定位将不是绝对准确的。</Consequences>
+    <Actions>1. 通过将机器人系统参数“使用机器人校准”设置为 calib 开启 AbsAcc。 <p />在点动控制窗口中确认状态。 <p />2. 还要确保 absacc.cfg 已加载到控制器内存。 <p />验证数据存在于备份中。</Actions>
+  </Message>
+  <Message number="317" eDefine="SYS_ERR_MOC_DISCONNECT_NOT_ALLOWED">
+    <Title>不允许断开驱动模块 </Title>
+    <Description>试图断开驱动模块 <arg format="%d" ordinal="1" />的做法是不允许的。 </Description>
+    <Consequences>系统进入电机下电状态之后，断开驱动模块。 </Consequences>
+    <Causes>仅允许电机下电状态中断开驱动模块。 </Causes>
+    <Actions>确保断开驱动模块之前系统处于电机下电状态。 </Actions>
+  </Message>
+  <Message number="318" eDefine="SYS_ERR_MOC_RECONNECT_NOT_ALLOWED">
+    <Title>不允许重新连接驱动模块 </Title>
+    <Description>由于系统不在电机下电状态，无法重新连接驱动模块。 </Description>
+    <Consequences>试图断开驱动模块 <arg format="%d" ordinal="1" />的做法是不允许的。 </Consequences>
+    <Causes>仅允许电机下电状态中断开驱动模块。 </Causes>
+    <Actions>确保重新连接驱动模块之前系统处于电机下电状态。 </Actions>
+  </Message>
+  <Message number="319" eDefine="SYS_ERR_MOC_CANNOT_ACTIVATE_UNIT">
+    <Title>无法启动机械单元
+</Title>
+    <Description>尝试启动机械单元 <arg format="%s" ordinal="1" />失败。
+</Description>
+    <Consequences>机械单元保持停用状态。
+</Consequences>
+    <Causes>机械单元连接到已断开的 <arg format="%d" ordinal="2" /> 驱动模块。
+</Causes>
+    <Actions>1) 重新连接驱动模块。2) 再次尝试启动机械单元。
+</Actions>
+  </Message>
+  <Message number="320" eDefine="SYS_ERR_MOC_DRIVE_MODULE_DISCONNECTED">
+    <Title>已断开驱动模块
+</Title>
+    <Description>已断开 <arg format="%d" ordinal="1" />  驱动模块。
+</Description>
+    <Consequences>不能操作任何连接到驱动模块的机械单元。
+</Consequences>
+  </Message>
+  <Message number="321" eDefine="SYS_ERR_MOC_DRIVE_MODULE_RECONNECTED">
+    <Title>已重新连接驱动模块
+</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 在断开后已重新连接。
+</Description>
+    <Consequences>可以操作 <arg format="%d" ordinal="1" /> 任何连接到驱动模块的机械单元。
+</Consequences>
+  </Message>
+  <Message number="322" eDefine="SYS_ERR_MOC_MECH_UNIT_NOT_CONNECTED_TO_TASK">
+    <Title>机械单元未连接到动作任务</Title>
+    <Description>无法启动机械单元 <arg format="%s" ordinal="1" />，因为它未连接到任何动作任务。</Description>
+    <Actions>检查控制器配置中是否建立了机械单元与 RAPID 任务的连接。<p /></Actions>
+  </Message>
+  <Message number="323" eDefine="SYS_ERR_MOC_FC_GET_FORCE_FAILED">
+    <Title>读取力度传感器失败</Title>
+    <Description>无法返回已校准的力度传感器读数。</Description>
+    <Causes>力度控制系统未校准。</Causes>
+    <Actions>使用该指令前使用 FCCalib 指令。</Actions>
+  </Message>
+  <Message number="324" eDefine="SYS_ERR_MOC_FC_CALIBRATE_FAILED">
+    <Title>力度控制校准失败</Title>
+    <Description>校准力度控制系统失败。</Description>
+    <Causes>系统不在位置控制中。</Causes>
+    <Actions>确保机器人在使用 FCCalib 指令前处于位置控制模式。</Actions>
+  </Message>
+  <Message number="325" eDefine="SYS_ERR_MOC_FC_FORCE_MODE_FAILED">
+    <Title>启动力度控制失败</Title>
+    <Description>力度控制启动失败。</Description>
+    <Causes>系统未校准或我们已处于力度控制状态。发生此情况的另一原因可能是变元不正确。</Causes>
+    <Actions>力度控制系统校准时以及我们处于位置控制时，仅使用 FCAct 或 FCPress1LStart 指令。检查启动指令的所有变元。</Actions>
+  </Message>
+  <Message number="326" eDefine="SYS_ERR_MOC_FC_POSITION_MODE_FAILED">
+    <Title>关闭力度控制失败</Title>
+    <Description>返回到位置控制失败。</Description>
+    <Causes>如果机器人因外力或有序参考而移动，则无法设置位置控制。</Causes>
+    <Actions>停止任何有效参考值，删除所有外力，然后重试。</Actions>
+  </Message>
+  <Message number="327" eDefine="SYS_ERR_MOC_FC_START_REFERENCES_FAILED">
+    <Title>启动参考值失败</Title>
+    <Description>开始用户指定参考失败</Description>
+    <Causes>仅允许在力度控制中启动参考值。</Causes>
+    <Actions>在试图启动参考值前必须启动力度控制。</Actions>
+  </Message>
+  <Message number="328" eDefine="SYS_ERR_MOC_FC_SETUP_SPRING_STIFFNESS_FAILED">
+    <Title>FCRefSprForce 或 FCRefSprTorque 中参数错误</Title>
+    <Description>FCRefSprForce 或 FCRefSprTorque 中参数错误</Description>
+    <Actions>将 FCRefSprForce 或 FCRefSprTorque 指令中的 Stiffness 参数的值更改为大于零的数值。<p /></Actions>
+  </Message>
+  <Message number="329" eDefine="SYS_ERR_MOC_FC_SETUP_MAX_FORCE_FAILED">
+    <Title>FCRefSprForce 中的参数错误</Title>
+    <Description>FCRefSprForce 指令中的 MaxForce 参数错误。</Description>
+    <Actions>将 FCRefSprForce 指令中的 MaxForce 参数的值更改为大于零的数值。</Actions>
+  </Message>
+  <Message number="330" eDefine="SYS_ERR_MOC_FC_SETUP_MAX_TORQUE_FAILED">
+    <Title>FCRefSprTorque 中的参数错误</Title>
+    <Description>FCRefSprTorque 指令中的 MaxTorque 参数错误。</Description>
+    <Actions>将 FCRefSprTorque 指令中的 MaxTorque 参数的值更改为大于零的数值。 </Actions>
+  </Message>
+  <Message number="333" eDefine="SYS_ERR_MOC_FC_SETUP_POS_REF_FAILED">
+    <Title>FCRefLine、FCRefRot 或 FCRefCircle 错误</Title>
+    <Description>FCRefLine 或 FCRefRot 指令中的距离参数和 FCRefCircle 指令中的半径和速度参数必须大于零。</Description>
+    <Actions>更改上述参数请参阅手册。</Actions>
+  </Message>
+  <Message number="335" eDefine="SYS_ERR_MOC_FC_SETUP_POS_SPIRAL_FAILED">
+    <Title>FCRefSpiral 中的参数错误</Title>
+    <Description>不允许参数值用于函数 FCRefSpiral 中。 </Description>
+    <Causes>函数 FCRefSpiral 的参数值错误。</Causes>
+    <Actions>修改函数 FCRefSpiral 中的参数值。</Actions>
+  </Message>
+  <Message number="336" eDefine="SYS_ERR_MOC_FC_GET_DATA_FAILED">
+    <Title>FCGetProcessData 中的参数错误</Title>
+    <Description>检索程序信息失败。</Description>
+    <Causes>在 FCGetProcessData 指令中使用可选参数 DataAtTrigTime。 如果未发生触发，则报告该错误。</Causes>
+    <Actions>删除可选参数。</Actions>
+  </Message>
+  <Message number="337" eDefine="SYS_ERR_MOC_FC_SENSOR_NOT_SETUP">
+    <Title>力度传感器未设置</Title>
+    <Description>力度传感器参数中的错误。</Description>
+    <Actions>检查力度传感器配置参数。</Actions>
+  </Message>
+  <Message number="338" eDefine="SYS_ERR_MOC_FC_SETUP_ADVANCED_CONDITION_FAILED">
+    <Title>FCCondAdvanced 中的参数错误</Title>
+    <Description>FCCondAdvanced 指令中的 LogicCond 参数错误。</Description>
+    <Actions>修改 FCCondAdvanced 指令中的 LogicCond 参数。</Actions>
+  </Message>
+  <Message number="339" eDefine="SYS_ERR_MOC_FC_SETUP_TIME_CONDITION_FAILED">
+    <Title>FCCondTime 中的参数错误</Title>
+    <Description>FCCondTime 指令中的 Time 参数错误。</Description>
+    <Actions>将 FCCondTime 指令中的 Time 参数的值更改为大于零的数值。</Actions>
+  </Message>
+  <Message number="340" eDefine="SYS_ERR_MOC_FC_SETUP_BOX_FAILED">
+    <Title>力度控制盒定义中的错误</Title>
+    <Description>FCCondPos 或 FCSupvPos 的参数 Box 中的错误。</Description>
+    <Actions>更改 FCCondPos 或 FCSupvPos 的参数 Box。</Actions>
+  </Message>
+  <Message number="341" eDefine="SYS_ERR_MOC_FC_SETUP_CYLINDER_FAILED">
+    <Title>力度控制圆柱定义中的错误</Title>
+    <Description>FCCondPos 或 FCSupvPos 的参数 Cylinder 中的错误。</Description>
+    <Actions>更改 FCCondPos 或 FCSupvPos 的参数 Cylinder。</Actions>
+  </Message>
+  <Message number="342" eDefine="SYS_ERR_MOC_FC_SETUP_SPHERE_FAILED">
+    <Title>力度控制球体定义中的错误</Title>
+    <Description>FCCondPos 或 FCSupvPos 的参数 Sphere 中的错误。 </Description>
+    <Actions>更改 FCCondPos 或 FCSupvPos 的参数 Sphere。</Actions>
+  </Message>
+  <Message number="343" eDefine="SYS_ERR_MOC_FC_SETUP_CONE_FAILED">
+    <Title>力度控制圆锥定义中的错误
+</Title>
+    <Description>FCCondOrient 或 FCSupvOrient 的参数的错误。
+</Description>
+    <Actions>更改 FCCondOrient 或 FCSupvOrient 中的参数。
+</Actions>
+  </Message>
+  <Message number="344" eDefine="SYS_ERR_MOC_FC_JOINT_LIMIT">
+    <Title>关节超出力度控制限值</Title>
+    <Description>一个或多个关节在力度控制中超出其工作范围。</Description>
+    <Actions>修改程序以避免物理关节超出限值。</Actions>
+  </Message>
+  <Message number="345" eDefine="SYS_ERR_MOC_FC_SUPERVISION_ERROR">
+    <Title>力度控制监控错误</Title>
+    <Description>已触发用户指定的监控。类型为 <arg format="%d" ordinal="1" />。<p /><p />类型：<p /><p />1：TCP 位置<p />2：工具方向<p />3：TCP 速度<p />4：重新定位速度<p />5：力度<p />6：转矩<p />7：教导 TCP 速度<p />8：教导重新定位速度</Description>
+    <Consequences>机器人将停止。</Consequences>
+    <Actions>停用力度控制。<p />修改监控或程序。</Actions>
+  </Message>
+  <Message number="346" eDefine="SYS_ERR_MOC_TEMP_SUPERVISION">
+    <Title>电机温度错误 </Title>
+    <Description>关节 <arg format="%d" ordinal="1" /> 的电机温度过高。 </Description>
+    <Consequences>直到电机完全冷却才能继续操作。 </Consequences>
+  </Message>
+  <Message number="348" eDefine="SYS_ERR_MOC_TEST_SIGNAL_DEFINE_ERROR">
+    <Title>测试信号错误
+</Title>
+    <Description>对测试信号失败的定义 <arg format="%s" ordinal="1" />，信道上的轴 <arg format="%d" ordinal="2" /><arg format="%d" ordinal="3" />。
+</Description>
+    <Causes>机械单元处于非活动状态。<p />测试信号数量不符合实际测试信号。<p />信道数量过多。
+</Causes>
+  </Message>
+  <Message number="349" eDefine="SYS_ERR_MOC_DUPLICATE_SYNC_ID_ERROR">
+    <Title>同步 ID 警告
+</Title>
+    <Description>两个连续同步移动指令 <arg format="%s" ordinal="3" /> 拥有相同的同步 ID 值 <arg format="%d" ordinal="1" />。
+</Description>
+    <Consequences>如果超过一个移动指令重复了 ID 值，则很难跟踪同步了哪些移动指令。这可能导致在修改位置时出现问题。
+</Consequences>
+    <Actions>更改同步的移动指令 <arg format="%s" ordinal="2" /> ， <arg format="%s" ordinal="3" /> 是其拥有唯一的同步 ID 值。
+</Actions>
+  </Message>
+  <Message number="350" eDefine="SYS_ERR_MOC_SWEQ_NOT_ALLOWED">
+    <Title> 不允许软件均衡
+</Title>
+    <Description>由于独立移动处于活动状态，所以不能运行软件均衡。
+</Description>
+    <Actions>在执行软件均衡伺服点时确保独立移动处于非活动状态。
+</Actions>
+  </Message>
+  <Message number="351" eDefine="SYS_ERR_MOC_INDEPENDENT_NOT_ALLOWED">
+    <Title>不允许独立移动
+</Title>
+    <Description>独立移动处于活动状态时，不能运行独立移动。
+</Description>
+    <Actions>执行独立焊枪移动时，确保软件均衡关闭。
+</Actions>
+  </Message>
+  <Message number="352" eDefine="SYS_ERR_MOC_TOOL_OFFS_MISMATCH">
+    <Title>移动指令数目不匹配</Title>
+    <Description>在同步运动中使用路径记录要求具备：<p />所有协作程序任务均存在或均不存在工具偏移。<p /> 所有协作程序任务向后/前移动的次数与移动指令的次数相同。</Description>
+    <Actions>检验是否所有任务均使用或均未使用可选变元工具偏移。<p />检验同步块中，向前移动的 pathrec 标识符在所有任务中的位置是否相同。</Actions>
+  </Message>
+  <Message number="353" eDefine="SYS_ERR_MOC_CNV_NO_UNIT_FOUND">
+    <Title>读取编码器卡中的数据失败
+</Title>
+    <Description>系统读取某编码器卡中的数据失败。
+</Description>
+    <Consequences>可能会降低加速和减速的跟踪精确度。
+</Consequences>
+    <Causes>可能为以下过程参数指定了错误的单元名称：<p /><arg format="%s" ordinal="1" /></Causes>
+    <Actions>1) 检查在过程参数内是否指定了正确的单位名称<p /> eio 单位名称 <arg format="%s" ordinal="1" /></Actions>
+  </Message>
+  <Message number="354" eDefine="SYS_ERR_MOC_FC_SETUP_FORCE_AMPLITUDE_WARNING">
+    <Title>预定的力度参照过大。 </Title>
+    <Description>预定的力度参照大于配置的最大值。 </Description>
+    <Consequences>已将预定力度参照降低到配置值。 </Consequences>
+    <Actions>需要更新系统参数才能允许更大的参照力度。注意，力度参照的绝对限制取决于机器人类型。 </Actions>
+  </Message>
+  <Message number="355" eDefine="SYS_ERR_MOC_FC_SETUP_TORQUE_AMPLITUDE_WARNING">
+    <Title>预定的转矩参照过大。
+</Title>
+    <Description>预定的转矩参照大于配置的最大值。
+</Description>
+    <Consequences>已将预定转矩降低到配置最大值。
+</Consequences>
+    <Actions>需要更新系统参数才能允许更大的参照转矩。
+</Actions>
+  </Message>
+  <Message number="356" eDefine="SYS_ERR_MOC_FC_SETUP_MAX_FORCE_WARNING">
+    <Title>预定的 MaxForce 过大
+</Title>
+    <Description>指令 FCRefSprForce 中的参数 MaxForce 大于配置最大值。
+</Description>
+    <Consequences>已将参数 MaxForce 降低到配置最大值。<p /></Consequences>
+    <Actions>需要更新系统参数才能允许更大的值。
+</Actions>
+  </Message>
+  <Message number="357" eDefine="SYS_ERR_MOC_FC_SETUP_MAX_TORQUE_WARNING">
+    <Title>预定的 MaxTorque 过大
+</Title>
+    <Description>指令 FCRefSprTorque 中的参数 MaxTorque 大于配置最大值。
+</Description>
+    <Consequences>已将参数 MaxTorque 降低到配置最大值。
+</Consequences>
+    <Actions>需要更新系统参数才能允许更大的值。
+</Actions>
+  </Message>
+  <Message number="358" eDefine="SYS_ERR_MOC_FC_SINGULARITY">
+    <Title>力度控制时靠近奇点</Title>
+    <Description>在机器人 <arg format="%s" ordinal="1" />的力度控制模式下时接近奇点。 </Description>
+    <Actions>修改路径，使其远离奇点或更改至接点插补。</Actions>
+  </Message>
+  <Message number="359" eDefine="SYS_ERR_MOC_REC_WRONG_LEVEL">
+    <Title>不允许 StorePath 层上的 Path Recorder</Title>
+    <Description>Path Recorder 只能用于基本路径层上。Path Recorder 已被停止。</Description>
+    <Actions>在 StorePath 之前停止 Path Recorder，在 RestoPath 之后再重启 Path Recorder。</Actions>
+  </Message>
+  <Message number="361" eDefine="SYS_ERR_MOC_BRAKE_RELEASE_SUPERVISION">
+    <Title>制动闸释放错误</Title>
+    <Description>制动闸释放后，接点 <arg format="%s" ordinal="1" /> 的位置错误过大。</Description>
+    <Actions>再试一次。检查电缆。检查硬件。如果错误在附加轴上，请检查调节情况。</Actions>
+  </Message>
+  <Message number="362" eDefine="SYS_ERR_MOC_BRAKE_RELEASE_TIME_OUT">
+    <Title>制动闸释放时间超时</Title>
+    <Description>制动闸释放达到最大时限后，接点 <arg format="%s" ordinal="1" /> 未到位。</Description>
+    <Actions>再试一次。检查电缆。检查硬件。如果错误在附加轴上，请检查调节情况。</Actions>
+  </Message>
+  <Message number="363" eDefine="SYS_ERR_MOC_SYNC_MOVE_ON">
+    <Title>SyncMoveOn 失败</Title>
+    <Description>由于内部错误，启动同步移动失败。</Description>
+    <Consequences>无法从当前位置重启程序。</Consequences>
+    <Actions>移动程序指针并重试。</Actions>
+  </Message>
+  <Message number="364" eDefine="SYS_ERR_MOC_CURRENT_VECTOR_WARNING">
+    <Title>当前矢量模式下的轴</Title>
+    <Description>警告：接点 <arg format="%s" ordinal="2" /> 以 <arg format="%s" ordinal="1" /> 数据，作为当前矢量轴进行配置。正常操作下，此轴的驱动系统会断开。</Description>
+    <Actions>运行检修程序以启动当前矢量。<p />正常操作下，将“驱动系统”参数 current_vector_on 的配置数据设为 FALSE。</Actions>
+  </Message>
+  <Message number="366" eDefine="SYS_ERR_MOC_REFSUP_ERROR">
+    <Title>引用错误</Title>
+    <Description>引用计算中出现错误。内部状态 <arg format="%d" ordinal="1" />。 </Description>
+    <Consequences>控制器进入电机关闭状态</Consequences>
+    <Actions>检查先前可能引起该问题的错误的错误日志。<p /> 移动程序指针后尽可能重启程序。<p /> 重启控制器。</Actions>
+  </Message>
+</Domain>

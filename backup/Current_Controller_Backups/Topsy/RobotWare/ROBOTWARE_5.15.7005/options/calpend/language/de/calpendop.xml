@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Resource Name="CALPEND" Language="de">
+  <Text Name="200">
+    <Value>Sie haben keine Kalibrierung durchgeführt.</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="201">
+    <Value>Beenden</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="202">
+    <Value>OK</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="203">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="204">
+    <Value>Achse</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="205">
+    <Value>OK drücken, um Prozess zu beenden.</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="206">
+    <Value>Roboter in Kalibrierposition.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="207">
+    <Value>Roboter kalibrieren:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="208">
+    <Value>1. Menü "Verschiedenes" öffnen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="209">
+    <Value>2. "Wartung - Ansicht - Kalibrierung" wählen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="210">
+    <Value>3. "Kalib. - Feinkalibrierung" wählen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="211">
+    <Value>4. Dieses Programm neu starten.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="212">
+    <Value>5. OK drücken, nach Schritt 1-4</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="213">
+    <Value>Abbrechen</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="214">
+    <Value>OK drücken, um fortzufahren.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="215">
+    <Value>OK drücken, um zu beenden.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="216">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="217">
+    <Value>Levelmeter 2000 in Modus A B bringen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="218">
+    <Value>Messbereich überschritten.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="219">
+    <Value>Gebereinheit auf Sockel positionieren.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="220">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="221">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="222">
+    <Value>Achtung: OK startet Roboterbewegung !</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="223">
+    <Value>Referenzwerte Sockel...</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="224">
+    <Value>Ref</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="225">
+    <Value>Sockelreferenzen fertig.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="226">
+    <Value>Gebereinheit auf Achse 1 positionieren.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="227">
+    <Value>Achse trimmen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="228">
+    <Value>Korrekturwert [Grad]</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="229">
+    <Value>ist fertig.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="230">
+    <Value>Gebereinheit an Rückseite Achse 2.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="231">
+    <Value>Gebereinheit an Vorderseite Achse 2.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="232">
+    <Value>Gebereinheit auf Achse 4 anbringen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="233">
+    <Value>Achtung: Achse 4 bewegt sich !</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="234">
+    <Value>-90 Grad gedreht zur Kalibrierposition</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="235">
+    <Value>Gebereinheit an Flansch anbringen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="236">
+    <Value>Achtung: Achsen 4 u. 5 bewegen sich !</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="237">
+    <Value>Gebereinheit unter Flansch anbringen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="238">
+    <Value>Erforderliche Genauigkeit nicht erreicht</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="239">
+    <Value>  OK     : Prozess fortsetzen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="240">
+    <Value>  Abbrechen : Prozess beenden</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="241">
+    <Value>Auswahl treffen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="242">
+    <Value>Bestehende Optionen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="243">
+    <Value>Robotertyp:        .</Value>
+    <Comment>Text length 20 chars (end with dot)</Comment>
+  </Text>
+  <Text Name="244">
+    <Value>Roboter:             .</Value>
+    <Comment>Text length 20 chars (end with dot)</Comment>
+  </Text>
+  <Text Name="245">
+    <Value>Gewählte Achsen:       .</Value>
+    <Comment>Text length 20 chars (end with dot)</Comment>
+  </Text>
+  <Text Name="246">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="247">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="248">
+    <Value>Optionen akzeptieren oder ändern.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="249">
+    <Value>Beenden</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="250">
+    <Value>Ändern</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="251">
+    <Value>Akzeptieren</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="252">
+    <Value>[0]-Vorherige Seite     Nächste Seite-[9]</Value>
+    <Comment>Length must be 35 chars</Comment>
+  </Text>
+  <Text Name="253">
+    <Value>Robotertyp über num. Tasten wählen:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="254">
+    <Value>Unzulässige Auswahl, erneut versuchen!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="255">
+    <Value>Gewählter Robotertyp:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="256">
+    <Value>[1]-Achse 1            Achse 2-[2]</Value>
+    <Comment>Length must be 32 chars</Comment>
+  </Text>
+  <Text Name="257">
+    <Value>[3]-Achse 3            Achse 4-[4]</Value>
+    <Comment>Length must be 32 chars</Comment>
+  </Text>
+  <Text Name="258">
+    <Value>[5]-Achse 5            Achse 6-[6]</Value>
+    <Comment>Length must be 32 chars</Comment>
+  </Text>
+  <Text Name="259">
+    <Value>[8]-Alle                Löschen-[9]</Value>
+    <Comment>Length must be 32 chars</Comment>
+  </Text>
+  <Text Name="260">
+    <Value>[0]-Akzeptieren</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="261">
+    <Value>Gewählte Achsen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="262">
+    <Value>Zu kalibrierende Achsen wählen:                      </Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="263">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="264">
+    <Value>Neuer Versuch</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="265">
+    <Value>Kalibrierung erfolgreich beendet !</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="266">
+    <Value>Kalibrierung fehlgeschlagen ! </Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="267">
+    <Value>calib.cfg-Parameter speichern? </Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="268">
+    <Value>Nein</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="269">
+    <Value>Ja</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="270">
+    <Value>Zu verwendende E/A-Einheit wählen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="271">
+    <Value>Diskette einlegen oder entnehmen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="272">
+    <Value>Schreibschutz entfernen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="273">
+    <Value>Speichervorgang ist fehlgeschlagen !</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="274">
+    <Value>Kalibrierung ausgeführt am </Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="275">
+    <Value> von Calibration Pendulum.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="276">
+    <Value>Resolveroffset vor Kalibrierung:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="277">
+    <Value>Resolveroffset nach Kalibrierung:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="278">
+    <Value>Prüfen, ob Levelmeter eingeschaltet.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="279">
+    <Value>Warnung! Kalibrierung erfordert tool0.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="280">
+    <Value>Werkzeug demontieren, falls vorhanden.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="281">
+    <Value>Einheit auf Prüfplatte positionieren.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="282">
+    <Value>Einheit um 180 Grad drehen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="283">
+    <Value>Offsetpegel...</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="284">
+    <Value>Null-Offset fertig.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="285">
+    <Value>mehr als eine Achsendrehung</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="286">
+    <Value>ab Original-Synch.position.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="287">
+    <Value>Wechsel zu manueller Feinkalibrierung.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="288">
+    <Value>Automatische / manuelle Kalibrierung wählen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="289">
+    <Value>Manuell</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="290">
+    <Value>Automatisch</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="291">
+    <Value>Zu kalibrierende mech. Einheit wählen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="292">
+    <Value>Keine mech. Einheit gewählt, Abbruch.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="293">
+    <Value>Warten auf Ende der Feinkalibrierung !</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="294">
+    <Value>Feinkalibrierung erfolgreich beendet !</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="295">
+    <Value>Null-Offset-Kalibrierung Gebereinheiten.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="296">
+    <Value>Gebereinheit auf Offset-Prüfplatte.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="297">
+    <Value>Gebereinheit um 180 Grad drehen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="298">
+    <Value>Null-Offset-Kalibrierung überspringen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="299">
+    <Value>Achtung: Achse 6 bewegt sich</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="300">
+    <Value>+82,5 Grad zur Kal.pos.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="301">
+    <Value>Achse nicht bei 0 Grad, Abbruch.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="302">
+    <Value>Roboterposition:    .</Value>
+    <Comment>Text length 20 chars (end with dot)</Comment>
+  </Text>
+  <Text Name="303">
+    <Value>Pos.</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="304">
+    <Value>Achsen</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="305">
+    <Value>Alternative Positionen:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="306">
+    <Value>[0]-Alle def. Positionen entfernen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="307">
+    <Value>[1]-Kalib. Ax1 mit Ax2-6 benutzerdef.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="308">
+    <Value>[2]-Kalib. Ax2 mit Ax3-6 benutzerdef.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="309">
+    <Value>[3]-Kalib. Ax3 mit Ax4-6 benutzerdef.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="310">
+    <Value>[9]-Zurück</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="311">
+    <Value>Alternative wählen:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="312">
+    <Value>Achse in benutzerdefinierter Position.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="313">
+    <Value>Position löschen vor Hinzufügen v. Achse.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="314">
+    <Value>Achsen bewegen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="315">
+    <Value>an gewünschte Position.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="316">
+    <Value>Sensoren auf 0-Grad einstellen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="317">
+    <Value>Achtung: Platte nicht bewegen !</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="318">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="319">
+    <Value>Flip-Flop-Methode verwenden</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="320">
+    <Value>für Kalibrierung Achse 3, 4 und 5 ?</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="321">
+    <Value>Dafür ist Gebereinheit erforderlich,</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="322">
+    <Value>die ohne den Adapter auf dem</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="323">
+    <Value>Flansch montiert werden kann.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="324">
+    <Value>Trimmen Achse 3:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="325">
+    <Value>Gebereinheit muss ohne Adapter auf</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="326">
+    <Value>den Flansch montiert werden, wenn</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="327">
+    <Value>Flip-Flop-Methode gewählt wurde.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="328">
+    <Value>Gebereinheit am Flansch anbringen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="329">
+    <Value>Trimmen Achse 4:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="330">
+    <Value>Trimmen Achse 5:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="331">
+    <Value>Trimmen Achse 6:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="332">
+    <Value>Achtung !</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="333">
+    <Value>Nur automatische Feinkalibrierung </Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="334">
+    <Value>für RW 4.0.100 oder höher.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="335">
+    <Value>Übergehen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="336">
+    <Value>Kalibrierung ausgeführt:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="337">
+    <Value>Produktion in Västerås</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="338">
+    <Value>oder</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="339">
+    <Value>Servicekalibrierung vor Ort</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="340">
+    <Value>Produktion</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="341">
+    <Value>Vor Ort</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="342">
+    <Value>Willkommen zum Calibration pendulum II</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="343">
+    <Value>Zur Prüfung des Offsets von Messgebern,</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="344">
+    <Value>wenn Messgeber länger nicht benutzt.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="345">
+    <Value>Einheit auf Achse 3 anbringen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="346">
+    <Value>Halter zw. Geber u. Anschlag anbringen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="347">
+    <Value>Halter vom Flansch entfernen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="348">
+    <Value>Achtung: Achse 6 dreht auf 0 Grad.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="349">
+    <Value>Halter entfernen. Beschädigungsgefahr.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="350">
+    <Value>Sensor folgt nicht Roboterbewegung.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="351">
+    <Value>Geberanbringung überprüfen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="352">
+    <Value>Kalibrierposition gefunden mit Achse</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="353">
+    <Value>Grad</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="354">
+    <Value>wird jetzt bewegt zu</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="355">
+    <Value>"OK" drücken und Strichcode scannen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="356">
+    <Value>Scannen des Strichcodes überspringen!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="357">
+    <Value>Seriennummer manuell eingegeben.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="358">
+    <Value>Warten auf Seriennummer...</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="359">
+    <Value>Seriennummer gescannt:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="360">
+    <Value>Rescan</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="361">
+    <Value>Fehler beim Lesen des Strichcodes!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="362">
+    <Value>Strichcode gelesen:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="363">
+    <Value>Erforderliches Format</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="364">
+    <Value>"Wiederholen" drücken für Rescan.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="365">
+    <Value>Feinkalibrierung ausführen und "OK".</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="366">
+    <Value>"ABB - Kalibrierung" wählen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="367">
+    <Value>Zu kalib. Roboter wählen, ex ROB_1</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="368">
+    <Value>Kalib. Parameter - Feinkalib. wählen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="369">
+    <Value>Achse wählen und "Kalibrieren" drücken.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="370">
+    <Value>Dieses Programm erneut starten.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="371">
+    <Value>Hauptmenü für Kalibrierung</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="372">
+    <Value>Achse kalibrieren</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="373">
+    <Value>Kalibrieren von Achse 1:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="374">
+    <Value>Zurück zu Hauptmenü oder Beenden?</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="375">
+    <Value>Zurück</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="376">
+    <Value>Referenzposition kalibrieren</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="377">
+    <Value>Alternative wählen:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="378">
+    <Value>Referenzposition definieren</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="379">
+    <Value>Referenzposition nach Service verwenden</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="380">
+    <Value>Instandzusetzende Achse definieren</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="381">
+    <Value>Handgelenk</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="382">
+    <Value>Referenzposition existiert bereits!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="383">
+    <Value>Entfernen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="384">
+    <Value>und OK drücken</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="385">
+    <Value>Referenzdifferenz (Werkzeug - Sockel):</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="386">
+    <Value>Sensor</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="387">
+    <Value>Ergebnis geschrieben in</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="388">
+    <Value>Referenzpos. erfolgreich gespeichert!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="389">
+    <Value>existiert nicht!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="390">
+    <Value>Referenzposition muss</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="391">
+    <Value>zuerst definiert werden. Abbruch.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="392">
+    <Value>Lesefehler</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="393">
+    <Value>Abbruch</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="394">
+    <Value>Sicherstellen, dass die instandgesetzte</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="395">
+    <Value>Achse feinkalibriert ist!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="396">
+    <Value>Manuelle Achsenbewegung ist erlaubt.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="397">
+    <Value>Roboter in Referenzposition bewegen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="398">
+    <Value>Position Achse 1 wird aus Datei gelesen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="399">
+    <Value>Roboter nicht in Nähe Referenzposition!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="400">
+    <Value>"Referenzpos." drücken.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="401">
+    <Value>Manuell bewegen, wenn Hindernisse im Weg.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="402">
+    <Value>Referenzpos.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="403">
+    <Value>Gebereinheit entfernen u. neu montieren.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="404">
+    <Value>Referenzposition-Ebenen...</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="405">
+    <Value>Referenzposition bereit.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="406">
+    <Value>Warnung! Differenz Sockelreferenz</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="407">
+    <Value>RefA-StoredRefA=</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="408">
+    <Value>RefB-StoredRefB=</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="409">
+    <Value>OK, um Kalibrierung fortzusetzen, aber</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="410">
+    <Value>Sensor-Offset sollte geprüft werden.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="411">
+    <Value>Differenz:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="412">
+    <Value>Sensor</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="413">
+    <Value>Roboter manuell an Zielwerte bewegen:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="414">
+    <Value>Zielwert</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="415">
+    <Value>Achse feinkalibrieren - "Test" drücken.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="416">
+    <Value>Test</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="417">
+    <Value>Genauigkeit ist akzeptabel!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="418">
+    <Value>SMB-Speicher für Achse aktualisieren</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="419">
+    <Value>1. Kalibrierpendel II</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="420">
+    <Value>2. Referenzkalibrierung</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="421">
+    <Value>Man. oder auto. Ausrichtung wählen:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="422">
+    <Value>Achse für auto. Ausrichtung wählen:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="423">
+    <Value>Weitere Achse kalibrieren?</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="424">
+    <Value>Menü "Kalibrierung"</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="425">
+    <Value>Gebereinheit entfernen u. neu montieren.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="426">
+    <Value>kein</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="427">
+    <Value>und</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="428">
+    <Value>neu</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="429">
+    <Value>Gespeicherte Datei prüfen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="430">
+    <Value>Datei OK.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="431">
+    <Value>Kalibrierwerte prüfen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="432">
+    <Value>Sensormontage unterschiedlich zu der</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="433">
+    <Value>bei der Speicherung der Referenz!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="434">
+    <Value>Kalibrierung nicht fortsetztbar.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="435">
+    <Value>2 Achsen gewählt für</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="436">
+    <Value>Referenzkalibrierung.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="437">
+    <Value>Diese ein zweites Mal wiederholen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="438">
+    <Value>Wiederholung</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="439">
+    <Value>von</Value>
+    <Comment>Maximum length 39 chars, Context: Iteration 1 of 2 for axis 5</Comment>
+  </Text>
+  <Text Name="440">
+    <Value>für Achse</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="441">
+    <Value>Motor Kalib.diff.: [Gespeich. - Akt.]:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="442">
+    <Value>rad</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="443">
+    <Value>Verweise gültig.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="444">
+    <Value>VERWEISE NICHT GÜLTIG.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="445">
+    <Value>Zu viele Achsen wurden geändert</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="446">
+    <Value>Gebereinheit auf Werkzeug positionieren.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="447">
+    <Value>Einheit auf Rahmen von Achse 2 setzen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="448">
+    <Value>Achse 2 bewegt sich zu</Value>
+    <Comment>Maximum length 39 chars, Context: Axis 2 will move to xx deg</Comment>
+  </Text>
+  <Text Name="449">
+    <Value>Achse 2 muss bei 90 Grad sein</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="450">
+    <Value>Für Referenzmessungen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="451">
+    <Value>Kalibrieren mit Geber unter Flansch</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="452">
+    <Value>Kalibrieren mit Geber am Flanschadapter</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="453">
+    <Value>Referenzmessung auf Oberarmrohr</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="454">
+    <Value>Referenzmessung am Werkzeug</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="455">
+    <Value>Gebereinheit auf Werkzeug platzieren</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="456">
+    <Value>Geber am Oberarmrohr entf./neu montieren</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+</Resource>

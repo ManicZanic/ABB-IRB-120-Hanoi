@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.TPU.Screens.IPS">
+  <Forms>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.IPS.TpuWndIpsCalibrate" Text="校准" Width="320" Height="192" Background="SkinRoboBell.jpg" Icon="IpsCalibrate32.gif">
+      <Menu ref="menuTpuWndIpsCalibrate" />
+      <Controls>
+        <Control ID="lblDevice" Text="设备" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="8" Top="12" Width="54" Height="20" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.IPS.TpuWndSetCalibrationData" Text="校准" Width="320" Height="192" Background="SkinRoboBell.jpg" Icon="IpsCalibrate32.gif">
+      <Menu ref="menuSetCalibrationData" />
+      <Controls>
+        <Control ID="lblTxtType" Text="类型：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="8" Top="36" Width="52" Height="18" />
+        <Control ID="lblTxtDevice" Text="设备：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="8" Top="12" Width="52" Height="18" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.IPS.TpuWndTurbineSensCalib" Text="悬杯校准：" Width="320" Height="192" Background="SkinRoboBell.jpg" Icon="BellCalibrate.png">
+      <Menu ref="menuTpuWndTurbineSensCalib" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.IPS.TpuWndPurge" Text="吹除" Width="320" Height="192" Icon="Ex32.gif">
+      <Controls>
+        <Control ID="tpuPurge1" Text="tpuPurge1" Name="ABB.Robotics.Paint.TPU.Controls.Ips.TpuPurge" Left="0" Top="0" Width="320" Height="112" />
+        <Control ID="lblMax" Text="0" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="287" Top="145" Width="30" Height="20" />
+        <Control ID="lblMin" Text="0" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="3" Top="145" Width="30" Height="20" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.IPS.TpuWndIpsParameterEditor" Text="参数" Width="320" Height="192" Background="SkinRoboBell.jpg" Icon="Screwdriver32.gif">
+      <Menu ref="menuTpuWndIpsParameterEditor" />
+      <Controls>
+        <Control ID="lblSet" Text="设置：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="8" Top="35" Width="60" Height="20" />
+        <Control ID="lblName" Text="名称：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="8" Top="11" Width="60" Height="20" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.IPS.TpuWndIpsDiagnose" Text="诊断" Width="320" Height="192" Background="SkinRoboBell.jpg" Icon="Stethoscope32.gif">
+      <Menu ref="menuTpuWndIpsDiagnose" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.IPS.TpuWndIpsBrushTableSelect" Text="编辑刷子表" Width="320" Height="192" Background="SkinRoboBell.jpg" Icon="BrushEdit32.gif">
+      <Menu ref="menuTpuWndIpsBrushTableSelect" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.IPS.TpuWndIpsCalibrateChart" Text="图表" Width="320" Height="192" Icon="Line-Chart32.gif">
+      <Menu ref="menuTpuWndIpsCalibrateChart" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.IPS.TpuWndIpsInfo" Text="信息" Width="320" Height="192" Icon="About32.gif">
+      <Menu ref="menuTpuWndIpsInfo" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.IPS.TpuWndCalibrationReport" Text="信息" Width="320" Height="192" Icon="About32.gif">
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.IPS.TpuWndPibBackup" Text="PIB备份" Width="320" Height="192" Icon="Safe32.gif">
+      <Menu ref="menuTpuWndPibBackup" />
+      <Controls>
+        <Control ID="lblProgress" Text="进程：" Name="System.Windows.Forms.Label" Left="3" Top="130" Width="302" Height="34" />
+        <Control ID="lblRestore" Text="恢复：运行PIB上的Restor.bat脚本.将会拷贝PIB上Nodes文件夹上的文件到IPS结点上" Name="System.Windows.Forms.Label" Left="3" Top="74" Width="302" Height="51" />
+        <Control ID="lblBackup" Text="备份：运行PIB上的Backup.bat脚本.将会拷贝IPS结点上的文件并保存到PIB上的Nodes文件夹" Name="System.Windows.Forms.Label" Left="3" Top="18" Width="302" Height="51" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.IPS.TpuWndPIBNetwork" Text="网络" Width="320" Height="192" Icon="Network32.gif">
+      <Menu ref="menuTpuWndPIBNetwork" />
+      <Controls>
+        <Control ID="lblGateway" Text="网关：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="17" Top="138" Width="95" Height="24" />
+        <Control ID="lblSubnetMask" Text="子网掩码：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="17" Top="100" Width="95" Height="24" />
+        <Control ID="lblIpAddress" Text="IP地址：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="17" Top="61" Width="95" Height="24" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.IPS.TpuWndIpsBrushEditor" Text="编辑刷子" Width="320" Height="192" Icon="IpsBrushEditor32.gif">
+      <Menu ref="menuTpuWndIpsBrushEditor" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.IPS.TpuWndFileBrowser" Text="文件浏览器" Width="320" Height="192" Icon="FolderView32.gif">
+      <Menu ref="menuTpuWndFileBrowser" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.IPS.TpuWndBrushFactors" Text="刷子因子" Width="320" Height="192" Icon="BrushFactors32.gif">
+      <Menu ref="menuTpuWndBrushFactors" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.IPS.TpuWndIpsIdrive" Text="iDrive" Width="320" Height="192" Icon="Motor32.gif">
+      <Menu ref="menuTpuWndIpsIdrive" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.IPS.TpuWndSetCalibrationData" Text="" Width="320" Height="192" />
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.IPS.TpuWndSetCalibrationData" Text="" Width="320" Height="192" />
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.IPS.TpuWndSetCalibrationData" Text="" Width="320" Height="192" />
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.IPS.TpuWndSelectDevice" Text="" Width="320" Height="192">
+      <Controls />
+    </Form>
+  </Forms>
+  <Menus>
+    <Menu ID="menuTpuWndPibBackup">
+      <MenuItem ID="Backup" Text="备份" />
+      <MenuItem ID="Restore" Text="恢复" />
+    </Menu>
+    <Menu ID="menuTpuWndTurbineSensCalib">
+      <MenuItem ID="Calibrate" Text="校准" />
+    </Menu>
+    <Menu ID="menuTpuWndIpsCalibrate">
+      <MenuItem ID="Calibrate" Text="校准" />
+      <MenuItem ID="Abort" Text="放弃" />
+      <MenuItem ID="Report" Text="报告" />
+      <MenuItem ID="Chart" Text="图表" />
+    </Menu>
+    <Menu ID="menuSetCalibrationData">
+      <MenuItem ID="Start" Text="开始" />
+      <MenuItem ID="Cancel" Text="取消" />
+    </Menu>
+    <Menu ID="menuTpuWndIpsParameterEditor">
+      <MenuItem ID="Apply" Text="应用" />
+    </Menu>
+    <Menu ID="menuTpuWndIpsDiagnose" />
+    <Menu ID="menuDiagnoseDescription">
+      <MenuItem ID="Devices" Text="设备">
+        <MenuItem ID="Devices.All" Text="所有" />
+        <MenuItem ID="Devices.Applicators" Text="雾化器" />
+      </MenuItem>
+    </Menu>
+    <Menu ID="menuTpuWndIpsBrushTableSelect">
+      <MenuItem ID="OK" Text="OK" />
+      <MenuItem ID="Cancel" Text="取消" />
+    </Menu>
+    <Menu ID="menuTpuWndIpsCalibrateChart">
+      <MenuItem ID="Curve" Text="曲线" />
+      <MenuItem ID="Plot" Text="制图" />
+      <MenuItem ID="Limits" Text="极限" />
+      <MenuItem ID="WarnLim" Text="警告" />
+    </Menu>
+    <Menu ID="menuTpuWndIpsInfo">
+      <MenuItem ID="OK" Text="OK" />
+    </Menu>
+    <Menu ID="menuTpuWndPIBNetwork">
+      <MenuItem ID="Save" Text="保存" />
+    </Menu>
+    <Menu ID="menuTpuWndIpsBrushEditor">
+      <MenuItem ID="Table" Text="表格">
+        <MenuItem ID="Table.New" Text="新的" />
+        <MenuItem ID="Table.Open" Text="打开" />
+        <MenuItem ID="Table.Apply" Text="应用" />
+        <MenuItem ID="Table.Save" Text="保存" />
+        <MenuItem ID="Table.SaveAs" Text="另存为" />
+        <MenuItem ID="Table.Delete" Text="删除" />
+      </MenuItem>
+      <MenuItem ID="Edit" Text="编辑">
+        <MenuItem ID="Edit.Copy" Text="复制" />
+        <MenuItem ID="Edit.Paste" Text="粘贴" />
+      </MenuItem>
+      <MenuItem ID="Enable" Text="使能">
+        <MenuItem ID="Enable.Appl" Text="Appl" />
+        <MenuItem ID="Enable.MtrlSupp" Text="MtrlSupp" />
+      </MenuItem>
+      <MenuItem ID="IdleBrush" Text="IdleBrush" />
+      <MenuItem ID="Test" Text="测试" />
+    </Menu>
+    <Menu ID="menuTpuWndFileBrowser">
+      <MenuItem ID="Select" Text="选择" />
+      <MenuItem ID="Delete" Text="删除" />
+    </Menu>
+    <Menu ID="menuTpuWndBrushFactors">
+      <MenuItem ID="Factor.Decrease1" Text="-1%" />
+      <MenuItem ID="Factor.Increase1" Text="+1%" />
+      <MenuItem ID="Factor.Decrease10" Text="-10%" />
+      <MenuItem ID="Factor.Increase10" Text="+10%" />
+      <MenuItem ID="Factor.Hundred" Text="100%" />
+    </Menu>
+    <Menu ID="menuTpuWndIpsIdrive">
+      <MenuItem ID="MacId" Text="Mac Id" />
+    </Menu>
+  </Menus>
+  <Strings>
+    <String ID="IPS" Text="IPS" />
+    <String ID="MAC" Text="MAC" />
+    <String ID="Type" Text="类型" />
+    <String ID="State" Text="状态" />
+    <String ID="Name" Text="名称" />
+    <String ID="MacId" Text="Mac Id" />
+    <String ID="Serial" Text="序列" />
+    <String ID="FailedToSetMacId" Text="设置MacId失败" />
+    <String ID="ici.ips.CalibrationState.Calibrating" Text="校准中" />
+    <String ID="ici.ips.CalibrationState.Error" Text="错误" />
+    <String ID="ici.ips.CalibrationState.Success" Text="成功" />
+    <String ID="ici.ips.CalibrationState.Unknown" Text="未知" />
+    <String ID="ThisWillCalibrateAreYouSure" Text="将用’{1}‘校准’{0}'.你确定？" />
+    <String ID="Device" Text="设备" />
+    <String ID="Parameter" Text="参数" />
+    <String ID="Channel" Text="通道" />
+    <String ID="Value" Text="值" />
+    <String ID="Unit" Text="单元" />
+    <String ID="GlobalParameters" Text="全局参数" />
+    <String ID="ParameterIsReadOnly" Text="参数是只读的！" />
+    <String ID="ApplyingParameters" Text="应用参数..." />
+    <String ID="ParametersAppliedSucessfully" Text="应用成功" />
+    <String ID="ApplyingParametersFailed" Text="一个或多个参数应用失败！" />
+    <String ID="UnknownDeviceFoundInLine" Text="未知设备:'{0}'在line{1}中发现！" />
+    <String ID="UnknownParameterFoundInLine" Text="未知参数：'{0}'在line{1}中发现！" />
+    <String ID="SyntaxErrorFoundInLine" Text="语法错误：'{0}'在line{1}中发现！" />
+    <String ID="SavingParameters" Text="保存参数" />
+    <String ID="ParametersSaved" Text="参数已保存" />
+    <String ID="SavingParametersFailed" Text="保存参数失败！" />
+    <String ID="ParametersModifiedSaveChanges" Text="一个或多个参数已更改.保存更改？" />
+    <String ID="State" Text="状态" />
+    <String ID="Hash" Text="#" />
+    <String ID="Range" Text="范围：{0}..{1}{2}" />
+    <String ID="IdleBrush" Text="IdleBrush:{0}" />
+    <String ID="AppliedSucessfully" Text="'{0}'成功应用" />
+    <String ID="OpenTable" Text="打开表：" />
+    <String ID="DeleteTable" Text="删除表：" />
+    <String ID="FailedToApply" Text="应用'{0}'失败！" />
+    <String ID="Saved" Text="'{0}'已保存" />
+    <String ID="SavingFailed" Text="'{0}'保存失败！" />
+    <String ID="BrushesModifiedSaveChanges" Text="一个或多个刷子已被更改.保存更改？" />
+    <String ID="InvalidTableName" Text="无效的名称'{0}'.必须是'Table+number'" />
+    <String ID="AreYouSureYouWantToDelete" Text="你确定想要删除'{0}'?" />
+    <String ID="Curve" Text="曲线：" />
+    <String ID="Calibrated" Text="已校准" />
+    <String ID="Dynamic" Text="动态的" />
+    <String ID="AdapterName" Text="适配器：{0}" />
+    <String ID="NewSettingsSaved" Text="下次启动新的设置将生效！" />
+    <String ID="NewSettingsFailed" Text="保存设置失败！" />
+    <String ID="AdapterSettingsModifiedSaveChanges" Text="适配器设置已更改.保存更改？" />
+    <String ID="CheckingIPS" Text="检查IPS..." />
+    <String ID="CheckingIPS_ErrorDetailsNoPIB" Text="没有发现PIB！" />
+    <String ID="CheckingIPS_ErrorDetailsNoIPS" Text="没有发现IPS！" />
+    <String ID="CheckingIPS_ErrorDetailsProtocol" Text="错误的IPS版本！发现IPS v.{0},协议 v.{1}在结点{2}上.期望协议 v.{3}或更高.为解决此问题，请升级IPS" />
+    <String ID="CheckingIPS_ErrorDetailsConfigFailed" Text="{0}文件失败当加载IPS配置时！" />
+    <String ID="CheckingIPS_ErrorDetailsConfigFailedStateNull" Text="结点{0}状态无效" />
+    <String ID="CheckingIPS_ErrorDetailsConfigFailedNode" Text="{0}文件失败当在node{1}上加载IPS配置时！" />
+    <String ID="PIB" Text="PIB" />
+    <String ID="Ready" Text="准备" />
+    <String ID="Locked" Text="锁定的" />
+    <String ID="Disabled" Text="禁用的" />
+    <String ID="Disconnected" Text="断开的" />
+    <String ID="StoppedByChild" Text="StoppedByChild" />
+    <String ID="StoppedByAlarm" Text="StoppedByAlarm" />
+    <String ID="Offline" Text="离线" />
+    <String ID="Unknown" Text="未知" />
+    <String ID="Success" Text="成功" />
+    <String ID="Failed" Text="失败！" />
+    <String ID="CollectingFiles" Text="从IPS结点上收集文件-&gt;PIB..." />
+    <String ID="DistributingFiles" Text="从PIB上分配文件-&gt;IPS结点..." />
+    <String ID="OperationInProgress" Text="进程中操作" />
+    <String ID="CalibrationSucceeded" Text="校准成功" />
+    <String ID="ApplNotEnable" Text="雾化器未使能" />
+    <String ID="CalibFailed" Text="校准失败，A1Atom != A1AtomRS" />
+    <String ID="ApplNotFound" Text="未发现选择的雾化器" />
+    <String ID="UnknownCommand" Text="未知命令" />
+    <String ID="CalibrationStarted" Text="校准开始" />
+    <String ID="OK" Text="好" />
+  </Strings>
+</Resources>

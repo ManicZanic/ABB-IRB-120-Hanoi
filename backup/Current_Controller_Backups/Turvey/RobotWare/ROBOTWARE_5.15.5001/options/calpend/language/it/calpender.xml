@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Resource Name="CALPEND" Language="it">
+  <Text Name="100">
+    <Value>Errore durante la lettura dal dispositivo</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="101">
+    <Value>Sensore A non collegato correttamente</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="102">
+    <Value>Indirizzo del sensore A errato</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="103">
+    <Value>Sensore B non collegato correttamente</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="104">
+    <Value>Indirizzo del sensore B errato</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="105">
+    <Value>Nessun contatto con l'unità</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="106">
+    <Value>Errore imprevisto.</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="107">
+    <Value>Configurazione COM2 non corretta.</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="108">
+    <Value>Timeout ! Non è stata eseguita la scansione di alcun codice a barre.</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="109">
+    <Value>Errore di lettura del codice a barre, interruzione.</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="110">
+    <Value>Errore restituito dalla funzione</Value>
+    <Comment>
+    </Comment>
+  </Text>
+</Resource>

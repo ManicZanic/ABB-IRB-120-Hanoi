@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- File: cirsys_cfgrules.xml -->
+<!--  -->
+<!-- Purpose:  This is the CFG rules for cir related SYS types -->
+<!--  -->
+<!-- Reference:  "Configuration Rules Writer's Guide.doc" -->
+<Domain xmlns="urn:abb-robotics-cfg-rules" cfgName="SYS" resourceID="SYS001" cfgRulesVersion="1.1">
+	<!-- ********************* -->
+	<!-- CAB_TASKS -->
+	<!-- ********************* -->
+	<Type cfgName="CAB_TASKS" resourceID="SYS100" addRemoveInstances="false" instanceVisibility="showAll">
+		<Parameter cfgName="Name" userInput="cfgDefaultNotOk" resourceID="SYS100" parameterType="typeStringRAPID" modifyOptions="modRestartWarm"> </Parameter>
+		
+		<Parameter cfgName="Task_in_forground" userInput="cfgDefaultOk" resourceID="SYS103" parameterType="typeStringRAPID" modifyOptions="modRestartWarm">
+			<LookupParameterValue domainCfgName="SYS" typeCfgName="CAB_TASKS" parameterCfgName="Name" userEdit="true" />
+		</Parameter>
+		<Parameter cfgName="Type" userInput="cfgDefaultOk" resourceID="SYS104" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="SYS105">NORMAL</CfgValue>
+				<CfgValue resourceID="SYS106">STATIC</CfgValue>
+				<CfgValue resourceID="SYS107">SEMISTATIC</CfgValue>
+			</ListValue>
+		</Parameter>
+		<Parameter cfgName="Entry" userInput="cfgDefaultOk" resourceID="SYS108" parameterType="typeStringRAPID" modifyOptions="modRestartWarm"></Parameter>
+		<Parameter cfgName="BindRef" userInput="cfgDefaultOk" resourceID="SYS109" parameterType="typeInteger" modifyOptions="modRestartWarm"></Parameter>
+		
+		<!--<Parameter cfgName="BindRef" userInput="cfgDefaultOk" resourceID="SYS109" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="SYS110">TRUE</CfgValue>
+				<CfgValue resourceID="SYS111">FALSE</CfgValue>
+			</ListValue>
+		</Parameter> -->
+		<Parameter cfgName="TrustLevel" userInput="cfgDefaultOk" resourceID="SYS112" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+			
+			<ListValue userEdit="false">
+				<CfgValue resourceID="SYS113">SysFail</CfgValue>
+				<CfgValue resourceID="SYS114">SysHalt</CfgValue>
+				<CfgValue resourceID="SYS115">SysStop</CfgValue>
+				<CfgValue resourceID="SYS116">None</CfgValue>
+			</ListValue>
+			<DisplayFilter parameterCfgName="Type" operandCfgValue="NORMAL" operand="valNotEqual" />
+		</Parameter>
+		<Parameter cfgName="MotionTask" userInput="cfgDefaultOk" resourceID="SYS117" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="SYS110">TRUE</CfgValue>
+				<CfgValue resourceID="SYS111">FALSE</CfgValue>
+			</ListValue>
+		</Parameter>
+		<Parameter cfgName="UseMechanicalUnitGroup" userInput="cfgDefaultOk" resourceID="SYS120" parameterType="typeStringRAPID" modifyOptions="modRestartWarm">
+			<LookupParameterValue domainCfgName="SYS" typeCfgName="MECHANICAL_UNIT_GROUP" parameterCfgName="Name" userEdit="false" />
+		</Parameter>
+    <Parameter cfgName="RmqType" userInput="cfgDefaultOk" resourceID="SYS122" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+      <ListValue userEdit="false">
+        <CfgValue resourceID="SYS123">None</CfgValue>
+        <CfgValue resourceID="SYS124">Internal</CfgValue>
+        <CfgValue resourceID="SYS125">Remote</CfgValue>
+      </ListValue>
+    </Parameter>
+    <Parameter cfgName="RmqMode" userInput="cfgDefaultOk" resourceID="SYS126" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+      <ListValue userEdit="false">
+        <CfgValue resourceID="SYS127">Interrupt</CfgValue>
+        <CfgValue resourceID="SYS128">Synchronous</CfgValue>
+      </ListValue>
+    </Parameter>
+	</Type>
+</Domain>

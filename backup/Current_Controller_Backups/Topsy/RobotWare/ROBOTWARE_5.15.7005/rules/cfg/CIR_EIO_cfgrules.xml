@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- File: cir_eio_cfgrules.xml -->
+<!--  -->
+<!-- Purpose:  This is the CFG rules for cir related EIO types -->
+<!--  -->
+<!-- Reference:  "Configuration Rules Writer's Guide.doc" -->
+<Domain xmlns="urn:abb-robotics-cfg-rules" cfgName="EIO" resourceID="EIO501" cfgRulesVersion="1.3" helpID="HLP_CIREIO_001">
+
+    <!-- **************** -->
+    <!-- SIG_IN_PARAMETER -->
+    <!-- **************** -->
+    <Type cfgName="SYSSIG_IN" resourceID="EIO502" addRemoveInstances="true" instanceVisibility="showAll" helpID="HLP_CIREIO_002">
+        <Parameter cfgName="Signal" userInput="cfgDefaultOk" resourceID="EIO503" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" helpID="HLP_CIREIO_003">
+            <LookupParameterValue domainCfgName="EIO" typeCfgName="EIO_SIGNAL" parameterCfgName="Name" userEdit="true">
+                <ParamValueFilterGroup condition="valAnd">
+                    <ConditionFilter parameterCfgName="SignalType" operandCfgValue="DI" operand="valEqual" />
+                    <ConditionFilter parameterCfgName="Category" operandCfgValue="safety" operand="valNotEqual" />
+                </ParamValueFilterGroup>
+            </LookupParameterValue>
+        </Parameter>
+
+        <Parameter cfgName="Action" userInput="cfgDefaultOk" resourceID="EIO504" parameterType="typeStringNormal" modifyOptions="modRestartWarm" helpID="HLP_CIREIO_004">
+            <ListValue userEdit="false">
+                <CfgValue resourceID="EIO505">MotorOn</CfgValue>
+                <CfgValue resourceID="EIO506">MotorOff</CfgValue>
+                <CfgValue resourceID="EIO507">Start</CfgValue>
+                <CfgValue resourceID="EIO508">StartMain</CfgValue>
+                <CfgValue resourceID="EIO509">Stop</CfgValue>
+                <CfgValue resourceID="EIO519">QuickStop</CfgValue>
+                <CfgValue resourceID="EIO520">SoftStop</CfgValue>
+                <CfgValue resourceID="EIO510">StopCycle</CfgValue>
+                <CfgValue resourceID="EIO511">Interrupt</CfgValue>
+                <CfgValue resourceID="EIO512">LoadStart</CfgValue>
+                <CfgValue resourceID="EIO513">ResetEstop</CfgValue>
+                <CfgValue resourceID="EIO514">ResetError</CfgValue>
+                <CfgValue resourceID="EIO515">MotOnStart</CfgValue>
+                <CfgValue resourceID="EIO516">StopInstr</CfgValue>
+                <CfgValue resourceID="EIO517">SysReset</CfgValue>
+                <CfgValue resourceID="EIO548">Load</CfgValue>
+                <CfgValue resourceID="EIO549">Backup</CfgValue>
+                <CfgValue resourceID="EIO562">SimMode</CfgValue>
+                <CfgValue resourceID="EIO564">DisableBackup</CfgValue>
+                <CfgValue resourceID="EIO565">LimitSpeed</CfgValue>
+            </ListValue>
+        </Parameter>
+
+        <Parameter cfgName="Arg1" userInput="cfgDefaultNotOk" resourceID="EIO545" parameterType="typeStringNormal" modifyOptions="modRestartWarm" helpID="HLP_CIR_EIO_005">
+            <ListValue userEdit="false">
+                <CfgValue resourceID="EIO542">CONT</CfgValue>
+                <CfgValue resourceID="EIO543">CYCLE</CfgValue>
+                <ListValueFilterGroup condition="valOr">
+                    <ConditionFilter parameterCfgName="Action" operand="valEqual" operandCfgValue="MotOnStart" />
+                    <ConditionFilter parameterCfgName="Action" operand="valEqual" operandCfgValue="Start" />
+                    <ConditionFilter parameterCfgName="Action" operand="valEqual" operandCfgValue="StartMain" />
+                </ListValueFilterGroup>
+            </ListValue>
+            <ListValue userEdit="false">
+                <CfgValue resourceID="EIO548">LOAD</CfgValue>
+                <ListValueFilterGroup condition="valOr">
+                    <ConditionFilter parameterCfgName="Action" operand="valEqual" operandCfgValue="SimMode" />
+                </ListValueFilterGroup>
+            </ListValue>
+            <!-- Only theese actions shall have arg1 -->
+            <DisplayFilterGroup condition="valOr">
+                <ConditionFilter parameterCfgName="Action" operand="valEqual" operandCfgValue="MotOnStart" />
+                <ConditionFilter parameterCfgName="Action" operand="valEqual" operandCfgValue="Start" />
+                <ConditionFilter parameterCfgName="Action" operand="valEqual" operandCfgValue="StartMain" />
+                <ConditionFilter parameterCfgName="Action" operand="valEqual" operandCfgValue="Interrupt" />
+                <ConditionFilter parameterCfgName="Action" operand="valEqual" operandCfgValue="LoadStart" />
+                <ConditionFilter parameterCfgName="Action" operand="valEqual" operandCfgValue="Load" />
+                <ConditionFilter parameterCfgName="Action" operand="valEqual" operandCfgValue="Backup" />
+                <ConditionFilter parameterCfgName="Action" operand="valEqual" operandCfgValue="SimMode" />
+            </DisplayFilterGroup>
+        </Parameter>
+
+        <Parameter cfgName="Arg2" userInput="cfgDefaultNotOk" resourceID="EIO546" parameterType="typeStringNormal" modifyOptions="modRestartWarm" helpID="HLP_CIR_EIO_005">
+            <LookupParameterValue domainCfgName="SYS" typeCfgName="CAB_TASKS" parameterCfgName="Name" userEdit="true" />
+            <!-- Only theese actions shall have arg2 -->
+            <DisplayFilterGroup condition="valOr">
+                <ConditionFilter parameterCfgName="Action" operand="valEqual" operandCfgValue="Interrupt" />
+                <ConditionFilter parameterCfgName="Action" operand="valEqual" operandCfgValue="LoadStart" />
+                <ConditionFilter parameterCfgName="Action" operand="valEqual" operandCfgValue="Load" />
+            </DisplayFilterGroup>
+        </Parameter>
+
+        <Parameter cfgName="Arg3" userInput="cfgDefaultNotOk" resourceID="EIO554" parameterType="typeStringNormal" modifyOptions="modRestartWarm" helpID="HLP_CIR_EIO_005">		
+            <!-- Only theese actions shall have arg3 -->
+            <DisplayFilterGroup condition="valOr">
+                <ConditionFilter parameterCfgName="Action" operand="valEqual" operandCfgValue="Backup" />
+            </DisplayFilterGroup>
+        </Parameter>
+
+        <Parameter cfgName="Arg4" userInput="cfgDefaultNotOk" resourceID="EIO555" parameterType="typeInteger" modifyOptions="modRestartWarm" helpID="HLP_CIR_EIO_005">
+            <ListValue userEdit="false">
+                <CfgValue resourceID="EIO556">1</CfgValue>
+                <CfgValue resourceID="EIO557">0</CfgValue>
+                <ListValueFilterGroup condition="valOr">
+                    <ConditionFilter parameterCfgName="Action" operand="valEqual" operandCfgValue="Backup" />
+                </ListValueFilterGroup>
+            </ListValue>
+            <!-- Only theese actions shall have arg4 -->
+            <DisplayFilterGroup condition="valOr">
+                <ConditionFilter parameterCfgName="Action" operand="valEqual" operandCfgValue="Backup" />
+            </DisplayFilterGroup>
+        </Parameter>
+
+        <Parameter cfgName="Arg5" userInput="cfgDefaultNotOk" resourceID="EIO559" parameterType="typeInteger" modifyOptions="modRestartWarm" helpID="HLP_CIR_EIO_005">
+            <ListValue userEdit="false">
+                <CfgValue resourceID="EIO560">1</CfgValue>
+                <CfgValue resourceID="EIO561">0</CfgValue>
+                <ListValueFilterGroup condition="valOr">
+                    <ConditionFilter parameterCfgName="Action" operand="valEqual" operandCfgValue="Backup" />
+                </ListValueFilterGroup>
+            </ListValue>
+            <!-- Only theese actions shall have arg5 -->
+            <DisplayFilterGroup condition="valOr">
+                <ConditionFilter parameterCfgName="Action" operand="valEqual" operandCfgValue="Backup" />
+            </DisplayFilterGroup>
+        </Parameter>
+
+        <Parameter cfgName="Arg6" userInput="cfgDefaultNotOk" resourceID="EIO566" parameterType="typeStringNormal" modifyOptions="modRestartWarm" helpID="HLP_CIR_EIO_005">
+            <LookupParameterValue domainCfgName="MOC" typeCfgName="ROBOT" parameterCfgName="Name" userEdit="true" />
+            <!-- Only theese actions shall have arg6 -->
+            <DisplayFilterGroup condition="valOr">
+                <ConditionFilter parameterCfgName="Action" operand="valEqual" operandCfgValue="LimitSpeed" />
+            </DisplayFilterGroup>
+        </Parameter>
+    </Type>
+
+    <!-- ***************** -->
+    <!-- SIG_OUT_parameter -->
+    <!-- ***************** -->
+    <Type cfgName="SYSSIG_OUT" resourceID="EIO522" addRemoveInstances="true" instanceVisibility="showAll" helpID="HLP_CIREIO_006">
+
+        <Parameter cfgName="Signal" userInput="cfgDefaultOk" resourceID="EIO523" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" helpID="HLP_CIREIO_007">
+            <LookupParameterValue domainCfgName="EIO" typeCfgName="EIO_SIGNAL" parameterCfgName="Name" userEdit="true">
+                <ParamValueFilterGroup condition="valAnd">
+                    <ConditionFilter parameterCfgName="Category" operandCfgValue="safety" operand="valNotEqual" />
+                    <ConditionFilterGroup condition="valOr">
+                        <ConditionFilter parameterCfgName="SignalType" operandCfgValue="AO" operand="valEqual" />
+                        <ConditionFilter parameterCfgName="SignalType" operandCfgValue="DO" operand="valEqual" />
+                    </ConditionFilterGroup>
+                </ParamValueFilterGroup>
+            </LookupParameterValue>
+        </Parameter>
+
+        <Parameter cfgName="Status" userInput="cfgDefaultOk" resourceID="EIO524" parameterType="typeStringNormal" modifyOptions="modRestartWarm" helpID="HLP_CIREIO_008">
+            <ListValue userEdit="false">
+                <CfgValue resourceID="EIO525">MotorOn</CfgValue>
+                <CfgValue resourceID="EIO526">MotorOff</CfgValue>
+                <CfgValue resourceID="EIO527">CycleOn</CfgValue>
+                <CfgValue resourceID="EIO528">EmStop</CfgValue>
+                <CfgValue resourceID="EIO529">AutoOn</CfgValue>
+                <CfgValue resourceID="EIO530">RunchOk</CfgValue>
+                <CfgValue resourceID="EIO531">TCPSpeed</CfgValue>
+                <CfgValue resourceID="EIO532">Error</CfgValue>
+                <CfgValue resourceID="EIO533">MotOnState</CfgValue>
+                <CfgValue resourceID="EIO534">MotOffState</CfgValue>
+                <CfgValue resourceID="EIO535">PFError</CfgValue>
+                <CfgValue resourceID="EIO536">MotSupTrigg</CfgValue>
+                <CfgValue resourceID="EIO537">MotSupOn</CfgValue>
+                <CfgValue resourceID="EIO538">RegainDistError</CfgValue>
+                <CfgValue resourceID="EIO539">TCPSpeedRef</CfgValue>
+                <CfgValue resourceID="EIO540">Blocked I/O</CfgValue>
+                <CfgValue resourceID="EIO544">MechUnit Active</CfgValue>
+                <CfgValue resourceID="EIO547">TaskExecuting</CfgValue>
+                <CfgValue resourceID="EIO550">MechUnitNotMoving</CfgValue>
+                <CfgValue resourceID="EIO551">ProdExecError</CfgValue>
+                <CfgValue resourceID="EIO552">BackupInProgress</CfgValue>
+                <CfgValue resourceID="EIO553">BackupError</CfgValue>
+                <CfgValue resourceID="EIO562">SimMode</CfgValue>
+                <CfgValue resourceID="EIO565">LimitSpeed</CfgValue>
+            </ListValue>
+        </Parameter>
+
+        <Parameter cfgName="Arg1" userInput="cfgDefaultOk" resourceID="EIO541" parameterType="typeStringNormal" modifyOptions="modRestartWarm" helpID="HLP_CIR_EIO_005">
+            <LookupParameterValue domainCfgName="MOC" typeCfgName="ROBOT" parameterCfgName="name" userEdit="true"/>
+            <DisplayFilterGroup condition="valOr">
+                <ConditionFilter parameterCfgName="Status" operand="valEqual" operandCfgValue="TCPSpeed" />
+                <ConditionFilter parameterCfgName="Status" operand="valEqual" operandCfgValue="MotSupOn" />
+                <ConditionFilter parameterCfgName="Status" operand="valEqual" operandCfgValue="TCPSpeedRef" />
+                <ConditionFilter parameterCfgName="Status" operand="valEqual" operandCfgValue="MechUnit Active" />
+                <ConditionFilter parameterCfgName="Status" operand="valEqual" operandCfgValue="RegainDistError" />
+                <ConditionFilter parameterCfgName="Status" operand="valEqual" operandCfgValue="MotSupTrigg" />
+                <ConditionFilter parameterCfgName="Status" operand="valEqual" operandCfgValue="MechUnitNotMoving" />
+                <ConditionFilter parameterCfgName="Status" operand="valEqual" operandCfgValue="LimitSpeed" />
+            </DisplayFilterGroup>
+        </Parameter>
+
+        <Parameter cfgName="Arg2" userInput="cfgDefaultOk" resourceID="EIO541" parameterType="typeStringNormal" modifyOptions="modRestartWarm" helpID="HLP_CIR_EIO_005">
+            <LookupParameterValue domainCfgName="SYS" typeCfgName="CAB_TASKS" parameterCfgName="Name" userEdit="true"/>
+            <DisplayFilterGroup condition="valOr">
+                <ConditionFilter parameterCfgName="Status" operand="valEqual" operandCfgValue="TaskExecuting" />
+                <ConditionFilter parameterCfgName="Status" operand="valEqual" operandCfgValue="Error" />
+            </DisplayFilterGroup>
+        </Parameter>
+
+        <Parameter cfgName="Arg3" userInput="cfgDefaultNotOk" resourceID="EIO563" parameterType="typeStringNormal" modifyOptions="modRestartWarm" helpID="HLP_CIR_EIO_005">
+            <ListValue userEdit="false">
+                <CfgValue resourceID="EIO548">LOAD</CfgValue>
+                <ListValueFilterGroup condition="valOr">
+                    <ConditionFilter parameterCfgName="Status" operand="valEqual" operandCfgValue="SimMode" />
+                </ListValueFilterGroup>
+            </ListValue>
+            <!-- Only theese actions shall have arg3 -->
+            <DisplayFilterGroup condition="valOr">
+                <ConditionFilter parameterCfgName="Status" operand="valEqual" operandCfgValue="SimMode" />
+            </DisplayFilterGroup>
+        </Parameter>
+
+        <Parameter cfgName="Arg4" userInput="cfgDefaultOk" resourceID="EIO555" parameterType="typeInteger" modifyOptions="modRestartWarm" helpID="HLP_CIR_EIO_005">
+            <!-- Arg4 has default value 250 -->
+            <!-- Only theese actions shall have arg4 -->
+            <DisplayFilterGroup condition="valOr">
+                <ConditionFilter parameterCfgName="Status" operand="valEqual" operandCfgValue="LimitSpeed" />
+            </DisplayFilterGroup>
+        </Parameter>
+
+    </Type>
+</Domain>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.TPU.Screens.Jogging">
+  <Forms>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Jogging.TpuWndJogging" Text="操作" Width="320" Height="192">
+      <Controls>
+        <Control ID="lblStep" Text="步骤：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="3" Top="134" Width="53" Height="20" />
+        <Control ID="lblWObj" Text="工件:" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="3" Top="108" Width="53" Height="20" />
+        <Control ID="lblTool" Text="工具:" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="3" Top="82" Width="53" Height="20" />
+        <Control ID="lblMode" Text="模式:" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="3" Top="30" Width="53" Height="20" />
+        <Control ID="lblFrame" Text="框架：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="3" Top="56" Width="53" Height="20" />
+        <Control ID="lblUnit" Text="单元：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="3" Top="4" Width="53" Height="20" />
+      </Controls>
+      <Menu ref="menuJogging" />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Jogging.TpuWndCalibrateJoystick" Text="操纵杆" Width="320" Height="192">
+      <Menu ref="menuJoystickCalibration" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Jogging.TpuPopupAlign" Text="" Width="194" Height="154">
+      <Controls>
+        <Control ID="lblDescription" Text="按背后手柄来使能马达然后操作操纵杆控制方向直到机器人对齐" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="6" Top="55" Width="203" Height="82" />
+        <Control ID="lblCurrentTool" Text="当前工具：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="6" Top="3" Width="203" Height="20" />
+        <Control ID="lblFrame" Text="框架：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="6" Top="29" Width="53" Height="20" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Jogging.TpuPopupJogging" Text="" Width="320" Height="112">
+      <Controls>
+        <Control ID="lblTool" Text="工具：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="4" Top="67" Width="49" Height="18" />
+        <Control ID="lblFrame" Text="框架：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="4" Top="45" Width="50" Height="18" />
+        <Control ID="lblMode" Text="模式：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="3" Top="23" Width="50" Height="18" />
+        <Control ID="lblWObj" Text="工件：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="3" Top="89" Width="50" Height="18" />
+        <Control ID="lblUnit" Text="单元：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="3" Top="1" Width="50" Height="18" />
+      </Controls>
+    </Form>
+  </Forms>
+  <Menus>
+    <Menu ID="menuJoystickCalibration">
+      <MenuItem ID="Next" CommandId="0" Text="下一个：" />
+      <MenuItem ID="Abort" CommandId="0" Text="放弃：" />
+    </Menu>
+    <Menu ID="menuJogging">
+      <MenuItem ID="Align" Text="对齐" />
+    </Menu>
+  </Menus>
+  <Strings>
+    <String ID="Linear" Text="线性" />
+    <String ID="Reorient" Text="重定向" />
+    <String ID="Axis1-3" Text="轴1...3" />
+    <String ID="Axis4-6" Text="轴4...6" />
+    <String ID="Axis7-9" Text="轴7...9" />
+    <String ID="Axis10-12" Text="轴10..12" />
+    <String ID="Calibration.Limits" Text="&lt;h1&gt;校准极限&lt;/h1&gt;&lt;p&gt;移动所有的操纵杆到极限位置来评估工作范围.当所有轴都到达两边极限时按下一个.&lt;/p&gt;" />
+    <String ID="Calibration.ZeroPoint" Text="&lt;h1&gt;校准零位&lt;/h1&gt;&lt;p&gt;移动所有操纵杆到中位&lt;Zero&gt;.按下一个当所有的轴都位于零位时.&lt;/p&gt;" />
+    <String ID="Calibration.Finished" Text="&lt;h1&gt;校准结束&lt;/h1&gt;&lt;p&gt;操纵杆校准完成.按下一个来退出校准进程.&lt;/p&gt;" />
+    <String ID="SaveChanges" Text="操纵杆校准数据已更新. 保存更改吗？" />
+    <String ID="CurrentTool" Text="当然工具:{0}" />
+  </Strings>
+</Resources>

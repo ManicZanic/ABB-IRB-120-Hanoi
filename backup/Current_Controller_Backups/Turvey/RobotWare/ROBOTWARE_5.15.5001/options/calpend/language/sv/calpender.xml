@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Resource Name="CALPEND" Language="sv">
+  <Text Name="100">
+    <Value>Fel vid läsning från enhet</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="101">
+    <Value>Givare A felaktigt inkopplad</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="102">
+    <Value>Fel adress för givare A</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="103">
+    <Value>Givare B felaktigt inkopplad</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="104">
+    <Value>Fel adress för givare B</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="105">
+    <Value>Ingen kontakt med enhet</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="106">
+    <Value>Oväntat fel!</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="107">
+    <Value>Felaktig COM2-inställning.</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="108">
+    <Value>Timeout! Ingen streckkod har skannats.</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="109">
+    <Value>Fel vid läsning av streckkod, avslutar.</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="110">
+    <Value>Fel returnerat av funktion</Value>
+    <Comment>
+    </Comment>
+  </Text>
+</Resource>

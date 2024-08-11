@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Resource Name="MOTCOM" Language="pl">
+  <Text Name="100">
+    <Value>Procedura serwisowa komutacji silnika</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="101">
+    <Value>Tryb komutacji zostal wylaczony</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="102">
+    <Value>Kontynuuj</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="103">
+    <Value>„Czy chcesz komutowac kolejna os?”</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="104">
+    <Value>„Aktywuj urzadzenie w oknie impulsowania”</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="105">
+    <Value>Ostrzezenie</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="106">
+    <Value>Tryb komutacji dla urzadzenia mechanicznego.</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="107">
+    <Value>nie bedzie aktywowany i zostana zwolnione hamulce.</Value>
+    <Comment>Maximum length 55 chars. Part two of sentence starting with item 106</Comment>
+  </Text>
+  <Text Name="108">
+    <Value>Nalezy uwazac na niekontrolowane ruchy osi.</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="109">
+    <Value>Z tego zadania nie mozna wybrac urzadzen mechanicznych</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="110">
+    <Value>Wybierz os</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="111">
+    <Value>Wprowadz numer osi do komutacji</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="112">
+    <Value>Nacisnij OK, aby zastosowac biezace do silnika</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="113">
+    <Value>w celu przesuniecia go do pozycji komutacji.</Value>
+    <Comment>Maximum length 55 chars. Part two of sentence starting with item 112</Comment>
+  </Text>
+  <Text Name="114">
+    <Value>Przesun do pozycji komutacji</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="115">
+    <Value>Biezacy kat przelicznika: </Value>
+    <Comment>Maximum length 55 chars. Numerical value will be appended</Comment>
+  </Text>
+  <Text Name="116">
+    <Value>Nacisnij Kom, aby komutowac lub Krok, aby przesunac silnik stopniowo</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="117">
+    <Value>Komutacja lub krok</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="118">
+    <Value>Komutacja</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="119">
+    <Value>„Nacisnij OK, aby komutowac silnik”</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="120">
+    <Value>Komutacja silnika zostala zakonczona</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="121">
+    <Value>Pozycja silnika krokowego</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="122">
+    <Value>„Nacisnij Krok- lub Krok+, aby przesunac silnik”</Value>
+    <Comment>Maximum length 55 chars. Do not translate Step+ and Step-.</Comment>
+  </Text>
+  <Text Name="123">
+    <Value>Zresetuj tryb komutacji</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="124">
+    <Value>Czy chcesz opuscic tryb komutacji?</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="125">
+    <Value>Tryb komutacji zostal wylaczony</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="126">
+    <Value>„Wybierz urzadzenie mechaniczne”</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="127">
+    <Value>„System musi pracowac w trybie recznym”</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="128">
+    <Value>Procedura serwisowa pomoze w komutacji silników.</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="129">
+    <Value>Przed kontynuowaniem nalezy przeczytac dokumentacje.</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="130">
+    <Value>Resetuj</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="131">
+    <Value>OK</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="132">
+    <Value>Anuluj</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="133">
+    <Value>Kom</Value>
+    <Comment>Maximum length 7 chars. Short name for Commutation</Comment>
+  </Text>
+  <Text Name="134">
+    <Value>Krok</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="135">
+    <Value>Krok-</Value>
+    <Comment>Maximum length 7 chars. Step with minus sign.</Comment>
+  </Text>
+  <Text Name="136">
+    <Value>Krok+</Value>
+    <Comment>Maximum length 7 chars. Step with plus sign.</Comment>
+  </Text>
+  <Text Name="137">
+    <Value>Tak</Value>
+    <Comment>Maximum length 7 chars.</Comment>
+  </Text>
+  <Text Name="138">
+    <Value>Nie</Value>
+    <Comment>Maximum length 7 chars.</Comment>
+  </Text>
+  <Text Name="139">
+    <Value>Aktywuj urzadzenie mechaniczne</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="140">
+    <Value>Nacisnij Dzialaj, aby aktywowac urzadzenie mechaniczne.</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="141">
+    <Value>Dzialaj</Value>
+    <Comment>Maximum length 7 chars.</Comment>
+  </Text>
+</Resource>

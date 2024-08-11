@@ -1,0 +1,1488 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+******************************************************************************
+*
+* EIO_rules.xml - EIO CFG Rules XML Definition File
+*
+* $Revision: 1.25 $
+*
+* DESCRIPTION:
+*   This file contains the XML rules definition for the I/O system.
+*
+* Copyright (c) ABB Automation Technology Products AB 2002 All rights reserved
+*
+******************************************************************************
+-->
+<Domain xmlns="urn:abb-robotics-cfg-rules" cfgName="EIO" resourceID="EIO_EIO" cfgRulesVersion="1.3">
+
+	<!--===============================================-->
+	<!--===  EIO_BUS                                ===-->
+	<!--===============================================-->
+	<Type cfgName="EIO_BUS" addRemoveInstances="true" instanceVisibility="showAll" resourceID="EIO_EIO_BUS">
+
+		<!--===  EIO_BUS, Name  ===-->
+		<Parameter cfgName="Name" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_Name">
+		</Parameter>
+
+		<!--===  EIO_BUS, BusType  ===-->
+		<Parameter cfgName="BusType" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_BusType">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_DNET">DNET</CfgValue>
+				<CfgValue resourceID="EIO_SIM">SIM</CfgValue>
+				<CfgValue resourceID="EIO_PBUS">PBUS</CfgValue>
+				<CfgValue resourceID="EIO_IBUS">IBUS</CfgValue>
+				<CfgValue resourceID="EIO_ENIP">ENIP</CfgValue>
+				<CfgValue resourceID="EIO_DNLE">DNLE</CfgValue>
+				<CfgValue resourceID="EIO_PNET">PNET</CfgValue>
+				<CfgValue resourceID="EIO_LOC" userVisibility="valHidden">LOC</CfgValue>
+			</ListValue>
+		</Parameter>
+		
+		<!--===  EIO_BUS, ConnectorID  ===-->		
+		<Parameter cfgName="ConnectorID" userInput="cfgDefaultNotOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_ConnectorID">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_ConnectorID_1">PCI1</CfgValue>
+				<CfgValue resourceID="EIO_ConnectorID_2">PCI2</CfgValue>
+				<CfgValue resourceID="EIO_ConnectorID_6">PCI3</CfgValue>
+				<CfgValue resourceID="EIO_ConnectorID_7">PCI4</CfgValue>
+				<ListValueFilterGroup condition="valOr">
+					<ConditionFilter parameterCfgName="BusType" operandCfgValue="DNET" operand="valEqual" />
+				</ListValueFilterGroup>
+			</ListValue>
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_ConnectorID_4">SIM1</CfgValue>
+				<CfgValue resourceID="EIO_ConnectorID_5">SIM2</CfgValue>
+				<ListValueFilterGroup condition="valOr">
+					<ConditionFilter parameterCfgName="BusType" operandCfgValue="SIM" operand="valEqual" />
+				</ListValueFilterGroup>
+			</ListValue>
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_ConnectorID_4">PCI1</CfgValue>
+				<ListValueFilterGroup condition="valOr">
+					<ConditionFilter parameterCfgName="BusType" operandCfgValue="IBUS" operand="valEqual" />
+				</ListValueFilterGroup>
+			</ListValue>
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_ConnectorID_4">PCI1</CfgValue>
+				<ListValueFilterGroup condition="valOr">
+					<ConditionFilter parameterCfgName="BusType" operandCfgValue="DNLE" operand="valEqual" />
+				</ListValueFilterGroup>
+			</ListValue>
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_ConnectorID_4">PCI1</CfgValue>
+				<CfgValue resourceID="EIO_ConnectorID_3">FA1</CfgValue>
+				<ListValueFilterGroup condition="valOr">
+					<ConditionFilter parameterCfgName="BusType" operandCfgValue="PBUS" operand="valEqual" />
+				</ListValueFilterGroup>
+			</ListValue>
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_ConnectorID_4">LOC1</CfgValue>
+				<ListValueFilterGroup condition="valOr">
+					<ConditionFilter parameterCfgName="BusType" operandCfgValue="LOC" operand="valEqual" />
+				</ListValueFilterGroup>
+			</ListValue>
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_ConnectorID_8">LAN</CfgValue>
+				<CfgValue resourceID="EIO_ConnectorID_9">ETH1</CfgValue>
+				<CfgValue resourceID="EIO_ConnectorID_10">ETH2</CfgValue>
+				<CfgValue resourceID="EIO_ConnectorID_11">ETH3</CfgValue>
+				<CfgValue resourceID="EIO_ConnectorID_12">ETH4</CfgValue>
+				<CfgValue resourceID="EIO_ConnectorID_13">ETH5</CfgValue>
+				<CfgValue resourceID="EIO_ConnectorID_14">ETH6</CfgValue>
+				<CfgValue resourceID="EIO_ConnectorID_3">FA1</CfgValue>
+				<ListValueFilterGroup condition="valOr">
+					<ConditionFilter parameterCfgName="BusType" operandCfgValue="ENIP" operand="valEqual" />
+				</ListValueFilterGroup>
+			</ListValue>
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_ConnectorID_4">PCI1</CfgValue>
+				<CfgValue resourceID="EIO_ConnectorID_8">LAN</CfgValue>
+				<CfgValue resourceID="EIO_ConnectorID_9">ETH1</CfgValue>
+				<CfgValue resourceID="EIO_ConnectorID_10">ETH2</CfgValue>
+				<CfgValue resourceID="EIO_ConnectorID_11">ETH3</CfgValue>
+				<CfgValue resourceID="EIO_ConnectorID_12">ETH4</CfgValue>
+				<CfgValue resourceID="EIO_ConnectorID_13">ETH5</CfgValue>
+				<CfgValue resourceID="EIO_ConnectorID_14">ETH6</CfgValue>
+				<CfgValue resourceID="EIO_ConnectorID_3">FA1</CfgValue>
+				<ListValueFilterGroup condition="valOr">
+					<ConditionFilter parameterCfgName="BusType" operandCfgValue="PNET" operand="valEqual" />
+				</ListValueFilterGroup>
+			</ListValue>
+		</Parameter>
+		
+		<!--===  EIO_BUS, ConnectorLabel  ===-->
+		<Parameter cfgName="ConnectorLabel" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_ConnectorLabel">
+		</Parameter>
+
+		<!--===  EIO_BUS, CfgPath  ===-->
+		<Parameter cfgName="CfgPath" userInput="cfgDefaultOk" parameterType="typeStringFile" modifyOptions="modRestartWarm" resourceID="EIO_CfgPath">
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilterGroup condition="valAnd">
+					<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="PBUS" />
+					<ConditionFilter parameterCfgName="ConnectorID" operand="valNotEqual" operandCfgValue="FA1" />
+				</ConditionFilterGroup>
+				<ConditionFilterGroup condition="valAnd">
+					<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="PNET" />
+					<ConditionFilter parameterCfgName="ConnectorID" operand="valNotEqual" operandCfgValue="FA1" />
+				</ConditionFilterGroup>
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="IBUS" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_BUS, AutomaticBusRestartDisabled  ===-->
+		<Parameter cfgName="AutomaticBusRestartDisabled" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm" resourceID="EIO_AutomaticBusRestartDisabled">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_AutomaticBusRestartDisabled_1">1</CfgValue>
+				<CfgValue resourceID="EIO_AutomaticBusRestartDisabled_0">0</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valNotEqual" operandCfgValue="SIM" />
+				<ConditionFilter parameterCfgName="BusType" operand="valNotEqual" operandCfgValue="ENIP" />
+			</DisplayFilterGroup>
+		</Parameter>
+		
+		<!--===  EIO_BUS, RecoveryTime  ===-->
+		<Parameter cfgName="RecoveryTime" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_RecoveryTime">
+			<DisplayFilter parameterCfgName="BusType" operand="valNotEqual" operandCfgValue="SIM" />
+		</Parameter>
+
+		<!--===  EIO_BUS, DN_MasterAddress  ===-->
+		<Parameter cfgName="DN_MasterAddress" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_DN_MasterAddress">
+			<DisplayFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNET" />
+		</Parameter>
+
+		<!--===  EIO_BUS, DN_BaudRate  ===-->
+		<Parameter cfgName="DN_BaudRate" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_DN_BaudRate">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_125kbps">125</CfgValue>
+				<CfgValue resourceID="EIO_250kbps">250</CfgValue>
+				<CfgValue resourceID="EIO_500kbps">500</CfgValue>
+			</ListValue>
+			<DisplayFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNET" />
+		</Parameter>
+
+		<!--===  EIO_BUS, DL_MasterAddress  ===-->
+		<Parameter cfgName="DL_MasterAddress" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_DL_MasterAddress">
+			<DisplayFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNLE" />
+		</Parameter>
+
+		<!--===  EIO_BUS, DL_AutoConfig  ===-->
+		<Parameter cfgName="DL_AutoConfig" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm" resourceID="EIO_DL_AutoConfig">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_Disabled_0">1</CfgValue>
+				<CfgValue resourceID="EIO_Disabled_1">0</CfgValue>
+			</ListValue>
+			<DisplayFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNLE" />
+		</Parameter>
+
+		<!--===  EIO_BUS, DL_BusScan  ===-->
+		<Parameter cfgName="DL_BusScan" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm" resourceID="EIO_DL_BusScan">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_Disabled_0">1</CfgValue>
+				<CfgValue resourceID="EIO_Disabled_1">0</CfgValue>
+			</ListValue>
+			<DisplayFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNLE" />
+		</Parameter>
+
+		<!--===  EIO_BUS, PN_AutoFirmwareUpgrade  ===-->
+		<Parameter cfgName="PN_AutoFirmwareUpgrade" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm" resourceID="EIO_PN_AutoFirmwareUpgrade">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_Disabled_0">1</CfgValue>
+				<CfgValue resourceID="EIO_Disabled_1">0</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilterGroup condition="valAnd">
+					<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="PNET" />
+					<ConditionFilter parameterCfgName="ConnectorID" operand="valEqual" operandCfgValue="PCI1" />
+				</ConditionFilterGroup>
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_BUS, EN_Address  ===-->
+		<Parameter cfgName="EN_Address" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_EN_BusAddress">
+			<DisplayFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="ENIP" />
+		</Parameter>
+
+		<!--===  EIO_BUS, EN_SubnetMask  ===-->
+		<Parameter cfgName="EN_SubnetMask" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_EN_BusSubnetMask">
+			<DisplayFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="ENIP" />
+		</Parameter>
+
+		<!--===  EIO_BUS, EN_Gateway  ===-->
+		<Parameter cfgName="EN_Gateway" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_EN_BusGateway">
+			<DisplayFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="ENIP" />
+		</Parameter>
+
+		<!--===  EIO_BUS, EN_Destination  ===-->
+		<Parameter cfgName="EN_Destination" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_EN_BusDestination">
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="ENIP" />
+				<ConditionFilter parameterCfgName="ConnectorID" operand="valNotEqual" operandCfgValue="FA1" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+        <!--===  EIO_BUS, EN_PortSpeed  ===-->
+        <Parameter cfgName="EN_PortSpeed" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_EN_PortSpeed">
+            <ListValue userEdit="false">
+                <CfgValue resourceID="EIO_EN_PortSpeed_Auto">Auto</CfgValue>
+                <CfgValue resourceID="EIO_EN_PortSpeed_10">10</CfgValue>
+                <CfgValue resourceID="EIO_EN_PortSpeed_100">100</CfgValue>
+            </ListValue>
+            <DisplayFilterGroup condition="valAnd">
+                <ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="ENIP" />
+                <ConditionFilter parameterCfgName="ConnectorID" operand="valNotEqual" operandCfgValue="FA1" />
+            </DisplayFilterGroup>
+        </Parameter>
+
+		<!--===  EIO_BUS, PN_IPAddress  ===-->
+		<Parameter cfgName="PN_IPAddress" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_PN_IPAddress">
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilterGroup condition="valAnd">
+					<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="PNET" />
+					<ConditionFilter parameterCfgName="ConnectorID" operand="valNotEqual" operandCfgValue="PCI1" />
+					<ConditionFilter parameterCfgName="ConnectorID" operand="valNotEqual" operandCfgValue="FA1" />
+				</ConditionFilterGroup>
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_BUS, PN_SubnetMask  ===-->
+		<Parameter cfgName="PN_SubnetMask" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_PN_SubnetMask">
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilterGroup condition="valAnd">
+					<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="PNET" />
+					<ConditionFilter parameterCfgName="ConnectorID" operand="valNotEqual" operandCfgValue="PCI1" />
+					<ConditionFilter parameterCfgName="ConnectorID" operand="valNotEqual" operandCfgValue="FA1" />
+				</ConditionFilterGroup>
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_BUS, PN_Gateway  ===-->
+		<Parameter cfgName="PN_Gateway" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_PN_Gateway">
+			<ListValue userEdit="true">
+				<CfgValue resourceID="EIO_Not_Used">NotUsed</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilterGroup condition="valAnd">
+					<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="PNET" />
+					<ConditionFilter parameterCfgName="ConnectorID" operand="valNotEqual" operandCfgValue="PCI1" />
+					<ConditionFilter parameterCfgName="ConnectorID" operand="valNotEqual" operandCfgValue="FA1" />
+				</ConditionFilterGroup>
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_BUS, PN_StationName  ===-->
+		<Parameter cfgName="PN_StationName" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_PN_StationName">
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilterGroup condition="valAnd">
+					<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="PNET" />
+					<ConditionFilter parameterCfgName="ConnectorID" operand="valNotEqual" operandCfgValue="PCI1" />
+					<ConditionFilter parameterCfgName="ConnectorID" operand="valNotEqual" operandCfgValue="FA1" />
+				</ConditionFilterGroup>
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_BUS, PN_AutoConfig  ===-->
+		<Parameter cfgName="PN_AutoConfig" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_PN_AutoConfig">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_PN_Deactivated">Deactivated</CfgValue>
+				<CfgValue resourceID="EIO_PN_Bit">Single</CfgValue>
+				<CfgValue resourceID="EIO_PN_Group">Group</CfgValue>
+				<CfgValue resourceID="EIO_PN_OnlyUnits">Units</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilterGroup condition="valAnd">
+					<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="PNET" />
+					<ConditionFilter parameterCfgName="ConnectorID" operand="valNotEqual" operandCfgValue="PCI1" />
+					<ConditionFilter parameterCfgName="ConnectorID" operand="valNotEqual" operandCfgValue="FA1" />
+				</ConditionFilterGroup>
+			</DisplayFilterGroup>
+		</Parameter>
+	</Type>
+
+	<!--===============================================-->
+	<!--===  EIO_UNIT_TYPE                          ===-->
+	<!--===============================================-->
+	<Type cfgName="EIO_UNIT_TYPE" addRemoveInstances="true" instanceVisibility="showAll" resourceID="EIO_EIO_UNIT_TYPE">
+
+		<!--===  EIO_UNIT_TYPE, Name  ===-->
+		<Parameter cfgName="Name" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_Name">
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, BusType  ===-->
+		<Parameter cfgName="BusType" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_BusType">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_DNET">DNET</CfgValue>
+				<CfgValue resourceID="EIO_PBUS">PBUS</CfgValue>
+				<CfgValue resourceID="EIO_IBUS">IBUS</CfgValue>
+				<CfgValue resourceID="EIO_ENIP">ENIP</CfgValue>
+				<CfgValue resourceID="EIO_DNLE">DNLE</CfgValue>
+				<CfgValue resourceID="EIO_PNET">PNET</CfgValue>
+				<CfgValue resourceID="EIO_SIM">SIM</CfgValue>
+				<CfgValue resourceID="EIO_LOC" userVisibility="valHidden">LOC</CfgValue>
+			</ListValue>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, VendorName  ===-->
+		<Parameter cfgName="VendorName" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_VendorName">
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, ProductName  ===-->
+		<Parameter cfgName="ProductName" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_ProductName">
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, InternalSlave  ===-->
+		<Parameter cfgName="InternalSlave" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm" resourceID="EIO_InternalSlave">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_InternalSlave_1">1</CfgValue>
+				<CfgValue resourceID="EIO_InternalSlave_0">0</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNET" />
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="PBUS" />
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="IBUS" />
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="ENIP" />
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="PNET" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, DN_VendorId  ===-->
+		<Parameter cfgName="DN_VendorId" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_DN_VendorId">
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNET" />
+				<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, DN_ProductCode  ===-->
+		<Parameter cfgName="DN_ProductCode" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_DN_ProductCode">
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNET" />
+				<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, DN_DeviceType  ===-->
+		<Parameter cfgName="DN_DeviceType" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_DN_DeviceType">
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNET" />
+				<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, DN_MajorRev  ===-->
+		<Parameter cfgName="DN_MajorRev" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_DN_MajorRev">
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNET" />
+				<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, DN_MinorRev  ===-->
+		<Parameter cfgName="DN_MinorRev" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_DN_MinorRev">
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNET" />
+				<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, DN_ProdInhibitTime  ===-->
+		<Parameter cfgName="DN_ProdInhibitTime" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_DN_ProdInhibitTime">
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNET" />
+				<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, DN_ExplicitMsgEnabled  ===-->
+		<Parameter cfgName="DN_ExplicitMsgEnabled" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm" resourceID="EIO_DN_ExplicitMsgEnabled">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_DN_ExplicitMsgEnabled_1">1</CfgValue>
+				<CfgValue resourceID="EIO_DN_ExplicitMsgEnabled_0">0</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNET" />
+				<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, DN_QuickConnectEnabled  ===-->
+		<Parameter cfgName="DN_QuickConnectEnabled" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm" resourceID="EIO_DN_QuickConnectEnabled">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_DN_QuickConnectEnabled_1">1</CfgValue>
+				<CfgValue resourceID="EIO_DN_QuickConnectEnabled_0">0</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNET" />
+				<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, DN_TriggerPollDisabled  ===-->
+		<Parameter cfgName="DN_TriggerPollDisabled" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm" resourceID="EIO_DN_TriggerPollDisabled">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_DN_TriggerPollDisabled_1">1</CfgValue>
+				<CfgValue resourceID="EIO_DN_TriggerPollDisabled_0">0</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNET" />
+				<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, DN_C1Type  ===-->
+		<Parameter cfgName="DN_C1Type" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_DN_C1Type">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_DN_CxType_Poll">POLLED</CfgValue>
+				<CfgValue resourceID="EIO_DN_CxType_Strobe">STROBE</CfgValue>
+				<CfgValue resourceID="EIO_DN_CxType_COS">COS</CfgValue>
+				<CfgValue resourceID="EIO_DN_CxType_Cyclic">CYCLIC</CfgValue>
+				<CfgValue resourceID="EIO_DN_CxType_COSAckSup">COS_ACKSUP</CfgValue>
+				<CfgValue resourceID="EIO_DN_CxType_CyclicAckSup">CYCLIC_ACKSUP</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNET" />
+				<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, DN_C1Interval  ===-->
+		<Parameter cfgName="DN_C1Interval" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_DN_C1Interval">
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNET" />
+				<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, DN_C1OutputSize  ===-->
+		<Parameter cfgName="DN_C1OutputSize" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_DN_C1OutputSize">
+			<DisplayFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNET" />
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, DN_C1InputSize  ===-->
+		<Parameter cfgName="DN_C1InputSize" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_DN_C1InputSize">
+			<DisplayFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNET" />
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, PB_ProductId  ===-->
+		<Parameter cfgName="PB_ProductId" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_PB_ProductId">
+			<DisplayFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="PBUS" />
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, PB_InputSize  ===-->
+		<Parameter cfgName="PB_InputSize" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_PB_InternalInputSize">
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="PBUS" />
+				<ConditionFilter parameterCfgName="InternalSlave" operand="valNotEqual" operandCfgValue="0" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, PB_OutputSize  ===-->
+		<Parameter cfgName="PB_OutputSize" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_PB_InternalOutputSize">
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="PBUS" />
+				<ConditionFilter parameterCfgName="InternalSlave" operand="valNotEqual" operandCfgValue="0" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, IB_IdCode  ===-->
+		<Parameter cfgName="IB_IdCode" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_IB_IdCode">
+			<DisplayFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="IBUS" />
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, EN_DeviceType  ===-->
+		<Parameter cfgName="EN_DeviceType" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_EN_DeviceType">
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="ENIP" />
+				<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, EN_ProductCode  ===-->
+		<Parameter cfgName="EN_ProductCode" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_EN_ProductCode">
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="ENIP" />
+				<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, EN_VendorId  ===-->
+		<Parameter cfgName="EN_VendorId" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_EN_VendorId">
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="ENIP" />
+				<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, EN_InputConnectionType  ===-->
+		<Parameter cfgName="EN_InputConnectionType" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_EN_InputConnectionType">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_EN_InputConnectionType_Multicast">MULTICAST</CfgValue>
+				<CfgValue resourceID="EIO_EN_InputConnectionType_Point2Point">POINT2POINT</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="ENIP" />
+				<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, EN_ConnectionPriority  ===-->
+		<Parameter cfgName="EN_ConnectionPriority" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_EN_ConnectionPriority">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_EN_ConnectionPriority_Low">LOW</CfgValue>
+				<CfgValue resourceID="EIO_EN_ConnectionPriority_High">HIGH</CfgValue>
+				<CfgValue resourceID="EIO_EN_ConnectionPriority_Schedule">SCHEDULE</CfgValue>
+				<CfgValue resourceID="EIO_EN_ConnectionPriority_Urgent">URGENT</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="ENIP" />
+				<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, EN_RPI  ===-->
+		<Parameter cfgName="EN_RPI" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_EN_RPI">
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="ENIP" />
+				<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, EN_ConfigAssembly  ===-->
+		<Parameter cfgName="EN_ConfigAssembly" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_EN_ConfigAssembly">
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="ENIP" />
+				<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, EN_ConfigSize  ===-->
+		<Parameter cfgName="EN_ConfigSize" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_EN_ConfigSize">
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="ENIP" />
+				<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+				<ConditionFilter parameterCfgName="EN_ConfigAssembly" operand="valNotEqual" operandCfgValue="0" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, EN_OutputAssembly  ===-->
+		<Parameter cfgName="EN_OutputAssembly" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_EN_OutputAssembly">
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="ENIP" />
+				<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, EN_InputAssembly  ===-->
+		<Parameter cfgName="EN_InputAssembly" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_EN_InputAssembly">
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="ENIP" />
+				<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, EN_Ownership  ===-->
+		<Parameter cfgName="EN_Ownership" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_EN_Ownership">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_EN_Ownership_Exclusive">EXCLUSIVE</CfgValue>
+				<CfgValue resourceID="EIO_EN_Ownership_InputOnly">INPUTONLY</CfgValue>
+				<CfgValue resourceID="EIO_EN_Ownership_ListenOnly">LISTENONLY</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="ENIP" />
+				<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, EN_InputSize  ===-->
+		<Parameter cfgName="EN_InputSize" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_EN_InputSize">
+			<DisplayFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="ENIP" />
+		</Parameter>
+
+        <!--===  EIO_UNIT_TYPE, EN_OutputSize  ===-->
+		<Parameter cfgName="EN_OutputSize" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_EN_OutputSize">
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="ENIP" />
+				<ConditionFilter parameterCfgName="EN_Ownership" operand="valNotEqual" operandCfgValue="INPUTONLY" />
+				<ConditionFilter parameterCfgName="EN_Ownership" operand="valNotEqual" operandCfgValue="LISTENONLY" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+        <!--===  EIO_UNIT_TYPE, EN_QuickConnect  ===-->
+        <Parameter cfgName="EN_QuickConnect" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_EN_QuickConnect">
+            <ListValue userEdit="false">
+                <CfgValue resourceID="EIO_EN_QuickConnect_Not_Used">NOT_USED</CfgValue>
+                <CfgValue resourceID="EIO_EN_QuickConnect_Activated">ACTIVATED</CfgValue>
+                <CfgValue resourceID="EIO_EN_QuickConnect_Deactivated">DEACTIVATED</CfgValue>
+            </ListValue>
+            <DisplayFilterGroup condition="valAnd">
+                <ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="ENIP" />
+                <ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+            </DisplayFilterGroup>
+        </Parameter>
+
+		<!--===  EIO_UNIT_TYPE, DL_ProdInhibitTime  ===-->
+		<Parameter cfgName="DL_ProdInhibitTime" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_DL_ProdInhibitTime">
+			<DisplayFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNLE" />
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, DL_ProductCode  ===-->
+		<Parameter cfgName="DL_ProductCode" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_DL_ProductCode">
+			<DisplayFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNLE" />
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, DL_VendorID  ===-->
+		<Parameter cfgName="DL_VendorID" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_DL_VendorID">
+			<DisplayFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNLE" />
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, DL_Pollrate  ===-->
+		<Parameter cfgName="DL_Pollrate" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_DL_Pollrate">
+			<DisplayFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNLE" />
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, DL_QuickConnect  ===-->
+		<Parameter cfgName="DL_QuickConnect" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm" resourceID="EIO_DL_QuickConnect">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_Disabled_0">1</CfgValue>
+				<CfgValue resourceID="EIO_Disabled_1">0</CfgValue>
+			</ListValue>
+			<DisplayFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNLE" />
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, PN_InputSize  ===-->
+		<Parameter cfgName="PN_InputSize" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_PN_InputSize">
+			<ListValue userEdit="true">
+				<CfgValue resourceID="EIO_PN_8Byte">8</CfgValue>
+				<CfgValue resourceID="EIO_PN_16Byte">16</CfgValue>
+				<CfgValue resourceID="EIO_PN_32Byte">32</CfgValue>
+				<CfgValue resourceID="EIO_PN_64Byte">64</CfgValue>
+				<CfgValue resourceID="EIO_PN_128Byte">128</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="PNET" />
+				<ConditionFilter parameterCfgName="InternalSlave" operand="valNotEqual" operandCfgValue="0" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT_TYPE, PN_OutputSize  ===-->
+		<Parameter cfgName="PN_OutputSize" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_PN_OutputSize">
+			<ListValue userEdit="true">
+				<CfgValue resourceID="EIO_PN_8Byte">8</CfgValue>
+				<CfgValue resourceID="EIO_PN_16Byte">16</CfgValue>
+				<CfgValue resourceID="EIO_PN_32Byte">32</CfgValue>
+				<CfgValue resourceID="EIO_PN_64Byte">64</CfgValue>
+				<CfgValue resourceID="EIO_PN_128Byte">128</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="PNET" />
+				<ConditionFilter parameterCfgName="InternalSlave" operand="valNotEqual" operandCfgValue="0" />
+			</DisplayFilterGroup>
+		</Parameter>
+	</Type>
+
+	<!--===============================================-->
+	<!--===  EIO_UNIT                               ===-->
+	<!--===============================================-->
+	<Type cfgName="EIO_UNIT" addRemoveInstances="true" instanceVisibility="showAll" resourceID="EIO_EIO_UNIT">
+
+		<!--===  EIO_UNIT, Name  ===-->
+		<Parameter cfgName="Name" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_Name">
+		</Parameter>
+
+		<!--===  EIO_UNIT, UnitType  ===-->
+		<Parameter cfgName="UnitType" userInput="cfgDefaultNotOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_UnitType">
+			<LookupParameterValue domainCfgName="EIO" typeCfgName="EIO_UNIT_TYPE" parameterCfgName="Name" userEdit="false">
+			</LookupParameterValue>
+		</Parameter>
+
+		<!--===  EIO_UNIT, Bus  ===-->
+		<Parameter cfgName="Bus" userInput="cfgDefaultNotOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_Bus">
+			<LookupParameterValue domainCfgName="EIO" typeCfgName="EIO_BUS" parameterCfgName="Name" userEdit="false">
+			</LookupParameterValue>
+		</Parameter>
+
+		<!--===  EIO_UNIT, UnitLabel  ===-->
+		<Parameter cfgName="UnitLabel" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_UnitLabel">
+		</Parameter>
+
+		<!--===  EIO_UNIT, TrustLevel  ===-->
+		<Parameter cfgName="TrustLevel" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_TrustLevel">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_TrustLevel_0">0</CfgValue>
+				<CfgValue resourceID="EIO_TrustLevel_1">1</CfgValue>
+				<CfgValue resourceID="EIO_TrustLevel_2">2</CfgValue>
+				<CfgValue resourceID="EIO_TrustLevel_3">3</CfgValue>
+			</ListValue>
+		</Parameter>
+
+		<!--===  EIO_UNIT, Disabled  ===-->
+		<Parameter cfgName="Disabled" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm" resourceID="EIO_Disabled">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_Disabled_1">1</CfgValue>
+				<CfgValue resourceID="EIO_Disabled_0">0</CfgValue>
+			</ListValue>
+		</Parameter>
+
+		<!--===  EIO_UNIT, StoreLogicalState  ===-->
+		<Parameter cfgName="StoreLogicalState" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm" resourceID="EIO_StoreLogicalState">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_StoreLogicalState_1">1</CfgValue>
+				<CfgValue resourceID="EIO_StoreLogicalState_0">0</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilterLookup domainCfgName="EIO" typeCfgName="EIO_UNIT_TYPE" parameterCfgName="Name" operandParameterCfgName="UnitType">
+					<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+				</ConditionFilterLookup>
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT, RegainCommunicationReset  ===-->
+		<Parameter cfgName="RegainCommunicationReset" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm" resourceID="EIO_RegainCommunicationReset">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_RegainCommunicationReset_1">1</CfgValue>
+				<CfgValue resourceID="EIO_RegainCommunicationReset_0">0</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilterLookup domainCfgName="EIO" typeCfgName="EIO_UNIT_TYPE" parameterCfgName="Name" operandParameterCfgName="UnitType">
+					<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+				</ConditionFilterLookup>
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT, DN_Address  ===-->
+		<Parameter cfgName="DN_Address" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_DN_Address">
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilterLookup domainCfgName="EIO" typeCfgName="EIO_BUS" parameterCfgName="Name" operandParameterCfgName="Bus">
+					<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNET" />
+				</ConditionFilterLookup>
+				<ConditionFilterLookup domainCfgName="EIO" typeCfgName="EIO_UNIT_TYPE" parameterCfgName="Name" operandParameterCfgName="UnitType">
+					<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+				</ConditionFilterLookup>
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT, PB_Address  ===-->
+		<Parameter cfgName="PB_Address" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_PB_Address">
+			<DisplayFilterLookup domainCfgName="EIO" typeCfgName="EIO_BUS" parameterCfgName="Name" operandParameterCfgName="Bus">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="PBUS" />
+			</DisplayFilterLookup>
+		</Parameter>
+
+		<!--===  EIO_UNIT, IB_Address  ===-->
+		<Parameter cfgName="IB_Address" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_IB_Address">
+			<DisplayFilterLookup domainCfgName="EIO" typeCfgName="EIO_BUS" parameterCfgName="Name" operandParameterCfgName="Bus">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="IBUS" />
+			</DisplayFilterLookup>
+		</Parameter>
+
+		<!--===  EIO_UNIT, EN_Address  ===-->
+		<Parameter cfgName="EN_Address" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_EN_Address">
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilterLookup domainCfgName="EIO" typeCfgName="EIO_BUS" parameterCfgName="Name" operandParameterCfgName="Bus">
+					<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="ENIP" />
+				</ConditionFilterLookup>
+				<ConditionFilterLookup domainCfgName="EIO" typeCfgName="EIO_UNIT_TYPE" parameterCfgName="Name" operandParameterCfgName="UnitType">
+					<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+				</ConditionFilterLookup>
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT, DL_Address  ===-->
+		<Parameter cfgName="DL_Address" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_DL_Address">
+			<DisplayFilterLookup domainCfgName="EIO" typeCfgName="EIO_BUS" parameterCfgName="Name" operandParameterCfgName="Bus">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNLE" />
+			</DisplayFilterLookup>
+		</Parameter>
+
+		<!--===  EIO_UNIT, PN_Address  ===-->
+		<Parameter cfgName="PN_Address" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_PN_Address">
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilterLookup domainCfgName="EIO" typeCfgName="EIO_BUS" parameterCfgName="Name" operandParameterCfgName="Bus">
+					<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="PNET" />
+				</ConditionFilterLookup>
+				<ConditionFilterLookup domainCfgName="EIO" typeCfgName="EIO_BUS" parameterCfgName="Name" operandParameterCfgName="Bus">
+					<ConditionFilter parameterCfgName="ConnectorID" operand="valEqual" operandCfgValue="PCI1" />
+				</ConditionFilterLookup>
+				<ConditionFilterLookup domainCfgName="EIO" typeCfgName="EIO_UNIT_TYPE" parameterCfgName="Name" operandParameterCfgName="UnitType">
+					<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+				</ConditionFilterLookup>
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT, PN_FastUnitStartup  ===-->
+		<Parameter cfgName="PN_FastUnitStartup" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_PN_FastUnitStartup">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_Disabled_1">Deactivated</CfgValue>
+				<CfgValue resourceID="EIO_PN_Port1">Port1</CfgValue>
+				<CfgValue resourceID="EIO_PN_Port2">Port2</CfgValue>
+				<CfgValue resourceID="EIO_PN_Port3">Port3</CfgValue>
+				<CfgValue resourceID="EIO_PN_Port4">Port4</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilterLookup domainCfgName="EIO" typeCfgName="EIO_BUS" parameterCfgName="Name" operandParameterCfgName="Bus">
+					<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="PNET" />
+				</ConditionFilterLookup>
+				<ConditionFilterLookup domainCfgName="EIO" typeCfgName="EIO_BUS" parameterCfgName="Name" operandParameterCfgName="Bus">
+					<ConditionFilter parameterCfgName="ConnectorID" operand="valNotEqual" operandCfgValue="PCI1" />
+				</ConditionFilterLookup>
+				<ConditionFilterLookup domainCfgName="EIO" typeCfgName="EIO_BUS" parameterCfgName="Name" operandParameterCfgName="Bus">
+					<ConditionFilter parameterCfgName="ConnectorID" operand="valNotEqual" operandCfgValue="FA1" />
+				</ConditionFilterLookup>
+				<ConditionFilterLookup domainCfgName="EIO" typeCfgName="EIO_UNIT_TYPE" parameterCfgName="Name" operandParameterCfgName="UnitType">
+					<ConditionFilter parameterCfgName="InternalSlave" operand="valEqual" operandCfgValue="0" />
+				</ConditionFilterLookup>
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_UNIT, PIO_Address  ===-->
+		<Parameter cfgName="PIO_Address" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_PIO_Address">
+			<DisplayFilterLookup domainCfgName="EIO" typeCfgName="EIO_BUS" parameterCfgName="Name" operandParameterCfgName="Bus">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="PIO" />
+			</DisplayFilterLookup>
+		</Parameter>
+	</Type>
+
+	<!--===============================================-->
+	<!--===  EIO_SIGNAL                             ===-->
+	<!--===============================================-->
+	<Type cfgName="EIO_SIGNAL" addRemoveInstances="true" instanceVisibility="showAll" resourceID="EIO_EIO_SIGNAL">
+
+		<!--===  EIO_SIGNAL, Name  ===-->
+		<Parameter cfgName="Name" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_Name">
+		</Parameter>
+
+		<!--===  EIO_SIGNAL, SignalType  ===-->
+		<Parameter cfgName="SignalType" userInput="cfgDefaultNotOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_SignalType">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_DI">DI</CfgValue>
+				<CfgValue resourceID="EIO_DO">DO</CfgValue>
+				<CfgValue resourceID="EIO_AI">AI</CfgValue>
+				<CfgValue resourceID="EIO_AO">AO</CfgValue>
+				<CfgValue resourceID="EIO_GI">GI</CfgValue>
+				<CfgValue resourceID="EIO_GO">GO</CfgValue>
+			</ListValue>
+		</Parameter>
+
+		<!--===  EIO_SIGNAL, Unit  ===-->
+		<Parameter cfgName="Unit" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_Unit">
+			<ListValue userEdit="false">
+				<EmptyValue />
+			</ListValue>
+			<LookupParameterValue domainCfgName="EIO" typeCfgName="EIO_UNIT" parameterCfgName="Name" userEdit="false">
+			</LookupParameterValue>
+		</Parameter>
+
+		<!--===  EIO_SIGNAL, SignalLabel  ===-->
+		<Parameter cfgName="SignalLabel" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_SignalLabel">
+		</Parameter>
+
+		<!--===  EIO_SIGNAL, UnitMap  ===-->
+		<Parameter cfgName="UnitMap" userInput="cfgDefaultNotOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_UnitMap">
+			<DisplayFilter parameterCfgName="Unit" operand="valNotEqual" operandCfgValue="" />
+			<InputFilter parameterCfgName="Unit" operand="valNotEqual" operandCfgValue="" />
+		</Parameter>
+
+		<!--===  EIO_SIGNAL, Category  ===-->
+		<Parameter cfgName="Category" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_Category">
+		</Parameter>
+
+		<!--===  EIO_SIGNAL, Access  ===-->
+		<Parameter cfgName="Access" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_Access">
+			<LookupParameterValue domainCfgName="EIO" typeCfgName="EIO_ACCESS" parameterCfgName="Name" userEdit="false">
+				<ParamValueFilter parameterCfgName="Name" operand="valNotEqual" operandCfgValue="Internal" />
+			</LookupParameterValue>
+		</Parameter>
+
+		<!--===  EIO_SIGNAL, Default  ===-->
+		<Parameter cfgName="Default" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm" resourceID="EIO_Default">
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="DI" />
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="DO" />
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="AI" />
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="AO" />
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="GI" />
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="GO" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_SIGNAL, SysfailReset  ===-->
+		<Parameter cfgName="SysfailReset" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm" resourceID="EIO_SysfailReset">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_SysfailReset_1">1</CfgValue>
+				<CfgValue resourceID="EIO_SysfailReset_0">0</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="DO" />
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="AO" />
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="GO" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_SIGNAL, Store  ===-->
+		<Parameter cfgName="Store" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm" resourceID="EIO_Store">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_Store_1">1</CfgValue>
+				<CfgValue resourceID="EIO_Store_0">0</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="DO" />
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="AO" />
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="GO" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_SIGNAL, FiltPas  ===-->
+		<Parameter cfgName="FiltPas" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_FiltPas">
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="DI" />
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="GI" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_SIGNAL, FiltAct  ===-->
+		<Parameter cfgName="FiltAct" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_FiltAct">
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="DI" />
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="GI" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_SIGNAL, Invert  ===-->
+		<Parameter cfgName="Invert" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm" resourceID="EIO_Invert">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_Invert_1">1</CfgValue>
+				<CfgValue resourceID="EIO_Invert_0">0</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="DI" />
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="DO" />
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="GI" />
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="GO" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_SIGNAL, EncType  ===-->
+		<Parameter cfgName="EncType" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_EncType">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_EncType_TWO_COMP">TWO_COMP</CfgValue>
+				<CfgValue resourceID="EIO_EncType_UNSIGNED">UNSIGNED</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="AI" />
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="AO" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_SIGNAL, MaxLog  ===-->
+		<Parameter cfgName="MaxLog" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm" resourceID="EIO_MaxLog">
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="AI" />
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="AO" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_SIGNAL, MaxPhys  ===-->
+		<Parameter cfgName="MaxPhys" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm" resourceID="EIO_MaxPhys">
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="AI" />
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="AO" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_SIGNAL, MaxPhysLimit  ===-->
+		<Parameter cfgName="MaxPhysLimit" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm" resourceID="EIO_MaxPhysLimit">
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="AI" />
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="AO" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_SIGNAL, MaxBitVal  ===-->
+		<Parameter cfgName="MaxBitVal" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_MaxBitVal">
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="AI" />
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="AO" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_SIGNAL, MinLog  ===-->
+		<Parameter cfgName="MinLog" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm" resourceID="EIO_MinLog">
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="AI" />
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="AO" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_SIGNAL, MinPhys  ===-->
+		<Parameter cfgName="MinPhys" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm" resourceID="EIO_MinPhys">
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="AI" />
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="AO" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_SIGNAL, MinPhysLimit  ===-->
+		<Parameter cfgName="MinPhysLimit" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm" resourceID="EIO_MinPhysLimit">
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="AI" />
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="AO" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_SIGNAL, MinBitVal  ===-->
+		<Parameter cfgName="MinBitVal" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_MinBitVal">
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="AI" />
+				<ConditionFilter parameterCfgName="SignalType" operand="valEqual" operandCfgValue="AO" />
+			</DisplayFilterGroup>
+		</Parameter>
+	</Type>
+
+	<!--===============================================-->
+	<!--===  EIO_CROSS                              ===-->
+	<!--===============================================-->
+	<Type cfgName="EIO_CROSS" addRemoveInstances="true" instanceVisibility="showAll" resourceID="EIO_EIO_CROSS">
+
+		<!--===  EIO_CROSS, Res  ===-->
+		<Parameter cfgName="Res" userInput="cfgDefaultNotOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_Res">
+			<LookupParameterValue domainCfgName="EIO" typeCfgName="EIO_SIGNAL" parameterCfgName="Name" userEdit="false">
+				<ParamValueFilterGroup condition="valAnd">
+					<ConditionFilter parameterCfgName="Category" operandCfgValue="safety" operand="valNotEqual" />
+					<ConditionFilterGroup condition="valOr">
+						<ConditionFilter parameterCfgName="SignalType" operandCfgValue="DI" operand="valEqual" />
+						<ConditionFilter parameterCfgName="SignalType" operandCfgValue="DO" operand="valEqual" />
+						<ConditionFilter parameterCfgName="SignalType" operandCfgValue="GI" operand="valEqual" />
+						<ConditionFilter parameterCfgName="SignalType" operandCfgValue="GO" operand="valEqual" />
+					</ConditionFilterGroup>
+				</ParamValueFilterGroup>
+			</LookupParameterValue>
+		</Parameter>
+
+		<!--===  EIO_CROSS, Act1  ===-->
+		<Parameter cfgName="Act1" userInput="cfgDefaultNotOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_Act1">
+			<LookupParameterValue domainCfgName="EIO" typeCfgName="EIO_SIGNAL" parameterCfgName="Name" userEdit="false">
+				<ParamValueFilterGroup condition="valOr">
+					<ConditionFilter parameterCfgName="SignalType" operandCfgValue="DI" operand="valEqual" />
+					<ConditionFilter parameterCfgName="SignalType" operandCfgValue="DO" operand="valEqual" />
+					<ConditionFilter parameterCfgName="SignalType" operandCfgValue="GI" operand="valEqual" />
+					<ConditionFilter parameterCfgName="SignalType" operandCfgValue="GO" operand="valEqual" />
+				</ParamValueFilterGroup>
+			</LookupParameterValue>
+		</Parameter>
+
+		<!--===  EIO_CROSS, Act1_invert  ===-->
+		<Parameter cfgName="Act1_invert" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm" resourceID="EIO_Act1_invert">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_Invert_1">1</CfgValue>
+				<CfgValue resourceID="EIO_Invert_0">0</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="Act1" operand="valNotEqual" operandCfgValue="" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_CROSS, Oper1  ===-->
+		<Parameter cfgName="Oper1" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_Oper1">
+			<ListValue userEdit="false">
+				<EmptyValue />
+				<CfgValue resourceID="EIO_Oper_AND">AND</CfgValue>
+				<CfgValue resourceID="EIO_Oper_OR">OR</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="Act1" operand="valNotEqual" operandCfgValue="" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_CROSS, Act2  ===-->
+		<Parameter cfgName="Act2" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_Act2">
+			<LookupParameterValue domainCfgName="EIO" typeCfgName="EIO_SIGNAL" parameterCfgName="Name" userEdit="false">
+				<ParamValueFilterGroup condition="valOr">
+					<ConditionFilter parameterCfgName="SignalType" operandCfgValue="DI" operand="valEqual" />
+					<ConditionFilter parameterCfgName="SignalType" operandCfgValue="DO" operand="valEqual" />
+					<ConditionFilter parameterCfgName="SignalType" operandCfgValue="GI" operand="valEqual" />
+					<ConditionFilter parameterCfgName="SignalType" operandCfgValue="GO" operand="valEqual" />
+				</ParamValueFilterGroup>
+			</LookupParameterValue>
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="Act1" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Oper1" operand="valNotEqual" operandCfgValue="" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_CROSS, Act2_invert  ===-->
+		<Parameter cfgName="Act2_invert" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm" resourceID="EIO_Act2_invert">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_Invert_1">1</CfgValue>
+				<CfgValue resourceID="EIO_Invert_0">0</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="Act1" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Oper1" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Act2" operand="valNotEqual" operandCfgValue="" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_CROSS, Oper2  ===-->
+		<Parameter cfgName="Oper2" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_Oper2">
+			<ListValue userEdit="false">
+				<EmptyValue />
+				<CfgValue resourceID="EIO_Oper_AND">AND</CfgValue>
+				<CfgValue resourceID="EIO_Oper_OR">OR</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="Act1" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Oper1" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Act2" operand="valNotEqual" operandCfgValue="" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_CROSS, Act3  ===-->
+		<Parameter cfgName="Act3" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_Act3">
+			<LookupParameterValue domainCfgName="EIO" typeCfgName="EIO_SIGNAL" parameterCfgName="Name" userEdit="false">
+				<ParamValueFilterGroup condition="valOr">
+					<ConditionFilter parameterCfgName="SignalType" operandCfgValue="DI" operand="valEqual" />
+					<ConditionFilter parameterCfgName="SignalType" operandCfgValue="DO" operand="valEqual" />
+					<ConditionFilter parameterCfgName="SignalType" operandCfgValue="GI" operand="valEqual" />
+					<ConditionFilter parameterCfgName="SignalType" operandCfgValue="GO" operand="valEqual" />
+				</ParamValueFilterGroup>
+			</LookupParameterValue>
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="Act1" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Oper1" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Act2" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Oper2" operand="valNotEqual" operandCfgValue="" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_CROSS, Act3_invert  ===-->
+		<Parameter cfgName="Act3_invert" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm" resourceID="EIO_Act3_invert">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_Invert_1">1</CfgValue>
+				<CfgValue resourceID="EIO_Invert_0">0</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="Act1" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Oper1" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Act2" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Oper2" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Act3" operand="valNotEqual" operandCfgValue="" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_CROSS, Oper3  ===-->
+		<Parameter cfgName="Oper3" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_Oper3">
+			<ListValue userEdit="false">
+				<EmptyValue />
+				<CfgValue resourceID="EIO_Oper_AND">AND</CfgValue>
+				<CfgValue resourceID="EIO_Oper_OR">OR</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="Act1" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Oper1" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Act2" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Oper2" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Act3" operand="valNotEqual" operandCfgValue="" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_CROSS, Act4  ===-->
+		<Parameter cfgName="Act4" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_Act4">
+			<LookupParameterValue domainCfgName="EIO" typeCfgName="EIO_SIGNAL" parameterCfgName="Name" userEdit="false">
+				<ParamValueFilterGroup condition="valOr">
+					<ConditionFilter parameterCfgName="SignalType" operandCfgValue="DI" operand="valEqual" />
+					<ConditionFilter parameterCfgName="SignalType" operandCfgValue="DO" operand="valEqual" />
+					<ConditionFilter parameterCfgName="SignalType" operandCfgValue="GI" operand="valEqual" />
+					<ConditionFilter parameterCfgName="SignalType" operandCfgValue="GO" operand="valEqual" />
+				</ParamValueFilterGroup>
+			</LookupParameterValue>
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="Act1" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Oper1" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Act2" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Oper2" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Act3" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Oper3" operand="valNotEqual" operandCfgValue="" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_CROSS, Act4_invert  ===-->
+		<Parameter cfgName="Act4_invert" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm" resourceID="EIO_Act4_invert">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_Invert_1">1</CfgValue>
+				<CfgValue resourceID="EIO_Invert_0">0</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="Act1" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Oper1" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Act2" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Oper2" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Act3" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Oper3" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Act4" operand="valNotEqual" operandCfgValue="" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_CROSS, Oper4  ===-->
+		<Parameter cfgName="Oper4" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_Oper4">
+			<ListValue userEdit="false">
+				<EmptyValue />
+				<CfgValue resourceID="EIO_Oper_AND">AND</CfgValue>
+				<CfgValue resourceID="EIO_Oper_OR">OR</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="Act1" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Oper1" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Act2" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Oper2" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Act3" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Oper3" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Act4" operand="valNotEqual" operandCfgValue="" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_CROSS, Act5  ===-->
+		<Parameter cfgName="Act5" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_Act5">
+			<LookupParameterValue domainCfgName="EIO" typeCfgName="EIO_SIGNAL" parameterCfgName="Name" userEdit="false">
+				<ParamValueFilterGroup condition="valOr">
+					<ConditionFilter parameterCfgName="SignalType" operandCfgValue="DI" operand="valEqual" />
+					<ConditionFilter parameterCfgName="SignalType" operandCfgValue="DO" operand="valEqual" />
+					<ConditionFilter parameterCfgName="SignalType" operandCfgValue="GI" operand="valEqual" />
+					<ConditionFilter parameterCfgName="SignalType" operandCfgValue="GO" operand="valEqual" />
+				</ParamValueFilterGroup>
+			</LookupParameterValue>
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="Act1" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Oper1" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Act2" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Oper2" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Act3" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Oper3" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Act4" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Oper4" operand="valNotEqual" operandCfgValue="" />
+			</DisplayFilterGroup>
+		</Parameter>
+
+		<!--===  EIO_CROSS, Act5_invert  ===-->
+		<Parameter cfgName="Act5_invert" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm" resourceID="EIO_Act5_invert">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_Invert_1">1</CfgValue>
+				<CfgValue resourceID="EIO_Invert_0">0</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valAnd">
+				<ConditionFilter parameterCfgName="Act1" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Oper1" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Act2" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Oper2" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Act3" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Oper3" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Act4" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Oper4" operand="valNotEqual" operandCfgValue="" />
+				<ConditionFilter parameterCfgName="Act5" operand="valNotEqual" operandCfgValue="" />
+			</DisplayFilterGroup>
+		</Parameter>
+	</Type>
+
+	<!--===============================================-->
+	<!--===  EIO_COMMAND                            ===-->
+	<!--===============================================-->
+	<Type cfgName="EIO_COMMAND" addRemoveInstances="true" instanceVisibility="showAll" resourceID="EIO_EIO_COMMAND">
+
+		<!--===  EIO_COMMAND, Unit  ===-->
+		<Parameter cfgName="Unit" userInput="cfgDefaultNotOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_Unit">
+			<LookupParameterValue domainCfgName="EIO" typeCfgName="EIO_UNIT" parameterCfgName="Name" userEdit="false">
+			</LookupParameterValue>
+		</Parameter>
+
+		<!--===  EIO_COMMAND, CommandType  ===-->
+		<Parameter cfgName="CommandType" userInput="cfgDefaultNotOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_CommandType">
+			<LookupParameterValue domainCfgName="EIO" typeCfgName="EIO_COMMAND_TYPE" parameterCfgName="Name" userEdit="false">
+			</LookupParameterValue>
+		</Parameter>
+
+		<!--===  EIO_COMMAND, Value  ===-->
+		<Parameter cfgName="Value" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_Value">
+		</Parameter>
+	</Type>
+	
+	<!--===============================================-->
+	<!--===  EIO_COMMAND_TYPE                       ===-->
+	<!--===============================================-->
+	<Type cfgName="EIO_COMMAND_TYPE" addRemoveInstances="true" instanceVisibility="showAll" resourceID="EIO_EIO_COMMAND_TYPE">
+
+		<!--===  EIO_COMMAND_TYPE, Name  ===-->
+		<Parameter cfgName="Name" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_Name">
+		</Parameter>
+
+		<!--===  EIO_COMMAND_TYPE, UnitType  ===-->
+		<Parameter cfgName="UnitType" userInput="cfgDefaultNotOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_UnitType">
+			<LookupParameterValue domainCfgName="EIO" typeCfgName="EIO_UNIT_TYPE" parameterCfgName="Name" userEdit="false">
+			</LookupParameterValue>
+		</Parameter>
+
+		<!--===  EIO_COMMAND_TYPE, DefValue  ===-->
+		<Parameter cfgName="DefValue" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_DefValue">
+		</Parameter>
+
+		<!--===  EIO_COMMAND_TYPE, OrderNr  ===-->
+		<Parameter cfgName="OrderNr" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_Order">
+		</Parameter>
+
+		<!--===  EIO_COMMAND_TYPE, DN_Path  ===-->
+		<Parameter cfgName="DN_Path" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_DN_Path">
+			<DisplayFilterLookup domainCfgName="EIO" typeCfgName="EIO_UNIT_TYPE" parameterCfgName="Name" operandParameterCfgName="UnitType">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNET" />
+			</DisplayFilterLookup>
+		</Parameter>
+
+		<!--===  EIO_COMMAND_TYPE, DN_Service  ===-->
+		<Parameter cfgName="DN_Service" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_DN_Service">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_CMD_SET">16</CfgValue>
+				<CfgValue resourceID="EIO_CMD_APPLY">13</CfgValue>
+				<CfgValue resourceID="EIO_CMD_CREATE">8</CfgValue>
+				<CfgValue resourceID="EIO_CMD_RESET">5</CfgValue>
+			</ListValue>
+			<DisplayFilterLookup domainCfgName="EIO" typeCfgName="EIO_UNIT_TYPE" parameterCfgName="Name" operandParameterCfgName="UnitType">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNET" />
+			</DisplayFilterLookup>
+		</Parameter>
+
+		<!--===  EIO_COMMAND_TYPE, DL_Path  ===-->
+		<Parameter cfgName="DL_Path" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_DN_Path">
+			<DisplayFilterLookup domainCfgName="EIO" typeCfgName="EIO_UNIT_TYPE" parameterCfgName="Name" operandParameterCfgName="UnitType">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNLE" />
+			</DisplayFilterLookup>
+		</Parameter>
+
+		<!--===  EIO_COMMAND_TYPE, DL_Service  ===-->
+		<Parameter cfgName="DL_Service" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_DN_Service">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_CMD_SET">16</CfgValue>
+				<CfgValue resourceID="EIO_CMD_RESET">5</CfgValue>
+				<CfgValue resourceID="EIO_CMD_GET">14</CfgValue>
+			</ListValue>
+			<DisplayFilterLookup domainCfgName="EIO" typeCfgName="EIO_UNIT_TYPE" parameterCfgName="Name" operandParameterCfgName="UnitType">
+				<ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="DNLE" />
+			</DisplayFilterLookup>
+		</Parameter>
+        
+        <!--===  EIO_COMMAND_TYPE, EN_Path  ===-->
+        <Parameter cfgName="EN_Path" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" resourceID="EIO_EN_Path">
+            <DisplayFilterLookup domainCfgName="EIO" typeCfgName="EIO_UNIT_TYPE" parameterCfgName="Name" operandParameterCfgName="UnitType">
+                <ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="ENIP" />
+            </DisplayFilterLookup>
+        </Parameter>
+
+        <!--===  EIO_COMMAND_TYPE, EN_Service  ===-->
+        <Parameter cfgName="EN_Service" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_EN_Service">
+            <ListValue userEdit="true">
+                <CfgValue resourceID="EIO_CMD_SET">16</CfgValue>
+                <CfgValue resourceID="EIO_CMD_RESET">5</CfgValue>
+                <CfgValue resourceID="EIO_CMD_GET">14</CfgValue>
+            </ListValue>
+            <DisplayFilterLookup domainCfgName="EIO" typeCfgName="EIO_UNIT_TYPE" parameterCfgName="Name" operandParameterCfgName="UnitType">
+                <ConditionFilter parameterCfgName="BusType" operand="valEqual" operandCfgValue="ENIP" />
+            </DisplayFilterLookup>
+        </Parameter>
+	</Type>
+	
+	<!--===============================================-->
+	<!--===  EIO_ACCESS                             ===-->
+	<!--===============================================-->
+	<Type cfgName="EIO_ACCESS" addRemoveInstances="true" instanceVisibility="showAll" resourceID="EIO_EIO_ACCESS">
+
+		<!--===  EIO_ACCESS, DL_Service  ===-->
+		<Parameter cfgName="Name" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_Name">
+		</Parameter>
+
+		<!--===  EIO_ACCESS, Rapid  ===-->
+		<Parameter cfgName="Rapid" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm" resourceID="EIO_Rapid">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_Access_1">1</CfgValue>
+				<CfgValue resourceID="EIO_Access_0">0</CfgValue>
+			</ListValue>
+		</Parameter>
+
+		<!--===  EIO_ACCESS, LocalManual  ===-->
+		<Parameter cfgName="LocalManual" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm" resourceID="EIO_LocalManual">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_Access_1">1</CfgValue>
+				<CfgValue resourceID="EIO_Access_0">0</CfgValue>
+			</ListValue>
+		</Parameter>
+
+		<!--===  EIO_ACCESS, LocalAuto  ===-->
+		<Parameter cfgName="LocalAuto" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm" resourceID="EIO_LocalAuto">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_Access_1">1</CfgValue>
+				<CfgValue resourceID="EIO_Access_0">0</CfgValue>
+			</ListValue>
+		</Parameter>
+
+		<!--===  EIO_ACCESS, RemoteManual  ===-->
+		<Parameter cfgName="RemoteManual" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm" resourceID="EIO_RemoteManual">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_Access_1">1</CfgValue>
+				<CfgValue resourceID="EIO_Access_0">0</CfgValue>
+			</ListValue>
+		</Parameter>
+
+		<!--===  EIO_ACCESS, RemoteAuto  ===-->
+		<Parameter cfgName="RemoteAuto" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm" resourceID="EIO_RemoteAuto">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="EIO_Access_1">1</CfgValue>
+				<CfgValue resourceID="EIO_Access_0">0</CfgValue>
+			</ListValue>
+		</Parameter>
+	</Type>
+	
+	<!--===============================================-->
+	<!--===  EIO_TRUSTLEVEL                         ===-->
+	<!--===============================================-->
+	<!-- Trustlevel is not implemented yet
+  <Type cfgName="EIO_TRUSTLEVEL" addRemoveInstances="true" instanceVisibility="showAll" resourceID="EIO_EIO_TRUSTLEVEL">
+    <Parameter cfgName="Name" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_Name">
+    </Parameter>
+    <Parameter cfgName="DenyDisable" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_DenyDisable">
+    </Parameter>
+    <Parameter cfgName="ActionWhenLost" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_ActionWhenLost">
+    </Parameter>
+    <Parameter cfgName="ReportWhenLost" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_ReportWhenLost">
+    </Parameter>
+    <Parameter cfgName="ReportWhenReconnected" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_ReportWhenReconnected">
+    </Parameter>
+    <Parameter cfgName="ActionAtAccessWhenLost" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_ActionAtAccessWhenLost">
+    </Parameter>
+    <Parameter cfgName="ReportAtAccessWhenLost" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_ReportAtAccessWhenLost">
+    </Parameter>
+    <Parameter cfgName="ValueIfCrossWhenLost" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_ValueIfCrossWhenLost">
+    </Parameter>
+    <Parameter cfgName="ReportIfCrossWhenLost" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_ReportIfCrossWhenLost">
+    </Parameter>
+  </Type>
+  -->
+	
+	<!--===============================================-->
+	<!--===  EIO_CIP_ROUTE                          ===-->
+	<!--===============================================-->
+	<Type cfgName="EIO_CIP_ROUTE" addRemoveInstances="true" instanceVisibility="showAll" resourceID="EIO_CIP_ROUTE">
+
+		<!--===  EIO_CIP_ROUTE, Name  ===-->
+		<Parameter cfgName="Name" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_Name">
+		</Parameter>
+
+		<!--===  EIO_CIP_ROUTE, Bus  ===-->
+		<Parameter cfgName="Bus" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" resourceID="EIO_Bus">
+			<LookupParameterValue domainCfgName="EIO" typeCfgName="EIO_BUS" parameterCfgName="Name" userEdit="false">
+				<ParamValueFilterGroup condition="valOr">
+					<ConditionFilter parameterCfgName="BusType" operandCfgValue="DNET" operand="valEqual" />
+					<ConditionFilter parameterCfgName="BusType" operandCfgValue="ENIP" operand="valEqual" />
+				</ParamValueFilterGroup>
+			</LookupParameterValue>
+		</Parameter>
+
+		<!--===  EIO_CIP_ROUTE, PortID  ===-->
+		<Parameter cfgName="PortID" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" resourceID="EIO_CipPort">
+		</Parameter>
+	</Type>
+</Domain>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.Controller.IRC5.Paint">
+  <Strings>
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Paint.ExecutionState.Unknown" Text="未知" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Paint.ExecutionState.Init" Text="初始化中" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Paint.ExecutionState.SysFail" Text="系统失败" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Paint.ExecutionState.EmergencyStop" Text="紧急停止" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Paint.ExecutionState.EmergencyStopNotAcknowledged" Text="紧急停止未被获知" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Paint.ExecutionState.GuardStop" Text="防护停止" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Paint.ExecutionState.MotorsOff" Text="马达断电" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Paint.ExecutionState.Stopped" Text="停止" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Paint.ExecutionState.Error" Text="错误" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Paint.ExecutionState.ExecutingIdle" Text="等待任务" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Paint.ExecutionState.StoppedInJob" Text="停止任务" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Paint.ExecutionState.ExecutingJob" Text="执行任务" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Paint.CavityState.Undefined" Text="未定义的" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Paint.CavityState.Cleaning" Text="清洗中" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Paint.CavityState.Cleaned" Text="清洗毕" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Paint.CavityState.Loading" Text="载入中" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Paint.CavityState.Solvent" Text="溶剂" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Paint.CavityState.EmyCleaned" Text="紧急清洗" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Paint.CavityState.PushingSolvent" Text="推动溶剂" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Paint.CavityState.PushedSolvent" Text="排出溶剂" />
+  </Strings>
+</Resources>

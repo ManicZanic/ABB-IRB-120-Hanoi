@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="HW" domainNo="3" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="7250" max="9419">
+  <Message number="7250" eDefine="SYS_ERR_HW_AUX_GLITCH_MODE_STOP">
+    <Title>Glitch in Auto Mode Stop circuit</Title>
+    <Description>Two or several status changes detected on signal within few milliseconds. This message is most likely caused by bad connections in MODE_STOP circuits.</Description>
+    <Consequences>Motors are maybe switched off. </Consequences>
+    <Actions>Check cables and connections on the safety system for Auto_Mode_Stop (or Test_Mode_Stop / Enabling Device).</Actions>
+  </Message>
+  <Message number="7251" eDefine="SYS_ERR_HW_AUX_GLITCH_DLY_STOP">
+    <Title>Glitch in Delayed Stop circuit</Title>
+    <Description>Two or several status changes detected on signal within few milliseconds. This message is most likely caused by bad connections in DLY_STOP circuits.</Description>
+    <Consequences>Motors are maybe switched off. </Consequences>
+    <Actions>Check cables and connections on the safety system for DLY_STOP.</Actions>
+  </Message>
+  <Message number="7252" eDefine="SYS_ERR_HW_AUX_GLITCH_GM_STOP">
+    <Title>Glitch in General Mode Stop circuit</Title>
+    <Description>Two or several status changes detected on signal within few milliseconds. This message is most likely caused by bad connections in GM_STOP circuits.</Description>
+    <Consequences>Motors are maybe switched off. </Consequences>
+    <Actions>Check cables and connections on the safety system for GM_STOP.</Actions>
+  </Message>
+  <Message number="7253" eDefine="SYS_ERR_HW_AUX_GLITCH_RUN_CH_SIB">
+    <Title>Glitch in Run Chain on SIB</Title>
+    <Description>Two or several status changes detected on signal within few milliseconds. This message is most likely caused by bad connections in Safety Interface Board (SIB) Run_Chain circuits.</Description>
+    <Consequences>Motors are maybe switched off. </Consequences>
+    <Actions>1. Check cables and connections on the safety system. <p />2. Check for other error messages for external connections (interlocks). </Actions>
+  </Message>
+  <Message number="7254" eDefine="SYS_ERR_HW_AUX_GLITCH_RUN_CH_MIB">
+    <Title>Glitch in Run Chain on MIB</Title>
+    <Description>Two or several status changes detected on signal within few milliseconds. This message is most likely caused by bad connections in Manipulator Interface Board (MIB) Run_Chain circuits.</Description>
+    <Consequences>Motors for CBS and CBS motion are maybe switched off. </Consequences>
+    <Actions>1. Check cables and connections on the safety system. <p />2. Check for other error messages for external connections (interlocks). </Actions>
+  </Message>
+  <Message number="7255" eDefine="SYS_ERR_HW_AUX_GLITCH_CAB_ILCK">
+    <Title>Glitch in Cabin Interlock circuit</Title>
+    <Description>Two or several status changes detected on signal within few milliseconds. This message is most likely caused by bad connections in Cabin Interlock circuits.</Description>
+    <Consequences>Paint Equipments are maybe switched off.</Consequences>
+    <Actions>Check cables and connections on the safety system for Cabin Interlock.</Actions>
+  </Message>
+  <Message number="7256" eDefine="SYS_ERR_HW_AUX_GLITCH_HV_ILCK">
+    <Title>Glitch in High Voltage Interlock circuit</Title>
+    <Description>Two or several status changes detected on signal within few milliseconds. This message is most likely caused by bad connections in High Voltage Interlock circuits.</Description>
+    <Consequences>High Voltage is maybe switched off. </Consequences>
+    <Actions>Check cables and connections on the safety system for HV interlock.</Actions>
+  </Message>
+  <Message number="7257" eDefine="SYS_ERR_HW_AUX_GLITCH_EXT_SYS2_ILCK_IN">
+    <Title>Glitch in System 2 Interlock circuit</Title>
+    <Description>Two or several status changes detected on signal within few milliseconds. This message is most likely caused by bad connections in System 2 Interlock circuits.</Description>
+    <Consequences>Paint Equipments are maybe switched off. </Consequences>
+    <Actions>Check cables and connections on the safety system for System 2 Interlock.</Actions>
+  </Message>
+  <Message number="7258" eDefine="SYS_ERR_HW_AUX_GLITCH_EXT_PROCESS_ILCK">
+    <Title>Glitch in Process Interlock circuit</Title>
+    <Description>Two or several status changes detected on signal within few milliseconds. This message is most likely caused by bad connections in Process Interlock circuits.</Description>
+    <Consequences>Paint Equipments are maybe switched off. </Consequences>
+    <Actions>Check cables and connections on the safety system for Process Interlock.</Actions>
+  </Message>
+  <Message number="7259" eDefine="SYS_ERR_HW_AUX_GLITCH_AUX_RUN_CH">
+    <Title>Glitch in AUX Interlock circuit</Title>
+    <Description>Two or several status changes detected on signal within few milliseconds. This message is most likely caused by bad connections in AUX run chain circuits. Normally used for Cartridge Bell System (CBS) doors.</Description>
+    <Consequences>System 2 Motors and motion are maybe switched off. </Consequences>
+    <Actions>Check cables and connections on the safety system for AUX run chain.</Actions>
+  </Message>
+  <Message number="7260" eDefine="SYS_ERR_HW_AUX_BRAKE_DRIVER_FAULT">
+    <Title>Brake driver fault</Title>
+    <Description>The supervision of brakes on Manipulator Controller Board (MCOB) <arg format="%i" ordinal="1" /> has detected a driver fault on axis <arg format="%d" ordinal="2" /> and turned ON all brakes. </Description>
+    <Actions>1. Check/exchange MCOB. </Actions>
+  </Message>
+  <Message number="7261" eDefine="SYS_ERR_HW_AUX_FAN_PDB">
+    <Title>Circulation Fan malfunction</Title>
+    <Description>Circulation fan for the PDB has stopped or is rotating very slowly.</Description>
+    <Consequences>The Power Distribution Board (PDB) temperature will rise.</Consequences>
+    <Causes>Faulty fan, cabling or power supply. See the Circuit Diagram!</Causes>
+    <Actions>1. Check the fan cables.<p />2. Check the power supply.<p />3. Check the fan.</Actions>
+  </Message>
+  <Message number="7501" eDefine="SYS_ERR_HW_BSP_FILESYSTEM_UNKNOWN">
+    <Title>Filesystem unknown: USB Device</Title>
+    <Description>The filesystem type on the USB device with logical unit <arg format="%d" ordinal="1" /> is not supported.</Description>
+    <Consequences>The USB device with the logical unit <arg format="%d" ordinal="1" /> cannot be accessed. The filesystem is of type <arg format="%s" ordinal="2" />. The file(s) on the USB device with logical number <arg format="%d" ordinal="1" /> will not be accessible. </Consequences>
+    <Causes>The filesystem is formatted with an unsupported file system type.</Causes>
+    <Actions>Format the USB device with the FAT32 filesystem.</Actions>
+  </Message>
+  <Message number="7502" eDefine="SYS_ERR_HW_ATA_REMOVED">
+    <Title>Mass storage device removed</Title>
+    <Description>The mass storage device was removed.</Description>
+    <Consequences>The system goes to sys fail. The filesystem on the mass storage device could be corrupt. The file(s) on the mass storage device could be corrupt. The file(s) on the mass storage device will not be accessible.</Consequences>
+    <Causes>The mass storage device was removed or there was a malfunction of the mass storage device.</Causes>
+    <Actions>Check that the mass storage device firmly is in place. If the problem persists, try with another device.</Actions>
+  </Message>
+  <Message number="8100" eDefine="SYS_ERR_HW_SENSOR_SYS_CONFIGURATION_FAULT">
+    <Title>Configuration failure</Title>
+    <Description>Drive Module has detected configuration failure at measurement link. <p />Drive module: <arg format="%.f" ordinal="1" /><p />Measurement link: <arg format="%.f" ordinal="2" /><p />Board position: <arg format="%.f" ordinal="3" /></Description>
+    <Actions>- Check configuration for measurement link.<p />- Check configuration for measurement board.<p />- Check configuration for measurement nodes.</Actions>
+  </Message>
+  <Message number="8101" eDefine="SYS_ERR_HW_SENSOR_SYS_TRANSMISSION_FAIL">
+    <Title>SMB Communication Failure</Title>
+    <Description>A transmission failure has been detected between the axis computer and the serial measurement board on measurement link <arg format="%.f" ordinal="2" /> in Drive Module <arg format="%.f" ordinal="1" />.</Description>
+    <Consequences>The system goes to status SYS FAIL and loses its calibration information.</Consequences>
+    <Causes>This may be caused by bad connections or cables (screening), especially if non-ABB cables are used for additional axes. Possible causes are also faulty serial measurement board or axis computer.</Causes>
+    <Actions>1) Reset the robot's revolution counters as detailed in the robot Product Manual. <p />2) Make sure the cable between serial measurement board and axis computer is connected correctly, and that it meets the specification set by ABB. <p />3) Make sure the cable screen is correctly connected at both ends. <p />4) Make sure no extreme levels of electromagnetic interference are emitted close to the robot cabling. <p />5) Make sure the serial measurement board and axis computer are fully functional. Replace any faulty unit. </Actions>
+  </Message>
+  <Message number="8102" eDefine="SYS_ERR_HW_SENSOR_SYS_FPGA_INTERNAL_ERROR">
+    <Title>Internal failure</Title>
+    <Description>The measurement system has detected a hardware or software fault on measurement link <arg format="%.f" ordinal="2" /> in Drive Module <arg format="%.f" ordinal="1" />.</Description>
+    <Consequences>The system goes to status SYS HALT and loses its calibration information.</Consequences>
+    <Causes>This may be caused by some temporary disturbance in the robot cell or by a faulty axis computer.</Causes>
+    <Actions>1) Restart the system. <p />2) Reset the robot's revolution counters as detailed in the robot Product Manual. <p />3) Make sure no extreme levels of electromagnetic interference are emitted close to the robot cabling. <p />4) Make sure the axis computer is fully functional. Replace any faulty unit. </Actions>
+  </Message>
+  <Message number="8103" eDefine="SYS_ERR_HW_SENSOR_SYS_TRANSMISSION_TIMEOUT">
+    <Title>Lost communication with the SMB</Title>
+    <Description>The communication has been lost between the axis computer and the serial measurement board on measurement link <arg format="%.f" ordinal="2" /> in Drive Module <arg format="%.f" ordinal="1" />.</Description>
+    <Consequences>The system goes to status SYS HALT and loses its calibration information.</Consequences>
+    <Causes>This may be caused by bad connections or cables (screening), especially if non-ABB cables are used for additional axes. Possible causes are also faulty serial measurement board or axis computer.</Causes>
+    <Actions>1) Reset the robot's revolution counters as detailed in the robot Product Manual. <p />2) Make sure the cable between serial measurement board and axis computer is connected correctly, and that it meets the specification set by ABB. <p />3) Make sure the cable screen is correctly connected at both ends. <p />4) Make sure no extreme levels of electromagnetic interference are emitted close to the robot cabling. <p />5) Make sure the serial measurement board and axis computer are fully functional. Replace any faulty unit. </Actions>
+  </Message>
+  <Message number="8104" eDefine="SYS_ERR_HW_SENSOR_SYS_TEACH_MODE_OVER_SPEED">
+    <Title>Overspeed During Teach Mode</Title>
+    <Description>One or more axes of the robot connected to drive module <arg format="%d" ordinal="1" /> has exceeded the maximum speed for teach mode operation.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>The robot may have been moved manually while in state Motors OFF. The error may also be caused by a misadjustment in the relation, commutation, between motor shaft and resolver on an additional axis, primarily during installation.</Causes>
+    <Actions>1) Press the Enabling Device to attempt resuming operation. <p />2) Check other event log messages occuring at the same time to determine the actual cause. <p />3) Perform a re-commutation of the motor at hand. How to do this is specified in the Additional Axes Manual.</Actions>
+  </Message>
+  <Message number="8105" eDefine="SYS_ERR_HW_MEA_WARNING_CFG_NOT_FOUND">
+    <Title>Data not found.</Title>
+    <Description>Configuration data for measurement board not found. <p />System will use default data. <p />Drive module: <arg format="%.f" ordinal="1" /><p />Measurement link: <arg format="%.f" ordinal="2" /><p />Board node: <arg format="%.f" ordinal="3" /></Description>
+    <Actions>Check configuration.</Actions>
+  </Message>
+  <Message number="8200" eDefine="SYS_ERR_HW_SMB_BATTERY_DEPLETED">
+    <Title>Battery backup lost</Title>
+    <Description>The battery backup to serial measurement board (SMB) <arg format="%.f" ordinal="3" /> in the robot connected to drive module <arg format="%.f" ordinal="1" />  on measurement link <arg format="%.f" ordinal="2" /> has been lost. </Description>
+    <Consequences>When the SMB battery power supply is interrupted, the robot will lose the revolution counter data. This warning will also repeatedly be logged.</Consequences>
+    <Causes>This may be due to an SMB battery that is discharged or not connected. For some robot models, the SMB battery power is supplied through a jumper in the robot signal cable (refer to the IRC5 Circuit Diagram), and disconnecting the cable interrupts the battery power supply. Some earlier robot versions used rechargeable batteries, and these must be charged for at least 18 hrs before working correctly. </Causes>
+    <Actions>1) Make sure a charged SMB battery is connected to the board. <p />2) NOTE! Disconnecting the robot signal cable may disconnect the SMB battery power supply, triggering the battery warning to be logged. <p />3) Reset the battery power warning by updating the revolution counters as detailed in the Calibration or Product Manual. <p />4) Replace the battery if discharged.</Actions>
+  </Message>
+  <Message number="8201" eDefine="SYS_ERR_HW_SMB_NO_SERIAL_BOARD">
+    <Title>Serial Board not found</Title>
+    <Description>Serial Measurement Board not found on measurement link.<p />Drive module: <arg format="%.f" ordinal="1" /><p />Measurement link: <arg format="%.f" ordinal="2" /><p />Measurement board: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- Check system configuration parameters.<p />- Check connections and cables to Serial Measurement Board.<p />- Replace Serial Measurement Board.</Actions>
+  </Message>
+  <Message number="8203" eDefine="SYS_ERR_HW_SMB_OFFSET_X">
+    <Title>SMB offset X error</Title>
+    <Description>Offset error for X signal at Serial Measurement Board.<p />Drive module: <arg format="%.f" ordinal="1" /><p />Measurement link: <arg format="%.f" ordinal="2" /><p />Measurement board: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- Replace Serial Measurement Board.</Actions>
+  </Message>
+  <Message number="8204" eDefine="SYS_ERR_HW_SMB_OFFSET_Y">
+    <Title>SMB offset Y error</Title>
+    <Description>Offset error for Y signal at Serial Measurement Board.<p />Drive module: <arg format="%.f" ordinal="1" /><p />Measurement link: <arg format="%.f" ordinal="2" /><p />Measurement board: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- Replace Serial Measurement Board</Actions>
+  </Message>
+  <Message number="8205" eDefine="SYS_ERR_HW_SMB_LINEAR_X_Y">
+    <Title>SMB Linearity Error</Title>
+    <Description>Linearity error for X-Y signal difference at Serial Measurement Board.<p />System may still operate with warning.<p />System will not function with error.<p />Drive module: <arg format="%.f" ordinal="1" /><p /> Measurement link: <arg format="%.f" ordinal="2" /><p />Measurement board: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- Replace Serial Measurement Board.</Actions>
+  </Message>
+  <Message number="8206" eDefine="SYS_ERR_HW_SMB_LINEAR_X">
+    <Title>SMB Linearity X Error</Title>
+    <Description>Linearity error for X signal on Serial Measurement Board.<p />Drive module: <arg format="%.f" ordinal="1" /><p />Measurement link: <arg format="%.f" ordinal="2" /><p />Measurement board: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- Replace Serial Measurement Board.</Actions>
+  </Message>
+  <Message number="8207" eDefine="SYS_ERR_HW_SMB_LINEAR_Y">
+    <Title>SMB Linearity Y Error</Title>
+    <Description>Linearity error for Y signal at Serial Measurement Board.<p />Drive module: <arg format="%.f" ordinal="1" /><p />Measurement link: <arg format="%.f" ordinal="2" /><p />Measurement board: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- Replace Serial Measurement Board.</Actions>
+  </Message>
+  <Message number="8208" eDefine="SYS_ERR_HW_SMB_RESOLVER_HIGH_VOLTAGE">
+    <Title>Resolver error</Title>
+    <Description>Too high voltage from X or Y resolver signals.<p />Sum of squared X and Y exceeds max.<p />Joint: <arg format="%s" ordinal="1" /><p />Drive module: <arg format="%d" ordinal="2" /><p /> Measurement link: <arg format="%.f" ordinal="3" /><p />Measurement board: <arg format="%.f" ordinal="4" /><p />Board node: <arg format="%.f" ordinal="5" /><p /></Description>
+    <Actions>- Check resolver and resolver connections.<p />- Replace Serial Measurement Board.<p />- Replace resolver.</Actions>
+  </Message>
+  <Message number="8209" eDefine="SYS_ERR_HW_SMB_RESOLVER_LOW_VOLTAGE">
+    <Title>Resolver error</Title>
+    <Description>Too low voltage from X or Y resolver signals.<p />Sum of squared X and Y too low.<p />Joint: <arg format="%s" ordinal="1" /><p />Drive module: <arg format="%d" ordinal="2" /><p /> Measurement link: <arg format="%.f" ordinal="3" /><p />Measurement board: <arg format="%.f" ordinal="4" /><p />Board node: <arg format="%.f" ordinal="5" /><p /></Description>
+    <Actions>- Check resolver and resolver connections.<p />- Replace Serial Measurement Board.<p />- Replace resolver.</Actions>
+  </Message>
+  <Message number="8210" eDefine="SYS_ERR_HW_SMB_SMS_REGISTER_TRANSMISSION_FAULT">
+    <Title>Transmission fault.</Title>
+    <Description>Serial Measurement Board SMS communication failed.<p />Status: <arg format="%d" ordinal="1" /><p />Drive module: <arg format="%.f" ordinal="2" /><p /> Measurement link: <arg format="%.f" ordinal="3" /><p />Measurement board: <arg format="%.f" ordinal="4" /><p />Board node: <arg format="%.f" ordinal="5" /><p /></Description>
+    <Actions>- Restart system.<p />- Check cable and connectors for SMB communication.<p />- Replace the Serial Measurement Board.</Actions>
+  </Message>
+  <Message number="8211" eDefine="SYS_ERR_HW_SMB_FUNCTIONALLITY_NOT_SUPPORTED">
+    <Title>Measurement functionality error.</Title>
+    <Description>The Serial Measurement Board does not support 7 axes.<p />Drive module: <arg format="%.f" ordinal="1" /><p />Measurement link: <arg format="%.f" ordinal="2" /><p />Measurement board: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- Check configurations of the 7th axis. <p />- Replace Serial Measurement Board to a board with 7 axes functionality.</Actions>
+  </Message>
+  <Message number="8212" eDefine="SYS_ERR_HW_SMB_WARNING_CFG_NOT_FOUND">
+    <Title>Data not found.</Title>
+    <Description>Configuration data for Serial Measurement Board not found. System will use default data.<p />Drive module: <arg format="%.f" ordinal="1" /><p /> Measurement link: <arg format="%.f" ordinal="2" /><p />Measurement board: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- Check configuration.</Actions>
+  </Message>
+  <Message number="8213" eDefine="SYS_ERR_HW_SMB_WARNING_BATTERY_LOW">
+    <Title>Battery charge low.</Title>
+    <Description>Battery on Serial Measurement Board will soon be depleted. Replace battery at a suitable opportunity.  <p />Drive module: <arg format="%.f" ordinal="1" /><p /> Measurement link: <arg format="%.f" ordinal="2" /><p />Measurement board: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- Replace battery on serial measurement.</Actions>
+  </Message>
+  <Message number="8214" eDefine="SYS_ERR_HW_SMB_BATTERY_SHUT_DOWN_FAIL">
+    <Title>Battery failure.</Title>
+    <Description>Transportation shut down of battery failed. The battery will still be in normal mode. <p />Drive module: <arg format="%.f" ordinal="1" /><p /> Measurement link: <arg format="%.f" ordinal="2" /><p />Measurement board: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- Retry shut down.<p />- Replace serial measurement board.</Actions>
+  </Message>
+  <Message number="8215" eDefine="SYS_ERR_HW_SMB_BATTERY_FLAG_STUCK">
+    <Title>Battery supervision failure.</Title>
+    <Description>Failure occurred during reset of battery supervision circuit in Serial Measurement Board. <p />Drive module: <arg format="%.f" ordinal="1" /><p /> Measurement link: <arg format="%.f" ordinal="2" /><p />Measurement board: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- Repete update of revolution counter for joint connected to the SMB.<p />- Replace serial measurement board.</Actions>
+  </Message>
+  <Message number="8216" eDefine="SYS_ERR_HW_SMB_DSQC633C_NOT_SUPPORTED">
+    <Title>SMB functionality error.</Title>
+    <Description>The Serial Measurement Board does not support needed functionality. The needed functionality is available in DSQC633C or better SMB.<p /><p />Drive module: <arg format="%.f" ordinal="1" /><p />Measurement link: <arg format="%.f" ordinal="2" /><p />Measurement board: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Consequences>The motion performance will be lower compared with what it should be with DSQC633C or better SMB.</Consequences>
+    <Actions>- Replace Serial Measurement Board with a board with at least DSQC633C functionality.</Actions>
+  </Message>
+  <Message number="8218" eDefine="SYS_ERR_HW_EIB_ENCODER_TEMPERATURE_HIGH">
+    <Title>EIB high encoder temperature.</Title>
+    <Description>The temperature of the motor encoder is to high.<p /><p />Joint: <arg format="%s" ordinal="1" /><p />Drive module: <arg format="%d" ordinal="2" /><p />Measurement link: <arg format="%.f" ordinal="3" /><p />Measurement board: <arg format="%.f" ordinal="4" /><p />Board node: <arg format="%.f" ordinal="5" /><p /></Description>
+    <Consequences>The life time of the encoder can be reduced.</Consequences>
+    <Actions>Stop robot and wait for motor/encoder to cool down.<p />- Reduce ambient temperature<p />- Change robot program to avoid high speeds and torques</Actions>
+  </Message>
+  <Message number="8230" eDefine="SYS_ERR_HW_PMC_CARD_NOT_CONNECTED">
+    <Title>PMC card not connected correctly</Title>
+    <Description>The PMC card that is configured in the Motion configuration is not connected or is not working correctly.<p /></Description>
+    <Consequences>The application that needs this PMC card can not be ran.</Consequences>
+    <Causes>The PMC card is not connected or the card is broken.</Causes>
+    <Actions>Please check the PMC card that is attached to the axis computer in the drive module <arg format="%d" ordinal="1" />.</Actions>
+  </Message>
+  <Message number="8231" eDefine="SYS_ERR_HW_PMC_NO_CHANNELS_ENABLED">
+    <Title>PMC card can not be started</Title>
+    <Description>The PMC card that is configured in the Motion configuration is not set up correctly and can not be started.</Description>
+    <Consequences>The application that uses this PMC card can not be ran.</Consequences>
+    <Causes>The error is problably a error in the Motion configuration.<p /></Causes>
+    <Actions>Please check the limits for channels for this card in the Motion configuration.</Actions>
+  </Message>
+  <Message number="8232" eDefine="SYS_ERR_HW_PMC_MAX_CHANNELS_REACHED">
+    <Title>PMC max channels reached</Title>
+    <Description>The PMC card that is configured in the Motion configuration is not set up correctly and can not be started.</Description>
+    <Consequences>The application that uses this PMC card can not be ran.</Consequences>
+    <Causes>The error is problably a error in the Motion configuration.<p /></Causes>
+    <Actions>Please check the limits for channels for this card in the Motion configuration.</Actions>
+  </Message>
+  <Message number="8233" eDefine="SYS_ERR_HW_FT_CABLE_SAFETY_CHECK_FAILED">
+    <Title>Force sensor safety channel error</Title>
+    <Description>The safety channel in the cable between the force sensor and measurment board is under configured safety channel voltage level. The force sensor is connected to the axis computer in drive module <arg format="%d" ordinal="1" />.</Description>
+    <Consequences>The system will go to SYS HALT and the application that uses this sensor can not be ran until cable is connected or replaced. Safety channel supervision can be disconnected in the Motion configuraion.</Consequences>
+    <Causes>1. The cable is not attached correctly. <p />2. The cable has damage to the connectors or the cable itself.<p />3. The sensor cable does not have satefy channel.</Causes>
+    <Actions>Assure that the cable is connected properlly and inspect the connectors at both ends of the cable and the cable itself. Replace if damaged.</Actions>
+  </Message>
+  <Message number="8234" eDefine="SYS_ERR_HW_MAX_F_T_REACHED">
+    <Title>Max Force or Torque reached</Title>
+    <Description>The measurend force or torque in the force sensor attached to the axis computer in drive module <arg format="%d" ordinal="1" /> has higher value than it is configured for.</Description>
+    <Consequences>The system will not stop due to this.</Consequences>
+    <Causes>The appliced force or torque on the sensor is higher that configured. Too high ordered reference can be the cause. The configuration might also be faulty.</Causes>
+    <Actions>Check the force and torque references in the program and if the environment have applied too high force or torque to the sensor.</Actions>
+  </Message>
+  <Message number="8235" eDefine="SYS_ERR_HW_FT_INPUT_SATURATION_WARNING">
+    <Title>Saturation warning of force sensor input</Title>
+    <Description>The analog input values of the measurment board connected to the force sensor have saturated and the time in saturation has reached the warning level.<p />The measurment board is connected to the axis computer in drive module <arg format="%d" ordinal="1" /></Description>
+    <Actions>Check the load that was applied to the force/torque sensor.<p />Check that the cable, sensor and measurment board is not damaged.<p />Increase the system parameter: time in satuartion before warning</Actions>
+  </Message>
+  <Message number="8236" eDefine="SYS_ERR_HW_FT_INPUT_SATURATION_ERROR">
+    <Title>Saturation error of  of force sensor input</Title>
+    <Description>The analog input values of the measurment board connected to the force sensor have saturated and the time in saturation has reached the error level. The measurment board is connected to the axis computer in drive module <arg format="%d " ordinal="1" /></Description>
+    <Consequences>system will stop</Consequences>
+    <Actions>Check the load that was applied to the force/torque sensor. Check that the cable, sensor and measurment board is not damaged. Increase the system parameter: time in satuartion before error </Actions>
+  </Message>
+  <Message number="8237" eDefine="SYS_ERR_HW_SENSOR_SYS_FMB_CONFIGURATION">
+    <Title>Configuration error for Force Measurement Board</Title>
+    <Description>
+      The configuration input values for the Force Measurement Board connected to the force sensor is erroneous. The board is connected to drive module <arg format="%d " ordinal="1" />, link <arg format="%d " ordinal="2" />.
+    </Description>
+    <Consequences>The system goes to System Failure state.</Consequences>
+    <Actions>Check the configuration.</Actions>
+  </Message>
+  <Message number="9401" eDefine="SYS_ERR_HW_DM_DELTA_IM">
+    <Title>Torque Current Reference Error</Title>
+    <Description>The torque-current reference is increasing too quickly for joint <arg format="%s" ordinal="2" />, connected to drive module <arg format="%.d" ordinal="1" />. <p /><p /></Description>
+    <Consequences>-</Consequences>
+    <Causes>The resolver feedback may be poor or the speed loop gain may be badly adjusted.</Causes>
+    <Actions>1) Check the resolver cable and the resolver grounding for this joint. If this joint is an additional axis, then check that the motor data in the configuration file is correct. How to check the configuration file is detailed in the Trouble Shooting Manual. <p />2) Reduce the gain of the speed loop.</Actions>
+  </Message>
+  <Message number="9402" eDefine="SYS_ERR_HW_DM_DELTA_RFI">
+    <Title>Motor Angle Reference Warning</Title>
+    <Description>The motor angle reference is increasing too quickly for joint <arg format="%s" ordinal="2" />, connected to drive module <arg format="%.d" ordinal="1" />. <p /><p /></Description>
+    <Consequences>-</Consequences>
+    <Causes>The resolver feedback may be poor or the speed loop gain may be badly adjusted.</Causes>
+    <Actions>1) Check the resolver cable and the resolver grounding for this joint. If this joint is an additional axis, then check that the motor data in the configuration file is correct. How to check the configuration file is detailed in the Trouble Shooting Manual. <p />2) Reduce the gain of the speed loop.</Actions>
+  </Message>
+  <Message number="9403" eDefine="SYS_ERR_HW_DM_IQ_UNDERCURR">
+    <Title>Torque Loop Undercurrent</Title>
+    <Description>The torque-current controller detected too low current for joint <arg format="%s" ordinal="2" />, connected to drive module <arg format="%.d" ordinal="1" />.<p /><p /></Description>
+    <Consequences>-</Consequences>
+    <Causes>The motor data in the configuration files may be wrong or the DC bus voltage may be too low.</Causes>
+    <Actions>1) Check that the motor data in the configuration file is correct for this joint. How to check the configuration file is detailed in the Trouble Shooting Manual.<p />2) Check that no DC bus errors are present in the event log. <p />3) Check that the incoming mains voltage is within the specification. <p />4) Check that the motor cables are not damaged or badly connected.</Actions>
+  </Message>
+  <Message number="9404" eDefine="SYS_ERR_HW_DM_IQ_OVERCURR">
+    <Title>Torque Loop Overcurrent</Title>
+    <Description>The field-current controller detected too high current for joint <arg format="%s" ordinal="2" />, connected to drive module <arg format="%.d" ordinal="1" />.</Description>
+    <Consequences>-</Consequences>
+    <Causes>The motor data in the configuration files may be wrong.</Causes>
+    <Actions>1) Check that the motor data in the configuration file is correct for this joint. How to check the configuration file is detailed in the Trouble Shooting Manual.<p />2) Check that no DC bus errors are present in the event log. <p />3) Check that the incoming mains voltage is within the specification. <p />4) Check that the motor cables are not damaged or badly connected.</Actions>
+  </Message>
+  <Message number="9405" eDefine="SYS_ERR_HW_DM_IQ_PWM_MAX">
+    <Title>Maximum PWM Reached in Torque Controller</Title>
+    <Description>The torque-current control loop has been saturated for joint <arg format="%s" ordinal="2" />, connected to drive module <arg format="%.d" ordinal="1" />.<p /><p /></Description>
+    <Consequences>-</Consequences>
+    <Causes>The mains voltage may be too low or the motor windings or motor cables may be broken.</Causes>
+    <Actions>1) Check that no DC bus errors are present in the event log. <p />2) Check that the incoming mains voltage is within specified limits. <p />3) Check the motor cables and motor windings for open circuits.</Actions>
+  </Message>
+  <Message number="9406" eDefine="SYS_ERR_HW_DM_ID_ERRMAX">
+    <Title>Field Loop overcurrent</Title>
+    <Description>The field-current control loop has produced too high current for joint <arg format="%s" ordinal="2" />, connected to drive module <arg format="%d" ordinal="1" />.</Description>
+    <Consequences>-</Consequences>
+    <Causes>The motor data in the configuration files may be wrong.</Causes>
+    <Actions>1) Check that no DC bus errors are present in the event log. <p />2) Check that the incoming mains is within specified limits. <p />3) Check the motor cables and motor windings.</Actions>
+  </Message>
+  <Message number="9407" eDefine="SYS_ERR_HW_DM_WRONG_TYPE_CODE_DU">
+    <Title>Drive Unit has the wrong type code</Title>
+    <Description>The type code in drive unit for joint <arg format="%s" ordinal="2" /> in drive module <arg format="%d" ordinal="1" /> is different from the one specified in the configuration file. Installed drive unit type is <arg format="%s" ordinal="3" />, and the configured type is <arg format="%s" ordinal="4" />. </Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The configuration file may contain incorrect values, the configuration key may be incorrect or the hardware may be of the wrong type. If the drive unit was recently replaced, a drive unit with the wrong type code may have been fitted or the key was not replaced with one for the correct hardware/software combination.</Causes>
+    <Actions>1) Make sure the values in the configuration file match the installed hardware.<p />2) Make sure the configuration key match the installed hardware/software combination. How to check the configuration file is detailed in the Trouble Shooting Manual. <p />3) If the drive unit was recently replaced, make sure a unit of the correct type code is used.</Actions>
+  </Message>
+  <Message number="9408" eDefine="SYS_ERR_HW_DM_WRONG_TYPE_CODE_RECT">
+    <Title>Rectifier Unit has the wrong type code</Title>
+    <Description>The type code for rectifier unit <arg format="%s" ordinal="2" /> in drive module <arg format="%d" ordinal="1" /> is different from the one specified in the configuration file. Installed rectifier unit type is <arg format="%s" ordinal="3" />, and the configured type is <arg format="%s" ordinal="4" />. </Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS FAIL.</Consequences>
+    <Causes>The configuration file may contain incorrect values, the configuration key may be incorrect or the hardware may be of the wrong type. If the rectifier unit was recently replaced, a rectifier unit with the wrong type code may have been fitted or the key was not replaced with one for the correct hardware/software combination.</Causes>
+    <Actions>1) Make sure the values in the configuration file match the installed hardware.<p />2) Make sure the configuration key match the installed hardware/software combination. How to check the configuration file is detailed in the Trouble Shooting Manual. <p />3) If the rectifier unit was recently replaced, make sure a unit of the correct type code is used.</Actions>
+  </Message>
+  <Message number="9409" eDefine="SYS_ERR_HW_DM_WRONG_TYPE_CODE_CAP">
+    <Title>Capacitor Unit has the wrong type code</Title>
+    <Description>The type code for capacitor unit <arg format="%d" ordinal="2" /> in drive module <arg format="%d" ordinal="1" /> is different from the one specified in the configuration file. Installed capacitor unit type is <arg format="%s" ordinal="3" />, and the configured type is <arg format="%s" ordinal="4" />. </Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The configuration file may contain incorrect values, the configuration key may be incorrect or the hardware may be of the wrong type. If the capacitor unit was recently replaced, a capacitor unit with the wrong type code may have been fitted or the key was not replaced with one for the correct hardware/software combination.</Causes>
+    <Actions>1) Make sure the values in the configuration file match the installed hardware.<p />2) Make sure the configuration key match the installed hardware/software combination. How to check the configuration file is detailed in the Trouble Shooting Manual. <p />3) If the capacitor unit was recently replaced, make sure a unit of the correct type code is used.</Actions>
+  </Message>
+  <Message number="9410" eDefine="SYS_ERR_HW_DS_COMM_RATE_WARN">
+    <Title>Drive Unit communication warning</Title>
+    <Description>Many communication errors are being detected between the axis computer and drive unit number <arg format="%d" ordinal="3" /> in drive module <arg format="%.d" ordinal="1" />. (error rate per time unit)</Description>
+    <Consequences>If the number of communication errors increases further, there is a risk that the controller will be forced to stop</Consequences>
+    <Causes>External noise may interfere with the communication signals.</Causes>
+    <Actions>1) Check the communication link cable between the axis computer and the main drive unit is correctly connected. <p />2) Check that the module is properly grounded. <p />3) Check for external electromagnetic noise sources close to the drive module.</Actions>
+  </Message>
+  <Message number="9411" eDefine="SYS_ERR_HW_DS_COMM_ERROR">
+    <Title>Too Many communication errors</Title>
+    <Description>Four or more consecutive communication packets have been lost between the axis computer and drive unit <arg format="%d" ordinal="3" /> in drive module <arg format="%.d" ordinal="1" />.</Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>There may be a break in the communication link cable between the axis computer and the main drive unit, the drive module may be incorrectly grounded or excessive noise may interfere with the communication signals.</Causes>
+    <Actions>1) Check the communication link cable between the axis computer and the main drive unit is correctly connected. <p />2) Check that the module is properly grounded. <p />3) Check for external electromagnetic noise sources close to the drive module.</Actions>
+  </Message>
+  <Message number="9412" eDefine="SYS_ERR_HW_DS_NODE_COMM_ERROR">
+    <Title>Too Many Missed Reference Updates</Title>
+    <Description>Too many missed communication packets have been detected for joint <arg format="%s" ordinal="2" />, in drive module <arg format="%.d" ordinal="1" />.<p /><p /></Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>There may be a break in the communication link cable between the axis computer and the main drive unit, the drive module may be incorrectly grounded or excessive noise may interfere with the communication signals.</Causes>
+    <Actions>1) Check the communication link cable between the axis computer and the main drive unit is correctly connected. <p />2) Check that the module is properly grounded. <p />3) Check for external electromagnetic noise sources close to the drive module.. </Actions>
+  </Message>
+  <Message number="9413" eDefine="SYS_ERR_HW_SOFTWARE_NOT_SYNCHRONISED">
+    <Title>Drive Software Not Synchronised</Title>
+    <Description>The axis computer software  in drive module <arg format="%d" ordinal="1" /> has become unsynchronised with the drive software for joint <arg format="%s" ordinal="2" />. This is an unstable software state.</Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>There may be glitches in the system timing. </Causes>
+    <Actions>1) Restart the controller. <p />2) If the problem persists, contact your local ABB representative..</Actions>
+  </Message>
+  <Message number="9414" eDefine="SYS_ERR_HW_UNKNOWN_TYPE_CODE_CAP">
+    <Title>Unknown Capacitor Type Code</Title>
+    <Description>The type code for the capacitor unit <arg format="%s" ordinal="2" /> in drive module <arg format="%d" ordinal="1" /> is not recognised by the system.</Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The wrong type of capacitor unit may have been fitted or the capacitor version used is not supported by the software.</Causes>
+    <Actions>1) Check the type of capacitor unit fitted. Replace if it is the wrong type. <p />2) If the problem persists, contact your local ABB representative.</Actions>
+  </Message>
+  <Message number="9415" eDefine="SYS_ERR_HW_DM_COM_LOST_ERR">
+    <Title>Communication with the Drive Unit Lost</Title>
+    <Description>Communication with drive unit number <arg format="%d" ordinal="3" /> in drive module <arg format="%d" ordinal="1" /> has been lost. </Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>There may be a break in the communication link cable between the axis computer and the main drive unit, the drive module may be incorrectly grounded or excessive noise may interfere with the communication signals.</Causes>
+    <Actions>1) Check the communication link cable between the axis computer and the main drive unit is correctly connected. <p />2) Check that the module is properly grounded. <p />3) Check for external electromagnetic noise sources close to the drive module.. </Actions>
+  </Message>
+  <Message number="9416" eDefine="SYS_ERR_HW_DM_DRIVE_NOT_RESPONDING">
+    <Title>Drive Unit Not Responding</Title>
+    <Description>The main drive unit in drive module <arg format="%d" ordinal="1" /> is not responding. </Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>There may be a break in the communication link cable between the axis computer and the main drive unit,  or there may be a lock-up in the software. </Causes>
+    <Actions>1) Check the communication link cable between the axis computer and the main drive unit is correctly connected. <p />2) Restart the controller. <p />3) If the problem persists, contact your local ABB representative.</Actions>
+  </Message>
+  <Message number="9417" eDefine="SYS_ERR_HW_DM_NO_DRIVE_SW_FOUND">
+    <Title>Cannot find Drive Software Version File</Title>
+    <Description>The system cannot locate a valid drive version file on the disk.<p /><p />The file may have been erased my mistake.  Without this file it is not possible to check if the drive units software needs updating.</Description>
+    <Actions>Contact your local ABB representative.</Actions>
+  </Message>
+  <Message number="9418" eDefine="SYS_ERR_HW_DM_UNKNOWN_TYPE_CODE_DU">
+    <Title>Unknown Drive Unit type code</Title>
+    <Description>The type code for the drive unit <arg format="%s" ordinal="2" /> in drive module <arg format="%d" ordinal="1" /> is not recognised by the system. Installed drive unit type is <arg format="%d" ordinal="3" />, and the configured type is <arg format="%d" ordinal="4" />. </Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The connection to the drive unit may be bad or the hardware may be faulty.</Causes>
+    <Actions>1) Make sure the cable connections on the drive unit are correct. <p />2) Make sure the drive unit is one supported by this controller. <p />3) If the drive unit was recently replaced, make sure a unit of the correct type code is used.</Actions>
+  </Message>
+  <Message number="9419" eDefine="SYS_ERR_HW_DM_UNKNOWN_TYPE_CODE_RECT">
+    <Title>Unknown Rectifier type code</Title>
+    <Description>The type code for the rectifier unit <arg format="%s" ordinal="2" /> in drive module <arg format="%d" ordinal="1" /> is not recognised by the system. Installed rectifier unit type is <arg format="%d" ordinal="3" />, and the configured type is <arg format="%d" ordinal="4" />. </Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The connection to the drive unit may be bad or the hardware may be faulty.</Causes>
+    <Actions>1) Make sure the cable connections on the rectifier unit unit are correct. <p />2) Make sure the rectifier unit is one supported by this controller. <p />3) If the rectifier unit was recently replaced, make sure a unit of the correct type code is used.</Actions>
+  </Message>
+</Domain>

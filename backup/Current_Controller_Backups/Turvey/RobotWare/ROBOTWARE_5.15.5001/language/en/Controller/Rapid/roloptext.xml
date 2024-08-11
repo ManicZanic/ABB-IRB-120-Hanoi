@@ -1,0 +1,1259 @@
+<?xml version="1.0" encoding="iso-8859-1" ?>
+<Resource Name="roloptext" Language="en">
+	<Text Name="200">
+		<Value>Is actual mass less than 200 kg ?</Value>
+		<Comment>Maximum length 60 chars</Comment>
+	</Text>
+	<Text Name="201">
+		<Value>Yes</Value>
+		<Comment>Maximum length 22 chars</Comment>
+	</Text>
+	<Text Name="202">
+		<Value>No</Value>
+		<Comment>Maximum length 22 chars</Comment>
+	</Text>
+	<Text Name="203">
+		<Value>Check/switch operating mode</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="204">
+		<Value>for slow test.</Value>
+		<Comment>Second part of sentence starting with nr 203. Max. length 80 chars</Comment>
+	</Text>
+	<Text Name="205">
+		<Value>1. Switch to manual mode reduced speed</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="206">
+		<Value>2. Start program execution</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="207">
+		<Value>for load measurement.</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="208">
+		<Value>1. Switch to automatic mode</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="210">
+		<Value>Press MOVE for slow test movements</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="211">
+		<Value>for measurement movements !</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="212">
+		<Value>MOVE</Value>
+		<Comment>Maximum length 22 chars</Comment>
+	</Text>
+	<Text Name="213">
+		<Value>Press MOVE for measurement movements</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="214">
+		<Value>* RAPID Load Identification Program *</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="215">
+		<Value>* The Tool to identify must be mounted</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="216">
+		<Value>on robot, defined with name</Value>
+		<Comment>Second part of sentence starting with nr 215. Max. length 80 chars</Comment>
+	</Text>
+	<Text Name="217">
+		<Value>and active in the jogging window.</Value>
+		<Comment>Third part of sentence starting with nr 215. Max. length 80 chars</Comment>
+	</Text>
+	<Text Name="218">
+		<Value>* Suitable robot axes (1-6) positions.</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="219">
+		<Value>* Mounted arm load must be defined.</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="220">
+		<Value>Identification of Tool or PayLoad ?</Value>
+		<Comment>Maximum length 60 chars</Comment>
+	</Text>
+	<Text Name="221">
+		<Value>Tool</Value>
+		<Comment>Maximum length 22 chars</Comment>
+	</Text>
+	<Text Name="222">
+		<Value>PayLoad</Value>
+		<Comment>Maximum length 22 chars</Comment>
+	</Text>
+	<Text Name="223">
+		<Value>Cancel</Value>
+		<Comment>Maximum length 22 chars</Comment>
+	</Text>
+	<Text Name="224">
+		<Value>Load identification of active tool</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="225">
+		<Value>Identify tool named</Value>
+		<Comment>Maximum length 20 chars</Comment>
+	</Text>
+	<Text Name="226">
+		<Value>?</Value>
+		<Comment>Do not change at translation</Comment>
+	</Text>
+	<Text Name="227">
+		<Value>OK</Value>
+		<Comment>Maximum length 22 chars</Comment>
+	</Text>
+	<Text Name="228">
+		<Value>=</Value>
+		<Comment>Do not change at translation</Comment>
+	</Text>
+	<Text Name="229">
+		<Value>PayLoad named</Value>
+		<Comment>Maximum length 20 chars</Comment>
+	</Text>
+	<Text Name="230">
+		<Value>0 = Display more PayLoad</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="231">
+		<Value>Select PayLoad for identification</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="232">
+		<Value>Display available PayLoad once again ?</Value>
+		<Comment>Maximum length 60 chars</Comment>
+	</Text>
+	<Text Name="233">
+		<Value>Confirm !</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="234">
+		<Value>* The Tool (ToolGripper) and the PayLoad</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="235">
+		<Value>must be mounted on robot.</Value>
+		<Comment>Second part of sentence starting with nr 235. Max. length 80 chars</Comment>
+	</Text>
+	<Text Name="236">
+		<Value>* The PayLoad to identify must be</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="237">
+		<Value>defined with name.</Value>
+		<Comment>Second part of sentence starting with nr 236. Max. length 80 chars</Comment>
+	</Text>
+	<Text Name="238">
+		<Value>Load identification of PayLoad with</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="239">
+		<Value>use of already mounted, active and</Value>
+		<Comment>Second part of sentence starting with nr 238. Max. length 80 chars</Comment>
+	</Text>
+	<Text Name="240">
+		<Value>load identified Tool (Tool Gripper).</Value>
+		<Comment>Third part of sentence starting with nr 238. Max. length 80 chars</Comment>
+	</Text>
+	<Text Name="241">
+		<Value>Use tool named</Value>
+		<Comment>Maximum length 20 chars</Comment>
+	</Text>
+	<Text Name="242">
+		<Value>The used moving Tool for load</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="243">
+		<Value>identification of PayLoad must</Value>
+		<Comment>Second part of sentence starting with nr 242. Max. length 80 chars</Comment>
+	</Text>
+	<Text Name="244">
+		<Value>have calibrated TCP.</Value>
+		<Comment>Third part of sentence starting with nr 242. Max. length 80 chars</Comment>
+	</Text>
+	<Text Name="245">
+		<Value>Calibrated tool named</Value>
+		<Comment>Maximum length 20 chars</Comment>
+	</Text>
+	<Text Name="246">
+		<Value>The used moving active workobject for</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="247">
+		<Value>have all frames calibrated.</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="248">
+		<Value>Calibrated WObj named</Value>
+		<Comment>Maximum length 20 chars</Comment>
+	</Text>
+	<Text Name="249">
+		<Value>load identification of PayLoad must</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="250">
+		<Value>Identification method for</Value>
+		<Comment>Maximum length 40 chars</Comment>
+	</Text>
+	<Text Name="251">
+		<Value>1 = Known mass in</Value>
+		<Comment>Maximum length 40 chars</Comment>
+	</Text>
+	<Text Name="252">
+		<Value>2 = Unknown mass in</Value>
+		<Comment>Maximum length 40 chars</Comment>
+	</Text>
+	<Text Name="253">
+		<Value>3 = Do the biggest movement with axis 5</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="254">
+		<Value>4 = Do the biggest movement with axis 6</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="255">
+		<Value>0 = Cancel</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="256">
+		<Value>Select identification method</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="257">
+		<Value>Select angle (with sign) between</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="258">
+		<Value>actual axis 6 position and the coming</Value>
+		<Comment>Second part of sentence starting with nr 257. Max. length 80 chars</Comment>
+	</Text>
+	<Text Name="259">
+		<Value>ditto for the measurement movements.</Value>
+		<Comment>Third part of sentence starting with nr 257. Max. length 80 chars</Comment>
+	</Text>
+	<Text Name="260">
+		<Value>Recommendation + or - 90 degrees.</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="261">
+		<Value>Min. +/- 30 degrees.</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="262">
+		<Value>Select configuration angle</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="263">
+		<Value>JOG axis</Value>
+		<Comment>Maximum length 20 chars</Comment>
+	</Text>
+	<Text Name="264">
+		<Value>to</Value>
+		<Comment>Maximum length 10 chars</Comment>
+	</Text>
+	<Text Name="265">
+		<Value>degrees</Value>
+		<Comment>Maximum length 10 chars</Comment>
+	</Text>
+	<Text Name="266">
+		<Value>JOG roughly to displayed position !</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="267">
+		<Value>The program will now slowly move some</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="268">
+		<Value>wrist axes to precise position.</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="269">
+		<Value>Press MOVE for adjust movements !</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="270">
+		<Value>Should test of measurement movements</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="271">
+		<Value>first be done with low speed in</Value>
+		<Comment>Second part of sentence starting with nr 270. Max. length 80 chars</Comment>
+	</Text>
+	<Text Name="272">
+		<Value>MAN/RED. SPEED before the real</Value>
+		<Comment>Third part of sentence starting with nr 270. Max. length 80 chars</Comment>
+	</Text>
+	<Text Name="273">
+		<Value>measurements with higher speed.</Value>
+		<Comment>Fourth part of sentence starting with nr 270. Max. length 80 chars</Comment>
+	</Text>
+	<Text Name="274">
+		<Value>Run test with slow speed ?</Value>
+		<Comment>Maximum length 60 chars</Comment>
+	</Text>
+	<Text Name="275">
+		<Value>Result of Tool identification:</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="276">
+		<Value>Mass (kg)                =</Value>
+		<Comment>Maximum length 40 chars</Comment>
+	</Text>
+	<Text Name="277">
+		<Value>Center of gravity (mm):</Value>
+		<Comment>Maximum length 40 chars</Comment>
+	</Text>
+	<Text Name="278">
+		<Value>   y =</Value>
+		<Comment>Maximum length 40 chars</Comment>
+	</Text>
+	<Text Name="279">
+		<Value>   z =</Value>
+		<Comment>Maximum length 40 chars</Comment>
+	</Text>
+	<Text Name="280">
+		<Value>Measure Accuracy (%)     =</Value>
+		<Comment>Maximum length 40 chars</Comment>
+	</Text>
+	<Text Name="281">
+		<Value>Update Tool</Value>
+		<Comment>Maximum length 25 chars</Comment>
+	</Text>
+	<Text Name="282">
+		<Value>Result of PayLoad identification:</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="283">
+		<Value>Update PayLoad</Value>
+		<Comment>Maximum length 25 chars</Comment>
+	</Text>
+	<Text Name="284">
+		<Value>Retry</Value>
+		<Comment>Maximum length 22 chars</Comment>
+	</Text>
+	<Text Name="285">
+		<Value>:</Value>
+		<Comment>Do not change at translation</Comment>
+	</Text>
+	<Text Name="286">
+		<Value>Running slow test movements</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="287">
+		<Value>Running measurement movements ...</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="288">
+		<Value>Running wrist axes in position ...</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="289">
+		<Value>1. Switch back to manual mode</Value>
+		<Comment>Maximum length 80 chars. Sentence continues with Text number 465</Comment>
+	</Text>
+	<Text Name="290">
+		<Value>Press OK to continue !</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="291">
+		<Value>Other</Value>
+		<Comment>Maximum length 22 chars</Comment>
+	</Text>
+	<Text Name="292">
+		<Value>-90</Value>
+		<Comment>Maximum length 22 chars</Comment>
+	</Text>
+	<Text Name="293">
+		<Value>+90</Value>
+		<Comment>Maximum length 22 chars</Comment>
+	</Text>
+	<Text Name="294">
+		<Value>0 = Display available PayLoad once again</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="295">
+		<Value>WARNING: LOW ACCURACY !</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="296">
+		<Value>anyhow</Value>
+		<Comment>Maximum length 10 chars</Comment>
+	</Text>
+	<Text Name="297">
+		<Value>1= External Manipulator IRBP A</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="298">
+		<Value>2= External Manipulator IRBP B</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="299">
+		<Value>3= External Manipulator IRBP C</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="300">
+		<Value>4= External Manipulator IRBP C_INDEX</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="301">
+		<Value>5= External Manipulator IRBP D</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="302">
+		<Value>6= External Manipulator IRBP K</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="303">
+		<Value>7= External Manipulator IRBP L</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="304">
+		<Value>Select Ext. Manipulator (0 = Cancel, 9 = Show More)</Value>
+		<Comment>Maximum length 60 chars</Comment>
+	</Text>
+	<Text Name="305">
+		<Value>-1 = Cancel</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="306">
+		<Value>* The PayLoad to identify must be</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="307">
+		<Value>  mounted and defined with name.</Value>
+		<Comment>Second part of sentence starting with nr 306. Max. length 80 chars</Comment>
+	</Text>
+	<Text Name="308">
+		<Value>MechUnit named</Value>
+		<Comment>Maximum length 20 chars</Comment>
+	</Text>
+	<Text Name="309">
+		<Value>Display available MechUnits once again ?</Value>
+		<Comment>Maximum length 60 chars</Comment>
+	</Text>
+	<Text Name="310">
+		<Value>0 = Display MechUnits once again</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="311">
+		<Value>0 = Display more MechUnits</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="312">
+		<Value>Select MechUnit (-1 = Cancel)</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="313">
+		<Value>Select axis with the load to identify.</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="314">
+		<Value>Select PayLoad(-1 = Cancel) ?</Value>
+		<Comment>Maximum length 60 chars</Comment>
+	</Text>
+	<Text Name="315">
+		<Value>(Select axis 2 or 3 within</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="316">
+		<Value>Select axis number</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="317">
+		<Value>The axis on the opposite side</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="318">
+		<Value>must be empty!</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="319">
+		<Value>Specify mass for the load.</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="320">
+		<Value>Specify mass in kg?</Value>
+		<Comment>Maximum length 60 chars</Comment>
+	</Text>
+	<Text Name="321">
+		<Value>Specify z-coordinate for the load.</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="322">
+		<Value>Specify z in mm?</Value>
+		<Comment>Maximum length 60 chars</Comment>
+	</Text>
+	<Text Name="323">
+		<Value>actual axis position and the coming</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="324">
+		<Value>JOG the interchange axis</Value>
+		<Comment>Maximum length 40 chars</Comment>
+	</Text>
+	<Text Name="325">
+		<Value>6= External Robot</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="326">
+		<Value>* Suitable axes positions.</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="327">
+		<Value>axes to precise position.</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="328">
+		<Value>Running axes in position ...</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="329">
+		<Value>* Load identification with the Mech.</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="330">
+		<Value>  unit including all manipulator axes.</Value>
+		<Comment>Second part of sentence starting with nr 329. Max. length 80 chars</Comment>
+	</Text>
+	<Text Name="331">
+		<Value>* MAN. LOAD IDENT.- PRECONDITIONS:</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="332">
+		<Value>JOG the interchange axis to one of its end positions!</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="333">
+		<Value>the mechanical unit.)</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="334">
+		<Value>available for this robot type.</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="335">
+		<Value>Load Identification only partly</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="336">
+		<Value>Mass must be less then 200 kg for IRB 6400FHD.</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="337">
+		<Value>No or no more user defined MechUnits</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="338">
+		<Value>available in the system.</Value>
+		<Comment>Second part of sentence starting with nr 337. Max. length 80 chars</Comment>
+	</Text>
+	<Text Name="339">
+		<Value>No or no more user defined PayLoad</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="340">
+		<Value>1= External Manipulator IRBP R</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="341">
+		<Value>2= External Manipulator IRBP T</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="342">
+		<Value>Moment of inertia (kgm2):</Value>
+		<Comment>Maximum length 40 chars</Comment>
+	</Text>
+	<Text Name="343">
+		<Value>   y =</Value>
+		<Comment>Maximum length 40 chars</Comment>
+	</Text>
+	<Text Name="344">
+		<Value>   z =</Value>
+		<Comment>Maximum length 40 chars</Comment>
+	</Text>
+	<Text Name="345">
+		<Value>NOTE!</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="346">
+		<Value>Do not forget to run the instruction</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="347">
+		<Value>MechUnitLoad, with the just identified</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="348">
+		<Value>payload as argument.</Value>
+		<Comment>Second part of sentence starting with nr 347. Max. length 80 chars</Comment>
+	</Text>
+	<Text Name="349">
+		<Value>This is done in your RAPID program and</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="350">
+		<Value>is needed to define the payload for</Value>
+		<Comment>Second part of sentence starting with nr 349. Max. length 80 chars</Comment>
+	</Text>
+	<Text Name="351">
+		<Value>the mechanical unit.</Value>
+		<Comment>Third part of sentence starting with nr 349. Max. length 80 chars</Comment>
+	</Text>
+	<Text Name="352">
+		<Value>No or no more user defined PayLoad</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="353">
+		<Value>available in the system.</Value>
+		<Comment>Second part of sentence starting with nr 352. Max. length 80 chars</Comment>
+	</Text>
+	<Text Name="354">
+		<Value>3. Press MOVE for slow test movements</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="355">
+		<Value>3. Press MOVE for measurement movements</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="356">
+		<Value>Select Ext. Manipulator (0 = Cancel, 3 = Show Previous)</Value>
+		<Comment>Maximum length 60 chars</Comment>
+	</Text>
+	<Text Name="359">
+		<Value>Measurement number:</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="360">
+		<Value>* The service routine LoadIdentify must</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="361">
+		<Value>be called from the task using the tool.</Value>
+		<Comment>Second part of sentence starting with nr 360. Max. length 80 chars</Comment>
+	</Text>
+	<Text Name="362">
+		<Value>The measurements can take up to 8 min.</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="363">
+		<Value>Simulate instruction?</Value>
+		<Comment>Max. length 40 chars</Comment>
+	</Text>
+	<Text Name="364">
+		<Value>The program pointer will be lost and</Value>
+		<Comment>Max. length 80 chars</Comment>
+	</Text>
+	<Text Name="365">
+		<Value>the current path will be cleared during execution.</Value>
+		<Comment>Second part of sentence starting with nr 365. Max. length 80 chars</Comment>
+	</Text>
+	<Text Name="366">
+		<Value>Set PP to main when this service routine is finished!</Value>
+		<Comment>Max. length 80 chars</Comment>
+	</Text>
+	<Text Name="367">
+		<Value>Do only for type B or D, not type A manipulator.</Value>
+		<Comment>Max. length 80 chars</Comment>
+	</Text>
+	<Text Name="368">
+		<Value>WaitSyncTask</Value>
+		<Comment>Do not change at translation</Comment>
+	</Text>
+	<Text Name="369">
+		<Value>SkipTaskExec</Value>
+		<Comment>Do not change at translation</Comment>
+	</Text>
+	<Text Name="370">
+		<Value>Mark task and push Disable. Done to exit</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="371">
+		<Value>Information</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="372">
+		<Value>To get more information about</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="373">
+		<Value>push Info.</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="374">
+		<Value>To skip futher information, push Skip.</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="375">
+		<Value>Service Routine</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="376">
+		<Value>The Task Selection panel can be used to</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="377">
+		<Value>temporary disable the tasks that execute.</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="378">
+		<Value>With this service routine, you can permanently</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="379">
+		<Value>disable tasks that execute. This setting</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="380">
+		<Value>is valid to the next program start from main.</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="381">
+		<Value>How to use it.</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="382">
+		<Value>Disable a task in task selection panel.</Value>
+		<Comment>Maximum length 53 chars</Comment>
+	</Text>
+	<Text Name="383">
+		<Value>Execute service routine from some other task,</Value>
+		<Comment>Maximum length 53 chars</Comment>
+	</Text>
+	<Text Name="384">
+		<Value>disable the same task as in step 1.</Value>
+		<Comment>Maximum length 55 chars</Comment>
+	</Text>
+	<Text Name="385">
+		<Value>End service routine.</Value>
+		<Comment>Maximum length 53 chars</Comment>
+	</Text>
+	<Text Name="386">
+		<Value>can now execute without reporting</Value>
+		<Comment>Maximum length 42 chars</Comment>
+	</Text>
+	<Text Name="387">
+		<Value>errors about disabled tasks.</Value>
+		<Comment>Maximum length 55 chars</Comment>
+	</Text>
+	<Text Name="388">
+		<Value>NOTE: Tasks that are disabled with this service routine must</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="389">
+		<Value>also be disabled in the task selection panel settings when</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>		
+	<Text Name="390">
+		<Value>continuing after this service routine.</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="391">
+		<Value>No tasks started from main.</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>		
+	<Text Name="392">
+		<Value>Execution must have been started from main</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="393">
+		<Value>at least once if service routine should be able</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="394">
+		<Value>to show tasks in the list.</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="395">
+		<Value>More</Value>
+		<Comment>Maximum length 16 chars</Comment>
+	</Text>
+	<Text Name="396">
+		<Value>Skip</Value>
+		<Comment>Maximum length 16 chars</Comment>
+	</Text>
+	<Text Name="397">
+		<Value>Info</Value>
+		<Comment>Maximum length 16 chars</Comment>
+	</Text>
+	<Text Name="398">
+		<Value>Disable</Value>
+		<Comment>Maximum length 16 chars</Comment>
+	</Text>
+	<Text Name="399">
+		<Value>Done</Value>
+		<Comment>Maximum length 16 chars</Comment>
+	</Text>
+	<Text Name="400">
+		<Value>The current path will be cleared during execution.</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="401">
+		<Value>*** Start of Cyclic Brake Check ***</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="402">
+		<Value>*** Do not interrupt the brake check ***</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+	<Text Name="403">
+		<Value>*** End of Cyclic Brake Check ***</Value>
+		<Comment>Maximum length 80 chars</Comment>
+	</Text>
+  	<Text Name="404">
+  	  	<Value>** SC Software Synchronization **</Value>
+    	<Comment>Maximum length 40 chars</Comment>
+  	</Text>
+  	<Text Name="405">
+    	<Value>You need to be logged in as a Safety</Value>
+    	<Comment>Maximum length 40 chars</Comment>
+  	</Text>
+	<Text Name="406">
+	    <Value>User to run this routine.</Value>
+	    <Comment>Second part of sentence starting with nr 405. Maximum length 40 chars</Comment>
+	 </Text>
+  	<Text Name="407">
+    	<Value>** End of SC Software Synchronization **</Value>
+    	<Comment>Maximum length 40 chars</Comment>
+  	</Text>
+  	<Text Name="409">
+    	<Value>Verify that the robot has been correctly</Value>
+    	<Comment>Maximum length 40 chars</Comment>
+  	</Text>
+  	<Text Name="410">
+    	<Value>calibrated.</Value>
+    	<Comment>Second part of sentence starting with nr 409. Maximum length 40 chars</Comment>
+  	</Text>
+  	<Text Name="411">
+    	<Value>Do you want to continue?</Value>
+    	<Comment>Maximum length 40 chars</Comment>
+  	</Text>
+  	<Text Name="412">
+    	<Value>SC Software Synchronization has</Value>
+    	<Comment>Maximum length 40 chars</Comment>
+  	</Text>
+  	<Text Name="413">
+    	<Value>been cancelled.</Value>
+    	<Comment>Second part of sentence starting with nr 412. Maximum length 40 chars</Comment>
+  	</Text>
+  	<Text Name="414">
+    	<Value>Verify that the robot is in the </Value>
+    	<Comment>Maximum length 40 chars</Comment>
+  	</Text>
+  	<Text Name="415">
+    	<Value>SC calibration  postition.</Value>
+    	<Comment>Second part of sentence starting with nr 414. Maximum length 40 chars</Comment>
+  	</Text>
+  	<Text Name="416">
+    	<Value>The SC will now be syncronized.</Value>
+    	<Comment>Maximum length 40 chars</Comment>
+  	</Text>
+    <Text Name="417">
+      <Value>The SC has been synchronized</Value>
+      <Comment>Maximum length 40 chars</Comment>
+    </Text>
+    <Text Name="418">
+      <Value>successfully.</Value>
+      <Comment>Second part of sentence starting with nr 417. Maximum length 40 chars</Comment>
+    </Text>
+    <Text Name="419">
+    <Value>SC synchronization failed. Check the</Value>
+    <Comment>Maximum length 40 chars</Comment>
+    </Text>
+    <Text Name="420">
+      <Value>event log for possible causes. </Value>
+      <Comment>Second part of sentence starting with nr 419. Maximum length 40 chars</Comment>
+    </Text>
+    <Text Name="421">
+        <Value>If nothing relevant is found in the</Value>
+        <Comment>Maximum length 40 chars</Comment>
+    </Text>
+    <Text Name="422">
+        <Value>event log the fail reason could be:</Value>
+        <Comment>Second part of sentence starting with nr 421. Maximum length 40 chars</Comment>
+    </Text>
+    <Text Name="423">
+        <Value>1) Errors in the configuration.</Value>
+        <Comment>Maximum length 40 chars</Comment>
+    </Text>
+    <Text Name="424">
+        <Value>2) No PIN code has been entered.</Value>
+        <Comment>Maximum length 40 chars</Comment>
+    </Text>
+    <Text Name="425">
+        <Value>CBC Execution Error</Value>
+        <Comment>Maximum length 46 chars</Comment>
+    </Text>
+    <Text Name="426">
+        <Value>CBC Interrupt Error</Value>
+        <Comment>Maximum length 46 chars</Comment>
+    </Text>
+    <Text Name="427">
+        <Value>CBC Configuration Error</Value>
+        <Comment>Maximum length 46 chars</Comment>
+    </Text>
+    <Text Name="428">
+        <Value>Not possible to run in Non Motion Execution Mode</Value>
+        <Comment>Maximum length 80 chars</Comment>
+    </Text>
+    <Text Name="429">
+        <Value>Not possible to run from Non Motion Program Task</Value>
+        <Comment>Maximum length 80 chars</Comment>
+    </Text>
+    <Text Name="430">
+        <Value>Not possible to run in Event Routine</Value>
+        <Comment>Maximum length 80 chars</Comment>
+    </Text>
+    <Text Name="431">
+        <Value>Not possible to run in TRAP Routine</Value>
+        <Comment>Maximum length 80 chars</Comment>
+    </Text>    
+    <Text Name="432">
+        <Value>Not possible to run in Routine Handler</Value>
+        <Comment>Maximum length 80 chars</Comment>
+    </Text>    
+    <Text Name="433">
+        <Value>Not possible to run on StorePath level</Value>
+        <Comment>Maximum length 80 chars</Comment>
+    </Text>
+    <Text Name="434">
+        <Value>Not possible to run if in synchronized mode</Value>
+        <Comment>Maximum length 80 chars</Comment>
+    </Text>
+    <Text Name="435">
+        <Value>Not possible to run if StopMove is set from Motion Task</Value>
+        <Comment>Maximum length 80 chars</Comment>
+    </Text>
+    <Text Name="436">
+        <Value>Not possible to run if StopMove is set from Non Motion Task</Value>
+        <Comment>Maximum length 80 chars</Comment>
+    </Text>
+    <Text Name="437">
+        <Value>Start CyclicBrakeCheck once again</Value>
+        <Comment>Maximum length 80 chars</Comment>
+    </Text>
+    <Text Name="438">
+        <Value>Not possible to convert drive_module to num</Value>
+        <Comment>Maximum length 80 chars</Comment>
+    </Text>
+    <Text Name="439">
+        <Value>Unknown Single Name</Value>
+        <Comment>Maximum length 80 chars</Comment>
+    </Text>
+    <Text Name="440">
+        <Value>Axis no </Value>
+        <Comment>Maximum length 80 chars. End with SPACE</Comment>
+    </Text>
+    <Text Name="441">
+        <Value>Unknown Control Master Type</Value>
+        <Comment>Maximum length 80 chars</Comment>
+    </Text>
+    <Text Name="442">
+        <Value>Not possible to set signal PSCXCBCPREWARN</Value>
+        <Comment>Maximum length 80 chars</Comment>
+    </Text>
+    <Text Name="443">
+        <Value>Not possible to set signal PSCXCBCREQ</Value>
+        <Comment>Maximum length 80 chars</Comment>
+    </Text>
+    <Text Name="444">
+        <Value>Not possible to set signal PSCXCSPREWARN</Value>
+        <Comment>Maximum length 80 chars</Comment>
+    </Text>
+    <Text Name="445">
+        <Value>Not possible to reset signal PSCXCSPREWARN</Value>
+        <Comment>Maximum length 80 chars</Comment>
+    </Text> 
+    <Text Name="446">
+        <Value>Not possible to reset signal PSC1CBCOK</Value>
+        <Comment>Maximum length 80 chars</Comment>
+    </Text>
+    <Text Name="447">
+        <Value>Identification of a Tool</Value>
+        <Comment>Maximum length 60 chars</Comment>
+    </Text>
+    <Text Name="448">
+        <Value>or a Tool with a PayLoad</Value>
+        <Comment>Maximum length 60 chars</Comment>
+    </Text>
+    <Text Name="449">
+        <Value>held by the Tool/Gripper?</Value>
+        <Comment>Maximum length 60 chars</Comment>
+    </Text>
+    <Text Name="450">
+        <Value>To many loaddata defined</Value>
+        <Comment>Maximum length 60 chars</Comment>
+    </Text>
+    <Text Name="451">
+        <Value>You can not have more then</Value>
+        <Comment>Maximum length 60 chars</Comment>
+    </Text>
+    <Text Name="452">
+        <Value>defined in the system.</Value>
+        <Comment>Maximum length 60 chars</Comment>
+    </Text>
+    <Text Name="453">
+        <Value>Name of loaddata to copy to:</Value>
+        <Comment>Maximum length 60 chars</Comment>
+    </Text>
+    <Text Name="454">
+        <Value>No loaddata updated!</Value>
+        <Comment>Maximum length 60 chars</Comment>
+    </Text>    
+    <Text Name="455">
+        <Value>No loaddata variable found!</Value>
+        <Comment>Maximum length 60 chars</Comment>
+    </Text>
+    <Text Name="456">
+        <Value>Stop program, and define a</Value>
+        <Comment>Maximum length 60 chars</Comment>
+    </Text>
+    <Text Name="457">
+        <Value>new loaddata variable.</Value>
+        <Comment>Maximum length 60 chars</Comment>
+    </Text>
+    <Text Name="458">
+        <Value>When new variable has been</Value>
+        <Comment>Maximum length 60 chars</Comment>
+    </Text>
+    <Text Name="459">
+        <Value>defined, start program</Value>
+        <Comment>Maximum length 60 chars</Comment>
+    </Text>
+    <Text Name="460">
+        <Value>and push OK.</Value>
+        <Comment>Maximum length 60 chars</Comment>
+    </Text>
+    <Text Name="461">
+        <Value>Loaddata</Value>
+        <Comment>Maximum length 60 chars</Comment>
+    </Text>
+    <Text Name="462">
+        <Value>or loaddata</Value>
+        <Comment>Maximum length 60 chars</Comment>
+    </Text>
+    <Text Name="463">
+        <Value>Define new</Value>
+        <Comment>Maximum length 60 chars</Comment>
+    </Text>
+    <Text Name="464">
+        <Value>   x =</Value>
+        <Comment>Maximum length 40 chars</Comment>
+    </Text>
+    <Text Name="465">
+        <Value>reduced speed</Value>
+        <Comment>Maximum length 80 chars. Second part of sentence with Text number 289</Comment>
+    </Text>    
+    <Text Name="466">
+        <Value>Identified a 0 kg mass.</Value>
+        <Comment>Maximum length 40 chars.</Comment>
+    </Text>
+    <Text Name="467">
+        <Value>If the mass of the tool or</Value>
+        <Comment>Maximum length 40 chars. Continuing text 466</Comment>
+    </Text>
+    <Text Name="468">
+        <Value>payload is unknown, this</Value>
+        <Comment>Maximum length 40 chars. Continuing text 467</Comment>
+    </Text>
+    <Text Name="469">
+        <Value>can happen.</Value>
+        <Comment>Maximum length 40 chars. Continuing text text 468</Comment>
+    </Text>
+    <Text Name="470">
+        <Value>For recommended actions press</Value>
+        <Comment>Maximum length 40 chars. Continuing text 469. This sentence is followed by a SPACE and a More string</Comment>
+    </Text>
+    <Text Name="471">
+        <Value>A 0 kg mass can be OK when the</Value>
+        <Comment>Maximum length 40 chars.</Comment>
+    </Text>
+    <Text Name="472">
+        <Value>load is very small compared to</Value>
+        <Comment>Maximum length 40 chars. Continuing text 471</Comment>
+    </Text>
+    <Text Name="473">
+        <Value>the maximum load for the robot.</Value>
+        <Comment>Maximum length 40 chars. Continuing text 472</Comment>
+    </Text>
+    <Text Name="474">
+        <Value>Otherwise:</Value>
+        <Comment>Maximum length 40 chars. Continuing text 473</Comment>
+    </Text>
+    <Text Name="475">
+        <Value>* Check defined arm loads.</Value>
+        <Comment>Maximum length 40 chars. Continuing text 474</Comment>
+    </Text>
+    <Text Name="476">
+        <Value>* Find the weight of the load in</Value>
+        <Comment>Maximum length 40 chars. Continuing text 475</Comment>
+    </Text>
+    <Text Name="477">
+        <Value>some other way and run again</Value>
+        <Comment>Maximum length 38 chars. Continuing text 476</Comment>
+    </Text>
+    <Text Name="478">
+        <Value>with known mass.</Value>
+        <Comment>Maximum length 38 chars. Continuing text 477</Comment>
+    </Text>
+    <Text Name="479">
+        <Value>Continue</Value>
+        <Comment>Maximum length 40 chars.</Comment>
+    </Text>
+    <Text Name="480">
+        <Value>To be able to run in manual</Value>
+        <Comment>Maximum length 40 chars.</Comment>
+    </Text>
+    <Text Name="481">
+        <Value>full speed mode for measurement</Value>
+        <Comment>Maximum length 40 chars. Continuing text 480</Comment>
+    </Text>
+    <Text Name="482">
+        <Value>movements, test in</Value>
+        <Comment>Maximum length 40 chars. Continuing text 481</Comment>
+    </Text>
+    <Text Name="483">
+        <Value>Slow test movement number:</Value>
+        <Comment>Maximum length 80 chars</Comment>
+    </Text>
+    <Text Name="484">
+        <Value>or Cancel service routine.</Value>
+        <Comment>Maximum length 40 chars. Continuing text 485 and 208</Comment>
+    </Text>
+    <Text Name="485">
+        <Value>Slow test movement not performed!</Value>
+        <Comment>Maximum length 40 chars. Followed by text 208 and 484</Comment>
+    </Text>
+    <Text Name="486">
+        <Value> </Value>
+        <Comment>Not used. Maximum length 40 chars</Comment>
+    </Text>
+    <Text Name="487">
+        <Value>Manual Full Speed mode is</Value>
+        <Comment>Maximum length 40 chars</Comment>
+    </Text>
+    <Text Name="488">
+        <Value>only allowed if slow test</Value>
+        <Comment>Maximum length 40 chars. Continuing text 487</Comment>
+    </Text>
+    <Text Name="489">
+        <Value>has been performed in</Value>
+        <Comment>Maximum length 40 chars. Continuing text 488</Comment>
+    </Text>
+    <Text Name="490">
+        <Value>manual reduced speed.</Value>
+        <Comment>Maximum length 40 chars. Continuing text 489</Comment>
+    </Text>
+    <Text Name="491">
+        <Value>Change operating mode!</Value>
+        <Comment>Maximum length 40 chars. Continuing text 491</Comment>
+    </Text>
+    <Text Name="492">
+        <Value>or manual full speed mode.</Value>
+        <Comment>Maximum length 40 chars. Continuing text 208. Followed by 206 and 355</Comment>
+    </Text>
+    <Text Name="493">
+        <Value>Movement starts in 1 second !</Value>
+        <Comment>Maximum length 80 chars</Comment>
+    </Text>
+    <Text Name="494">
+        <Value>When starting the execution</Value>
+        <Comment>Maximum length 40 chars</Comment>
+    </Text>
+    <Text Name="495">
+        <Value>again, the movement will</Value>
+        <Comment>Maximum length 40 chars. Continuing text 494. 494 together with 495 must not exceed 79 chars (a SPACE is added also in string)</Comment>
+    </Text>
+    <Text Name="496">
+        <Value>start immediately.</Value>
+        <Comment>Maximum length 40 chars. Continuing text 495.</Comment>
+    </Text>
+    <Text Name="497">
+        <Value>The movement was stopped.</Value>
+        <Comment>Maximum length 40 chars.</Comment>
+    </Text>
+    <Text Name="498">
+        <Value>* Switch to manual mode again.</Value>
+        <Comment>Maximum length 40 chars.  Continuing text 497</Comment>
+    </Text>
+    <Text Name="499">
+        <Value>* Push MOVE to move back to</Value>
+        <Comment>Maximum length 40 chars. Continuing text 498</Comment>
+    </Text>
+    <Text Name="500">
+        <Value>start position and restart</Value>
+        <Comment>Maximum length 40 chars. Continuing text 499</Comment>
+    </Text>
+    <Text Name="501">
+        <Value>the movement sequence again.</Value>
+        <Comment>Maximum length 40 chars. Continuing text 500</Comment>
+    </Text>
+    <Text Name="502">
+        <Value>Speed Override</Value>
+        <Comment>Maximum length 40 chars.</Comment>
+    </Text>
+    <Text Name="503">
+        <Value>The speed is set to</Value>
+        <Comment>Maximum length 40 chars.</Comment>
+    </Text>
+    <Text Name="504">
+        <Value>%.</Value>
+        <Comment>Maximum length 40 chars.</Comment>
+    </Text>
+    <Text Name="505">
+        <Value>1) Change the speed to 100%.</Value>
+        <Comment>Maximum length 40 chars. Continuing text 504</Comment>
+    </Text>
+    <Text Name="506">
+        <Value>Remember to hold the Enable</Value>
+        <Comment>Maximum length 40 chars. Continuing text 505</Comment>
+    </Text>
+    <Text Name="507">
+        <Value>Device when changing speed!</Value>
+        <Comment>Maximum length 40 chars. Continuing text 506</Comment>
+    </Text>
+    <Text Name="508">
+        <Value>2) Restart execution.</Value>
+        <Comment>Maximum length 40 chars. Continuing text 507</Comment>
+    </Text>
+    <Text Name="509">
+        <Value>Load Identification</Value>
+        <Comment>Maximum length 40 chars. Header in an UIMessageBox</Comment>
+    </Text>
+    <Text Name="510">
+        <Value>Change Operating Mode</Value>
+        <Comment>Maximum length 40 chars. Header in an UIMessageBox</Comment>
+    </Text>
+    <Text Name="511">
+        <Value>Automatic or Manual Full Speed operating mode</Value>
+        <Comment>Maximum length 80 chars. Reason part in an ErrWrite</Comment>
+    </Text>
+    <Text Name="512">
+        <Value>should be used.</Value>
+        <Comment>Maximum length 80 chars. \RL2 in an ErrWrite starting with 511</Comment>
+    </Text>
+    <Text Name="513">
+        <Value>Reduced speed affects the functionality.</Value>
+        <Comment>Maximum length 80 chars. \RL3 in an ErrWrite starting with 511</Comment>
+    </Text>
+    <Text Name="514">
+        <Value>Speed override set from FlexPendant not set to 100%.</Value>
+        <Comment>Maximum length 80 chars. Reason part in an ErrWrite</Comment>
+    </Text>
+    <Text Name="515">
+        <Value>Override speed value in percent: </Value>
+        <Comment>Maximum length 70 chars. \RL2 in an ErrWrite starting with 514</Comment>
+    </Text>
+    <Text Name="516">
+        <Value>BCP Execution Error</Value>
+        <Comment>Header in ErrWrite. Maximum length 46 chars.</Comment>
+    </Text>
+    <Text Name="517">
+        <Value>BCP Configuration Error</Value>
+        <Comment>Header in ErrWrite. Maximum length 46 chars</Comment>
+    </Text>
+</Resource>

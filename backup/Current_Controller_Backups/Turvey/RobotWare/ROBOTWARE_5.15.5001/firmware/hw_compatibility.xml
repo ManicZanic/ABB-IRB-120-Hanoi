@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--
+****************************************************************
+*
+* Hardware compatibility information
+*
+* DESCRIPTION:
+*   This file contains compatibility and firmware version 
+*   information for hardware boards connected to the Robot
+*   controller.
+*
+*  (c) Copyright 2008 ABB
+*
+*****************************************************************
+* NOTE: DSQC678 FWRev is calculated from 3 hexadecimal bytes, in this case 04 02 05
+-->
+<HWCompatibility xmlns="urn:abb-robotics-hw-compatibility">
+  <HWBoard id="DSQC678">
+    <HWRev rev="1" FWVer="2" FWRev="262661" FWPath="DSQC678_2425.fwl" />
+  </HWBoard>
+  <HWBoard id="DSQC658_659">
+    <HWRev rev="0" FWVer="0" FWRev="0" FWPath="DSQC658_659_DnScan.ss3" />
+  </HWBoard>
+  <HWBoard id="DSQC697">
+    <HWRev rev="0" FWVer="0" FWRev="0" FWPath="DSQC697_DnScan.ss4" />
+  </HWBoard>
+  <HWBoard id="DSQC400">
+    <HWRev rev="0" FWVer="A" FWRev="6" FWPath="D400_A_6.m" />
+  </HWBoard>
+  <HWBoard id="DSQC668">
+    <HWRevMultiProcessor rev="2">
+      <HWSubSystem id="CPU" FWVer="0" FWRev="20" FWPath="servoboot.bin" />
+      <HWSubSystem id="FPGA" FWVer="0" FWRev="5" FWPath="DSQC668_R15_ep2c20.rbf" />
+    </HWRevMultiProcessor>
+  </HWBoard>
+  <HWBoard id="DSQC668A">
+    <HWRevMultiProcessor rev="2">
+      <HWSubSystem id="CPU" FWVer="0" FWRev="20" FWPath="servoboot.bin" />
+      <HWSubSystem id="FPGA" FWVer="0" FWRev="5" FWPath="DSQC668_R15_ep2c35.rbf" />
+    </HWRevMultiProcessor>
+  </HWBoard>
+  <HWBoard id="DSQC676">
+    <HWRev rev="1" FWVer="0" FWRev="73" FWPath="DSQC676_R19.bin" />
+  </HWBoard>
+  <HWBoard id="DSQC681">
+    <HWRev rev="1" FWVer="0" FWRev="27" FWPath="DSQC681_R21.bin" />
+  </HWBoard>
+  <HWBoard id="DSQC432">
+    <HWRev rev="1" FWVer="0" FWRev="72" FWPath="DSQC432_C19.bin" />
+  </HWBoard>
+  <HWBoard id="DSQC433">
+    <HWRev rev="1" FWVer="0" FWRev="71" FWPath="DSQC433_C21.bin" />
+  </HWBoard>
+</HWCompatibility>

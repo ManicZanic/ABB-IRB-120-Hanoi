@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="ARL" domainNo="4" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="713" max="1010">
+  <Message number="713" eDefine="SYS_ERR_ARL_ALIAS_DEF">
+    <Title>Alias Define Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The signal in argument FromSignal: <arg format="%s" ordinal="2" />, must be defined in the IO configuration and the signal in argument ToSignal: <arg format="%s" ordinal="3" />, must be declared in the RAPID program and not defined in the IO configuration.<p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Check the IO configuration and the RAPID program.<p />Recovery: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="714" eDefine="SYS_ERR_ARL_UNDQUAT">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Orientation definition error in <arg format="%s" ordinal="2" /> . <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>This is probably an off-line generated "dummy" position (undefined orienta- <p />tion), which needs to be modified with modpos. </Actions>
+  </Message>
+  <Message number="720" eDefine="SYS_ERR_ARL_ALIAS_IO">
+    <Title>Alias IO Installation</Title>
+    <Description>The system could not refresh all IO signals as RAPID symbols.</Description>
+    <Consequences>No IO signals can be used in a RAPID program.</Consequences>
+    <Causes>- Incorrect IO configuration<p />- Incorrect task configuration</Causes>
+    <Actions>Restart the controller.</Actions>
+  </Message>
+  <Message number="721" eDefine="SYS_ERR_ARL_IO">
+    <Title>IO Installation</Title>
+    <Description>Task <arg format="%s" ordinal="1" />:<p />The system could not refresh all IO signals as RAPID symbols.</Description>
+    <Consequences>No IO signals can be used in a RAPID program.</Consequences>
+    <Causes>- Incorrect IO configuration<p />- Incorrect task configuration</Causes>
+    <Actions>Restart the controller.</Actions>
+  </Message>
+  <Message number="722" eDefine="SYS_ERR_ARL_MECUNT">
+    <Title>Mechanical Units</Title>
+    <Description>The system could not refresh all mechanical units as RAPID symbols.</Description>
+    <Consequences>No mechanical units can be used in a RAPID program.</Consequences>
+    <Causes>- Incorrect Motion configuration<p />- Incorrect task configuration</Causes>
+    <Actions>Restart the controller.</Actions>
+  </Message>
+  <Message number="723" eDefine="SYS_ERR_ARL_CAMUNIT">
+    <Title>Camera Installation</Title>
+    <Description> Task <arg format="%s" ordinal="1" />:<p />The system could not refresh all camera units as RAPID symbols. </Description>
+    <Consequences>No camera units can be used in a RAPID program.</Consequences>
+    <Causes> - Incorrect camera configuration<p />- Incorrect task configuration </Causes>
+    <Actions>Restart the controller.</Actions>
+  </Message>
+  <Message number="724" eDefine="SYS_ERR_ARL_MODULE">
+    <Title>Save or Erase Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The program module <arg format="%s" ordinal="2" /> could not be saved or could not be erased. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>- Check the spelling of the module name<p />- Check if the module is loaded.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="726" eDefine="SYS_ERR_ARL_UNKPROC">
+    <Title>Reference Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The reference to the load session is not valid.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check if the specified reference is the same as in StartLoad<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="727" eDefine="SYS_ERR_ARL_PATH">
+    <Title>Save Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Missing file source <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>Use FilePath argument to specify the file destination. <p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="728" eDefine="SYS_ERR_ARL_FRAME">
+    <Title>Frame Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unable to calculate new frame. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>The positions have not the required relations or are not specified with enough accuracy. </Causes>
+    <Actions>Check if the positions are too close or not specified with enough accuracy. <p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="731" eDefine="SYS_ERR_ARL_AO_HLIM">
+    <Title>Value Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The value of the argument <arg format="%s" ordinal="2" /> for signal <arg format="%s" ordinal="3" /> is above its maximum logical value.<p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Change the argument or change the maximum logical value parameter <p />for the signal. <p />Recovery: <arg format="%s" ordinal="5" /><p /></Actions>
+  </Message>
+  <Message number="732" eDefine="SYS_ERR_ARL_AO_LLIM">
+    <Title>Value Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The value of the argument <arg format="%s" ordinal="2" /> for signal <arg format="%s" ordinal="3" /> is below its minimum logical value.<p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Change the argument or change the min logical value parameter for the signal. <p />Recovery: <arg format="%s" ordinal="5" /><p /></Actions>
+  </Message>
+  <Message number="733" eDefine="SYS_ERR_ARL_AO_RANGE">
+    <Title>Value Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The value of the argument <arg format="%s" ordinal="2" /> for signal <arg format="%s" ordinal="3" /> is below the value for argument <arg format="%s" ordinal="4" />.<p />Program Ref. <arg format="%s" ordinal="5" /><p /></Description>
+    <Actions>Change the values of the arguments.</Actions>
+  </Message>
+  <Message number="734" eDefine="SYS_ERR_ARL_TXTTOLNG">
+    <Title>Symbol Definition Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The string in text table <arg format="%s" ordinal="2" /> at index <arg format="%s" ordinal="3" /> is too long.<p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Change the file for the text table and perform a cold start. </Actions>
+  </Message>
+  <Message number="735" eDefine="SYS_ERR_ARL_AXIS_DEF">
+    <Title>Argument Error</Title>
+    <Description>The axis is not defined.<p /></Description>
+    <Actions>The axis has to be defined, before this instruction is executed. </Actions>
+  </Message>
+  <Message number="736" eDefine="SYS_ERR_ARL_IRB_NOTALLOWED">
+    <Title>Mechanical Unit Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />It is not possible to define a payload on the robot with this instruction. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Use the instruction GripLoad instead of MechUnitLoad. </Actions>
+  </Message>
+  <Message number="737" eDefine="SYS_ERR_ARL_TXTNOEXIST">
+    <Title>Symbol Definition Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The requested text or text package does not exist. Text table <arg format="%s" ordinal="2" />, Index <arg format="%s" ordinal="3" />.<p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Check the arguments.<p />Recovery: <arg format="%s" ordinal="5" /><p /></Actions>
+  </Message>
+  <Message number="738" eDefine="SYS_ERR_ARL_IO_CON_LOST">
+    <Title>I/O Error</Title>
+    <Description>Unable to access the I/O signal <arg format="%s" ordinal="1" /> on unit <arg format="%s" ordinal="2" /> . <p />Impossible to restart. <p /></Description>
+    <Causes>The connection with the I/O module is broken.</Causes>
+    <Actions>Re-establish the connection with the I/O unit. To make it possible <p />to restart the program move PP to a safe restart position. </Actions>
+  </Message>
+  <Message number="739" eDefine="SYS_ERR_ARL_MISPAR">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />None of the option arguments DO1, GO1, GO2, GO3 or GO4 are specified. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Specify at least one of the arguments. </Actions>
+  </Message>
+  <Message number="740" eDefine="SYS_ERR_ARL_PERS_GONE">
+    <Title>Execution Error</Title>
+    <Description>The PERS variable specified in the instruction TriggStopProc cannot be <p />updated, because it does not exist any more. <p /></Description>
+    <Causes>The program module with the PERS variable is probably removed from the <p />program memory. </Causes>
+    <Actions>Check if the module with the PERS variable is removed, if so put it back.</Actions>
+  </Message>
+  <Message number="741" eDefine="SYS_ERR_ARL_NOT_EVENT_RTN">
+    <Title>Context Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruction <arg format="%s" ordinal="2" /> may only be used in an event routine. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Remove the instruction.</Actions>
+  </Message>
+  <Message number="742" eDefine="SYS_ERR_ARL_EVPT_SMALL">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The timing parameter DipLag is larger than the system parameter Event preset time. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Increase the system parameter Event preset time or check the equipment dip lag (delay) compensation. <p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="743" eDefine="SYS_ERR_ARL_SUBTYPE">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Not a valid subtype in argument <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check the argument.</Actions>
+  </Message>
+  <Message number="744" eDefine="SYS_ERR_ARL_VAL_IN_PAR">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Invalid value in <arg format="%s" ordinal="2" /> in argument <arg format="%s" ordinal="3" />. <p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Check the argument.</Actions>
+  </Message>
+  <Message number="745" eDefine="SYS_ERR_ARL_INPOS_MALMI">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> is less than <arg format="%s" ordinal="3" /> in argument <arg format="%s" ordinal="4" />. <p />Program Ref. <arg format="%s" ordinal="5" /><p /></Description>
+    <Actions>Check the argument.</Actions>
+  </Message>
+  <Message number="746" eDefine="SYS_ERR_ARL_INPOS_FINE">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> TRUE in parameter <arg format="%s" ordinal="3" /> in combination with conveyor coordination. <p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Cannot use fine points when leaving conveyors after coordinated stoppoint. <p />Use a zone instead. </Actions>
+  </Message>
+  <Message number="747" eDefine="SYS_ERR_ARL_CFG_INTERNAL">
+    <Title>Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Cannot read or write to the system parameter <arg format="%s" ordinal="2" />. The parameter is internal and protected from reading and writing.<p />Program Ref. <arg format="%s" ordinal="3" /><p /><p /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="748" eDefine="SYS_ERR_ARL_CFG_LIMIT">
+    <Title>Value Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The data to write from parameter CfgData to the system parameter, is outside valid limits. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="749" eDefine="SYS_ERR_ARL_ALREADY_MOVING">
+    <Title>Execution Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />It is not possible to execute StartMove when the robot is moving. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="752" eDefine="SYS_ERR_ARL_LOADSESS_INUSE">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Some load session with StartLoad - WaitLoad has not been finished. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Finish the load session with WaitLoad,  cancel it with CancelLoad or set PP to main. <p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="753" eDefine="SYS_ERR_ARL_LOAD_PFAIL">
+    <Title>Memory Fault</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Because of power fail in executed Load or StartLoad ... WaitLoad instruction, the RAPID program memory is inconsistent. <p />*** TO REPAIR DO P-START *** <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Important to do P-start, because the RAPID program memory is destroyed: <p />- Faulty init value of PERS variables <p />- Reduction of the available program memory size </Actions>
+  </Message>
+  <Message number="754" eDefine="SYS_ERR_ARL_ARG_MISSING">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />There are no arguments given. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>If you want a limitation set the optional argument On with a value, otherwise set to Off.</Actions>
+  </Message>
+  <Message number="755" eDefine="SYS_ERR_ARL_NOT_TRAP_RTN">
+    <Title>Context Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruction <arg format="%s" ordinal="2" /> may only be used in a trap routine. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Remove the instruction.</Actions>
+  </Message>
+  <Message number="756" eDefine="SYS_ERR_ARL_IMPROPER_INTNO">
+    <Title>Context Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruction <arg format="%s" ordinal="2" /> may only be used in a trap routine ordered through instruction <arg format="%s" ordinal="3" />.<p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Check that INTNO has the interrupt number used by <arg format="%s" ordinal="5" />.</Actions>
+  </Message>
+  <Message number="757" eDefine="SYS_ERR_ARL_LOADSESS_NOUSE">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The load session you are trying to cancel is not in use. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="758" eDefine="SYS_ERR_ARL_IO_CON_LOST_BMW">
+    <Title>I/O Error</Title>
+    <Description>Unable to access the I/O signal <arg format="%s" ordinal="1" /> unit <arg format="%s" ordinal="2" /> . <p /></Description>
+    <Causes>The connection with the I/O module is broken.</Causes>
+    <Actions>Re-establish the connection with the I/O unit. </Actions>
+  </Message>
+  <Message number="759" eDefine="SYS_ERR_ARL_IMPROPER_TYPE">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The argument Data in <arg format="%s" ordinal="2" /> has improper data type. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check the data type.Non-value and semi-value types may not be used. <p /></Actions>
+  </Message>
+  <Message number="761" eDefine="SYS_ERR_ARL_PAR_NEG">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The argument <arg format="%s" ordinal="2" /> has a negative value.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Set the value positive or to zero.</Actions>
+  </Message>
+  <Message number="762" eDefine="SYS_ERR_ARL_BIG_VAL">
+    <Title>Value Error</Title>
+    <Description>Task: <arg format="%16s" ordinal="1" /><p />The value of argument <arg format="%s" ordinal="2" /> forces the robot out of workspace.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Decrease the value.</Actions>
+  </Message>
+  <Message number="763" eDefine="SYS_ERR_ARL_SYS_STOP">
+    <Title>Execution Error</Title>
+    <Description>Task: <arg format="%16s" ordinal="1" /><p />The instruction <arg format="%s" ordinal="2" /> cannot be executed while the system is in a stop state.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+  </Message>
+  <Message number="764" eDefine="SYS_ERR_ARL_PAR_NOT_FREE">
+    <Title>Switch Argument Error</Title>
+    <Description>Task: <arg format="%16s" ordinal="1" /><p />The instruction <arg format="%s" ordinal="2" /> must be used with one switch argument. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Use one of the switch Total or Free.</Actions>
+  </Message>
+  <Message number="765" eDefine="SYS_ERR_ARL_NOP_DIR">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />In the instruction <arg format="%s" ordinal="2" /> the argument <arg format="%s" ordinal="3" /> is not an open directory. <p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Open the directory before trying to read it.<p />Recovery: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="766" eDefine="SYS_ERR_ARL_MISSING_PAR">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />In the instruction <arg format="%s" ordinal="2" /> the argument <arg format="%s" ordinal="3" /> can't be used without the argument <arg format="%s" ordinal="4" />.<p />Program Ref. <arg format="%s" ordinal="5" /><p /></Description>
+    <Actions>Check the RAPID program.</Actions>
+  </Message>
+  <Message number="767" eDefine="SYS_ERR_ARL_SEARCH_OBJ">
+    <Title>Search Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Object of the type <arg format="%s" ordinal="2" /> could not be searched for.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check the RAPID program.</Actions>
+  </Message>
+  <Message number="768" eDefine="SYS_ERR_ARL_SYM_ACC">
+    <Title>Symbol Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />No system symbol <arg format="%s" ordinal="2" /> is accessible in the system. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="769" eDefine="SYS_ERR_ARL_SYM_READ_ACC">
+    <Title>Symbol Read Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The symbol <arg format="%s" ordinal="2" /> is not a readable object. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="770" eDefine="SYS_ERR_ARL_SYM_TYPE">
+    <Title>Symbol Type Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The symbol <arg format="%s" ordinal="2" /> is of type <arg format="%s" ordinal="3" /> and not the expected type <arg format="%s" ordinal="4" /> . <p />Program Ref. <arg format="%s" ordinal="5" /><p /></Description>
+    <Actions>Check the RAPID program.</Actions>
+  </Message>
+  <Message number="771" eDefine="SYS_ERR_ARL_SYM_ACC_SCOPE">
+    <Title>Symbol Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The symbol <arg format="%s" ordinal="2" /> is not accessible in this scope.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="772" eDefine="SYS_ERR_ARL_LOST_CNV">
+    <Title>I\O Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The <arg format="%s" ordinal="2" /> instruction has lost contact with the conveyor.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+  </Message>
+  <Message number="773" eDefine="SYS_ERR_ARL_INSTR_INTER">
+    <Title>Instruction Interrupted</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The instruction <arg format="%s" ordinal="2" /> was interrupted, reason unknown.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+  </Message>
+  <Message number="774" eDefine="SYS_ERR_ARL_OBJ_DROPPED">
+    <Title>Object Dropped</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The object that the instruction <arg format="%s" ordinal="2" /> was waiting for has been dropped. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>Start window passed or Checkpoint not satisfied. </Causes>
+    <Actions>If Checkpoint not used, Checkpoint Distance and Checkpoint Window Width must be set to zero.<p />Rerun the instruction <p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="775" eDefine="SYS_ERR_ARL_CNV_WAITDIST">
+    <Title>Conveyor Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Another <arg format="%s" ordinal="2" /> instruction is waiting for a distance to the object.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+  </Message>
+  <Message number="776" eDefine="SYS_ERR_ARL_CNV_WAITOBJ">
+    <Title>Conveyor Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Another <arg format="%s" ordinal="2" /> instruction is waiting for the object. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+  </Message>
+  <Message number="777" eDefine="SYS_ERR_ARL_CNV_CONNECTED">
+    <Title>Conveyor Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The <arg format="%s" ordinal="2" /> instruction is already connected. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="778" eDefine="SYS_ERR_ARL_NEWERRNO_FAILED">
+    <Title>Value Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Booking of the new error number <arg format="%s" ordinal="2" /> failed. The init value must be -1 or the old number. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check the init value of the new errnum variable. </Actions>
+  </Message>
+  <Message number="779" eDefine="SYS_ERR_ARL_ERRNO_LOCAL">
+    <Title>Error Number Local</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The RAPID user error number <arg format="%s" ordinal="2" /> must not be declared as local in routine. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check the errnum declaration.</Actions>
+  </Message>
+  <Message number="780" eDefine="SYS_ERR_ARL_DATAOBJ_MISSING">
+    <Title>Data Object Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />There is no valid data object for the argument <arg format="%s" ordinal="2" /> of the instruction <arg format="%s" ordinal="3" />. <p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Check if there is a right data object.</Actions>
+  </Message>
+  <Message number="781" eDefine="SYS_ERR_ARL_FILE_INCORR">
+    <Title>File Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The parameter <arg format="%s" ordinal="2" /> does not correspond to any loaded text file. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check if the text file is (correct) installed. </Actions>
+  </Message>
+  <Message number="782" eDefine="SYS_ERR_ARL_NOP_WRITE">
+    <Title>Mode Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />File or serial channel is not opened for writing.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check how the file or serial channel was opened..</Actions>
+  </Message>
+  <Message number="783" eDefine="SYS_ERR_ARL_NOP_CHAR">
+    <Title>Mode Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />File or serial channel is not opened in a character-based mode. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check how the file or serial channel was opened.</Actions>
+  </Message>
+  <Message number="784" eDefine="SYS_ERR_ARL_NOP_BIN">
+    <Title>Mode Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />File or serial channel is not opened in a binary mode.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check how the file or serial channel was opened.</Actions>
+  </Message>
+  <Message number="785" eDefine="SYS_ERR_ARL_NOP_READ">
+    <Title>Mode Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />File or serial channel is not opened for reading.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check how the file or serial channel was opened.</Actions>
+  </Message>
+  <Message number="786" eDefine="SYS_ERR_ARL_INCONS_VAL">
+    <Title>Read Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />One or more bytes is not read properly. The value of the read data might be <p />inconsistent.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>Because the checksum for the received message is not the same as calculated at sending, the message data cannot be used.</Consequences>
+    <Causes>The reason can be:<p />- Communication problem<p />- Different WriteAnyBin - ReadAnyBin software version between the sending WriteAnyBin  and the receiving ReadAnyBin</Causes>
+    <Actions>Error Recovery for communication problem: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="787" eDefine="SYS_ERR_ARL_USER_FRAME">
+    <Title>User Frame Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Not possible to get the coordinated user frame. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="788" eDefine="SYS_ERR_ARL_AXIS_INIT">
+    <Title>Axis Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The single axis is not init correctly.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="789" eDefine="SYS_ERR_ARL_FILEPATH_TOOLNG">
+    <Title>Limitation Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The string length of the argument for the file path is too long. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>The maximum allowed string length for the full system file path is <arg format="%s" ordinal="3" /> characters. <p /></Causes>
+    <Actions>Shorten the length of the path.</Actions>
+  </Message>
+  <Message number="790" eDefine="SYS_ERR_ARL_STRTOOLNG_ROL">
+    <Title>Value Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The RAPID string is too long.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>String value exceeds the maximum allowed length.</Causes>
+    <Actions>Rewrite the program to use strings of less length. <p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="791" eDefine="SYS_ERR_ARL_IOENOSPC_ROL">
+    <Title>I/O Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />No space left on device (file name <arg format="%s" ordinal="2" />).<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="792" eDefine="SYS_ERR_ARL_IOERRNO_ROL">
+    <Title>I/O Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />File open/access error for path <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>- Check permission, is the file write protected?<p />- Check if the file or directory exists.<p />- Check if there is any space left on device.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="793" eDefine="SYS_ERR_ARL_TXDATA_MISSING">
+    <Title>Error Installing Text Table</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />No or faulty text resource name or index number in the text file. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>The contents of some of the text tables may have been destroyed.</Consequences>
+    <Actions>Correct the error, cold start the system and try again. </Actions>
+  </Message>
+  <Message number="794" eDefine="SYS_ERR_ARL_TXINDEX_EXIST">
+    <Title>Error Installing Text Table</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The specified index within the text resource already exists in the system. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>- Error in the index numbering.<p />- The file has been installed twice. </Causes>
+    <Actions>If error in the index, correct it, cold start the system and try again. </Actions>
+  </Message>
+  <Message number="795" eDefine="SYS_ERR_ARL_TXMEMFULL">
+    <Title>Error Installing Text Table</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />System memory for text tables is full. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Reduce the amount of user defined text string installed from RAPID. Cold start the system and try again. </Actions>
+  </Message>
+  <Message number="796" eDefine="SYS_ERR_ARL_CABQUE_FULL">
+    <Title>Overload Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The system is overloaded so the actual order cannot be ready in time. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions> Reduce the main computer load, for example by: <p /> - Add WaitTime in RAPID loops <p /> - Increase filter time for I/O signals <p /> - Avoid cyclic interrupts</Actions>
+  </Message>
+  <Message number="797" eDefine="SYS_ERR_ARL_IO_CON_LOST_NOT_TRIGG">
+    <Title>I/O Error</Title>
+    <Description>Unable to access the I/O signal <arg format="%s" ordinal="1" /> on unit <arg format="%s" ordinal="2" />. <p /></Description>
+    <Causes>The connection with the I/O module is broken.</Causes>
+    <Actions>Re-establish the connection with the I/O unit. </Actions>
+  </Message>
+  <Message number="798" eDefine="SYS_ERR_ARL_SYSTEM_RLEXE">
+    <Title>System Access Error</Title>
+    <Description>
+      <arg format="%s" ordinal="1" />
+      <p />
+    </Description>
+  </Message>
+  <Message number="799" eDefine="SYS_ERR_ARL_SIG_NOT_DEF">
+    <Title>Execution Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />TestSignRead is using a channel without a defined signal. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Use TestSignDefine to define a signal to the channel. </Actions>
+  </Message>
+  <Message number="800" eDefine="SYS_ERR_ARL_TOOL">
+    <Title>Tool Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The component robhold in the tool has not got the correct value. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Change the value of robhold.<p />If the robot is holding the tool the value should be TRUE. If the robot is not holding the tool, i.e. a stationary tool, the value should be FALSE.</Actions>
+  </Message>
+  <Message number="801" eDefine="SYS_ERR_ARL_CALC_TOOL_FRAME">
+    <Title>Calculation error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Cannot calculate the tool frame. <p />Program Ref. <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Causes>It is not possible to calculate the tool frame with the selected approach points.</Causes>
+    <Actions>Select new approach points as accurate as possible. </Actions>
+  </Message>
+  <Message number="802" eDefine="SYS_ERR_ARL_SDB_FULL">
+    <Title>Execution Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Not possible to do subscribe. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>There is no memory left to make another subscription on this variable. </Causes>
+    <Actions>To continue, PP must be moved to main! </Actions>
+  </Message>
+  <Message number="803" eDefine="SYS_ERR_ARL_TOO_LONG_ERR_MESS">
+    <Title>Error msg too long</Title>
+    <Description>The length of the following error message was too long and has been cut. <p />This means you will not be able to read the whole message. <p /></Description>
+  </Message>
+  <Message number="804" eDefine="SYS_ERR_ARL_NO_FOLLOW">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The argument "type" in stoppointdata may not be followtime in the instructions MoveJ, MoveAbsJ and MoveExtJ. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Change "type" to inpos or stoptime.</Actions>
+  </Message>
+  <Message number="805" eDefine="SYS_ERR_ARL_MOCGENINSTR">
+    <Title>Motion Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Error from MocGenInstr. <p />Ref to former message for reason. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="806" eDefine="SYS_ERR_ARL_IOFGENINSTR">
+    <Title>IOF Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Error from IofGenInstr. <p />Ref to former message for reason.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="807" eDefine="SYS_ERR_ARL_FILEEXIST">
+    <Title>File Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The file <arg format="%s" ordinal="2" /> already exists.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>To be able to rename or copy: <p />Change the file name or remove the existing file. <p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="811" eDefine="SYS_ERR_ARL_MSG_NOUNIT">
+    <Title>No Contact With Unit</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />There is no contact with unit.<p />Program Ref: <arg format="%s" ordinal="2" /></Description>
+    <Causes>- The unit may have been disabled ( IODisable "UNIT1", 1; )<p />- No power to the unit.</Causes>
+  </Message>
+  <Message number="812" eDefine="SYS_ERR_ARL_NOT_ALLOWED_MODE">
+    <Title>Execution Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Not allowed to run this program in non_motion_execution_mode. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Change mode.</Actions>
+  </Message>
+  <Message number="813" eDefine="SYS_ERR_ARL_MECUNIT_NOCONTROL">
+    <Title>Execution Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The task is not allowed to execute the instruction <arg format="%s" ordinal="2" />. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>The task is not configured to control mechanical units.</Causes>
+    <Actions>Change the configuration or remove the instruction. </Actions>
+  </Message>
+  <Message number="814" eDefine="SYS_ERR_ARL_REGAIN_REJECTED">
+    <Title>Execution Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />StartMove could not get the regain distance.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>Application error.</Causes>
+    <Actions>Please restart the path.<p />Recovery: <arg format="%s" ordinal="3" /><p /></Actions>
+  </Message>
+  <Message number="815" eDefine="SYS_ERR_ARL_INDXXX_AXNO">
+    <Title>Non Existing Axis Number</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unknown axis number for the mechanical unit <arg format="%s" ordinal="2" /><p />Program Ref. <arg format="%s" ordinal="3" /></Description>
+    <Actions>Check the value for the argument Axis.</Actions>
+  </Message>
+  <Message number="816" eDefine="SYS_ERR_ARL_ROLGENINSTR">
+    <Title>RolGenInstr Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Error from instruction RolGenInstr.<p />Ref. to former user or internal error message for reason.<p />Program Ref. <arg format="%s" ordinal="2" /><p />Recovery: <arg format="%s" ordinal="3" /><p /></Description>
+  </Message>
+  <Message number="1000" eDefine="SYS_ERR_ARL_ITMSRC_EXISTS">
+    <Title>Item source exists</Title>
+    <Description>Item source <arg format="%s" ordinal="1" /> already exists. Two item sources may not have the same name. <p /></Description>
+  </Message>
+  <Message number="1001" eDefine="SYS_ERR_ARL_ITMSRC_NO_NAME">
+    <Title>Not a valid name</Title>
+    <Description>Choose <arg format="%s" ordinal="1" /> or <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="1002" eDefine="SYS_ERR_ARL_ITMSRC_BUFF_SIZE_EXCEEDED">
+    <Title>Buffer size exceeded</Title>
+    <Description>Fatal internal error for item source <arg format="%s" ordinal="1" />. Try warm start or cold start. Please report this error. <p /></Description>
+  </Message>
+  <Message number="1003" eDefine="SYS_ERR_ARL_ITMSRC_OBJ_UNDEF">
+    <Title>Item source not defined</Title>
+    <Description>The item source object has not been defined. <p /></Description>
+  </Message>
+  <Message number="1004" eDefine="SYS_ERR_ARL_ITMSRC_INTERNAL_ERROR">
+    <Title>Itmsrc internal error</Title>
+    <Description>Internal error for item source <arg format="%s" ordinal="1" />. <p />Error type: <arg format="%s" ordinal="2" />. <p /></Description>
+  </Message>
+  <Message number="1005" eDefine="SYS_ERR_ARL_ITMSRC_FLUSH_FIRST">
+    <Title>Flush item source first</Title>
+    <Description>Item source <arg format="%s" ordinal="1" /> must be flushed before it is used. <p /></Description>
+  </Message>
+  <Message number="1006" eDefine="SYS_ERR_ARL_ITMSRC_ACK_FIRST">
+    <Title>Ack item target first</Title>
+    <Description>Item target must be acknowledged before executing the GetItmTgt(s) instruction again. <p />Error occurred for item source <arg format="%s" ordinal="1" />. <p /></Description>
+  </Message>
+  <Message number="1007" eDefine="SYS_ERR_ARL_ITMSRC_ITMTGT_BUFF_FULL">
+    <Title>Item target buffer full</Title>
+    <Description>Item target buffer full for item source <arg format="%s" ordinal="1" /> . <p /></Description>
+  </Message>
+  <Message number="1008" eDefine="SYS_ERR_ARL_ITMSRC_CNV_EIO_INIT">
+    <Title>Conveyor I/O init error</Title>
+    <Description>Error in the initialization of the I/O signal for item source <arg format="%s" ordinal="1" />, for conveyor <p /><arg format="%s" ordinal="2" />. I/O signal name <arg format="%s" ordinal="3" />. <p /></Description>
+  </Message>
+  <Message number="1009" eDefine="SYS_ERR_ARL_ITMSRC_CNV_DOES_NOT_EXIST">
+    <Title>Conveyor does not exist</Title>
+    <Description>Error for item source <arg format="%s" ordinal="1" />. The conveyor <arg format="%s" ordinal="2" /> does not exist. <p /></Description>
+  </Message>
+  <Message number="1010" eDefine="SYS_ERR_ARL_ITMSRC_CNV_NO_NAME">
+    <Title>No conveyor name given</Title>
+    <Description>Error for item source <arg format="%s" ordinal="1" />. No conveyor name specified. <p /></Description>
+  </Message>
+</Domain>

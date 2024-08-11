@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="ARL" domainNo="4" lang="zh" elogTextVersion="1.0" min="1584" max="1701">
+  <Message number="1584" eDefine="SYS_ERR_ARL_SOCK_SEND_EMPDATA">
+    <Title>套接字错误
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />指定发送的字符串或数据为空。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>检查数据是否正确。
+</Actions>
+  </Message>
+  <Message number="1585" eDefine="SYS_ERR_ARL_SOCK_SEND_LENZERO">
+    <Title>套接字错误
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />待发送的字节数必须为一个大于零的值。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>将可选参数 NoOfBytes 的值更改为大于零。<p /><p /></Actions>
+  </Message>
+  <Message number="1586" eDefine="SYS_ERR_ARL_SOCK_LENINVALID">
+    <Title>套接字错误
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />指定要发送的字节数比实际数据长度更长。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>将可选参数 NoOfBytes 的值l更改为小于或等于实际数据。<p />如果必须发送所有数据，则清除可选参数。
+</Actions>
+  </Message>
+  <Message number="1587" eDefine="SYS_ERR_ARL_SOCK_SEND_UNEXPT">
+    <Title>套接字错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />发送数据时出现意外错误。<p />检查事件日志看是否有其他消息，以查找可能的原因。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>将程序指针移到主程序并重新启动程序。</Actions>
+  </Message>
+  <Message number="1590" eDefine="SYS_ERR_ARL_SOCK_DATAINVALID">
+    <Title>套接字错误
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />字节阵列无效。字节阵列只能包含介于 0 和 255 之间的整数。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>将字节阵列更改为包含有效数据，或使用原始字节发送复杂数据。
+</Actions>
+  </Message>
+  <Message number="1591" eDefine="SYS_ERR_ARL_SOCK_STATE_UNEXPT">
+    <Title>套接字错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />试图获取套接字状态时出现意外错误。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>将程序指针移到主程序并重新启动程序。</Actions>
+  </Message>
+  <Message number="1592" eDefine="SYS_ERR_ARL_SOCK_RECV_NODATA">
+    <Title>套接字错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />未收到数据。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Causes>连接可能被远程主机关闭。</Causes>
+    <Actions>将程序指针移到主程序并重新启动程序。</Actions>
+  </Message>
+  <Message number="1593" eDefine="SYS_ERR_ARL_SOCK_RECV_DATATOLONG">
+    <Title>套接字错误 </Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />接收的数据太长，无法存储到字符串内。字符串内可存储的数据最大长度为 80个字符。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>使用字节阵列或原始阵列接收多于 80个字节的数据。 </Actions>
+  </Message>
+  <Message number="1594" eDefine="SYS_ERR_ARL_SOCK_NOCONN">
+    <Title>套接字错误
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />套接字未连接。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Causes>客户端在接收/发送数据之前要使用 SocketConnect。<p />服务器在接收/发送数据之前要使用 SocketAccept。<p /></Causes>
+    <Actions>尝试接收之前，请使用 SocketConnect 或 SocketAccept 连接套接字。<p /></Actions>
+  </Message>
+  <Message number="1595" eDefine="SYS_ERR_ARL_SOCK_CONNCLOSE">
+    <Title>套接字错误
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />连接被远程主机关闭。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>重新尝试发送之前，请使用错误处理程序重新建立连接。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1596" eDefine="SYS_ERR_ARL_SOCK_BIND_UNEXPT">
+    <Title>套接字错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />绑定套接字时出现意外错误。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>将程序指针移到主程序并重新启动程序。</Actions>
+  </Message>
+  <Message number="1597" eDefine="SYS_ERR_ARL_SOCK_BIND_ALREADY">
+    <Title>套接字错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />套接字已绑定地址，无法再绑定。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>在尝试将套接字绑定到新地址前关闭套接字并重新创建。</Actions>
+  </Message>
+  <Message number="1598" eDefine="SYS_ERR_ARL_SOCK_LISTEN_UNEXPT">
+    <Title>套接字错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />试图监听连接时出现意外错误。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>将程序指针移到主程序并重新启动程序。</Actions>
+  </Message>
+  <Message number="1599" eDefine="SYS_ERR_ARL_SOCK_LISTEN_NOBIND">
+    <Title>套接字错误
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />套接字未绑定至任何地址。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>使用 SocketBind 指定用于监听引入连接的地址。
+</Actions>
+  </Message>
+  <Message number="1600" eDefine="SYS_ERR_ARL_SOCK_ACCPT_SOCKALRDY">
+    <Title>套接字错误
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />指定的客户端套接字已被占用。调用 SocketAccept 之前，不得创建客户端套接字。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Causes>已为指定套接字执行 SocketAccept。
+</Causes>
+    <Actions>使用客户端套接字调用 SocketAccept 前请先关闭它，或删除具有相同客户端套接字的多个 SocketAccept。
+</Actions>
+  </Message>
+  <Message number="1601" eDefine="SYS_ERR_ARL_SOCK_ACCPT_UNEXPT">
+    <Title>套接字错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />接受连接时出现意外错误。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>将程序指针移到主程序并重新启动程序。</Actions>
+  </Message>
+  <Message number="1602" eDefine="SYS_ERR_ARL_SOCK_RECV_UNEXPT">
+    <Title>套接字错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />接收数据时出现意外错误。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>将程序指针移到主程序并重新启动程序。</Actions>
+  </Message>
+  <Message number="1603" eDefine="SYS_ERR_ARL_SOCK_SOCK_CREATED">
+    <Title>套接字错误
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />已创建套接字。<p />套接字只能创建一次，并且要将其关闭才能再次创建。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>使用其它套接字或在创建之前关闭套接字。
+</Actions>
+  </Message>
+  <Message number="1604" eDefine="SYS_ERR_ARL_SOCK_LISTEN_ALREADY">
+    <Title>套接字错误 </Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />套接字已用于监听引入连接。<p />套接字只能监听引入连接一次。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Causes>重复使用具有相同套接字的 SocketListen。 </Causes>
+    <Actions>使用其它套接字或关闭套接字后再使用它。 </Actions>
+  </Message>
+  <Message number="1605" eDefine="SYS_ERR_ARL_SOCK_SOCK_INVALID">
+    <Title>套接字错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />套接字不再有效。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Consequences>程序立即停止执行。</Consequences>
+    <Causes>使用的套接字无效。<p />可能已使用 <arg format="%s" ordinal="3" /> 复制了 <arg format="%s" ordinal="4" />。然后又使用 <arg format="%s" ordinal="5" /> 关闭了原始的 <arg format="%s" ordinal="4" />。如果使用复制的 <arg format="%s" ordinal="4" />，就会发生此问题。</Causes>
+    <Actions>在处理 <arg format="%s" ordinal="4" /> 的数据类型时使用套接字指令。</Actions>
+  </Message>
+  <Message number="1611" eDefine="SYS_ERR_ARL_UI_NOACTION">
+    <Title>UIMsgBox - 未定义用户或程序动作</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />指令 UIMsgBox 或函数 UIMessageBox 未定义任何用户或<p />程序动作。<p />未使用选项自变量：\Buttons、\BtnArray、\MaxTime、\DIBreak 或 <p />\DOBreak。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Consequences>RAPID 将永久执行。</Consequences>
+    <Actions>使用一个或多个自变量：\Buttons、\BtnArray、\MaxTime、<p />\DIBreak 或 \DObreak。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1612" eDefine="SYS_ERR_ARL_UI_MAXMIN">
+    <Title>MinValue 大于 MaxValue</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />在函数 <arg format="%s" ordinal="4" /> 中，变元 \MinValue 大于<p /> \MaxValue。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Consequences>程序无法继续执行。</Consequences>
+    <Actions>更改 RAPID 程序，使变元 \MaxValue 大于 \MinValue。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1613" eDefine="SYS_ERR_ARL_UI_INITVALUE">
+    <Title>InitValue 不在指定值范围内</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />在函数 <arg format="%s" ordinal="4" /> 中，变元 \InitValue 未在<p />范围 \MaxValue ...\MinValue 内指定。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Consequences>程序无法继续执行。</Consequences>
+    <Actions>更改变元 \InitValue，使其位于值范围之内。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1614" eDefine="SYS_ERR_ARL_UI_INITNOTINT">
+    <Title>InitValue 不是整数</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />在函数 <arg format="%s" ordinal="4" /> 中，变元 \InitValue 不是如同<p /> \AsInteger 中规定的整数值。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Consequences>程序执行无法继续。</Consequences>
+    <Actions>将变元 \InitValue 改成整数。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1615" eDefine="SYS_ERR_ARL_DATAPOS_UNDEF">
+    <Title>引用错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />数据位置 <arg format="%s" ordinal="2" /> 未定义。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Actions>所有数据位置均使用函数 GetNextSym 检索。</Actions>
+  </Message>
+  <Message number="1616" eDefine="SYS_ERR_ARL_TASKID_UNDEF">
+    <Title>引用错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />任务 ID <arg format="%s" ordinal="2" /> 在系统内未知。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Actions>程序任务必须在系统参数内定义，而不能在 RAPID 程序内定义。（任务 ID (Taskid) 可用作声明例行程序时的参数）。</Actions>
+  </Message>
+  <Message number="1617" eDefine="SYS_ERR_ARL_UI_BUFFER_FULL">
+    <Title>写入指令使用频率过高</Title>
+    <Description>用户界面写入指令的使用频率太高（例如 TPWrite），迫使程序执行速度降低。</Description>
+    <Actions>减少用户界面写入指令的使用频率。写入指令结合使用时，添加等待指令，例如 WaitTime。</Actions>
+  </Message>
+  <Message number="1618" eDefine="SYS_ERR_ARL_UI_BUTTON">
+    <Title>自变量错误 buttondata</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />buttondata 类型的自变量 Buttons 无许可值。<p />仅允许使用预定义的 buttondata 数据类型。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Causes>Buttondata 必须为：<p />- 整数<p />- 具有预定义范围内的值</Causes>
+    <Actions>编辑程序。</Actions>
+  </Message>
+  <Message number="1619" eDefine="SYS_ERR_ARL_UI_ICON">
+    <Title>自变量错误 icondata</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />icondata 类型的自变量 Icon 无许可值。<p />仅允许使用预定义的 icondata 数据类型。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Causes>Icondata 必须为：<p />- 整数<p />- 具有预定义范围内的值</Causes>
+    <Actions>编辑程序。</Actions>
+  </Message>
+  <Message number="1620" eDefine="SYS_ERR_ARL_SOCK_OVERLOAD">
+    <Title>套接字错误 </Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />Socket Messaging 子系统过载。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Causes>如果频繁和迅速地创建并关闭套接字，就可能出现这种情况。 </Causes>
+    <Actions>尝试重写程序，重写时应重复使用套接字，而不是关闭后重新创建它们。 </Actions>
+  </Message>
+  <Message number="1621" eDefine="SYS_ERR_ARL_STORE_PATH_KEEPSYNCH">
+    <Title>StorePath 错误
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />指令 <arg format="%s" ordinal="2" /> 与 <arg format="%s" ordinal="3" /> 开关用于一项或若干任务，包括 <arg format="%s" ordinal="2" /> 不包括 <arg format="%s" ordinal="3" /> 开关。<p />Program Ref. <arg format="%s" ordinal="4" /></Description>
+    <Consequences>立即停止程序执行。
+</Consequences>
+    <Causes>RAPID 程序中存在错误。
+</Causes>
+    <Actions>检查是否混用了 StorePath 和 StorePath \KeepSync。<p />更改程序。<p />必须将 PP 移至所有任务才能继续操作。<p /><p /></Actions>
+  </Message>
+  <Message number="1622" eDefine="SYS_ERR_ARL_UNEXP_SYNC_INSTR">
+    <Title>意外指令
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />仅可在指令 <arg format="%s" ordinal="3" /> 和指令p/&gt; <arg format="%s" ordinal="4" /><p />之间使用指令 <arg format="%s" ordinal="2" /> （在存储路径层上）。<p />程序引用 <arg format="%s" ordinal="5" /><p /></Description>
+    <Consequences>立即停止程序执行。<p /></Consequences>
+    <Causes>RAPID 程序中存在错误。
+</Causes>
+    <Actions>检查并更改 RAPID 程序。<p />继续操作前必须将 PP 移至所有任务。<p /><p /></Actions>
+  </Message>
+  <Message number="1623" eDefine="SYS_ERR_ARL_MULTIPLE_SYNC_INSTR">
+    <Title>错误使用 <arg format="%s" ordinal="2" /></Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />指令 <arg format="%s" ordinal="2" /> 已使用多次，或在已处于同步运动模式时使用了此指令。<p /><arg format="%s" ordinal="3" /> 暂停同步协调移动。<p /><arg format="%s" ordinal="4" /> 恢复同步协调移动。<p />程序引用 <arg format="%s" ordinal="5" /></Description>
+    <Consequences>立即停止程序执行。<p /><p /></Consequences>
+    <Causes>RAPID 程序中存在错误。
+</Causes>
+    <Actions>检查并更改 RAPID 程序。<p />继续操作前必须将 PP 移入所有任务。<p /><p /><p /></Actions>
+  </Message>
+  <Message number="1625" eDefine="SYS_ERR_ARL_UNEXP_SUSP_IN_SYNCH_OFF">
+    <Title>意外<arg format="%s" ordinal="2" /></Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />在指令 <arg format="%s" ordinal="3" /> 后面直接使用了指令 <arg format="%s" ordinal="2" />，或者系统未处在同步动作模式。<p />不能对独立的动作模式进行更改。<p />程序引用 <arg format="%s" ordinal="4" /></Description>
+    <Consequences>程序立即停止执行。</Consequences>
+    <Causes>RAPID 程序中有错误。</Causes>
+    <Actions>检查并更改 RAPID 程序。<p />必须在所有任务中移动 PP 后才能继续。<p /><p /></Actions>
+  </Message>
+  <Message number="1626" eDefine="SYS_ERR_ARL_UNEXP_STOREP_KEEPSYNC">
+    <Title>意外 <arg format="%s" ordinal="1" /><arg format="%s" ordinal="2" /></Title>
+    <Description>任务： <arg format="%s" ordinal="3" /><p />指令 <arg format="%s" ordinal="1" /><arg format="%s" ordinal="2" /> 用于独立运动模式。<p />程序引用 <arg format="%s" ordinal="4" /></Description>
+    <Consequences>立即停止程序执行。
+</Consequences>
+    <Causes>RAPID 程序中存在错误。
+</Causes>
+    <Actions>检查并更改 RAPID 程序。<p />继续操作前必须将 PP 移入所有任务。<p /><p /></Actions>
+  </Message>
+  <Message number="1627" eDefine="SYS_ERR_SYNCH_MODE_NEVER_SYNCHED_BEFORE_RESUME">
+    <Title>错误使用 <arg format="%s" ordinal="2" /></Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> 用于存储路径层，且系统在 <arg format="%s" ordinal="3" />之前未处于同步运动模式。<p />程序引用 <arg format="%s" ordinal="4" /></Description>
+    <Consequences>立即停止程序执行。
+</Consequences>
+    <Causes>RAPID 程序中存在错误。
+</Causes>
+    <Actions>检查并更改 RAPID 程序。<p />继续操作前必须将 PP 移入所有任务。
+</Actions>
+  </Message>
+  <Message number="1630" eDefine="SYS_ERR_ARL_SAME_SYNCHID_WARN">
+    <Title>不安全的同步</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />要使用安全的同步功能，变量 <arg format="%s" ordinal="2" /> 只能使用一次，而不能用于数个 <arg format="%s" ordinal="3" /> 或 <arg format="%s" ordinal="4" /> 指令。 <p /><p />程序引用 <arg format="%s" ordinal="5" /></Description>
+    <Consequences>程序任务/移动可能无法始终保持同步。</Consequences>
+    <Causes>在相同程序内多次使用 <arg format="%s" ordinal="2" /> 。</Causes>
+    <Actions>检查并更改 RAPID 程序。</Actions>
+  </Message>
+  <Message number="1631" eDefine="SYS_ERR_ARL_IN_ALL_EVENT_ROUTINES">
+    <Title>指令错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />程序在 EVENT 例行程序中执行。不允许在带有 shelf <arg format="%s" ordinal="2" /> 的 EVENT 例行程序中执行当前指令。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Actions>删除该指令</Actions>
+  </Message>
+  <Message number="1632" eDefine="SYS_ERR_ARL_NO_USE">
+    <Title>变元不存在</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />使用指令 TPShow 中的变元 TP_SCREENVIEWER 和 TP_PROGRAM 的功能已被删除。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>执行含有这些变元的指令后无任何结果。</Consequences>
+    <Actions>删除该指令。</Actions>
+  </Message>
+  <Message number="1633" eDefine="SYS_ERR_ARL_ONLY_UNDO">
+    <Title>仅可用于 UNDO 句柄</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />该指令 <arg format="%s" ordinal="2" /> 仅可用于 UNDO 句柄。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Consequences>程序执行将停止。</Consequences>
+    <Actions>使用其它指令并且/或者将该指令移至 UNDO 句柄。</Actions>
+  </Message>
+  <Message number="1634" eDefine="SYS_ERR_ARL_ILL_TASKNAME">
+    <Title>未知任务名称</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />任务名称 <arg format="%s" ordinal="2" /> 在系统内未知。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Consequences>无法通过系统中找不到的任务名称来执行该指令。</Consequences>
+    <Causes>1. 系统参数中未定义程序任务。<p />2. 任务名称拼写错误。<p /></Causes>
+    <Actions>恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1635" eDefine="SYS_ERR_ARL_UNEXP_SYNC_OFF_IN_OFF">
+    <Title>意外的 SyncMoveOff</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />意外的 SyncMoveOff (SyncID <arg format="%s" ordinal="2" />)。系统已处于非同步模式。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>使用非全局任务列表可能导致此错误。</Causes>
+    <Actions>删除 SyncMoveOff 指令。每个 SyncMoveOn 后必须接一个 SyncMoveOff 指令。<p />请检查您的任务列表。<p /><p /><p /></Actions>
+  </Message>
+  <Message number="1636" eDefine="SYS_ERR_ARL_UNEXP_SYNC_OFF_FROM_UNSYNC">
+    <Title>意外 SyncMoveOff</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />意外的 SyncMoveOff (SyncId <arg format="%s" ordinal="2" />)，任务未包含在同步组中。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Causes>使用非全局任务列表会导致该错误。</Causes>
+    <Actions>删除 SyncMoveOff 指令。每个 SyncMoveOn 后面必须跟一个 SyncMoveOff 指令。<p />检查您的任务列表。</Actions>
+  </Message>
+  <Message number="1637" eDefine="SYS_ERR_ARL_TASK_ACTIVATION_MISMATCH">
+    <Title>任务在任务选择面板上不再为活动状态</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />任务 <arg format="%s" ordinal="2" /> 在任务选择面板上不再为活动状态。<p />在从主程序开始时，任务 <arg format="%s" ordinal="2" /> 在任务选择面板上为活动状态。<p />因此这个原因，无法通过本 <arg format="%s" ordinal="4" /> 指令。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Consequences>程序立即停止执行。</Consequences>
+    <Causes>任务 <arg format="%s" ordinal="2" /> 已在任务选择面板上被停用。</Causes>
+    <Actions>1) 在任务选择面板上启用任务 <arg format="%s" ordinal="2" />。<p />2) 要想对该循环的其余部分永久性地跳过任务 <arg format="%s" ordinal="2" />，可运行服务例行程序 SkipTaskExec。<p />此后重新启动指令 <arg format="%s" ordinal="4" />。</Actions>
+  </Message>
+  <Message number="1638" eDefine="SYS_ERR_ARL_TASK_ADDED_ERROR">
+    <Title>不允许启动任务</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />该任务 <arg format="%s" ordinal="2" /> 在任务选择面板中处于活动状态。当从主程序启动完成时，这个任务在任务选择面板中处于非活动状态。从主程序启动后不允许在任务选择面板中添加任务。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Consequences>立即停止程序执行。</Consequences>
+    <Causes>1) 当从主程序启动完成时，该任务 <arg format="%s" ordinal="2" /> 处于非活动状态。<p />2) 使用服务例行程序 <arg format="%s" ordinal="2" /> 停用任务 <arg format="%s" ordinal="4" />，但不停用任务选择面板中的任务。<p />3) 停用任务 <arg format="%s" ordinal="2" /> 较早在任务选择面板上停用和使用服务例行程序停用 <arg format="%s" ordinal="4" />。</Causes>
+    <Actions>将 PP 移至主程序，重新设置在主程序启用过的任务。然后使用任务选择面板选择您想执行的任务。</Actions>
+  </Message>
+  <Message number="1640" eDefine="SYS_ERR_ARL_MOVE_PP_PATH_LEVEL">
+    <Title>移动 PP 警告</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />如果保存路径时将程序指针移动到某个位置，将可能导致路径恢复后出现问题。</Description>
+    <Consequences>路径可能无意中停留在保存状态。</Consequences>
+    <Causes>保存路径时停止程序。随后执行程序内的 PP 移动。</Causes>
+    <Actions>如有必要，请将 PP 移至 RestoPath 指令，以确保不会跳过路径恢复。</Actions>
+  </Message>
+  <Message number="1641" eDefine="SYS_ERR_ARL_MOVE_PP_STOP_MOVE">
+    <Title>移动 PP 警告</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />激活停止动作时移动程序指针可能导致停用停止动作后出现问题。</Description>
+    <Consequences>重新启动动作可能会受阻。<p />程序执行可能保持等待动作指令。<p /></Consequences>
+    <Causes>激活停止动作时停止程序。随后执行程序内的 PP 移动。</Causes>
+    <Actions>确保未跳过停止动作停用。</Actions>
+  </Message>
+  <Message number="1642" eDefine="SYS_ERR_ARL_POW_ARG_RANGE">
+    <Title>变元错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />变元 <arg format="%s" ordinal="2" /> 不在范围之内。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Actions>
+      <arg format="%s" ordinal="4" /> 必须 &gt; 0，如果 <arg format="%s" ordinal="5" /> = 0。</Actions>
+  </Message>
+  <Message number="1643" eDefine="SYS_ERR_ARL_POW_ARG_RANGE2">
+    <Title>变元错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />变元 <arg format="%s" ordinal="2" /> 不在范围之内<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Actions>
+      <arg format="%s" ordinal="4" /> 必须为整数，如果 <arg format="%s" ordinal="5" /> &lt; </Actions>
+  </Message>
+  <Message number="1644" eDefine="SYS_ERR_ARL_SQRT_ARG_RANGE">
+    <Title>变元错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />变元 <arg format="%s" ordinal="2" /> 不在范围之内。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Actions>
+      <arg format="%s" ordinal="4" /> 必须大于或者等于 0。</Actions>
+  </Message>
+  <Message number="1645" eDefine="SYS_ERR_ARL_PROG_STOP_S">
+    <Title>程序被 RAPID 停止</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />程序和运动随“System Stop”而被 RAPID 停止。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Consequences>因 RAPID 中已编定的“System Stop”，程序执行和运动均被停止。导致停止的问题已优先列入其它日志中。</Consequences>
+    <Actions>找出程序停止的原因（可能在其它日志中），纠正问题并重新运行该程序。</Actions>
+  </Message>
+  <Message number="1646" eDefine="SYS_ERR_ARL_PROG_STOP_B">
+    <Title>程序被 RAPID 锁定</Title>
+    <Description>任务：<arg format="%s" ordinal="1" /><p />程序和运动因为 RAPID 指令“SystemStopAction \StopBlock”而停止和锁定。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Consequences>由于 RAPID 中预编的“System Stop RAPID Block”，程序执行和运动均被停止。导致停止的问题已优先列入另一个日志。<p /><p />如果机器人正在执行圆形运动，必须将机器人移至圆形运动的起点，然后再重新启动程序。 </Consequences>
+    <Actions>找出程序被锁定的原因（可能在其它日志中），先纠正问题并移动所有动作任务中的程序指针，然后再重新启动程序。</Actions>
+  </Message>
+  <Message number="1647" eDefine="SYS_ERR_ARL_PROG_STOP_H">
+    <Title>程序被 RAPID 中断</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /> 程序和运动随“系统中断”而被 RAPID 中断。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Consequences>因 RAPID 中已编定的“系统中断”，程序执行和移动均被停止。导致停止的问题已优先列入另一个日志。</Consequences>
+    <Actions>找出程序中断的原因（可能在其它日志中），纠正问题并打开电机再重新启动程序。</Actions>
+  </Message>
+  <Message number="1648" eDefine="SYS_ERR_ARL_PATH_REC_NEWMOD">
+    <Title>执行错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />不允许将运行模式从向前改为向后，从持续改为渐进，反之亦然。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>选择原始运行模式并继续程序执行。</Actions>
+  </Message>
+  <Message number="1649" eDefine="SYS_ERR_ARL_INCORRECT_ERRMSG">
+    <Title>不正确的错误消息</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />指令 <arg format="%s" ordinal="2" /> 中至少一个变元超过手册所述限制<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Causes>指令 <arg format="%s" ordinal="4" /> 的变元包括对指令中使用的各个字串和字符总数的限制。手册对此已作描述。</Causes>
+    <Actions>请参阅手册并纠正变元。</Actions>
+  </Message>
+  <Message number="1650" eDefine="SYS_ERR_ARL_ALREADY_STOPPED">
+    <Title>任务已被另一任务停止</Title>
+    <Description>非动作任务 <arg format="%s" ordinal="1" /> 已执行 StopMove 指令。但是未采取任何停止操作，因为动作任务 <arg format="%s" ordinal="2" /> 已被任务 <arg format="%s" ordinal="3" /> 停止。<p />程序引用 <arg format="%s" ordinal="4" /></Description>
+    <Consequences>动作任务必须通过 StartMove 指令，从使其停止的任务启动，或者该任务的 StartMove 中必须使用开关 \AllMotionTasks。</Consequences>
+  </Message>
+  <Message number="1651" eDefine="SYS_ERR_ARL_NOT_MOVE_STOPPED">
+    <Title>任务的 StartMove 操作被忽略</Title>
+    <Description>非动作任务 <arg format="%s" ordinal="1" /> 已执行 StartMove 指令。但是，动作任务 <arg format="%s" ordinal="2" /> 并未启动。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Consequences>如果动作任务已被另一非动作任务停止，则无法执行任何运动。</Consequences>
+    <Causes>1. 动作任务尚未停止。<p />2. 动作任务已被另一非动作任务 <arg format="%s" ordinal="4" /> 停止。<p />这次的原因是 <arg format="%s" ordinal="5" />。</Causes>
+    <Actions>如果 StartMove 指令要启动一个已由另一非动作任务停止的运动，请在该指令中使用开关 \AllMotionTasks。</Actions>
+  </Message>
+  <Message number="1652" eDefine="SYS_ERR_ARL_FORCED_START_MOVE">
+    <Title>强制执行 StartMove 操作</Title>
+    <Description>非动作任务 <arg format="%s" ordinal="1" /> 已执行 StartMove 指令。指令发现动作任务 <arg format="%s" ordinal="2" /> 已被该任务停止。该动作任务将启动，以防止出现原因不明的运动停止问题。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Causes>1. 动作任务已停止，同时开关 \AllMotionTasks 在 StopMove 指令中已启用，但在 StartMove 指令中未启用。<p />2. StopMove 指令已在同步模式下执行，而 StartMove 执行则在独立模式下执行。</Causes>
+  </Message>
+  <Message number="1653" eDefine="SYS_ERR_ARL_WOBJ_INTASK">
+    <Title>变元错误 CalcJointT</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />如果协调工件被某个机械单元移动且其所在任务与 TCP 机器人相同，或者如果工件未被任何机械单元移动，则无法使用变元 \UseCurWObjPos 来执行 CalcJointT 功能。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>删除变元 \UseCurWObjPos，以便执行 CalcJointT 功能和完全使用 RAPID 程序中的数据进行计算。</Actions>
+  </Message>
+  <Message number="1654" eDefine="SYS_ERR_ARL_WOBJ_MOVING">
+    <Title>执行错误 CalcJointT</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />无法使用变元 \UseCurWObjPos 执行 CalcJointT 功能，因为机械单元 <arg format="%s" ordinal="2" /> 在执行 CalcJointT 时正在移动。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>如果协调工件被其它任务移动并保持静止，则必须一丝不苟地执行具有变元 \UseCurWObjPos 的 CalcJointT 功能。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1655" eDefine="SYS_ERR_ARL_NOT_IN_NON_MOTION">
+    <Title>变元并非动作任务</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />已使用函数/指令 <arg format="%s" ordinal="5" />，它带有一个变元，该变元引用了一个任务，<arg format="%s" ordinal="2" />。该任务并非动作任务（控制机械单元），因此无法使用。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Causes>
+使用 <arg format="%s" ordinal="5" /> 和变元 \TaskRef 或 \TaskName 时，只有当变元引用的任务是动作任务时才不会发生错误。</Causes>
+    <Actions>更改变元 \TaskRef 或 \TaskName 或将其删除，然后重新开始执行程序。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1656" eDefine="SYS_ERR_ARL_NOT_ALLOW_REAL_ARLNUM_VAL">
+    <Title>非允许值</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />变元中存在非法值 <arg format="%s" ordinal="2" />。<p /><p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>检查并更改该值。它必须介于 <arg format="%s" ordinal="4" /> 与 <arg format="%s" ordinal="5" /> 之间。 </Actions>
+  </Message>
+  <Message number="1657" eDefine="SYS_ERR_ARL_FILE_NOACC_ISFILE">
+    <Title>文件访问错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />无法访问文件/设备 <arg format="%s" ordinal="2" />。<p />程序引用 <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Causes>- 路径或者文件名错误。<p />- 同时打开的文件数超限。<p />- 磁盘存储空间已满。<p />- 功能不支持检查选择的设备。</Causes>
+    <Actions>- 检查路径或文件名。<p />- 检查磁盘空间。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1658" eDefine="SYS_ERR_ARL_STOPMOVE_STATE">
+    <Title>程序任务处于 StopMove 状态</Title>
+    <Description>任务：<arg format="%s" ordinal="1" /><p />此动作任务不会执行任何运动，因为任务受到某个非动作任务的指令，当前设置为 StopMove 状态。<p /></Description>
+    <Consequences>无法启动任何运动。</Consequences>
+    <Causes>某个连接到此动作任务的非动作任务已将任务设置为 StopMove 状态。</Causes>
+    <Actions>要执行该动作任务中的运动，必须通过以下操作之一，由负责的非动作任务重设 StopMove 的状态：<p />1) 执行 StartMove<p />2) 从主程序启动负责的非动作任务 <p />a) 如果是半静止非动作任务，则关闭再重新打开电源<p />b) 如果是静止非动作任务，则执行安装启动<p />c)如果是普通非动作任务，则将 PP 设置到主程序</Actions>
+  </Message>
+  <Message number="1660" eDefine="SYS_ERR_ARL_UISHOW_FULL">
+    <Title>无剩余空间可容纳新视图</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />视图数量已超过最大值。<p />FlexPendant 上已没有剩余空间可容纳新视图。 <p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Consequences>该视图不会启动。</Consequences>
+    <Causes>打开视图过多。</Causes>
+    <Actions>关闭一个视窗并重试。<p />恢复： <arg format="%s" ordinal="3" /><p /></Actions>
+  </Message>
+  <Message number="1661" eDefine="SYS_ERR_ARL_UISHOW_FOUND">
+    <Title>无法找到组件</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />1) 无法找到组件，或组件不存在。<p />2) FlexPendant Interface 选项丢失。<p />状态 <arg format="%s" ordinal="2" />。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Consequences>该视图不会启动。<p /><p /></Consequences>
+    <Causes>1) 无法找到组件 <arg format="%s" ordinal="4" /> 。<p />2) 系统映像不包括所需选项 FlexPendant Interface。<p /></Causes>
+    <Actions>1) 检查输入参数。 确保模块已正确加载到<p />机器人控制器。 <p />2) 检查是否已使用 FlexPendant Interface 选项。<p />恢复： <arg format="%s" ordinal="5" /><p /><p /><p /></Actions>
+  </Message>
+  <Message number="1662" eDefine="SYS_ERR_ARL_UISHOW_LOAD">
+    <Title>无法加载组件</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />组件已找到但无法加载。<p />状态 <arg format="%s" ordinal="2" />.<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Consequences>该视图不会启动。<p /></Consequences>
+    <Actions>确保加载的模块是适用于 FlexPendant 的可执行文件。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1663" eDefine="SYS_ERR_ARL_UISHOW_INST">
+    <Title>无法创建实例</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />组件已存在，但无法创建新实例。<p />状态 <arg format="%s" ordinal="2" />。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Consequences>该视图不会启动。</Consequences>
+    <Actions>确保加载的模块是适用于 FlexPendant 的可执行文件。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1664" eDefine="SYS_ERR_ARL_UISHOW_TYPE">
+    <Title>该组件的输入名称无效</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />输入参数 <arg format="%s" ordinal="2" /> 无效。输入名称与组件不匹配。<p />状态 <arg format="%s" ordinal="3" />。<p />程序引用 <arg format="%s" ordinal="4" />。 </Description>
+    <Consequences>该浏览不会启动。<p /><p /></Consequences>
+    <Actions>检查输入参数。<p />恢复： <arg format="%s" ordinal="5" /><p /></Actions>
+  </Message>
+  <Message number="1665" eDefine="SYS_ERR_ARL_UISHOW_ID">
+    <Title>
+      <arg format="%s" ordinal="1" /> 与待加载的组件不匹配</Title>
+    <Description>任务： <arg format="%s" ordinal="2" /><p />组件的类型或名称与使用的不匹配。 <arg format="%s" ordinal="1" />。<p />状态 <arg format="%s" ordinal="3" />。<p />程序引用 <arg format="%s" ordinal="4" />。 </Description>
+    <Consequences>该视图不会启动。<p /></Consequences>
+    <Causes>使用 <arg format="%s" ordinal="1" /> 起初未将其归 0。</Causes>
+    <Actions>使用前先将 <arg format="%s" ordinal="1" /> 归 0。<p />恢复： <arg format="%s" ordinal="5" /><p /></Actions>
+  </Message>
+  <Message number="1666" eDefine="SYS_ERR_ARL_UISHOW_FATAL">
+    <Title>致命的 UIShow 错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />收到未知的错误代码 <arg format="%s" ordinal="2" /> 。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Consequences>立即停止程序执行。<p /></Consequences>
+    <Actions>向 ABB Robotics 报告该问题。</Actions>
+  </Message>
+  <Message number="1667" eDefine="SYS_ERR_ARL_UI_INT_FATAL">
+    <Title>致命的 UI 错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />运行指令或函数时使用了开关 <arg format="%s" ordinal="2" />，未使用可选变元<arg format="%s" ordinal="3" />。<p />程序引用 <arg format="%s" ordinal="4" /></Description>
+    <Consequences>程序立即停止执行。<p /></Consequences>
+    <Causes>使用了非法的可选变元与开关的组合。</Causes>
+    <Actions>更正 RAPID 程序。</Actions>
+  </Message>
+  <Message number="1670" eDefine="SYS_ERR_ARL_ANYTYPE_NO_ARR">
+    <Title>不允许将整个数组作为变元</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />变元 <arg format="%s" ordinal="2" /> 的数据类型为任何类型，因此只能在运行时进行检查。<p />整个数组不能作为变元使用，即使数组具有正确的数据类型。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Consequences>程序立即停止执行。</Consequences>
+    <Actions>用一个有效变元替换该数组。</Actions>
+  </Message>
+  <Message number="1671" eDefine="SYS_ERR_ARL_POLLRATE_HIGH">
+    <Title>轮询率过高</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />机器人系统的指定轮询率过高。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Consequences>系统可能过载。</Consequences>
+    <Actions>将指令 WaitUntil、变元\PollRate 的值更改为大于或<p />等于 0.01 s。</Actions>
+  </Message>
+  <Message number="1672" eDefine="SYS_ERR_ARL_NOT_ALLOWED_COMB">
+    <Title>无效的组合</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />Trigg 命令中的参数组合无效<p />程序引用: <arg format="%s" ordinal="2" /></Description>
+    <Actions>运行不带可选变元 \Time 的 Trigg 命令，或者使用带可选变元 \Time 的 TriggRampAO 将 RampLength 规定为秒，而非距离。</Actions>
+  </Message>
+  <Message number="1673" eDefine="SYS_ERR_ARL_INDX_OUTOFBOUNDS">
+    <Title>指标超出边界</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />配置实例的指标超出边界<p />程序引用： <arg format="%s" ordinal="2" /></Description>
+    <Actions>检查并更改 RAPID 程序。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1674" eDefine="SYS_ERR_SPEED_REFRESH_LIM">
+    <Title>值超出范围</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />参数 <arg format="%s" ordinal="2" /> 不在 0 与 100 之间。<p />程序引用： <arg format="%s" ordinal="3" /></Description>
+    <Actions>检查并更改 RAPID 程序。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1675" eDefine="SYS_ERR_ARL_INT_INVALID">
+    <Title>非整数</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />参数 <arg format="%s" ordinal="2" /> 不是整数。<p />程序引用： <arg format="%s" ordinal="3" /></Description>
+    <Actions>检查 RAPID 程序，或使用 ERROR 处理程序<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1676" eDefine="SYS_ERR_ARL_IO_NOTFND">
+    <Title>设备访问错误</Title>
+    <Description>任务：<arg format="%s" ordinal="1" /><p />无法打开文件或串行信道，'<arg format="%s" ordinal="2" />' 不存在。<p />程序引用: <arg format="%s" ordinal="3" /></Description>
+    <Actions>检查文件或串行信道名称。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1677" eDefine="SYS_ERR_ARL_IO_FULL">
+    <Title>设备访问错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />无法写入文件： <arg format="%s" ordinal="2" />，磁盘已满。<p />程序引用： <arg format="%s" ordinal="3" /></Description>
+    <Actions>请确保磁盘上有足够的可用空间。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1678" eDefine="SYS_ERR_ARL_IO_WPROT">
+    <Title>设备访问错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />无法写入文件：<arg format="%s" ordinal="2" />，该文件写保护。<p />程序引用：<arg format="%s" ordinal="3" /></Description>
+    <Actions>解除该文件的写保护或者选择另一个文件名。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1679" eDefine="SYS_ERR_ARL_IO_MAXDESC">
+    <Title>设备访问错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />同时打开的文件数超限。<p />程序引用： <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>关闭一个或多个 I/O 设备并重试<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1680" eDefine="SYS_ERR_ARL_NOTSYMBOL">
+    <Title>字串过长</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />字串 <arg format="%s" ordinal="2" /> 超过模块允许的最大字符数。<p />程序引用： <arg format="%s" ordinal="3" /></Description>
+    <Actions>更改模块名称的字串。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1682" eDefine="SYS_ERR_ARL_MAXIOEVENTS">
+    <Title>来自 I/O 的订阅太多</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />超过了信号事件的同时订阅数量。<p />程序引用： <arg format="%s" ordinal="2" /></Description>
+    <Actions>删除信号上的部分订阅或更改事件的时间。<p />（即任何 ISignalXX 或 TriggIO）</Actions>
+  </Message>
+  <Message number="1683" eDefine="SYS_ERR_ARL_NOLISTNO">
+    <Title>变元错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />搜索未命名的参数时必须给出变元 <arg format="%s" ordinal="2" /> 。<p />程序引用： <arg format="%s" ordinal="3" /></Description>
+    <Actions>将参数 <arg format="%s" ordinal="2" /> 添加到指令。</Actions>
+  </Message>
+  <Message number="1684" eDefine="SYS_ERR_ARL_MAXULONG">
+    <Title>值错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />变元 <arg format="%s" ordinal="2" /> 超出值类型无符号长整型的范围。<p />程序引用： <arg format="%s" ordinal="3" /></Description>
+    <Causes>值过大。</Causes>
+    <Actions>使用较小的 <arg format="%s" ordinal="2" /> 值</Actions>
+  </Message>
+  <Message number="1685" eDefine="SYS_ERR_ARL_ARG_COMB_NOT_VALID">
+    <Title>无效值</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />使用了错误的开关和值组合。<p />该信号的值可介于：<p />最小值： <arg format="%s" ordinal="2" /><p />最大值： <arg format="%s" ordinal="3" /><p />使用的开关和值： <arg format="%s" ordinal="4" /><p />程序引用 <arg format="%s" ordinal="5" /><p /></Description>
+    <Consequences>程序立即停止执行。</Consequences>
+    <Causes>使用了错误的值，或使用了错误的开关。</Causes>
+    <Actions>更改所用的值，或更改开关变元。</Actions>
+  </Message>
+  <Message number="1687" eDefine="SYS_ERR_ARL_OPEN_ERR">
+    <Title>文件打开错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />无法打开 <arg format="%s" ordinal="2" /><p />程序引用： <arg format="%s" ordinal="3" /><p />打开文件时发生一个未知错误。</Description>
+    <Causes>- 如果文件位于 USB 磁盘上，检查 USB 没有被移除或者在根目录上的文件过多。<p />- 检查所给的文件不是一个目录<p /></Causes>
+    <Actions>检查可能的原因。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1688" eDefine="SYS_ERR_ARL_USE_OF_PERS">
+    <Title>无效变元</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />将 Inparameter <arg format="%s" ordinal="2" /> 说明为一个 PERS。<p />程序引用： <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>立即停止程序执行。<p /></Consequences>
+    <Causes>将一个变元的 PERS <arg format="%s" ordinal="2" /> 使用在指令上 <arg format="%s" ordinal="4" />。</Causes>
+    <Actions>使用有效变元替换 PERS。</Actions>
+  </Message>
+  <Message number="1690" eDefine="SYS_ERR_ARL_RLMQ_IMPROPER_TYPE">
+    <Title>参数错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />变元 <arg format="%s" ordinal="2" /> 属于 <arg format="%s" ordinal="3" /> 类型，使用无效。<p />程序引用 <arg format="%s" ordinal="4" /></Description>
+    <Consequences>程序立即停止执行。<p /></Consequences>
+    <Actions>检查数据类型。非数值、半数值类型或 motsetdata 数据类型不能使用。</Actions>
+  </Message>
+  <Message number="1691" eDefine="SYS_ERR_ARL_RLMQ_INV_SLOT_NAME">
+    <Title>RMQ 错误 - 客户端名称无效</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />名称 <arg format="%s" ordinal="2" /> 找不到。无效 RMQ 客户端名称。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>使用了无效的名称。</Causes>
+    <Actions>更改搜索的名称。<p />恢复： <arg format="%s" ordinal="4" /><p /></Actions>
+  </Message>
+  <Message number="1692" eDefine="SYS_ERR_ARL_RLMQ_INV_SLOT">
+    <Title>RMQ 错误 - 无效槽位</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />使用的 <arg format="%s" ordinal="2" /> 无效。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>再也不能与具有当前 <arg format="%s" ordinal="2" /> 的客户端进行通信。</Consequences>
+    <Causes>1) <arg format="%s" ordinal="2" /> 已被初始化。<p />2) 目标槽位不再有效。如果某个远程客户端已与控制器断开，则会发生这种情况。<p />3) 在电源故障后重新启动了指令 RMQSendWait。当该指令被重新启动时，<arg format="%s" ordinal="2" /> 被设置为 0。 </Causes>
+    <Actions>恢复: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1693" eDefine="SYS_ERR_ARL_RLMQ_IPC_MSGSIZE">
+    <Title>RMQ 错误 - 超过了消息的最大限制</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> 中的数据大小超过了最大限制。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Consequences>消息将不会发出。</Consequences>
+    <Causes>试图发送大于 <arg format="%s" ordinal="4" /> 的消息。由于 RMQ 的限制，无法发送这样的大消息。<p /></Causes>
+    <Actions>请发送较小的消息。<p />恢复： <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1694" eDefine="SYS_ERR_ARL_RLMQ_INV_TYPE">
+    <Title>RMQ 错误 - 数据类型不同</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p /> rmqmessage 中的数据类型为 <arg format="%s" ordinal="2" /> 类型，而变元数据中的数据类型为 <arg format="%s" ordinal="3" /> 类型。<p />程序引用 <arg format="%s" ordinal="4" />。</Description>
+    <Consequences>无法读取任何数据。</Consequences>
+    <Causes>1) rmqmessage 中的数据类型为 <arg format="%s" ordinal="2" /> 类型，而变元数据中的数据类型为 <arg format="%s" ordinal="3" /> 类型。<p />2) 如果数据类型具有相同的名称，数据结构可以不同。</Causes>
+    <Actions>1) 在变元数据中使用 <arg format="%s" ordinal="2" /> 数据类型。<p />2) 检查确保在发送器和接收器代码中定义的数据类型相同。<p />恢复： <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1695" eDefine="SYS_ERR_ARL_RLMQ_INV_DIM">
+    <Title>RMQ 错误 – 不相等的数据维数</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />数据类型相同，但是变元中使用的消息和参数的数据维数不同 <arg format="%s" ordinal="2" /><p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Consequences>数据无法复制。</Consequences>
+    <Actions>使用和消息数据维数相同的变元参数 <arg format="%s" ordinal="2" /> 。<p />恢复： <arg format="%s" ordinal="4" /><p /></Actions>
+  </Message>
+  <Message number="1696" eDefine="SYS_ERR_ARL_RLMQ_ERR_EXEC_LEV">
+    <Title>RMQ 错误 – 指令使用无效</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />指令仅在 <arg format="%s" ordinal="2" /> TRAP 级别得到支持。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Consequences>立即停止程序执行。</Consequences>
+    <Causes>指令 <arg format="%s" ordinal="2" /> 在用户执行级别或者普通执行级别上使用。</Causes>
+    <Actions>删除指令或将其移至 TRAP 例行程序。</Actions>
+  </Message>
+  <Message number="1697" eDefine="SYS_ERR_ARL_RLMQ_NO_RMQ">
+    <Title>RMQ 错误 – 未配置 RMQ</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />没有为任务配置 RMQ <arg format="%s" ordinal="1" />.<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Consequences>立即停止程序执行。</Consequences>
+    <Causes>没有添加 RAPID 消息队列的配置。</Causes>
+    <Actions>为 RAPID 消息队列添加配置。</Actions>
+  </Message>
+  <Message number="1698" eDefine="SYS_ERR_ARL_RLMQ_SENDWAIT_ERR">
+    <Title>RMQ 错误 – 指令使用错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />指令 <arg format="%s" ordinal="2" /> 仅在普通级别上使用，不能在 TRAP 例行程序或者服务例行程序中使用。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Consequences>立即停止程序执行。</Consequences>
+    <Causes>指令 <arg format="%s" ordinal="2" /> 在错误的级别上使用。</Causes>
+    <Actions>在普通级别上使用指令。</Actions>
+  </Message>
+  <Message number="1699" eDefine="SYS_ERR_ARL_RLMQ_MSGSIZE">
+    <Title>RMQ 错误 – 超过消息最大尺寸</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />数据的大小 <arg format="%s" ordinal="2" /> 超过最大值。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Consequences>不会发送消息。</Consequences>
+    <Causes>尝试发送允许的更大消息。接收客户端没有配置成接收发送消息的尺寸。</Causes>
+    <Actions>为接收端更改 RMQ 的尺寸，或者发送较小的消息。<p />恢复：<arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1700" eDefine="SYS_ERR_ARL_RLMQ_INOINUSE">
+    <Title>RMQ 错误 – 中断设置失败</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /> 两个不同的中断标识不能用于指令 <arg format="%s" ordinal="2" /> 中的相同数据类型。每一种数据类型需要一个唯一的中断标示和唯一的 TRAP 例行程序。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Consequences>立即停止程序执行。<p /></Consequences>
+    <Causes>在带有两种不同中断标识的两条 <arg format="%s" ordinal="2" /> 指令中使用相同的数据类型。<p /></Causes>
+    <Actions>每一种数据类型在为特定的数据类型命令并启用中断时需要唯一的中断标识。<p /><p /></Actions>
+  </Message>
+  <Message number="1701" eDefine="SYS_ERR_ARL_RLMQ_NOMSG">
+    <Title>RMQ 错误 – 没有要收集的消息</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />指令 <arg format="%s" ordinal="2" /> 失败。没有要收集的消息。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Consequences>没有收集到消息。</Consequences>
+    <Causes>1) 如果在执行陷阱和执行指令 <arg format="%s" ordinal="2" /> 之间出现停电，就会发生这种错误。<p />2) 如果在 TRAP 例行程序中多次使用 <arg format="%s" ordinal="2" /> 。<p />3) 如果在没有任何 RMQ 新消息而执行的 TRAP 例行程序中使用 <arg format="%s" ordinal="2" /> 。<p /><p /></Causes>
+    <Actions>恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+</Domain>

@@ -1,0 +1,2705 @@
+<?xml version="1.0" encoding="utf-8"?><!--Title description file for use on the GTPU. Extracted on systempack build-time by ExtractTitles.exe--><ExtractTitles>
+    <Title domain="4" number="1">自变量错误</Title>
+    <Title domain="4" number="2">自变量错误</Title>
+    <Title domain="4" number="3">自变量错误</Title>
+    <Title domain="4" number="4">自变量错误</Title>
+    <Title domain="4" number="5">自变量错误</Title>
+    <Title domain="4" number="6">自变量错误</Title>
+    <Title domain="4" number="7">自变量错误</Title>
+    <Title domain="4" number="8">自变量错误</Title>
+    <Title domain="4" number="9">自变量错误</Title>
+    <Title domain="4" number="10">自变量错误</Title>
+    <Title domain="4" number="11">自变量错误</Title>
+    <Title domain="4" number="12">自变量错误</Title>
+    <Title domain="4" number="13">自变量错误</Title>
+    <Title domain="4" number="14">自变量错误</Title>
+    <Title domain="4" number="15">数据声明错误</Title>
+    <Title domain="4" number="16">数据声明错误</Title>
+    <Title domain="4" number="17">类型错误</Title>
+    <Title domain="4" number="18">类型错误</Title>
+    <Title domain="4" number="19">限制错误</Title>
+    <Title domain="4" number="20">数据声明错误</Title>
+    <Title domain="4" number="21">指令错误</Title>
+    <Title domain="4" number="22">类型错误</Title>
+    <Title domain="4" number="23">指令错误</Title>
+    <Title domain="4" number="24">类型错误</Title>
+    <Title domain="4" number="25">类型错误</Title>
+    <Title domain="4" number="26">类型错误</Title>
+    <Title domain="4" number="27">类型错误</Title>
+    <Title domain="4" number="28">类型错误</Title>
+    <Title domain="4" number="29">类型错误</Title>
+    <Title domain="4" number="30">类型错误</Title>
+    <Title domain="4" number="31">类型错误</Title>
+    <Title domain="4" number="32">类型错误</Title>
+    <Title domain="4" number="33">类型错误</Title>
+    <Title domain="4" number="34">类型错误</Title>
+    <Title domain="4" number="35">类型错误</Title>
+    <Title domain="4" number="36">类型错误</Title>
+    <Title domain="4" number="37">数据声明错误</Title>
+    <Title domain="4" number="38">数据声明错误</Title>
+    <Title domain="4" number="39">名称错误</Title>
+    <Title domain="4" number="40">名称错误</Title>
+    <Title domain="4" number="41">名称错误</Title>
+    <Title domain="4" number="42">名称错误</Title>
+    <Title domain="4" number="43">名称错误</Title>
+    <Title domain="4" number="44">名称错误</Title>
+    <Title domain="4" number="45">名称错误</Title>
+    <Title domain="4" number="46">名称错误</Title>
+    <Title domain="4" number="47">名称错误</Title>
+    <Title domain="4" number="48">名称错误</Title>
+    <Title domain="4" number="49">名称错误</Title>
+    <Title domain="4" number="50">类型错误</Title>
+    <Title domain="4" number="51">类型错误</Title>
+    <Title domain="4" number="52">指令错误</Title>
+    <Title domain="4" number="54">类型错误</Title>
+    <Title domain="4" number="55">类型错误</Title>
+    <Title domain="4" number="56">类型错误</Title>
+    <Title domain="4" number="57">类型错误</Title>
+    <Title domain="4" number="58">类型错误</Title>
+    <Title domain="4" number="59">数据声明错误</Title>
+    <Title domain="4" number="60">数据声明错误</Title>
+    <Title domain="4" number="61">例行程序声明错误</Title>
+    <Title domain="4" number="62">名称错误</Title>
+    <Title domain="4" number="63">数据声明错误</Title>
+    <Title domain="4" number="64">例行程序声明错误</Title>
+    <Title domain="4" number="65">引用错误</Title>
+    <Title domain="4" number="66">数据声明错误</Title>
+    <Title domain="4" number="67">类型错误</Title>
+    <Title domain="4" number="68">类型错误</Title>
+    <Title domain="4" number="69">引用错误</Title>
+    <Title domain="4" number="70">引用错误
+</Title>
+    <Title domain="4" number="71">引用错误</Title>
+    <Title domain="4" number="72">引用错误</Title>
+    <Title domain="4" number="73">引用错误</Title>
+    <Title domain="4" number="74">引用错误</Title>
+    <Title domain="4" number="75">引用错误</Title>
+    <Title domain="4" number="76">引用错误</Title>
+    <Title domain="4" number="77">引用错误</Title>
+    <Title domain="4" number="78">引用错误</Title>
+    <Title domain="4" number="79">引用错误</Title>
+    <Title domain="4" number="80">引用错误</Title>
+    <Title domain="4" number="81">引用错误</Title>
+    <Title domain="4" number="82">引用错误</Title>
+    <Title domain="4" number="83">类型错误</Title>
+    <Title domain="4" number="86">引用错误</Title>
+    <Title domain="4" number="87">引用错误</Title>
+    <Title domain="4" number="89">引用错误</Title>
+    <Title domain="4" number="90">引用错误</Title>
+    <Title domain="4" number="92">引用错误</Title>
+    <Title domain="4" number="93">指令错误</Title>
+    <Title domain="4" number="94">数据声明错误</Title>
+    <Title domain="4" number="95">指令错误</Title>
+    <Title domain="4" number="96">指令错误</Title>
+    <Title domain="4" number="97">指令错误</Title>
+    <Title domain="4" number="98">参数错误</Title>
+    <Title domain="4" number="99">参数错误</Title>
+    <Title domain="4" number="100">参数错误</Title>
+    <Title domain="4" number="101">类型错误</Title>
+    <Title domain="4" number="102">类型错误</Title>
+    <Title domain="4" number="103">类型错误</Title>
+    <Title domain="4" number="104">数据声明错误</Title>
+    <Title domain="4" number="105">数据声明错误</Title>
+    <Title domain="4" number="106">数据声明错误</Title>
+    <Title domain="4" number="107">数据声明错误</Title>
+    <Title domain="4" number="108">类型错误</Title>
+    <Title domain="4" number="109">类型定义错误</Title>
+    <Title domain="4" number="110">引用错误</Title>
+    <Title domain="4" number="111">名称错误</Title>
+    <Title domain="4" number="112">引用错误</Title>
+    <Title domain="4" number="113">名称错误</Title>
+    <Title domain="4" number="114">类型定义错误</Title>
+    <Title domain="4" number="115">类型定义错误</Title>
+    <Title domain="4" number="116">引用错误</Title>
+    <Title domain="4" number="117">类型定义错误</Title>
+    <Title domain="4" number="119">引用错误</Title>
+    <Title domain="4" number="120">引用错误</Title>
+    <Title domain="4" number="121">引用错误</Title>
+    <Title domain="4" number="122">引用错误</Title>
+    <Title domain="4" number="123">自变量错误</Title>
+    <Title domain="4" number="124">自变量错误</Title>
+    <Title domain="4" number="125">指令错误</Title>
+    <Title domain="4" number="126">值错误</Title>
+    <Title domain="4" number="127">值错误</Title>
+    <Title domain="4" number="128">引用错误</Title>
+    <Title domain="4" number="129">引用错误</Title>
+    <Title domain="4" number="130">引用错误</Title>
+    <Title domain="4" number="131">引用错误</Title>
+    <Title domain="4" number="135">语法错误</Title>
+    <Title domain="4" number="136">语法错误</Title>
+    <Title domain="4" number="137">语法错误</Title>
+    <Title domain="4" number="138">语法错误
+</Title>
+    <Title domain="4" number="139">语法错误
+</Title>
+    <Title domain="4" number="140">符号 <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 的数值超出范围。</Title>
+    <Title domain="4" number="141">字串过长</Title>
+    <Title domain="4" number="142">TxId 超出范围</Title>
+    <Title domain="4" number="143">集合超出范围</Title>
+    <Title domain="4" number="144">整数超出范围</Title>
+    <Title domain="4" number="145">分析程序堆栈已满
+</Title>
+    <Title domain="4" number="146">无足够的堆栈空间。
+</Title>
+    <Title domain="4" number="147">在当前语言中标识符为保留字符
+</Title>
+    <Title domain="4" number="148">标识符过长</Title>
+    <Title domain="4" number="149">占位符过长</Title>
+    <Title domain="4" number="150">意外未知权标</Title>
+    <Title domain="4" number="151">PERS 的初始值未更新。</Title>
+    <Title domain="4" number="152">数据声明错误</Title>
+    <Title domain="4" number="155">变量错误
+</Title>
+    <Title domain="4" number="156">变量错误 </Title>
+    <Title domain="4" number="157">指令错误</Title>
+    <Title domain="4" number="158">值错误</Title>
+    <Title domain="4" number="159">值错误</Title>
+    <Title domain="4" number="160">RAPID 程序中存在错误。</Title>
+    <Title domain="4" number="161">选项缺失。</Title>
+    <Title domain="4" number="162">RAPID 程序中存在错误。</Title>
+    <Title domain="4" number="165">引用错误</Title>
+    <Title domain="4" number="166">引用错误</Title>
+    <Title domain="4" number="168">引用错误
+</Title>
+    <Title domain="4" number="170">引用错误</Title>
+    <Title domain="4" number="171">引用错误</Title>
+    <Title domain="4" number="172">引用错误</Title>
+    <Title domain="4" number="173">引用错误</Title>
+    <Title domain="4" number="174">引用错误</Title>
+    <Title domain="4" number="175">引用错误</Title>
+    <Title domain="4" number="191">指令错误
+</Title>
+    <Title domain="4" number="192">自变量错误</Title>
+    <Title domain="4" number="193">执行错误</Title>
+    <Title domain="4" number="194">值错误</Title>
+    <Title domain="4" number="195">限制错误</Title>
+    <Title domain="4" number="196">指令错误</Title>
+    <Title domain="4" number="197">执行错误</Title>
+    <Title domain="4" number="198">值错误</Title>
+    <Title domain="4" number="199">值错误</Title>
+    <Title domain="4" number="200">限制错误</Title>
+    <Title domain="4" number="202">类型错误</Title>
+    <Title domain="4" number="203">引用错误</Title>
+    <Title domain="4" number="204">值错误</Title>
+    <Title domain="4" number="205">值错误</Title>
+    <Title domain="4" number="206">中断队列已满</Title>
+    <Title domain="4" number="207">值错误</Title>
+    <Title domain="4" number="208">错误事件队列已满</Title>
+    <Title domain="4" number="209">错误上下文已耗尽</Title>
+    <Title domain="4" number="210">已从队列中移除中断</Title>
+    <Title domain="4" number="221">执行错误</Title>
+    <Title domain="4" number="222">限制错误</Title>
+    <Title domain="4" number="223">执行错误</Title>
+    <Title domain="4" number="224">执行错误</Title>
+    <Title domain="4" number="225">执行错误</Title>
+    <Title domain="4" number="226">名称错误</Title>
+    <Title domain="4" number="227">限制错误</Title>
+    <Title domain="4" number="228">执行错误</Title>
+    <Title domain="4" number="229">执行错误</Title>
+    <Title domain="4" number="230">执行错误</Title>
+    <Title domain="4" number="241">值错误</Title>
+    <Title domain="4" number="242">类型错误
+</Title>
+    <Title domain="4" number="243">值错误</Title>
+    <Title domain="4" number="244">值错误</Title>
+    <Title domain="4" number="245">参数错误</Title>
+    <Title domain="4" number="246">无法停用“安全中断”</Title>
+    <Title domain="4" number="251">名称错误</Title>
+    <Title domain="4" number="252">限制错误</Title>
+    <Title domain="4" number="253">类型定义错误</Title>
+    <Title domain="4" number="254">符号定义错误</Title>
+    <Title domain="4" number="255">符号定义错误</Title>
+    <Title domain="4" number="256">参数错误</Title>
+    <Title domain="4" number="257">参数错误</Title>
+    <Title domain="4" number="258">参数错误</Title>
+    <Title domain="4" number="259">参数错误</Title>
+    <Title domain="4" number="260">符号定义错误</Title>
+    <Title domain="4" number="261">类型定义错误</Title>
+    <Title domain="4" number="262">数据声明错误</Title>
+    <Title domain="4" number="263">名称错误</Title>
+    <Title domain="4" number="264">符号定义错误</Title>
+    <Title domain="4" number="265">符号定义错误</Title>
+    <Title domain="4" number="266">引用错误</Title>
+    <Title domain="4" number="267">引用错误</Title>
+    <Title domain="4" number="268">符号定义错误</Title>
+    <Title domain="4" number="269">符号定义错误</Title>
+    <Title domain="4" number="270">类型定义错误</Title>
+    <Title domain="4" number="271">类型定义错误</Title>
+    <Title domain="4" number="272">类型错误</Title>
+    <Title domain="4" number="273">引用错误</Title>
+    <Title domain="4" number="274">参数错误</Title>
+    <Title domain="4" number="275">符号定义错误</Title>
+    <Title domain="4" number="277">撤消异常中止</Title>
+    <Title domain="4" number="278">撤消意常中止</Title>
+    <Title domain="4" number="279">撤消意常中止</Title>
+    <Title domain="4" number="280">撤消异常中止</Title>
+    <Title domain="4" number="281">撤消异常中止</Title>
+    <Title domain="4" number="301">文件访问错误</Title>
+    <Title domain="4" number="302">文件访问错误</Title>
+    <Title domain="4" number="303">文件访问错误
+</Title>
+    <Title domain="4" number="304">文件访问错误</Title>
+    <Title domain="4" number="322">加载错误 </Title>
+    <Title domain="4" number="323">加载错误 </Title>
+    <Title domain="4" number="324">加载错误 </Title>
+    <Title domain="4" number="325">加载错误</Title>
+    <Title domain="4" number="326">加载错误 </Title>
+    <Title domain="4" number="327">加载错误 </Title>
+    <Title domain="4" number="328">加载错误 </Title>
+    <Title domain="4" number="329">模块安装失败 </Title>
+    <Title domain="4" number="330">已安装模块内的 RAPID 错误
+</Title>
+    <Title domain="4" number="331">类型错误</Title>
+    <Title domain="4" number="332">类型错误</Title>
+    <Title domain="4" number="351">存储器分配错误</Title>
+    <Title domain="4" number="352">存储器分配错误</Title>
+    <Title domain="4" number="353">机械单元 <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 缺失！</Title>
+    <Title domain="4" number="354">已保存动态加载模块副本。
+</Title>
+    <Title domain="4" number="355">已停止 Stop/QStop 事件例行程序。
+</Title>
+    <Title domain="4" number="357">错误处理程序丢失</Title>
+    <Title domain="4" number="358">丢弃 RMQ 消息</Title>
+    <Title domain="4" number="502">数字输入中断</Title>
+    <Title domain="4" number="504">参数错误</Title>
+    <Title domain="4" number="506">系统访问错误</Title>
+    <Title domain="4" number="507">限制错误</Title>
+    <Title domain="4" number="508">姿态值错误</Title>
+    <Title domain="4" number="511">参数错误</Title>
+    <Title domain="4" number="512">缺少外轴值</Title>
+    <Title domain="4" number="513">机械单元错误</Title>
+    <Title domain="4" number="514">执行错误</Title>
+    <Title domain="4" number="515">类型错误</Title>
+    <Title domain="4" number="518">类型错误</Title>
+    <Title domain="4" number="519">文件结束</Title>
+    <Title domain="4" number="522">限制错误
+</Title>
+    <Title domain="4" number="523">机械单元冲突</Title>
+    <Title domain="4" number="524">传送带访问错误</Title>
+    <Title domain="4" number="525">传送带访问错误</Title>
+    <Title domain="4" number="526">传送带访问错误</Title>
+    <Title domain="4" number="527">文件访问错误</Title>
+    <Title domain="4" number="528">文件访问错误</Title>
+    <Title domain="4" number="529">文件访问错误</Title>
+    <Title domain="4" number="530">参数错误</Title>
+    <Title domain="4" number="531">参数错误</Title>
+    <Title domain="4" number="534">超时</Title>
+    <Title domain="4" number="535">类型错误</Title>
+    <Title domain="4" number="536">系统访问错误</Title>
+    <Title domain="4" number="537">文件访问错误</Title>
+    <Title domain="4" number="538">时限已超过</Title>
+    <Title domain="4" number="539">系统访问错误</Title>
+    <Title domain="4" number="540">文件访问错误</Title>
+    <Title domain="4" number="541">文件访问错误</Title>
+    <Title domain="4" number="542">文件访问错误</Title>
+    <Title domain="4" number="543">文件访问错误</Title>
+    <Title domain="4" number="544">文件访问错误</Title>
+    <Title domain="4" number="545">文件访问错误</Title>
+    <Title domain="4" number="546">文件访问错误</Title>
+    <Title domain="4" number="547">文件访问错误</Title>
+    <Title domain="4" number="548">文件访问错误</Title>
+    <Title domain="4" number="549">系统访问错误</Title>
+    <Title domain="4" number="555">I/O 错误</Title>
+    <Title domain="4" number="556">I/O 错误</Title>
+    <Title domain="4" number="557">I/O 错误</Title>
+    <Title domain="4" number="558">I/O 错误</Title>
+    <Title domain="4" number="559">I/O 错误</Title>
+    <Title domain="4" number="560">系统访问错误</Title>
+    <Title domain="4" number="561">系统访问错误</Title>
+    <Title domain="4" number="562">参数错误</Title>
+    <Title domain="4" number="563">系统访问错误</Title>
+    <Title domain="4" number="564">自变量错误</Title>
+    <Title domain="4" number="565">参数错误</Title>
+    <Title domain="4" number="566">参数错误</Title>
+    <Title domain="4" number="567">参数错误</Title>
+    <Title domain="4" number="568">参数错误</Title>
+    <Title domain="4" number="569">自变量错误</Title>
+    <Title domain="4" number="570">自变量错误</Title>
+    <Title domain="4" number="571">自变量错误</Title>
+    <Title domain="4" number="572">自变量错误</Title>
+    <Title domain="4" number="573">自变量错误</Title>
+    <Title domain="4" number="574">搜索报警</Title>
+    <Title domain="4" number="576">ParId 错误</Title>
+    <Title domain="4" number="577">ParId 错误</Title>
+    <Title domain="4" number="578">ParId 错误</Title>
+    <Title domain="4" number="579">ParId 错误</Title>
+    <Title domain="4" number="580">ParId 错误</Title>
+    <Title domain="4" number="581">ParId 错误</Title>
+    <Title domain="4" number="582">ParId 错误</Title>
+    <Title domain="4" number="583">ParId 错误</Title>
+    <Title domain="4" number="584">ParId 错误</Title>
+    <Title domain="4" number="585">ParId 错误</Title>
+    <Title domain="4" number="586">ParId 错误</Title>
+    <Title domain="4" number="587">ParId 错误</Title>
+    <Title domain="4" number="588">ParId 错误</Title>
+    <Title domain="4" number="589">ParId 错误</Title>
+    <Title domain="4" number="590">ParId 错误</Title>
+    <Title domain="4" number="591">自变量错误</Title>
+    <Title domain="4" number="592">Load Identification过程中程序停止 </Title>
+    <Title domain="4" number="593">荷载测定过程中停电</Title>
+    <Title domain="4" number="594">在载荷测定期间发生的用户错误</Title>
+    <Title domain="4" number="595">自变量错误</Title>
+    <Title domain="4" number="596">荷载测定过程中程序停止</Title>
+    <Title domain="4" number="597">Speed Override</Title>
+    <Title domain="4" number="598">载荷测定过程中程序停止</Title>
+    <Title domain="4" number="599">Program Stop during Load Identification</Title>
+    <Title domain="4" number="603">自变量错误</Title>
+    <Title domain="4" number="607">执行错误</Title>
+    <Title domain="4" number="608">自变量错误</Title>
+    <Title domain="4" number="609">自变量错误</Title>
+    <Title domain="4" number="611">执行错误</Title>
+    <Title domain="4" number="612">自变量错误</Title>
+    <Title domain="4" number="613">自变量错误</Title>
+    <Title domain="4" number="614">自变量错误</Title>
+    <Title domain="4" number="615">自变量错误</Title>
+    <Title domain="4" number="616">变元错误</Title>
+    <Title domain="4" number="617">变元错误</Title>
+    <Title domain="4" number="620">变元错误
+</Title>
+    <Title domain="4" number="622">变元错误</Title>
+    <Title domain="4" number="623">变元错误</Title>
+    <Title domain="4" number="624">自变量错误</Title>
+    <Title domain="4" number="625">限制错误</Title>
+    <Title domain="4" number="631">指令错误</Title>
+    <Title domain="4" number="632">指令错误</Title>
+    <Title domain="4" number="634">引用错误</Title>
+    <Title domain="4" number="636">传感器错误</Title>
+    <Title domain="4" number="637">传感器错误</Title>
+    <Title domain="4" number="638">传感器错误</Title>
+    <Title domain="4" number="639">传感器错误</Title>
+    <Title domain="4" number="640">传感器错误</Title>
+    <Title domain="4" number="641">传感器错误</Title>
+    <Title domain="4" number="642">传感器错误</Title>
+    <Title domain="4" number="643">传感器错误</Title>
+    <Title domain="4" number="644">传感器错误</Title>
+    <Title domain="4" number="645">传感器错误</Title>
+    <Title domain="4" number="646">传感器错误</Title>
+    <Title domain="4" number="647">传感器错误</Title>
+    <Title domain="4" number="648">搜索错误</Title>
+    <Title domain="4" number="649">路径限制</Title>
+    <Title domain="4" number="650">错误的参数组合</Title>
+    <Title domain="4" number="651">使用数字输入</Title>
+    <Title domain="4" number="652">轴处于运动状态</Title>
+    <Title domain="4" number="654">轴处于非活动状态</Title>
+    <Title domain="4" number="655">轴不处于独立状态</Title>
+    <Title domain="4" number="658">参数错误</Title>
+    <Title domain="4" number="661">搜索错误</Title>
+    <Title domain="4" number="662">无效 Worldzone 类型</Title>
+    <Title domain="4" number="663">World Zone 未使用</Title>
+    <Title domain="4" number="664">World Zone 已使用</Title>
+    <Title domain="4" number="665">World Zone 过多</Title>
+    <Title domain="4" number="666">非法 World Zone</Title>
+    <Title domain="4" number="667">非法 World Zone</Title>
+    <Title domain="4" number="668">Shapedata 未使用</Title>
+    <Title domain="4" number="669">World Zone 过小</Title>
+    <Title domain="4" number="670">无效 World Zone</Title>
+    <Title domain="4" number="671">非法使用 World Zone</Title>
+    <Title domain="4" number="672">World Zone 已使用</Title>
+    <Title domain="4" number="673">I/O 访问错误</Title>
+    <Title domain="4" number="674">I/O 访问错误</Title>
+    <Title domain="4" number="675">执行错误</Title>
+    <Title domain="4" number="676">参数错误</Title>
+    <Title domain="4" number="677">参数错误</Title>
+    <Title domain="4" number="678">参数错误</Title>
+    <Title domain="4" number="679">参数错误</Title>
+    <Title domain="4" number="680">参数错误</Title>
+    <Title domain="4" number="681">参数错误</Title>
+    <Title domain="4" number="698">读取错误</Title>
+    <Title domain="4" number="699">程序存储器已满</Title>
+    <Title domain="4" number="700">语法错误</Title>
+    <Title domain="4" number="701">程序存储器已满</Title>
+    <Title domain="4" number="702">文件未找到</Title>
+    <Title domain="4" number="703">卸载错误</Title>
+    <Title domain="4" number="704">卸载错误
+</Title>
+    <Title domain="4" number="705">语法错误</Title>
+    <Title domain="4" number="706">加载错误 </Title>
+    <Title domain="4" number="707">I/O 单元名称无效</Title>
+    <Title domain="4" number="708">I/O 单元未启用</Title>
+    <Title domain="4" number="709">I/O 单元未禁用</Title>
+    <Title domain="4" number="710">自变量错误</Title>
+    <Title domain="4" number="711">别名类型错误</Title>
+    <Title domain="4" number="712">事件例行程序错误</Title>
+    <Title domain="4" number="713">别名定义错误</Title>
+    <Title domain="4" number="714">自变量错误</Title>
+    <Title domain="4" number="720">别名 IO 安装</Title>
+    <Title domain="4" number="721">IO 安装</Title>
+    <Title domain="4" number="722">机械单元</Title>
+    <Title domain="4" number="723">摄像头安装</Title>
+    <Title domain="4" number="724">保存或清除错误</Title>
+    <Title domain="4" number="726">引用错误</Title>
+    <Title domain="4" number="727">保存错误</Title>
+    <Title domain="4" number="728">帧错误</Title>
+    <Title domain="4" number="731">值错误</Title>
+    <Title domain="4" number="732">值错误</Title>
+    <Title domain="4" number="733">值错误</Title>
+    <Title domain="4" number="734">符号定义错误</Title>
+    <Title domain="4" number="735">自变量错误</Title>
+    <Title domain="4" number="736">机械单元错误</Title>
+    <Title domain="4" number="737">符号定义错误
+</Title>
+    <Title domain="4" number="738">I/O 错误</Title>
+    <Title domain="4" number="739">参数错误</Title>
+    <Title domain="4" number="740">执行错误</Title>
+    <Title domain="4" number="741">上下文错误 </Title>
+    <Title domain="4" number="742">参数错误</Title>
+    <Title domain="4" number="743">参数错误</Title>
+    <Title domain="4" number="744">参数错误</Title>
+    <Title domain="4" number="745">参数错误</Title>
+    <Title domain="4" number="746">参数错误</Title>
+    <Title domain="4" number="747">访问错误</Title>
+    <Title domain="4" number="748">值错误</Title>
+    <Title domain="4" number="749">执行错误</Title>
+    <Title domain="4" number="752">自变量错误</Title>
+    <Title domain="4" number="753">存储器故障 </Title>
+    <Title domain="4" number="754">自变量错误</Title>
+    <Title domain="4" number="755">上下文错误 </Title>
+    <Title domain="4" number="756">上下文错误 </Title>
+    <Title domain="4" number="757">自变量错误</Title>
+    <Title domain="4" number="758">I/O 错误</Title>
+    <Title domain="4" number="759">参数错误</Title>
+    <Title domain="4" number="761">参数错误</Title>
+    <Title domain="4" number="762">值错误</Title>
+    <Title domain="4" number="763">执行错误</Title>
+    <Title domain="4" number="764">开关自变量错误</Title>
+    <Title domain="4" number="765">自变量错误</Title>
+    <Title domain="4" number="766">参数错误</Title>
+    <Title domain="4" number="767">搜索错误</Title>
+    <Title domain="4" number="768">符号访问错误</Title>
+    <Title domain="4" number="769">符号读取访问错误</Title>
+    <Title domain="4" number="770">符号类型错误</Title>
+    <Title domain="4" number="771">符号访问错误</Title>
+    <Title domain="4" number="772">I\O 错误</Title>
+    <Title domain="4" number="773">指令中断</Title>
+    <Title domain="4" number="774">目标已撤消</Title>
+    <Title domain="4" number="775">传送带错误</Title>
+    <Title domain="4" number="776">传送带错误</Title>
+    <Title domain="4" number="777">传送带错误</Title>
+    <Title domain="4" number="778">值错误</Title>
+    <Title domain="4" number="779">错误编号为本地编号</Title>
+    <Title domain="4" number="780">数据对象错误</Title>
+    <Title domain="4" number="781">文件错误</Title>
+    <Title domain="4" number="782">模式错误</Title>
+    <Title domain="4" number="783">模式错误</Title>
+    <Title domain="4" number="784">模式错误</Title>
+    <Title domain="4" number="785">模式错误</Title>
+    <Title domain="4" number="786">读取错误</Title>
+    <Title domain="4" number="787">用户帧错误</Title>
+    <Title domain="4" number="788">轴错误</Title>
+    <Title domain="4" number="789">限制错误</Title>
+    <Title domain="4" number="790">值错误</Title>
+    <Title domain="4" number="791">I/O 错误</Title>
+    <Title domain="4" number="792">I/O 错误</Title>
+    <Title domain="4" number="793">错误安装文本表。</Title>
+    <Title domain="4" number="794">错误安装文本表。</Title>
+    <Title domain="4" number="795">错误安装文本表。</Title>
+    <Title domain="4" number="796">过载错误</Title>
+    <Title domain="4" number="797">I/O 错误</Title>
+    <Title domain="4" number="798">系统访问错误</Title>
+    <Title domain="4" number="799">执行错误</Title>
+    <Title domain="4" number="800">工具错误</Title>
+    <Title domain="4" number="801">计算错误</Title>
+    <Title domain="4" number="802">执行错误</Title>
+    <Title domain="4" number="803">错误信息过长</Title>
+    <Title domain="4" number="804">自变量错误</Title>
+    <Title domain="4" number="805">引导错误：</Title>
+    <Title domain="4" number="806">IOF 错误</Title>
+    <Title domain="4" number="807">文件错误</Title>
+    <Title domain="4" number="811">与单元无联络</Title>
+    <Title domain="4" number="812">执行错误 </Title>
+    <Title domain="4" number="813">执行错误</Title>
+    <Title domain="4" number="814">执行错误</Title>
+    <Title domain="4" number="815">不存在的轴编号</Title>
+    <Title domain="4" number="816">RolGenInstr 错误</Title>
+    <Title domain="4" number="1000">存在项目源</Title>
+    <Title domain="4" number="1001">不是有效的名称。</Title>
+    <Title domain="4" number="1002">缓冲容量已超过</Title>
+    <Title domain="4" number="1003">项目源未定义</Title>
+    <Title domain="4" number="1004">Itmsrc 内部错误</Title>
+    <Title domain="4" number="1005">请先刷新项目源</Title>
+    <Title domain="4" number="1006">先肯定项目目标</Title>
+    <Title domain="4" number="1007">项目目标缓冲器已满</Title>
+    <Title domain="4" number="1008">传送带 I/O 初始化错误</Title>
+    <Title domain="4" number="1009">传送带不存在</Title>
+    <Title domain="4" number="1010">传送带名称未给定</Title>
+    <Title domain="4" number="1011">传送带限制错误</Title>
+    <Title domain="4" number="1012">传送带数据定义过迟</Title>
+    <Title domain="4" number="1050">配置文件未激活</Title>
+    <Title domain="4" number="1051">记录的配置文件未存储</Title>
+    <Title domain="4" number="1052">无法使用此配置文件数据文件</Title>
+    <Title domain="4" number="1100">纠正次数过多</Title>
+    <Title domain="4" number="1101">校正未连接</Title>
+    <Title domain="4" number="1102">纠正未连接</Title>
+    <Title domain="4" number="1200">伺服工具打开错误。</Title>
+    <Title domain="4" number="1201">伺服工具关闭错误。</Title>
+    <Title domain="4" number="1202">伺服工具较准错误。</Title>
+    <Title domain="4" number="1203">伺服工具错误。</Title>
+    <Title domain="4" number="1204">伺服工具错误。</Title>
+    <Title domain="4" number="1205">伺服工具错误。</Title>
+    <Title domain="4" number="1206">伺服工具参数错误。</Title>
+    <Title domain="4" number="1207">伺服工具初始化错误。</Title>
+    <Title domain="4" number="1208">伺服工具同步错误。</Title>
+    <Title domain="4" number="1209">伺服工具启动错误。</Title>
+    <Title domain="4" number="1210">伺服工具错误。</Title>
+    <Title domain="4" number="1211">伺服工具错误。</Title>
+    <Title domain="4" number="1212">伺服工具错误。 </Title>
+    <Title domain="4" number="1300">自变量错误</Title>
+    <Title domain="4" number="1301">自变量错误</Title>
+    <Title domain="4" number="1302">自变量错误</Title>
+    <Title domain="4" number="1303">自变量错误</Title>
+    <Title domain="4" number="1304">自变量错误</Title>
+    <Title domain="4" number="1400">参数错误</Title>
+    <Title domain="4" number="1401">I/O 错误</Title>
+    <Title domain="4" number="1402">值错误</Title>
+    <Title domain="4" number="1403">值错误</Title>
+    <Title domain="4" number="1404">参数错误</Title>
+    <Title domain="4" number="1405">参数错误</Title>
+    <Title domain="4" number="1406">参数错误</Title>
+    <Title domain="4" number="1407">参数错误</Title>
+    <Title domain="4" number="1408">参数错误</Title>
+    <Title domain="4" number="1409">参数错误</Title>
+    <Title domain="4" number="1410">参数错误</Title>
+    <Title domain="4" number="1411">参数错误</Title>
+    <Title domain="4" number="1412">参数错误</Title>
+    <Title domain="4" number="1413">参数错误</Title>
+    <Title domain="4" number="1414">参数错误</Title>
+    <Title domain="4" number="1415">参数错误</Title>
+    <Title domain="4" number="1416">参数错误</Title>
+    <Title domain="4" number="1417">系统访问错误</Title>
+    <Title domain="4" number="1419">参数错误</Title>
+    <Title domain="4" number="1420">参数错误</Title>
+    <Title domain="4" number="1421">参数错误</Title>
+    <Title domain="4" number="1422">参数错误</Title>
+    <Title domain="4" number="1423">参数错误</Title>
+    <Title domain="4" number="1424">参数错误</Title>
+    <Title domain="4" number="1425">参数错误</Title>
+    <Title domain="4" number="1426">I/O 错误</Title>
+    <Title domain="4" number="1427">自变量错误</Title>
+    <Title domain="4" number="1428">轴错误</Title>
+    <Title domain="4" number="1429">轴错误</Title>
+    <Title domain="4" number="1430">自变量错误</Title>
+    <Title domain="4" number="1431">系统访问错误</Title>
+    <Title domain="4" number="1432">系统访问错误</Title>
+    <Title domain="4" number="1433">参数错误</Title>
+    <Title domain="4" number="1434">参数错误</Title>
+    <Title domain="4" number="1435">参数错误</Title>
+    <Title domain="4" number="1437">系统访问错误</Title>
+    <Title domain="4" number="1438">未定义的荷载</Title>
+    <Title domain="4" number="1439">未定义载荷</Title>
+    <Title domain="4" number="1440">自变量缺失</Title>
+    <Title domain="4" number="1441">卸载错误</Title>
+    <Title domain="4" number="1442">引用错误</Title>
+    <Title domain="4" number="1443">变元错误</Title>
+    <Title domain="4" number="1444">自变量错误</Title>
+    <Title domain="4" number="1445">自变量错误</Title>
+    <Title domain="4" number="1446">参变量错误</Title>
+    <Title domain="4" number="1447">自变量错误</Title>
+    <Title domain="4" number="1448">自变量错误</Title>
+    <Title domain="4" number="1449">值错误</Title>
+    <Title domain="4" number="1450">自变量错误</Title>
+    <Title domain="4" number="1451">自变量错误</Title>
+    <Title domain="4" number="1452">自变量错误</Title>
+    <Title domain="4" number="1453">类型错误</Title>
+    <Title domain="4" number="1454">引用错误</Title>
+    <Title domain="4" number="1455">系统访问错误</Title>
+    <Title domain="4" number="1456">自变量错误</Title>
+    <Title domain="4" number="1457">变元错误</Title>
+    <Title domain="4" number="1458">自变量错误</Title>
+    <Title domain="4" number="1459">自变量错误</Title>
+    <Title domain="4" number="1460">自变量错误</Title>
+    <Title domain="4" number="1461">值错误</Title>
+    <Title domain="4" number="1462">值错误</Title>
+    <Title domain="4" number="1463">自变量开关缺失。</Title>
+    <Title domain="4" number="1464">索引过大。</Title>
+    <Title domain="4" number="1465">字串为空。</Title>
+    <Title domain="4" number="1466">变量相等。</Title>
+    <Title domain="4" number="1467">值错误</Title>
+    <Title domain="4" number="1468">值错误</Title>
+    <Title domain="4" number="1469">值错误</Title>
+    <Title domain="4" number="1470">自变量错误</Title>
+    <Title domain="4" number="1471">指令错误</Title>
+    <Title domain="4" number="1472">指令错误</Title>
+    <Title domain="4" number="1473">系统访问错误</Title>
+    <Title domain="4" number="1474">值错误</Title>
+    <Title domain="4" number="1475">任务列表大小错误</Title>
+    <Title domain="4" number="1476">不一致的任务列表</Title>
+    <Title domain="4" number="1477">超时</Title>
+    <Title domain="4" number="1483">自变量错误</Title>
+    <Title domain="4" number="1484">超时</Title>
+    <Title domain="4" number="1486">指令错误</Title>
+    <Title domain="4" number="1487">指令错误</Title>
+    <Title domain="4" number="1488">值错误</Title>
+    <Title domain="4" number="1489">值错误</Title>
+    <Title domain="4" number="1490">超时</Title>
+    <Title domain="4" number="1491">指令错误</Title>
+    <Title domain="4" number="1492">指令错误</Title>
+    <Title domain="4" number="1493">执行错误</Title>
+    <Title domain="4" number="1494">指令错误</Title>
+    <Title domain="4" number="1495">移动 PP 错误
+</Title>
+    <Title domain="4" number="1496">移动 PP 错误
+</Title>
+    <Title domain="4" number="1497">移动 PP 通知
+</Title>
+    <Title domain="4" number="1498">机械单元 <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 中无已定义的 UserFrame！ </Title>
+    <Title domain="4" number="1499">同步模式</Title>
+    <Title domain="4" number="1500">独立模式</Title>
+    <Title domain="4" number="1501">非法 Id</Title>
+    <Title domain="4" number="1502">非法域</Title>
+    <Title domain="4" number="1503">非法错误类型</Title>
+    <Title domain="4" number="1504">未指定任何机械单元</Title>
+    <Title domain="4" number="1505">机械单元不在任务中</Title>
+    <Title domain="4" number="1506">任务不能读取 TCP 机器人</Title>
+    <Title domain="4" number="1507">任务可读取其它机械单元</Title>
+    <Title domain="4" number="1508">LoadId 错误</Title>
+    <Title domain="4" number="1509">LoadId 错误</Title>
+    <Title domain="4" number="1510">LoadId 错误</Title>
+    <Title domain="4" number="1511">LoadId 错误</Title>
+    <Title domain="4" number="1512">内部错误</Title>
+    <Title domain="4" number="1513">LoadId 错误</Title>
+    <Title domain="4" number="1514">LoadId 错误</Title>
+    <Title domain="4" number="1515">LoadId 错误</Title>
+    <Title domain="4" number="1516">LoadId 错误</Title>
+    <Title domain="4" number="1517">LoadId 错误</Title>
+    <Title domain="4" number="1518">LoadId 错误</Title>
+    <Title domain="4" number="1519">LoadId 错误</Title>
+    <Title domain="4" number="1520">错误恢复常数未登记</Title>
+    <Title domain="4" number="1521">任务状态错误</Title>
+    <Title domain="4" number="1522">使用的错误恢复常数不正确</Title>
+    <Title domain="4" number="1523">变元错误</Title>
+    <Title domain="4" number="1524">指令错误</Title>
+    <Title domain="4" number="1525">指令错误</Title>
+    <Title domain="4" number="1526">指令错误</Title>
+    <Title domain="4" number="1527">自变量开关缺失。</Title>
+    <Title domain="4" number="1528">指令错误</Title>
+    <Title domain="4" number="1529">指令错误</Title>
+    <Title domain="4" number="1530">指令错误</Title>
+    <Title domain="4" number="1531">任务不在 TaskList 中 </Title>
+    <Title domain="4" number="1532">任务列表不匹配</Title>
+    <Title domain="4" number="1533">SyncID 不匹配 </Title>
+    <Title domain="4" number="1534">Synch 数据不一致</Title>
+    <Title domain="4" number="1535">意外的 SyncMoveOn</Title>
+    <Title domain="4" number="1536">意外的 SyncMoveOn</Title>
+    <Title domain="4" number="1537">意外的 SyncMoveOff</Title>
+    <Title domain="4" number="1538">错误的任务列表</Title>
+    <Title domain="4" number="1539">速度太快</Title>
+    <Title domain="4" number="1540">机械单元错误</Title>
+    <Title domain="4" number="1541">不允许位于读任务</Title>
+    <Title domain="4" number="1542">程序停止。</Title>
+    <Title domain="4" number="1543">参变量错误</Title>
+    <Title domain="4" number="1544">绝对指令 </Title>
+    <Title domain="4" number="1545">自变量错误</Title>
+    <Title domain="4" number="1546">自变量错误</Title>
+    <Title domain="4" number="1547">变元错误</Title>
+    <Title domain="4" number="1548">模块错误</Title>
+    <Title domain="4" number="1549">意外的 SyncMoveOn 或者 SyncMoveOff </Title>
+    <Title domain="4" number="1550">PathRecorder 开/关错误 </Title>
+    <Title domain="4" number="1551">PathRecorder 移动错误</Title>
+    <Title domain="4" number="1552">PathRecorder 路径级别错误</Title>
+    <Title domain="4" number="1553">数据损坏</Title>
+    <Title domain="4" number="1554">同步模式</Title>
+    <Title domain="4" number="1555">与单元无联络</Title>
+    <Title domain="4" number="1556">与单元无联络</Title>
+    <Title domain="4" number="1557">Mec.单元未停止</Title>
+    <Title domain="4" number="1558">自变量开关缺失</Title>
+    <Title domain="4" number="1559">不是 PERS 变量</Title>
+    <Title domain="4" number="1560">不能开始运动</Title>
+    <Title domain="4" number="1561">函数键中无文本 </Title>
+    <Title domain="4" number="1562">可能会出现错误的循环运动</Title>
+    <Title domain="4" number="1563">变元错误 </Title>
+    <Title domain="4" number="1564">不允许从动作任务运行</Title>
+    <Title domain="4" number="1565">非允许值</Title>
+    <Title domain="4" number="1566">信号超过允许的最大位数值</Title>
+    <Title domain="4" number="1567">数字输出中断</Title>
+    <Title domain="4" number="1568">指定的名称不是总线</Title>
+    <Title domain="4" number="1569">套接字错误</Title>
+    <Title domain="4" number="1570">套接字错误</Title>
+    <Title domain="4" number="1571">套接字错误</Title>
+    <Title domain="4" number="1572">套接字错误
+</Title>
+    <Title domain="4" number="1573">套接字错误</Title>
+    <Title domain="4" number="1574">套接字错误 </Title>
+    <Title domain="4" number="1575">套接字错误 </Title>
+    <Title domain="4" number="1576">套接字错误 </Title>
+    <Title domain="4" number="1577">套接字错误
+</Title>
+    <Title domain="4" number="1578">套接字错误
+</Title>
+    <Title domain="4" number="1579">套接字错误
+</Title>
+    <Title domain="4" number="1580">套接字错误</Title>
+    <Title domain="4" number="1581">套接字错误
+</Title>
+    <Title domain="4" number="1582">套接字错误
+</Title>
+    <Title domain="4" number="1583">套接字错误
+</Title>
+    <Title domain="4" number="1584">套接字错误
+</Title>
+    <Title domain="4" number="1585">套接字错误
+</Title>
+    <Title domain="4" number="1586">套接字错误
+</Title>
+    <Title domain="4" number="1587">套接字错误</Title>
+    <Title domain="4" number="1590">套接字错误
+</Title>
+    <Title domain="4" number="1591">套接字错误</Title>
+    <Title domain="4" number="1592">套接字错误</Title>
+    <Title domain="4" number="1593">套接字错误 </Title>
+    <Title domain="4" number="1594">套接字错误
+</Title>
+    <Title domain="4" number="1595">套接字错误
+</Title>
+    <Title domain="4" number="1596">套接字错误</Title>
+    <Title domain="4" number="1597">套接字错误</Title>
+    <Title domain="4" number="1598">套接字错误</Title>
+    <Title domain="4" number="1599">套接字错误
+</Title>
+    <Title domain="4" number="1600">套接字错误
+</Title>
+    <Title domain="4" number="1601">套接字错误</Title>
+    <Title domain="4" number="1602">套接字错误</Title>
+    <Title domain="4" number="1603">套接字错误
+</Title>
+    <Title domain="4" number="1604">套接字错误 </Title>
+    <Title domain="4" number="1605">套接字错误</Title>
+    <Title domain="4" number="1611">UIMsgBox - 未定义用户或程序动作</Title>
+    <Title domain="4" number="1612">MinValue 大于 MaxValue</Title>
+    <Title domain="4" number="1613">InitValue 不在指定值范围内</Title>
+    <Title domain="4" number="1614">InitValue 不是整数</Title>
+    <Title domain="4" number="1615">引用错误</Title>
+    <Title domain="4" number="1616">引用错误</Title>
+    <Title domain="4" number="1617">写入指令使用频率过高</Title>
+    <Title domain="4" number="1618">自变量错误 buttondata</Title>
+    <Title domain="4" number="1619">自变量错误 icondata</Title>
+    <Title domain="4" number="1620">套接字错误 </Title>
+    <Title domain="4" number="1621">StorePath 错误
+</Title>
+    <Title domain="4" number="1622">意外指令
+</Title>
+    <Title domain="4" number="1623">错误使用 <arg format="%s" ordinal="2" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="4" number="1625">意外<arg format="%s" ordinal="2" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="4" number="1626">意外 <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> <arg format="%s" ordinal="2" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="4" number="1627">错误使用 <arg format="%s" ordinal="2" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="4" number="1630">不安全的同步</Title>
+    <Title domain="4" number="1631">指令错误</Title>
+    <Title domain="4" number="1632">变元不存在</Title>
+    <Title domain="4" number="1633">仅可用于 UNDO 句柄</Title>
+    <Title domain="4" number="1634">未知任务名称</Title>
+    <Title domain="4" number="1635">意外的 SyncMoveOff</Title>
+    <Title domain="4" number="1636">意外 SyncMoveOff</Title>
+    <Title domain="4" number="1637">任务在任务选择面板上不再为活动状态</Title>
+    <Title domain="4" number="1638">不允许启动任务</Title>
+    <Title domain="4" number="1640">移动 PP 警告</Title>
+    <Title domain="4" number="1641">移动 PP 警告</Title>
+    <Title domain="4" number="1642">变元错误</Title>
+    <Title domain="4" number="1643">变元错误</Title>
+    <Title domain="4" number="1644">变元错误</Title>
+    <Title domain="4" number="1645">程序被 RAPID 停止</Title>
+    <Title domain="4" number="1646">程序被 RAPID 锁定</Title>
+    <Title domain="4" number="1647">程序被 RAPID 中断</Title>
+    <Title domain="4" number="1648">执行错误</Title>
+    <Title domain="4" number="1649">不正确的错误消息</Title>
+    <Title domain="4" number="1650">任务已被另一任务停止</Title>
+    <Title domain="4" number="1651">任务的 StartMove 操作被忽略</Title>
+    <Title domain="4" number="1652">强制执行 StartMove 操作</Title>
+    <Title domain="4" number="1653">变元错误 CalcJointT</Title>
+    <Title domain="4" number="1654">执行错误 CalcJointT</Title>
+    <Title domain="4" number="1655">变元并非动作任务</Title>
+    <Title domain="4" number="1656">非允许值</Title>
+    <Title domain="4" number="1657">文件访问错误</Title>
+    <Title domain="4" number="1658">程序任务处于 StopMove 状态</Title>
+    <Title domain="4" number="1660">无剩余空间可容纳新视图</Title>
+    <Title domain="4" number="1661">无法找到组件</Title>
+    <Title domain="4" number="1662">无法加载组件</Title>
+    <Title domain="4" number="1663">无法创建实例</Title>
+    <Title domain="4" number="1664">该组件的输入名称无效</Title>
+    <Title domain="4" number="1665">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 与待加载的组件不匹配</Title>
+    <Title domain="4" number="1666">致命的 UIShow 错误</Title>
+    <Title domain="4" number="1667">致命的 UI 错误</Title>
+    <Title domain="4" number="1670">不允许将整个数组作为变元</Title>
+    <Title domain="4" number="1671">轮询率过高</Title>
+    <Title domain="4" number="1672">无效的组合</Title>
+    <Title domain="4" number="1673">指标超出边界</Title>
+    <Title domain="4" number="1674">值超出范围</Title>
+    <Title domain="4" number="1675">非整数</Title>
+    <Title domain="4" number="1676">设备访问错误</Title>
+    <Title domain="4" number="1677">设备访问错误</Title>
+    <Title domain="4" number="1678">设备访问错误</Title>
+    <Title domain="4" number="1679">设备访问错误</Title>
+    <Title domain="4" number="1680">字串过长</Title>
+    <Title domain="4" number="1682">来自 I/O 的订阅太多</Title>
+    <Title domain="4" number="1683">变元错误</Title>
+    <Title domain="4" number="1684">值错误</Title>
+    <Title domain="4" number="1685">无效值</Title>
+    <Title domain="4" number="1687">文件打开错误</Title>
+    <Title domain="4" number="1688">无效变元</Title>
+    <Title domain="4" number="1690">参数错误</Title>
+    <Title domain="4" number="1691">RMQ 错误 - 客户端名称无效</Title>
+    <Title domain="4" number="1692">RMQ 错误 - 无效槽位</Title>
+    <Title domain="4" number="1693">RMQ 错误 - 超过了消息的最大限制</Title>
+    <Title domain="4" number="1694">RMQ 错误 - 数据类型不同</Title>
+    <Title domain="4" number="1695">RMQ 错误 – 不相等的数据维数</Title>
+    <Title domain="4" number="1696">RMQ 错误 – 指令使用无效</Title>
+    <Title domain="4" number="1697">RMQ 错误 – 未配置 RMQ</Title>
+    <Title domain="4" number="1698">RMQ 错误 – 指令使用错误</Title>
+    <Title domain="4" number="1699">RMQ 错误 – 超过消息最大尺寸</Title>
+    <Title domain="4" number="1700">RMQ 错误 – 中断设置失败</Title>
+    <Title domain="4" number="1701">RMQ 错误 – 没有要收集的消息</Title>
+    <Title domain="4" number="1702">RMQ 错误 - <arg format="%s" ordinal="2" xmlns="urn:abb-robotics-elog-text" /> 无效</Title>
+    <Title domain="4" number="1703">RMQ 错误 – 无法复制数据</Title>
+    <Title domain="4" number="1704">RMQ 错误 - 队列满</Title>
+    <Title domain="4" number="1705">RMQ 错误 – 时限已超过</Title>
+    <Title domain="4" number="1706">RMQ 错误 – 时限已超过</Title>
+    <Title domain="4" number="1707">RMQ 错误 - 指令在当前模式中无效</Title>
+    <Title domain="4" number="1708">RMQ 错误 － 无效的消息</Title>
+    <Title domain="4" number="1711">数值不是百分数</Title>
+    <Title domain="4" number="1712">变元错误</Title>
+    <Title domain="4" number="1713">变元错误</Title>
+    <Title domain="4" number="1714">错误事件过多</Title>
+    <Title domain="4" number="1715">无效的方向</Title>
+    <Title domain="4" number="1716">无效的偏移方向</Title>
+    <Title domain="4" number="1717">值过低</Title>
+    <Title domain="4" number="1718">无效的尺寸</Title>
+    <Title domain="4" number="1719">非法参数</Title>
+    <Title domain="4" number="1720">路径不在停止点中</Title>
+    <Title domain="4" number="1721">无效的变元</Title>
+    <Title domain="4" number="1722">值过高</Title>
+    <Title domain="4" number="1723">总线处于错误状态</Title>
+    <Title domain="4" number="1724">当前工作对象无效</Title>
+    <Title domain="4" number="1725">无效的配置设置</Title>
+    <Title domain="4" number="1726">任务的 StopMoveReset 操作被忽略</Title>
+    <Title domain="4" number="1727">不能使用 num 数据类型来表示大小 </Title>
+    <Title domain="4" number="1730">信号超过允许的最大位数值</Title>
+    <Title domain="4" number="1731">信号名称未定义</Title>
+    <Title domain="4" number="1732">使用的 trig 过多</Title>
+    <Title domain="4" number="1737">指令顺序错误</Title>
+    <Title domain="4" number="1738">需要 Wrist Interpolation 选项</Title>
+    <Title domain="4" number="1739">需要 StorePath</Title>
+    <Title domain="4" number="1740">载荷测定失败</Title>
+    <Title domain="4" number="1741">计算溢出</Title>
+    <Title domain="4" number="1742">相减得负值</Title>
+    <Title domain="4" number="1743">除数为零</Title>
+    <Title domain="4" number="1744">指令错误</Title>
+    <Title domain="4" number="1745">指令错误</Title>
+    <Title domain="4" number="1746">指令错误</Title>
+    <Title domain="4" number="1747">进程信号关闭</Title>
+    <Title domain="4" number="1748">值错误</Title>
+    <Title domain="4" number="1749">值错误</Title>
+    <Title domain="4" number="1750">非允许值</Title>
+    <Title domain="4" number="1751">数组大小错误</Title>
+    <Title domain="4" number="1752">Num 限制错误</Title>
+    <Title domain="4" number="1753">无效的路径层</Title>
+    <Title domain="4" number="1754">Path Recorder 已清除</Title>
+    <Title domain="4" number="1755">路径时间太长</Title>
+    <Title domain="4" number="1756">缺少 FricIdInit</Title>
+    <Title domain="4" number="1757">未找到机械单元。</Title>
+    <Title domain="4" number="1758">数组太小</Title>
+    <Title domain="4" number="1759">信号超过允许的最大位数值</Title>
+    <Title domain="4" number="1760">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> （处于同步模式时）</Title>
+    <Title domain="4" number="1761">数值超出范围</Title>
+    <Title domain="4" number="1762">变元字符串值无效</Title>
+    <Title domain="4" number="1763">变元字符串值过高</Title>
+    <Title domain="4" number="1764"><arg format="%s" ordinal="2" xmlns="urn:abb-robotics-elog-text" /> 中的错误组合</Title>
+    <Title domain="4" number="1765">变元值过高</Title>
+    <Title domain="4" number="1766">精度将丢失</Title>
+    <Title domain="4" number="1767">指令错误</Title>
+    <Title domain="4" number="1768">开关缺失</Title>
+    <Title domain="4" number="1769">未找到服务数据</Title>
+    <Title domain="4" number="1770">系统访问错误</Title>
+    <Title domain="4" number="1771">取消作业加载</Title>
+    <Title domain="4" number="1772">参数错误</Title>
+    <Title domain="4" number="1773">超时</Title>
+    <Title domain="4" number="1774">类型错误</Title>
+    <Title domain="4" number="1775">向摄像头持续发出请求</Title>
+    <Title domain="4" number="1776">没有其他可用的数据</Title>
+    <Title domain="4" number="1777">摄像头未连接</Title>
+    <Title domain="4" number="1778">加载作业失败</Title>
+    <Title domain="4" number="1779">摄像头内存不足</Title>
+    <Title domain="4" number="1780">摄像头在程序模式中</Title>
+    <Title domain="4" number="1781">摄像头在运行模式中</Title>
+    <Title domain="4" number="1782">摄像头不支持此操作</Title>
+    <Title domain="4" number="1783">通信超时</Title>
+    <Title domain="4" number="1784">通信错误</Title>
+    <Title domain="4" number="1785">参数无法修改</Title>
+    <Title domain="4" number="1786">参数超出范围</Title>
+    <Title domain="4" number="1787">参数无法读取</Title>
+    <Title domain="4" number="1788">没有正在加载的摄像头任务</Title>
+    <Title domain="4" number="1789">没有其他可用的数据</Title>
+    <Title domain="4" number="1791">零质量时不允许执行 SoftMove。</Title>
+    <Title domain="4" number="1792">指令不允许执行。</Title>
+    <Title domain="4" number="1793">TriggInt 停止错误</Title>
+    <Title domain="4" number="1794">搜索错误</Title>
+    <Title domain="4" number="1795">载荷模式不正确</Title>
+    <Title domain="4" number="1796">变元错误</Title>
+    <Title domain="4" number="1797">信号不可访问</Title>
+    <Title domain="4" number="1798">未找到 TCP 机器人</Title>
+    <Title domain="4" number="1799">速度值太低</Title>
+    <Title domain="4" number="1800">需要手动操作</Title>
+    <Title domain="4" number="1801">在同步模式中</Title>
+    <Title domain="4" number="1804">不允许的命令</Title>
+    <Title domain="4" number="1805">非法尺寸</Title>
+    <Title domain="4" number="1806">矩阵 A 为奇异矩阵</Title>
+    <Title domain="4" number="1807">内存不足</Title>
+    <Title domain="12" number="1">配置中内存溢出</Title>
+    <Title domain="12" number="2">无法保存实例</Title>
+    <Title domain="12" number="3">域版本错误或文件不正确</Title>
+    <Title domain="12" number="4">行过长</Title>
+    <Title domain="12" number="5">属性值超出允许范围</Title>
+    <Title domain="12" number="6">实例名称已占用</Title>
+    <Title domain="12" number="7">配置文件中存在未知类型或属性</Title>
+    <Title domain="12" number="8">配置文件中的强制属性丢失</Title>
+    <Title domain="12" number="9">配置文件中实例名称丢失</Title>
+    <Title domain="12" number="10">配置属性值超出允许范围</Title>
+    <Title domain="12" number="11">非法版本字串</Title>
+    <Title domain="12" number="12">非法域名</Title>
+    <Title domain="3" number="1810">DeviceNet 主控/从控电路板缺失</Title>
+    <Title domain="3" number="1811">第二块 DeviceNet 主控/从控电路板缺失</Title>
+    <Title domain="3" number="1812">不兼容的 DeviceNet 电路板
+</Title>
+    <Title domain="3" number="1910">Profibus-DP 主控/从控电路板缺失</Title>
+    <Title domain="3" number="1911">Profibus 电路板更新错误</Title>
+    <Title domain="3" number="1912">Profibus-DP 主控/从控电路板故障</Title>
+    <Title domain="3" number="1913">Profibus-DP 主控/从控电路板内部错误</Title>
+    <Title domain="3" number="1914">Profibus 启动错误</Title>
+    <Title domain="3" number="1915">Profibus 总线错误</Title>
+    <Title domain="3" number="1916">Profibus 总线正常</Title>
+    <Title domain="3" number="1917">Profibus-DP 主控/从控电路板异常</Title>
+    <Title domain="3" number="2500">机器人通信卡缺失</Title>
+    <Title domain="3" number="2501">错误的 RCC 固件</Title>
+    <Title domain="3" number="2502">无法找到文件</Title>
+    <Title domain="3" number="2503">文件中无请求消息</Title>
+    <Title domain="3" number="2530">与安全系统无通信</Title>
+    <Title domain="3" number="2540">驱动单元固件更新已启动</Title>
+    <Title domain="3" number="2541">驱动单元固件更新完成</Title>
+    <Title domain="3" number="2542">驱动单元硬件不受支持</Title>
+    <Title domain="3" number="2543">驱动单元固件更新已失败</Title>
+    <Title domain="3" number="2544">找不到驱动单元固件文件</Title>
+    <Title domain="3" number="2545">驱动单元固件文件类型错误</Title>
+    <Title domain="3" number="2546">驱动单元固件文件错误</Title>
+    <Title domain="3" number="2550">固件更新已启动</Title>
+    <Title domain="3" number="2551">固件更新结束</Title>
+    <Title domain="3" number="2552">固件更新失败</Title>
+    <Title domain="3" number="2553">固件文件损坏</Title>
+    <Title domain="3" number="2554">未找到固件文件</Title>
+    <Title domain="3" number="2555">不支持的安全系统单元</Title>
+    <Title domain="3" number="2560">轴计算机固件更新已启动</Title>
+    <Title domain="3" number="2561">轴计算机固件更新完成</Title>
+    <Title domain="3" number="2562">轴计算机通信错误</Title>
+    <Title domain="3" number="2563">轴计算机硬件不受支持</Title>
+    <Title domain="3" number="2564">轴计算机固件更新已失败</Title>
+    <Title domain="3" number="2565">找不到轴计算机固件文件</Title>
+    <Title domain="3" number="2567">轴计算机固件文件类型错误</Title>
+    <Title domain="3" number="2568">轴计算机固件文件错误</Title>
+    <Title domain="3" number="2569">受到破坏的轴计算机硬件</Title>
+    <Title domain="3" number="2570">开始固件更新</Title>
+    <Title domain="3" number="2571">固件更新结束</Title>
+    <Title domain="3" number="2572">固件更新失败</Title>
+    <Title domain="3" number="2573">无法下载固件文件</Title>
+    <Title domain="3" number="2574">轴计算机硬件损坏</Title>
+    <Title domain="3" number="2575">未找到任何轴计算机电路板</Title>
+    <Title domain="3" number="2576">轴固件：无通信</Title>
+    <Title domain="3" number="2577">轴计算机硬件数据错误</Title>
+    <Title domain="3" number="2580">开始固件更新</Title>
+    <Title domain="3" number="2581">固件更新结束</Title>
+    <Title domain="3" number="2582">固件更新失败</Title>
+    <Title domain="3" number="2583">固件文件损坏</Title>
+    <Title domain="3" number="2584">未找到固件文件</Title>
+    <Title domain="3" number="2585">轴计算机未找到安全系统</Title>
+    <Title domain="3" number="2590">开始固件更新</Title>
+    <Title domain="3" number="2591">固件更新结束</Title>
+    <Title domain="3" number="2592">固件更新失败</Title>
+    <Title domain="3" number="2593">固件文件损坏</Title>
+    <Title domain="3" number="2594">未找到固件文件</Title>
+    <Title domain="3" number="2601">Interbus 主控/从控电路板缺失</Title>
+    <Title domain="3" number="2651">不能访问串行端口硬件</Title>
+    <Title domain="3" number="3503">转数计数器更新失败</Title>
+    <Title domain="3" number="3601">Fieldbus Adapter 丢失</Title>
+    <Title domain="3" number="4100">驱动系统不受支持</Title>
+    <Title domain="3" number="4101">驱动系统不受支持</Title>
+    <Title domain="3" number="4200">与所有驱动单元的通信中断</Title>
+    <Title domain="3" number="4201">未配置已连接的驱动单元</Title>
+    <Title domain="3" number="4202">与驱动单元的通信中断</Title>
+    <Title domain="3" number="4203">电机的电流太大</Title>
+    <Title domain="3" number="4251">输入电源的相位缺失</Title>
+    <Title domain="3" number="4252">输入电源缺失</Title>
+    <Title domain="3" number="4255">整流器温度错误</Title>
+    <Title domain="3" number="4256">整流器温度警告</Title>
+    <Title domain="3" number="4257">泄流电阻电路开路</Title>
+    <Title domain="3" number="4258">泄流电阻电路短路</Title>
+    <Title domain="3" number="4261">整流器启动错误</Title>
+    <Title domain="3" number="4262">输入电源频率警告</Title>
+    <Title domain="3" number="4263">整流器启动错误</Title>
+    <Title domain="3" number="4264">整流器涌入限制功能在“电机打开”状态下被激活</Title>
+    <Title domain="3" number="4265">直流链路短路错误 </Title>
+    <Title domain="3" number="4266">整流器涌入限制功能和泄流电阻处于活动状态</Title>
+    <Title domain="3" number="4267">连接了太多的整流器</Title>
+    <Title domain="3" number="4268">整流器充电错误</Title>
+    <Title domain="3" number="4300">未知的驱动单元类型</Title>
+    <Title domain="3" number="4303">电机电流警告</Title>
+    <Title domain="3" number="4304">电机电流警告</Title>
+    <Title domain="3" number="4306">驱动单元温度错误</Title>
+    <Title domain="3" number="4307">驱动单元温度警告</Title>
+    <Title domain="3" number="4308">驱动单元严重温度错误</Title>
+    <Title domain="3" number="4309">驱动晶体管的电流太大</Title>
+    <Title domain="3" number="4311">驱动变流器饱和警告</Title>
+    <Title domain="3" number="4312">缺失驱动装置</Title>
+    <Title domain="3" number="4313">错误的驱动单元类型</Title>
+    <Title domain="3" number="4314">驱动单元节点缺失</Title>
+    <Title domain="3" number="4316">电机电流错误</Title>
+    <Title domain="3" number="4317">电机电流错误</Title>
+    <Title domain="3" number="4318">驱动变流器饱和错误</Title>
+    <Title domain="3" number="4319">驱动装置的关键性错误</Title>
+    <Title domain="3" number="4320">连接了太多的驱动节点</Title>
+    <Title domain="3" number="4321">驱动单元配置错误</Title>
+    <Title domain="3" number="4322">驱动单元配置错误</Title>
+    <Title domain="3" number="4400">DC 链路电压过高</Title>
+    <Title domain="3" number="4401">直流链路电压过低警告</Title>
+    <Title domain="3" number="4402">直流链路电压过低</Title>
+    <Title domain="3" number="4404">DC 链路电压严重过高</Title>
+    <Title domain="3" number="4405">DC 链路电压过高警告</Title>
+    <Title domain="3" number="4406">驱动装置电源错误</Title>
+    <Title domain="3" number="4407">驱动单元内部错误</Title>
+    <Title domain="3" number="4408">驱动单元硬件数据错误</Title>
+    <Title domain="3" number="4409">驱动装置启动错误</Title>
+    <Title domain="3" number="4410">连接了太多的驱动单元</Title>
+    <Title domain="3" number="4411">直流链路错误</Title>
+    <Title domain="3" number="7001">电机开启 (ON) 接触器启动错误</Title>
+    <Title domain="3" number="7043">安全信号过载</Title>
+    <Title domain="3" number="7044">安全面板数字输出信号过载</Title>
+    <Title domain="3" number="7045">外部计算机风扇故障</Title>
+    <Title domain="3" number="7046">安全信号过载</Title>
+    <Title domain="3" number="7049">启动接触器启动错误</Title>
+    <Title domain="3" number="7050">主机过热</Title>
+    <Title domain="3" number="7053">CMOS 电池电压过低</Title>
+    <Title domain="3" number="7054">计算机单元风扇故障</Title>
+    <Title domain="3" number="7056">散热风扇错误</Title>
+    <Title domain="3" number="7062">计算机模块电源警告</Title>
+    <Title domain="3" number="7069">备用电源故障</Title>
+    <Title domain="3" number="7070">控制模块电源温度过高</Title>
+    <Title domain="3" number="7074">净化压力过低</Title>
+    <Title domain="3" number="7075">净化压力过高</Title>
+    <Title domain="3" number="7076">净化气流速度异常低</Title>
+    <Title domain="3" number="7077">净化气流速度异常高</Title>
+    <Title domain="3" number="7078">净化计时器偏差</Title>
+    <Title domain="3" number="7080">净化配置无效。</Title>
+    <Title domain="3" number="7081">净化计时器偏差</Title>
+    <Title domain="3" number="7082">PIB 和 MIB 输出之间的偏差</Title>
+    <Title domain="3" number="7083">净化系统存在假信号</Title>
+    <Title domain="3" number="7090">传感器 <arg format="%i" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 温度过高</Title>
+    <Title domain="3" number="7094">启动连接错误</Title>
+    <Title domain="3" number="7095">制动闸电源故障</Title>
+    <Title domain="3" number="7096">制动闸电源故障</Title>
+    <Title domain="3" number="7097">制动闸短路故障</Title>
+    <Title domain="3" number="7098">制动闸断路故障</Title>
+    <Title domain="3" number="7099">传感器 <arg format="%i" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 温度过高</Title>
+    <Title domain="3" number="7100">I/O 节点闪盘错误</Title>
+    <Title domain="3" number="7101">制动器故障</Title>
+    <Title domain="3" number="7102">电源警告，24V COOL 电压失常</Title>
+    <Title domain="3" number="7103">电源警告，24V SYS 电压失常</Title>
+    <Title domain="3" number="7104">无可用的备用电压！</Title>
+    <Title domain="3" number="7105">重新与电源通信</Title>
+    <Title domain="3" number="7106">后备电池电压偏低</Title>
+    <Title domain="3" number="7107">后备电池故障</Title>
+    <Title domain="3" number="7108">通信中断：电源和计算机</Title>
+    <Title domain="3" number="7200">电源故障：紧急停止电源</Title>
+    <Title domain="3" number="7201">电源故障：24V 故障保护电源</Title>
+    <Title domain="3" number="7202">电源故障：24V I/O 电源</Title>
+    <Title domain="3" number="7203">电源故障：24V SYS 电源</Title>
+    <Title domain="3" number="7204">电源故障：24V I/O 电源</Title>
+    <Title domain="3" number="7205">电源故障：12V 净化电源</Title>
+    <Title domain="3" number="7206">电源故障：12V TPU 电源</Title>
+    <Title domain="3" number="7207">电池电量低。</Title>
+    <Title domain="3" number="7208">变压器过热</Title>
+    <Title domain="3" number="7209">机柜中过热</Title>
+    <Title domain="3" number="7210">接触器 KM1 故障</Title>
+    <Title domain="3" number="7211">接触器 KM2 故障</Title>
+    <Title domain="3" number="7212">接触器 KM101 故障</Title>
+    <Title domain="3" number="7213">接触器 KM102 故障</Title>
+    <Title domain="3" number="7214">运行链 1 馈电冲突</Title>
+    <Title domain="3" number="7215">运行链 2 馈电冲突</Title>
+    <Title domain="3" number="7216">制动链 1 馈电冲突</Title>
+    <Title domain="3" number="7217">制动链 2 馈电冲突</Title>
+    <Title domain="3" number="7218">机柜互联链 1 馈电冲突</Title>
+    <Title domain="3" number="7219">机柜互联链 2 馈电冲突</Title>
+    <Title domain="3" number="7220">HV 互联链 1 馈电冲突</Title>
+    <Title domain="3" number="7221">HV 互联链 2 馈电冲突</Title>
+    <Title domain="3" number="7222">系统 2 互联链馈电冲突</Title>
+    <Title domain="3" number="7223">主中继链馈电冲突</Title>
+    <Title domain="3" number="7224">机柜互联链 1 冲突</Title>
+    <Title domain="3" number="7225">机柜互联链 2 冲突</Title>
+    <Title domain="3" number="7226">HV 互联链 1 冲突</Title>
+    <Title domain="3" number="7227">HV 互联链 2 冲突</Title>
+    <Title domain="3" number="7228">SIB 机柜互联链冲突</Title>
+    <Title domain="3" number="7229">SIB 的 HV 互联链冲突</Title>
+    <Title domain="3" number="7230">制动闸性能警告</Title>
+    <Title domain="3" number="7231">制动闸性能错误</Title>
+    <Title domain="3" number="7232">循环制动闸检查配置错误</Title>
+    <Title domain="3" number="7233">循环制动闸检查配置错误</Title>
+    <Title domain="3" number="7240">MIB 机柜互联链冲突</Title>
+    <Title domain="3" number="7241">MIB 的 HV 互联链冲突</Title>
+    <Title domain="3" number="7242">SIB 运行链冲突</Title>
+    <Title domain="3" number="7243">SIB 制动链冲突</Title>
+    <Title domain="3" number="7244">MIB 运行链冲突 <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="3" number="7245">MIB 制动链冲突 <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="3" number="7246">紧急停止中继冲突</Title>
+    <Title domain="3" number="7247">循环风扇 <arg format="%i" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 故障</Title>
+    <Title domain="3" number="7248">循环风扇 <arg format="%i" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 发生故障</Title>
+    <Title domain="3" number="7249">紧急停止电路存在假信号</Title>
+    <Title domain="3" number="7250">自动模式停止电路存在假信号</Title>
+    <Title domain="3" number="7251">延时停止电路存在假信号</Title>
+    <Title domain="3" number="7252">常规模式停止电路存在假信号</Title>
+    <Title domain="3" number="7253">SIB 运行链存在假信号</Title>
+    <Title domain="3" number="7254">MIB 运行链存在假信号</Title>
+    <Title domain="3" number="7255">机柜互联电路存在假信号</Title>
+    <Title domain="3" number="7256">高压互联电路存在假信号</Title>
+    <Title domain="3" number="7257">系统 2 互联电路存在假信号</Title>
+    <Title domain="3" number="7258">过程互联电路存在假信号</Title>
+    <Title domain="3" number="7259">AUX 互联电路存在假信号</Title>
+    <Title domain="3" number="7260">制动闸驱动故障</Title>
+    <Title domain="3" number="7261">Circulation Fan malfunction</Title>
+    <Title domain="3" number="7501">未知的 Filesystem：USB 设备</Title>
+    <Title domain="3" number="7502">拆卸海量存储设备</Title>
+    <Title domain="3" number="8100">配置错误</Title>
+    <Title domain="3" number="8101">SMB 通信故障</Title>
+    <Title domain="3" number="8102">内部故障</Title>
+    <Title domain="3" number="8103">与 SMB 的通信中断。</Title>
+    <Title domain="3" number="8104">Teach 模式中超速</Title>
+    <Title domain="3" number="8105">数据未找到！</Title>
+    <Title domain="3" number="8200">电池备份丢失</Title>
+    <Title domain="3" number="8201">串行电路板未找到</Title>
+    <Title domain="3" number="8203">SMB 偏移 X 误差</Title>
+    <Title domain="3" number="8204">SMB Y 信号偏移误差</Title>
+    <Title domain="3" number="8205">SMB 线性误差</Title>
+    <Title domain="3" number="8206">SMB X 信号线性误差</Title>
+    <Title domain="3" number="8207">SMB Y 信号线性误差</Title>
+    <Title domain="3" number="8208">分解器错误</Title>
+    <Title domain="3" number="8209">分解器错误</Title>
+    <Title domain="3" number="8210">传输故障。</Title>
+    <Title domain="3" number="8211">功能错误</Title>
+    <Title domain="3" number="8212">数据未找到！</Title>
+    <Title domain="3" number="8213">电池电量低。</Title>
+    <Title domain="3" number="8214">电池故障。</Title>
+    <Title domain="3" number="8215">电池监控故障。</Title>
+    <Title domain="3" number="8216">SMB 功能错误。</Title>
+    <Title domain="3" number="8218">EIB high encoder temperature.</Title>
+    <Title domain="3" number="8230">PMC 卡连接不当</Title>
+    <Title domain="3" number="8231">PMC 卡不能启动</Title>
+    <Title domain="3" number="8232">PMC 的信道数量已达到最大值</Title>
+    <Title domain="3" number="8233">力度传感器安全信道错误</Title>
+    <Title domain="3" number="8234">已达到最大力度或转矩</Title>
+    <Title domain="3" number="8235">力度传感器输入的饱和警告</Title>
+    <Title domain="3" number="8236">力度传感器输入的饱和错误</Title>
+    <Title domain="3" number="8237">“测力板”配置错误</Title>
+    <Title domain="3" number="9401">转矩电流参考误差</Title>
+    <Title domain="3" number="9402">电机角度参考误差警告</Title>
+    <Title domain="3" number="9403">转矩回路电流不足</Title>
+    <Title domain="3" number="9404">转矩回路电流过低</Title>
+    <Title domain="3" number="9405">转矩控制器的 PWM 达到最高值</Title>
+    <Title domain="3" number="9406">场回路电流过低</Title>
+    <Title domain="3" number="9407">驱动单元类型码错误</Title>
+    <Title domain="3" number="9408">整流器单元类型码错误</Title>
+    <Title domain="3" number="9409">电容器单元类型码错误。</Title>
+    <Title domain="3" number="9410">驱动单元通信警报
+</Title>
+    <Title domain="3" number="9411">通信错误过多</Title>
+    <Title domain="3" number="9412">丢失过多的参考值更新</Title>
+    <Title domain="3" number="9413">驱动程序不同步</Title>
+    <Title domain="3" number="9414">未知电容器类型码</Title>
+    <Title domain="3" number="9415">与驱动单元的通信中断</Title>
+    <Title domain="3" number="9416">驱动单元无响应</Title>
+    <Title domain="3" number="9417">无法找到驱动程序版本文件</Title>
+    <Title domain="3" number="9418">未知驱动单元类型码</Title>
+    <Title domain="3" number="9419">未知整流器类型码</Title>
+    <Title domain="3" number="9420">驱动单元内置测试失败</Title>
+    <Title domain="3" number="9421">驱动单元配置测试失败</Title>
+    <Title domain="3" number="9422">驱动单元监控器超时</Title>
+    <Title domain="3" number="9423">驱动单元内部警告</Title>
+    <Title domain="3" number="9424">驱动单元内部错误</Title>
+    <Title domain="3" number="9425">驱动单元测量失败</Title>
+    <Title domain="3" number="9426">整流器内部故障</Title>
+    <Title domain="3" number="9427">整流器通信中断</Title>
+    <Title domain="3" number="9428">整流器启动错误</Title>
+    <Title domain="3" number="9431">正在更新驱动单元软件</Title>
+    <Title domain="3" number="9432">驱动单元中不兼容的引导版本</Title>
+    <Title domain="3" number="9434">驱动单元启动失败</Title>
+    <Title domain="3" number="9435">找不到附加轴驱动单元</Title>
+    <Title domain="3" number="9440">泄流电阻电路断路</Title>
+    <Title domain="3" number="9441">泄流电阻电路短路</Title>
+    <Title domain="3" number="9442">泄流电阻过小</Title>
+    <Title domain="3" number="9443">泄流电阻过载警告</Title>
+    <Title domain="3" number="9444">泄流电阻过载错误</Title>
+    <Title domain="3" number="9450">风扇单元电源故障</Title>
+    <Title domain="3" number="9451">风扇单元故障</Title>
+    <Title domain="3" number="9452">轴计算机散热风扇故障</Title>
+    <Title domain="3" number="9453">变压器散热风扇故障</Title>
+    <Title domain="3" number="9460">DC －Link 电压过低</Title>
+    <Title domain="3" number="9461">DC 链路电压过高</Title>
+    <Title domain="3" number="9462">DC 链路电压处于临界状态</Title>
+    <Title domain="3" number="9463">电机相短路警告</Title>
+    <Title domain="3" number="9464">电机相电路短路</Title>
+    <Title domain="3" number="9465">电机电流警告</Title>
+    <Title domain="3" number="9466">电机电流过载</Title>
+    <Title domain="3" number="9467">驱动单元温度警告</Title>
+    <Title domain="3" number="9468">驱动单元温度警报</Title>
+    <Title domain="3" number="9469">驱动单元温度处于临界状态</Title>
+    <Title domain="3" number="9470">功率半导体警告</Title>
+    <Title domain="3" number="9471">功率半导体过载错误</Title>
+    <Title domain="3" number="9472">输入电源相位缺失</Title>
+    <Title domain="3" number="9473">所有输入电源相位缺失</Title>
+    <Title domain="3" number="9474">整流器电流警告</Title>
+    <Title domain="3" number="9475">整流器电流错误</Title>
+    <Title domain="3" number="9476">整流器温度警告</Title>
+    <Title domain="3" number="9477">整流器温度错误</Title>
+    <Title domain="3" number="9478">内部电机 PTC 温度错误</Title>
+    <Title domain="3" number="9479">外部电机 PTC 温度错误</Title>
+    <Title domain="3" number="9482">电源电压过高</Title>
+    <Title domain="3" number="9483">DC -Link 短路</Title>
+    <Title domain="3" number="9484">运行链在电机开启状态下打开</Title>
+    <Title domain="3" number="9485">运行链在电机关闭状态下关闭</Title>
+    <Title domain="3" number="9486">DC 链接未连接</Title>
+    <Title domain="3" number="9500">驱动单元逻辑电压警告</Title>
+    <Title domain="3" number="9501">驱动单元逻辑电压错误</Title>
+    <Title domain="3" number="9502">整流器逻辑电压错误</Title>
+    <Title domain="3" number="9503">电源温度过高</Title>
+    <Title domain="3" number="9504">制动器电源过载</Title>
+    <Title domain="3" number="9505">电源电压损失</Title>
+    <Title domain="3" number="9520">与驱动模块的通信中断</Title>
+    <Title domain="3" number="9521">驱动模块通信警告</Title>
+    <Title domain="3" number="9522">轴计算机未找到</Title>
+    <Title domain="3" number="9523">未使用的轴计算机已连接</Title>
+    <Title domain="3" number="9524">驱动模块指令超时</Title>
+    <Title domain="3" number="9525">驱动模块启动错误</Title>
+    <Title domain="3" number="9530">轴计算机与安全系统的通信中断</Title>
+    <Title domain="3" number="9531">运行链错误测试功能未运行</Title>
+    <Title domain="10" number="0">内部错误</Title>
+    <Title domain="7" number="1001">重复地址</Title>
+    <Title domain="7" number="1002">单元类型未定义</Title>
+    <Title domain="7" number="1003">I/O 单元未定义</Title>
+    <Title domain="7" number="1005">过滤器时间无效</Title>
+    <Title domain="7" number="1006">过滤器时间无效</Title>
+    <Title domain="7" number="1007">逻辑值超出范围</Title>
+    <Title domain="7" number="1008">物理值超出范围</Title>
+    <Title domain="7" number="1017">无 actor I/O 信号交叉连接</Title>
+    <Title domain="7" number="1019">I/O 信号未定义</Title>
+    <Title domain="7" number="1020">无合成 I/O 信号交叉连接</Title>
+    <Title domain="7" number="1021">重复的交叉连接合成信号</Title>
+    <Title domain="7" number="1037">交叉连接电路关闭</Title>
+    <Title domain="7" number="1038">超过交叉连接最大深度</Title>
+    <Title domain="7" number="1045">过滤器规格无效</Title>
+    <Title domain="7" number="1049">模拟 I/O 信号倒置</Title>
+    <Title domain="7" number="1050">带非数字 actor I/O 信号的交叉连接</Title>
+    <Title domain="7" number="1052">超过最大交叉连接数</Title>
+    <Title domain="7" number="1054">信号类型无效</Title>
+    <Title domain="7" number="1058">与 I/O 单元的通信中断</Title>
+    <Title domain="7" number="1072">无法读取存储的信号值</Title>
+    <Title domain="7" number="1076">来自 rtp1 的通信错误</Title>
+    <Title domain="7" number="1077">来自 rtp1 的通信错误</Title>
+    <Title domain="7" number="1078">来自 rtp1 的通信错误</Title>
+    <Title domain="7" number="1080">超过最大单元类型数量</Title>
+    <Title domain="7" number="1081">超过最大物理 I/O 信号数量</Title>
+    <Title domain="7" number="1082">超过最大的用户 I/O 信号数量</Title>
+    <Title domain="7" number="1083">超过最大符号数量</Title>
+    <Title domain="7" number="1084">超过最大已订阅 I/O 信号数量</Title>
+    <Title domain="7" number="1085">超过最大 I/O 单元数量</Title>
+    <Title domain="7" number="1097">存储输入 I/O 信号</Title>
+    <Title domain="7" number="1098">找不到 NFS 服务器</Title>
+    <Title domain="7" number="1099">找不到信任的 NFS 服务器</Title>
+    <Title domain="7" number="1100">超过最大 I/O 总线数量</Title>
+    <Title domain="7" number="1101">I/O 总线未定义</Title>
+    <Title domain="7" number="1108">Interbus I/O 单元故障</Title>
+    <Title domain="7" number="1109">Interbus 总线故障</Title>
+    <Title domain="7" number="1110">Interbus 总线故障</Title>
+    <Title domain="7" number="1111">ID 代码不匹配</Title>
+    <Title domain="7" number="1114">IP 地址无效</Title>
+    <Title domain="7" number="1115">子网掩码无效</Title>
+    <Title domain="7" number="1116">使用“单元信任级别 &lt;必需 (0)&gt;”停用 I/O 单元</Title>
+    <Title domain="7" number="1122">IP 地址不正确</Title>
+    <Title domain="7" number="1123">无传输协议</Title>
+    <Title domain="7" number="1125">安装许可被拒绝</Title>
+    <Title domain="7" number="1126">未导出目录</Title>
+    <Title domain="7" number="1128">未安装以太网</Title>
+    <Title domain="7" number="1129">远程磁盘过多</Title>
+    <Title domain="7" number="1130">远程服务器过多</Title>
+    <Title domain="7" number="1131">无法安装目录</Title>
+    <Title domain="7" number="1141">I/O 信号的默认值超出范围</Title>
+    <Title domain="7" number="1145">Interbus 总线失效</Title>
+    <Title domain="7" number="1147">Interbus 网络没有响应</Title>
+    <Title domain="7" number="1148">无法访问 Interbus 网络</Title>
+    <Title domain="7" number="1156">IPC 队列已满</Title>
+    <Title domain="7" number="1158">地址超出范围。</Title>
+    <Title domain="7" number="1163">内部 I/O 单元上的 I/O 信号</Title>
+    <Title domain="7" number="1164">交叉连接中的内部 I/O 信号</Title>
+    <Title domain="7" number="1165">FTP 服务器停机</Title>
+    <Title domain="7" number="1166">FTP 服务器停机</Title>
+    <Title domain="7" number="1167">传输协议错误</Title>
+    <Title domain="7" number="1169">未安装以太网</Title>
+    <Title domain="7" number="1182">I/O 信号未定义</Title>
+    <Title domain="7" number="1183">交叉连接包括无效的运算符</Title>
+    <Title domain="7" number="1185">重复名称</Title>
+    <Title domain="7" number="1193">无效的物理 I/O 映射</Title>
+    <Title domain="7" number="1196">编码类型无效</Title>
+    <Title domain="7" number="1201">未知 I/O 总线</Title>
+    <Title domain="7" number="1205">无法安装目录</Title>
+    <Title domain="7" number="1220">未安装 Profibus 选项</Title>
+    <Title domain="7" number="1221">找不到 Profibus 固件文件</Title>
+    <Title domain="7" number="1222">找不到 Profibus 配置文件</Title>
+    <Title domain="7" number="1223">Profibus 文件分析错误</Title>
+    <Title domain="7" number="1224">Profibus 信道已被更新</Title>
+    <Title domain="7" number="1225">Profibus 配置错误</Title>
+    <Title domain="7" number="1226">Profibus 配置正确</Title>
+    <Title domain="7" number="1227">初始化 Profibus 从控信道失败</Title>
+    <Title domain="7" number="1228">Profibus 二进制配置故障</Title>
+    <Title domain="7" number="1229">Profibus 二进制参数故障</Title>
+    <Title domain="7" number="1230">I/O 单元配置错误</Title>
+    <Title domain="7" number="1231">连接了错误的 Profibus I/O 单元</Title>
+    <Title domain="7" number="1232">内部 Profibus 从控过多</Title>
+    <Title domain="7" number="1241">I/O 总线上的 I/O 单元太多</Title>
+    <Title domain="7" number="1244">Interbus 单元类型不正确</Title>
+    <Title domain="7" number="1245">Interbus 配置内未定义 I/O 单元</Title>
+    <Title domain="7" number="1246">无法访问 Interbus 数据</Title>
+    <Title domain="7" number="1248">Interbus I/O 单元配置不匹配</Title>
+    <Title domain="7" number="1249">Interbus I/O 单元配置不匹配</Title>
+    <Title domain="7" number="1250">无法配置 Interbus 电路板</Title>
+    <Title domain="7" number="1258">找不到配置文件</Title>
+    <Title domain="7" number="1259">无法读取 Interbus 配置文件</Title>
+    <Title domain="7" number="1260">Interbus 总线故障</Title>
+    <Title domain="7" number="1261">传输层故障</Title>
+    <Title domain="7" number="1262">Fieldbus 通信失败</Title>
+    <Title domain="7" number="1263">CAN 通信失败</Title>
+    <Title domain="7" number="1273">I/O 单元配置不匹配</Title>
+    <Title domain="7" number="1274">Interbus 总线故障</Title>
+    <Title domain="7" number="1276">与 I/O 单元建立通信</Title>
+    <Title domain="7" number="1278">安装许可被拒绝</Title>
+    <Title domain="7" number="1288">安装路径太长</Title>
+    <Title domain="7" number="1289">内存分区太大</Title>
+    <Title domain="7" number="1290">无法添加 FTP 设备</Title>
+    <Title domain="7" number="1291">本地路径无效</Title>
+    <Title domain="7" number="1293">输入大小无效</Title>
+    <Title domain="7" number="1294">输出大小无效</Title>
+    <Title domain="7" number="1295">输入大小无效</Title>
+    <Title domain="7" number="1296">输出大小无效</Title>
+    <Title domain="7" number="1297">连接类型无效</Title>
+    <Title domain="7" number="1298">重复地址</Title>
+    <Title domain="7" number="1299">DeviceNet 总线上无电</Title>
+    <Title domain="7" number="1300">DeviceNet 总线通信警告</Title>
+    <Title domain="7" number="1301">总线关闭，DeviceNet 总线通信故障</Title>
+    <Title domain="7" number="1302">未安装 DeviceNet 选项</Title>
+    <Title domain="7" number="1303">DeviceNet 供应商 ID 无效</Title>
+    <Title domain="7" number="1304">DeviceNet 设备类型无效</Title>
+    <Title domain="7" number="1305">DeviceNet 产品编号无效</Title>
+    <Title domain="7" number="1306">DeviceNet 未知错误</Title>
+    <Title domain="7" number="1307">DeviceNet 通用连接 1</Title>
+    <Title domain="7" number="1308">DeviceNet 通用连接 2</Title>
+    <Title domain="7" number="1309">DeviceNet 通用单元标识</Title>
+    <Title domain="7" number="1310">DeviceNet I/O 单元连接错误</Title>
+    <Title domain="7" number="1311">无法在 DeviceNet 总线上建立通信</Title>
+    <Title domain="7" number="1312">未启用 DeviceNet I/O 单元显式连接</Title>
+    <Title domain="7" number="1313">现场总线命令类型的指令编号不是唯一的。</Title>
+    <Title domain="7" number="1314">现场总线命令类型无效</Title>
+    <Title domain="7" number="1315">超过最大现场总线命令数量</Title>
+    <Title domain="7" number="1316">超过最大现场总线命令类型数量</Title>
+    <Title domain="7" number="1317">I/O 单元重置</Title>
+    <Title domain="7" number="1320">超过最大 I/O 访问级别数量 </Title>
+    <Title domain="7" number="1321">I/O 访问级别无效</Title>
+    <Title domain="7" number="1323">位值无效</Title>
+    <Title domain="7" number="1324">物理限值超出范围</Title>
+    <Title domain="7" number="1325">I/O 总线配置无效</Title>
+    <Title domain="7" number="1326">单元类型配置无效</Title>
+    <Title domain="7" number="1328">名称无效</Title>
+    <Title domain="7" number="1329">无效的连接器 ID</Title>
+    <Title domain="7" number="1330">总线类型冲突</Title>
+    <Title domain="7" number="1331">总线类型无效</Title>
+    <Title domain="7" number="1332">恢复时间无效</Title>
+    <Title domain="7" number="1333">无效的 DeviceNet 波特率</Title>
+    <Title domain="7" number="1334">命令类型未引用单元类型</Title>
+    <Title domain="7" number="1335">单元类型无效</Title>
+    <Title domain="7" number="1336">命令类型不带路径</Title>
+    <Title domain="7" number="1337">命令类型不带服务标识符</Title>
+    <Title domain="7" number="1338">无效的服务标识符</Title>
+    <Title domain="7" number="1339">现场总线命令未引用 I/O 单元</Title>
+    <Title domain="7" number="1340">I/O 单元无效</Title>
+    <Title domain="7" number="1341">现场总线命令，未引用命令类型</Title>
+    <Title domain="7" number="1342">单元类型不匹配</Title>
+    <Title domain="7" number="1344">单元映射未定义</Title>
+    <Title domain="7" number="1346">单元映射超出范围</Title>
+    <Title domain="7" number="1347">单元映射包含迭加区段</Title>
+    <Title domain="7" number="1348">单元映射包含意外字符</Title>
+    <Title domain="7" number="1349">信号大小无效</Title>
+    <Title domain="7" number="1350">总线类型无效</Title>
+    <Title domain="7" number="1351">连接 1 类型无效</Title>
+    <Title domain="7" number="1352">连接 2 类型无效</Title>
+    <Title domain="7" number="1353">单元未引用单元类型</Title>
+    <Title domain="7" number="1354">I/O 单元未引用 I/O 总线</Title>
+    <Title domain="7" number="1355">trustlevel 无效</Title>
+    <Title domain="7" number="1356">总线类型不匹配</Title>
+    <Title domain="7" number="1357">I/O 总线 &lt;本地&gt; 上存在重复的 I/O 单元</Title>
+    <Title domain="7" number="1358">电源故障恢复已满</Title>
+    <Title domain="7" number="1359">未安装 Multiple Serial Ports 选项</Title>
+    <Title domain="7" number="1361">使用非数字合成信号交叉连接</Title>
+    <Title domain="7" number="1362">映射到 I/O 单元数据区域之外的 I/O 信号</Title>
+    <Title domain="7" number="1363">从控配置无效</Title>
+    <Title domain="7" number="1364">I/O 队列过载</Title>
+    <Title domain="7" number="1365">安全 I/O 队列过载</Title>
+    <Title domain="7" number="1366">交叉连接 I/O 队列过载</Title>
+    <Title domain="7" number="1367">与 I/O 单元之间没有通信</Title>
+    <Title domain="7" number="1368">未安装 Interbus 选项</Title>
+    <Title domain="7" number="1377">Dengensha 电路板故障</Title>
+    <Title domain="7" number="1378">访问 Dengensha PCI 电路板失败。</Title>
+    <Title domain="7" number="1379">未知的通信物理信道连接器</Title>
+    <Title domain="7" number="1380">通信连接器驱动程序已使用</Title>
+    <Title domain="7" number="1381">通信连接器已使用</Title>
+    <Title domain="7" number="1382">已超过 DeviceNet 监控时间</Title>
+    <Title domain="7" number="1383">用户定义的 I/O 单元无法连接至 I/O 总线 &lt;本地&gt;</Title>
+    <Title domain="7" number="1385">请求消息资源耗尽 </Title>
+    <Title domain="7" number="1386">不支持 DeviceNet Quick Connect</Title>
+    <Title domain="7" number="1389">配置文件错误</Title>
+    <Title domain="7" number="1390">DeviceNet 总线已从总线关闭状态恢复</Title>
+    <Title domain="7" number="1391">系统信号配置</Title>
+    <Title domain="7" number="1392">输出大小无效</Title>
+    <Title domain="7" number="1393">配置一般大小时发生错误</Title>
+    <Title domain="7" number="1394">无效物理通信信道</Title>
+    <Title domain="7" number="1395">无传输协议</Title>
+    <Title domain="7" number="1396">无传输协议</Title>
+    <Title domain="7" number="1397">无应用程序协议</Title>
+    <Title domain="7" number="1398">bosv24 处通信错误</Title>
+    <Title domain="7" number="1399">bosv24 处通信错误</Title>
+    <Title domain="7" number="1400">bosv24 处通信错误</Title>
+    <Title domain="7" number="1401">没有 &lt;<arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />&gt; 现场总线适配器的选项</Title>
+    <Title domain="7" number="1402">重复的 IP 地址</Title>
+    <Title domain="7" number="1403">时间间隔无效</Title>
+    <Title domain="7" number="1404">输入/输出大小无效</Title>
+    <Title domain="7" number="1405">重复的 I/O 单元映射</Title>
+    <Title domain="7" number="1406">建立于 DeviceNet 总线上的通信</Title>
+    <Title domain="7" number="1407">没有找到路由接口</Title>
+    <Title domain="7" number="1408">路由端口编号超越范围</Title>
+    <Title domain="7" number="1409">无法添加端口至 <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="7" number="1410">未安装 CIP 路由选项</Title>
+    <Title domain="7" number="1411">路由资源不足</Title>
+    <Title domain="7" number="1412">DeviceNet 总线已经重新获得总线电源</Title>
+    <Title domain="7" number="1413">Dengensha 选项未安装</Title>
+    <Title domain="7" number="1414">信号值并发更改</Title>
+    <Title domain="7" number="1415">无总线电源</Title>
+    <Title domain="7" number="1416">总线电源已恢复</Title>
+    <Title domain="7" number="1417">DeviceNet Lean 硬件缺失</Title>
+    <Title domain="7" number="1418">不允许的供应商</Title>
+    <Title domain="7" number="1419">不允许的单元类型</Title>
+    <Title domain="7" number="1420">错误的单元类型</Title>
+    <Title domain="7" number="1421">DeviceNet Lean 总线上的重复地址</Title>
+    <Title domain="7" number="1422">DeviceNet Lean 总线上的载荷过高</Title>
+    <Title domain="7" number="1423">DeviceNet Lean 总线上的少量错误</Title>
+    <Title domain="7" number="1424">DeviceNet Lean 总线关闭</Title>
+    <Title domain="7" number="1425">DeviceNet Lean 的 I/O 单元过多</Title>
+    <Title domain="7" number="1426">DeviceNet Lean 总线恢复</Title>
+    <Title domain="7" number="1427">DeviceNet Lean 选项键缺失</Title>
+    <Title domain="7" number="1428">已配置 DeviceNet Lean I/O 单元</Title>
+    <Title domain="7" number="1429">Profinet PCI 电路板中没有配置</Title>
+    <Title domain="7" number="1430">Profinet 电路板上的固件不兼容</Title>
+    <Title domain="7" number="1431">正在进行配置更新</Title>
+    <Title domain="7" number="1432">Profinet 硬件异常</Title>
+    <Title domain="7" number="1433">与 Profinet PCI 电路板无接触</Title>
+    <Title domain="7" number="1434">Profinet 总线停止</Title>
+    <Title domain="7" number="1435">未配置 Profinet I/O 单元</Title>
+    <Title domain="7" number="1436">Profinet 配置缺失</Title>
+    <Title domain="7" number="1437">Profinet 内部从控配置警告</Title>
+    <Title domain="7" number="1438">Profinet 内部从控配置警告</Title>
+    <Title domain="7" number="1439">Profinet I/O 单元诊断</Title>
+    <Title domain="7" number="1440">Profinet 配置不匹配</Title>
+    <Title domain="7" number="1441">Profinet-IO 路由警告</Title>
+    <Title domain="7" number="1442">Profinet 选项键缺失</Title>
+    <Title domain="7" number="1443">Profinet 内部从控过多</Title>
+    <Title domain="7" number="1444">Profinet I/O 单元报警</Title>
+    <Title domain="7" number="1445">Profinet PCI 电路板错误</Title>
+    <Title domain="7" number="1446">Profinet 配置不匹配</Title>
+    <Title domain="7" number="1449">配置的现场总线适配器过多</Title>
+    <Title domain="7" number="1450">未安装以太网/IP 主控/从控选项</Title>
+    <Title domain="7" number="1451">未安装以太网额外端口选项</Title>
+    <Title domain="7" number="1452">配置的以太网/IP I/O 总线过多</Title>
+    <Title domain="7" number="1453">以太网/IP I/O 单元的标识错误</Title>
+    <Title domain="7" number="1454"><arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 地址缺失。</Title>
+    <Title domain="7" number="1455">未知的以太网/IP 连接类型</Title>
+    <Title domain="7" number="1456">以太网/IP 硬件缺失</Title>
+    <Title domain="7" number="1457">EtherNet/IP 网关地址无效</Title>
+    <Title domain="7" number="1458">无法更改默认网关地址</Title>
+    <Title domain="7" number="1459">非法 EtherNet/IP 地址</Title>
+    <Title domain="7" number="1460">无法连接到 EtherNet/IP I/O 单元</Title>
+    <Title domain="7" number="1461">EtherNet/IP 总线上有重复地址</Title>
+    <Title domain="7" number="1462">非法 EtherNet/IP 子网掩码</Title>
+    <Title domain="7" number="1463">非法的 EtherNet/IP 总线地址</Title>
+    <Title domain="7" number="1464">无法为 EtherNet/IP 添加新网关</Title>
+    <Title domain="7" number="1465">DeviceNet Lean 错误响应</Title>
+    <Title domain="7" number="1466">Profinet 配置失败</Title>
+    <Title domain="7" number="1467">Profinet 配置文件缺失</Title>
+    <Title domain="7" number="1468">Profinet 板 DSQC 678 已升级</Title>
+    <Title domain="7" number="1469">超过最大的内部 I/O 信号数量</Title>
+    <Title domain="7" number="1470">错误的单元类型</Title>
+    <Title domain="7" number="1471">DeviceNet Lean 总线上的重复地址</Title>
+    <Title domain="7" number="1473">DeviceNet Lean 总线扫描结果 </Title>
+    <Title domain="7" number="1474">总线命令响应消息</Title>
+    <Title domain="7" number="1475">总线命令错误响应</Title>
+    <Title domain="7" number="1476">未找到 DeviceNet 固件文件</Title>
+    <Title domain="7" number="1477">以太网/IP I/O 单元的连接大小无效</Title>
+    <Title domain="7" number="1478">以太网/IP I/O 单元的输入或输出组件无效</Title>
+    <Title domain="7" number="1479">以太网/IP I/O 单元的配置组件无效</Title>
+    <Title domain="7" number="1480">I/O 单元被另一主控占用。</Title>
+    <Title domain="7" number="1481">Profinet 配置文件错误</Title>
+    <Title domain="7" number="1482">Profinet 总线配置已更改</Title>
+    <Title domain="7" number="1483">收到 Profinet 识别请求</Title>
+    <Title domain="7" number="1484">缺少 Profinet 硬件</Title>
+    <Title domain="7" number="1485">子网掩码非法</Title>
+    <Title domain="7" number="1486">&lt;<arg format="%s" ordinal="2" xmlns="urn:abb-robotics-elog-text" />&gt; I/O 总线的地址非法</Title>
+    <Title domain="7" number="1487">&lt;<arg format="%s" ordinal="2" xmlns="urn:abb-robotics-elog-text" />&gt; I/O 总线的 IP 地址非法</Title>
+    <Title domain="7" number="1488">&lt;<arg format="%s" ordinal="3" xmlns="urn:abb-robotics-elog-text" />&gt; I/O 总线的网关地址非法</Title>
+    <Title domain="7" number="1489">Profinet 内部从控配置警告 </Title>
+    <Title domain="7" number="1490">Profinet I/O 单元配置警告</Title>
+    <Title domain="7" number="1491">缺少 Profinet I/O 单元配置</Title>
+    <Title domain="7" number="1492">Profinet I/O 单元报警</Title>
+    <Title domain="7" number="1493">已自动配置 Profinet I/O 单元</Title>
+    <Title domain="7" number="1494">Profinet 选项键缺失</Title>
+    <Title domain="7" number="1495">Profinet 主控选项键缺失</Title>
+    <Title domain="7" number="1496">与所需单元的通信中断</Title>
+    <Title domain="7" number="1497">与 I/O 单元之间没有通信</Title>
+    <Title domain="7" number="1498">Profinet 总线配置已更改</Title>
+    <Title domain="7" number="1499">交叉连接中的 I/O 信号包含迭加的单元映射</Title>
+    <Title domain="7" number="1500">EtherNet/IP 连接失败</Title>
+    <Title domain="7" number="1501">Profinet 配置文件错误</Title>
+    <Title domain="7" number="1502">Profinet 配置不匹配</Title>
+    <Title domain="7" number="1503">Profinet 工作站名称错误</Title>
+    <Title domain="7" number="1504">文件大小超出最大文件大小</Title>
+    <Title domain="7" number="1505">总线命令语法错误</Title>
+    <Title domain="7" number="1506">总线命令语法错误</Title>
+    <Title domain="7" number="1507">总线命令语法错误</Title>
+    <Title domain="7" number="1508">总线命令语法错误</Title>
+    <Title domain="7" number="1509">总线命令语法错误</Title>
+    <Title domain="7" number="1510">总线命令语法错误</Title>
+    <Title domain="7" number="1511">总线命令语法错误</Title>
+    <Title domain="7" number="1512">总线命令中的服务标识符无效</Title>
+    <Title domain="7" number="1513">总线命令响应超时</Title>
+    <Title domain="7" number="1514">总线命令连接错误</Title>
+    <Title domain="7" number="1515">Fieldbus 命令发送错误</Title>
+    <Title domain="7" number="1516">EtherNet/IP I/O 单元不支持“快速连接”</Title>
+    <Title domain="7" number="1517">EtherNet/IP I/O 单元的一个属性发生了更改</Title>
+    <Title domain="7" number="1518">Profinet 配置不匹配</Title>
+    <Title domain="7" number="1519">配置的 Profinet 主/从 SW 总线太多</Title>
+    <Title domain="7" number="1520">输入数据无效</Title>
+    <Title domain="7" number="1521">输出数据未处理</Title>
+    <Title domain="7" number="1522">Ethernet 端口被其他客户端占用</Title>
+    <Title domain="7" number="1524">Profinet I/O 单元未知报警</Title>
+    <Title domain="7" number="1525">Profinet I/O 单元诊断</Title>
+    <Title domain="7" number="1526">Profinet I/O 单元未知报警</Title>
+    <Title domain="7" number="1527">EtherNet/IP 设备状态冲突</Title>
+    <Title domain="7" number="1528">EtherNet/IP 请求失败</Title>
+    <Title domain="7" number="1533">Invalid configuration size for EtherNet/IP I/O unit</Title>
+    <Title domain="7" number="1534">Invalid output size for EtherNet/IP I/O unit</Title>
+    <Title domain="7" number="1535">Invalid input size for EtherNet/IP I/O unit</Title>
+    <Title domain="11" number="4800">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4801">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4802">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4803">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4804">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4805">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4806">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4807">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4808">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4809">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4810">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4811">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4812">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4813">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="11" number="4814">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="5" number="21">接点位置错误</Title>
+    <Title domain="5" number="22">DC-link 电压太低</Title>
+    <Title domain="5" number="24">转角路径故障
+</Title>
+    <Title domain="5" number="25">重新启动已中断</Title>
+    <Title domain="5" number="26">靠近奇点</Title>
+    <Title domain="5" number="27">关节超出范围</Title>
+    <Title domain="5" number="28">微动控制方向错误</Title>
+    <Title domain="5" number="31">不允许该命令</Title>
+    <Title domain="5" number="32">不允许该命令</Title>
+    <Title domain="5" number="33">不允许该命令</Title>
+    <Title domain="5" number="35">不允许该命令</Title>
+    <Title domain="5" number="36">无法更正恢复</Title>
+    <Title domain="5" number="37">电机上电 (MOTORS ON) 指令被忽略</Title>
+    <Title domain="5" number="41">机器人在奇异点上</Title>
+    <Title domain="5" number="42">无法创建路径</Title>
+    <Title domain="5" number="50">位置超出范围</Title>
+    <Title domain="5" number="52">关节速度错误 </Title>
+    <Title domain="5" number="53">转数计数器的差异过大</Title>
+    <Title domain="5" number="55">关节负荷过高</Title>
+    <Title domain="5" number="56">关节碰撞</Title>
+    <Title domain="5" number="57">关节未同步</Title>
+    <Title domain="5" number="58">工具坐标系错误</Title>
+    <Title domain="5" number="60">工具不正确</Title>
+    <Title domain="5" number="63">不确定的圆</Title>
+    <Title domain="5" number="65">运动误差</Title>
+    <Title domain="5" number="66">机器人未活动</Title>
+    <Title domain="5" number="67">单元未激活</Title>
+    <Title domain="5" number="76">姿态不正确</Title>
+    <Title domain="5" number="78">密集位置过多</Title>
+    <Title domain="5" number="79">无法使用手腕摆动</Title>
+    <Title domain="5" number="80">位置不兼容</Title>
+    <Title domain="5" number="82">减速限值</Title>
+    <Title domain="5" number="83">系统减速。</Title>
+    <Title domain="5" number="85">用户坐标系过多。</Title>
+    <Title domain="5" number="86">奇异点问题</Title>
+    <Title domain="5" number="87">奇异点问题</Title>
+    <Title domain="5" number="88">无法重新启动</Title>
+    <Title domain="5" number="89">摆动已更改
+</Title>
+    <Title domain="5" number="91">无法重新启动。</Title>
+    <Title domain="5" number="92">轴计算机响应</Title>
+    <Title domain="5" number="94">无法使用 TuneServo</Title>
+    <Title domain="5" number="96">不允许 TuneServo</Title>
+    <Title domain="5" number="132">换向失败</Title>
+    <Title domain="5" number="133">测试信号错误。</Title>
+    <Title domain="5" number="134">矫正矢量警告</Title>
+    <Title domain="5" number="135">无法使用 SoftAct。</Title>
+    <Title domain="5" number="138">手臂检查点限值</Title>
+    <Title domain="5" number="139">手臂检查点限值</Title>
+    <Title domain="5" number="140">有效载荷过大</Title>
+    <Title domain="5" number="141">操纵或速度错误</Title>
+    <Title domain="5" number="142">运动配置</Title>
+    <Title domain="5" number="143">机器人轴配置</Title>
+    <Title domain="5" number="144">不确定的位移坐标</Title>
+    <Title domain="5" number="145">运动限制</Title>
+    <Title domain="5" number="147">断电重新启动失败</Title>
+    <Title domain="5" number="153">不允许该命令
+</Title>
+    <Title domain="5" number="156">不是独立的关节</Title>
+    <Title domain="5" number="157">矫正矢量警告</Title>
+    <Title domain="5" number="158">缺少传感器过程</Title>
+    <Title domain="5" number="159">无外部过程</Title>
+    <Title domain="5" number="160">无法到达位置</Title>
+    <Title domain="5" number="162">内部位置错误</Title>
+    <Title domain="5" number="163">位置调整</Title>
+    <Title domain="5" number="164">无法禁用</Title>
+    <Title domain="5" number="167">警告：新同步</Title>
+    <Title domain="5" number="168">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />新同步</Title>
+    <Title domain="5" number="171">速度太慢</Title>
+    <Title domain="5" number="172">不允许 MoveJ</Title>
+    <Title domain="5" number="173">需要静止点</Title>
+    <Title domain="5" number="174">WObj 未连接</Title>
+    <Title domain="5" number="175">传送带移动</Title>
+    <Title domain="5" number="176">传送带未激活</Title>
+    <Title domain="5" number="177">无法重新启动</Title>
+    <Title domain="5" number="178">非最佳移动</Title>
+    <Title domain="5" number="181">超出耦合范围</Title>
+    <Title domain="5" number="182">操纵方向错误</Title>
+    <Title domain="5" number="183">机器人超出工作区域。</Title>
+    <Title domain="5" number="184">矫正矢量警告</Title>
+    <Title domain="5" number="185">矫正矢量警告</Title>
+    <Title domain="5" number="188">非最佳移动</Title>
+    <Title domain="5" number="189">未找到继电器信号</Title>
+    <Title domain="5" number="190">插补器永久性锁定错误</Title>
+    <Title domain="5" number="191">TCP 速度过多</Title>
+    <Title domain="5" number="192">操纵错误</Title>
+    <Title domain="5" number="193">关节未同步</Title>
+    <Title domain="5" number="194">内部位置错误</Title>
+    <Title domain="5" number="195">独立模式下无法移动</Title>
+    <Title domain="5" number="196">校准失败</Title>
+    <Title domain="5" number="197">校准失败</Title>
+    <Title domain="5" number="198">校准失败</Title>
+    <Title domain="5" number="200">转矩错误</Title>
+    <Title domain="5" number="201">方位超出可及范围</Title>
+    <Title domain="5" number="203">测量节点已使用</Title>
+    <Title domain="5" number="204">动作监控</Title>
+    <Title domain="5" number="205">数据记录器错误</Title>
+    <Title domain="5" number="206">探头警告</Title>
+    <Title domain="5" number="207">添加中间点</Title>
+    <Title domain="5" number="208">功能缺失</Title>
+    <Title domain="5" number="209">运动学限制</Title>
+    <Title domain="5" number="210">负荷标识失败</Title>
+    <Title domain="5" number="214">工作区域配置失败</Title>
+    <Title domain="5" number="215">负荷标识失败</Title>
+    <Title domain="5" number="218">路径未完成
+</Title>
+    <Title domain="5" number="220">无输入信号</Title>
+    <Title domain="5" number="221">目标超出限值</Title>
+    <Title domain="5" number="222">类型与机械单元不匹配</Title>
+    <Title domain="5" number="224">无法定义负荷</Title>
+    <Title domain="5" number="225">旧的启动安全区域已丢失</Title>
+    <Title domain="5" number="226">电机参照错误</Title>
+    <Title domain="5" number="227">测试信号错误</Title>
+    <Title domain="5" number="228">测试信号错误</Title>
+    <Title domain="5" number="229">测试信号错误</Title>
+    <Title domain="5" number="230">测试信号错误</Title>
+    <Title domain="5" number="231">测试信号错误</Title>
+    <Title domain="5" number="234">登记时溢出</Title>
+    <Title domain="5" number="235">未接到中断信号</Title>
+    <Title domain="5" number="239">已更改优化紧急停止</Title>
+    <Title domain="5" number="240">已更改优化紧急停止</Title>
+    <Title domain="5" number="241">缺少函数</Title>
+    <Title domain="5" number="242">由于 CFG 数据的原因而未同步</Title>
+    <Title domain="5" number="243">无加速度限制</Title>
+    <Title domain="5" number="244">AbsAcc 校准失败</Title>
+    <Title domain="5" number="245">不允许该命令</Title>
+    <Title domain="5" number="246">连接电机错误</Title>
+    <Title domain="5" number="247">清除路径失败</Title>
+    <Title domain="5" number="248">伺服工具错误。</Title>
+    <Title domain="5" number="249">编程力度已降低</Title>
+    <Title domain="5" number="250">校准力度已降低</Title>
+    <Title domain="5" number="251">打开工具失败</Title>
+    <Title domain="5" number="252">打开工具失败</Title>
+    <Title domain="5" number="253">无法禁用单元</Title>
+    <Title domain="5" number="254">连接电机错误。</Title>
+    <Title domain="5" number="256">同步位置警告</Title>
+    <Title domain="5" number="257">同步速度警告</Title>
+    <Title domain="5" number="258">传感器方向错误</Title>
+    <Title domain="5" number="259">传感器最大距离错误</Title>
+    <Title domain="5" number="260">传感器检查距离错误</Title>
+    <Title domain="5" number="261">WZone 超出工作区域</Title>
+    <Title domain="5" number="262">WZone 超出工作区域</Title>
+    <Title domain="5" number="263">负荷因数警告</Title>
+    <Title domain="5" number="265">厚度超出可达范围</Title>
+    <Title domain="5" number="266">关闭请求失败</Title>
+    <Title domain="5" number="267">打开请求失败。</Title>
+    <Title domain="5" number="268">校准失败</Title>
+    <Title domain="5" number="269">调整值超出限值</Title>
+    <Title domain="5" number="271">事件精度不够</Title>
+    <Title domain="5" number="272">运动配置</Title>
+    <Title domain="5" number="273">运动配置</Title>
+    <Title domain="5" number="274">配置</Title>
+    <Title domain="5" number="275">配置</Title>
+    <Title domain="5" number="276">运动配置</Title>
+    <Title domain="5" number="277">运动配置</Title>
+    <Title domain="5" number="278">运动配置</Title>
+    <Title domain="5" number="279">运动配置</Title>
+    <Title domain="5" number="280">系统配置</Title>
+    <Title domain="5" number="281">进程失败</Title>
+    <Title domain="5" number="282">记录未就绪</Title>
+    <Title domain="5" number="283">未知记录文件名</Title>
+    <Title domain="5" number="284">无法启动机械单元 </Title>
+    <Title domain="5" number="285">无法使用 DitherAct</Title>
+    <Title domain="5" number="286">多个坐标系混合 </Title>
+    <Title domain="5" number="287">单元未停止在受控制的位置</Title>
+    <Title domain="5" number="288">同步 ID 不匹配</Title>
+    <Title domain="5" number="289">同步时点类型不匹配</Title>
+    <Title domain="5" number="290">服务不可用</Title>
+    <Title domain="5" number="294">数据传输错误</Title>
+    <Title domain="5" number="295">缺少动作数据</Title>
+    <Title domain="5" number="296">SMB 内存数据差异</Title>
+    <Title domain="5" number="297">SMB 内存已更新</Title>
+    <Title domain="5" number="298">机柜内存已更新</Title>
+    <Title domain="5" number="299">速度控制警告</Title>
+    <Title domain="5" number="300">未使用 SMB 内存</Title>
+    <Title domain="5" number="301">所有 SMB 数据已丢失</Title>
+    <Title domain="5" number="302">传感器数据丢失</Title>
+    <Title domain="5" number="303">机柜数据丢失</Title>
+    <Title domain="5" number="305">使用旧 SMB 电路板</Title>
+    <Title domain="5" number="306">负荷确认错误</Title>
+    <Title domain="5" number="307">扩大工作范围</Title>
+    <Title domain="5" number="308">In Position 超时</Title>
+    <Title domain="5" number="309">AbsAcc 错误</Title>
+    <Title domain="5" number="310">处于非激活状态的独立关节</Title>
+    <Title domain="5" number="311">无法在任务中启动机械单元</Title>
+    <Title domain="5" number="312">已在其它任务中处于激活状态的机械单元</Title>
+    <Title domain="5" number="313">独立移动重置失败</Title>
+    <Title domain="5" number="314">独立移动超出可达范围</Title>
+    <Title domain="5" number="315">转角路径故障</Title>
+    <Title domain="5" number="316">绝对精度功能未激活</Title>
+    <Title domain="5" number="317">不允许断开驱动模块 </Title>
+    <Title domain="5" number="318">不允许重新连接驱动模块 </Title>
+    <Title domain="5" number="319">无法启动机械单元
+</Title>
+    <Title domain="5" number="320">已断开驱动模块
+</Title>
+    <Title domain="5" number="321">已重新连接驱动模块
+</Title>
+    <Title domain="5" number="322">机械单元未连接到动作任务</Title>
+    <Title domain="5" number="323">读取力度传感器失败</Title>
+    <Title domain="5" number="324">力度控制校准失败</Title>
+    <Title domain="5" number="325">启动力度控制失败</Title>
+    <Title domain="5" number="326">关闭力度控制失败</Title>
+    <Title domain="5" number="327">启动参考值失败</Title>
+    <Title domain="5" number="328">FCRefSprForce 或 FCRefSprTorque 中参数错误</Title>
+    <Title domain="5" number="329">FCRefSprForce 中的参数错误</Title>
+    <Title domain="5" number="330">FCRefSprTorque 中的参数错误</Title>
+    <Title domain="5" number="333">FCRefLine、FCRefRot 或 FCRefCircle 错误</Title>
+    <Title domain="5" number="335">FCRefSpiral 中的参数错误</Title>
+    <Title domain="5" number="336">FCGetProcessData 中的参数错误</Title>
+    <Title domain="5" number="337">力度传感器未设置</Title>
+    <Title domain="5" number="338">FCCondAdvanced 中的参数错误</Title>
+    <Title domain="5" number="339">FCCondTime 中的参数错误</Title>
+    <Title domain="5" number="340">力度控制盒定义中的错误</Title>
+    <Title domain="5" number="341">力度控制圆柱定义中的错误</Title>
+    <Title domain="5" number="342">力度控制球体定义中的错误</Title>
+    <Title domain="5" number="343">力度控制圆锥定义中的错误
+</Title>
+    <Title domain="5" number="344">关节超出力度控制限值</Title>
+    <Title domain="5" number="345">力度控制监控错误</Title>
+    <Title domain="5" number="346">电机温度错误 </Title>
+    <Title domain="5" number="348">测试信号错误
+</Title>
+    <Title domain="5" number="349">同步 ID 警告
+</Title>
+    <Title domain="5" number="350"> 不允许软件均衡
+</Title>
+    <Title domain="5" number="351">不允许独立移动
+</Title>
+    <Title domain="5" number="352">移动指令数目不匹配</Title>
+    <Title domain="5" number="353">读取编码器卡中的数据失败
+</Title>
+    <Title domain="5" number="354">预定的力度参照过大。 </Title>
+    <Title domain="5" number="355">预定的转矩参照过大。
+</Title>
+    <Title domain="5" number="356">预定的 MaxForce 过大
+</Title>
+    <Title domain="5" number="357">预定的 MaxTorque 过大
+</Title>
+    <Title domain="5" number="358">力度控制时靠近奇点</Title>
+    <Title domain="5" number="359">不允许 StorePath 层上的 Path Recorder</Title>
+    <Title domain="5" number="361">制动闸释放错误</Title>
+    <Title domain="5" number="362">制动闸释放时间超时</Title>
+    <Title domain="5" number="363">SyncMoveOn 失败</Title>
+    <Title domain="5" number="364">当前矢量模式下的轴</Title>
+    <Title domain="5" number="366">引用错误</Title>
+    <Title domain="5" number="367">传感器同步机器停止</Title>
+    <Title domain="5" number="368">等距事件之间的距离太短</Title>
+    <Title domain="5" number="369">使用存储的偏差校准失败</Title>
+    <Title domain="5" number="370">向 SMB 内存传输数据失败</Title>
+    <Title domain="5" number="371">程序设定的速度过快</Title>
+    <Title domain="5" number="372">接触力过大</Title>
+    <Title domain="5" number="373">事件预设时间过长</Title>
+    <Title domain="5" number="374">变速控制（FC SpeedChange） 程序停止错误</Title>
+    <Title domain="5" number="375">动态负载过高</Title>
+    <Title domain="5" number="376">几何内插失败。</Title>
+    <Title domain="5" number="377">仅允许在位置控制中进行</Title>
+    <Title domain="5" number="378">FCSetMaxForceChangeTune 中的错误</Title>
+    <Title domain="5" number="379">活跃的机械单元已经更改</Title>
+    <Title domain="5" number="380">校验和错误</Title>
+    <Title domain="5" number="381">速度太慢。</Title>
+    <Title domain="5" number="382">摆动样式错误</Title>
+    <Title domain="5" number="383">笛卡尔软伺服配置错误</Title>
+    <Title domain="5" number="384">笛卡尔软伺服四元数无效</Title>
+    <Title domain="5" number="385">笛卡尔软伺服启动失败</Title>
+    <Title domain="5" number="386">笛卡尔软伺服偏移启动失败</Title>
+    <Title domain="5" number="387">笛卡尔软伺服接近不稳定</Title>
+    <Title domain="5" number="388">笛卡尔软伺服位置监控错误</Title>
+    <Title domain="5" number="389">笛卡尔软伺服异常</Title>
+    <Title domain="5" number="390">笛卡尔伺服速度监控</Title>
+    <Title domain="5" number="391">不允许笛卡尔伺服移动</Title>
+    <Title domain="5" number="392">SafeMove 通信错误</Title>
+    <Title domain="5" number="393">在非软指令中应用力度偏移</Title>
+    <Title domain="5" number="394">单元路径被清除</Title>
+    <Title domain="5" number="395">编程移动过长</Title>
+    <Title domain="5" number="396">默认 FC 力度监控错误</Title>
+    <Title domain="5" number="397">路径框架旋转速度误差</Title>
+    <Title domain="5" number="398">AbsAcc 圆从变更框架开始</Title>
+    <Title domain="5" number="399">AbsAcc 圆是第一个移动指令</Title>
+    <Title domain="5" number="400">运动配置错误</Title>
+    <Title domain="5" number="401">启动同步失败</Title>
+    <Title domain="5" number="402">纠正未在小点结束</Title>
+    <Title domain="5" number="403">AW 板未连接</Title>
+    <Title domain="5" number="404">“手腕内插”期间附加轴移动</Title>
+    <Title domain="5" number="405">“手腕内插”期间发生协调移动</Title>
+    <Title domain="5" number="406">“手腕内插”点不在圆面上</Title>
+    <Title domain="5" number="407">手腕轴已锁定</Title>
+    <Title domain="5" number="408">手腕接点限制</Title>
+    <Title domain="5" number="409">无法进行“手腕内插”</Title>
+    <Title domain="5" number="410">共线目标错序</Title>
+    <Title domain="5" number="411">已超过允许的最大编定 TCP 载荷</Title>
+    <Title domain="5" number="412">速度更改调节指令中存在错误</Title>
+    <Title domain="5" number="413">泄流电阻过载错误</Title>
+    <Title domain="5" number="414">泄流电阻过载警告</Title>
+    <Title domain="5" number="415">电机温度错误</Title>
+    <Title domain="5" number="416">电机温度警告</Title>
+    <Title domain="5" number="417">驱动单元过载错误</Title>
+    <Title domain="5" number="418">驱动单元过载警告</Title>
+    <Title domain="5" number="419">公用 base_frame 错误</Title>
+    <Title domain="5" number="420">IndCnv 机械单元错误</Title>
+    <Title domain="5" number="421">IndCnv 跟踪单体错误</Title>
+    <Title domain="5" number="422">IndCnv 和独立接点错误</Title>
+    <Title domain="5" number="423">IndCnv Time before indexing move 过低</Title>
+    <Title domain="5" number="424">不支持的 IndCnv 机器人类型</Title>
+    <Title domain="5" number="425">Friction FFW 参数未启用 </Title>
+    <Title domain="5" number="426">超过插补对象数量</Title>
+    <Title domain="5" number="427">校准后关节未同步</Title>
+    <Title domain="5" number="428">SC 软件同步已开始</Title>
+    <Title domain="5" number="429">CSS 参数阻尼已过时。</Title>
+    <Title domain="5" number="430">轴计算机中发生欠载</Title>
+    <Title domain="5" number="433">位置更改为工作区域内部</Title>
+    <Title domain="5" number="434">位置更改为工作区域内部</Title>
+    <Title domain="5" number="435">配置参数不一致</Title>
+    <Title domain="5" number="436">奇点错误</Title>
+    <Title domain="5" number="437">从动轴连接到错误的动作路径文件</Title>
+    <Title domain="5" number="438">电机关闭过程已超时</Title>
+    <Title domain="5" number="439">软伺服激活失败</Title>
+    <Title domain="5" number="440">找不到校正发电机</Title>
+    <Title domain="5" number="441">电池输入电压过低</Title>
+    <Title domain="5" number="443">缺少内部事件对象</Title>
+    <Title domain="5" number="444">运动监控</Title>
+    <Title domain="1" number="2">程序指针已经复位</Title>
+    <Title domain="1" number="9">工作内存已满</Title>
+    <Title domain="1" number="10">电机下电 (OFF) 状态</Title>
+    <Title domain="1" number="11">电机上电(ON) 状态</Title>
+    <Title domain="1" number="12">安全防护停止状态</Title>
+    <Title domain="1" number="13">紧急停止状态 </Title>
+    <Title domain="1" number="14">系统故障状态 </Title>
+    <Title domain="1" number="15">已选择手动模式</Title>
+    <Title domain="1" number="16">已请求自动模式</Title>
+    <Title domain="1" number="17">已确认自动模式</Title>
+    <Title domain="1" number="18">已请求全速手动模式</Title>
+    <Title domain="1" number="19">已确认全速手动模式</Title>
+    <Title domain="1" number="20">执行错误状态</Title>
+    <Title domain="1" number="21">执行错误重置</Title>
+    <Title domain="1" number="24">发生碰撞</Title>
+    <Title domain="1" number="25">确认碰撞</Title>
+    <Title domain="1" number="26">碰撞回撤</Title>
+    <Title domain="1" number="27">碰撞回撤失败</Title>
+    <Title domain="1" number="30">所有轴已换向</Title>
+    <Title domain="1" number="31">所有轴已校准</Title>
+    <Title domain="1" number="32">所有转数计数器已更新</Title>
+    <Title domain="1" number="33">所有轴已同步</Title>
+    <Title domain="1" number="34">轴未换向</Title>
+    <Title domain="1" number="35">轴未校准</Title>
+    <Title domain="1" number="36">转数计数器未更新</Title>
+    <Title domain="1" number="37">轴未同步</Title>
+    <Title domain="1" number="38">SMB 内存正常</Title>
+    <Title domain="1" number="39">SMB 内存不正常</Title>
+    <Title domain="1" number="40">程序已加载</Title>
+    <Title domain="1" number="41">程序已删除</Title>
+    <Title domain="1" number="42">轴重新校准</Title>
+    <Title domain="1" number="43">重新启动失败</Title>
+    <Title domain="1" number="44">程序指针已更新</Title>
+    <Title domain="1" number="45">系统已重新启动</Title>
+    <Title domain="1" number="46">以冷启动模式重新启动系统</Title>
+    <Title domain="1" number="48">背景任务无法停止</Title>
+    <Title domain="1" number="51">事件例行程序错误</Title>
+    <Title domain="1" number="52">返回启动</Title>
+    <Title domain="1" number="53">返回就绪</Title>
+    <Title domain="1" number="54">返回被拒绝</Title>
+    <Title domain="1" number="55">路径过程已重新启动</Title>
+    <Title domain="1" number="60">使能链测试</Title>
+    <Title domain="1" number="61">已修改目标 </Title>
+    <Title domain="1" number="62">已编辑模块 </Title>
+    <Title domain="1" number="63">已编辑模块 </Title>
+    <Title domain="1" number="64">已删除模块。 </Title>
+    <Title domain="1" number="65">新用户已开始修改 RAPID。
+</Title>
+    <Title domain="1" number="66">无法加载系统模块 </Title>
+    <Title domain="1" number="67">重设程序指针</Title>
+    <Title domain="1" number="68">启动程序</Title>
+    <Title domain="1" number="74">NFS 服务器已连接</Title>
+    <Title domain="1" number="75">NFS 服务器断开</Title>
+    <Title domain="1" number="76">FTP 服务器已连接</Title>
+    <Title domain="1" number="77">FTP 服务器断开</Title>
+    <Title domain="1" number="80">已找到更新的 RAPID 文件</Title>
+    <Title domain="1" number="81">后台任务 <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="1" number="82">RAPID 任务监控</Title>
+    <Title domain="1" number="83">RAPID 任务监控</Title>
+    <Title domain="1" number="84">RAPID 任务监控</Title>
+    <Title domain="1" number="85">RAPID 任务监控</Title>
+    <Title domain="1" number="86">机器人排放正常</Title>
+    <Title domain="1" number="87">排放状态： <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />。 </Title>
+    <Title domain="1" number="90">P-START 已执行</Title>
+    <Title domain="1" number="91">无法重新启动</Title>
+    <Title domain="1" number="92">无法（重新）启动</Title>
+    <Title domain="1" number="93">无法（重新）启动</Title>
+    <Title domain="1" number="95">任务选择面板中至少有一项任务未选定</Title>
+    <Title domain="1" number="96">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 非激活！</Title>
+    <Title domain="1" number="97">无法重新启动</Title>
+    <Title domain="1" number="98">无法重新启动</Title>
+    <Title domain="1" number="99">程序启动被拒绝</Title>
+    <Title domain="1" number="106">检修信息</Title>
+    <Title domain="1" number="107">检修信息</Title>
+    <Title domain="1" number="108">检修信息</Title>
+    <Title domain="1" number="109">检修信息</Title>
+    <Title domain="1" number="110">检修信息</Title>
+    <Title domain="1" number="111">检修消信</Title>
+    <Title domain="1" number="112">检修信息</Title>
+    <Title domain="1" number="120">程序已停止</Title>
+    <Title domain="1" number="121">程序已停止</Title>
+    <Title domain="1" number="122">程序已停止</Title>
+    <Title domain="1" number="123">程序已停止</Title>
+    <Title domain="1" number="124">程序已停止</Title>
+    <Title domain="1" number="125">程序已停止</Title>
+    <Title domain="1" number="126">程序已停止</Title>
+    <Title domain="1" number="127">不能逆向执行
+</Title>
+    <Title domain="1" number="128">不能逆向执行
+</Title>
+    <Title domain="1" number="129">程序已停止</Title>
+    <Title domain="1" number="130">程序已停止</Title>
+    <Title domain="1" number="131">程序已停止</Title>
+    <Title domain="1" number="132">程序已停止</Title>
+    <Title domain="1" number="133">程序已停止</Title>
+    <Title domain="1" number="150">程序已启动</Title>
+    <Title domain="1" number="151">程序已启动</Title>
+    <Title domain="1" number="152">程序已启动</Title>
+    <Title domain="1" number="155">程序已重新启动</Title>
+    <Title domain="1" number="156">程序已重新启动</Title>
+    <Title domain="1" number="157">程序已重新启动</Title>
+    <Title domain="1" number="170">后台任务 <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="1" number="171">后台任务 <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="1" number="172">后台任务 <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="1" number="173">后台任务 <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="1" number="174">后台任务 <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="1" number="175">后台任务 <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="1" number="176">后台任务 <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="1" number="177">任务拒绝启动</Title>
+    <Title domain="1" number="178">无法逐步执行静态/半静态任务。</Title>
+    <Title domain="1" number="185">任务未准备就绪，无法启动</Title>
+    <Title domain="1" number="190">保护区域未完成</Title>
+    <Title domain="1" number="191">保护区域未完成</Title>
+    <Title domain="1" number="192">保护区域未完成</Title>
+    <Title domain="1" number="193">保护区域未完成</Title>
+    <Title domain="1" number="194">保护区域未完成</Title>
+    <Title domain="1" number="195">保护区域未完成</Title>
+    <Title domain="1" number="196">保护区域未完成</Title>
+    <Title domain="1" number="210">执行已取消</Title>
+    <Title domain="1" number="211">执行已取消</Title>
+    <Title domain="1" number="212">执行已取消</Title>
+    <Title domain="1" number="213">执行已取消</Title>
+    <Title domain="1" number="214">执行已取消</Title>
+    <Title domain="1" number="215">执行已取消</Title>
+    <Title domain="1" number="216">执行已取消</Title>
+    <Title domain="1" number="217">执行已取消</Title>
+    <Title domain="1" number="218">执行已取消</Title>
+    <Title domain="1" number="219">执行被取消</Title>
+    <Title domain="1" number="230">备份步骤就绪</Title>
+    <Title domain="1" number="231">备份步骤就绪</Title>
+    <Title domain="1" number="232">备份步骤就绪</Title>
+    <Title domain="1" number="250">恢复步骤就绪</Title>
+    <Title domain="1" number="251">恢复步骤就绪</Title>
+    <Title domain="1" number="252">恢复步骤就绪</Title>
+    <Title domain="1" number="253">恢复步骤就绪</Title>
+    <Title domain="1" number="260">生成系统诊断信息
+</Title>
+    <Title domain="1" number="261">不可用的系统诊断信息</Title>
+    <Title domain="1" number="270">循环制动闸检查完成</Title>
+    <Title domain="1" number="271">循环制动闸检查已启动</Title>
+    <Title domain="1" number="300">已下达 P-START 指令</Title>
+    <Title domain="1" number="301">已下达 P-START 指令</Title>
+    <Title domain="1" number="304">已下达更新指令</Title>
+    <Title domain="1" number="350">任务更新失败</Title>
+    <Title domain="1" number="351">任务已删除</Title>
+    <Title domain="1" number="352">任务已添加</Title>
+    <Title domain="1" number="353">任务已重新安装</Title>
+    <Title domain="1" number="354">由于系统数据丢失，恢复被中止。</Title>
+    <Title domain="1" number="355">恢复错误</Title>
+    <Title domain="1" number="400">用户 <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 已登录</Title>
+    <Title domain="1" number="401">用户 <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 已注销</Title>
+    <Title domain="1" number="420">新的不安全机器人路径
+</Title>
+    <Title domain="1" number="421">计划路径未中止</Title>
+    <Title domain="1" number="1020">备份错误</Title>
+    <Title domain="1" number="1021">备份错误</Title>
+    <Title domain="1" number="1022">备份错误</Title>
+    <Title domain="1" number="1023">备份错误</Title>
+    <Title domain="1" number="1024">备份错误</Title>
+    <Title domain="1" number="1025">备份错误</Title>
+    <Title domain="1" number="1026">备份错误</Title>
+    <Title domain="1" number="1027">备份错误</Title>
+    <Title domain="1" number="1028">备份错误</Title>
+    <Title domain="1" number="1029">备份错误</Title>
+    <Title domain="1" number="1030">备份错误</Title>
+    <Title domain="1" number="1031">备份错误</Title>
+    <Title domain="1" number="1032">备份错误</Title>
+    <Title domain="1" number="1033">备份错误</Title>
+    <Title domain="1" number="1034">备份错误</Title>
+    <Title domain="1" number="1035">备份错误</Title>
+    <Title domain="1" number="1036">备份错误</Title>
+    <Title domain="1" number="1037">备份错误</Title>
+    <Title domain="1" number="1038">备份错误</Title>
+    <Title domain="1" number="1039">备份错误</Title>
+    <Title domain="1" number="1040">备份错误</Title>
+    <Title domain="1" number="1041">备份错误</Title>
+    <Title domain="1" number="1042">备份错误</Title>
+    <Title domain="1" number="1043">备份错误</Title>
+    <Title domain="1" number="1044">备份错误</Title>
+    <Title domain="1" number="1045">备份错误</Title>
+    <Title domain="1" number="1120">备份错误</Title>
+    <Title domain="1" number="1121">备份错误</Title>
+    <Title domain="1" number="1122">备份错误</Title>
+    <Title domain="1" number="1123">备份错误</Title>
+    <Title domain="1" number="1124">备份错误</Title>
+    <Title domain="1" number="1125">备份错误</Title>
+    <Title domain="1" number="1126">备份错误</Title>
+    <Title domain="1" number="1127">备份错误</Title>
+    <Title domain="1" number="1128">备份错误</Title>
+    <Title domain="1" number="1129">备份错误</Title>
+    <Title domain="1" number="1130">备份错误</Title>
+    <Title domain="1" number="1131">备份错误</Title>
+    <Title domain="1" number="1132">备份错误</Title>
+    <Title domain="1" number="1133">备份错误</Title>
+    <Title domain="1" number="1134">备份错误</Title>
+    <Title domain="1" number="1135">备份错误</Title>
+    <Title domain="1" number="1136">备份错误</Title>
+    <Title domain="1" number="1137">备份错误</Title>
+    <Title domain="1" number="1138">备份错误</Title>
+    <Title domain="1" number="1139">备份错误</Title>
+    <Title domain="1" number="1140">备份错误</Title>
+    <Title domain="1" number="1220">备份错误</Title>
+    <Title domain="1" number="1221">备份错误</Title>
+    <Title domain="1" number="1222">备份错误</Title>
+    <Title domain="1" number="1223">备份错误</Title>
+    <Title domain="1" number="1224">备份错误</Title>
+    <Title domain="1" number="1225">备份错误</Title>
+    <Title domain="1" number="1226">备份错误</Title>
+    <Title domain="1" number="1227">备份错误</Title>
+    <Title domain="1" number="1228">备份错误</Title>
+    <Title domain="1" number="1229">备份错误</Title>
+    <Title domain="1" number="1230">备份错误</Title>
+    <Title domain="1" number="1231">备份错误</Title>
+    <Title domain="1" number="1232">备份错误</Title>
+    <Title domain="1" number="1233">备份错误</Title>
+    <Title domain="1" number="1234">备份错误</Title>
+    <Title domain="1" number="1235">备份错误</Title>
+    <Title domain="1" number="1236">备份错误</Title>
+    <Title domain="1" number="1237">备份错误</Title>
+    <Title domain="1" number="1238">备份错误</Title>
+    <Title domain="1" number="1239">备份错误</Title>
+    <Title domain="1" number="1240">备份错误</Title>
+    <Title domain="1" number="1260">Backup error</Title>
+    <Title domain="1" number="2020">恢复错误</Title>
+    <Title domain="1" number="2021">恢复错误</Title>
+    <Title domain="1" number="2022">恢复错误</Title>
+    <Title domain="1" number="2023">恢复错误</Title>
+    <Title domain="1" number="2024">恢复错误</Title>
+    <Title domain="1" number="2025">恢复错误</Title>
+    <Title domain="1" number="2026">恢复错误</Title>
+    <Title domain="1" number="2027">恢复错误</Title>
+    <Title domain="1" number="2028">恢复错误</Title>
+    <Title domain="1" number="2029">恢复错误</Title>
+    <Title domain="1" number="2030">恢复错误</Title>
+    <Title domain="1" number="2031">恢复错误</Title>
+    <Title domain="1" number="2032">恢复错误</Title>
+    <Title domain="1" number="2033">恢复错误</Title>
+    <Title domain="1" number="2034">恢复错误</Title>
+    <Title domain="1" number="2035">恢复错误</Title>
+    <Title domain="1" number="2036">恢复错误</Title>
+    <Title domain="1" number="2037">恢复错误</Title>
+    <Title domain="1" number="2038">恢复错误</Title>
+    <Title domain="1" number="2039">恢复错误</Title>
+    <Title domain="1" number="2040">恢复错误</Title>
+    <Title domain="1" number="2120">恢复错误</Title>
+    <Title domain="1" number="2121">恢复错误</Title>
+    <Title domain="1" number="2122">恢复错误</Title>
+    <Title domain="1" number="2123">恢复错误</Title>
+    <Title domain="1" number="2124">恢复错误</Title>
+    <Title domain="1" number="2125">恢复错误</Title>
+    <Title domain="1" number="2126">恢复错误</Title>
+    <Title domain="1" number="2127">恢复错误</Title>
+    <Title domain="1" number="2128">恢复错误</Title>
+    <Title domain="1" number="2129">恢复错误</Title>
+    <Title domain="1" number="2130">恢复错误</Title>
+    <Title domain="1" number="2131">恢复错误</Title>
+    <Title domain="1" number="2132">恢复错误</Title>
+    <Title domain="1" number="2133">恢复错误</Title>
+    <Title domain="1" number="2134">恢复错误</Title>
+    <Title domain="1" number="2135">恢复错误</Title>
+    <Title domain="1" number="2136">恢复错误</Title>
+    <Title domain="1" number="2137">恢复错误</Title>
+    <Title domain="1" number="2138">恢复错误</Title>
+    <Title domain="1" number="2139">恢复错误</Title>
+    <Title domain="1" number="2140">恢复错误</Title>
+    <Title domain="1" number="2220">恢复错误</Title>
+    <Title domain="1" number="2221">恢复错误</Title>
+    <Title domain="1" number="2222">恢复错误</Title>
+    <Title domain="1" number="2223">恢复错误</Title>
+    <Title domain="1" number="2224">恢复错误</Title>
+    <Title domain="1" number="2225">恢复错误</Title>
+    <Title domain="1" number="2226">恢复错误</Title>
+    <Title domain="1" number="2227">恢复错误</Title>
+    <Title domain="1" number="2228">恢复错误</Title>
+    <Title domain="1" number="2229">恢复错误</Title>
+    <Title domain="1" number="2230">恢复错误</Title>
+    <Title domain="1" number="2231">恢复错误</Title>
+    <Title domain="1" number="2232">恢复错误</Title>
+    <Title domain="1" number="2233">恢复错误</Title>
+    <Title domain="1" number="2234">恢复错误</Title>
+    <Title domain="1" number="2235">恢复错误</Title>
+    <Title domain="1" number="2236">恢复错误</Title>
+    <Title domain="1" number="2237">恢复错误</Title>
+    <Title domain="1" number="2238">恢复错误</Title>
+    <Title domain="1" number="2239">恢复错误</Title>
+    <Title domain="1" number="2240">恢复错误</Title>
+    <Title domain="1" number="2320">恢复错误</Title>
+    <Title domain="1" number="2321">恢复错误</Title>
+    <Title domain="1" number="2322">恢复错误</Title>
+    <Title domain="1" number="2323">恢复错误</Title>
+    <Title domain="1" number="2324">恢复错误</Title>
+    <Title domain="1" number="2325">恢复错误</Title>
+    <Title domain="1" number="2326">恢复错误</Title>
+    <Title domain="1" number="2327">恢复错误</Title>
+    <Title domain="1" number="2328">恢复错误</Title>
+    <Title domain="1" number="2329">恢复错误</Title>
+    <Title domain="1" number="2330">恢复错误</Title>
+    <Title domain="1" number="2331">恢复错误</Title>
+    <Title domain="1" number="2332">恢复错误</Title>
+    <Title domain="1" number="2333">恢复错误</Title>
+    <Title domain="1" number="2334">恢复错误</Title>
+    <Title domain="1" number="2335">恢复错误</Title>
+    <Title domain="1" number="2336">恢复错误</Title>
+    <Title domain="1" number="2337">恢复错误</Title>
+    <Title domain="1" number="2338">恢复错误</Title>
+    <Title domain="1" number="2339">恢复错误</Title>
+    <Title domain="1" number="2340">恢复错误</Title>
+    <Title domain="1" number="2510">网络子网掩码非法</Title>
+    <Title domain="1" number="2511">网络接口 IP 地址非法</Title>
+    <Title domain="1" number="2512">网关 IP 地址非法</Title>
+    <Title domain="1" number="2513">无来自 DHCP 服务器的参数</Title>
+    <Title domain="1" number="2514">网络接口初始化错误</Title>
+    <Title domain="15" number="330">模块中发生 RAPID 错误</Title>
+    <Title domain="2" number="10">紧急停止状态</Title>
+    <Title domain="2" number="11">紧急停止状态。</Title>
+    <Title domain="2" number="12">系统故障状态为激活</Title>
+    <Title domain="2" number="25">停止指令超时</Title>
+    <Title domain="2" number="30">轴未换向</Title>
+    <Title domain="2" number="31">轴未校准。</Title>
+    <Title domain="2" number="32">转数计数器未更新</Title>
+    <Title domain="2" number="33">轴未同步。</Title>
+    <Title domain="2" number="34">SMB 内存不正常
+</Title>
+    <Title domain="2" number="51">不允许该命令</Title>
+    <Title domain="2" number="54">不允许该命令</Title>
+    <Title domain="2" number="60">不允许该命令</Title>
+    <Title domain="2" number="61">不允许该命令</Title>
+    <Title domain="2" number="62">不允许该命令</Title>
+    <Title domain="2" number="63">不允许该命令</Title>
+    <Title domain="2" number="64">不允许该命令</Title>
+    <Title domain="2" number="65">不允许该命令</Title>
+    <Title domain="2" number="66">不允许的命令</Title>
+    <Title domain="2" number="67">不允许的命令</Title>
+    <Title domain="2" number="70">不允许该命令</Title>
+    <Title domain="2" number="71">不允许该命令</Title>
+    <Title domain="2" number="72">不允许该命令</Title>
+    <Title domain="2" number="73">不允许该命令</Title>
+    <Title domain="2" number="74">不允许该命令</Title>
+    <Title domain="2" number="75">不允许该命令</Title>
+    <Title domain="2" number="76">不允许该命令</Title>
+    <Title domain="2" number="80">不允许该命令</Title>
+    <Title domain="2" number="81">不允许该命令</Title>
+    <Title domain="2" number="82">不允许该命令</Title>
+    <Title domain="2" number="83">不允许该命令</Title>
+    <Title domain="2" number="84">不允许该命令</Title>
+    <Title domain="2" number="88">已拒绝自动模式</Title>
+    <Title domain="2" number="89">已拒绝自动模式</Title>
+    <Title domain="2" number="92">不允许该命令</Title>
+    <Title domain="2" number="93">已拒绝自动模式</Title>
+    <Title domain="2" number="94">无法找到荷载名称</Title>
+    <Title domain="2" number="95">无法找到工具名称</Title>
+    <Title domain="2" number="96">无法找到工件名称</Title>
+    <Title domain="2" number="97">不允许使用 LOCAL PERS 荷载进行手动操纵</Title>
+    <Title domain="2" number="98">不允许使用 LOCAL PERS 工具进行手动操纵</Title>
+    <Title domain="2" number="99">不允许使用 LOCAL PERS 工件进行手动操纵</Title>
+    <Title domain="2" number="101">TP（程序）正在控制中。</Title>
+    <Title domain="2" number="103"> 控制器忙于更新任务选择面板。</Title>
+    <Title domain="2" number="104"> 系统路径太长。</Title>
+    <Title domain="2" number="105">备份已在进行中</Title>
+    <Title domain="2" number="106">备份路径</Title>
+    <Title domain="2" number="111">TP（程序）正在控制中</Title>
+    <Title domain="2" number="120">系统 IO 处于控制中</Title>
+    <Title domain="2" number="126">负荷数据已更改
+</Title>
+    <Title domain="2" number="127">工具数据已更改
+</Title>
+    <Title domain="2" number="128">工件数据已更改
+</Title>
+    <Title domain="2" number="130">Active Tasks Menu 已恢复</Title>
+    <Title domain="2" number="131">已拒绝自动模式</Title>
+    <Title domain="2" number="132">已锁定 I/O 信号</Title>
+    <Title domain="2" number="133">自动模式中的调试设置</Title>
+    <Title domain="2" number="134">调用链</Title>
+    <Title domain="2" number="135">自动模式中的调试设置</Title>
+    <Title domain="2" number="136">减速</Title>
+    <Title domain="2" number="137">自动模式中的调试设置</Title>
+    <Title domain="2" number="138">禁用任务</Title>
+    <Title domain="2" number="139">自动模式中的调试设置</Title>
+    <Title domain="2" number="140">电机上电被拒绝</Title>
+    <Title domain="2" number="141">电机下电被拒绝</Title>
+    <Title domain="2" number="142">启动被拒绝</Title>
+    <Title domain="2" number="143">在主程序启动被拒绝</Title>
+    <Title domain="2" number="144">停止被拒绝</Title>
+    <Title domain="2" number="145">停止程序周期被拒绝</Title>
+    <Title domain="2" number="146">手动中断被拒绝</Title>
+    <Title domain="2" number="147">加载并启动被拒绝</Title>
+    <Title domain="2" number="148">确认被拒绝</Title>
+    <Title domain="2" number="149">错误重置被拒绝</Title>
+    <Title domain="2" number="150">加载失败</Title>
+    <Title domain="2" number="153">电机上电并启动被拒绝</Title>
+    <Title domain="2" number="154">停止指令被拒绝</Title>
+    <Title domain="2" number="156">未定义的自变量</Title>
+    <Title domain="2" number="157">未定义的自变量</Title>
+    <Title domain="2" number="158">无“系统输入”信号</Title>
+    <Title domain="2" number="159">无“系统输出”信号</Title>
+    <Title domain="2" number="161">未找到路径</Title>
+    <Title domain="2" number="162">写入错误</Title>
+    <Title domain="2" number="164">重新配置失败</Title>
+    <Title domain="2" number="165">程序指针丢失。</Title>
+    <Title domain="2" number="166">拒绝保存模块</Title>
+    <Title domain="2" number="167">未保存的模块</Title>
+    <Title domain="2" number="170">系统已停止</Title>
+    <Title domain="2" number="171">系统已中断</Title>
+    <Title domain="2" number="172">系统故障</Title>
+    <Title domain="2" number="176">模拟系统输出超出限制</Title>
+    <Title domain="2" number="177">电机相电路短路</Title>
+    <Title domain="2" number="178"> 任务名称配置错误</Title>
+    <Title domain="2" number="179">磁盘存储空间严重偏低</Title>
+    <Title domain="2" number="181">系统重置被拒绝。</Title>
+    <Title domain="2" number="184">系统输入的自变量不正确</Title>
+    <Title domain="2" number="185">名称不正确</Title>
+    <Title domain="2" number="187">已创建了诊断记录文件</Title>
+    <Title domain="2" number="188">系统数据无效</Title>
+    <Title domain="2" number="189">机器人数据无效</Title>
+    <Title domain="2" number="192">磁盘存储空间偏低</Title>
+    <Title domain="2" number="193">机器人数据更新警告</Title>
+    <Title domain="2" number="194">系统数据未备份</Title>
+    <Title domain="2" number="195">上次关闭该系统时，系统数据丢失</Title>
+    <Title domain="2" number="196">已保存模块</Title>
+    <Title domain="2" number="197">无法找到上次运行时的系统数据</Title>
+    <Title domain="2" number="199">系统 SoftStop 被拒绝</Title>
+    <Title domain="2" number="200"> 限位开关被 SC 打开</Title>
+    <Title domain="2" number="201">限位开关已打开</Title>
+    <Title domain="2" number="202">“紧急停止”已打开 </Title>
+    <Title domain="2" number="203">使动装置已打开</Title>
+    <Title domain="2" number="204">“操作键”失衡</Title>
+    <Title domain="2" number="205">自动停止已打开</Title>
+    <Title domain="2" number="206">常规停止已打开</Title>
+    <Title domain="2" number="208">链式开关已打开 </Title>
+    <Title domain="2" number="209">外部接触器已打开</Title>
+    <Title domain="2" number="211">两个通道故障，启用链</Title>
+    <Title domain="2" number="212">两个通道故障，运行链</Title>
+    <Title domain="2" number="213">两个信道故障</Title>
+    <Title domain="2" number="214">限位开关已打开， DRV1</Title>
+    <Title domain="2" number="215">上级停止已打开</Title>
+    <Title domain="2" number="216">使能器在自动模式下处激活状态</Title>
+    <Title domain="2" number="217">限位开关已打开， DRV2</Title>
+    <Title domain="2" number="218">限位开关已打开， DRV3</Title>
+    <Title domain="2" number="219">限位开关已打开， DRV4</Title>
+    <Title domain="2" number="220">上级停止冲突</Title>
+    <Title domain="2" number="221">运行链冲突</Title>
+    <Title domain="2" number="222">限位开关冲突</Title>
+    <Title domain="2" number="223">紧急停止冲突</Title>
+    <Title domain="2" number="224">使动装置冲突 </Title>
+    <Title domain="2" number="225">自动停止冲突</Title>
+    <Title domain="2" number="226">常规停止冲突</Title>
+    <Title domain="2" number="227">电机接触器，DRV1</Title>
+    <Title domain="2" number="231">由于电路失衡，紧急停止延迟</Title>
+    <Title domain="2" number="232">由于电路失衡，自动停止延迟</Title>
+    <Title domain="2" number="233">由于电路失衡，常规停止延迟</Title>
+    <Title domain="2" number="234">立即紧急停止</Title>
+    <Title domain="2" number="235">立即自动停止</Title>
+    <Title domain="2" number="236">立即常规停止</Title>
+    <Title domain="2" number="237">立即上级停止</Title>
+    <Title domain="2" number="238">由于电路失衡，上级停止延迟</Title>
+    <Title domain="2" number="240">ENABLE 信号冲突</Title>
+    <Title domain="2" number="241">操作模式冲突</Title>
+    <Title domain="2" number="245">Run Control 状态冲突，DRV2</Title>
+    <Title domain="2" number="246">Run Control 状态冲突，DRV3</Title>
+    <Title domain="2" number="247">Run Control 状态冲突，DRV4</Title>
+    <Title domain="2" number="248">电机接触器冲突，DRV2</Title>
+    <Title domain="2" number="249">电机接触器冲突，DRV3</Title>
+    <Title domain="2" number="250">电机接触器冲突，DRV4</Title>
+    <Title domain="2" number="252">电机温度高，DRV1</Title>
+    <Title domain="2" number="253">外部设备温度高， DRV1</Title>
+    <Title domain="2" number="254">电机温度高，DRV2</Title>
+    <Title domain="2" number="255">外部设备温度高， DRV2</Title>
+    <Title domain="2" number="256">电机温度高，DRV3</Title>
+    <Title domain="2" number="257">外部设备温度高， DRV3</Title>
+    <Title domain="2" number="258">电机温度高，DRV4</Title>
+    <Title domain="2" number="259">外部设备温度高， DRV4</Title>
+    <Title domain="2" number="260">Run Control 状态冲突，DRV1</Title>
+    <Title domain="2" number="262">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 找不到
+    </Title>
+    <Title domain="2" number="263">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 通信故障
+    </Title>
+    <Title domain="2" number="264">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 未提供选项
+    </Title>
+    <Title domain="2" number="265">SC 软停止错误</Title>
+    <Title domain="2" number="266">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> PIN 代码请求
+    </Title>
+    <Title domain="2" number="267">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 初始化失败
+    </Title>
+    <Title domain="2" number="268">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 错误的类型
+    </Title>
+    <Title domain="2" number="269">
+SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 电机校准数据错误
+	</Title>
+    <Title domain="2" number="270">访问错误</Title>
+    <Title domain="2" number="280">符号冲突</Title>
+    <Title domain="2" number="281">IO 配置错误</Title>
+    <Title domain="2" number="282">资源与索引已存在</Title>
+    <Title domain="2" number="283">文本数据库已满。</Title>
+    <Title domain="2" number="284">系统输入的信号类型错误</Title>
+    <Title domain="2" number="285">系统输出的信号类型错误</Title>
+    <Title domain="2" number="286">系统输出的 I/O 信号不唯一</Title>
+    <Title domain="2" number="287">系统输入的 I/O 信号不唯一</Title>
+    <Title domain="2" number="288">未知系统输出类型</Title>
+    <Title domain="2" number="289">未知系统输入类型</Title>
+    <Title domain="2" number="290">未知的系统输出机械单元名称</Title>
+    <Title domain="2" number="291">未知系统输入限制类型</Title>
+    <Title domain="2" number="292">未知系统输入限制</Title>
+    <Title domain="2" number="293">系统输入受限</Title>
+    <Title domain="2" number="294">无法完成 <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 动作。</Title>
+    <Title domain="2" number="295">信号无法用作系统输出。</Title>
+    <Title domain="2" number="296">配置了错误的任务名称</Title>
+    <Title domain="2" number="297">系统输出通信失败</Title>
+    <Title domain="2" number="307">电机散热风扇故障，轴 1</Title>
+    <Title domain="2" number="308">电机散热风扇故障，轴 2</Title>
+    <Title domain="2" number="309">电机散热风扇故障，轴 3</Title>
+    <Title domain="2" number="310">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 通信故障
+    </Title>
+    <Title domain="2" number="311">Enable 1 开启 </Title>
+    <Title domain="2" number="312">Enable 2 开启 </Title>
+    <Title domain="2" number="313">Enable1 监测故障 </Title>
+    <Title domain="2" number="314">Enable2 监测故障 </Title>
+    <Title domain="2" number="315">Enable2 监测故障</Title>
+    <Title domain="2" number="316">Enable2 监测故障</Title>
+    <Title domain="2" number="317">Enable2 监测故障</Title>
+    <Title domain="2" number="321">非编号</Title>
+    <Title domain="2" number="322">正无穷</Title>
+    <Title domain="2" number="323">负无穷</Title>
+    <Title domain="2" number="324">系统 I/O 信号的参变量不正确</Title>
+    <Title domain="2" number="325">SafeMove 安全监控未激活</Title>
+    <Title domain="2" number="326">系统 IO 信号的变元不正确</Title>
+    <Title domain="2" number="350">不是有效的任务名称</Title>
+    <Title domain="2" number="351">超过最大任务数目</Title>
+    <Title domain="2" number="352">不是有效的动作路径文件名称</Title>
+    <Title domain="2" number="353">未找到机械单元。</Title>
+    <Title domain="2" number="354">自变量未定义。</Title>
+    <Title domain="2" number="355">机械单元组的名称不正确</Title>
+    <Title domain="2" number="356">超过最大动作任务数目</Title>
+    <Title domain="2" number="357">没有已配置的动作任务</Title>
+    <Title domain="2" number="358">未配置 <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 的成员</Title>
+    <Title domain="2" number="359">已配置 Cfg 类型 <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" /></Title>
+    <Title domain="2" number="360">cfg 类型 <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />的未知事件</Title>
+    <Title domain="2" number="361">共享任务中只含共享模块</Title>
+    <Title domain="2" number="362">不存在已定义的任务名称</Title>
+    <Title domain="2" number="363">模块非系统模块</Title>
+    <Title domain="2" number="364">超过最大机械单元组数目</Title>
+    <Title domain="2" number="365">已完成配置更新</Title>
+    <Title domain="2" number="366">任务配置中的类型错误</Title>
+    <Title domain="2" number="367">无已配置的机械单元</Title>
+    <Title domain="2" number="368">未连接机械单元组</Title>
+    <Title domain="2" number="369">系统参数配置混淆。</Title>
+    <Title domain="2" number="370">读取返回距离的配置数据失败</Title>
+    <Title domain="2" number="371">使用了默认的机械单元组</Title>
+    <Title domain="2" number="372">无法阅读配置数据。</Title>
+    <Title domain="2" number="380">无运动路径文件连接到机械单元。</Title>
+    <Title domain="2" number="381">断电后重新创建路径时发生错误</Title>
+    <Title domain="2" number="390">启动被拒绝</Title>
+    <Title domain="2" number="391">主程序启动被拒绝</Title>
+    <Title domain="2" number="392">手动中断被拒绝</Title>
+    <Title domain="2" number="393">加载与启动被拒绝</Title>
+    <Title domain="2" number="394">电机上电和启动被拒绝。</Title>
+    <Title domain="2" number="395">加载被拒绝</Title>
+    <Title domain="2" number="396">手动中断被拒绝 </Title>
+    <Title domain="2" number="397">手动中断被拒绝</Title>
+    <Title domain="2" number="398">已拒绝自动模式</Title>
+    <Title domain="2" number="399">静态/半静态任务已启动</Title>
+    <Title domain="2" number="400">自动模式中的调试设置</Title>
+    <Title domain="2" number="401">CFG 实例过多 </Title>
+    <Title domain="2" number="402">自动模式被拒绝</Title>
+    <Title domain="2" number="403">RAPID Spy 已停用</Title>
+    <Title domain="2" number="404">自动模式中的调试设置</Title>
+    <Title domain="2" number="405">自动模式被拒绝</Title>
+    <Title domain="2" number="406">Profi Energy 设备重置</Title>
+    <Title domain="2" number="407">自动模式中的调试设置</Title>
+    <Title domain="2" number="440">无法初始化 FW 升级框架</Title>
+    <Title domain="2" number="441">初始化固件补丁失败</Title>
+    <Title domain="2" number="443">多个固件升级重新启动</Title>
+    <Title domain="2" number="450">
+SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 超出了 CBC 速度
+    </Title>
+    <Title domain="2" number="451">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 未同步
+    </Title>
+    <Title domain="2" number="452">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 已同步
+    </Title>
+    <Title domain="2" number="453">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 同步错误。位置
+    </Title>
+    <Title domain="2" number="454">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 超出伺服延迟
+    </Title>
+    <Title domain="2" number="455">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 不正确的位置值
+    </Title>
+    <Title domain="2" number="456">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 参考数据超时
+    </Title>
+    <Title domain="2" number="457">
+SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 更改了安全配置
+        </Title>
+    <Title domain="2" number="458">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 内部故障
+    </Title>
+    <Title domain="2" number="459">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 输入/输出故障
+    </Title>
+    <Title domain="2" number="460">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 未找到安全配置
+    </Title>
+    <Title domain="2" number="461">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 未找到机器人配置
+    </Title>
+    <Title domain="2" number="462">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 未找到校准偏移
+    </Title>
+    <Title domain="2" number="463">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 安全配置已经下载
+    </Title>
+    <Title domain="2" number="464">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 超出 OSR 限制
+    </Title>
+    <Title domain="2" number="465">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> SAS 超速
+    </Title>
+    <Title domain="2" number="466">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 输入/输出故障
+    </Title>
+    <Title domain="2" number="467">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> STS 超速
+    </Title>
+    <Title domain="2" number="468"> SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 违反了 STZ </Title>
+    <Title domain="2" number="469">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> SAR 违规
+    </Title>
+    <Title domain="2" number="470">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 同步预警
+    </Title>
+    <Title domain="2" number="471">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 同步超时
+    </Title>
+    <Title domain="2" number="472">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 新的安全配置
+    </Title>
+    <Title domain="2" number="473">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 两台计算机不匹配
+    </Title>
+    <Title domain="2" number="474">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> I/O 电源故障
+    </Title>
+    <Title domain="2" number="475">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 同步已拒绝
+    </Title>
+    <Title domain="2" number="476">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 已禁用
+    </Title>
+    <Title domain="2" number="477">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> SMB 通信故障
+    </Title>
+    <Title domain="2" number="478">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 主电源故障
+    </Title>
+    <Title domain="2" number="479">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 附加轴缺失
+    </Title>
+    <Title domain="2" number="480">
+SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> SST 违规
+    </Title>
+    <Title domain="2" number="481">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> OVR 活动
+    </Title>
+    <Title domain="2" number="482">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> OVR 超时
+    </Title>
+    <Title domain="2" number="483">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 立即需要 CBC
+    </Title>
+    <Title domain="2" number="484">
+SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 需要进行 CBC 
+    </Title>
+    <Title domain="2" number="485"> SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 制动闸转矩太低 </Title>
+    <Title domain="2" number="486">
+SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> CBC 已中断或不正确
+    </Title>
+    <Title domain="2" number="487">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 超出非同步速度
+    </Title>
+    <Title domain="2" number="488">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 不同步的时限已过
+    </Title>
+    <Title domain="2" number="489">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 已被停用
+    </Title>
+    <Title domain="2" number="490">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> OVR 超速
+    </Title>
+    <Title domain="2" number="491">       SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 在启动期间覆盖处于活动状态
+    </Title>
+    <Title domain="2" number="492">
+制动闸测试中发生 SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> SST 违规
+    </Title>
+    <Title domain="2" number="493"> SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> SBR 已触发 </Title>
+    <Title domain="2" number="494">
+SC <arg format="%d" ordinal="1" xmlns="urn:abb-robotics-elog-text" /> 工具更换错误
+    </Title>
+    <Title domain="2" number="501">ES 电路板开启</Title>
+    <Title domain="2" number="502">ES 悬挂装置开启</Title>
+    <Title domain="2" number="503">ES 外部类别 0 开启</Title>
+    <Title domain="2" number="505">延时停止开启</Title>
+    <Title domain="2" number="506">测试停止开启</Title>
+    <Title domain="2" number="507">硬件链打开</Title>
+    <Title domain="2" number="521">检测停止冲突</Title>
+    <Title domain="2" number="525">ES 电路板冲突</Title>
+    <Title domain="2" number="526">ES 悬挂装置冲突</Title>
+    <Title domain="2" number="527">ES 外部类别 0 冲突</Title>
+    <Title domain="2" number="528">HV 互联输入冲突</Title>
+    <Title domain="2" number="529">机柜互联输入冲突</Title>
+    <Title domain="2" number="531">延时停止冲突</Title>
+    <Title domain="2" number="534">模式选择器冲突</Title>
+    <Title domain="2" number="535">AUX 互联冲突</Title>
+    <Title domain="2" number="536">“电机开启”链冲突</Title>
+    <Title domain="2" number="550">故障测试故障</Title>
+    <Title domain="2" number="556">Enable 2 AXC 1 开启</Title>
+    <Title domain="2" number="557">Enable 2 AXC 2 开启</Title>
+    <Title domain="2" number="558">机械臂故障</Title>
+    <Title domain="2" number="559">碰撞传感器激活</Title>
+    <Title domain="2" number="560">MCOB 上存在轴限制</Title>
+    <Title domain="2" number="561">机械臂软件已打开使能链</Title>
+    <Title domain="2" number="562">重置 ES 故障</Title>
+    <Title domain="2" number="563">开启伺服断开</Title>
+    <Title domain="2" number="564">轴 1 和 7 上的制动闸释放</Title>
+    <Title domain="2" number="565">外部使能 1 打开</Title>
+    <Title domain="2" number="566">外部使能 2 打开</Title>
+    <Title domain="2" number="567">MCOB 上的供电低</Title>
+    <Title domain="2" number="568">MCOB/MCB 上开启硬件使能</Title>
+    <Title domain="2" number="569">MCOB/MCB 上发生看门狗故障</Title>
+    <Title domain="2" number="570">TPU 线路错误</Title>
+    <Title domain="2" number="571">HV 互联开启</Title>
+    <Title domain="2" number="572">机柜互联开启</Title>
+    <Title domain="2" number="573">控制柜 ID 丢失</Title>
+    <Title domain="2" number="574">过程互联开启</Title>
+    <Title domain="2" number="575">AUX 互联开启</Title>
+    <Title domain="2" number="576">系统 2 互联开启</Title>
+    <Title domain="2" number="577">HV ON 开启</Title>
+    <Title domain="2" number="581">SPI 至 SIB 的通信已停止</Title>
+    <Title domain="2" number="582">SPI 至 MIB 的通信已停止</Title>
+    <Title domain="2" number="583">PIB 软件的监控器失败</Title>
+    <Title domain="2" number="584">内部 SPI 故障</Title>
+    <Title domain="2" number="585">启用链与 IPS 断开</Title>
+    <Title domain="2" number="586">PIB 固件监控器故障</Title>
+    <Title domain="2" number="587">PIB 固件监控器故障</Title>
+    <Title domain="2" number="588">PIB 和 MC 之间的看门狗发生故障</Title>
+    <Title domain="2" number="589">PIB 和 MCOB 间的监控器故障</Title>
+    <Title domain="2" number="590">未设置开路掩码</Title>
+    <Title domain="2" number="591">TPU hot plug 超时</Title>
+    <Title domain="2" number="592">外部过程使能开启</Title>
+    <Title domain="2" number="593">MCB 上的 I/O 供电低</Title>
+    <Title domain="2" number="594">PIB 和 MC 之间的通信发生故障</Title>
+    <Title domain="2" number="600">非正式的 RobotWare 版本</Title>
+    <Title domain="2" number="601">解压 RobotWare 文件时的路径太长</Title>
+    <Title domain="2" number="602">非正式的 RobotWare 映像</Title>
+    <Title domain="2" number="610">电机相短路</Title>
+    <Title domain="2" number="620">The system has entered an internal test mode</Title>
+    <Title domain="2" number="630">摄像头作业无效</Title>
+    <Title domain="2" number="631">与摄像头的通信失败。</Title>
+    <Title domain="2" number="632">IP address of the camera has changed</Title>
+    <Title domain="2" number="633">Integrated Vision not installed</Title>
+    <Title domain="2" number="634">No result for current camera job</Title>
+    <Title domain="2" number="635">Too many cameras connected</Title>
+    <Title domain="2" number="636">Duplicated camera name</Title>
+    <Title domain="8" number="1">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="8" number="2">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+    <Title domain="8" number="3">
+      <arg format="%s" ordinal="1" xmlns="urn:abb-robotics-elog-text" />
+    </Title>
+</ExtractTitles>

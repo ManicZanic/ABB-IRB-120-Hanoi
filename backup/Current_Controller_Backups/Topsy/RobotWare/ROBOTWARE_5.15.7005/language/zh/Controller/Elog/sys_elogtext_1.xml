@@ -1,0 +1,451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="SYS" domainNo="2" lang="zh" elogTextVersion="1.0" min="10" max="150">
+  <Message number="10" eDefine="SYS_ERR_SYS_MSTATE_EMRESET">
+    <Title>紧急停止状态</Title>
+    <Description>紧急停止电路在之前已断开，然而在断开时试图操作机器人。</Description>
+    <Consequences>系统状态保持为“紧急停止后等待电机开启”。</Consequences>
+    <Causes>将系统切换回电机开启状态之前，试图操纵控制。</Causes>
+    <Actions>1) 要恢复操作，请按控制模块上的电机开启 (Motors ON) 按钮，将系统切换回电机开启状态。</Actions>
+  </Message>
+  <Message number="11" eDefine="SYS_ERR_SYS_MSTATE_EMSTOP">
+    <Title>紧急停止状态。</Title>
+    <Description>需要重置紧急停止。<p /></Description>
+    <Actions>首先松开紧急停止按钮<p />再按下面板按钮。</Actions>
+  </Message>
+  <Message number="12" eDefine="SYS_ERR_SYS_MSTATE_SYSFAIL">
+    <Title>系统故障状态为激活</Title>
+    <Description>致命的不可恢复性系统错误。<p />需要进行热启动。<p /></Description>
+    <Causes />
+    <Actions>如果软启动命令被忽略，<p />或者无法发送，请关闭电源<p />再打开。</Actions>
+  </Message>
+  <Message number="25" eDefine="SYS_ERR_SYS_STOP_TIMEOUT">
+    <Title>停止指令超时</Title>
+    <Description>如果在预期时间内未收到确认，<p />将以强迫保护停止模式<p />执行<p />停止指令。<p /></Description>
+  </Message>
+  <Message number="30" eDefine="SYS_ERR_SYS_MECSTA_NOT_COMM">
+    <Title>轴未换向</Title>
+    <Description>一个或多个内部驱动单元<p />轴未换向。<p /></Description>
+  </Message>
+  <Message number="31" eDefine="SYS_ERR_SYS_MECSTA_NOT_CALIB">
+    <Title>轴未校准。</Title>
+    <Description>一个或多个绝对/相对<p />测量轴未被校准。<p /></Description>
+    <Actions>检查哪些轴未被校准，<p />然后执行校准。</Actions>
+  </Message>
+  <Message number="32" eDefine="SYS_ERR_SYS_MECSTA_NOT_A_SYNC">
+    <Title>转数计数器未更新</Title>
+    <Description>转数计数器未更新。<p />一个或数个绝对测量<p />轴没有同步。<p /></Description>
+    <Actions>将轴移至同步位置<p />并更新转数计数器。</Actions>
+  </Message>
+  <Message number="33" eDefine="SYS_ERR_SYS_MECSTA_NOT_S_SYNC">
+    <Title>轴未同步。</Title>
+    <Description>一个或多个相对测量<p />轴未同步。<p /></Description>
+    <Actions>令电机上电，然后同步<p />列表中的所有机械单元。</Actions>
+  </Message>
+  <Message number="34" eDefine="SYS_ERR_SYS_MECSTA_NOT_SMB">
+    <Title>SMB 内存不正常
+</Title>
+    <Description>由于串行测量电路板 (SMB) 上的数据不正常，不允许此动作或状态。
+</Description>
+    <Consequences>在能够进行自动操作之前，必须确保所有数据正常。可以手动微动控制机器人。
+</Consequences>
+    <Causes>SMB 上储存的数据与控制器上储存的数据有差别。这可能是替换 SMB、控制器或两者后、或手动删除 SMB 所导致的。
+</Causes>
+    <Actions>1) 遵循《操作员手册》IRC5 的详细叙述更新串行测量电路板。
+</Actions>
+  </Message>
+  <Message number="51" eDefine="SYS_ERR_SYS_REJECT_MASTER">
+    <Title>不允许该命令</Title>
+    <Description>仅当客户端控制资源（程序/动作）时才允许该命令。</Description>
+    <Consequences>系统保持相同的状态，请求的动作未执行。</Consequences>
+    <Actions>1) 通过检查 RobotStudio 中的 “Write Access”（写权限），检查客户端是否在控制资源。<p />2) 检查是否为正确的实际控制客户端。</Actions>
+  </Message>
+  <Message number="54" eDefine="SYS_ERR_SYS_REJECT_PGM">
+    <Title>不允许该命令</Title>
+    <Description>程序执行时不允许使用该命令。</Description>
+    <Consequences>系统保持相同的状态，请求的动作未执行。</Consequences>
+    <Actions>1) 确保程序未执行。</Actions>
+  </Message>
+  <Message number="60" eDefine="SYS_ERR_SYS_REJ_OPMODE_AUTO">
+    <Title>不允许该命令</Title>
+    <Description>自动模式下不允许该命令。</Description>
+    <Consequences>系统保持相同的状态，请求的动作未执行。</Consequences>
+    <Actions>1) 确保系统不是处于自动模式。</Actions>
+  </Message>
+  <Message number="61" eDefine="SYS_ERR_SYS_REJ_OPMODE_AUTO_CH">
+    <Title>不允许该命令</Title>
+    <Description>更改到自动模式时不允许该命令。</Description>
+    <Consequences>系统保持相同的状态，请求的动作未执行。</Consequences>
+    <Actions>1) 确保系统未被更改为自动模式。</Actions>
+  </Message>
+  <Message number="62" eDefine="SYS_ERR_SYS_REJ_OPMODE_MANRS">
+    <Title>不允许该命令</Title>
+    <Description>手动模式下不允许该命令。</Description>
+    <Consequences>系统保持相同的状态，请求的动作未执行。</Consequences>
+    <Actions>1) 确保系统不是处于手动模式。</Actions>
+  </Message>
+  <Message number="63" eDefine="SYS_ERR_SYS_REJ_OPMODE_MANFS">
+    <Title>不允许该命令</Title>
+    <Description>手动全速模式下不允许该命令。</Description>
+    <Consequences>系统保持相同的状态，请求的动作未执行。</Consequences>
+    <Actions>1) 确保系统不是处于手动全速模式。</Actions>
+  </Message>
+  <Message number="64" eDefine="SYS_ERR_SYS_REJ_OPMODE_MANFS_CH">
+    <Title>不允许该命令</Title>
+    <Description>更改为手动全速模式时不允许该命令。</Description>
+    <Consequences>系统保持相同的状态，请求的动作未执行。</Consequences>
+    <Actions>1) 确保系统不是处于改为手动全速模式的过程中。</Actions>
+  </Message>
+  <Message number="65" eDefine="SYS_ERR_SYS_REJ_OPMODE_NOT_MAN">
+    <Title>不允许该命令</Title>
+    <Description>仅手动模式（减速或者全速）下允许该命令。</Description>
+    <Consequences>系统保持相同的状态，请求的动作未执行。</Consequences>
+    <Actions>1) 确保系统并非处于自动模式或正在更改为手动模式（减速或者全速）。 </Actions>
+  </Message>
+  <Message number="66" eDefine="SYS_ERR_SYS_REJECT_OPMODE_MANFS">
+    <Title>不允许的命令</Title>
+    <Description>在“手动全速”模式下，不允许执行系统输入操作 <arg format="%s" ordinal="1" />。</Description>
+    <Consequences>系统状态保持不变，不执行请求的操作。</Consequences>
+    <Actions>1) 确保系统不在“手动全速”模式中。 </Actions>
+  </Message>
+  <Message number="67" eDefine="SYS_ERR_SYS_REJECT_OPMODE_MANFS_CH">
+    <Title>不允许的命令</Title>
+    <Description>当切换到“手动全速”模式时，不允许执行系统输入操作 <arg format="%s" ordinal="1" />。</Description>
+    <Consequences>系统状态保持不变，不执行请求的操作。</Consequences>
+    <Actions>1) 确保系统未切换到“手动全速”模式中。 </Actions>
+  </Message>
+  <Message number="70" eDefine="SYS_ERR_SYS_REJ_CABSTA_RUN">
+    <Title>不允许该命令</Title>
+    <Description>电机上电状态下不允许该命令。</Description>
+    <Consequences>系统保持相同的状态，请求的动作未执行。</Consequences>
+    <Actions>1) 确保系统处于电机下电 (Motors OFF) 状态。</Actions>
+  </Message>
+  <Message number="71" eDefine="SYS_ERR_SYS_REJ_CABSTA_POW_ON">
+    <Title>不允许该命令</Title>
+    <Description>更改为电机上电状态时不允许该命令。</Description>
+    <Consequences>系统保持相同的状态，请求的动作未执行。</Consequences>
+    <Actions>1) 调查请求的用户及理由，必要时纠正错误起因。</Actions>
+  </Message>
+  <Message number="72" eDefine="SYS_ERR_SYS_REJ_CABSTA_STB">
+    <Title>不允许该命令</Title>
+    <Description>电机下电 ( Motors OFF) 状态下不允许该命令。</Description>
+    <Consequences>系统保持相同的状态，请求的动作未执行。</Consequences>
+    <Actions>1) 确保系统处于电机上电状态。</Actions>
+  </Message>
+  <Message number="73" eDefine="SYS_ERR_SYS_REJ_CABSTA_POW_OFF">
+    <Title>不允许该命令</Title>
+    <Description>更改为电机下电状态时不允许该命令。</Description>
+    <Consequences>系统保持相同的状态，请求的动作未执行。</Consequences>
+    <Actions>1) 调查请求的用户及理由，必要时纠正错误起因。</Actions>
+  </Message>
+  <Message number="74" eDefine="SYS_ERR_SYS_REJ_CABSTA_GRDSTOP">
+    <Title>不允许该命令</Title>
+    <Description>保护停止状态下不允许该命令。</Description>
+    <Consequences>系统保持相同的状态，请求的动作未执行。</Consequences>
+    <Actions>1) 确保系统不是处于保护停止状态。</Actions>
+  </Message>
+  <Message number="75" eDefine="SYS_ERR_SYS_REJ_CABSTA_EMSTOP">
+    <Title>不允许该命令</Title>
+    <Description>紧急停止状态下不允许该命令。</Description>
+    <Consequences>需要重置紧急停止。</Consequences>
+    <Actions>1) 确保系统不是处于紧急停止状态。</Actions>
+  </Message>
+  <Message number="76" eDefine="SYS_ERR_SYS_REJ_CABSTA_SYSFAIL">
+    <Title>不允许该命令</Title>
+    <Description>系统故障状态下不允许该命令。<p /></Description>
+    <Consequences>导致不可恢复性系统错误，需要进行热启动。</Consequences>
+    <Actions>1) 确保系统不是处于紧急停止状态。<p />2) 按《操作员手册》IRC5 的详细叙述重新启动系统。<p />3) 如果无法重新启动，请关闭主电源后重新打开。</Actions>
+  </Message>
+  <Message number="80" eDefine="SYS_ERR_SYS_REJ_MECSTA_N_COMM">
+    <Title>不允许该命令</Title>
+    <Description>轴未换向时不允许该命令。</Description>
+    <Consequences>系统保持相同的状态，请求的动作未执行。</Consequences>
+    <Actions>1) 遵循《附加轴手册》的详细叙述将轴换向。<p />2) 调查请求动作的用户及理由，必须时纠正错误起因。</Actions>
+  </Message>
+  <Message number="81" eDefine="SYS_ERR_SYS_REJ_MECSTA_N_CALIB">
+    <Title>不允许该命令</Title>
+    <Description>轴未校准时不允许该命令。</Description>
+    <Consequences>系统保持相同的状态，请求的动作未执行。</Consequences>
+    <Actions>1) 遵循"校准摆锤指导"或"水平仪校准指导"（取决于使用的设备）的详细叙述校准轴。</Actions>
+  </Message>
+  <Message number="82" eDefine="SYS_ERR_SYS_REJ_MECSTA_N_ASYNC">
+    <Title>不允许该命令</Title>
+    <Description>未更新轴转数计数器时不允许该命令。</Description>
+    <Consequences>系统保持相同的状态，请求的动作未执行。</Consequences>
+    <Actions>1) 按《操作员手册》IRC5 的详细叙述更新转数计数器。</Actions>
+  </Message>
+  <Message number="83" eDefine="SYS_ERR_SYS_REJ_MECSTA_N_SSYNC">
+    <Title>不允许该命令</Title>
+    <Description>轴未同步时不允许该命令。</Description>
+    <Consequences>系统保持相同的状态，请求的动作未执行。</Consequences>
+    <Actions>1) 遵循"校准摆锤指导"或"水平仪校准指导"（取决于使用的设备）的详细叙述同步轴。</Actions>
+  </Message>
+  <Message number="84" eDefine="SYS_ERR_SYS_REJ_MECSTA_N_SMB">
+    <Title>不允许该命令</Title>
+    <Description>由于串行测量电路板 (SMB) 上的数据不正常，不允许此命令。</Description>
+    <Consequences>在能够进行自动操作之前，必须确保所有数据正常。可以手动操纵机器人。</Consequences>
+    <Actions>1) 遵循《操作员手册》IRC5 的详细叙述更新串行测量电路板。</Actions>
+  </Message>
+  <Message number="88" eDefine="SYS_ERR_SYS_SPEED_OVERRIDE">
+    <Title>已拒绝自动模式</Title>
+    <Description>请求自动模式时，不得将速度设为 100%。</Description>
+    <Consequences>系统无法进入自动模式。</Consequences>
+    <Causes>无法将速度设为 100%。</Causes>
+    <Actions>1) 切换回手动模式 <p />2a) 在快速设置菜单中设置速度 <p />2b) 或在切换至自动时，如果系统应处于调试模式，将 System Parameter Controller/Auto Condition Reset/AllDebugSettings/Reset（系统参数控制器/自动条件重设/所有调试设置/重设）设为 No（否）。<p />3) 切换回自动模式并确认。 <p /></Actions>
+  </Message>
+  <Message number="89" eDefine="SYS_ERR_SYS_NOT_ORIG_MAIN">
+    <Title>已拒绝自动模式</Title>
+    <Description>调用链变为由例行程序开始，而不是主程序，且在请求自动模式时，不可重设为主程序。</Description>
+    <Consequences>系统无法进入自动模式。</Consequences>
+    <Causes>程序指针无法设为主程序。</Causes>
+    <Actions>1) 切换回手动模式。<p />2a) 移动 PP 至主程序。<p />2b) 或者如果程序总是起始于新例行程序，将系统参数“主要项目”（域控制器、类型任务）更改为新例行程序名称。<p />2c) 或者在切换至自动时，如果系统应当处于调试模式，将 System Parameter Controller/Auto Condition Reset/AllDebugSettings/Reset（系统参数控制器/自动条件重设/所有调试设置/重设）设为 No（否）。<p />3) 切换回自动模式并确认。 <p /></Actions>
+  </Message>
+  <Message number="92" eDefine="SYS_ERR_SYS_REJ_SYSIO_ERROR">
+    <Title>不允许该命令</Title>
+    <Description>处于"系统 IO 启动锁定"<p />状态时不允许。<p /><p /></Description>
+  </Message>
+  <Message number="93" eDefine="SYS_ERR_SYS_TASK_PANEL_STATE_OFF">
+    <Title>已拒绝自动模式</Title>
+    <Description>请求自动模式时，将禁用一个或多个 NORMAL（正常）任务，并且这些任务无法启用。</Description>
+    <Consequences>系统无法进入自动模式。</Consequences>
+    <Causes>无法重设同步块中的“任务选择面板”。</Causes>
+    <Actions>1) 切换回手动模式。<p />2a) 将 PP 设为主程序。 <p />2b) 或退出同步块。 <p />2c) 或者在切换至自动时，如果系统应处于调试模式，将“系统参数控制器”/“自动条件重设”/“所有调试设置”/“重设”设置为“否”。 <p />3) 切换回自动模式并确认。 <p /></Actions>
+  </Message>
+  <Message number="94" eDefine="SYS_ERR_SYS_NO_LOAD_NAME">
+    <Title>无法找到荷载名称</Title>
+    <Description>无法找到荷载名称 <arg format="%s" ordinal="1" /> 。</Description>
+    <Consequences>如果没有正确定义的荷载，将无法进行操纵。</Consequences>
+    <Causes>包含荷载定义的模块可能被删除。</Causes>
+    <Actions>加载包含荷载定义的模块。<p />选择其它的荷载。</Actions>
+  </Message>
+  <Message number="95" eDefine="SYS_ERR_SYS_NO_TOOL_NAME">
+    <Title>无法找到工具名称</Title>
+    <Description>无法找到工具名称 <arg format="%s" ordinal="1" /> 。</Description>
+    <Consequences>如果没有正确定义的工具，将无法进行操纵。</Consequences>
+    <Causes>包含工具定义的模块可能被删除。</Causes>
+    <Actions>加载包含工具定义的模块。<p />选择其它的工具。</Actions>
+  </Message>
+  <Message number="96" eDefine="SYS_ERR_SYS_NO_WOBJ_NAME">
+    <Title>无法找到工件名称</Title>
+    <Description>无法找到工件名称 <arg format="%s" ordinal="1" /> 。</Description>
+    <Consequences>如果没有正确定义的工件，将无法进行操纵。</Consequences>
+    <Causes>包含工件定义的模块可能被删除。</Causes>
+    <Actions>加载包含工件定义的模块。<p />选择其它的工件。</Actions>
+  </Message>
+  <Message number="97" eDefine="SYS_ERR_SYS_LOCAL_PERS_LOAD">
+    <Title>不允许使用 LOCAL PERS 荷载进行手动操纵</Title>
+    <Description>目标 <arg format="%s" ordinal="1" /> 的类型为 LOCAL PERS，无法进行手动操纵。</Description>
+    <Actions>更改荷载。</Actions>
+  </Message>
+  <Message number="98" eDefine="SYS_ERR_SYS_LOCAL_PERS_TOOL">
+    <Title>不允许使用 LOCAL PERS 工具进行手动操纵</Title>
+    <Description>目标 <arg format="%s" ordinal="1" /> 的类型为 LOCAL PERS，无法进行手动操纵。</Description>
+    <Actions>更改工具。</Actions>
+  </Message>
+  <Message number="99" eDefine="SYS_ERR_SYS_LOCAL_PERS_WOBJ">
+    <Title>不允许使用 LOCAL PERS 工件进行手动操纵</Title>
+    <Description>目标 <arg format="%s" ordinal="1" /> 的类型为 LOCAL PERS，无法进行手动操纵。</Description>
+    <Actions>更改工件。</Actions>
+  </Message>
+  <Message number="101" eDefine="SYS_ERR_SYS_MASTCL_LOC_HIA">
+    <Title>TP（程序）正在控制中。</Title>
+    <Description>示教器编程<p />窗口已定焦，<p />正在控制程序服务器。<p /></Description>
+    <Actions>更改至生产窗口<p />再次执行该命令。</Actions>
+  </Message>
+  <Message number="103" eDefine="SYS_ERR_SYS_TASK_PANEL_CHANGE">
+    <Title> 控制器忙于更新任务选择面板。</Title>
+    <Description>任务选择面板正在更新。<p />无法执行请求命令。<p /><p /></Description>
+    <Actions>再次执行命令<p />或进行热启动并重新执行命令。 </Actions>
+  </Message>
+  <Message number="104" eDefine="SYS_ERR_SYS_PATH_TOO_LONG">
+    <Title> 系统路径太长。</Title>
+    <Description>
+系统路径太长。<p />系统无法安全运行。<p /></Description>
+    <Consequences>系统将进入“系统故障”状态。</Consequences>
+    <Actions>
+将系统移至文件路径较短的位置。
+        </Actions>
+  </Message>
+  <Message number="105" eDefine="SYS_ERR_SYS_BACKUP_IN_PROGRESS">
+    <Title>备份已在进行中</Title>
+    <Description>备份已在进行中。</Description>
+    <Consequences>来自系统输入信号的 "Backup" 命令将被拒绝。</Consequences>
+    <Actions>使用系统输出信号 "Backup in progress" 来控制某个备份是否可以启动。</Actions>
+  </Message>
+  <Message number="106" eDefine="SYS_ERR_SYS_BACKUP_PATH">
+    <Title>备份路径</Title>
+    <Description>系统输入备份配置中的备份路径或备份名称存在错误。无法创建备份目录。<p />备份路径： <arg format="%s" ordinal="1" /><p />备份名称： <arg format="%s" ordinal="2" /></Description>
+    <Consequences>来自系统输入信号的 "Backup" 命令将被拒绝。 </Consequences>
+    <Actions>验证为系统输入备份配置的路径和名称是否正确。</Actions>
+  </Message>
+  <Message number="111" eDefine="SYS_ERR_SYS_MASTCL_INT_HIA">
+    <Title>TP（程序）正在控制中</Title>
+    <Description>示教器编程<p />窗口已定焦，<p />正在控制程序服务器。<p /></Description>
+    <Actions>更改至生产窗口<p />再次执行该命令。</Actions>
+  </Message>
+  <Message number="120" eDefine="SYS_ERR_SYS_MASTCL_REM_SYSEVT">
+    <Title>系统 IO 处于控制中</Title>
+    <Description>请参阅标题</Description>
+    <Actions />
+  </Message>
+  <Message number="126" eDefine="SYS_ERR_SYS_LOAD_NAME_CHANGED">
+    <Title>负荷数据已更改
+</Title>
+    <Description>活动负荷 <arg format="%s" ordinal="3" /> 已删除并用 <arg format="%s" ordinal="4" />替换。负荷数据位于连接到机械单元 <arg format="%s" ordinal="2" />的任务： <arg format="%s" ordinal="1" /> 。
+</Description>
+    <Consequences>用于微动控制的负荷定义可能不正确。
+</Consequences>
+    <Causes>已删除负荷数据。包含初始工具定义的模块可能已删除。
+</Causes>
+    <Actions>如果您需要旧定义，请定位初始负荷数据的程序或模块并加载。
+</Actions>
+  </Message>
+  <Message number="127" eDefine="SYS_ERR_SYS_TOOL_NAME_CHANGED">
+    <Title>工具数据已更改
+</Title>
+    <Description>活动工具 <arg format="%s" ordinal="3" /> 已删除并用 <arg format="%s" ordinal="4" />替换。工具数据位于连接机械单元 <arg format="%s" ordinal="2" />的任务： <arg format="%s" ordinal="1" /> 中。
+</Description>
+    <Consequences>用于微动控制的工具定义可能不正确。
+</Consequences>
+    <Causes>已删除工具数据。包含初始工具定义的模块可能已删除。
+</Causes>
+    <Actions>如果您需要旧定义，请定位初始工具数据的程序或模块并加载。
+</Actions>
+  </Message>
+  <Message number="128" eDefine="SYS_ERR_SYS_WOBJ_NAME_CHANGED">
+    <Title>工件数据已更改
+</Title>
+    <Description>活动工件 <arg format="%s" ordinal="3" /> 已删除并用 <arg format="%s" ordinal="4" />替换。工件数据位于连接到机械单元 <arg format="%s" ordinal="2" />的任务： <arg format="%s" ordinal="1" /> 中。
+</Description>
+    <Consequences>用于微动控制的工件定义可能不正确。
+</Consequences>
+    <Causes>已删除工件数据。包含初始工具定义的模块可能已删除。
+</Causes>
+    <Actions>如果您需要旧定义，请定位初始工件数据的程序或模块并加载。
+</Actions>
+  </Message>
+  <Message number="130" eDefine="SYS_ERR_SYS_TSP_RESTORED">
+    <Title>Active Tasks Menu 已恢复</Title>
+    <Description>热启动时，Active Tasks Menu 在自动模式下恢复。</Description>
+    <Consequences>如果一个或多个任务被取消选择，热启动后它们将会被再次选择。</Consequences>
+    <Causes>已执行热启动</Causes>
+    <Actions>进入手动模式。<p />2. 将不需要的任务取消选择。<p />3. 返回“自动”模式。</Actions>
+  </Message>
+  <Message number="131" eDefine="SYS_ERR_SYS_BLOCKED_SIGNALS">
+    <Title>已拒绝自动模式</Title>
+    <Description>已锁定一个或多个逻辑 I/O 信号，如果请求自动模式，则无法锁定。</Description>
+    <Consequences>系统无法进入自动模式。</Consequences>
+    <Causes>无法锁定某些已锁定的 I/O 信号。</Causes>
+    <Actions>1) 切换回手动模式。<p />2a) 检查事件日志中与 I/O 相关的错误。<p />2b) 或者在切换至自动时，如果系统应处于调试模式，将“系统参数控制器”/“自动条件重设”/“所有调试设置”/“重设”设置为“否”。 <p />3) 切换回自动模式并确认。 <p /></Actions>
+  </Message>
+  <Message number="132" eDefine="SYS_ERR_SYS_BLOCKED_SIGNALS_RESET">
+    <Title>已锁定 I/O 信号</Title>
+    <Description>在自动模式中启动时已锁定一个或多个逻辑 I/O 信号。</Description>
+    <Consequences>已锁定信号将会解封。</Consequences>
+    <Causes>热启动过程中，系统已切换至自动模式。<p />系统参数 AllDebugSettings 重设为 Yes（是）。 </Causes>
+    <Actions>无，系统已自动重设调试设置。<p /><p />要在自动模式下保持调试设置：<p />1) 切换回手动模式 <p />2) 将系统参数 Controller/Auto Condition Reset/AllDebugSettings/Reset 设为 NO（否）。<p />3) 切换回自动模式并确认。<p />4) 有关详情，请参阅《Technical Reference Manual》中的“系统参数”。 <p /></Actions>
+  </Message>
+  <Message number="133" eDefine="SYS_ERR_SYS_BLOCKED_SIGNALS_KEEP">
+    <Title>自动模式中的调试设置</Title>
+    <Description>在自动模式中启动时已锁定一个或多个逻辑 I/O 信号。</Description>
+    <Consequences>已锁定的 I/O 信号将会保持锁定。<p />自动模式下，系统不会处于完全生产模式。 </Consequences>
+    <Actions>对于完全生产模式：<p />1) 切换回手动模式 <p />2) 将系统参数“控制器”/“自动条件重设”/“所有调试设置”/“重设”设置为“是”。 <p />3) 切换回自动模式并确认。 <p />4) 有关详情，请参阅《技术参考手册》中的“系统参数”。 <p /></Actions>
+  </Message>
+  <Message number="134" eDefine="SYS_ERR_SYS_NOT_ORIG_MAIN_RESET">
+    <Title>调用链</Title>
+    <Description>调用链变为由例行程序开始，而不是主程序。</Description>
+    <Consequences>程序指针将重设为主例行程序。</Consequences>
+    <Causes>热启动过程中，系统已切换至自动模式。<p />将系统参数 AllDebugSettings 设为 Yes（是）。 </Causes>
+    <Actions>对于自动模式下的调试模式：<p />1) 切换回手动模式 <p />2) 将系统参数 AllDebugSetting 设为 NO（否）。<p />3) 切换回自动模式并确认。<p />4) 有关详情，请参阅《Technical Reference Manual》中的“系统参数”。 <p /></Actions>
+  </Message>
+  <Message number="135" eDefine="SYS_ERR_SYS_NOT_ORIG_MAIN_KEEP">
+    <Title>自动模式中的调试设置</Title>
+    <Description>调用链变为由例行程序开始，而不是主程序。</Description>
+    <Consequences>程序指针不会设为主程序。<p />自动模式下，系统不会处在完全生产模式。 <p /></Consequences>
+    <Actions>对于完全生产模式：<p />1) 切换回手动模式 <p />2) 将系统参数“控制器”/“自动条件重设”/“所有调试重设”/“重设”设置为“是”。 <p />3) 切换回自动模式并确认。 <p />4) 有关详情，请参阅《技术参考手册》中的“系统参数”。 <p /></Actions>
+  </Message>
+  <Message number="136" eDefine="SYS_ERR_SYS_SPEED_OVERRIDE_RESET">
+    <Title>减速</Title>
+    <Description>在自动模式下启动时，系统以减速运行。</Description>
+    <Consequences>速度将设为 100%。</Consequences>
+    <Causes>热启动过程中，系统已切换至自动模式。</Causes>
+    <Actions>无，系统已自动重设调试设置。<p /><p />要在自动模式下保持调试设置：<p />1) 切换回手动模式 <p />2) 将系统参数 Controller/Auto Condition Reset/AllDebugSettings/Reset 设为 NO（否）。<p />3) 切换回自动模式并确认。<p />4) 有关详情，请参阅《Technical Reference Manual》中的“系统参数”。 <p /><p /></Actions>
+  </Message>
+  <Message number="137" eDefine="SYS_ERR_SYS_SPEED_OVERRIDE_KEEP">
+    <Title>自动模式中的调试设置</Title>
+    <Description>在自动模式下启动时，系统减速运行。</Description>
+    <Consequences>速度将保持不变。<p />自动模式下，系统不会处在完全生产模式。 <p /></Consequences>
+    <Actions>对于完全生产模式：<p />1) 切换回手动模式 <p />2) 将系统参数“控制器”/“自动条件重设”/“所有调试设置”/“重设”设置为“是”。 <p />3) 切换回自动模式并确认。 <p />4) 有关详情，请参阅《技术参考手册》中的“系统参数”。 <p /></Actions>
+  </Message>
+  <Message number="138" eDefine="SYS_ERR_SYS_TASK_PANEL_STATE_OFF_RESET">
+    <Title>禁用任务</Title>
+    <Description>在自动模式下启动时，禁用一个或多个 NORMAL（正常）任务。</Description>
+    <Consequences>所有已禁用正常任务将会启用。</Consequences>
+    <Causes>热启动时，系统切换至自动模式<p />系统参数 AllDebugSettings 设为 Yes（是）。 <p /></Causes>
+    <Actions>无，系统已自动重设调试设置。<p /><p />要在自动模式下保持调试设置：<p />1) 切换回手动模式 <p />2) 将系统参数 Controller/Auto Condition Reset/AllDebugSettings/Reset 设为 NO（否）。<p />3) 切换回自动模式并确认。<p />4) 有关详情，请参阅《Technical Reference Manual》中的“系统参数”。 <p /></Actions>
+  </Message>
+  <Message number="139" eDefine="SYS_ERR_SYS_TASK_PANEL_STATE_OFF_KEEP">
+    <Title>自动模式中的调试设置</Title>
+    <Description>在自动模式下启动时，禁用一个或多个“正常”任务。</Description>
+    <Consequences>禁用任务将保持禁用。<p />自动模式下，系统不会处于完全生产模式。 <p /></Consequences>
+    <Actions>对于完全生产模式：<p />1) 切换回手动模式 <p />2) 将系统参数“控制器”/“自动条件重设”/“所有调试设置”/“重设”设置为“是”。 <p />3) 切换回自动模式并确认。 <p />4) 有关详情，请参阅《技术参考手册》中的“系统参数”。 <p /></Actions>
+  </Message>
+  <Message number="140" eDefine="SYS_ERR_SYS_REJ_MOTORS_ON">
+    <Title>电机上电被拒绝</Title>
+    <Description>通过系统 IO 的电机上电被拒绝。</Description>
+  </Message>
+  <Message number="141" eDefine="SYS_ERR_SYS_REJ_MOTORS_OFF">
+    <Title>电机下电被拒绝</Title>
+    <Description>通过系统 IO 的电机下电被拒绝。</Description>
+  </Message>
+  <Message number="142" eDefine="SYS_ERR_SYS_REJ_START">
+    <Title>启动被拒绝</Title>
+    <Description>通过系统 I/O 启动程序被拒绝。</Description>
+    <Consequences>程序将无法启动。</Consequences>
+    <Causes>- 原因可能是机器人不在恢复距离范围内。<p />- 程序已在执行。<p />- 正在进行备份操作。</Causes>
+    <Actions>- 将机器人微动至恢复区域或移动程序指针。<p />- 在激活“系统输入启动”之前停止程序。</Actions>
+  </Message>
+  <Message number="143" eDefine="SYS_ERR_SYS_REJ_START_MAIN">
+    <Title>在主程序启动被拒绝</Title>
+    <Description>通过系统 I/O 在主程序启动程序被拒绝。<p /></Description>
+    <Consequences>程序将无法启动。</Consequences>
+    <Causes>- 程序已在执行。<p />- 正在进行备份操作。</Causes>
+    <Actions>在主程序激活“系统输入启动”之前，停止程序。</Actions>
+  </Message>
+  <Message number="144" eDefine="SYS_ERR_SYS_REJ_STOP">
+    <Title>停止被拒绝</Title>
+    <Description>通过系统 IO 的程序停止被拒绝。<p /></Description>
+  </Message>
+  <Message number="145" eDefine="SYS_ERR_SYS_REJ_STOP_CYCLE">
+    <Title>停止程序周期被拒绝</Title>
+    <Description>通过系统 IO 的程序停止周期被拒绝。<p /></Description>
+  </Message>
+  <Message number="146" eDefine="SYS_ERR_SYS_REJ_MANINT">
+    <Title>手动中断被拒绝</Title>
+    <Description>通过系统 I/O 手动中断程序被拒绝。<p /></Description>
+    <Consequences>将不执行手动中断。</Consequences>
+    <Causes>- 程序已在执行。<p />- 正在进行备份操作。</Causes>
+    <Actions>在激活“系统输入中断”之前停止程序。</Actions>
+  </Message>
+  <Message number="147" eDefine="SYS_ERR_SYS_REJ_LOADSTART">
+    <Title>加载并启动被拒绝</Title>
+    <Description>通过系统 I/O 加载并启动程序被拒绝。<p /></Description>
+    <Consequences>程序将无法启动。</Consequences>
+    <Causes>-“系统输入加载并启动”的参变量不正确。<p />- 模块已加载，但系统未能设置程序指针。<p />- 程序已在执行。<p />- 正在进行备份操作。</Causes>
+    <Actions>检查以下方面:<p />- “系统输入加载并启动”的参变量是否正确。<p />- 要加载的程序文件（包括质量内存单元）的名称是否已定义且正确。<p />- 用于加载程序的任务的名称是否已定义且正确。<p />- 程序是否已在激活“系统输入加载并启动”之前停止。</Actions>
+  </Message>
+  <Message number="148" eDefine="SYS_ERR_SYS_REJ_EMSTRECONF">
+    <Title>确认被拒绝</Title>
+    <Description>通过系统 IO 的“紧急停止”重置确认被拒绝。<p /></Description>
+  </Message>
+  <Message number="149" eDefine="SYS_ERR_SYS_REJ_PRG_EXECERR">
+    <Title>错误重置被拒绝</Title>
+    <Description>通过系统 IO 的程序执行错误重置被拒绝。<p /></Description>
+  </Message>
+  <Message number="150" eDefine="SYS_ERR_SYS_REJ_LOAD">
+    <Title>加载失败</Title>
+    <Description>通过系统 I/O 加载程序失败。</Description>
+    <Consequences>程序将无法启动。</Consequences>
+    <Causes>-“系统输入加载”的参变量不正确。<p />- 模块已加载，但系统未能设置程序指针。<p />- 程序已在执行。<p />- 正在进行备份操作。<p /></Causes>
+    <Actions>检查以下方面:<p />- “系统输入加载”的参变量是否正确。<p />- 要加载的程序文件（包括质量内存单元）的名称是否已定义且正确。<p />- 用于加载程序的任务的名称是否已定义且正确。<p />- 程序是否已在激活“系统输入加载”之前停止。</Actions>
+  </Message>
+</Domain>

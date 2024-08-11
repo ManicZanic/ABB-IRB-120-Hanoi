@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources>
+  <Forms>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.EPS.TpuWndEPS" Text="EPS" Width="320" Height="192">
+      <Menu ref="menuTpuWndEPS" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.EPS.TpuPopupUnlock" Text="" Width="237" Height="140">
+      <Controls>
+        <Control ID="lblUserName" Text="用户名" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="4" Top="4" Width="109" Height="20" />
+        <Control ID="lblPin" Text="PIN：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="4" Top="60" Width="109" Height="20" />
+        <Control ID="lblPassword" Text="密码：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="4" Top="30" Width="109" Height="20" />
+        <Control ID="btnOK" Text="OK" Name="ABB.Robotics.Paint.TPU.Controls.TpuButton" Left="169" Top="110" Width="64" Height="24" />
+      </Controls>
+    </Form>
+  </Forms>
+  <Menus>
+    <Menu ID="menuTpuWndEPS">
+      <MenuItem ID="Activate" Text="激活" />
+    </Menu>
+  </Menus>
+  <Strings>
+    <String ID="gridSafetyItems.ColumnHeader.Controller" Text="安全控制器" />
+    <String ID="gridSafetyItems.ColumnHeader.State" Text="状态" />
+    <String ID="Password" Text="密码" />
+    <String ID="WarmstartRequired" Text="要使安全配置生效需要热启动                              点OK来热启动" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.EPS.Status.IOMaskPinError" Text="错误的EPS配置PIN" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.EPS.Status.IOMaskUunitSynchronizedError" Text="EPS单元同步错误" />
+    <String ID="OK" Text="OK" />
+  </Strings>
+</Resources>

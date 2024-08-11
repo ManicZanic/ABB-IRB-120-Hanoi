@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Resource Name="CALPEND" Language="eng">
+  <Text Name="200">
+    <Value>Nem hajtott végre kalibrálást.</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="201">
+    <Value>Kilépés</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="202">
+    <Value>OK</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="203">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="204">
+    <Value>Tengely</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="205">
+    <Value>Nyomja meg az OK gombot a folyamat befejezéséhez</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="206">
+    <Value>Robot kalibrálási pozícióban</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="207">
+    <Value>A robot kalibrálásának menete:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="208">
+    <Value>1. Váltson át a Vegyes menüre</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="209">
+    <Value>2. Jelölje ki a Szerviz - Nézet - Kalibrálás elemet</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="210">
+    <Value>3. Jelölje ki a Kalibr. - Finomkalibrálás elemet</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="211">
+    <Value>4. Indítsa újra a programot</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="212">
+    <Value>5. Az 1-4. lépések végrehajtása után nyomja meg az OK gombot.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="213">
+    <Value>Mégse</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="214">
+    <Value>Nyomja meg az OK gombot a folytatáshoz</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="215">
+    <Value>Nyomja meg az OK gombot a kilépéshez</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="216">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="217">
+    <Value>Állítsa a Levelmeter 2000-et A B üzemmódba</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="218">
+    <Value>beállítási határérték túllépve</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="219">
+    <Value>Helyezze az egységet az alapra</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="220">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="221">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="222">
+    <Value>Figyelem: Az OK elindítja a robot mozgatását</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="223">
+    <Value>Alap referenciaszintek...</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="224">
+    <Value>Ref</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="225">
+    <Value>Alapreferenciák készen állnak</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="226">
+    <Value>Helyezze az egységet az 1. tengelyre</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="227">
+    <Value>Kiegyenlítõ tengely</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="228">
+    <Value>Korrekciós érték [fok]</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="229">
+    <Value>készen áll</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="230">
+    <Value>Helyezze az egységet a 2. tengely hátuljára</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="231">
+    <Value>Helyezze az egységet a 2. tengely elejére</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="232">
+    <Value>Helyezz az egységet a csõtengelyre</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="233">
+    <Value>Figyelem! A 4. tengely elmozdul</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="234">
+    <Value>-90 fokkal a hangolás elõtt</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="235">
+    <Value>Helyezze az egységet a karimára</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="236">
+    <Value>Figyelem! A 4. és az 5. tengely elmozdul</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="237">
+    <Value>Helyezze az egységet a karima alá</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="238">
+    <Value>Nincs elérve a szükséges pontosság</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="239">
+    <Value>  OK: Az eljárás folytatása</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="240">
+    <Value>  Mégse: Kilépés az eljárásból</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="241">
+    <Value>Jelölje ki a választását</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="242">
+    <Value>Meglévõ opciók</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="243">
+    <Value>Robot típusa:        .</Value>
+    <Comment>Text length 20 chars (end with dot)</Comment>
+  </Text>
+  <Text Name="244">
+    <Value>Robot:             .</Value>
+    <Comment>Text length 20 chars (end with dot)</Comment>
+  </Text>
+  <Text Name="245">
+    <Value>Választott tengelyek:       .</Value>
+    <Comment>Text length 20 chars (end with dot)</Comment>
+  </Text>
+  <Text Name="246">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="247">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="248">
+    <Value>Fogadja el a meglévõ opciókat vagy módosítsa azokat.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="249">
+    <Value>Kilépés</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="250">
+    <Value>Módosítás</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="251">
+    <Value>Elfogadás</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="252">
+    <Value>[0]-Elõzõ oldal    Következõ oldal-[9]</Value>
+    <Comment>Length must be 35 chars</Comment>
+  </Text>
+  <Text Name="253">
+    <Value>Válassza ki a robot típusát a számbillentyûzeten:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="254">
+    <Value>Illegális választás, próbálja újra!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="255">
+    <Value>A kiválasztott robottípus:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="256">
+    <Value>[1]-1. tengely      2. tengely-[2]</Value>
+    <Comment>Length must be 32 chars</Comment>
+  </Text>
+  <Text Name="257">
+    <Value>[3]-3. tengely      4. tengely-[4]</Value>
+    <Comment>Length must be 32 chars</Comment>
+  </Text>
+  <Text Name="258">
+    <Value>[5]-5. tengely      6. tengely-[6]</Value>
+    <Comment>Length must be 32 chars</Comment>
+  </Text>
+  <Text Name="259">
+    <Value>[8]-Mind                Törlés-[9]</Value>
+    <Comment>Length must be 32 chars</Comment>
+  </Text>
+  <Text Name="260">
+    <Value>[0]-Elfogadás</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="261">
+    <Value>Választott tengelyek</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="262">
+    <Value>A kalibrálásra kiválasztott tengelyek:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="263">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="264">
+    <Value>Ismét</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="265">
+    <Value>A kalibrálás sikeresen befejezõdött!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="266">
+    <Value>A kalibrálás SIKERTELEN</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="267">
+    <Value>Menti a calib.cfg paramétereit?</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="268">
+    <Value>Nem</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="269">
+    <Value>Igen</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="270">
+    <Value>Válassza ki a használni kívánt I/O eszközt</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="271">
+    <Value>Helyezzen be egy mágneslemezt vagy távolítsa el</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="272">
+    <Value>az írásvédelmet</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="273">
+    <Value>A mentés nem sikerült</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="274">
+    <Value>Kalibrálás végrehajtva</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="275">
+    <Value> a kalibrációs muszer által</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="276">
+    <Value>A rezolver értékek kalibrálás elõtt:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="277">
+    <Value>A rezolver értékek kalibrálás után:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="278">
+    <Value>Ellenõrizze hogy a Szintmérõ be van-e kapcsolva</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="279">
+    <Value>Figyelem! A kalibráláshoz a tool0 kell</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="280">
+    <Value>Szerelje le a szerszámot, ha jelen van</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="281">
+    <Value>Helyezze az egységet a beállító lemezre</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="282">
+    <Value>Forgassa el 180 fokkal az egységet</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="283">
+    <Value>Kiegyenlítési szintek...</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="284">
+    <Value>Nulla kiegyenlítési referencia kész</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="285">
+    <Value>több mint egy tengelyfordulat</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="286">
+    <Value>az eredeti szinkronizálási pozícióból</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="287">
+    <Value>Átváltás manuális finomkalibrálásra</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="288">
+    <Value>Válassza az autom. vagy kézi finomkalibrálást</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="289">
+    <Value>Manuális</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="290">
+    <Value>Automatikus</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="291">
+    <Value>Válassza ki a kalibrálandó mech. egységet</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="292">
+    <Value>Nincs kiválasztva érvényes mech. egység. Megszakítás.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="293">
+    <Value>Várjon, amíg be nem fejezõdik a finomkalibrálás!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="294">
+    <Value>A finomkalibrálás sikeresen befejezõdött!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="295">
+    <Value>Az érzékelõk zéró kiegyenlítésû kalibrálása</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="296">
+    <Value>Helyezze az egységet a kiegyenlítési beállító lemezre</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="297">
+    <Value>Forgassa el 180 fokkal az egységet</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="298">
+    <Value>A zéró kiegyenlítésû kalibrálás kihagyása</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="299">
+    <Value>Figyelem! A 6. tengely elmozdul</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="300">
+    <Value>+82,5 fokkal a hangolás elõtt</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="301">
+    <Value>A tengely nincs a 0 fok közelében. Megszakítás.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="302">
+    <Value>Robot pozíciója:    .</Value>
+    <Comment>Text length 20 chars (end with dot)</Comment>
+  </Text>
+  <Text Name="303">
+    <Value>Poz.</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="304">
+    <Value>Tengelyek</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="305">
+    <Value>Alternatív pozíciók:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="306">
+    <Value>[0]-Az összes felhasználói pozíció törlése</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="307">
+    <Value>[1]-Ax1 kalibrálása, Ax2-6 felhasználói</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="308">
+    <Value>[2]-Ax2 kalibrálása, Ax3-6 felhasználói</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="309">
+    <Value>[3]-Ax3 kalibrálása, Ax4-6 felhasználói</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="310">
+    <Value>[9]-Vissza</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="311">
+    <Value>Válasszon alternatívát</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="312">
+    <Value>Tengely a felhasználói pozícióban</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="313">
+    <Value>Törölje a pozíciót a tengely hozzáadása elõtt</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="314">
+    <Value>Mozgassa a tengelyeket</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="315">
+    <Value>a kívánt pozícióra</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="316">
+    <Value>Állítsa az érzékelõket nulla fokra</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="317">
+    <Value>Figyelem! Ne mozgassa a lemezt</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="318">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="319">
+    <Value>Szeretné a billentéses módszerrel</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="320">
+    <Value>kalibrálni a 3., 4. és 5. tengelyt?</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="321">
+    <Value>Ehhez szükséges a pendelum ház</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="322">
+    <Value>amely felszerelhetõ a karimára</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="323">
+    <Value>az adapter nélkül</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="324">
+    <Value>3. kiegyenlítõ tengely:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="325">
+    <Value>A mérot az adapter nélkül kell</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="326">
+    <Value>felszerelni a karimára, ha a</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="327">
+    <Value>billentéses módszer van kiválasztva</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="328">
+    <Value>Helyezze az ingát a peremre</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="329">
+    <Value>4. kiegyenlítõ tengely:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="330">
+    <Value>5. kiegyenlítõ tengely:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="331">
+    <Value>6. kiegyenlítõ tengely:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="332">
+    <Value>Figyelem!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="333">
+    <Value>Az automatikus finomkalibrálás csak</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="334">
+    <Value>az RW 4.0.100 vagy magasabb verzió esetén mûködik</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="335">
+    <Value>Kihagyás</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="336">
+    <Value>Kalibrálás helye:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="337">
+    <Value>Termelés Västerasban</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="338">
+    <Value>vagy</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="339">
+    <Value>Helyszíni szervizelési kalibrálás</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="340">
+    <Value>term.</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="341">
+    <Value>helyszín</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="342">
+    <Value>Üdvözli a Calibration Pendulum II</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="343">
+    <Value>Az inga érzékelõi kiegyenlítésének ellenõrzésére használható</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="344">
+    <Value>ha az ingát nem használták az utóbbi idõben</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="345">
+    <Value>Helyezze az egységet a 3. tengely tetejére</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="346">
+    <Value>Helyezzen egy rudat az inga és a gomb közé</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="347">
+    <Value>Távolítsa el a rudat a karimáról</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="348">
+    <Value>Figyelem! Ax6 mozgatása nulla fokhoz</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="349">
+    <Value>A rúd eltörik, ha még ekkor is a helyén van</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="350">
+    <Value>Az érzékelõ nem követi a robot mozgását</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="351">
+    <Value>Ellenõrizze az inga telepítését</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="352">
+    <Value>A kalibrálási pozíció megtalálva a tengellyel</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="353">
+    <Value>fok</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="354">
+    <Value>ekkor elmozdul ide:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="355">
+    <Value>Nyomj OK-t, majd szkenneld be a sor.sz-ot tartalm. vonalkódot</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="356">
+    <Value>Vonalkód szkennelésének kihagyása!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="357">
+    <Value>A sorozatszámot kézzel kell beírni</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="358">
+    <Value>Várakozás a sorozatszámra...</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="359">
+    <Value>Beszkennelt sorozatszám:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="360">
+    <Value>Újraszkennelés</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="361">
+    <Value>Hiba a vonalkód leolvasása közben!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="362">
+    <Value>Leolvasott vonalkód:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="363">
+    <Value>Elõírt formátum</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="364">
+    <Value>Nyomja meg az Újra gombot a vonalkód újbóli leolvasásához</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="365">
+    <Value>Végezze el a finomkalibrálását és nyomja meg az OK-t</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="366">
+    <Value>Válassza az ABB-kalibrálást</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="367">
+    <Value>Válassza ki a kalibrálandó robotot, pl. ROB_1</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="368">
+    <Value>Válassza ki a Kalibrálási paraméterek - Finomkalibrálás</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="369">
+    <Value>Válassza ki a tengelyt és nyomja meg a Kalibrálás gombot</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="370">
+    <Value>Indítsa el újra a programot</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="371">
+    <Value>Kalibrálási fõmenü</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="372">
+    <Value>Tengely kalibrálása</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="373">
+    <Value>Az Ax1 kalibrálása:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="374">
+    <Value>Visszatérés a fõmenübe vagy kilépés?</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="375">
+    <Value>Vissza</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="376">
+    <Value>Referencia-kalibrálás alaphelyzete</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="377">
+    <Value>Válasszon alternatívát:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="378">
+    <Value>Azonosítsa a referencia-pozíciót</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="379">
+    <Value>Használja a referencia-pozíciót szervizelés után</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="380">
+    <Value>Azonosítsa a szervizelt tengelyt</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="381">
+    <Value>Csukló</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="382">
+    <Value>Az alapreferencia már létezik!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="383">
+    <Value>Távolítsa el</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="384">
+    <Value>és nyomja meg az OK gombot</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="385">
+    <Value>Ref. eltérés (szerszám - Bázis):</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="386">
+    <Value>Érzékelõ</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="387">
+    <Value>Az eredmény ide íródik:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="388">
+    <Value>Ref. pozíció sikeresen tárolva!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="389">
+    <Value>nem létezik!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="390">
+    <Value>A kiindulási referencia-pozíciót</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="391">
+    <Value>elõször definiálni kell; megszakítás</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="392">
+    <Value>Hiba a beolvasás közben</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="393">
+    <Value>megszakítás</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="394">
+    <Value>Ellenõrizze, hogy a szervizelt tengely</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="395">
+    <Value>finomkalibrálva legyen!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="396">
+    <Value>A tengelyek kézi mozgatása megengedett</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="397">
+    <Value>Mozgassa a robotot a kiindulási referencia-pozícióba</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="398">
+    <Value>Az 1. tengely pozíciója a fájlból lesz kiolvasva</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="399">
+    <Value>Figyelem! A robot nincs a kiindulási pozíció közelében</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="400">
+    <Value>Nyomja meg a HOME gombot a kiindulási pozícióba való mozgatáshoz</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="401">
+    <Value>Elõször kézzel mozgassa a tengelyeket, ha akadály van az útjukban</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="402">
+    <Value>Kiindulópont</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="403">
+    <Value>Távolítsa el vagy szerelje vissza az ingát a szerszámra</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="404">
+    <Value>kiindulóponti referenciaszintek...</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="405">
+    <Value>Kiindulóponti referenciák készek</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="406">
+    <Value>Figyelem! Alapreferencia különbség</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="407">
+    <Value>RefA-StoredRefA=</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="408">
+    <Value>RefB-StoredRefB=</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="409">
+    <Value>OK a kalibrálás folytatásához, de az érzékelõ</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="410">
+    <Value>kiegyenlítését ellenõrizni kell</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="411">
+    <Value>Különbség:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="412">
+    <Value>Érzékelõ</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="413">
+    <Value>Elõször mozgassa a robotot az érzékelõ célértékeihez:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="414">
+    <Value>Célérték</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="415">
+    <Value>Majd végezze el a teng. finomkalib-át és nyomja meg a Teszt-et</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="416">
+    <Value>Teszt</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="417">
+    <Value>A pontosság elfogadható!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="418">
+    <Value>SMB memória frissítése a következõ tengely esetében:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="419">
+    <Value>1. Calibration Pendulum II</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="420">
+    <Value>2. Referencia-kalibrálás</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="421">
+    <Value>Válassza ki a tengely manuális vagy automatikus beigazítását:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="422">
+    <Value>Válassza ki az automatikusan beigazítandó tengelyt:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="423">
+    <Value>Másik tengely kalibrálása?</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="424">
+    <Value>Kalibrálás menü</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="425">
+    <Value>Távolítsa el vagy szerelje vissza az mérot az axis2-re</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="426">
+    <Value>nincs</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="427">
+    <Value>és</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="428">
+    <Value>új</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="429">
+    <Value>Tárolt fájl érvényesítése</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="430">
+    <Value>Fájl OK</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="431">
+    <Value>Kalibrálási értékek érvényesítése</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="432">
+    <Value>Az érzékelõ felszerelése nem ugyanaz,</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="433">
+    <Value>mint amikor a referencia tárolva lett!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="434">
+    <Value>Nem lehet folytatni a kalibrálást</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="435">
+    <Value>2 tengely van kiválasztva</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="436">
+    <Value>referencia-kalibrálásra</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="437">
+    <Value>Ezeket másodszor is meg kell ismételni</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="438">
+    <Value>Ismétlés</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="439">
+    <Value>ennek:</Value>
+    <Comment>Maximum length 39 chars, Context: Iteration 1 of 2 for axis 5</Comment>
+  </Text>
+  <Text Name="440">
+    <Value>a következõ tengely esetében:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="441">
+    <Value>Motor kaliber. elt.: [Tárolt - Aktuális]</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="442">
+    <Value>rad</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="443">
+    <Value>Referenciák érvényesek</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="444">
+    <Value>REFERENCIÁK NEM ÉRVÉNYESEK</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="445">
+    <Value>Túl sok tengely módosult</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="446">
+    <Value>Helyezze az ingát a szerszámra</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="447">
+    <Value>Tegye az egységet a 2. tengely keretére</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="448">
+    <Value>A 2. tengely elmozdul</Value>
+    <Comment>Maximum length 39 chars, Context: Axis 2 will move to xx deg</Comment>
+  </Text>
+  <Text Name="449">
+    <Value>A 2. tengely elõírt szöge 90 fok</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="450">
+    <Value>Referenciamérésekhez</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="451">
+    <Value>Calibrate with unit below flange</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="452">
+    <Value>Calibrate with unit on flange adapter</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="453">
+    <Value>Reference measurment on tubeshaft</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="454">
+    <Value>Reference measurment on tool</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="455">
+    <Value>Place Unit on tool</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="456">
+    <Value>Remove and remount Unit on tubeshaft</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+</Resource>

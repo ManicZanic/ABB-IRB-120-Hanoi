@@ -1,0 +1,513 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="ARL" domainNo="4" lang="zh" elogTextVersion="1.0" min="713" max="1010">
+  <Message number="713" eDefine="SYS_ERR_ARL_ALIAS_DEF">
+    <Title>别名定义错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />变元 FromSignal 中的消息： <arg format="%s" ordinal="2" />，必须在 IO 配置中定义，变元 ToSignal 中的消息： <arg format="%s" ordinal="3" />，必须在 RAPID 程序中说明而非在 IO 配置中定义。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>检查 IO 配置和 RAPID 程序。<p />恢复： <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="714" eDefine="SYS_ERR_ARL_UNDQUAT">
+    <Title>自变量错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> 中方向定义错误。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>这可能是一种因离线而造成的"虚"位置（未定义的姿态），<p />该位置需要用 modpos 加以修改。</Actions>
+  </Message>
+  <Message number="720" eDefine="SYS_ERR_ARL_ALIAS_IO">
+    <Title>别名 IO 安装</Title>
+    <Description>系统不能刷新所有作为 RAPID 符号的 IO 信号。</Description>
+    <Consequences>IO 信号无法用于 RAPID 程序。</Consequences>
+    <Causes>－错误的 IO 配置<p />－错误的任务配置</Causes>
+    <Actions>重新启动控制柜。</Actions>
+  </Message>
+  <Message number="721" eDefine="SYS_ERR_ARL_IO">
+    <Title>IO 安装</Title>
+    <Description> 任务 <arg format="%s" ordinal="1" />：<p />系统不能刷新所有作为 RAPID 符号的 IO 信号。</Description>
+    <Consequences>IO 信号无法用于 RAPID 程序。</Consequences>
+    <Causes>－错误的 IO 配置<p />－错误的任务配置</Causes>
+    <Actions>重新启动控制柜。</Actions>
+  </Message>
+  <Message number="722" eDefine="SYS_ERR_ARL_MECUNT">
+    <Title>机械单元</Title>
+    <Description>系统不能刷新所有作为 RAPID 符号的机械单元。</Description>
+    <Consequences>机械单元无法用于 RAPID 程序中。</Consequences>
+    <Causes>- 动作配置不正确<p />- 任务配置不正确</Causes>
+    <Actions>重新启动控制器。</Actions>
+  </Message>
+  <Message number="723" eDefine="SYS_ERR_ARL_CAMUNIT">
+    <Title>摄像头安装</Title>
+    <Description> 任务 <arg format="%s" ordinal="1" />：<p />系统不能刷新所有作为 RAPID 符号的摄像头单元。 </Description>
+    <Consequences>在 RAPID 程序中没有可以使用的摄像头单元。</Consequences>
+    <Causes> - 摄像头配置不正确<p />- 任务配置不正确 </Causes>
+    <Actions>重新启动控制器。</Actions>
+  </Message>
+  <Message number="724" eDefine="SYS_ERR_ARL_MODULE">
+    <Title>保存或清除错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />程序模块 <arg format="%s" ordinal="2" /> 不能保存或删除。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>－检查模块名称的拼写。<p />－检查模块是否已加载。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="726" eDefine="SYS_ERR_ARL_UNKPROC">
+    <Title>引用错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />加载对话引用无效。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>检查指定引用是否与 StartLoad 中的引用相同<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="727" eDefine="SYS_ERR_ARL_PATH">
+    <Title>保存错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />缺少文件源 <arg format="%s" ordinal="2" />。<p />程序引用 <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>用 FilePath 自变量指定文件目的地。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="728" eDefine="SYS_ERR_ARL_FRAME">
+    <Title>帧错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />无法计算新帧。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>位置没有必要的关系，或指定不够精确。</Causes>
+    <Actions>检查位置是否过密或指定不够精确。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="731" eDefine="SYS_ERR_ARL_AO_HLIM">
+    <Title>值错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />信号 <arg format="%s" ordinal="3" /> 的变元 <arg format="%s" ordinal="2" /> 的值超过其最大逻辑值。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>更改信号的变元或最大逻辑值<p />参数。<p />恢复： <arg format="%s" ordinal="5" /><p /></Actions>
+  </Message>
+  <Message number="732" eDefine="SYS_ERR_ARL_AO_LLIM">
+    <Title>值错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />信号 <arg format="%s" ordinal="3" /> 的变元 <arg format="%s" ordinal="2" /> 的值低于其最小逻辑值。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>更改信号的变元或最小逻辑值参数。<p />恢复： <arg format="%s" ordinal="5" /><p /></Actions>
+  </Message>
+  <Message number="733" eDefine="SYS_ERR_ARL_AO_RANGE">
+    <Title>值错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />信号 <arg format="%s" ordinal="3" /> 的自变量 <arg format="%s" ordinal="2" /> 的值低于自变量 <arg format="%s" ordinal="4" /> 的值。<p />程序引用 <arg format="%s" ordinal="5" /><p /></Description>
+    <Actions>更改自变量的值。</Actions>
+  </Message>
+  <Message number="734" eDefine="SYS_ERR_ARL_TXTTOLNG">
+    <Title>符号定义错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />在索引 <arg format="%s" ordinal="3" /> 中，文本表 <arg format="%s" ordinal="2" /> 中的字串过长。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>更改文本表的文件，然后执行冷启动。</Actions>
+  </Message>
+  <Message number="735" eDefine="SYS_ERR_ARL_AXIS_DEF">
+    <Title>自变量错误</Title>
+    <Description>轴未定义。<p /></Description>
+    <Actions>执行指令前必须对轴进行定义。</Actions>
+  </Message>
+  <Message number="736" eDefine="SYS_ERR_ARL_IRB_NOTALLOWED">
+    <Title>机械单元错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />无法用该指令定义机器人上的有效荷载。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>使用指令 GripLoad，而不是 MechUnitLoad。</Actions>
+  </Message>
+  <Message number="737" eDefine="SYS_ERR_ARL_TXTNOEXIST">
+    <Title>符号定义错误
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />请求的文本或文本包不存在。文本表格 <arg format="%s" ordinal="2" />，索引 <arg format="%s" ordinal="3" />。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>检查变元。<p />恢复： <arg format="%s" ordinal="5" /><p /></Actions>
+  </Message>
+  <Message number="738" eDefine="SYS_ERR_ARL_IO_CON_LOST">
+    <Title>I/O 错误</Title>
+    <Description>无法在单元 <arg format="%s" ordinal="2" /> 上访问 I/O 信号 <arg format="%s" ordinal="1" /> 。<p />无法重新启动。<p /></Description>
+    <Causes>与 I/O 模块的连接中断。</Causes>
+    <Actions>重新与 I/O 单元建立连接。请将 PCP 移至安全的重启位置。<p />以便重新启动程序。</Actions>
+  </Message>
+  <Message number="739" eDefine="SYS_ERR_ARL_MISPAR">
+    <Title>参数错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />选项自变量 DO1、GO1、GO2、GO3 或 GO4 均未指定。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>请至少指定一个自变量。</Actions>
+  </Message>
+  <Message number="740" eDefine="SYS_ERR_ARL_PERS_GONE">
+    <Title>执行错误</Title>
+    <Description>在指令 TriggStopProc 中指定的 PERS 变量无法<p />更新，因为它已不存在。 <p /></Description>
+    <Causes>带 PERS 变量的程序模块可能已从<p />程序内存中删除。 </Causes>
+    <Actions>检查带 PERS 变量的程序模块是否已删除，如果删除，请将其加回。</Actions>
+  </Message>
+  <Message number="741" eDefine="SYS_ERR_ARL_NOT_EVENT_RTN">
+    <Title>上下文错误 </Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />指令 <arg format="%s" ordinal="2" /> 可能仅用于事件例行程序<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>删除该指令。</Actions>
+  </Message>
+  <Message number="742" eDefine="SYS_ERR_ARL_EVPT_SMALL">
+    <Title>参数错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />定时参数 DipLag 大于系统参数 Event 的预设时间。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>增加系统参数 Event 的预设时间或检查设备的 dip 延迟（时延）补偿。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="743" eDefine="SYS_ERR_ARL_SUBTYPE">
+    <Title>参数错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />自变量 <arg format="%s" ordinal="2" /> 中无有效的子类型。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>检查自变量。</Actions>
+  </Message>
+  <Message number="744" eDefine="SYS_ERR_ARL_VAL_IN_PAR">
+    <Title>参数错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />自变量 <arg format="%s" ordinal="3" /> 的 <arg format="%s" ordinal="2" /> 中存在无效值。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>检查自变量。</Actions>
+  </Message>
+  <Message number="745" eDefine="SYS_ERR_ARL_INPOS_MALMI">
+    <Title>参数错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> 小于自变量 <arg format="%s" ordinal="4" /> 中的 <arg format="%s" ordinal="3" /> 。<p />程序引用 <arg format="%s" ordinal="5" /><p /></Description>
+    <Actions>检查自变量。</Actions>
+  </Message>
+  <Message number="746" eDefine="SYS_ERR_ARL_INPOS_FINE">
+    <Title>参数错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />参数 <arg format="%s" ordinal="3" /> 中的 <arg format="%s" ordinal="2" /> TRUE 与传送带协调操作结合。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>经过协调终止点后，离开传送带时不能使用 fine 点。<p />请用 zone 点取代。</Actions>
+  </Message>
+  <Message number="747" eDefine="SYS_ERR_ARL_CFG_INTERNAL">
+    <Title>访问错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />无法读取或写入系统参数 <arg format="%s" ordinal="2" />。参数为内部参数，有读写保护。<p />程序引用 <arg format="%s" ordinal="3" /><p /><p /><p /></Description>
+    <Actions>恢复: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="748" eDefine="SYS_ERR_ARL_CFG_LIMIT">
+    <Title>值错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />从参数 CfgData 写到系统参数的数据超出有效范围。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="749" eDefine="SYS_ERR_ARL_ALREADY_MOVING">
+    <Title>执行错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />机器人运动时无法执行 StartMove。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="752" eDefine="SYS_ERR_ARL_LOADSESS_INUSE">
+    <Title>自变量错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />某些与 StartLoad - WaitLoad 的加载对话未结束。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>结束与 WhatLoad 的加载对话，用 CancelLoad 取消它或将 PCP 设置为 main。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="753" eDefine="SYS_ERR_ARL_LOAD_PFAIL">
+    <Title>存储器故障 </Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />由于执行 Load 或 StartLoad ... WaitLoad 指令时停电，RAPID 程序存储器不稳定。<p />*** 执行 P-start修复 ***<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>必须执行 P-start，因为 RAPID 程序存储器受损：<p />- PERS 变量的 init 值错误<p />- 可用程序存储容量减小 </Actions>
+  </Message>
+  <Message number="754" eDefine="SYS_ERR_ARL_ARG_MISSING">
+    <Title>自变量错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />自变量未给定。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>如需加以限制，可用一个值将可选自变量设置为 On，否则请设置为 Off。</Actions>
+  </Message>
+  <Message number="755" eDefine="SYS_ERR_ARL_NOT_TRAP_RTN">
+    <Title>上下文错误 </Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />指令 <arg format="%s" ordinal="2" /> 仅能用于中断例行程序 <p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>删除该指令。</Actions>
+  </Message>
+  <Message number="756" eDefine="SYS_ERR_ARL_IMPROPER_INTNO">
+    <Title>上下文错误 </Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />指令 <arg format="%s" ordinal="2" /> 仅能用于通过指令 <arg format="%s" ordinal="3" /> 调用的中断例行程序。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>检查 INTVO 是否拥有 <arg format="%s" ordinal="5" /> 使用的中断号。 </Actions>
+  </Message>
+  <Message number="757" eDefine="SYS_ERR_ARL_LOADSESS_NOUSE">
+    <Title>自变量错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />您试图取消的加载对话不在使用状态。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="758" eDefine="SYS_ERR_ARL_IO_CON_LOST_BMW">
+    <Title>I/O 错误</Title>
+    <Description>无法访问单元 <arg format="%s" ordinal="2" /> 的 I/O 信号 <arg format="%s" ordinal="1" /> 。<p /></Description>
+    <Causes>与 I/O 模块的连接中断。</Causes>
+    <Actions>重新与 I/O 单元建立连接。</Actions>
+  </Message>
+  <Message number="759" eDefine="SYS_ERR_ARL_IMPROPER_TYPE">
+    <Title>参数错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> 中的自变量 Data 有不正确的数据类型。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>检查数据类型。不能使用非值和半值类型。<p /></Actions>
+  </Message>
+  <Message number="761" eDefine="SYS_ERR_ARL_PAR_NEG">
+    <Title>参数错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />自变量 <arg format="%s" ordinal="2" /> 有负值。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>将值设为正值或零。</Actions>
+  </Message>
+  <Message number="762" eDefine="SYS_ERR_ARL_BIG_VAL">
+    <Title>值错误</Title>
+    <Description>任务: <arg format="%16s" ordinal="1" /><p />自变量 <arg format="%s" ordinal="2" /> 的值迫使机器人离开作业区。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>减小该值。</Actions>
+  </Message>
+  <Message number="763" eDefine="SYS_ERR_ARL_SYS_STOP">
+    <Title>执行错误</Title>
+    <Description>任务:<arg format="%16s" ordinal="1" /><p />当系统处在停止状态时，指令 <arg format="%s" ordinal="2" /> 无法执行。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+  </Message>
+  <Message number="764" eDefine="SYS_ERR_ARL_PAR_NOT_FREE">
+    <Title>开关自变量错误</Title>
+    <Description>任务: <arg format="%16s" ordinal="1" /><p />指令 <arg format="%s" ordinal="2" /> 必须与一个开关自变量结合使用。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>请使用开关 Total 或 Free。</Actions>
+  </Message>
+  <Message number="765" eDefine="SYS_ERR_ARL_NOP_DIR">
+    <Title>自变量错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />在指令 <arg format="%s" ordinal="2" /> 中自变量 <arg format="%s" ordinal="3" /> 不是一个打开的目录。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>请在读取目录前打开目录。<p />恢复： <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="766" eDefine="SYS_ERR_ARL_MISSING_PAR">
+    <Title>参数错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />在指令 <arg format="%s" ordinal="2" /> 中自变量 <arg format="%s" ordinal="3" /> 不能脱离自变量 <arg format="%s" ordinal="4" /> 使用。<p />程序引用 <arg format="%s" ordinal="5" /><p /></Description>
+    <Actions>检查 RAPID 程序。</Actions>
+  </Message>
+  <Message number="767" eDefine="SYS_ERR_ARL_SEARCH_OBJ">
+    <Title>搜索错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />不能搜索类型 <arg format="%s" ordinal="2" /> 的对象。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>检查 RAPID 程序。</Actions>
+  </Message>
+  <Message number="768" eDefine="SYS_ERR_ARL_SYM_ACC">
+    <Title>符号访问错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />在系统中不能访问系统符号 <arg format="%s" ordinal="2" /> 。 <p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="769" eDefine="SYS_ERR_ARL_SYM_READ_ACC">
+    <Title>符号读取访问错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />符号 <arg format="%s" ordinal="2" /> 不是可读对象。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="770" eDefine="SYS_ERR_ARL_SYM_TYPE">
+    <Title>符号类型错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />符号 <arg format="%s" ordinal="2" /> 属于类型 <arg format="%s" ordinal="3" /> ，而不是预期类型 <arg format="%s" ordinal="4" /> 。<p />程序引用 <arg format="%s" ordinal="5" /><p /></Description>
+    <Actions>检查 RAPID 程序。</Actions>
+  </Message>
+  <Message number="771" eDefine="SYS_ERR_ARL_SYM_ACC_SCOPE">
+    <Title>符号访问错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />在该范围中不能访问符号 <arg format="%s" ordinal="2" /> 。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="772" eDefine="SYS_ERR_ARL_LOST_CNV">
+    <Title>I\O 错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> 指令与传送带失去联络。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+  </Message>
+  <Message number="773" eDefine="SYS_ERR_ARL_INSTR_INTER">
+    <Title>指令中断</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />指令 <arg format="%s" ordinal="2" /> 中断，原因不明。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+  </Message>
+  <Message number="774" eDefine="SYS_ERR_ARL_OBJ_DROPPED">
+    <Title>目标已撤消</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />指令 <arg format="%s" ordinal="2" /> 等待的目标已撤消。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>已通过启动窗口，或未满足检查点 (Checkpoint)。</Causes>
+    <Actions>如未使用检查点，则必须将检查点距离和检查点窗口宽度设置为零。<p />重新运行指令。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="775" eDefine="SYS_ERR_ARL_CNV_WAITDIST">
+    <Title>传送带错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />另一个 <arg format="%s" ordinal="2" /> 指令正在等待目标距离。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+  </Message>
+  <Message number="776" eDefine="SYS_ERR_ARL_CNV_WAITOBJ">
+    <Title>传送带错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />另一个 <arg format="%s" ordinal="2" /> 指令正在等待目标。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+  </Message>
+  <Message number="777" eDefine="SYS_ERR_ARL_CNV_CONNECTED">
+    <Title>传送带错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> 指令已连接。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="778" eDefine="SYS_ERR_ARL_NEWERRNO_FAILED">
+    <Title>值错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />新的错误编号 <arg format="%s" ordinal="2" /> 注册失败。init 值必须为 -1 或旧编号。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>检查新 errnum 变量的 init 值。</Actions>
+  </Message>
+  <Message number="779" eDefine="SYS_ERR_ARL_ERRNO_LOCAL">
+    <Title>错误编号为本地编号</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />不要将 RAPID 用户错误编号 <arg format="%s" ordinal="2" /> 说明为例行程序中的本地编号。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>检查 errnum 说明。</Actions>
+  </Message>
+  <Message number="780" eDefine="SYS_ERR_ARL_DATAOBJ_MISSING">
+    <Title>数据对象错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />指令 <arg format="%s" ordinal="3" /> 的自变量 <arg format="%s" ordinal="2" /> 无有效数据对象。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>检查是否存在正确的数据对象。</Actions>
+  </Message>
+  <Message number="781" eDefine="SYS_ERR_ARL_FILE_INCORR">
+    <Title>文件错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />参数 <arg format="%s" ordinal="2" /> 不符合任何已加载文本文件。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>检查文本文件是否已（正确）安装。</Actions>
+  </Message>
+  <Message number="782" eDefine="SYS_ERR_ARL_NOP_WRITE">
+    <Title>模式错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />文件或串行信道未打开，无法进行写操作。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>检查文件或串行信道打开的方式。</Actions>
+  </Message>
+  <Message number="783" eDefine="SYS_ERR_ARL_NOP_CHAR">
+    <Title>模式错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />在基于字符的模式中，文件或串行信道未打开。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>检查文件或串行信道打开的方式。</Actions>
+  </Message>
+  <Message number="784" eDefine="SYS_ERR_ARL_NOP_BIN">
+    <Title>模式错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />在二元模式中，文件或串行信道未打开。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>检查文件或串行信道打开的方式。</Actions>
+  </Message>
+  <Message number="785" eDefine="SYS_ERR_ARL_NOP_READ">
+    <Title>模式错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />文件或串行信道未打开，无法进行读操作。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>检查文件或串行信道打开的方式。</Actions>
+  </Message>
+  <Message number="786" eDefine="SYS_ERR_ARL_INCONS_VAL">
+    <Title>读取错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />一个或多个字节未正确读取。读取数据的值可能<p />不一致。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>由于所接收消息的校验和与发送时计算的不同，消息数据无法使用。</Consequences>
+    <Causes>原因可能是：<p />- 通信问题<p />- 发送 WriteAnyBin 和接收 ReadAnyBin 之间的 WriteAnyBin - ReadAnyBin 软件版本不同。</Causes>
+    <Actions>通信问题错误恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="787" eDefine="SYS_ERR_ARL_USER_FRAME">
+    <Title>用户帧错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />无法获取经过协调的用户帧。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="788" eDefine="SYS_ERR_ARL_AXIS_INIT">
+    <Title>轴错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />单轴未正确初始化。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="789" eDefine="SYS_ERR_ARL_FILEPATH_TOOLNG">
+    <Title>限制错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />文件路径的变元字串长度过长。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>整个系统文件路径允许的最大字串长度为 <arg format="%s" ordinal="3" /> 个字符。<p /></Causes>
+    <Actions>缩短路径长度。</Actions>
+  </Message>
+  <Message number="790" eDefine="SYS_ERR_ARL_STRTOOLNG_ROL">
+    <Title>值错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />RAPID 字串过长。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>字串值超过最大允许长度。</Causes>
+    <Actions>重写程序，使用更短的字串。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="791" eDefine="SYS_ERR_ARL_IOENOSPC_ROL">
+    <Title>I/O 错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />设备（文件名 <arg format="%s" ordinal="2" />）上无剩余空间。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="792" eDefine="SYS_ERR_ARL_IOERRNO_ROL">
+    <Title>I/O 错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />路径 <arg format="%s" ordinal="2" />中文件打开/访问错误。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>－检查权限，看文件是否设置了写保护。<p />－检查文件或目录是否存在。<p />－检查设备上是否存在任何剩余空间。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="793" eDefine="SYS_ERR_ARL_TXDATA_MISSING">
+    <Title>错误安装文本表。</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />文本文件中没有或存在错误的文本资源名称或索引编号。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>某些文本表的内容可能已损坏。</Consequences>
+    <Actions>纠正错误，冷启动系统，然后重试。</Actions>
+  </Message>
+  <Message number="794" eDefine="SYS_ERR_ARL_TXINDEX_EXIST">
+    <Title>错误安装文本表。</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />系统中已存在文本资源内的指定索引。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>－索引编号存在错误。<p />－文件已重复安装两次。</Causes>
+    <Actions>如果索引中存在错误，请纠正错误，冷启动系统，然后重试。</Actions>
+  </Message>
+  <Message number="795" eDefine="SYS_ERR_ARL_TXMEMFULL">
+    <Title>错误安装文本表。</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />文本表的系统存储器已满。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>减少通过 RAPID 安装的用户定义字串的数量。冷启动系统，然后重试。</Actions>
+  </Message>
+  <Message number="796" eDefine="SYS_ERR_ARL_CABQUE_FULL">
+    <Title>过载错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />系统过载，因此实际命令无法及时准备就绪。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions> 降低主计算机载荷，例如通过以下方法：<p /> - 在 RAPID 循环中增加 WaitTime 值<p /> - 增加 I/O 信号的过滤时间<p /> - 避免中断循环</Actions>
+  </Message>
+  <Message number="797" eDefine="SYS_ERR_ARL_IO_CON_LOST_NOT_TRIGG">
+    <Title>I/O 错误</Title>
+    <Description>无法在单元 <arg format="%s" ordinal="2" />上访问 I/O 信号 <arg format="%s" ordinal="1" /> 。 <p /></Description>
+    <Causes>与 I/O 模块的连接中断。</Causes>
+    <Actions>重新与 I/O 单元建立连接。</Actions>
+  </Message>
+  <Message number="798" eDefine="SYS_ERR_ARL_SYSTEM_RLEXE">
+    <Title>系统访问错误</Title>
+    <Description>
+      <arg format="%s" ordinal="1" />
+      <p />
+    </Description>
+  </Message>
+  <Message number="799" eDefine="SYS_ERR_ARL_SIG_NOT_DEF">
+    <Title>执行错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />TestSignRead 正在使用没有定义信号的通道。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>使用 TestSignDefine 定义通道的信号。</Actions>
+  </Message>
+  <Message number="800" eDefine="SYS_ERR_ARL_TOOL">
+    <Title>工具错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />工具中的组件 robhold 未得到正确的值。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>更改 robhold 的值。<p />如果机器人握住工具，该值应为 TRUE。如果机器人未握住工具（固定工具），该值应为 FALSE。</Actions>
+  </Message>
+  <Message number="801" eDefine="SYS_ERR_ARL_CALC_TOOL_FRAME">
+    <Title>计算错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />无法计算工具框架。<p />程序引用 <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Causes>用所选的接近点无法计算工具框架。</Causes>
+    <Actions>请选择尽可能精确的新接近点。 </Actions>
+  </Message>
+  <Message number="802" eDefine="SYS_ERR_ARL_SDB_FULL">
+    <Title>执行错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />无法执行预订。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>无足够的剩余存储空间，无法再次预订该变量。</Causes>
+    <Actions>要继续操作，必须将 PCP 移至 main!</Actions>
+  </Message>
+  <Message number="803" eDefine="SYS_ERR_ARL_TOO_LONG_ERR_MESS">
+    <Title>错误信息过长</Title>
+    <Description>以下错误信息因过长而被剪裁。<p />这意味着您将无法读取完整的消息。<p /></Description>
+  </Message>
+  <Message number="804" eDefine="SYS_ERR_ARL_NO_FOLLOW">
+    <Title>自变量错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p /> stoppointdata 中的自变量 "type" 可能不是指令 MoveJ、MoveAbsJ 和 MoveExtJ 中的 followtime。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>将 "type" 更改为 inpos 或 stoptime。</Actions>
+  </Message>
+  <Message number="805" eDefine="SYS_ERR_ARL_MOCGENINSTR">
+    <Title>引导错误：</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />MocGenInstr 错误。<p />请参阅以往消息查明原因。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="806" eDefine="SYS_ERR_ARL_IOFGENINSTR">
+    <Title>IOF 错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />IofGenInstr 错误<p />请参阅以往消息查明原因。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="807" eDefine="SYS_ERR_ARL_FILEEXIST">
+    <Title>文件错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />文件 <arg format="%s" ordinal="2" /> 已经存在。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>可重命名或复制：<p />更改文件名或删除现有文件。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="811" eDefine="SYS_ERR_ARL_MSG_NOUNIT">
+    <Title>与单元无联络</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />没有与单元接触。<p />程序引用： <arg format="%s" ordinal="2" /></Description>
+    <Causes>- 该单元可能已被禁用 ( IODisable "UNIT1", 1; )<p />- 该单元没有电源。</Causes>
+  </Message>
+  <Message number="812" eDefine="SYS_ERR_ARL_NOT_ALLOWED_MODE">
+    <Title>执行错误 </Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />不允许在 non_motion_execution_ mode模式运行该程序。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>更改模式 </Actions>
+  </Message>
+  <Message number="813" eDefine="SYS_ERR_ARL_MECUNIT_NOCONTROL">
+    <Title>执行错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />不允许任务执行指令 <arg format="%s" ordinal="2" />。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>未配置控制机械单元的任务。</Causes>
+    <Actions>更改配置或删除指令。</Actions>
+  </Message>
+  <Message number="814" eDefine="SYS_ERR_ARL_REGAIN_REJECTED">
+    <Title>执行错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />StartMove 无法得到恢复距离值。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>应用程序错误。</Causes>
+    <Actions>请重新启动路径。<p />恢复： <arg format="%s" ordinal="3" /><p /></Actions>
+  </Message>
+  <Message number="815" eDefine="SYS_ERR_ARL_INDXXX_AXNO">
+    <Title>不存在的轴编号</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />机械单元的未知轴编号 <arg format="%s" ordinal="2" /><p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Actions>检查变元 Axis 的值。</Actions>
+  </Message>
+  <Message number="816" eDefine="SYS_ERR_ARL_ROLGENINSTR">
+    <Title>RolGenInstr 错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />指令 RolGenInstr 出错。<p />参考前一用户或内部错误消息了解原因。<p />程序引用 <arg format="%s" ordinal="2" /><p />恢复： <arg format="%s" ordinal="3" /><p /></Description>
+  </Message>
+  <Message number="1000" eDefine="SYS_ERR_ARL_ITMSRC_EXISTS">
+    <Title>存在项目源</Title>
+    <Description>项目源 <arg format="%s" ordinal="1" /> 已存在。两个项目资源不能同名。<p /></Description>
+  </Message>
+  <Message number="1001" eDefine="SYS_ERR_ARL_ITMSRC_NO_NAME">
+    <Title>不是有效的名称。</Title>
+    <Description>选择 <arg format="%s" ordinal="1" /> 或 <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="1002" eDefine="SYS_ERR_ARL_ITMSRC_BUFF_SIZE_EXCEEDED">
+    <Title>缓冲容量已超过</Title>
+    <Description>项目源 <arg format="%s" ordinal="1" /> 存在致命内部错误。请尝试热启动或冷启动。请报告该错误。<p /></Description>
+  </Message>
+  <Message number="1003" eDefine="SYS_ERR_ARL_ITMSRC_OBJ_UNDEF">
+    <Title>项目源未定义</Title>
+    <Description>项目源目标未定义。<p /></Description>
+  </Message>
+  <Message number="1004" eDefine="SYS_ERR_ARL_ITMSRC_INTERNAL_ERROR">
+    <Title>Itmsrc 内部错误</Title>
+    <Description>项目源 <arg format="%s" ordinal="1" /> 存在内部错误。<p />错误类型： <arg format="%s" ordinal="2" />。 <p /></Description>
+  </Message>
+  <Message number="1005" eDefine="SYS_ERR_ARL_ITMSRC_FLUSH_FIRST">
+    <Title>请先刷新项目源</Title>
+    <Description>必须刷新项目源 <arg format="%s" ordinal="1" /> 后再使用它。<p /></Description>
+  </Message>
+  <Message number="1006" eDefine="SYS_ERR_ARL_ITMSRC_ACK_FIRST">
+    <Title>先肯定项目目标</Title>
+    <Description>必须肯定项目目标后才能重新执行 GetItmTgt(s) 指令。<p />项目源 <arg format="%s" ordinal="1" /> 出错。 <p /></Description>
+  </Message>
+  <Message number="1007" eDefine="SYS_ERR_ARL_ITMSRC_ITMTGT_BUFF_FULL">
+    <Title>项目目标缓冲器已满</Title>
+    <Description>项目源 <arg format="%s" ordinal="1" /> 的项目目标缓冲器已满。<p /></Description>
+  </Message>
+  <Message number="1008" eDefine="SYS_ERR_ARL_ITMSRC_CNV_EIO_INIT">
+    <Title>传送带 I/O 初始化错误</Title>
+    <Description>项目源 <arg format="%s" ordinal="1" />，即传送带<p /><arg format="%s" ordinal="2" /> 的 I/O 信号初始化出错。I/O 信号名称 <arg format="%s" ordinal="3" />。 <p /></Description>
+  </Message>
+  <Message number="1009" eDefine="SYS_ERR_ARL_ITMSRC_CNV_DOES_NOT_EXIST">
+    <Title>传送带不存在</Title>
+    <Description>项目源 <arg format="%s" ordinal="1" /> 存在错误传送带 <arg format="%s" ordinal="2" /> 不存在。<p /></Description>
+  </Message>
+  <Message number="1010" eDefine="SYS_ERR_ARL_ITMSRC_CNV_NO_NAME">
+    <Title>传送带名称未给定</Title>
+    <Description>项目源 <arg format="%s" ordinal="1" /> 存在错误传送带名称未指定<p /></Description>
+  </Message>
+</Domain>

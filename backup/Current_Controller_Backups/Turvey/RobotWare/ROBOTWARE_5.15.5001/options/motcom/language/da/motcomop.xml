@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Resource Name="MOTCOM" Language="da">
+  <Text Name="100">
+    <Value>Servicerutine for motorkommutering</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="101">
+    <Value>Kommuteringstilstand er slået fra</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="102">
+    <Value>Fortsæt</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="103">
+    <Value>"Vil du kommutere en anden akse?"</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="104">
+    <Value>"Aktiver enheden i jogging-vinduet"</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="105">
+    <Value>Advarsel</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="106">
+    <Value>Kommuteringstilstanden for den mekaniske enhed</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="107">
+    <Value>bliver aktiveret nu, og bremserne slippes.</Value>
+    <Comment>Maximum length 55 chars. Part two of sentence starting with item 106</Comment>
+  </Text>
+  <Text Name="108">
+    <Value>Vær opmærksom på ukontrolleret aksebevægelse.</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="109">
+    <Value>Det er ikke muligt at vælge mekaniske enheder fra denne opgave</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="110">
+    <Value>Vælg akse</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="111">
+    <Value>Angiv det aksenummer, der skal kommuteres</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="112">
+    <Value>Tryk på OK for at sætte strøm på motoren</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="113">
+    <Value>for at flytte den til kommuteringspositionen.</Value>
+    <Comment>Maximum length 55 chars. Part two of sentence starting with item 112</Comment>
+  </Text>
+  <Text Name="114">
+    <Value>Flyt til kommuteringsposition</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="115">
+    <Value>Aktuel resolvervinkel: </Value>
+    <Comment>Maximum length 55 chars. Numerical value will be appended</Comment>
+  </Text>
+  <Text Name="116">
+    <Value>Tryk på Kommut. for at kommutere eller på Flyt for at flytte motoren trinvist</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="117">
+    <Value>Kommuter eller flyt</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="118">
+    <Value>Kommuter</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="119">
+    <Value>"Tryk på OK for at kommutere motoren"</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="120">
+    <Value>Kommutering af motoren er afsluttet</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="121">
+    <Value>Flyt motorposition</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="122">
+    <Value>"Tryk på Flyt- eller Flyt+ for at flytte motoren"</Value>
+    <Comment>Maximum length 55 chars. Do not translate Step+ and Step-.</Comment>
+  </Text>
+  <Text Name="123">
+    <Value>Nulstil kommuteringstilstand</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="124">
+    <Value>Skal kommuteringstilstanden afsluttes?</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="125">
+    <Value>Kommuteringstilstand er slået fra</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="126">
+    <Value>"Vælg mekanisk enhed"</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="127">
+    <Value>"Systemet skal være i manuel tilstand"</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="128">
+    <Value>Servicerutinen hjælper med at kommutere motorer.</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="129">
+    <Value>Læs dokumentationen, før du fortsætter.</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="130">
+    <Value>Nulstil</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="131">
+    <Value>OK</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="132">
+    <Value>Afbryd</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="133">
+    <Value>Kommut.</Value>
+    <Comment>Maximum length 7 chars. Short name for Commutation</Comment>
+  </Text>
+  <Text Name="134">
+    <Value>Flyt</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="135">
+    <Value>Flyt-</Value>
+    <Comment>Maximum length 7 chars. Step with minus sign.</Comment>
+  </Text>
+  <Text Name="136">
+    <Value>Flyt?</Value>
+    <Comment>Maximum length 7 chars. Step with plus sign.</Comment>
+  </Text>
+  <Text Name="137">
+    <Value>Ja</Value>
+    <Comment>Maximum length 7 chars.</Comment>
+  </Text>
+  <Text Name="138">
+    <Value>Nej</Value>
+    <Comment>Maximum length 7 chars.</Comment>
+  </Text>
+  <Text Name="139">
+    <Value>Aktiver mekanisk enhed</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="140">
+    <Value>Tryk på Aktiver for at aktivere den mekaniske enhed.</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="141">
+    <Value>Aktiver</Value>
+    <Comment>Maximum length 7 chars.</Comment>
+  </Text>
+</Resource>

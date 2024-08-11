@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Resource Name="MOTCOM" Language="cs">
+  <Text Name="100">
+    <Value>Servisní rutina komutace motoru</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="101">
+    <Value>Rezim komutace je vypnutý</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="102">
+    <Value>Pokracovat</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="103">
+    <Value>"Chcete komutovat jinou osu?"</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="104">
+    <Value>"Aktivovat jednotku v okne rucního prestavení"</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="105">
+    <Value>Varování</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="106">
+    <Value>Režim komutace pro mechanickou jednotku</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="107">
+    <Value>bude nyní aktivován a brzdy budou uvolneny.</Value>
+    <Comment>Maximum length 55 chars. Part two of sentence starting with item 106</Comment>
+  </Text>
+  <Text Name="108">
+    <Value>Venujte pozornost nekontrolovanému pohybu os.</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="109">
+    <Value>Z této úlohy nelze vybrat zádné mechanické jednotky.</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="110">
+    <Value>Vybrat osu</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="111">
+    <Value>Zadejte císlo osy, která bude komutovat.</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="112">
+    <Value>Klepnutím na tlacítko OK bude do motoru zaveden proud</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="113">
+    <Value>za úcelem jeho presunutí do pozice komutace.</Value>
+    <Comment>Maximum length 55 chars. Part two of sentence starting with item 112</Comment>
+  </Text>
+  <Text Name="114">
+    <Value>Presunout do pozice komutace</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="115">
+    <Value>Aktuální úhel dekodéru: </Value>
+    <Comment>Maximum length 55 chars. Numerical value will be appended</Comment>
+  </Text>
+  <Text Name="116">
+    <Value>Kom.: Provede komutaci. Krok: krokový posun motoru.</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="117">
+    <Value>Komutovat nebo krokovat</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="118">
+    <Value>Komutovat</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="119">
+    <Value>"Klepnutím na tlacítko OK provedete komutaci motoru."</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="120">
+    <Value>Komutace motoru je dokoncena.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="121">
+    <Value>Krokovat pozici motoru</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="122">
+    <Value>"Tlacítky Krok- a Krok+ lze presunout motor."</Value>
+    <Comment>Maximum length 55 chars. Do not translate Step+ and Step-.</Comment>
+  </Text>
+  <Text Name="123">
+    <Value>Resetovat rezim komutace</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="124">
+    <Value>Chcete ukoncit rezim komutace?</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="125">
+    <Value>Rezim komutace je vypnutý</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="126">
+    <Value>"Vybrat mechanickou jednotku"</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="127">
+    <Value>"Systém musí být v rucním rezimu."</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="128">
+    <Value>Servisní rutina usnadnuje komutaci motoru.</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="129">
+    <Value>Nez budete pokracovat, prectete si dokumentaci.</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="130">
+    <Value>Reset</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="131">
+    <Value>OK</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="132">
+    <Value>Zrusit</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="133">
+    <Value>Kom.</Value>
+    <Comment>Maximum length 7 chars. Short name for Commutation</Comment>
+  </Text>
+  <Text Name="134">
+    <Value>Krok</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="135">
+    <Value>Krok-</Value>
+    <Comment>Maximum length 7 chars. Step with minus sign.</Comment>
+  </Text>
+  <Text Name="136">
+    <Value>Krok+</Value>
+    <Comment>Maximum length 7 chars. Step with plus sign.</Comment>
+  </Text>
+  <Text Name="137">
+    <Value>Ano</Value>
+    <Comment>Maximum length 7 chars.</Comment>
+  </Text>
+  <Text Name="138">
+    <Value>Ne</Value>
+    <Comment>Maximum length 7 chars.</Comment>
+  </Text>
+  <Text Name="139">
+    <Value>Aktivovat mechanickou jednotku</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="140">
+    <Value>Tlacítkem Akt. aktivujte mechanickou jednotku.</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="141">
+    <Value>Akt.</Value>
+    <Comment>Maximum length 7 chars.</Comment>
+  </Text>
+</Resource>

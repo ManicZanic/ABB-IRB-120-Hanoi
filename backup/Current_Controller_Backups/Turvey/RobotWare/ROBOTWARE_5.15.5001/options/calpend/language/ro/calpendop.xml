@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Resource Name="CALPEND" Language="rum">
+  <Text Name="200">
+    <Value>Nu ati efectuat o calibrare.</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="201">
+    <Value>Iesire</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="202">
+    <Value>OK</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="203">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="204">
+    <Value>Axa</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="205">
+    <Value>Apasati OK pentru a termina procesul</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="206">
+    <Value>Robot în pozitie de calibrare</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="207">
+    <Value>Pentru a calibra robotul:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="208">
+    <Value>1. Comutati pe meniul Diverse</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="209">
+    <Value>2. Alegeti Întretinere-Afisare-Calibrare</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="210">
+    <Value>3. Alegeti Calibrare-Calibrare fina</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="211">
+    <Value>4. Reporniti acest program</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="212">
+    <Value>5. Apasati OK dupa efectuarea pasilor 1-4</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="213">
+    <Value>Revoc.</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="214">
+    <Value>Apasati OK pentru continuare</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="215">
+    <Value>Apasati OK pentru iesire</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="216">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="217">
+    <Value>Treceti Levelmeter 2000 în modul A B</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="218">
+    <Value>limita ajustare depasita</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="219">
+    <Value>Amplasati unitatea pe baza</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="220">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="221">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="222">
+    <Value>Atentie: OK va porni miscarea robotului</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="223">
+    <Value>Niveluri referinta de baza...</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="224">
+    <Value>Ref</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="225">
+    <Value>Referinte de baza pregatite</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="226">
+    <Value>Amplasati unitatea pe axa 1</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="227">
+    <Value>Axa egalizare</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="228">
+    <Value>Valoare corectie [deg]</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="229">
+    <Value>pregatita</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="230">
+    <Value>Plasati unitatea pe spatele axei 2</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="231">
+    <Value>Plasati unitatea pe fata axei 2</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="232">
+    <Value>Amplasati unitatea pe arborele tubular</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="233">
+    <Value>Atentie! Axa 4 se va misca</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="234">
+    <Value>-90 grade înainte de reglare</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="235">
+    <Value>Amplasati unitatea pe flansa</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="236">
+    <Value>Atentie! Axele 4 si 5 se vor misca</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="237">
+    <Value>Amplasati unitatea sub flansa</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="238">
+    <Value>Precizie obligatorie nerealizata</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="239">
+    <Value>  OK     : continuati procesul</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="240">
+    <Value>  Revocare : iesiti din proces</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="241">
+    <Value>Efectuati o alegere</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="242">
+    <Value>Optiuni existente</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="243">
+    <Value>Tip de robot:        .</Value>
+    <Comment>Text length 20 chars (end with dot)</Comment>
+  </Text>
+  <Text Name="244">
+    <Value>Robot:             .</Value>
+    <Comment>Text length 20 chars (end with dot)</Comment>
+  </Text>
+  <Text Name="245">
+    <Value>Axe alese:       .</Value>
+    <Comment>Text length 20 chars (end with dot)</Comment>
+  </Text>
+  <Text Name="246">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="247">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="248">
+    <Value>Accept. optiunile exist. sau modificati</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="249">
+    <Value>Iesire</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="250">
+    <Value>Modif.</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="251">
+    <Value>Accept.</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="252">
+    <Value>[0]-Pag. preced.     Pag. urm.-[9]</Value>
+    <Comment>Length must be 35 chars</Comment>
+  </Text>
+  <Text Name="253">
+    <Value>Aleg. tipul de robot cu tast. numerica:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="254">
+    <Value>Alegere ilegala, încercati din nou!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="255">
+    <Value>Tipul de robot ales este:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="256">
+    <Value>[1]-Axa 1            Axa 2-[2]</Value>
+    <Comment>Length must be 32 chars</Comment>
+  </Text>
+  <Text Name="257">
+    <Value>[3]-Axa 3            Axa 4-[4]</Value>
+    <Comment>Length must be 32 chars</Comment>
+  </Text>
+  <Text Name="258">
+    <Value>[5]-Axa 5            Axa 6-[6]</Value>
+    <Comment>Length must be 32 chars</Comment>
+  </Text>
+  <Text Name="259">
+    <Value>[8]-Toate           Sterg.-[9]</Value>
+    <Comment>Length must be 32 chars</Comment>
+  </Text>
+  <Text Name="260">
+    <Value>[0]-Acceptare</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="261">
+    <Value>Axe alese</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="262">
+    <Value>Alegeti axele de calibrat:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="263">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="264">
+    <Value>Reîncercati</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="265">
+    <Value>Calibrare terminata cu succes!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="266">
+    <Value>Calibrare ESUATA</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="267">
+    <Value>Salvati parametrii calib.cfg?</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="268">
+    <Value>Nu</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="269">
+    <Value>Da</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="270">
+    <Value>Selectati dispozitivul I/O de utilizat</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="271">
+    <Value>Inserati o discheta sau eliminati</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="272">
+    <Value>protectia la scriere</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="273">
+    <Value>Operatie salvare esuata</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="274">
+    <Value>Calibrare efectuata</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="275">
+    <Value> de pendulul de calibrare</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="276">
+    <Value>Decalaje rezolver înainte de calibrare:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="277">
+    <Value>Decalaje rezolver dupa calibrare:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="278">
+    <Value>Verificati sa fie activat Levelmeter</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="279">
+    <Value>Avertizare! Calib. cere instrum. tool0</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="280">
+    <Value>Demontati instrumentul daca e prezent</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="281">
+    <Value>Amplasati unitatea pe placa de ajustare</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="282">
+    <Value>Întoarceti unitatea cu 180 de grade</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="283">
+    <Value>Niveluri decalaj...</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="284">
+    <Value>Referinta decalaj zero pregatita</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="285">
+    <Value>mai mult de o rotatie de axa</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="286">
+    <Value>din pozitia de sincronizare originala</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="287">
+    <Value>Comutare pe calibrare fina manuala</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="288">
+    <Value>Alegeti calibr. fina auto sau manuala</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="289">
+    <Value>Manuala</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="290">
+    <Value>Auto</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="291">
+    <Value>Selectati unitatea mecanica de calibrat</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="292">
+    <Value>Nicio unit. mec. valida sel., abandon.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="293">
+    <Value>Asteptati finalizarea calibrarii fine!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="294">
+    <Value>Calibrare fina finalizata cu succes!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="295">
+    <Value>Decalaj zero - calibrare senzori</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="296">
+    <Value>Ampl. unit. pe placa de ajust. decalaj</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="297">
+    <Value>Întoarceti unitatea cu 180 de grade</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="298">
+    <Value>Omitere calibrare decalaj zero</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="299">
+    <Value>Atentie! Axa 6 se va misca</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="300">
+    <Value>+82,5 grade înainte de reglare</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="301">
+    <Value>Axa departe de 0 grade, abandon.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="302">
+    <Value>Pozitie robot:    .</Value>
+    <Comment>Text length 20 chars (end with dot)</Comment>
+  </Text>
+  <Text Name="303">
+    <Value>Poz</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="304">
+    <Value>Axe</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="305">
+    <Value>Pozitii alternative:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="306">
+    <Value>[0]-Elimin. toate poz. def. de utiliz.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="307">
+    <Value>[1]-Calib Ax1 cu Ax2-6 utilizator</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="308">
+    <Value>[2]-Calib Ax2 cu Ax3-6 utilizator</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="309">
+    <Value>[3]-Calib Ax3 cu Ax4-6 utilizator</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="310">
+    <Value>[9]-Înapoi</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="311">
+    <Value>Alegeti o alternativa:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="312">
+    <Value>Axa în pozitie definita de utilizator</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="313">
+    <Value>Elimin. pozitia înainte de a adauga axa</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="314">
+    <Value>Pilotati axele</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="315">
+    <Value>în pozitia dorita</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="316">
+    <Value>Reglati senzorii pe zero grade</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="317">
+    <Value>Atentie! Nu miscati placa</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="318">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="319">
+    <Value>Vreti sa folositi metoda basculanta</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="320">
+    <Value>pentru calibrarea axelor 3, 4 si 5?</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="321">
+    <Value>Este necesara o carcasa de pendul</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="322">
+    <Value>care poate fi montata pe flansa</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="323">
+    <Value>fara adaptor</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="324">
+    <Value>Axa egalizare 3:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="325">
+    <Value>Pendulul trebuie amplasat pe</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="326">
+    <Value>flansa fara adaptor când</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="327">
+    <Value>a fost selectata metoda basculanta</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="328">
+    <Value>Amplasati pendulul pe flansa</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="329">
+    <Value>Axa egalizare 4:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="330">
+    <Value>Axa egalizare 5:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="331">
+    <Value>Axa egalizare 6:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="332">
+    <Value>Atentie!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="333">
+    <Value>Calibrarea fina auto functioneaza doar</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="334">
+    <Value>pentru RW 4.0.100 sau superior</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="335">
+    <Value>Omitere</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="336">
+    <Value>Loc calibrare:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="337">
+    <Value>Productie la Västerås</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="338">
+    <Value>sau</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="339">
+    <Value>Calibrare de întretinere</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="340">
+    <Value>prod</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="341">
+    <Value>întret.</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="342">
+    <Value>Bun venit la Calibration pendulum II</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="343">
+    <Value>Util. pt. verif. decalaj senzori pendul</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="344">
+    <Value>daca pendulul nu a fost utilizat recent</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="345">
+    <Value>Plasati unitatea deasupra axei 3</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="346">
+    <Value>Plasati bara între pendul si buton</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="347">
+    <Value>Scoateti bara din flansa</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="348">
+    <Value>Atentie! Miscare ax6 la zero grade</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="349">
+    <Value>Bara se va rupe daca ramâne pe pozitie</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="350">
+    <Value>Senzorul nu urm. miscarea robotului</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="351">
+    <Value>Verificati instalarea pendulului</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="352">
+    <Value>Pozitie calibrare gasita cu axa</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="353">
+    <Value>grade</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="354">
+    <Value>se va misca acum catre</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="355">
+    <Value>Apas. OK si scan. cod. de bare nr. ser.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="356">
+    <Value>Omitere scanare cod de bare!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="357">
+    <Value>Nr. serial trebuie introdus manual</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="358">
+    <Value>Se asteapta numarul serial...</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="359">
+    <Value>Numar serial scanat:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="360">
+    <Value>Rescan.</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="361">
+    <Value>Eroare citire cod de bare!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="362">
+    <Value>Cod de bare citit:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="363">
+    <Value>Format obligatoriu</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="364">
+    <Value>Apas. reîncerc. pt. a rescana cod. bare</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="365">
+    <Value>Calibrati fin robotul si apasati OK</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="366">
+    <Value>Alegeti ABB-Calibrare</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="367">
+    <Value>Alegeti rob. de calibrat, de ex. ROB_1</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="368">
+    <Value>Alegeti Param. calibrare-Calibr. fina</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="369">
+    <Value>Selectati axa si apasati Calibrare</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="370">
+    <Value>Porniti din nou acest program</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="371">
+    <Value>Meniu principal calibrare</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="372">
+    <Value>Calibrare axa</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="373">
+    <Value>Pentru a calibra Ax1:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="374">
+    <Value>Revenire la Meniu principal sau Iesire?</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="375">
+    <Value>Reven.</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="376">
+    <Value>Calibrare de referinta initiala</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="377">
+    <Value>Alegere alternativa:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="378">
+    <Value>Definire Pozitie referinta</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="379">
+    <Value>Util. Pozitie refer. dupa întretinere</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="380">
+    <Value>Definiti axa care a fost întretinuta</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="381">
+    <Value>Manseta</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="382">
+    <Value>Referinta initiala exista deja!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="383">
+    <Value>Eliminati</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="384">
+    <Value>si apasati OK</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="385">
+    <Value>Diferenta referinta (instrument - Baza)</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="386">
+    <Value>Senzor</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="387">
+    <Value>Rezultat scris pe</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="388">
+    <Value>Pozitie referinta memorata cu succes!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="389">
+    <Value>nu exista!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="390">
+    <Value>Referinta initiala trebuie sa fie</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="391">
+    <Value>întâi definita, abandon</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="392">
+    <Value>Eroare citire</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="393">
+    <Value>abandon</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="394">
+    <Value>Asigurati-va ca axa întretinuta</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="395">
+    <Value>este calibrata fin!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="396">
+    <Value>Pilotarea axelor este permisa</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="397">
+    <Value>Pilot. robotul spre poz. ref. initiala</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="398">
+    <Value>Pozitia axei 1 va fi citita din fisier</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="399">
+    <Value>Avertizare! Rob. departe de poz. init.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="400">
+    <Value>Apas. HOME pt. miscare în poz. initiala</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="401">
+    <Value>Pilotati axele în caz de obstacole</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="402">
+    <Value>Pozitie initiala</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="403">
+    <Value>Elimin. si remontati pendulul pe instr.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="404">
+    <Value>Niveluri referinta initiala...</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="405">
+    <Value>Referinte initiale pregatite</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="406">
+    <Value>Avertizare! Diferenta referinta de baza</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="407">
+    <Value>RefA-StoredRefA=</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="408">
+    <Value>RefB-StoredRefB=</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="409">
+    <Value>Puteti continua calibrarea, dar trebuie</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="410">
+    <Value>verificat decalajul senzorului</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="411">
+    <Value>Diferenta:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="412">
+    <Value>Senzor</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="413">
+    <Value>Întâi pil. rob. spre val. tinta senz.:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="414">
+    <Value>Valoare tinta</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="415">
+    <Value>Apoi calibrati fin axa si apasati Test</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="416">
+    <Value>Test</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="417">
+    <Value>Precizia este acceptabila!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="418">
+    <Value>Actualizare memorie SMB pentru axa</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="419">
+    <Value>1. Calibration Pendulum II</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="420">
+    <Value>2. Calibrare referinta</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="421">
+    <Value>Alegeti alin. man. sau automata a axei:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="422">
+    <Value>Alegeti axa pt. aliniere automata:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="423">
+    <Value>Calibrati alta axa?</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="424">
+    <Value>Meniu calibrare</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="425">
+    <Value>Elimin. si remontati pendulul pe axa 2</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="426">
+    <Value>lipsa</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="427">
+    <Value>si</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="428">
+    <Value>nou</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="429">
+    <Value>Validare fisier memorat</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="430">
+    <Value>Fisier OK</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="431">
+    <Value>Validare valori calibrare</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="432">
+    <Value>Montajul senzorului este diferit de cel</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="433">
+    <Value>din momentul memorarii referintei!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="434">
+    <Value>Imposibil de continuat calibrarea</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="435">
+    <Value>2 axe alese pentru</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="436">
+    <Value>calibrarea de referinta</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="437">
+    <Value>Trebuie reiterate înca o data</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="438">
+    <Value>Iterare</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="439">
+    <Value>din</Value>
+    <Comment>Maximum length 39 chars, Context: Iteration 1 of 2 for axis 5</Comment>
+  </Text>
+  <Text Name="440">
+    <Value>pentru axa</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="441">
+    <Value>Dif. calibr. motor: [Memorata- Curenta]:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="442">
+    <Value>rad</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="443">
+    <Value>Referinte valide</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="444">
+    <Value>REFERINTE NEVALIDE</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="445">
+    <Value>Prea multe axe modificate</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="446">
+    <Value>Amplasati pendulul pe instrument</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="447">
+    <Value>Plasati unitatea deasupra refer. axei 2</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="448">
+    <Value>Axa 2 se va misca spre</Value>
+    <Comment>Maximum length 39 chars, Context: Axis 2 will move to xx deg</Comment>
+  </Text>
+  <Text Name="449">
+    <Value>Axa 2 trebuie sa fie la 90 de grade</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="450">
+    <Value>Pentru masurile de referinta</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="451">
+    <Value>Calibrate with unit below flange</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="452">
+    <Value>Calibrate with unit on flange adapter</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="453">
+    <Value>Reference measurment on tubeshaft</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="454">
+    <Value>Reference measurment on tool</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="455">
+    <Value>Place Unit on tool</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="456">
+    <Value>Remove and remount Unit on tubeshaft</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+</Resource>

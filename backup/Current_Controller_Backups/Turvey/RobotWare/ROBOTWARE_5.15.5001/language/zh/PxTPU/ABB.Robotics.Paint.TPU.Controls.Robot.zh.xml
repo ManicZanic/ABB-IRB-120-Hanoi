@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.TPU.Controls.Robot">
+  <Strings>
+    <String ID="gridIOSignals.Header.Name" Text="名称" />
+    <String ID="gridIOSignals.Header.Type" Text="类型" />
+    <String ID="gridIOSignals.Header.Value" Text="值" />
+    <String ID="gridIOSignals.Header.Name.Simlulated" Text="[仿真的]" />
+  </Strings>
+</Resources>

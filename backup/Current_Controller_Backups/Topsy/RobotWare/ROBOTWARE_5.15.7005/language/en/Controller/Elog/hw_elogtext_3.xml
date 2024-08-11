@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="HW" domainNo="3" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="7080" max="7249">
+  <Message number="7080" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_CFG_FAULT">
+    <Title>Purge configuration not valid.</Title>
+    <Description>The Purge Time Key on Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> X19 is not valid. </Description>
+    <Consequences>Default time (300s) is used. <p /><p /></Consequences>
+    <Causes>Faulty or missing Purge Time Key.</Causes>
+    <Actions>1. Check that the Purge Time Key is correctly mounted.<p />2. Replace Purge Time Key.</Actions>
+  </Message>
+  <Message number="7081" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_UNAC_TIMER_DIV2">
+    <Title>Purge timers differ</Title>
+    <Description>Unacceptable divergence between CPLD and FPGA firmware on Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> purge timers. </Description>
+    <Consequences>The purge timer will be restarted.</Consequences>
+    <Actions>Replace MIB if faulty.</Actions>
+  </Message>
+  <Message number="7082" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_OUT_FAULT">
+    <Title>Divergence between PIB and MIB outputs</Title>
+    <Description>Process Interface Board (PIB) and Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> are not agreed concerned to output status for purge relay and power relay. </Description>
+    <Consequences>Purge sequence is restarted.</Consequences>
+  </Message>
+  <Message number="7083" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_SHUTDOWN">
+    <Title>Glitch in purge system</Title>
+    <Description>Purge fault reported from Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" />. The Purging system has detected pressure not OK from sensors. Motors and Paint Equipments are switched off and Main Computer may be informed to disconnect the Serial Measurement Unit (SMU). Depends on signal timing. </Description>
+    <Consequences>Motors and Paint Equipments are turned off, run chain opened and maybe also disconnected SMU.</Consequences>
+    <Actions>1. Check air supply.<p />2. Check that air outlet is not blocked.<p />3. Check purge sensors and cabling for purge sensors. </Actions>
+  </Message>
+  <Message number="7090" eDefine="SYS_ERR_HW_AUX_PTC_ERROR">
+    <Title>Temp. too high, sensor <arg format="%i" ordinal="1" /></Title>
+    <Description>System overheat detected on Manipulator Controller Board (MCOB) <arg format="%i" ordinal="2" />. Sensors 1-7: motor 1-7. Sensor 8: Serial measurement board. Run chain has been opened.</Description>
+    <Actions>Wait until the overheated motor or equipment has cooled down.</Actions>
+  </Message>
+  <Message number="7094" eDefine="SYS_ERR_HW_CONNECTION_RELAY_NOT_ACTIVE">
+    <Title>Activate connection error</Title>
+    <Description>Could not activate <arg format="%s" ordinal="1" />. Connection relay input <arg format="%s" ordinal="2" /> indicates no connection. </Description>
+    <Actions>1. Check that if mechanical unit is connected. <p />2. Check the connection relay input signal setup.</Actions>
+  </Message>
+  <Message number="7095" eDefine="SYS_ERR_HW_AUX_BRAKE_POWER_FAULT">
+    <Title>Brake power fault</Title>
+    <Description>The supervision of brake power on Manipulator Controller Board (MCOB) <arg format="%i" ordinal="1" /> has detected fault on the power signal and turned ON all brakes.<p /></Description>
+    <Actions>1. Check brake power on MCOB.<p />2. Check brake power relay in cabinet.<p />3. Check for disturbances on the brake power signal on MCOB.<p />4. Check for short circuit on brakes.<p /></Actions>
+  </Message>
+  <Message number="7096" eDefine="SYS_ERR_HW_AUX_BRAKE_POWER_FAULT2">
+    <Title>Brake power fault</Title>
+    <Description>The supervision of brake power on Manipulator Controller Board (MCOB/MCB) <arg format="%i" ordinal="1" /> has detected fault on the power signal and turned ON all brakes.</Description>
+    <Actions>1. Check brake power on MCOB/MCB.<p />2. Check brake power from power supply in cabinet.<p />3. Check for disturbances on the brake power signal on MCOB/MCB.<p />4. Check for short circuit on brakes.<p /></Actions>
+  </Message>
+  <Message number="7097" eDefine="SYS_ERR_HW_AUX_BRAKE_SHORT_CIRCUIT">
+    <Title>Brake short circuit fault</Title>
+    <Description>The supervision of brakes on Manipulator Controller Board (MCOB/MCB) <arg format="%i" ordinal="1" /> has detected a short circuit on axis <arg format="%d" ordinal="2" /> and turned ON all brakes. </Description>
+    <Actions>1. Check for short circuit on brakes. </Actions>
+  </Message>
+  <Message number="7098" eDefine="SYS_ERR_HW_AUX_BRAKE_OPEN_CIRCUIT">
+    <Title>Brake open circuit fault</Title>
+    <Description>The supervision of brakes on Manipulator Controller Board (MCOB/MCB) <arg format="%i" ordinal="1" /> has detected an open circuit on axis <arg format="%d" ordinal="2" /> and turned ON all brakes. </Description>
+    <Actions>1. Check for open circuit on brakes. </Actions>
+  </Message>
+  <Message number="7099" eDefine="SYS_ERR_HW_AUX_PTC_ERROR2">
+    <Title>Temp. too high, sensor <arg format="%i" ordinal="1" /></Title>
+    <Description>System overheat detected on Manipulator Controller Board (MCOB/MCB) <arg format="%i" ordinal="2" />. Sensors supervised on motors, Serial measurement unit (SMU) or process equipment. Run chain has been opened. <p />Sensors 1-8: Robot motors 1-8. Sensor 9: SMU. Sensors 10-14: Process 1-5. Please refer to current robot configuration for more details. <p /><p /></Description>
+    <Actions>Wait until the overheated motor or equipment has cooled down.</Actions>
+  </Message>
+  <Message number="7100" eDefine="SYS_ERR_HW_AUX_FLASH_DISK_ERROR">
+    <Title>I/O node flash disk error</Title>
+    <Description>Flash name: <arg format="%s" ordinal="1" /><p />Flash disk function: <arg format="%s" ordinal="2" /><p />Error description: <arg format="%s" ordinal="3" /></Description>
+    <Actions>Report error. </Actions>
+  </Message>
+  <Message number="7101" eDefine="SYS_ERR_HW_AUX_BRAKE_RELAY">
+    <Title>Brake Failure</Title>
+    <Description>The brakes for mechanical unit <arg format="%s" ordinal="1" /> fail to engage.</Description>
+    <Consequences>The mechanical unit may collapse when the motors are turned off.</Consequences>
+    <Causes>The configuration of brake relay may be incorrect, or the brake relay may be faulty If an external brake relay is being used, the relay must be correctly defined in the Motion configuration file.</Causes>
+    <Actions>1) Check that the external brake relay (if used) is correctly defined in the configuration file. <p />2) Check that the corresponding I/O signal is correctly defined in the I/O configuration file. How to check the configuration files is detailed in the Trouble Shooting Manual.</Actions>
+  </Message>
+  <Message number="7102" eDefine="SYS_ERR_HW_AUX_PSU_24VCOOL">
+    <Title>Power supply warning, faulty 24V COOL level</Title>
+    <Description>The 24V COOL output of the Control Module Power Supply is out of range.</Description>
+    <Consequences>No system consequence.</Consequences>
+    <Causes>The Control Module Power Supply unit cabling or the output load may cause the faulty voltage level. The power supplies are shown in the Trouble Shooting Manual and the Circuit Diagram!</Causes>
+    <Actions>1) Check all cabling to the Control Module Power Supply unit. <p />2) Check the output voltage level, and replace any faulty unit if required.</Actions>
+  </Message>
+  <Message number="7103" eDefine="SYS_ERR_HW_AUX_PSU_24VSYS">
+    <Title>Power supply warning, faulty 24V SYS level</Title>
+    <Description>The 24V SYS output of the Control Module Power Supply is out of range.</Description>
+    <Consequences>No system consequence.</Consequences>
+    <Causes>The Control Module Power Supply unit, cabling or the output load may cause the faulty voltage level. The power supplies are shown in the Trouble Shooting Manual and the Circuit Diagram!</Causes>
+    <Actions>1) Check all cabling to the Control Module Power Supply unit. <p />2) Check the output voltage level, and replace any faulty unit if required.</Actions>
+  </Message>
+  <Message number="7104" eDefine="SYS_ERR_HW_AUX_PSU_NOBACKUP">
+    <Title>There is no backup voltage available!</Title>
+    <Description>The backup energy bank maintaining the backup voltage is not functional.</Description>
+    <Consequences>After switching the power off, a B type restart must be performed. No system data changes will be saved at power off.</Consequences>
+    <Causes>This may be caused by a faulty backup energy bank, cabling or charger.</Causes>
+    <Actions>Before working on the system, perform a controlled shutdown to ensure all system data is correctly saved. <p />1) Check the cables and connectors of the backup energy bank. <p />2) Check the backup energy bank. <p />3) Check the power supply. <p />4) Replace the faulty unit if required.</Actions>
+  </Message>
+  <Message number="7105" eDefine="SYS_ERR_HW_AUX_PSU_REGAINED_CONTACT">
+    <Title>Regained communication with Power Supply</Title>
+    <Description>The main computer has regained communication with the Control Module Power Supply.</Description>
+  </Message>
+  <Message number="7106" eDefine="SYS_ERR_HW_AUX_PSU_UC_DRAINED">
+    <Title>Low backup energy bank voltage level</Title>
+    <Description>The voltage in the computer unit backup energy bank is too low to be functional.</Description>
+    <Consequences>No system consequence. No system data changes will be saved at power off.</Consequences>
+    <Causes>This may be caused by a faulty backup energy bank, cabling or charger.</Causes>
+    <Actions>Before working on the system, perform a controlled shutdown to ensure all system data is correctly saved. <p />1) Check the cables and connectors of the backup energy bank. <p />2) Check the backup energy bank. <p />3) Check the power supply. <p />4) Replace the faulty unit if required.</Actions>
+  </Message>
+  <Message number="7107" eDefine="SYS_ERR_HW_AUX_PSU_UC_FAIL">
+    <Title>Faulty backup energy bank</Title>
+    <Description>The backup energy bank in the Control Module maintaining the backup voltage is not functional.</Description>
+    <Consequences>If switching the power off, a B type restart must be performed. No backup will be made at power off.</Consequences>
+    <Causes>This may be caused by a faulty backup energy bank, cabling or charger.</Causes>
+    <Actions>Before working on the system, perform a controlled shutdown to ensure all system data is correctly saved. <p />1) Check the backup energy bank cable and connector.<p />2) Check the backup energy bank. <p />3) Replace the faulty unit if required.</Actions>
+  </Message>
+  <Message number="7108" eDefine="SYS_ERR_HW_AUX_PSU_NO_CONTACT">
+    <Title>Lost communication: Power Supply and Computer</Title>
+    <Description>The main computer has lost communication with the Control Module Power Supply.</Description>
+    <Consequences>The main computer cannot retrieve status info or switch the power supply off. No system data changes will be saved at power off.</Consequences>
+    <Causes>The USB cable from the main computer to the Control Module Power Supply may be faulty or disconnected, or the power supply may be faulty.</Causes>
+    <Actions>Before working on the system, perform a controlled shutdown to ensure all system data is correctly saved. <p />1) Check the cabling and connectors to the Control Module Power Supply. <p />2) Check the power supply unit, and replace any faulty unit if required.</Actions>
+  </Message>
+  <Message number="7200" eDefine="SYS_ERR_HW_AUX_EMY_24V_OK">
+    <Title>Power fault: Emergency Stop supply</Title>
+    <Description>Power fault on 24V Emergency Stop supply. Feedback from Safety Interface Board (SIB).</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check cables and connections.<p />2. Check power supply.</Actions>
+  </Message>
+  <Message number="7201" eDefine="SYS_ERR_HW_AUX_FAILSAFE_24V_O">
+    <Title>Power fault: 24V Failsafe supply</Title>
+    <Description>Power fault on 24V Failsafe supply. Feedback from Safety Interface Board (SIB).</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check cables and connections.<p />2. Check power supply.</Actions>
+  </Message>
+  <Message number="7202" eDefine="SYS_ERR_HW_AUX_IO_24V_OK">
+    <Title>Power fault: 24V I/O supply</Title>
+    <Description>Power fault on 24V I/O supply. Feedback from Safety Interface Board (SIB).</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check cables and connections.<p />2. Check power supply.</Actions>
+  </Message>
+  <Message number="7203" eDefine="SYS_ERR_HW_AUX_24V_SYS_ENA">
+    <Title>Power fault: 24V SYS supply</Title>
+    <Description>Power fault reported when 24V SYS &lt; 18V. Feedback from Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" />.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check cables and connections.<p />2. Check power supply.</Actions>
+  </Message>
+  <Message number="7204" eDefine="SYS_ERR_HW_AUX_24V_IO_ENA">
+    <Title>Power fault: 24V I/O supply</Title>
+    <Description>Power fault reported when 24V I/O &lt; 18V. Feedback from Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" />.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check cables and connections.<p />2. Check power supply.</Actions>
+  </Message>
+  <Message number="7205" eDefine="SYS_ERR_HW_AUX_12V_ENA">
+    <Title>Power fault: 12V Purge supply</Title>
+    <Description>Power fault reported when 12V Purge &lt; 10.8V. Feedback from Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" />.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check cables and connections.<p />2. Check power supply.</Actions>
+  </Message>
+  <Message number="7206" eDefine="SYS_ERR_HW_AUX_12V_TPU">
+    <Title>Power fault: 12V TPU supply</Title>
+    <Description>Power fault on 12V Teach Pendant Unit (TPU) supply. Feedback from Pendant Interface Board (TIB).</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check cables and connections.<p />2. Check power supply.</Actions>
+  </Message>
+  <Message number="7207" eDefine="SYS_ERR_HW_AUX_BATT_LOW">
+    <Title>Battery charge low.</Title>
+    <Description>Less than 2 months until the battery backup to Serial Measurement Board (SMB) is discharged. Counting from first time this message was displayed. The battery is mounted on Manipulator Interface Board (MIB).</Description>
+    <Actions>Replace battery mounted on MIB.</Actions>
+  </Message>
+  <Message number="7208" eDefine="SYS_ERR_HW_AUX_TRAFO_TEMP">
+    <Title>Overtemperature in transformer</Title>
+    <Description>The temperature in the transformer is too high.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>The unit may be overloaded, its fans may be malfunctioning or the air flow may be restricted.</Causes>
+    <Actions>1) Make sure the fans are operating. <p />2) Check that air flow to the unit fans is not restricted.</Actions>
+  </Message>
+  <Message number="7209" eDefine="SYS_ERR_HW_AUX_CABINET_TEMP">
+    <Title>Overtemperature in cabinet</Title>
+    <Description>The temperature in the cabinet is too high.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>The unit may be overloaded, its fans may be malfunctioning or the air flow may be restricted.</Causes>
+    <Actions>1) Make sure the fans are operating. <p />2) Check that air flow to the unit fans is not restricted.</Actions>
+  </Message>
+  <Message number="7210" eDefine="SYS_ERR_HW_AUX_KM1_ERROR">
+    <Title>Fault on contactor KM1</Title>
+    <Description>A fault is observed on motor contactor KM1. </Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check cables and connections.<p />2. Check contactor.</Actions>
+  </Message>
+  <Message number="7211" eDefine="SYS_ERR_HW_AUX_KM2_ERROR">
+    <Title>Fault on contactor KM2</Title>
+    <Description>A fault is observed on motor contactor KM2. </Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check cables and connections.<p />2. Check contactor.</Actions>
+  </Message>
+  <Message number="7212" eDefine="SYS_ERR_HW_AUX_KM101_ERROR">
+    <Title>Fault on contactor KM101</Title>
+    <Description>A fault is observed on motor contactor KM101. </Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check cables and connections.<p />2. Check contactor.</Actions>
+  </Message>
+  <Message number="7213" eDefine="SYS_ERR_HW_AUX_KM102_ERROR">
+    <Title>Fault on contactor KM102</Title>
+    <Description>A fault is observed on motor contactor KM102. </Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check cables and connections.<p />2. Check contactor.</Actions>
+  </Message>
+  <Message number="7214" eDefine="SYS_ERR_HW_AUX_RUN_CH1">
+    <Title>Run chain 1 feedback conflict</Title>
+    <Description>Safety Interface Board (SIB) and Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> reports divergence on Run chain 1 feedback signals.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check cables and connections.<p />2. Replace SIB if faulty.<p />3. Replace MIB if faulty.<p /></Actions>
+  </Message>
+  <Message number="7215" eDefine="SYS_ERR_HW_AUX_RUN_CH2">
+    <Title>Run chain 2 feedback conflict</Title>
+    <Description>Safety Interface Board (SIB) and Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> reports divergence on Run chain 2 feedback signals.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check cables and connections.<p />2. Replace SIB if faulty.<p />3. Replace MIB if faulty.<p /></Actions>
+  </Message>
+  <Message number="7216" eDefine="SYS_ERR_HW_AUX_BRAKE_CH1">
+    <Title>Brake chain 1 feedback conflict</Title>
+    <Description>Safety Interface Board (SIB) and Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> reports divergence on Brake chain 1 feedback signals.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check cables and connections.<p />2. Replace SIB if faulty.<p />3. Replace MIB if faulty.<p /></Actions>
+  </Message>
+  <Message number="7217" eDefine="SYS_ERR_HW_AUX_BRAKE_CH2">
+    <Title>Brake chain 2 feedback conflict</Title>
+    <Description>Safety Interface Board (SIB) and Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> reports divergence on Brake chain 2 feedback signals.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check cables and connections.<p />2. Replace SIB if faulty.<p />3. Replace MIB if faulty.<p /></Actions>
+  </Message>
+  <Message number="7218" eDefine="SYS_ERR_HW_AUX_CABIN_CH1">
+    <Title>Cabin Interlock chain 1 feedback conflict</Title>
+    <Description>Safety Interface Board (SIB) and Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> reports divergence on Cabin Interlock chain 1 feedback signals.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check cables and connections.<p />2. Replace SIB if faulty.<p />3. Replace MIB if faulty.<p /></Actions>
+  </Message>
+  <Message number="7219" eDefine="SYS_ERR_HW_AUX_CABIN_CH2">
+    <Title>Cabin Interlock chain 2 feedback conflict</Title>
+    <Description>Safety Interface Board (SIB) and Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> reports divergence on Cabin Interlock chain 2 feedback signals.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check cables and connections.<p />2. Replace SIB if faulty.<p />3. Replace MIB if faulty.<p /></Actions>
+  </Message>
+  <Message number="7220" eDefine="SYS_ERR_HW_AUX_HV_CH1">
+    <Title>HV Interlock chain 1 feedback conflict</Title>
+    <Description>Safety Interface Board (SIB) and Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> reports divergence on High Voltage (HV) Interlock chain 1 feedback signals.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check cables and connections.<p />2. Replace SIB if faulty.<p />3. Replace MIB if faulty.<p /></Actions>
+  </Message>
+  <Message number="7221" eDefine="SYS_ERR_HW_AUX_HV_CH2">
+    <Title>HV Interlock chain 2 feedback conflict</Title>
+    <Description>Safety Interface Board (SIB) and Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> reports divergence on High Voltage (HV) Interlock chain 2 feedback signals.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check cables and connections.<p />2. Replace SIB if faulty.<p />3. Replace MIB if faulty.<p /></Actions>
+  </Message>
+  <Message number="7222" eDefine="SYS_ERR_HW_AUX_SYS2_ILCK">
+    <Title>System 2 Interlock chain feedback conflict</Title>
+    <Description>Safety Interface Board (SIB) and Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> reports divergence on System 2 Interlock chain feedback signals.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check cables and connections.<p />2. Replace SIB if faulty.<p />3. Replace MIB if faulty.<p /></Actions>
+  </Message>
+  <Message number="7223" eDefine="SYS_ERR_HW_AUX_MAIN_RLY">
+    <Title>Main relay chain feedback conflict</Title>
+    <Description>Safety Interface Board (SIB) and Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> reports divergence on Main relay chain feedback signals.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>1. Check cables and connections.<p />2. Replace SIB if faulty.<p />3. Replace MIB if faulty.<p /></Actions>
+  </Message>
+  <Message number="7224" eDefine="SYS_ERR_HW_AUX_CAB_ILCK1">
+    <Title>Cabin Interlock chain 1 conflict</Title>
+    <Description>Divergence on Cabin Interlock chain 1 between input and output signals on Safety Interface Board (SIB).</Description>
+    <Consequences>Paint enable chain opens.</Consequences>
+    <Actions>1. Check cables and connections.<p />2. Replace SIB if faulty.</Actions>
+  </Message>
+  <Message number="7225" eDefine="SYS_ERR_HW_AUX_CAB_ILCK2">
+    <Title>Cabin Interlock chain 2 conflict</Title>
+    <Description>Divergence on Cabin Interlock chain 2 between input and output signals on Safety Interface Board (SIB).</Description>
+    <Consequences>Paint enable chain opens.</Consequences>
+    <Actions>1. Check cables and connections.<p />2. Replace SIB if faulty.</Actions>
+  </Message>
+  <Message number="7226" eDefine="SYS_ERR_HW_AUX_HV_ILCK1">
+    <Title>HV Interlock chain 1 conflict</Title>
+    <Description>Divergence on High Voltage (HV) Interlock chain 1 between input and output signals on Safety Interface Board (SIB).</Description>
+    <Consequences>Paint enable chain opens.</Consequences>
+    <Actions>1. Check cables and connections.<p />2. Replace SIB if faulty.</Actions>
+  </Message>
+  <Message number="7227" eDefine="SYS_ERR_HW_AUX_HV_ILCK2">
+    <Title>HV Interlock chain 2 conflict</Title>
+    <Description>Divergence on High Voltage (HV) Interlock chain 2 between input and output signals on Safety Interface Board (SIB).</Description>
+    <Consequences>Paint enable chain opens.</Consequences>
+    <Actions>1. Check cables and connections.<p />2. Replace SIB if faulty.</Actions>
+  </Message>
+  <Message number="7228" eDefine="SYS_ERR_HW_AUX_CAB_CH">
+    <Title>Cabin Interlock chain conflict from SIB</Title>
+    <Description>Only one of the two Cabin Interlock chains is opened. Reported from Safety Interface Board (SIB).</Description>
+    <Consequences>Paint enable chain opens.</Consequences>
+    <Actions>Replace SIB if faulty.</Actions>
+  </Message>
+  <Message number="7229" eDefine="SYS_ERR_HW_AUX_HV_CH">
+    <Title>HV Interlock chain conflict from SIB</Title>
+    <Description>Only one of the two High Voltage (HV) Interlock chains is opened. Reported from Safety Interface Board (SIB).</Description>
+    <Consequences>Paint enable chain opens.</Consequences>
+    <Actions>Replace SIB if faulty.</Actions>
+  </Message>
+  <Message number="7230" eDefine="SYS_ERR_HW_AUX_CBC_WARN">
+    <Title>Brake Performance Warning</Title>
+    <Description>
+The Cyclic Brake Check indicates that the brake for the mechanical unit <arg format="%s" ordinal="1" /> axis no <arg format="%s" ordinal="2" /> has not full braking torque.
+    </Description>
+    <Consequences>This is only a warning and no immediate action need to be taken.</Consequences>
+  </Message>
+  <Message number="7231" eDefine="SYS_ERR_HW_AUX_CBC_ERR">
+    <Title>Brake Performance Error</Title>
+    <Description>
+      The Cyclic Brake Check has found that the brake for the mechanical unit <arg format="%s" ordinal="1" /> axis no <arg format="%s" ordinal="2" /> has too low braking torque.<p />This brake will not be approved by the Safety Controller for Drive Module no <arg format="%s" ordinal="3" />.
+    </Description>
+    <Consequences>
+      WARNING: The brake performance is too low for this axis.<p /><p />Until the brake has approved braking torque, it is only possible to move the robot with the specified  "Reduced max speed (mm/s)" according to the setup in the Configurator for Cylic Brake Check.
+    </Consequences>
+    <Actions>
+      1) Run the Cycle Brake Check once more.<p />2) Exchange the motor with its brake.
+    </Actions>
+  </Message>
+  <Message number="7232" eDefine="SYS_ERR_HW_AUX_CBC_ARM_TRQ">
+    <Title>Cyclic Brake Check Configuration Error</Title>
+    <Description>
+      The Cyclic Brake Check has found that the brake for the mechanical unit <arg format="%s" ordinal="1" /> axis no <arg format="%s" ordinal="2" /> has no defined brake torque requirement level.
+    </Description>
+    <Consequences>The Cyclic Brake Check will continue but no valid brake check will be done for this axis.</Consequences>
+    <Causes>The Motion configuration data are not correct specified for this axis.</Causes>
+    <Actions>
+      The Motion configuration data are not correct specified for this axis:<p />1) Specify a value for parameter max_static_arm_torque if axis shell be tested.<p />2) Deactivate Cyclic Brake Check in Motion configuration if axis not to be tested.
+    </Actions>
+  </Message>
+  <Message number="7233" eDefine="SYS_ERR_HW_AUX_CBC_ARM_CBC">
+    <Title>Cyclic Brake Check Configuration Error</Title>
+    <Description>
+      The Cyclic Brake Check has found that the brake for the mechanical unit <arg format="%s" ordinal="1" /> axis no <arg format="%s" ordinal="2" /> should be tested according to the configuration. But the actual mechanical unit can not be included in the Safety Controller, because activation/deactivation at runtime is allowed.
+    </Description>
+    <Consequences>The Cyclic Brake Check will continue with other mechanical units.</Consequences>
+    <Causes>The Motion configuration data are not correct specified for this axis.</Causes>
+    <Actions>
+      The Motion configuration data are not correct specified for this axis:<p />1) Cyclic Brake Check has been specified but should not be done for this axis<p />2) The mechanical unit must be active at startup and deactivation must not be allowed
+    </Actions>
+  </Message>
+  <Message number="7240" eDefine="SYS_ERR_HW_AUX_CAB_CH_FB">
+    <Title>Cabin Interlock chain conflict from MIB</Title>
+    <Description>Only one of the two cabin interlock chains is opened. Reported from Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" />.</Description>
+    <Consequences>Paint enable chain opens.</Consequences>
+    <Actions>Replace MIB if faulty.</Actions>
+  </Message>
+  <Message number="7241" eDefine="SYS_ERR_HW_AUX_HV_CH_FB">
+    <Title>HV Interlock chain conflict from MIB</Title>
+    <Description>Only one of the two High Voltage (HV) chains is opened. Reported from Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" />.</Description>
+    <Consequences>Paint enable chain opens.</Consequences>
+    <Actions>Replace MIB if faulty.</Actions>
+  </Message>
+  <Message number="7242" eDefine="SYS_ERR_HW_AUX_RUN_CH">
+    <Title>Run chain conflict from SIB</Title>
+    <Description>Only one of the two run chain feedback signals from Safety Interface Board (SIB) was opened.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>Replace SIB if faulty.</Actions>
+  </Message>
+  <Message number="7243" eDefine="SYS_ERR_HW_AUX_BRAKE_CH">
+    <Title>Brake chain conflict from SIB</Title>
+    <Description>Only one of the two brake chain signals from Safety Interface Board (SIB) was opened.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>Replace SIB if faulty.</Actions>
+  </Message>
+  <Message number="7244" eDefine="SYS_ERR_HW_AUX_RUN_CH_FB">
+    <Title>Run chain conflict from MIB <arg format="%d" ordinal="1" /></Title>
+    <Description>Only one of the two run chain feedback signals from Manipulator Interface Board (MIB) was opened.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>Replace MIB if faulty.</Actions>
+  </Message>
+  <Message number="7245" eDefine="SYS_ERR_HW_AUX_BRAKE_CH_FB">
+    <Title>Brake chain conflict from MIB <arg format="%d" ordinal="1" /></Title>
+    <Description>Only one of the two brake chain feedback signals from Manipulator Interface Board (MIB) was opened.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Actions>Replace MIB if faulty.</Actions>
+  </Message>
+  <Message number="7246" eDefine="SYS_ERR_HW_AUX_ES_RESET">
+    <Title>Emergency Stop relay conflict</Title>
+    <Description>Only one of the two Emergency Stop chains was opened internal on Safety Interface Board (SIB).</Description>
+    <Consequences>The system remains in the Emergency Stop status.</Consequences>
+    <Actions>1. Press emergency stop and reset emergency stop once again.<p />2. Replace SIB if faulty.</Actions>
+  </Message>
+  <Message number="7247" eDefine="SYS_ERR_HW_FAN_DRIVE_SYSTEM">
+    <Title>Circulation Fan <arg format="%i" ordinal="1" /> malfunction</Title>
+    <Description>Circulation fan for the drive systems at the cabinet rear side has stopped or is rotating very slowly.</Description>
+    <Consequences>The drive systems temperature will rise.</Consequences>
+    <Causes>Faulty fan, cabling or power supply. See the Circuit Diagram!</Causes>
+    <Actions>1. Check the fan cables.<p />2. Check the power supply.<p />3. Check the fan.</Actions>
+  </Message>
+  <Message number="7248" eDefine="SYS_ERR_HW_FAN_DOOR">
+    <Title>Circulation Fan <arg format="%i" ordinal="1" /> malfunction</Title>
+    <Description>Circulation fan in the cabinet front door has stopped or is rotating very slowly.</Description>
+    <Consequences>The temperature in the cabinet will rise.</Consequences>
+    <Causes>Faulty fan, cabling or power supply. See the Circuit Diagram!</Causes>
+    <Actions>1. Check the fan cables.<p />2. Check the power supply.<p />3. Check the fan.</Actions>
+  </Message>
+  <Message number="7249" eDefine="SYS_ERR_HW_AUX_GLITCH_ES_INPUTS">
+    <Title>Glitch in Emergency Stop circuits</Title>
+    <Description>Two or several status changes detected on signal within few milliseconds. This message is most likely caused by bad connections in ES_INPUT circuits.</Description>
+    <Consequences>Motors and Paint Equipments are maybe switched off.</Consequences>
+    <Actions>Check cables and connections on the safety system for ES_INPUT.</Actions>
+  </Message>
+</Domain>

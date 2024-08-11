@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="OPR" domainNo="1" lang="zh" elogTextVersion="1.0" min="2" max="174">
+  <Message number="2" eDefine="SYS_ERR_OPR_ARL_READY">
+    <Title>程序指针已经复位</Title>
+    <Description>任务 <arg format="%s" ordinal="3" /> 的程序指针已经复位。</Description>
+    <Consequences>启动后，程序将在任务录入例行程序发出第一个指令时开始执行。请注意重新启动后机械手可能移动到非预期位置！</Consequences>
+    <Causes>操作人员可能已经手动请求了此动作。</Causes>
+  </Message>
+  <Message number="9" eDefine="SYS_ERR_OPR_ARL_HEAPFULL">
+    <Title>工作内存已满</Title>
+    <Description>任务 <arg format="%s" ordinal="3" /> 未给新的 RAPID 指令或数据留下内存。</Description>
+    <Actions>保存程序后重新启动系统。</Actions>
+  </Message>
+  <Message number="10" eDefine="SYS_ERR_OPR_MSTATE_STB">
+    <Title>电机下电 (OFF) 状态</Title>
+    <Description>系统处于电机下电 (OFF) 状态。从手动模式切换至自动模式，或者程序执行过程中电机上电 (ON) 电路被打开后，系统就会进入此状态。</Description>
+    <Consequences>闭合电机上电 (ON) 电路之前无法进行操作。此时，机械手轴被机械制闸固定在适当的位置。</Consequences>
+  </Message>
+  <Message number="11" eDefine="SYS_ERR_OPR_MSTATE_RUN">
+    <Title>电机上电(ON) 状态</Title>
+    <Description>系统处于电机上电 (ON) 状态。</Description>
+    <Consequences>电机上电 (ON) 电路已经闭合，正在给机械手电机供电。可恢复正常操作。</Consequences>
+  </Message>
+  <Message number="12" eDefine="SYS_ERR_OPR_MSTATE_GRDSTOP">
+    <Title>安全防护停止状态</Title>
+    <Description>系统处于防护停止状态。从自动方式切换为手动方式，或者由于出现紧急停止、常规停止、自动停止或上级停止而导致的电机开启电路被断开后，均会进入此状态。</Description>
+    <Consequences>闭合电机开启 (ON) 电路之前无法进行操作。此时，机械手轴被机械制动闸固定在适当的位置。</Consequences>
+    <Causes>任何与系统的停止输入端连接的安全设备已被断开。电路图中已标出这些设备。</Causes>
+    <Actions>1. 检查是哪个安全装置导致了停止。<p />2. 关闭该装置。<p />3. 要恢复操作，请将系统切换回电机上电 (ON) 状态。</Actions>
+  </Message>
+  <Message number="13" eDefine="SYS_ERR_OPR_MSTATE_EMSTOP">
+    <Title>紧急停止状态 </Title>
+    <Description>紧急停止设备将电机开启 (ON) 电路断开，系统处于紧急停止状态。 </Description>
+    <Consequences>运行了所有程序，导致机器人动作立即中断。机器人轴被机械制动闸固定在适当的位置。</Consequences>
+    <Causes>任何与紧急停止输入端连接的紧急停止设备已被断开。它们可以是内部的（在控制器或在教导器上）或者是外部的（系统构建器连接的设备）。电路图中已标出内部设备。</Causes>
+    <Actions>1) 检查是哪个紧急停止装置导致了停止。<p />2) 关闭/重置该装置。<p />3) 要恢复操作，请按“控制模块”上的电机开启 (ON) 按钮，将系统切换回电机开启状态。</Actions>
+  </Message>
+  <Message number="14" eDefine="SYS_ERR_OPR_MSTATE_SYSFAIL">
+    <Title>系统故障状态 </Title>
+    <Description>由于出现故障，已停止所有 NORMAL（正常）任务的执行。</Description>
+    <Consequences>系统重新启动前无法开始执行程序或对操纵器进行手动微动控制。</Consequences>
+    <Causes>故障过多时可能导致此状况。请使用教导器或 RobotStudio 检查此时发生的事件的其他事件日志消息！</Causes>
+    <Actions>1. 分析事件日志，判断导致停止的原因。<p />2. 修复故障。<p />3. 按《操作手册》的详细叙述重新启动系统。</Actions>
+  </Message>
+  <Message number="15" eDefine="SYS_ERR_OPR_OPMODE_MANR">
+    <Title>已选择手动模式</Title>
+    <Description>系统处于手动模式。</Description>
+    <Consequences>系统能够执行设定的操作，但最大速度仅限于 250 mm/s。按下教导器上的使动装置后，也可以对操纵器进行手动微动控制。</Consequences>
+  </Message>
+  <Message number="16" eDefine="SYS_ERR_OPR_OPMODE_AUTO_CH">
+    <Title>已请求自动模式</Title>
+    <Description>已向系统发送指令，准备进入自动模式。</Description>
+    <Consequences>系统在得到教导器确认之后将进入自动模式。</Consequences>
+  </Message>
+  <Message number="17" eDefine="SYS_ERR_OPR_OPMODE_AUTO">
+    <Title>已确认自动模式</Title>
+    <Description>系统处于自动模式。</Description>
+    <Consequences>使动装置断开。机器人可在无人工干预的情况下移动。</Consequences>
+  </Message>
+  <Message number="18" eDefine="SYS_ERR_OPR_OPMODE_MANF_CH">
+    <Title>已请求全速手动模式</Title>
+    <Description>已向系统发送指令，准备进入无速度限制的手动模式。</Description>
+    <Consequences>系统即将进入全速手动模式。</Consequences>
+  </Message>
+  <Message number="19" eDefine="SYS_ERR_OPR_OPMODE_MANF">
+    <Title>已确认全速手动模式</Title>
+    <Description>系统处于无速度限制的手动模式。</Description>
+    <Consequences>在教导器上按“止-动”按钮时，可以执行编程的操作。在教导器上按下使动装置后，也可手动微动控制操纵器。</Consequences>
+  </Message>
+  <Message number="20" eDefine="SYS_ERR_OPR_PRDSTA_PGMERR">
+    <Title>执行错误状态</Title>
+    <Description>由于出现自发性错误，已停止任务 <arg format="%s" ordinal="2" /> 中的程序的执行。</Description>
+    <Consequences>删除错误前无法执行程序。</Consequences>
+    <Causes>故障过多时可能导致此状况。请使用教导器或 RobotStudio 检查此时发生的事件的其他事件日志消息！</Causes>
+    <Actions>1. 分析事件日志，判断导致停止的原因。<p />2. 修复故障。<p />3. 必要时，在按下启动按钮前将“程序指针”移至主程序。 </Actions>
+  </Message>
+  <Message number="21" eDefine="SYS_ERR_OPR_PRDSTA_PGMERR_RESET">
+    <Title>执行错误重置</Title>
+    <Description>       任务 <arg format="%s" ordinal="2" /> 中程序执行产生了自发性错误状态。
+    </Description>
+  </Message>
+  <Message number="24" eDefine="SYS_ERR_OPR_PRDSTA_COLDET_TRIGGERED">
+    <Title>发生碰撞</Title>
+    <Description>机械手的某个机械部件碰撞到固定设备的某个部件。</Description>
+    <Consequences>机械手运动中断，同时停止执行程序。</Consequences>
+  </Message>
+  <Message number="25" eDefine="SYS_ERR_OPR_PRDSTA_COLDET_RESETTED">
+    <Title>确认碰撞</Title>
+    <Description>碰撞检测已确认。</Description>
+  </Message>
+  <Message number="26" eDefine="SYS_ERR_OPR_PRDSTA_COLDET_CONFIRMED_OK">
+    <Title>碰撞回撤</Title>
+    <Description>机械手试图从碰撞到的障碍物上回撤，并获得成功。</Description>
+    <Consequences>系统准备返回正常操作。</Consequences>
+  </Message>
+  <Message number="27" eDefine="SYS_ERR_OPR_PRDSTA_COLDET_CONFIRMED_ERROR">
+    <Title>碰撞回撤失败</Title>
+    <Description>操纵器试图从碰撞到的障碍物上回撤，但失败。</Description>
+    <Consequences>系统尚未返回正常操作。</Consequences>
+    <Causes>这可能是由于机器人吸附在所碰撞到的目标上造成的。</Causes>
+    <Actions>1) 进入手动模式。<p />2) 手动将机器人从目标上移开。<p />3) 重新启动程序，恢复操作。</Actions>
+  </Message>
+  <Message number="30" eDefine="SYS_ERR_OPR_MECSTA_COMM">
+    <Title>所有轴已换向</Title>
+    <Description>检查后，系统发现所有轴需要换向。</Description>
+    <Consequences>可以实现正常操作。</Consequences>
+  </Message>
+  <Message number="31" eDefine="SYS_ERR_OPR_MECSTA_CALIB">
+    <Title>所有轴已校准</Title>
+    <Description>检查后，系统发现所有轴需要校准。</Description>
+    <Consequences>可以实现正常操作。</Consequences>
+  </Message>
+  <Message number="32" eDefine="SYS_ERR_OPR_MECSTA_A_SYNC">
+    <Title>所有转数计数器已更新</Title>
+    <Description>检查后，系统发现轴的所有转数计数器都需要更新。</Description>
+    <Consequences>可以实现正常操作。</Consequences>
+  </Message>
+  <Message number="33" eDefine="SYS_ERR_OPR_MECSTA_S_SYNC">
+    <Title>所有轴已同步</Title>
+    <Description>检查后，系统发现所有轴需要同步。</Description>
+    <Consequences>可以实现正常操作。</Consequences>
+  </Message>
+  <Message number="34" eDefine="SYS_ERR_OPR_MECSTA_NOT_COMM">
+    <Title>轴未换向</Title>
+    <Description>检查后，系统发现有一个或多个轴未被换向。</Description>
+    <Consequences>要启动操作，必须将所有的轴换向。</Consequences>
+    <Causes>机械手驱动电机和相关单元可能有变更，例如，替换成了故障单元。</Causes>
+    <Actions>遵循机械手《产品手册》的详细叙述将轴换向。</Actions>
+  </Message>
+  <Message number="35" eDefine="SYS_ERR_OPR_MECSTA_NOT_CALIB">
+    <Title>轴未校准</Title>
+    <Description>检查后，系统发现有一个或多个轴未被校准。</Description>
+    <Consequences>要启动操作，必须校准所有的轴。</Consequences>
+    <Causes>机械手驱动电机和相关单元可能有变更，例如，替换成了故障单元。</Causes>
+    <Actions>遵循机械手《产品手册》的详细叙述校准轴。</Actions>
+  </Message>
+  <Message number="36" eDefine="SYS_ERR_OPR_MECSTA_NOT_A_SYNC">
+    <Title>转数计数器未更新</Title>
+    <Description>检查后，系统发现一个或多个轴的转数计数器未更新。</Description>
+    <Consequences>要启动操作，必须更新所有轴的转数计数器。</Consequences>
+    <Causes>机械手驱动电机和相关单元可能有变更，例如，替换成了故障单元。</Causes>
+    <Actions>遵循机械手《产品手册》的详细叙述更新所有轴的转数计数器。</Actions>
+  </Message>
+  <Message number="37" eDefine="SYS_ERR_OPR_MECSTA_NOT_S_SYNC">
+    <Title>轴未同步</Title>
+    <Description>检查后，系统发现有一个或多个轴未同步。</Description>
+    <Consequences>要启动操作，必须同步所有的轴。</Consequences>
+    <Causes>机械手驱动电机和相关单元可能有变更，例如，替换成了故障单元。</Causes>
+    <Actions>遵循机械手《产品手册》的详细叙述同步轴。</Actions>
+  </Message>
+  <Message number="38" eDefine="SYS_ERR_OPR_MECSTA_SMB">
+    <Title>SMB 内存正常</Title>
+    <Description>启动过程中，系统发现串行测量电路板 (SMB) 上的所有数据正常。</Description>
+    <Consequences>可以操作。</Consequences>
+  </Message>
+  <Message number="39" eDefine="SYS_ERR_OPR_MECSTA_NOT_SMB">
+    <Title>SMB 内存不正常</Title>
+    <Description>启动过程中，系统发现串行测量电路板 (SMB) 上的数据不正常。</Description>
+    <Consequences>在能够进行自动操作之前，必须确保所有数据正常。可以手动操纵器人。</Consequences>
+    <Causes>SMB 上储存的数据与控制柜上储存的数据有差别。这可能是替换 SMB、控制柜或两者后导致的。</Causes>
+    <Actions>1) 遵循《操作员手册》IRC5 的详细叙述更新串行测量电路板。</Actions>
+  </Message>
+  <Message number="40" eDefine="SYS_ERR_OPR_ARL_LOAD">
+    <Title>程序已加载</Title>
+    <Description>已经在任务 <arg format="%s" ordinal="3" />中加载了程序或程序模块。加载后，剩余 <arg format="%i" ordinal="4" /> 字节内存。加载程序的大小为 <arg format="%i" ordinal="5" />。 </Description>
+  </Message>
+  <Message number="41" eDefine="SYS_ERR_OPR_ARL_ERASE">
+    <Title>程序已删除</Title>
+    <Description>已经从任务 <arg format="%s" ordinal="3" />中删除了程序或程序模块。</Description>
+    <Consequences>如果删除的程序包含了任务录入例行程序，则程序无法继续执行。</Consequences>
+    <Causes>可以手动移除程序。</Causes>
+    <Actions>1) 在其中一个任务的剩余程序中定义录入例行程序，或者：<p />2) 加载包含录入例行程序的程序。</Actions>
+  </Message>
+  <Message number="42" eDefine="SYS_ERR_OPR_MECSTA_RECALIBRATED">
+    <Title>轴重新校准</Title>
+    <Description>已对同步机械单元中的轴进行微校或转数计数器更新。</Description>
+  </Message>
+  <Message number="43" eDefine="SYS_ERR_OPR_PGM_RESET">
+    <Title>重新启动失败</Title>
+    <Description>无法重新启动任务 <arg format="%s" ordinal="3" /> 。</Description>
+  </Message>
+  <Message number="44" eDefine="SYS_ERR_OPR_ARL_UPDATE_PC">
+    <Title>程序指针已更新</Title>
+    <Description>任务 <arg format="%s" ordinal="3" /> 可能更改了程序指针的位置。</Description>
+  </Message>
+  <Message number="45" eDefine="SYS_ERR_OPR_WARM_START">
+    <Title>系统已重新启动</Title>
+    <Description>重新启动了一个已安装的系统。</Description>
+  </Message>
+  <Message number="46" eDefine="SYS_ERR_OPR_COLD_START">
+    <Title>以冷启动模式重新启动系统</Title>
+    <Description>安装后首次启动。</Description>
+  </Message>
+  <Message number="48" eDefine="SYS_ERR_OPR_BACKGRND_STOP">
+    <Title>背景任务无法停止</Title>
+    <Description>任务 <arg format="%s" ordinal="1" /> 无故停止。</Description>
+  </Message>
+  <Message number="51" eDefine="SYS_ERR_OPR_UNDEF_EVENTROUT">
+    <Title>事件例行程序错误</Title>
+    <Description>任务 <arg format="%s" ordinal="2" /> 无法启动指定的系统事件例行程序 <arg format="%s" ordinal="3" />。系统的未知例行程序，或程序无法链接。</Description>
+    <Actions>将例行程序插入系统模块，或纠正程序。</Actions>
+  </Message>
+  <Message number="52" eDefine="SYS_ERR_OPR_REGAIN_START">
+    <Title>返回启动</Title>
+    <Description>返回移动已启动。</Description>
+  </Message>
+  <Message number="53" eDefine="SYS_ERR_OPR_REGAIN_READY">
+    <Title>返回就绪</Title>
+    <Description>返回移动就绪。</Description>
+  </Message>
+  <Message number="54" eDefine="SYS_ERR_OPR_REGAIN_REJECT">
+    <Title>返回被拒绝</Title>
+    <Description>无法返回到路径，因为已有一个客户端发此指令。</Description>
+    <Actions>在执行已启动返回移动的时候，发出了一个新的返回移动指令。减少系统 I/O 等启动指令的数量</Actions>
+  </Message>
+  <Message number="55" eDefine="SYS_ERR_OPR_PATH_PROC_RESTART">
+    <Title>路径过程已重新启动</Title>
+    <Description>路径过程已重新启动。</Description>
+  </Message>
+  <Message number="60" eDefine="SYS_ERR_OPR_ENABLE_TEST">
+    <Title>使能链测试</Title>
+    <Description>始终在启动时测试使能链。如果测试失败，将出现有关使能的错误消息。</Description>
+    <Actions>如果启动时使能链测试失败，则相关的错误信息为"使能链超时"</Actions>
+  </Message>
+  <Message number="61" eDefine="SYS_ERR_OPR_MODPOS">
+    <Title>已修改目标 </Title>
+    <Description>已经修改或调整任务 <arg format="%s" ordinal="2" /> 中模块 <arg format="%s" ordinal="1" /> 内的目标。<p />起始行 <arg format="%d" ordinal="3" />、栏 <arg format="%d" ordinal="4" />、结束行 <arg format="%d" ordinal="5" />。 </Description>
+  </Message>
+  <Message number="62" eDefine="SYS_ERR_OPR_EDIT_LINE">
+    <Title>已编辑模块 </Title>
+    <Description>已在行 <arg format="%d" ordinal="3" />, <arg format="%d" ordinal="4" />之间编辑了 <arg format="%s" ordinal="1" /> 任务 <arg format="%s" ordinal="2" /> 中的模块 <arg format="%s" ordinal="1" />。 </Description>
+  </Message>
+  <Message number="63" eDefine="SYS_ERR_OPR_EDIT">
+    <Title>已编辑模块 </Title>
+    <Description>已编辑任务 <arg format="%s" ordinal="2" /> 中的模块 <arg format="%s" ordinal="1" /> 。 </Description>
+  </Message>
+  <Message number="64" eDefine="SYS_ERR_OPR_MOD_ERASE">
+    <Title>已删除模块。 </Title>
+    <Description>已删除任务 <arg format="%s" ordinal="2" /> 中的模块 <arg format="%s" ordinal="1" /> 。 </Description>
+  </Message>
+  <Message number="65" eDefine="SYS_ERR_OPR_USER_MODIFY_RAPID">
+    <Title>新用户已开始修改 RAPID。
+</Title>
+    <Description>用户 <arg format="%s" ordinal="1" /> 已开始了任务 <arg format="%s" ordinal="2" />内的 RAPID 程序修改。
+</Description>
+  </Message>
+  <Message number="66" eDefine="SYS_ERR_OPR_CANT_LOAD">
+    <Title>无法加载系统模块 </Title>
+    <Description>由于未找到文件，因此无法加载 <arg format="%s" ordinal="2" /> 任务中 <arg format="%s" ordinal="1" /> 系统模块。 </Description>
+  </Message>
+  <Message number="67" eDefine="SYS_ERR_OPR_PP_RESET">
+    <Title>重设程序指针</Title>
+    <Description>无法重设任务 <arg format="%s" ordinal="1" />的程序指针。 </Description>
+    <Consequences>程序将不启动。</Consequences>
+    <Causes>- 未加载任何程序。<p />- 主例行程序缺失。<p />- 程序中出现错误。</Causes>
+    <Actions>1. 若未加载任何程序，请加载程序。<p />2. 检查程序是否具有主例行程序。如果没有主例行程序，请新增一个。<p />3. 检查程序中是否有错误，并进行更正。<p />4. 查看事件日志中先前的错误消息。<p /></Actions>
+  </Message>
+  <Message number="68" eDefine="SYS_ERR_OPR_START">
+    <Title>启动程序</Title>
+    <Description>无法启动任务 <arg format="%s" ordinal="1" />的程序。 </Description>
+    <Consequences>程序将不执行。</Consequences>
+  </Message>
+  <Message number="74" eDefine="SYS_ERR_OPR_NFS_UP">
+    <Title>NFS 服务器已连接</Title>
+    <Description>控制系统与以下 NFS 服务器 <arg format="%s" ordinal="1" />正常通信。 </Description>
+  </Message>
+  <Message number="75" eDefine="SYS_ERR_OPR_NFS_DOWN">
+    <Title>NFS 服务器断开</Title>
+    <Description>控制系统无法与以下 NFS 服务器 <arg format="%s" ordinal="1" />正常通信。</Description>
+    <Consequences>如果服务器 <arg format="%s" ordinal="2" /> 定义为"TRUSTED（信任）"，将停止执行机器人程序。如果服务器定义为"NON-TRUSTED（不信任）"，则继续执行程序。这些定义在《应用程序手册》- 机器人通信与 I/O 控制中已有说明。</Consequences>
+    <Causes>如果在首次启动时出现该消息，则服务器的配置可能不正确。如果信息是在操作过程中出现的，则可能是由于连接断开而导致的前次工作通信中断。另外请参阅 I/O 事件日志！</Causes>
+    <Actions>1. 检查 NFS 服务器配置。<p />2. 检查所有通信硬件、电缆等。<p />3. 检查 NFS 客户端的控制柜配置。</Actions>
+  </Message>
+  <Message number="76" eDefine="SYS_ERR_OPR_FTP_UP">
+    <Title>FTP 服务器已连接</Title>
+    <Description>控制系统与 FTP 服务器 <arg format="%s" ordinal="1" />正常通信。 </Description>
+  </Message>
+  <Message number="77" eDefine="SYS_ERR_OPR_FTP_DOWN">
+    <Title>FTP 服务器断开</Title>
+    <Description>控制系统无法与 FTP 服务器 <arg format="%s" ordinal="1" />正常通信。</Description>
+    <Consequences>如果服务器 <arg format="%s" ordinal="2" /> 定义为"TRUSTED（信任）"，将停止执行机器人程序。如果服务器定义为"NON-TRUSTED（不信任）"，则继续执行程序。这些定义在《应用程序手册》- 机器人通信与 I/O 控制中已有说明。</Consequences>
+    <Causes>如果在首次启动时出现该消息，则服务器的配置可能不正确。如果信息是在操作过程中出现的，则可能是由于连接断开而导致的前次工作通信中断。另外请参阅 I/O 事件日志！</Causes>
+    <Actions>1. 检查 FTP 服务器配置。<p />2. 检查所有通信硬件、电缆等。<p />3. 检查 FTP 客户端的控制器配置。</Actions>
+  </Message>
+  <Message number="80" eDefine="SYS_ERR_OPR_BACKGRND_OLDLOAD">
+    <Title>已找到更新的 RAPID 文件</Title>
+    <Description>SEMISTATIC 任务 <arg format="%s" ordinal="1" /> 安装的模块版本比源版本 <arg format="%s" ordinal="2" />早</Description>
+    <Actions>通过 P-START 重新启动系统，再安装更新版本。</Actions>
+  </Message>
+  <Message number="81" eDefine="SYS_ERR_OPR_BACKGRND_LOAD">
+    <Title>后台任务 <arg format="%s" ordinal="1" /></Title>
+    <Description>加载模块更新版失败。模块的源版本为 <arg format="%s" ordinal="2" />。</Description>
+    <Actions>参阅以前的信息找出失败原因，或者通过 P-START 重新启动系统，再加载更新的版本。</Actions>
+  </Message>
+  <Message number="82" eDefine="SYS_ERR_OPR_BACKGRND_TRUSTLEVEL_SYSFAIL">
+    <Title>RAPID 任务监控</Title>
+    <Description>任务 <arg format="%s" ordinal="1" /> 未运行。系统将设置为 SysFail 状态。现在无法更改为电机开启 <arg format="%s" ordinal="2" />。</Description>
+    <Actions>请参阅以前的信息找出失败原因。重新启动系统后重置错误状态。</Actions>
+  </Message>
+  <Message number="83" eDefine="SYS_ERR_OPR_BACKGRND_TRUSTLEVEL_SYSHALT">
+    <Title>RAPID 任务监控</Title>
+    <Description>任务 <arg format="%s" ordinal="1" /> 未运行。系统将设置为电机下电状态。 <arg format="%s" ordinal="2" /></Description>
+    <Actions>请参阅以前的信息找出失败原因。</Actions>
+  </Message>
+  <Message number="84" eDefine="SYS_ERR_OPR_BACKGRND_TRUSTLEVEL_SYSSTOP">
+    <Title>RAPID 任务监控</Title>
+    <Description>任务 <arg format="%s" ordinal="1" /> 未运行。所有正常任务也将停止。</Description>
+    <Actions>请参阅以前的消息找出失败原因。</Actions>
+  </Message>
+  <Message number="85" eDefine="SYS_ERR_OPR_NOT_STOPPED">
+    <Title>RAPID 任务监控</Title>
+    <Description>任务 <arg format="%s" ordinal="1" /> 无法停止。信任级别设置为安全级别。</Description>
+    <Actions>任务是否能够停止改变信任级别或系统参数菜单内的任务类型。</Actions>
+  </Message>
+  <Message number="86" eDefine="SYS_ERR_OPR_PURGE_REGAINED">
+    <Title>机器人排放正常</Title>
+    <Description>排放故障后恢复了排放压力。</Description>
+  </Message>
+  <Message number="87" eDefine="SYS_ERR_OPR_PURGE_STATE">
+    <Title>排放状态： <arg format="%s" ordinal="1" />。 </Title>
+    <Description>状态已更改。</Description>
+  </Message>
+  <Message number="90" eDefine="SYS_ERR_OPR_PSTART_READY">
+    <Title>P-START 已执行</Title>
+    <Description>已下达 P-START 指令。</Description>
+    <Consequences>重启后，除了手动加载的程序和模块，系统将恢复到先前状态。静态和半静态的任务将会重新执行，而不是从系统停止时候的状态执行。<p />模块将根据已设置的配置安装和加载。但系统参数不受影响。</Consequences>
+    <Causes>1. 用户指令 P-start。<p />2. 由于数据不一致，故障或者不可恢复的任务状态，系统强行执行 P-start。</Causes>
+  </Message>
+  <Message number="91" eDefine="SYS_ERR_OPR_RESTART_PROTECTED">
+    <Title>无法重新启动</Title>
+    <Description>在确认错误对话前，无法在检测到碰撞之后重新启动。</Description>
+  </Message>
+  <Message number="92" eDefine="SYS_ERR_OPR_TRUST3_IO_LOST">
+    <Title>无法（重新）启动</Title>
+    <Description>由于与 IO 模块 <arg format="%s" ordinal="1" /> （配置信任级别 3）的联络中断，无法（重新）启动。</Description>
+  </Message>
+  <Message number="93" eDefine="SYS_ERR_OPR_NO_RESTART_IN_SYSHALT">
+    <Title>无法（重新）启动</Title>
+    <Description>无法在完成热启动之前（重新）启动任务 <arg format="%s" ordinal="1" /> 。</Description>
+    <Actions>后台任务的配置包括信任级别 SysHalt</Actions>
+  </Message>
+  <Message number="95" eDefine="SYS_ERR_OPR_TASK_PANEL_STATE_OFF">
+    <Title>任务选择面板中至少有一项任务未选定</Title>
+    <Description>执行（重新）启动时，任务选择面板中有一个或多个 NORMAL（正常）任务未选定。</Description>
+  </Message>
+  <Message number="96" eDefine="SYS_ERR_OPR_MECH_NOT_ACTIVE">
+    <Title>
+      <arg format="%s" ordinal="1" /> 非激活！</Title>
+    <Description>工件 <arg format="%s" ordinal="2" /> 包括未激活的协动机械单元。</Description>
+    <Actions>激活机械单元，然后再次执行操作。</Actions>
+  </Message>
+  <Message number="97" eDefine="SYS_ERR_OPR_NO_RESTART_RAPID_BLOCKED">
+    <Title>无法重新启动</Title>
+    <Description>任务 <arg format="%s" ordinal="1" /> 设置为锁定状态，因此无法从当前程序位置重新启动。</Description>
+    <Actions>必须在重新启动前移动程序指针。</Actions>
+  </Message>
+  <Message number="98" eDefine="SYS_ERR_OPR_NO_RESTART_SYSFAIL_BLOCKED">
+    <Title>无法重新启动</Title>
+    <Description>任务 <arg format="%s" ordinal="1" /> 处系统故障状态，因此无法从当前程序位置重新启动该程序。</Description>
+    <Actions>必须在重新启动前移动程序指针。</Actions>
+  </Message>
+  <Message number="99" eDefine="SYS_ERR_OPR_NO_SOFT_STOP_RESTART">
+    <Title>程序启动被拒绝</Title>
+    <Description>系统已执行软停止，且程序不能重新启动。</Description>
+    <Consequences>系统进入“电机下电”状态，且不能启动。有关该状态的完整含义请参阅《故障排除手册》IRC5 的说明。</Consequences>
+    <Causes>软停止可能是安全保护电路断开所致。</Causes>
+    <Actions>1) 检查安全保护电路的开关是否断开。<p />2) 进入电机上电状态，并重新启动程序。</Actions>
+  </Message>
+  <Message number="106" eDefine="SYS_ERR_OPR_SIS_CALENDER_TIME_REACHED">
+    <Title>检修信息</Title>
+    <Description>距离上次检修已有 <arg format="%s" ordinal="1" /> 日，现在应该检修机器人 <arg format="%s" ordinal="2" /> 。</Description>
+  </Message>
+  <Message number="107" eDefine="SYS_ERR_OPR_SIS_CALENDER_TIME_REACHED_SOON">
+    <Title>检修信息</Title>
+    <Description>距离检修机器人 <arg format="%s" ordinal="2" /> 的时间还剩 <arg format="%s" ordinal="1" /> 日。</Description>
+  </Message>
+  <Message number="108" eDefine="SYS_ERR_OPR_SIS_PROD_TIME_REACHED">
+    <Title>检修信息</Title>
+    <Description>距离上次检修以来，已有 <arg format="%s" ordinal="1" /> 小时的生产时间，现在应该检修机器人 <arg format="%s" ordinal="2" /> 。</Description>
+  </Message>
+  <Message number="109" eDefine="SYS_ERR_OPR_SIS_PROD_TIME_REACHED_SOON">
+    <Title>检修信息</Title>
+    <Description>现在距离机器人 <arg format="%s" ordinal="2" /> 的下次检修还剩 <arg format="%s" ordinal="1" /> 个生产小时。</Description>
+  </Message>
+  <Message number="110" eDefine="SYS_ERR_OPR_SIS_L_10_h_REACHED">
+    <Title>检修信息</Title>
+    <Description>机器人 <arg format="%s" ordinal="2" /> 的 <arg format="%s" ordinal="1" /> 处的齿轮箱需要检修。</Description>
+  </Message>
+  <Message number="111" eDefine="SYS_ERR_OPR_SIS_L_10_h_REACHED_SOON">
+    <Title>检修消信</Title>
+    <Description>机器人 <arg format="%s" ordinal="3" /><arg format="%s" ordinal="1" /> 处的齿轮箱检修已过检修间隔时间的 <arg format="%s" ordinal="2" /> 。</Description>
+  </Message>
+  <Message number="112" eDefine="SYS_ERR_OPR_SIS_CALENDER_SETTING_WARNING">
+    <Title>检修信息</Title>
+    <Description>系统日期和时间已更改。<p />会导致 SIS 日历通知出现问题。</Description>
+    <Actions>可能需要更改 SIS 参数日历限值和日历警告<p /><p /></Actions>
+  </Message>
+  <Message number="120" eDefine="SYS_ERR_OPR_ARL_STOP_INSTR">
+    <Title>程序已停止</Title>
+    <Description>任务 <arg format="%s" ordinal="2" /> 已停止。原因是执行当前指令后出现外部或内部停止。</Description>
+  </Message>
+  <Message number="121" eDefine="SYS_ERR_OPR_ARL_STOP_EXIT">
+    <Title>程序已停止</Title>
+    <Description>任务 <arg format="%s" ordinal="2" /> 已停止。原因是任务收到退出指令。</Description>
+  </Message>
+  <Message number="122" eDefine="SYS_ERR_OPR_ARL_STOP_RDY">
+    <Title>程序已停止</Title>
+    <Description>任务 <arg format="%s" ordinal="2" /> 已停止。原因是任务就绪。</Description>
+  </Message>
+  <Message number="123" eDefine="SYS_ERR_OPR_ARL_STOP_RDYST">
+    <Title>程序已停止</Title>
+    <Description>任务 <arg format="%s" ordinal="2" /> 已停止。原因是任务在此步骤时就绪。</Description>
+  </Message>
+  <Message number="124" eDefine="SYS_ERR_OPR_ARL_STOP_BRK">
+    <Title>程序已停止</Title>
+    <Description>任务 <arg format="%s" ordinal="2" /> 已停止。原因是任务收到中断指令。</Description>
+  </Message>
+  <Message number="125" eDefine="SYS_ERR_OPR_ARL_STOP_EXT_INT">
+    <Title>程序已停止</Title>
+    <Description>任务 <arg format="%s" ordinal="2" /> 已停止。原因是出现外部或内部停止。</Description>
+  </Message>
+  <Message number="126" eDefine="SYS_ERR_OPR_ARL_STOP_ERR">
+    <Title>程序已停止</Title>
+    <Description>任务 <arg format="%s" ordinal="2" /> 已停止。原因是出现错误。</Description>
+  </Message>
+  <Message number="127" eDefine="SYS_ERR_OPR_ARL_STOP_BWD">
+    <Title>不能逆向执行
+</Title>
+    <Description>任务 <arg format="%s" ordinal="2" /> 已停止。原因是通过指令列表起始位置后无法向后执行。
+</Description>
+    <Actions />
+  </Message>
+  <Message number="128" eDefine="SYS_ERR_OPR_ARL_STOP_BWD_INSTR">
+    <Title>不能逆向执行
+</Title>
+    <Description>任务 <arg format="%s" ordinal="2" /> 已停止。原因是通过指令后无法向后执行。
+</Description>
+    <Actions />
+  </Message>
+  <Message number="129" eDefine="SYS_ERR_OPR_ARL_STOP_EVTROUT">
+    <Title>程序已停止</Title>
+    <Description>任务 <arg format="%s" ordinal="2" /> 已停止。原因是 RESET（重置）或 POWER_ON 的事件例行程序就绪。</Description>
+  </Message>
+  <Message number="130" eDefine="SYS_ERR_OPR_ARL_STOP_MOVE">
+    <Title>程序已停止</Title>
+    <Description>任务 <arg format="%s" ordinal="2" /> 已停止。原因是任务在此移动步骤时就绪。</Description>
+  </Message>
+  <Message number="131" eDefine="SYS_ERR_OPR_ARL_STOP_RDYUSR">
+    <Title>程序已停止</Title>
+    <Description>任务 <arg format="%s" ordinal="2" /> 已停止。原因是系统 IO 中断程序调用的例行程序就绪。</Description>
+  </Message>
+  <Message number="132" eDefine="SYS_ERR_OPR_ARL_STOP_UNDEF">
+    <Title>程序已停止</Title>
+    <Description>任务 <arg format="%s" ordinal="2" /> 已停止。无法判定原因。<p /></Description>
+  </Message>
+  <Message number="133" eDefine="SYS_ERR_OPR_ARL_STOP_UNDO">
+    <Title>程序已停止</Title>
+    <Description>任务 <arg format="%s" ordinal="2" /> 已停止。原因是执行 UNDO（撤消）处理程序后任务就绪。</Description>
+  </Message>
+  <Message number="150" eDefine="SYS_ERR_OPR_ARL_START_UNK_ORIG">
+    <Title>程序已启动</Title>
+    <Description>从任务的入口例行程序的第一个指令开始执行任务 <arg format="%s" ordinal="2" /> 。起因无法判定。</Description>
+  </Message>
+  <Message number="151" eDefine="SYS_ERR_OPR_ARL_START_EXT_ORIG">
+    <Title>程序已启动</Title>
+    <Description>从任务的入口例行程序的第一个指令开始执行任务 <arg format="%s" ordinal="2" /> 。起因是外部客户端。</Description>
+  </Message>
+  <Message number="152" eDefine="SYS_ERR_OPR_ARL_START_UNDO_ORIG">
+    <Title>程序已启动</Title>
+    <Description>从任务的入口例行程序的第一条指令开始执行任务 <arg format="%s" ordinal="2" /> 。由导致执行 UNDO 处理程序的动作激活“启动”指令<p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p /><p />启动指令。<p /><p /></Description>
+  </Message>
+  <Message number="155" eDefine="SYS_ERR_OPR_ARL_RESTART_UNK_ORIG">
+    <Title>程序已重新启动</Title>
+    <Description>任务 <arg format="%s" ordinal="2" /> 已从上次停止的位置重新开始执行。起因无法判定。</Description>
+  </Message>
+  <Message number="156" eDefine="SYS_ERR_OPR_ARL_RESTART_EXT_ORIG">
+    <Title>程序已重新启动</Title>
+    <Description>任务 <arg format="%s" ordinal="2" /> 已从上次停止的位置重新开始执行。起因是外部客户端。</Description>
+  </Message>
+  <Message number="157" eDefine="SYS_ERR_OPR_ARL_RESTART_UNDO_ORIG">
+    <Title>程序已重新启动</Title>
+    <Description>任务 <arg format="%s" ordinal="2" /> 已从上次停止的位置重新开始执行。重新启动指令由导致执行 UNDO 处理程序的动作激活。<p /></Description>
+  </Message>
+  <Message number="170" eDefine="SYS_ERR_OPR_BGRND_REFSTART_EMPTY">
+    <Title>后台任务 <arg format="%s" ordinal="1" /></Title>
+    <Description>拒绝启动。任务为空。</Description>
+  </Message>
+  <Message number="171" eDefine="SYS_ERR_OPR_BGRND_REFSTART_STATE">
+    <Title>后台任务 <arg format="%s" ordinal="1" /></Title>
+    <Description>拒绝启动。错误状态。</Description>
+  </Message>
+  <Message number="172" eDefine="SYS_ERR_OPR_BGRND_REFSTART_PC">
+    <Title>后台任务 <arg format="%s" ordinal="1" /></Title>
+    <Description>拒绝启动。无法将 PP 设置到主例行程序。</Description>
+    <Causes>因为目标目录内的模块文件丢失，包含主例行程序的模块未被加载。<p /><p />因为配置文件未包含模块自动加载的项目，包含主例行程序的模块未被加载。<p /><p />主例行程序缺失。<p /><p />主要项目已损失。</Causes>
+    <Actions>排除问题的起因后，手动或执行 I-START 来加载模块。</Actions>
+  </Message>
+  <Message number="173" eDefine="SYS_ERR_OPR_BGRND_REFSTART_EXEC">
+    <Title>后台任务 <arg format="%s" ordinal="1" /></Title>
+    <Description>拒绝启动。无法设置执行模式。</Description>
+  </Message>
+  <Message number="174" eDefine="SYS_ERR_OPR_BGRND_REFSTART_ORDER">
+    <Title>后台任务 <arg format="%s" ordinal="1" /></Title>
+    <Description>拒绝启动。启动指令失败。</Description>
+  </Message>
+</Domain>

@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Resource Name="CALPEND" Language="da">
+  <Text Name="200">
+    <Value>Du har ikke udført en kalibrering.</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="201">
+    <Value>Afslut</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="202">
+    <Value>OK</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="203">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="204">
+    <Value>Akse</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="205">
+    <Value>Tryk på OK for at afslutte processen.</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="206">
+    <Value>Robot i kalibreringsposition.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="207">
+    <Value>Sådan kalibreres robotten:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="208">
+    <Value>1. Skift til menuen Diverse</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="209">
+    <Value>2. Vælg Service-Vis-Kalibrering</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="210">
+    <Value>3. Vælg Kalib.-Finkalibrering</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="211">
+    <Value>4. Genstart programmet</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="212">
+    <Value>5. Tryk på OK, når trin 1 - 4 er udført</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="213">
+    <Value>Afbryd</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="214">
+    <Value>Tryk på OK for at fortsætte.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="215">
+    <Value>Tryk på OK for at afslutte.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="216">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="217">
+    <Value>Indstil niveaumåler 2000 til A B</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="218">
+    <Value>justeringsgrænsen er overskredet</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="219">
+    <Value>Placer enheden på basen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="220">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="221">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="222">
+    <Value>Advarsel: OK starter robotbevægelser</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="223">
+    <Value>Basereferenceniveauer...</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="224">
+    <Value>Ref</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="225">
+    <Value>Basereferencer klar</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="226">
+    <Value>Placer enheden på akse 1</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="227">
+    <Value>Trimningsakse</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="228">
+    <Value>Korrektionsværdi [°]</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="229">
+    <Value>er klar</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="230">
+    <Value>Placer enheden på bagsiden af akse 2.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="231">
+    <Value>Placer enheden på forsiden af akse 2.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="232">
+    <Value>Placer enheden på rørakslen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="233">
+    <Value>Advarsel! Akse 4 bevæger sig</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="234">
+    <Value>-90° før indstilling</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="235">
+    <Value>Placer enheden på flangen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="236">
+    <Value>Advarsel! Akse 4 og 5 bevæger sig</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="237">
+    <Value>Placer enheden under flangen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="238">
+    <Value>Nødvendig nøjagtighed er ikke opnået</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="239">
+    <Value>  OK     : Fortsæt proces</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="240">
+    <Value>  Afbryd: Afslut proces</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="241">
+    <Value>Marker dit valg.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="242">
+    <Value>Eksisterende indstillinger.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="243">
+    <Value>Robottype:        .</Value>
+    <Comment>Text length 20 chars (end with dot)</Comment>
+  </Text>
+  <Text Name="244">
+    <Value>Robot:             .</Value>
+    <Comment>Text length 20 chars (end with dot)</Comment>
+  </Text>
+  <Text Name="245">
+    <Value>Valgte akser:       .</Value>
+    <Comment>Text length 20 chars (end with dot)</Comment>
+  </Text>
+  <Text Name="246">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="247">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="248">
+    <Value>Accepter indstillinger eller skift.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="249">
+    <Value>Afslut</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="250">
+    <Value>Skift</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="251">
+    <Value>Accepter</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="252">
+    <Value>[0]-Forrige side     Næste side-[9]</Value>
+    <Comment>Length must be 35 chars</Comment>
+  </Text>
+  <Text Name="253">
+    <Value>Vælg robottype med numerisk tastatur:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="254">
+    <Value>Ugyldigt valg, prøv igen!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="255">
+    <Value>Den valgte robottype er:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="256">
+    <Value>[1]-Akse 1            Akse 2-[2]</Value>
+    <Comment>Length must be 32 chars</Comment>
+  </Text>
+  <Text Name="257">
+    <Value>[3]-Akse 3            Akse 4-[4]</Value>
+    <Comment>Length must be 32 chars</Comment>
+  </Text>
+  <Text Name="258">
+    <Value>[5]-Akse 5            Akse 6-[6]</Value>
+    <Comment>Length must be 32 chars</Comment>
+  </Text>
+  <Text Name="259">
+    <Value>[8]-Alle                Ryd-[9]</Value>
+    <Comment>Length must be 32 chars</Comment>
+  </Text>
+  <Text Name="260">
+    <Value>[0]-Accepter</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="261">
+    <Value>Valgte akser</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="262">
+    <Value>Vælg de akser, der skal kalibreres:                      </Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="263">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="264">
+    <Value>Gentag</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="265">
+    <Value>Kalibreringen er korrekt udført!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="266">
+    <Value>Kalibreringen MISLYKKEDES. </Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="267">
+    <Value>Skal kalib.kfg-parametrene gemmes? </Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="268">
+    <Value>Nej</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="269">
+    <Value>Ja</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="270">
+    <Value>Vælg den I/O-enhed, der skal bruges.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="271">
+    <Value>Indsæt en diskette, eller fjern</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="272">
+    <Value>skrivebeskyttelsen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="273">
+    <Value>Dataene kunne ikke gemmes.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="274">
+    <Value>Kalibreringen er udført</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="275">
+    <Value> med kalibreringspendul</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="276">
+    <Value>Resolver forskydes før kalibrering:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="277">
+    <Value>Resolver forskydes efter kalibrering:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="278">
+    <Value>Kontroller, at niveaumåleren er tændt.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="279">
+    <Value>Advarsel! Kalibreringen kræver tool0.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="280">
+    <Value>Afmonter værktøjet, hvis monteret.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="281">
+    <Value>Placer enheden på justeringspladen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="282">
+    <Value>Drej enheden 180 grader.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="283">
+    <Value>Offsetniveauer…</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="284">
+    <Value>Reference for nul-offset klar.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="285">
+    <Value>mere end én akseomdrejning</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="286">
+    <Value>fra oprindelig synkroniseringsposition.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="287">
+    <Value>Skifter til manuel finkalibrering.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="288">
+    <Value>Vælg aut. eller manuel finkalibrering.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="289">
+    <Value>Manuel</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="290">
+    <Value>Automatisk</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="291">
+    <Value>Vælg mekanisk enhed til kalibrering</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="292">
+    <Value>Ingen gyldig mek. enhed valgt. Abort.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="293">
+    <Value>Vent, til finkalibreringen er slut!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="294">
+    <Value>Finkalibreringen er korrekt udført!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="295">
+    <Value>Sensorkalibrering med nul offset.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="296">
+    <Value>Placer enhed på offset-juster.plade.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="297">
+    <Value>Drej enheden 180 grader.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="298">
+    <Value>Springer kalibr. af nul-offset over.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="299">
+    <Value>Advarsel! Akse 6 bevæger sig</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="300">
+    <Value>+82,5° før indstilling</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="301">
+    <Value>Aksen er ikke tæt på 0°. Abort.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="302">
+    <Value>Robotposition:    .</Value>
+    <Comment>Text length 20 chars (end with dot)</Comment>
+  </Text>
+  <Text Name="303">
+    <Value>Pos.</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="304">
+    <Value>Akser</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="305">
+    <Value>Alternative positioner:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="306">
+    <Value>[0]-Fjern alle brugerdef. positioner</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="307">
+    <Value>[1]-Kalib. akse 1 m/akse 2-6 brugerdef</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="308">
+    <Value>[2]-Kalib. akse 2 m/akse 3-6 brugerdef</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="309">
+    <Value>[3]-Kalib. akse 3 m/akse 4-6 brugerdef</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="310">
+    <Value>[9]-Tilbage</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="311">
+    <Value>Vælg et alternativ:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="312">
+    <Value>Akse i brugerdefineret position.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="313">
+    <Value>Fjern position, før aksen tilføjes.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="314">
+    <Value>Jog akser</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="315">
+    <Value>til den ønskede position.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="316">
+    <Value>Juster sensorer til nul gr.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="317">
+    <Value>Advarsel! Flyt ikke pladen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="318">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="319">
+    <Value>Vil du bruge flip-flop-metoden</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="320">
+    <Value>til at kalibrere akse 3, 4 og 5?</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="321">
+    <Value>Det kræver et pendulhus,</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="322">
+    <Value>der kan monteres på flangen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="323">
+    <Value>uden adapteren.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="324">
+    <Value>Trimning af akse 3:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="325">
+    <Value>Pendulet skal placeres på</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="326">
+    <Value>flangen uden adapteren, når</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="327">
+    <Value>flip-flop-metoden er valgt.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="328">
+    <Value>Placer pendulet på flangen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="329">
+    <Value>Trimning af akse 4:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="330">
+    <Value>Trimning af akse 5:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="331">
+    <Value>Trimning af akse 6:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="332">
+    <Value>Advarsel!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="333">
+    <Value>Automatisk finkalibrering virker kun</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="334">
+    <Value>til RW 4.0.100 eller nyere</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="335">
+    <Value>Spring over</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="336">
+    <Value>Kalibreringssted:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="337">
+    <Value>Produktion i Västerås</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="338">
+    <Value>eller</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="339">
+    <Value>Lokal servicekalibrering</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="340">
+    <Value>prod</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="341">
+    <Value>lokal</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="342">
+    <Value>Velkommen til kalibreringspendul II</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="343">
+    <Value>Til kontrol af pendulsensorers offset</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="344">
+    <Value>hvis pendul ikke er i brug længe.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="345">
+    <Value>Placer enheden øverst på akse 3.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="346">
+    <Value>Placer stangen mellem pendulet og knoppen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="347">
+    <Value>Fjern stangen fra flangen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="348">
+    <Value>Advarsel! Flytter ax6 til nul grader</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="349">
+    <Value>Stangen knækker, hvis den ikke fjernes.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="350">
+    <Value>Sensor følger ikke robottens bevægelse.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="351">
+    <Value>Kontroller pendulinstallationen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="352">
+    <Value>Kalibreringsposition er fundet med akse</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="353">
+    <Value>grader</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="354">
+    <Value>flyttes nu til</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="355">
+    <Value>Tryk på OK, og scan derefter stregkoden med serienummeret</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="356">
+    <Value>Springer stregkodescanning over!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="357">
+    <Value>Serienummeret skal indtastes manuelt.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="358">
+    <Value>Venter på serienummer...</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="359">
+    <Value>Scannet serienummer:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="360">
+    <Value>Genscan</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="361">
+    <Value>Fejl under læsning af stregkode!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="362">
+    <Value>Stregkodeaflæsning:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="363">
+    <Value>Påkrævet format</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="364">
+    <Value>Tryk på Forsøg igen for at scanne stregkoden igen.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="365">
+    <Value>Finkalibrer robotten, og tryk derefter på OK</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="366">
+    <Value>Vælg ABB-Kalibrering</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="367">
+    <Value>Vælg den robot, der skal kalibreres, f.eks. ROB_1</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="368">
+    <Value>Vælg Kalib. parametre-Finkalibrering</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="369">
+    <Value>Vælg akse, og tryk på Kalibrer</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="370">
+    <Value>Start programmet igen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="371">
+    <Value>Kalibreringshovedmenu</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="372">
+    <Value>Kalibrer akse</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="373">
+    <Value>For at kalibrere Ax1:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="374">
+    <Value>Gå tilbage til hovedmenuen eller afslut?</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="375">
+    <Value>Tilbage</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="376">
+    <Value>Startreference for kalibrering</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="377">
+    <Value>Vælg alternativ:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="378">
+    <Value>Definer referenceposition</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="379">
+    <Value>Brug referenceposition efter service</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="380">
+    <Value>Definer den akse, der er udført service for</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="381">
+    <Value>Håndled</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="382">
+    <Value>Der findes allerede en startreference!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="383">
+    <Value>Fjern</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="384">
+    <Value>og tryk på OK</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="385">
+    <Value>Referenceforskel (værktøj - base):</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="386">
+    <Value>Sensor</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="387">
+    <Value>Resultat skrevet til</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="388">
+    <Value>Referencepositionen er gemt!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="389">
+    <Value>findes ikke!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="390">
+    <Value>Definitionen af startreferencen skal </Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="391">
+    <Value>først defineres. Afbryder.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="392">
+    <Value>Fejl under læsning</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="393">
+    <Value>afbryder</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="394">
+    <Value>Kontroller, at den servicerede akse </Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="395">
+    <Value>er finkalibreret!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="396">
+    <Value>Jogging af akser er tilladt</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="397">
+    <Value>Jog robot til startreferencens position</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="398">
+    <Value>Positionen af akse 1 læses fra filen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="399">
+    <Value>Advarsel! Robotten er tæt på startpositionen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="400">
+    <Value>Tryk på START for at flytte til startpositionen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="401">
+    <Value>Jog først akserne, hvis der er forhindringer i vejen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="402">
+    <Value>Start</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="403">
+    <Value>Fjern pendulet, og sæt det igen på værktøjet</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="404">
+    <Value>Niveauer for startreference...</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="405">
+    <Value>Startreferencer er klar</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="406">
+    <Value>Advarsel! Basereferenceforskel</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="407">
+    <Value>RefA-StoredRefA=</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="408">
+    <Value>RefB-StoredRefB=</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="409">
+    <Value>Ok at fortsætte kalibrering, men sensor-</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="410">
+    <Value>offset skal undersøges</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="411">
+    <Value>Forskel:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="412">
+    <Value>Sensor</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="413">
+    <Value>Jog først robot til sensormålværdierne:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="414">
+    <Value>Målværdi</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="415">
+    <Value>Finkalibrer derefter aksen, og tryk på Test</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="416">
+    <Value>Test</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="417">
+    <Value>Nøjagtigheden er acceptabel!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="418">
+    <Value>Opdatering af SMB-hukommelse for samling</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="419">
+    <Value>1. Calibration Pendulum II</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="420">
+    <Value>2. Referencekalibrering</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="421">
+    <Value>Vælg manuel eller automatisk justering af aksen:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="422">
+    <Value>Vælg akse, der skal justeres automatisk:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="423">
+    <Value>Kalibrer en akse til?</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="424">
+    <Value>Kalibreringsmenu</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="425">
+    <Value>Fjern pendulet, og sæt det igen på akse 2</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="426">
+    <Value>ingen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="427">
+    <Value>og</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="428">
+    <Value>ny</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="429">
+    <Value>Validering af gemt fil</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="430">
+    <Value>Fil ok</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="431">
+    <Value>Validering af kalibreringsværdier</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="432">
+    <Value>Sensormonteringen er ikke den samme, som</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="433">
+    <Value>da referencen blev gemt!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="434">
+    <Value>Kan ikke fortsætte kalibrering</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="435">
+    <Value>2 akser valgt til</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="436">
+    <Value>referencekalibrering</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="437">
+    <Value>Disse skal gentages en gang til</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="438">
+    <Value>Gentagelse</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="439">
+    <Value>af</Value>
+    <Comment>Maximum length 39 chars, Context: Iteration 1 of 2 for axis 5</Comment>
+  </Text>
+  <Text Name="440">
+    <Value>for akse</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="441">
+    <Value>Kalib. forskel for motor: [Gemt - Aktuel]:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="442">
+    <Value>rad</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="443">
+    <Value>Referencer er gyldige</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="444">
+    <Value>REFERENCER ER IKKE GYLDIGE</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="445">
+    <Value>Der er for mange akser, der er ændret</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="446">
+    <Value>Placer pendulet på værktøjet</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="447">
+    <Value>Placer enheden øverst på akse 2-rammen</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="448">
+    <Value>Akse 2 bevæger sig til</Value>
+    <Comment>Maximum length 39 chars, Context: Axis 2 will move to xx deg</Comment>
+  </Text>
+  <Text Name="449">
+    <Value>Akse 2 skal være på 90 grader</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="450">
+    <Value>For referencemålinger</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="451">
+    <Value>Calibrate with unit below flange</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="452">
+    <Value>Calibrate with unit on flange adapter</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="453">
+    <Value>Reference measurment on tubeshaft</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="454">
+    <Value>Reference measurment on tool</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="455">
+    <Value>Place Unit on tool</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="456">
+    <Value>Remove and remount Unit on tubeshaft</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+</Resource>

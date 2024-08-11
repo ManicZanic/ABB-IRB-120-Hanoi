@@ -1,0 +1,1729 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+******************************************************************************
+*
+* Devices tree structure
+*
+* DESCRIPTION:
+*   This file contains the definition of the Devices tree structure.
+*
+*  (c) Copyright 2003 ABB
+*
+******************************************************************************
+-->
+<DevicesStructure devicesVersion="2.0" xmlns="urn:abb-robotics-devices-struct">
+	<Devices>
+		<!-- Hardware devices -->
+		<Device name="HW_DEVICES" parentDevice="ROOT" resourceID="SYS_DEVICE_001" displayAttribute="External"/>
+		<Device name="CONTROLLER" parentDevice="HW_DEVICES" resourceID="SYS_DEVICE_002" displayAttribute="External"/>
+		<Device name="COMPUTER_SYSTEM" parentDevice="CONTROLLER" resourceID="SYS_DEVICE_003" displayAttribute="External"/>
+		<Device name="MASS_STORAGE" parentDevice="COMPUTER_SYSTEM" resourceID="SYS_DEVICE_010" displayAttribute="External"/>
+		<Device name="HD0A" parentDevice="MASS_STORAGE" resourceID="SYS_DEVICE_020" displayAttribute="External"/>
+		<Device name="COMPUTER_FANS" parentDevice="COMPUTER_SYSTEM" resourceID="SYS_DEVICE_008" displayAttribute="External"/>
+		<Device name="MAIN_COMPUTER_FANS" parentDevice="COMPUTER_FANS" resourceID="SYS_DEVICE_089" displayAttribute="External"/>
+    	<Device name="MODULE_TEMP" parentDevice="COMPUTER_SYSTEM" resourceID="SYS_DEVICE_122" displayAttribute="External"/>
+    	<Device name="CPU_AND_MEM_MC" parentDevice="COMPUTER_SYSTEM" resourceID="SYS_DEVICE_009" displayAttribute="External"/>
+    	<Device name="MC_CPU" parentDevice="CPU_AND_MEM_MC" resourceID="SYS_DEVICE_018" displayAttribute="External"/>
+		<Device name="PSU_SYSTEM" parentDevice="CONTROLLER" resourceID="SYS_DEVICE_006" displayAttribute="External"/>
+		<Device name="COMPUTER_PSU" parentDevice="PSU_SYSTEM" resourceID="SYS_DEVICE_031" displayAttribute="External"/>
+		<Device name="PANEL_BOARD" parentDevice="CONTROLLER" resourceID="SYS_DEVICE_030" displayAttribute="External"/>
+    	<Device name="DRIVE_MODULE1" parentDevice="CONTROLLER" resourceID="SYS_DEVICE_048" displayAttribute="External"/>
+    	<Device name="DRIVE_MODULE2" parentDevice="CONTROLLER" resourceID="SYS_DEVICE_049" displayAttribute="External"/>
+    	<Device name="DRIVE_MODULE3" parentDevice="CONTROLLER" resourceID="SYS_DEVICE_050" displayAttribute="External"/>
+    	<Device name="DRIVE_MODULE4" parentDevice="CONTROLLER" resourceID="SYS_DEVICE_051" displayAttribute="External"/>
+		<Device name="MC_VOLTAGE_LEVELS" parentDevice="COMPUTER_SYSTEM" resourceID="SYS_DEVICE_090" displayAttribute="External"/>
+		<Device name="PCI_BUS_MC" parentDevice="COMPUTER_SYSTEM" resourceID="SYS_DEVICE_007" displayAttribute="External"/>
+		<Device name="DN_BOARD1" parentDevice="PCI_BUS_MC" resourceID="SYS_DEVICE_012" displayAttribute="External"/>
+		<Device name="DN_BOARD2" parentDevice="PCI_BUS_MC" resourceID="SYS_DEVICE_012" displayAttribute="External"/>
+		<Device name="PROFIBUS_BOARD" parentDevice="PCI_BUS_MC" resourceID="SYS_DEVICE_013" displayAttribute="External"/>
+		<Device name="AXIS_COMPUTER_1" parentDevice="DRIVE_MODULE1" resourceID="SYS_DEVICE_023" displayAttribute="External"/>				
+		<Device name="AXIS_COMPUTER_2" parentDevice="DRIVE_MODULE2" resourceID="SYS_DEVICE_023" displayAttribute="External"/>				
+		<Device name="AXIS_COMPUTER_3" parentDevice="DRIVE_MODULE3" resourceID="SYS_DEVICE_023" displayAttribute="External"/>				
+		<Device name="AXIS_COMPUTER_4" parentDevice="DRIVE_MODULE4" resourceID="SYS_DEVICE_023" displayAttribute="External"/>
+		<Device name="DRIVE_UNIT1" parentDevice="DRIVE_MODULE1" resourceID="SYS_DEVICE_022" displayAttribute="External"/>				
+		<Device name="DRIVE_UNIT2" parentDevice="DRIVE_MODULE2" resourceID="SYS_DEVICE_022" displayAttribute="External"/>				
+		<Device name="DRIVE_UNIT3" parentDevice="DRIVE_MODULE3" resourceID="SYS_DEVICE_022" displayAttribute="External"/>				
+		<Device name="DRIVE_UNIT4" parentDevice="DRIVE_MODULE4" resourceID="SYS_DEVICE_022" displayAttribute="External"/>				
+    	<Device name="DRIVE_UNIT11" parentDevice="DRIVE_MODULE1" resourceID="SYS_DEVICE_126" displayAttribute="External"/>
+    	<Device name="DRIVE_UNIT21" parentDevice="DRIVE_MODULE2" resourceID="SYS_DEVICE_126" displayAttribute="External"/>
+    	<Device name="DRIVE_UNIT31" parentDevice="DRIVE_MODULE3" resourceID="SYS_DEVICE_126" displayAttribute="External"/>
+    	<Device name="DRIVE_UNIT41" parentDevice="DRIVE_MODULE4" resourceID="SYS_DEVICE_126" displayAttribute="External"/>
+    	<Device name="DRIVE_UNIT12" parentDevice="DRIVE_MODULE1" resourceID="SYS_DEVICE_127" displayAttribute="External"/>
+    	<Device name="DRIVE_UNIT22" parentDevice="DRIVE_MODULE2" resourceID="SYS_DEVICE_127" displayAttribute="External"/>
+    	<Device name="DRIVE_UNIT32" parentDevice="DRIVE_MODULE3" resourceID="SYS_DEVICE_127" displayAttribute="External"/>
+    	<Device name="DRIVE_UNIT42" parentDevice="DRIVE_MODULE4" resourceID="SYS_DEVICE_127" displayAttribute="External"/>
+    	<Device name="DRIVE_UNIT13" parentDevice="DRIVE_MODULE1" resourceID="SYS_DEVICE_128" displayAttribute="External"/>
+    	<Device name="DRIVE_UNIT23" parentDevice="DRIVE_MODULE2" resourceID="SYS_DEVICE_128" displayAttribute="External"/>
+    	<Device name="DRIVE_UNIT33" parentDevice="DRIVE_MODULE3" resourceID="SYS_DEVICE_128" displayAttribute="External"/>
+    	<Device name="DRIVE_UNIT43" parentDevice="DRIVE_MODULE4" resourceID="SYS_DEVICE_128" displayAttribute="External"/>
+		<Device name="DRIVE_UNIT14" parentDevice="DRIVE_MODULE1" resourceID="SYS_DEVICE_129" displayAttribute="External"/>
+		<Device name="DRIVE_UNIT24" parentDevice="DRIVE_MODULE2" resourceID="SYS_DEVICE_129" displayAttribute="External"/>
+		<Device name="DRIVE_UNIT34" parentDevice="DRIVE_MODULE3" resourceID="SYS_DEVICE_129" displayAttribute="External"/>
+		<Device name="DRIVE_UNIT44" parentDevice="DRIVE_MODULE4" resourceID="SYS_DEVICE_129" displayAttribute="External"/>
+		<Device name="DRIVE_UNIT15" parentDevice="DRIVE_MODULE1" resourceID="SYS_DEVICE_130" displayAttribute="External"/>
+		<Device name="DRIVE_UNIT25" parentDevice="DRIVE_MODULE2" resourceID="SYS_DEVICE_130" displayAttribute="External"/>
+		<Device name="DRIVE_UNIT35" parentDevice="DRIVE_MODULE3" resourceID="SYS_DEVICE_130" displayAttribute="External"/>
+		<Device name="DRIVE_UNIT45" parentDevice="DRIVE_MODULE4" resourceID="SYS_DEVICE_130" displayAttribute="External"/>
+		<Device name="CONTACTOR_BOARD1" parentDevice="DRIVE_MODULE1" resourceID="SYS_DEVICE_024" displayAttribute="External"/>
+		<Device name="CONTACTOR_BOARD2" parentDevice="DRIVE_MODULE2" resourceID="SYS_DEVICE_024" displayAttribute="External"/>
+		<Device name="CONTACTOR_BOARD3" parentDevice="DRIVE_MODULE3" resourceID="SYS_DEVICE_024" displayAttribute="External"/>
+		<Device name="CONTACTOR_BOARD4" parentDevice="DRIVE_MODULE4" resourceID="SYS_DEVICE_024" displayAttribute="External"/>
+		<Device name="SAFETY_CONTROLLER_1" parentDevice="DRIVE_MODULE1" resourceID="SYS_DEVICE_112" displayAttribute="External"/>
+		<Device name="SAFETY_CONTROLLER_2" parentDevice="DRIVE_MODULE2" resourceID="SYS_DEVICE_112" displayAttribute="External"/>
+		<Device name="SAFETY_CONTROLLER_3" parentDevice="DRIVE_MODULE3" resourceID="SYS_DEVICE_112" displayAttribute="External"/>
+		<Device name="SAFETY_CONTROLLER_4" parentDevice="DRIVE_MODULE4" resourceID="SYS_DEVICE_112" displayAttribute="External"/>
+		<Device name="MC_CPU_MEMORY" resourceID="SYS_DEVICE_113" parentDevice="CPU_AND_MEM_MC" displayAttribute="External"/>
+		<Device name="AW_IO_BOARD1" resourceID="SYS_DEVICE_115" parentDevice="DRIVE_MODULE1" displayAttribute="External"/>
+		<Device name="AW_IO_BOARD2" resourceID="SYS_DEVICE_115" parentDevice="DRIVE_MODULE2" displayAttribute="External"/>
+		<Device name="AW_IO_BOARD3" resourceID="SYS_DEVICE_115" parentDevice="DRIVE_MODULE3" displayAttribute="External"/>
+		<Device name="AW_IO_BOARD4" resourceID="SYS_DEVICE_115" parentDevice="DRIVE_MODULE4" displayAttribute="External"/>
+    	<Device name="CTRL_BOARD11" parentDevice="DRIVE_UNIT11" resourceID="SYS_DEVICE_124" displayAttribute="External"/>
+    	<Device name="CTRL_BOARD21" parentDevice="DRIVE_UNIT21" resourceID="SYS_DEVICE_124" displayAttribute="External"/>
+    	<Device name="CTRL_BOARD31" parentDevice="DRIVE_UNIT31" resourceID="SYS_DEVICE_124" displayAttribute="External"/>
+    	<Device name="CTRL_BOARD41" parentDevice="DRIVE_UNIT41" resourceID="SYS_DEVICE_124" displayAttribute="External"/>
+    	<Device name="CTRL_BOARD12" parentDevice="DRIVE_UNIT12" resourceID="SYS_DEVICE_124" displayAttribute="External"/>
+    	<Device name="CTRL_BOARD22" parentDevice="DRIVE_UNIT22" resourceID="SYS_DEVICE_124" displayAttribute="External"/>
+    	<Device name="CTRL_BOARD32" parentDevice="DRIVE_UNIT32" resourceID="SYS_DEVICE_124" displayAttribute="External"/>
+    	<Device name="CTRL_BOARD42" parentDevice="DRIVE_UNIT42" resourceID="SYS_DEVICE_124" displayAttribute="External"/>
+    	<Device name="CTRL_BOARD13" parentDevice="DRIVE_UNIT13" resourceID="SYS_DEVICE_124" displayAttribute="External"/>
+    	<Device name="CTRL_BOARD23" parentDevice="DRIVE_UNIT23" resourceID="SYS_DEVICE_124" displayAttribute="External"/>
+    	<Device name="CTRL_BOARD33" parentDevice="DRIVE_UNIT33" resourceID="SYS_DEVICE_124" displayAttribute="External"/>
+    	<Device name="CTRL_BOARD43" parentDevice="DRIVE_UNIT43" resourceID="SYS_DEVICE_124" displayAttribute="External"/>
+    	<Device name="CTRL_BOARD14" parentDevice="DRIVE_UNIT14" resourceID="SYS_DEVICE_124" displayAttribute="External"/>
+    	<Device name="CTRL_BOARD24" parentDevice="DRIVE_UNIT24" resourceID="SYS_DEVICE_124" displayAttribute="External"/>
+    	<Device name="CTRL_BOARD34" parentDevice="DRIVE_UNIT34" resourceID="SYS_DEVICE_124" displayAttribute="External"/>
+    	<Device name="CTRL_BOARD44" parentDevice="DRIVE_UNIT44" resourceID="SYS_DEVICE_124" displayAttribute="External"/>
+		<Device name="CTRL_BOARD15" parentDevice="DRIVE_UNIT15" resourceID="SYS_DEVICE_124" displayAttribute="External"/>
+		<Device name="CTRL_BOARD25" parentDevice="DRIVE_UNIT25" resourceID="SYS_DEVICE_124" displayAttribute="External"/>
+		<Device name="CTRL_BOARD35" parentDevice="DRIVE_UNIT35" resourceID="SYS_DEVICE_124" displayAttribute="External"/>
+		<Device name="CTRL_BOARD45" parentDevice="DRIVE_UNIT45" resourceID="SYS_DEVICE_124" displayAttribute="External"/>
+    	<Device name="POWER_BOARD11" parentDevice="DRIVE_UNIT11" resourceID="SYS_DEVICE_125" displayAttribute="External"/>
+    	<Device name="POWER_BOARD21" parentDevice="DRIVE_UNIT21" resourceID="SYS_DEVICE_125" displayAttribute="External"/>
+    	<Device name="POWER_BOARD31" parentDevice="DRIVE_UNIT31" resourceID="SYS_DEVICE_125" displayAttribute="External"/>
+    	<Device name="POWER_BOARD41" parentDevice="DRIVE_UNIT41" resourceID="SYS_DEVICE_125" displayAttribute="External"/>
+    	<Device name="POWER_BOARD12" parentDevice="DRIVE_UNIT12" resourceID="SYS_DEVICE_125" displayAttribute="External"/>
+    	<Device name="POWER_BOARD22" parentDevice="DRIVE_UNIT22" resourceID="SYS_DEVICE_125" displayAttribute="External"/>
+    	<Device name="POWER_BOARD32" parentDevice="DRIVE_UNIT32" resourceID="SYS_DEVICE_125" displayAttribute="External"/>
+    	<Device name="POWER_BOARD42" parentDevice="DRIVE_UNIT42" resourceID="SYS_DEVICE_125" displayAttribute="External"/>
+    	<Device name="POWER_BOARD13" parentDevice="DRIVE_UNIT13" resourceID="SYS_DEVICE_125" displayAttribute="External"/>
+    	<Device name="POWER_BOARD23" parentDevice="DRIVE_UNIT23" resourceID="SYS_DEVICE_125" displayAttribute="External"/>
+    	<Device name="POWER_BOARD33" parentDevice="DRIVE_UNIT33" resourceID="SYS_DEVICE_125" displayAttribute="External"/>
+    	<Device name="POWER_BOARD43" parentDevice="DRIVE_UNIT43" resourceID="SYS_DEVICE_125" displayAttribute="External"/>
+		<Device name="POWER_BOARD14" parentDevice="DRIVE_UNIT14" resourceID="SYS_DEVICE_125" displayAttribute="External"/>
+		<Device name="POWER_BOARD24" parentDevice="DRIVE_UNIT24" resourceID="SYS_DEVICE_125" displayAttribute="External"/>
+		<Device name="POWER_BOARD34" parentDevice="DRIVE_UNIT34" resourceID="SYS_DEVICE_125" displayAttribute="External"/>
+		<Device name="POWER_BOARD44" parentDevice="DRIVE_UNIT44" resourceID="SYS_DEVICE_125" displayAttribute="External"/>
+		<Device name="POWER_BOARD15" parentDevice="DRIVE_UNIT15" resourceID="SYS_DEVICE_125" displayAttribute="External"/>
+		<Device name="POWER_BOARD25" parentDevice="DRIVE_UNIT25" resourceID="SYS_DEVICE_125" displayAttribute="External"/>
+		<Device name="POWER_BOARD35" parentDevice="DRIVE_UNIT35" resourceID="SYS_DEVICE_125" displayAttribute="External"/>
+		<Device name="POWER_BOARD45" parentDevice="DRIVE_UNIT45" resourceID="SYS_DEVICE_125" displayAttribute="External"/>
+		<Device name="ANYBUS_CC" resourceID="SYS_DEVICE_116" parentDevice="COMPUTER_SYSTEM" displayAttribute="External"/>
+		<Device name="MECH_UNITS" parentDevice="HW_DEVICES" resourceID="SYS_DEVICE_035" displayAttribute="External"/>
+		<Device name="ROB1" parentDevice="MECH_UNITS" resourceID="SYS_DEVICE_036" displayAttribute="External"/>
+		<Device name="ROB2" parentDevice="MECH_UNITS" resourceID="SYS_DEVICE_037" displayAttribute="External"/>
+		<Device name="ROB3" parentDevice="MECH_UNITS" resourceID="SYS_DEVICE_038" displayAttribute="External"/>
+		<Device name="ROB4" parentDevice="MECH_UNITS" resourceID="SYS_DEVICE_039" displayAttribute="External"/>
+		<Device name="SIS_DATA_ROB1" parentDevice="ROB1" resourceID="SYS_DEVICE_040" displayAttribute="External"/>
+		<Device name="SIS_DATA_ROB2" parentDevice="ROB2" resourceID="SYS_DEVICE_040" displayAttribute="External"/>
+		<Device name="SIS_DATA_ROB3" parentDevice="ROB3" resourceID="SYS_DEVICE_040" displayAttribute="External"/>
+		<Device name="SIS_DATA_ROB4" parentDevice="ROB4" resourceID="SYS_DEVICE_040" displayAttribute="External"/>
+		<Device name="ROB1_JOINT1" parentDevice="ROB1" resourceID="SYS_DEVICE_042" displayAttribute="External"/>
+		<Device name="ROB1_JOINT2" parentDevice="ROB1" resourceID="SYS_DEVICE_043" displayAttribute="External"/>
+		<Device name="ROB1_JOINT3" parentDevice="ROB1" resourceID="SYS_DEVICE_044" displayAttribute="External"/>
+		<Device name="ROB1_JOINT4" parentDevice="ROB1" resourceID="SYS_DEVICE_045" displayAttribute="External"/>
+		<Device name="ROB1_JOINT5" parentDevice="ROB1" resourceID="SYS_DEVICE_046" displayAttribute="External"/>
+		<Device name="ROB1_JOINT6" parentDevice="ROB1" resourceID="SYS_DEVICE_047" displayAttribute="External"/>
+		<Device name="ROB2_JOINT1" parentDevice="ROB2" resourceID="SYS_DEVICE_042" displayAttribute="External"/>
+		<Device name="ROB2_JOINT2" parentDevice="ROB2" resourceID="SYS_DEVICE_043" displayAttribute="External"/>
+		<Device name="ROB2_JOINT3" parentDevice="ROB2" resourceID="SYS_DEVICE_044" displayAttribute="External"/>
+		<Device name="ROB2_JOINT4" parentDevice="ROB2" resourceID="SYS_DEVICE_045" displayAttribute="External"/>
+		<Device name="ROB2_JOINT5" parentDevice="ROB2" resourceID="SYS_DEVICE_046" displayAttribute="External"/>
+		<Device name="ROB2_JOINT6" parentDevice="ROB2" resourceID="SYS_DEVICE_047" displayAttribute="External"/>
+		<Device name="ROB3_JOINT1" parentDevice="ROB3" resourceID="SYS_DEVICE_042" displayAttribute="External"/>
+		<Device name="ROB3_JOINT2" parentDevice="ROB3" resourceID="SYS_DEVICE_043" displayAttribute="External"/>
+		<Device name="ROB3_JOINT3" parentDevice="ROB3" resourceID="SYS_DEVICE_044" displayAttribute="External"/>
+		<Device name="ROB3_JOINT4" parentDevice="ROB3" resourceID="SYS_DEVICE_045" displayAttribute="External"/>
+		<Device name="ROB3_JOINT5" parentDevice="ROB3" resourceID="SYS_DEVICE_046" displayAttribute="External"/>
+		<Device name="ROB3_JOINT6" parentDevice="ROB3" resourceID="SYS_DEVICE_047" displayAttribute="External"/>
+		<Device name="ROB4_JOINT1" parentDevice="ROB4" resourceID="SYS_DEVICE_042" displayAttribute="External"/>
+		<Device name="ROB4_JOINT2" parentDevice="ROB4" resourceID="SYS_DEVICE_043" displayAttribute="External"/>
+		<Device name="ROB4_JOINT3" parentDevice="ROB4" resourceID="SYS_DEVICE_044" displayAttribute="External"/>
+		<Device name="ROB4_JOINT4" parentDevice="ROB4" resourceID="SYS_DEVICE_045" displayAttribute="External"/>
+		<Device name="ROB4_JOINT5" parentDevice="ROB4" resourceID="SYS_DEVICE_046" displayAttribute="External"/>
+		<Device name="ROB4_JOINT6" parentDevice="ROB4" resourceID="SYS_DEVICE_047" displayAttribute="External"/>
+		<Device name="SIS_DATA_R1_J1" parentDevice="ROB1_JOINT1" resourceID="SYS_DEVICE_041" displayAttribute="External"/>
+		<Device name="SIS_DATA_R1_J2" parentDevice="ROB1_JOINT2" resourceID="SYS_DEVICE_041" displayAttribute="External"/>
+		<Device name="SIS_DATA_R1_J3" parentDevice="ROB1_JOINT3" resourceID="SYS_DEVICE_041" displayAttribute="External"/>
+		<Device name="SIS_DATA_R1_J4" parentDevice="ROB1_JOINT4" resourceID="SYS_DEVICE_041" displayAttribute="External"/>
+		<Device name="SIS_DATA_R1_J5" parentDevice="ROB1_JOINT5" resourceID="SYS_DEVICE_041" displayAttribute="External"/>
+		<Device name="SIS_DATA_R1_J6" parentDevice="ROB1_JOINT6" resourceID="SYS_DEVICE_041" displayAttribute="External"/>
+		<Device name="SIS_DATA_R2_J1" parentDevice="ROB2_JOINT1" resourceID="SYS_DEVICE_041" displayAttribute="External"/>
+		<Device name="SIS_DATA_R2_J2" parentDevice="ROB2_JOINT2" resourceID="SYS_DEVICE_041" displayAttribute="External"/>
+		<Device name="SIS_DATA_R2_J3" parentDevice="ROB2_JOINT3" resourceID="SYS_DEVICE_041" displayAttribute="External"/>
+		<Device name="SIS_DATA_R2_J4" parentDevice="ROB2_JOINT4" resourceID="SYS_DEVICE_041" displayAttribute="External"/>
+		<Device name="SIS_DATA_R2_J5" parentDevice="ROB2_JOINT5" resourceID="SYS_DEVICE_041" displayAttribute="External"/>
+		<Device name="SIS_DATA_R2_J6" parentDevice="ROB2_JOINT6" resourceID="SYS_DEVICE_041" displayAttribute="External"/>
+		<Device name="SIS_DATA_R3_J1" parentDevice="ROB3_JOINT1" resourceID="SYS_DEVICE_041" displayAttribute="External"/>
+		<Device name="SIS_DATA_R3_J2" parentDevice="ROB3_JOINT2" resourceID="SYS_DEVICE_041" displayAttribute="External"/>
+		<Device name="SIS_DATA_R3_J3" parentDevice="ROB3_JOINT3" resourceID="SYS_DEVICE_041" displayAttribute="External"/>
+		<Device name="SIS_DATA_R3_J4" parentDevice="ROB3_JOINT4" resourceID="SYS_DEVICE_041" displayAttribute="External"/>
+		<Device name="SIS_DATA_R3_J5" parentDevice="ROB3_JOINT5" resourceID="SYS_DEVICE_041" displayAttribute="External"/>
+		<Device name="SIS_DATA_R3_J6" parentDevice="ROB3_JOINT6" resourceID="SYS_DEVICE_041" displayAttribute="External"/>
+		<Device name="SIS_DATA_R4_J1" parentDevice="ROB4_JOINT1" resourceID="SYS_DEVICE_041" displayAttribute="External"/>
+		<Device name="SIS_DATA_R4_J2" parentDevice="ROB4_JOINT2" resourceID="SYS_DEVICE_041" displayAttribute="External"/>
+		<Device name="SIS_DATA_R4_J3" parentDevice="ROB4_JOINT3" resourceID="SYS_DEVICE_041" displayAttribute="External"/>
+		<Device name="SIS_DATA_R4_J4" parentDevice="ROB4_JOINT4" resourceID="SYS_DEVICE_041" displayAttribute="External"/>
+		<Device name="SIS_DATA_R4_J5" parentDevice="ROB4_JOINT5" resourceID="SYS_DEVICE_041" displayAttribute="External"/>
+		<Device name="SIS_DATA_R4_J6" parentDevice="ROB4_JOINT6" resourceID="SYS_DEVICE_041" displayAttribute="External"/>
+		<Device name="SINGLE1" parentDevice="MECH_UNITS" resourceID="SYS_DEVICE_099" displayAttribute="External"/>
+		<Device name="SINGLE2" parentDevice="MECH_UNITS" resourceID="SYS_DEVICE_100" displayAttribute="External"/>
+		<Device name="SINGLE3" parentDevice="MECH_UNITS" resourceID="SYS_DEVICE_101" displayAttribute="External"/>
+		<Device name="SINGLE4" parentDevice="MECH_UNITS" resourceID="SYS_DEVICE_102" displayAttribute="External"/>
+		<Device name="SINGLE5" parentDevice="MECH_UNITS" resourceID="SYS_DEVICE_103" displayAttribute="External"/>
+		<Device name="SINGLE6" parentDevice="MECH_UNITS" resourceID="SYS_DEVICE_104" displayAttribute="External"/>
+		<Device name="SINGLE7" parentDevice="MECH_UNITS" resourceID="SYS_DEVICE_105" displayAttribute="External"/>
+		<Device name="SINGLE8" parentDevice="MECH_UNITS" resourceID="SYS_DEVICE_106" displayAttribute="External"/>
+		<Device name="SIS_DATA_SINGLE1" parentDevice="SINGLE1" resourceID="SYS_DEVICE_040" displayAttribute="External"/>
+		<Device name="SIS_DATA_SINGLE2" parentDevice="SINGLE2" resourceID="SYS_DEVICE_040" displayAttribute="External"/>
+		<Device name="SIS_DATA_SINGLE3" parentDevice="SINGLE3" resourceID="SYS_DEVICE_040" displayAttribute="External"/>
+		<Device name="SIS_DATA_SINGLE4" parentDevice="SINGLE4" resourceID="SYS_DEVICE_040" displayAttribute="External"/>
+		<Device name="SIS_DATA_SINGLE5" parentDevice="SINGLE5" resourceID="SYS_DEVICE_040" displayAttribute="External"/>
+		<Device name="SIS_DATA_SINGLE6" parentDevice="SINGLE6" resourceID="SYS_DEVICE_040" displayAttribute="External"/>
+		<Device name="SIS_DATA_SINGLE7" parentDevice="SINGLE7" resourceID="SYS_DEVICE_040" displayAttribute="External"/>
+		<Device name="SIS_DATA_SINGLE8" parentDevice="SINGLE8" resourceID="SYS_DEVICE_040" displayAttribute="External"/>
+		<Device name="SIS_DATA_SINGLE_JOINT1" resourceID="SYS_DEVICE_111" parentDevice="SINGLE1" displayAttribute="External"/>
+		<Device name="SIS_DATA_SINGLE_JOINT2" resourceID="SYS_DEVICE_111" parentDevice="SINGLE2" displayAttribute="External"/>
+		<Device name="SIS_DATA_SINGLE_JOINT3" resourceID="SYS_DEVICE_111" parentDevice="SINGLE3" displayAttribute="External"/>
+		<Device name="SIS_DATA_SINGLE_JOINT4" resourceID="SYS_DEVICE_111" parentDevice="SINGLE4" displayAttribute="External"/>
+		<Device name="SIS_DATA_SINGLE_JOINT5" resourceID="SYS_DEVICE_111" parentDevice="SINGLE5" displayAttribute="External"/>
+		<Device name="SIS_DATA_SINGLE_JOINT6" resourceID="SYS_DEVICE_111" parentDevice="SINGLE6" displayAttribute="External"/>
+		<Device name="SIS_DATA_SINGLE_JOINT7" resourceID="SYS_DEVICE_111" parentDevice="SINGLE7" displayAttribute="External"/>
+		<Device name="SIS_DATA_SINGLE_JOINT8" resourceID="SYS_DEVICE_111" parentDevice="SINGLE8" displayAttribute="External"/>
+		<Device name="REMOTE_SERVICE" resourceID="SYS_DEVICE_120" parentDevice="HW_DEVICES" displayAttribute="External"/>
+		<Device name="SERVICE_BOX" resourceID="SYS_DEVICE_121" parentDevice="REMOTE_SERVICE" displayAttribute="External"/>
+      <Device name="PN_BOARD1" parentDevice="PCI_BUS_MC" resourceID="SYS_DEVICE_123" displayAttribute="External"/>
+      <Device name="VISION_SYSTEM" parentDevice="CONTROLLER" resourceID="SYS_DEVICE_132" displayAttribute="External"/>
+      <Device name="CAMERA_1" parentDevice="VISION_SYSTEM" resourceID="SYS_DEVICE_133" displayAttribute="External"/>
+      <Device name="CAMERA_2" parentDevice="VISION_SYSTEM" resourceID="SYS_DEVICE_134" displayAttribute="External"/>
+      <Device name="CAMERA_3" parentDevice="VISION_SYSTEM" resourceID="SYS_DEVICE_135" displayAttribute="External"/>
+      <Device name="CAMERA_4" parentDevice="VISION_SYSTEM" resourceID="SYS_DEVICE_136" displayAttribute="External"/>
+      <Device name="CAMERA_5" parentDevice="VISION_SYSTEM" resourceID="SYS_DEVICE_137" displayAttribute="External"/>
+      <Device name="CAMERA_6" parentDevice="VISION_SYSTEM" resourceID="SYS_DEVICE_138" displayAttribute="External"/>
+      <Device name="CAMERA_7" parentDevice="VISION_SYSTEM" resourceID="SYS_DEVICE_139" displayAttribute="External"/>
+      <Device name="CAMERA_8" parentDevice="VISION_SYSTEM" resourceID="SYS_DEVICE_140" displayAttribute="External"/>
+      <Device name="CAMERA_9" parentDevice="VISION_SYSTEM" resourceID="SYS_DEVICE_141" displayAttribute="External"/>
+      <Device name="CAMERA_10" parentDevice="VISION_SYSTEM" resourceID="SYS_DEVICE_142" displayAttribute="External"/>
+
+      <!-- Software resources -->
+		<Device name="SW_RESOURCES" parentDevice="ROOT" resourceID="SYS_DEVICE_052" displayAttribute="External"/>
+		<Device name="SYSTEM" parentDevice="SW_RESOURCES" resourceID="SYS_DEVICE_065" displayAttribute="Internal"/>
+		<Device name="DATABASES" resourceID="SYS_DEVICE_072" parentDevice="SYSTEM" displayAttribute="Internal"/>
+		<Device name="CFG_DB" resourceID="SYS_DEVICE_082" parentDevice="DATABASES" displayAttribute="Internal"/>
+		<Device name="TEXT_DB" resourceID="SYS_DEVICE_083" parentDevice="DATABASES" displayAttribute="Internal"/>
+		<Device name="TEXT_DB_LANG1" resourceID="SYS_DEVICE_084" parentDevice="TEXT_DB" displayAttribute="Internal"/>
+		<Device name="TEXT_DB_LANG2" resourceID="SYS_DEVICE_085" parentDevice="TEXT_DB" displayAttribute="Internal"/>
+		<Device name="TEXT_DB_LANG3" resourceID="SYS_DEVICE_086" parentDevice="TEXT_DB" displayAttribute="Internal"/>
+		<Device name="OS" parentDevice="SYSTEM" resourceID="SYS_DEVICE_066" displayAttribute="Internal"/>
+		<Device name="IPM" parentDevice="OS" resourceID="SYS_DEVICE_081" displayAttribute="Internal"/>
+		<Device name="OS_VERSION" parentDevice="OS" resourceID="SYS_DEVICE_118" displayAttribute="Internal"/>
+		<Device name="CPU_LOAD" parentDevice="SYSTEM" resourceID="SYS_DEVICE_067" displayAttribute="Internal"/>
+		<Device name="SYSTEM_UPTIME" parentDevice="SYSTEM" resourceID="SYS_DEVICE_119" displayAttribute="External"/>
+		<Device name="MEMORY" parentDevice="SYSTEM" resourceID="SYS_DEVICE_069" displayAttribute="Internal"/>
+		<Device name="RAM_MEMORY" parentDevice="MEMORY" resourceID="SYS_DEVICE_087" displayAttribute="Internal"/>
+		<Device name="FILE_SYSTEM" parentDevice="SYSTEM" resourceID="SYS_DEVICE_071" displayAttribute="Internal"/>
+		<Device name="FILE_DESCRIPTORS" parentDevice="FILE_SYSTEM" resourceID="SYS_DEVICE_088" displayAttribute="Internal"/>
+		<Device name="RAPID" parentDevice="SW_RESOURCES" resourceID="SYS_DEVICE_079" displayAttribute="External"/>
+		<Device name="RAPID_HANDLES" parentDevice="RAPID" resourceID="SYS_DEVICE_096" displayAttribute="Internal"/>
+		<Device name="RAPID_FILES" parentDevice="RAPID_HANDLES" resourceID="SYS_DEVICE_097" displayAttribute="Internal"/>
+		<Device name="RAPID_SOCKETS" parentDevice="RAPID_HANDLES" resourceID="SYS_DEVICE_098" displayAttribute="Internal"/>
+		<Device name="RAPID_MEMORY" parentDevice="RAPID" resourceID="SYS_DEVICE_095" displayAttribute="External"/>
+		<Device name="RAPID_PERFORMANCE" parentDevice="RAPID" resourceID="SYS_DEVICE_131" displayAttribute="External"/>
+		<Device name="COMMUNICATION" parentDevice="SW_RESOURCES" resourceID="SYS_DEVICE_073" displayAttribute="Internal"/>    
+		<Device name="ROBAPI" parentDevice="COMMUNICATION" resourceID="SYS_DEVICE_053" displayAttribute="Internal"/>
+		<Device name="ROBAPI_SUB" parentDevice="ROBAPI" resourceID="SYS_DEVICE_054" displayAttribute="Internal"/>
+		<Device name="ROBAPI_SUB_TOTAL" parentDevice="ROBAPI_SUB" resourceID="SYS_DEVICE_055" displayAttribute="Internal"/>
+		<Device name="ROBAPI_SUB_PERS" parentDevice="ROBAPI_SUB" resourceID="SYS_DEVICE_056" displayAttribute="Internal"/>
+		<Device name="ROBAPI_SUB_IO" parentDevice="ROBAPI_SUB" resourceID="SYS_DEVICE_057" displayAttribute="Internal"/>
+		<Device name="ROBAPI_SUB_HIGH_PRIO" parentDevice="ROBAPI_SUB" resourceID="SYS_DEVICE_117" displayAttribute="Internal"/>
+		<Device name="ROBAPI_SUB_MISC" parentDevice="ROBAPI_SUB" resourceID="SYS_DEVICE_058" displayAttribute="Internal"/>
+		<Device name="ROBAPI_EVENTS" parentDevice="ROBAPI" resourceID="SYS_DEVICE_059" displayAttribute="Internal"/>
+		<Device name="ROBAPI_EVENTS_SENT" parentDevice="ROBAPI_EVENTS" resourceID="SYS_DEVICE_060" displayAttribute="Internal"/>
+	</Devices>
+	<Properties>
+		<Property name="PROPERTY_MC_FAN_SPEED" resourceID="SYS_PROPERTY_006" parentDevice="MAIN_COMPUTER_FANS" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_RPM"/>
+		</Property>
+		<Property name="PROPERTY_MC_CPU_TEMPERATURE" parentDevice="MC_CPU" resourceID="SYS_PROPERTY_007" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_CELSIUS"/>
+		</Property>
+		<Property name="PROPERTY_MC_MODULE_TEMPERATURE" parentDevice="MODULE_TEMP" resourceID="SYS_PROPERTY_007" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_CELSIUS"/>
+		</Property>
+		<Property name="PROPERTY_MC_33V_LEVEL" resourceID="SYS_PROPERTY_062" parentDevice="MC_VOLTAGE_LEVELS" valueType="STRING" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_VOLT"/>
+		</Property>
+		<Property name="PROPERTY_MC_5V_LEVEL" resourceID="SYS_PROPERTY_015" parentDevice="MC_VOLTAGE_LEVELS" valueType="STRING" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_VOLT"/>
+		</Property>
+		<Property name="PROPERTY_MC_12V_LEVEL" resourceID="SYS_PROPERTY_016" parentDevice="MC_VOLTAGE_LEVELS" valueType="STRING" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_VOLT"/>
+		</Property>
+		<Property name="PROPERTY_MC_CMOS_CHARGE_LEVEL" resourceID="SYS_PROPERTY_008" parentDevice="MC_VOLTAGE_LEVELS" valueType="STRING" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_VOLT"/>
+		</Property>
+		<Property name="PROPERTY_HD0A_FREE_SIZE" resourceID="SYS_PROPERTY_012" parentDevice="HD0A" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_MEGABYTE"/>
+		</Property>
+		<Property name="PROPERTY_HD0A_TOTAL_SIZE" resourceID="SYS_PROPERTY_011" parentDevice="HD0A" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_MEGABYTE"/>
+		</Property>
+		<Property name="PROPERTY_ENERGY_BANK_PRODUCT_ID" parentDevice="COMPUTER_PSU" resourceID="SYS_PROPERTY_131" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_ENERGY_BANK_FIRMWARE_VERSION" parentDevice="COMPUTER_PSU" resourceID="SYS_PROPERTY_005" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_ENERGY_BANK_STATUS" parentDevice="COMPUTER_PSU" resourceID="SYS_PROPERTY_019" valueType="TEXT_ID" displayAttribute="External">
+			<PropertyTextResources>
+				<PropertyTextResource number="0" resourceID="SYS_RESOURCE_DISABLED"/>
+				<PropertyTextResource number="1" resourceID="SYS_RESOURCE_ENABLED"/>
+			</PropertyTextResources>
+		</Property>
+		<Property name="PROPERTY_ENERGY_BANK_CHARGE" parentDevice="COMPUTER_PSU" resourceID="SYS_PROPERTY_020" valueType="TEXT_ID" displayAttribute="External">
+			<PropertyTextResources>
+				<PropertyTextResource number="0" resourceID="SYS_RESOURCE_EMPTY"/>
+				<PropertyTextResource number="1" resourceID="SYS_RESOURCE_FULL"/>
+			</PropertyTextResources>
+		</Property>
+		<Property name="PROPERTY_PSU_TEMP_OK" parentDevice="COMPUTER_PSU" resourceID="SYS_PROPERTY_007" valueType="TEXT_ID" displayAttribute="External">
+			<PropertyTextResources>
+				<PropertyTextResource number="0" resourceID="SYS_RESOURCE_NOT_OK"/>
+				<PropertyTextResource number="1" resourceID="SYS_RESOURCE_OK"/>
+			</PropertyTextResources>
+		</Property>
+		<Property name="PROPERTY_PSU_UC_OK" parentDevice="COMPUTER_PSU" resourceID="SYS_PROPERTY_110" valueType="TEXT_ID" displayAttribute="External">
+			<PropertyTextResources>
+				<PropertyTextResource number="0" resourceID="SYS_RESOURCE_NOT_OK"/>
+				<PropertyTextResource number="1" resourceID="SYS_RESOURCE_OK"/>
+			</PropertyTextResources>
+		</Property>
+		<Property name="PROPERTY_PSU_DC_OK" parentDevice="COMPUTER_PSU" resourceID="SYS_PROPERTY_114" valueType="TEXT_ID" displayAttribute="External">
+			<PropertyTextResources>
+				<PropertyTextResource number="0" resourceID="SYS_RESOURCE_NOT_OK"/>
+				<PropertyTextResource number="1" resourceID="SYS_RESOURCE_OK"/>
+			</PropertyTextResources>
+		</Property>
+		<Property name="PROPERTY_PSU_COOL_OK" parentDevice="COMPUTER_PSU" resourceID="SYS_PROPERTY_112" valueType="TEXT_ID" displayAttribute="External">
+			<PropertyTextResources>
+				<PropertyTextResource number="0" resourceID="SYS_RESOURCE_NOT_OK"/>
+				<PropertyTextResource number="1" resourceID="SYS_RESOURCE_OK"/>
+			</PropertyTextResources>
+		</Property>
+		<Property name="PROPERTY_PSU_SYS_OK" parentDevice="COMPUTER_PSU" resourceID="SYS_PROPERTY_113" valueType="TEXT_ID" displayAttribute="External">
+			<PropertyTextResources>
+				<PropertyTextResource number="0" resourceID="SYS_RESOURCE_NOT_OK"/>
+				<PropertyTextResource number="1" resourceID="SYS_RESOURCE_OK"/>
+			</PropertyTextResources>
+		</Property>
+		<Property name="PROPERTY_PSU_BRAKE_OK" parentDevice="COMPUTER_PSU" resourceID="SYS_PROPERTY_115" valueType="TEXT_ID" displayAttribute="External">
+			<PropertyTextResources>
+				<PropertyTextResource number="0" resourceID="SYS_RESOURCE_NOT_OK"/>
+				<PropertyTextResource number="1" resourceID="SYS_RESOURCE_OK"/>
+			</PropertyTextResources>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_SERVICE_INT_R1" resourceID="SYS_PROPERTY_022" parentDevice="SIS_DATA_ROB1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_SERVICE_INT_R2" resourceID="SYS_PROPERTY_022" parentDevice="SIS_DATA_ROB2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_SERVICE_INT_R3" resourceID="SYS_PROPERTY_022" parentDevice="SIS_DATA_ROB3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_SERVICE_INT_R4" resourceID="SYS_PROPERTY_022" parentDevice="SIS_DATA_ROB4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_SERVICE_INT_S1" resourceID="SYS_PROPERTY_022" parentDevice="SIS_DATA_SINGLE1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_SERVICE_INT_S2" resourceID="SYS_PROPERTY_022" parentDevice="SIS_DATA_SINGLE2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_SERVICE_INT_S3" resourceID="SYS_PROPERTY_022" parentDevice="SIS_DATA_SINGLE3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_SERVICE_INT_S4" resourceID="SYS_PROPERTY_022" parentDevice="SIS_DATA_SINGLE4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_SERVICE_INT_S5" resourceID="SYS_PROPERTY_022" parentDevice="SIS_DATA_SINGLE5" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_SERVICE_INT_S6" resourceID="SYS_PROPERTY_022" parentDevice="SIS_DATA_SINGLE6" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_SERVICE_INT_S7" resourceID="SYS_PROPERTY_022" parentDevice="SIS_DATA_SINGLE7" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_SERVICE_INT_S8" resourceID="SYS_PROPERTY_022" parentDevice="SIS_DATA_SINGLE8" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_CALTIME_SERVICE_INT_R1" resourceID="SYS_PROPERTY_021" parentDevice="SIS_DATA_ROB1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_YEARS"/>
+		</Property>
+		<Property name="PROPERTY_CALTIME_SERVICE_INT_R2" resourceID="SYS_PROPERTY_021" parentDevice="SIS_DATA_ROB2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_YEARS"/>
+		</Property>
+		<Property name="PROPERTY_CALTIME_SERVICE_INT_R3" resourceID="SYS_PROPERTY_021" parentDevice="SIS_DATA_ROB3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_YEARS"/>
+		</Property>
+		<Property name="PROPERTY_CALTIME_SERVICE_INT_R4" resourceID="SYS_PROPERTY_021" parentDevice="SIS_DATA_ROB4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_YEARS"/>
+		</Property>
+		<Property name="PROPERTY_CALTIME_SERVICE_INT_S1" resourceID="SYS_PROPERTY_021" parentDevice="SIS_DATA_SINGLE1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_YEARS"/>
+		</Property>
+		<Property name="PROPERTY_CALTIME_SERVICE_INT_S2" resourceID="SYS_PROPERTY_021" parentDevice="SIS_DATA_SINGLE2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_YEARS"/>
+		</Property>
+		<Property name="PROPERTY_CALTIME_SERVICE_INT_S3" resourceID="SYS_PROPERTY_021" parentDevice="SIS_DATA_SINGLE3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_YEARS"/>
+		</Property>
+		<Property name="PROPERTY_CALTIME_SERVICE_INT_S4" resourceID="SYS_PROPERTY_021" parentDevice="SIS_DATA_SINGLE4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_YEARS"/>
+		</Property>
+		<Property name="PROPERTY_CALTIME_SERVICE_INT_S5" resourceID="SYS_PROPERTY_021" parentDevice="SIS_DATA_SINGLE5" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_YEARS"/>
+		</Property>
+		<Property name="PROPERTY_CALTIME_SERVICE_INT_S6" resourceID="SYS_PROPERTY_021" parentDevice="SIS_DATA_SINGLE6" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_YEARS"/>
+		</Property>
+		<Property name="PROPERTY_CALTIME_SERVICE_INT_S7" resourceID="SYS_PROPERTY_021" parentDevice="SIS_DATA_SINGLE7" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_YEARS"/>
+		</Property>
+		<Property name="PROPERTY_CALTIME_SERVICE_INT_S8" resourceID="SYS_PROPERTY_021" parentDevice="SIS_DATA_SINGLE8" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_YEARS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_W_LEVEL_R1" resourceID="SYS_PROPERTY_031" parentDevice="SIS_DATA_ROB1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_W_LEVEL_R2" resourceID="SYS_PROPERTY_031" parentDevice="SIS_DATA_ROB2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_W_LEVEL_R3" resourceID="SYS_PROPERTY_031" parentDevice="SIS_DATA_ROB3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_W_LEVEL_R4" resourceID="SYS_PROPERTY_031" parentDevice="SIS_DATA_ROB4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_W_LEVEL_S1" resourceID="SYS_PROPERTY_031" parentDevice="SIS_DATA_SINGLE1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_W_LEVEL_S2" resourceID="SYS_PROPERTY_031" parentDevice="SIS_DATA_SINGLE2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_W_LEVEL_S3" resourceID="SYS_PROPERTY_031" parentDevice="SIS_DATA_SINGLE3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_W_LEVEL_S4" resourceID="SYS_PROPERTY_031" parentDevice="SIS_DATA_SINGLE4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_W_LEVEL_S5" resourceID="SYS_PROPERTY_031" parentDevice="SIS_DATA_SINGLE5" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_W_LEVEL_S6" resourceID="SYS_PROPERTY_031" parentDevice="SIS_DATA_SINGLE6" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_W_LEVEL_S7" resourceID="SYS_PROPERTY_031" parentDevice="SIS_DATA_SINGLE7" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_W_LEVEL_S8" resourceID="SYS_PROPERTY_031" parentDevice="SIS_DATA_SINGLE8" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_CALTIME_W_LEVEL_R1" resourceID="SYS_PROPERTY_023" parentDevice="SIS_DATA_ROB1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_CALTIME_W_LEVEL_R2" resourceID="SYS_PROPERTY_023" parentDevice="SIS_DATA_ROB2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_CALTIME_W_LEVEL_R3" resourceID="SYS_PROPERTY_023" parentDevice="SIS_DATA_ROB3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_CALTIME_W_LEVEL_R4" resourceID="SYS_PROPERTY_023" parentDevice="SIS_DATA_ROB4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_CALTIME_W_LEVEL_S1" resourceID="SYS_PROPERTY_023" parentDevice="SIS_DATA_SINGLE1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_CALTIME_W_LEVEL_S2" resourceID="SYS_PROPERTY_023" parentDevice="SIS_DATA_SINGLE2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_CALTIME_W_LEVEL_S3" resourceID="SYS_PROPERTY_023" parentDevice="SIS_DATA_SINGLE3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_CALTIME_W_LEVEL_S4" resourceID="SYS_PROPERTY_023" parentDevice="SIS_DATA_SINGLE4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_CALTIME_W_LEVEL_S5" resourceID="SYS_PROPERTY_023" parentDevice="SIS_DATA_SINGLE5" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_CALTIME_W_LEVEL_S6" resourceID="SYS_PROPERTY_023" parentDevice="SIS_DATA_SINGLE6" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_CALTIME_W_LEVEL_S7" resourceID="SYS_PROPERTY_023" parentDevice="SIS_DATA_SINGLE7" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_CALTIME_W_LEVEL_S8" resourceID="SYS_PROPERTY_023" parentDevice="SIS_DATA_SINGLE8" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_GEAR_W_LEVEL_R1" resourceID="SYS_PROPERTY_024" parentDevice="SIS_DATA_ROB1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_GEAR_W_LEVEL_R2" resourceID="SYS_PROPERTY_024" parentDevice="SIS_DATA_ROB2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_GEAR_W_LEVEL_R3" resourceID="SYS_PROPERTY_024" parentDevice="SIS_DATA_ROB3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_GEAR_W_LEVEL_R4" resourceID="SYS_PROPERTY_024" parentDevice="SIS_DATA_ROB4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_GEAR_W_LEVEL_S1" resourceID="SYS_PROPERTY_024" parentDevice="SIS_DATA_SINGLE1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_GEAR_W_LEVEL_S2" resourceID="SYS_PROPERTY_024" parentDevice="SIS_DATA_SINGLE2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_GEAR_W_LEVEL_S3" resourceID="SYS_PROPERTY_024" parentDevice="SIS_DATA_SINGLE3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_GEAR_W_LEVEL_S4" resourceID="SYS_PROPERTY_024" parentDevice="SIS_DATA_SINGLE4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_GEAR_W_LEVEL_S5" resourceID="SYS_PROPERTY_024" parentDevice="SIS_DATA_SINGLE5" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_GEAR_W_LEVEL_S6" resourceID="SYS_PROPERTY_024" parentDevice="SIS_DATA_SINGLE6" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_GEAR_W_LEVEL_S7" resourceID="SYS_PROPERTY_024" parentDevice="SIS_DATA_SINGLE7" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_GEAR_W_LEVEL_S8" resourceID="SYS_PROPERTY_024" parentDevice="SIS_DATA_SINGLE8" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_RESTART_TIME_R1" resourceID="SYS_PROPERTY_025" parentDevice="SIS_DATA_ROB1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_RESTART_TIME_R2" resourceID="SYS_PROPERTY_025" parentDevice="SIS_DATA_ROB2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_RESTART_TIME_R3" resourceID="SYS_PROPERTY_025" parentDevice="SIS_DATA_ROB3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_RESTART_TIME_R4" resourceID="SYS_PROPERTY_025" parentDevice="SIS_DATA_ROB4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_RESTART_TIME_S1" resourceID="SYS_PROPERTY_025" parentDevice="SIS_DATA_SINGLE1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_RESTART_TIME_S2" resourceID="SYS_PROPERTY_025" parentDevice="SIS_DATA_SINGLE2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_RESTART_TIME_S3" resourceID="SYS_PROPERTY_025" parentDevice="SIS_DATA_SINGLE3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_RESTART_TIME_S4" resourceID="SYS_PROPERTY_025" parentDevice="SIS_DATA_SINGLE4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_RESTART_TIME_S5" resourceID="SYS_PROPERTY_025" parentDevice="SIS_DATA_SINGLE5" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_RESTART_TIME_S6" resourceID="SYS_PROPERTY_025" parentDevice="SIS_DATA_SINGLE6" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_RESTART_TIME_S7" resourceID="SYS_PROPERTY_025" parentDevice="SIS_DATA_SINGLE7" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_RESTART_TIME_S8" resourceID="SYS_PROPERTY_025" parentDevice="SIS_DATA_SINGLE8" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_ELAPSED_TIME_R1" resourceID="SYS_PROPERTY_026" parentDevice="SIS_DATA_ROB1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_ELAPSED_TIME_R2" resourceID="SYS_PROPERTY_026" parentDevice="SIS_DATA_ROB2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_ELAPSED_TIME_R3" resourceID="SYS_PROPERTY_026" parentDevice="SIS_DATA_ROB3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_ELAPSED_TIME_R4" resourceID="SYS_PROPERTY_026" parentDevice="SIS_DATA_ROB4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_ELAPSED_TIME_S1" resourceID="SYS_PROPERTY_026" parentDevice="SIS_DATA_SINGLE1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_ELAPSED_TIME_S2" resourceID="SYS_PROPERTY_026" parentDevice="SIS_DATA_SINGLE2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_ELAPSED_TIME_S3" resourceID="SYS_PROPERTY_026" parentDevice="SIS_DATA_SINGLE3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_ELAPSED_TIME_S4" resourceID="SYS_PROPERTY_026" parentDevice="SIS_DATA_SINGLE4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_ELAPSED_TIME_S5" resourceID="SYS_PROPERTY_026" parentDevice="SIS_DATA_SINGLE5" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_ELAPSED_TIME_S6" resourceID="SYS_PROPERTY_026" parentDevice="SIS_DATA_SINGLE6" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_ELAPSED_TIME_S7" resourceID="SYS_PROPERTY_026" parentDevice="SIS_DATA_SINGLE7" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_ELAPSED_TIME_S8" resourceID="SYS_PROPERTY_026" parentDevice="SIS_DATA_SINGLE8" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_R1" resourceID="SYS_PROPERTY_027" parentDevice="SIS_DATA_ROB1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_R2" resourceID="SYS_PROPERTY_027" parentDevice="SIS_DATA_ROB2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_R3" resourceID="SYS_PROPERTY_027" parentDevice="SIS_DATA_ROB3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_R4" resourceID="SYS_PROPERTY_027" parentDevice="SIS_DATA_ROB4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_S1" resourceID="SYS_PROPERTY_027" parentDevice="SIS_DATA_SINGLE1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_S2" resourceID="SYS_PROPERTY_027" parentDevice="SIS_DATA_SINGLE2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_S3" resourceID="SYS_PROPERTY_027" parentDevice="SIS_DATA_SINGLE3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_S4" resourceID="SYS_PROPERTY_027" parentDevice="SIS_DATA_SINGLE4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_S5" resourceID="SYS_PROPERTY_027" parentDevice="SIS_DATA_SINGLE5" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_S6" resourceID="SYS_PROPERTY_027" parentDevice="SIS_DATA_SINGLE6" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_S7" resourceID="SYS_PROPERTY_027" parentDevice="SIS_DATA_SINGLE7" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_S8" resourceID="SYS_PROPERTY_027" parentDevice="SIS_DATA_SINGLE8" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_S_J1" resourceID="SYS_PROPERTY_027" parentDevice="SIS_DATA_SINGLE_JOINT1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_S_J2" resourceID="SYS_PROPERTY_027" parentDevice="SIS_DATA_SINGLE_JOINT2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_S_J3" resourceID="SYS_PROPERTY_027" parentDevice="SIS_DATA_SINGLE_JOINT3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_S_J4" resourceID="SYS_PROPERTY_027" parentDevice="SIS_DATA_SINGLE_JOINT4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_S_J5" resourceID="SYS_PROPERTY_027" parentDevice="SIS_DATA_SINGLE_JOINT5" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_S_J6" resourceID="SYS_PROPERTY_027" parentDevice="SIS_DATA_SINGLE_JOINT6" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_S_J7" resourceID="SYS_PROPERTY_027" parentDevice="SIS_DATA_SINGLE_JOINT7" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_S_J8" resourceID="SYS_PROPERTY_027" parentDevice="SIS_DATA_SINGLE_JOINT8" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_COUNT_R1" resourceID="SYS_PROPERTY_028" parentDevice="SIS_DATA_ROB1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_COUNT_R2" resourceID="SYS_PROPERTY_028" parentDevice="SIS_DATA_ROB2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_COUNT_R3" resourceID="SYS_PROPERTY_028" parentDevice="SIS_DATA_ROB3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_COUNT_R4" resourceID="SYS_PROPERTY_028" parentDevice="SIS_DATA_ROB4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_COUNT_S1" resourceID="SYS_PROPERTY_028" parentDevice="SIS_DATA_SINGLE1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_COUNT_S2" resourceID="SYS_PROPERTY_028" parentDevice="SIS_DATA_SINGLE2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_COUNT_S3" resourceID="SYS_PROPERTY_028" parentDevice="SIS_DATA_SINGLE3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_COUNT_S4" resourceID="SYS_PROPERTY_028" parentDevice="SIS_DATA_SINGLE4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_COUNT_S5" resourceID="SYS_PROPERTY_028" parentDevice="SIS_DATA_SINGLE5" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_COUNT_S6" resourceID="SYS_PROPERTY_028" parentDevice="SIS_DATA_SINGLE6" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_COUNT_S7" resourceID="SYS_PROPERTY_028" parentDevice="SIS_DATA_SINGLE7" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_PRODTIME_COUNT_S8" resourceID="SYS_PROPERTY_028" parentDevice="SIS_DATA_SINGLE8" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_R1_J1" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_R1_J1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_R1_J2" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_R1_J2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_R1_J3" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_R1_J3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_R1_J4" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_R1_J4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_R1_J5" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_R1_J5" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_R1_J6" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_R1_J6" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_R2_J1" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_R2_J1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_R2_J2" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_R2_J2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_R2_J3" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_R2_J3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_R2_J4" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_R2_J4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_R2_J5" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_R2_J5" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_R2_J6" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_R2_J6" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_R3_J1" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_R3_J1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_R3_J2" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_R3_J2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_R3_J3" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_R3_J3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_R3_J4" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_R3_J4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_R3_J5" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_R3_J5" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_R3_J6" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_R3_J6" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_R4_J1" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_R4_J1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_R4_J2" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_R4_J2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_R4_J3" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_R4_J3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_R4_J4" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_R4_J4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_R4_J5" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_R4_J5" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_R4_J6" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_R4_J6" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_S1" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_SINGLE1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_S2" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_SINGLE2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_S3" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_SINGLE3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_S4" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_SINGLE4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_S5" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_SINGLE5" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_S6" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_SINGLE6" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_S7" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_SINGLE7" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_S8" resourceID="SYS_PROPERTY_029" parentDevice="SIS_DATA_SINGLE8" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_R1_J1" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_R1_J1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_R1_J2" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_R1_J2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_R1_J3" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_R1_J3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_R1_J4" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_R1_J4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_R1_J5" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_R1_J5" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_R1_J6" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_R1_J6" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_R2_J1" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_R2_J1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_R2_J2" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_R2_J2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_R2_J3" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_R2_J3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_R2_J4" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_R2_J4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_R2_J5" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_R2_J5" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_R2_J6" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_R2_J6" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_R3_J1" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_R3_J1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_R3_J2" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_R3_J2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_R3_J3" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_R3_J3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_R3_J4" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_R3_J4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_R3_J5" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_R3_J5" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_R3_J6" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_R3_J6" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_R4_J1" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_R4_J1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_R4_J2" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_R4_J2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_R4_J3" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_R4_J3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_R4_J4" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_R4_J4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_R4_J5" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_R4_J5" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_R4_J6" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_R4_J6" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_S1" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_SINGLE1" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_S2" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_SINGLE2" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_S3" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_SINGLE3" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_S4" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_SINGLE4" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_S5" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_SINGLE5" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_S6" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_SINGLE6" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_S7" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_SINGLE7" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+		<Property name="PROPERTY_L10_H_COUNT_S8" resourceID="SYS_PROPERTY_030" parentDevice="SIS_DATA_SINGLE8" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_HOURS"/>
+		</Property>
+    <Property name="PROPERTY_PANEL_BOARD_HW_ID" parentDevice="PANEL_BOARD" resourceID="SYS_PROPERTY_144" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_PANEL_BOARD_HW_LEGACY_ID" parentDevice="PANEL_BOARD" resourceID="SYS_PROPERTY_145" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_PANEL_BOARD_HW_LEGACY_REV" parentDevice="PANEL_BOARD" resourceID="SYS_PROPERTY_146" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_PANEL_BOARD_HW_VER" parentDevice="PANEL_BOARD" resourceID="SYS_PROPERTY_033" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_PANEL_BOARD_HW_REV" parentDevice="PANEL_BOARD" resourceID="SYS_PROPERTY_032" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_PANEL_BOARD_SW_VER" parentDevice="PANEL_BOARD" resourceID="SYS_PROPERTY_034" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_PANEL_BOARD_SW_REV" parentDevice="PANEL_BOARD" resourceID="SYS_PROPERTY_035" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_PANEL_BOARD_SERIAL_NO" parentDevice="PANEL_BOARD" resourceID="SYS_PROPERTY_001" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_PANEL_BOARD_BOOT_VER" parentDevice="PANEL_BOARD" resourceID="SYS_PROPERTY_036" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_DU1_BOOT_VER" parentDevice="DRIVE_UNIT1" resourceID="SYS_PROPERTY_036" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_DU2_BOOT_VER" parentDevice="DRIVE_UNIT2" resourceID="SYS_PROPERTY_036" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_DU3_BOOT_VER" parentDevice="DRIVE_UNIT3" resourceID="SYS_PROPERTY_036" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_DU4_BOOT_VER" parentDevice="DRIVE_UNIT4" resourceID="SYS_PROPERTY_036" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_DU1_BOOT_REV" parentDevice="DRIVE_UNIT1" resourceID="SYS_PROPERTY_037" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_DU2_BOOT_REV" parentDevice="DRIVE_UNIT2" resourceID="SYS_PROPERTY_037" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_DU3_BOOT_REV" parentDevice="DRIVE_UNIT3" resourceID="SYS_PROPERTY_037" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_DU4_BOOT_REV" parentDevice="DRIVE_UNIT4" resourceID="SYS_PROPERTY_037" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_DU1_SYSTEM_SW_VER" parentDevice="DRIVE_UNIT1" resourceID="SYS_PROPERTY_038" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_DU2_SYSTEM_SW_VER" parentDevice="DRIVE_UNIT2" resourceID="SYS_PROPERTY_038" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_DU3_SYSTEM_SW_VER" parentDevice="DRIVE_UNIT3" resourceID="SYS_PROPERTY_038" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_DU4_SYSTEM_SW_VER" parentDevice="DRIVE_UNIT4" resourceID="SYS_PROPERTY_038" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_DU1_SYSTEM_SW_REV" parentDevice="DRIVE_UNIT1" resourceID="SYS_PROPERTY_039" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_DU2_SYSTEM_SW_REV" parentDevice="DRIVE_UNIT2" resourceID="SYS_PROPERTY_039" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_DU3_SYSTEM_SW_REV" parentDevice="DRIVE_UNIT3" resourceID="SYS_PROPERTY_039" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_DU4_SYSTEM_SW_REV" parentDevice="DRIVE_UNIT4" resourceID="SYS_PROPERTY_039" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_DU1_SERIAL_NO" parentDevice="DRIVE_UNIT1" resourceID="SYS_PROPERTY_001" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_DU2_SERIAL_NO" parentDevice="DRIVE_UNIT2" resourceID="SYS_PROPERTY_001" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_DU3_SERIAL_NO" parentDevice="DRIVE_UNIT3" resourceID="SYS_PROPERTY_001" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_DU4_SERIAL_NO" parentDevice="DRIVE_UNIT4" resourceID="SYS_PROPERTY_001" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD11_HW_ID" parentDevice="CTRL_BOARD11" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD21_HW_ID" parentDevice="CTRL_BOARD21" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD31_HW_ID" parentDevice="CTRL_BOARD31" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD41_HW_ID" parentDevice="CTRL_BOARD41" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD12_HW_ID" parentDevice="CTRL_BOARD12" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD22_HW_ID" parentDevice="CTRL_BOARD22" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD32_HW_ID" parentDevice="CTRL_BOARD32" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD42_HW_ID" parentDevice="CTRL_BOARD42" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD13_HW_ID" parentDevice="CTRL_BOARD13" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD23_HW_ID" parentDevice="CTRL_BOARD23" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD33_HW_ID" parentDevice="CTRL_BOARD33" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD43_HW_ID" parentDevice="CTRL_BOARD43" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD14_HW_ID" parentDevice="CTRL_BOARD14" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD24_HW_ID" parentDevice="CTRL_BOARD24" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD34_HW_ID" parentDevice="CTRL_BOARD34" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD44_HW_ID" parentDevice="CTRL_BOARD44" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD15_HW_ID" parentDevice="CTRL_BOARD15" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD25_HW_ID" parentDevice="CTRL_BOARD25" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD35_HW_ID" parentDevice="CTRL_BOARD35" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD45_HW_ID" parentDevice="CTRL_BOARD45" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD11_HW_REV" parentDevice="CTRL_BOARD11" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD21_HW_REV" parentDevice="CTRL_BOARD21" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD31_HW_REV" parentDevice="CTRL_BOARD31" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD41_HW_REV" parentDevice="CTRL_BOARD41" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD12_HW_REV" parentDevice="CTRL_BOARD12" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD22_HW_REV" parentDevice="CTRL_BOARD22" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD32_HW_REV" parentDevice="CTRL_BOARD32" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD42_HW_REV" parentDevice="CTRL_BOARD42" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD13_HW_REV" parentDevice="CTRL_BOARD13" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD23_HW_REV" parentDevice="CTRL_BOARD23" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD33_HW_REV" parentDevice="CTRL_BOARD33" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD43_HW_REV" parentDevice="CTRL_BOARD43" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD14_HW_REV" parentDevice="CTRL_BOARD14" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD24_HW_REV" parentDevice="CTRL_BOARD24" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD34_HW_REV" parentDevice="CTRL_BOARD34" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD44_HW_REV" parentDevice="CTRL_BOARD44" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD15_HW_REV" parentDevice="CTRL_BOARD15" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD25_HW_REV" parentDevice="CTRL_BOARD25" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD35_HW_REV" parentDevice="CTRL_BOARD35" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD45_HW_REV" parentDevice="CTRL_BOARD45" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD11_HW_LEG_ID" parentDevice="CTRL_BOARD11" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD21_HW_LEG_ID" parentDevice="CTRL_BOARD21" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD31_HW_LEG_ID" parentDevice="CTRL_BOARD31" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD41_HW_LEG_ID" parentDevice="CTRL_BOARD41" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD12_HW_LEG_ID" parentDevice="CTRL_BOARD12" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD22_HW_LEG_ID" parentDevice="CTRL_BOARD22" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD32_HW_LEG_ID" parentDevice="CTRL_BOARD32" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD42_HW_LEG_ID" parentDevice="CTRL_BOARD42" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD13_HW_LEG_ID" parentDevice="CTRL_BOARD13" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD23_HW_LEG_ID" parentDevice="CTRL_BOARD23" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD33_HW_LEG_ID" parentDevice="CTRL_BOARD33" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD43_HW_LEG_ID" parentDevice="CTRL_BOARD43" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD14_HW_LEG_ID" parentDevice="CTRL_BOARD14" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD24_HW_LEG_ID" parentDevice="CTRL_BOARD24" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD34_HW_LEG_ID" parentDevice="CTRL_BOARD34" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD44_HW_LEG_ID" parentDevice="CTRL_BOARD44" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD15_HW_LEG_ID" parentDevice="CTRL_BOARD15" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD25_HW_LEG_ID" parentDevice="CTRL_BOARD25" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD35_HW_LEG_ID" parentDevice="CTRL_BOARD35" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD45_HW_LEG_ID" parentDevice="CTRL_BOARD45" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD11_HW_LEG_REV" parentDevice="CTRL_BOARD11" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD21_HW_LEG_REV" parentDevice="CTRL_BOARD21" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD31_HW_LEG_REV" parentDevice="CTRL_BOARD31" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD41_HW_LEG_REV" parentDevice="CTRL_BOARD41" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD12_HW_LEG_REV" parentDevice="CTRL_BOARD12" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD22_HW_LEG_REV" parentDevice="CTRL_BOARD22" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD32_HW_LEG_REV" parentDevice="CTRL_BOARD32" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD42_HW_LEG_REV" parentDevice="CTRL_BOARD42" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD13_HW_LEG_REV" parentDevice="CTRL_BOARD13" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD23_HW_LEG_REV" parentDevice="CTRL_BOARD23" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD33_HW_LEG_REV" parentDevice="CTRL_BOARD33" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD43_HW_LEG_REV" parentDevice="CTRL_BOARD43" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD14_HW_LEG_REV" parentDevice="CTRL_BOARD14" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD24_HW_LEG_REV" parentDevice="CTRL_BOARD24" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD34_HW_LEG_REV" parentDevice="CTRL_BOARD34" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD44_HW_LEG_REV" parentDevice="CTRL_BOARD44" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD15_HW_LEG_REV" parentDevice="CTRL_BOARD15" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD25_HW_LEG_REV" parentDevice="CTRL_BOARD25" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD35_HW_LEG_REV" parentDevice="CTRL_BOARD35" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD45_HW_LEG_REV" parentDevice="CTRL_BOARD45" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD11_FIRM_REV" parentDevice="CTRL_BOARD11" resourceID="SYS_PROPERTY_135" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD21_FIRM_REV" parentDevice="CTRL_BOARD21" resourceID="SYS_PROPERTY_135" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD31_FIRM_REV" parentDevice="CTRL_BOARD31" resourceID="SYS_PROPERTY_135" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD41_FIRM_REV" parentDevice="CTRL_BOARD41" resourceID="SYS_PROPERTY_135" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD12_FIRM_REV" parentDevice="CTRL_BOARD12" resourceID="SYS_PROPERTY_135" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD22_FIRM_REV" parentDevice="CTRL_BOARD22" resourceID="SYS_PROPERTY_135" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD32_FIRM_REV" parentDevice="CTRL_BOARD32" resourceID="SYS_PROPERTY_135" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD42_FIRM_REV" parentDevice="CTRL_BOARD42" resourceID="SYS_PROPERTY_135" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD13_FIRM_REV" parentDevice="CTRL_BOARD13" resourceID="SYS_PROPERTY_135" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD23_FIRM_REV" parentDevice="CTRL_BOARD23" resourceID="SYS_PROPERTY_135" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD33_FIRM_REV" parentDevice="CTRL_BOARD33" resourceID="SYS_PROPERTY_135" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD43_FIRM_REV" parentDevice="CTRL_BOARD43" resourceID="SYS_PROPERTY_135" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD14_FIRM_REV" parentDevice="CTRL_BOARD14" resourceID="SYS_PROPERTY_135" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD24_FIRM_REV" parentDevice="CTRL_BOARD24" resourceID="SYS_PROPERTY_135" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD34_FIRM_REV" parentDevice="CTRL_BOARD34" resourceID="SYS_PROPERTY_135" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD44_FIRM_REV" parentDevice="CTRL_BOARD44" resourceID="SYS_PROPERTY_135" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD15_FIRM_REV" parentDevice="CTRL_BOARD15" resourceID="SYS_PROPERTY_135" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD25_FIRM_REV" parentDevice="CTRL_BOARD25" resourceID="SYS_PROPERTY_135" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD35_FIRM_REV" parentDevice="CTRL_BOARD35" resourceID="SYS_PROPERTY_135" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD45_FIRM_REV" parentDevice="CTRL_BOARD45" resourceID="SYS_PROPERTY_135" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD11_FIRM_VER" parentDevice="CTRL_BOARD11" resourceID="SYS_PROPERTY_005" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD21_FIRM_VER" parentDevice="CTRL_BOARD21" resourceID="SYS_PROPERTY_005" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD31_FIRM_VER" parentDevice="CTRL_BOARD31" resourceID="SYS_PROPERTY_005" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD41_FIRM_VER" parentDevice="CTRL_BOARD41" resourceID="SYS_PROPERTY_005" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD12_FIRM_VER" parentDevice="CTRL_BOARD12" resourceID="SYS_PROPERTY_005" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD22_FIRM_VER" parentDevice="CTRL_BOARD22" resourceID="SYS_PROPERTY_005" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD32_FIRM_VER" parentDevice="CTRL_BOARD32" resourceID="SYS_PROPERTY_005" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD42_FIRM_VER" parentDevice="CTRL_BOARD42" resourceID="SYS_PROPERTY_005" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD13_FIRM_VER" parentDevice="CTRL_BOARD13" resourceID="SYS_PROPERTY_005" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD23_FIRM_VER" parentDevice="CTRL_BOARD23" resourceID="SYS_PROPERTY_005" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD33_FIRM_VER" parentDevice="CTRL_BOARD33" resourceID="SYS_PROPERTY_005" valueType="INT" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD43_FIRM_VER" parentDevice="CTRL_BOARD43" resourceID="SYS_PROPERTY_005" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD14_FIRM_VER" parentDevice="CTRL_BOARD14" resourceID="SYS_PROPERTY_005" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD24_FIRM_VER" parentDevice="CTRL_BOARD24" resourceID="SYS_PROPERTY_005" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD34_FIRM_VER" parentDevice="CTRL_BOARD34" resourceID="SYS_PROPERTY_005" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD44_FIRM_VER" parentDevice="CTRL_BOARD44" resourceID="SYS_PROPERTY_005" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD15_FIRM_VER" parentDevice="CTRL_BOARD15" resourceID="SYS_PROPERTY_005" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD25_FIRM_VER" parentDevice="CTRL_BOARD25" resourceID="SYS_PROPERTY_005" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD35_FIRM_VER" parentDevice="CTRL_BOARD35" resourceID="SYS_PROPERTY_005" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD45_FIRM_VER" parentDevice="CTRL_BOARD45" resourceID="SYS_PROPERTY_005" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD11_ART_NO" parentDevice="CTRL_BOARD11" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD21_ART_NO" parentDevice="CTRL_BOARD21" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD31_ART_NO" parentDevice="CTRL_BOARD31" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD41_ART_NO" parentDevice="CTRL_BOARD41" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD12_ART_NO" parentDevice="CTRL_BOARD12" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD22_ART_NO" parentDevice="CTRL_BOARD22" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD32_ART_NO" parentDevice="CTRL_BOARD32" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD42_ART_NO" parentDevice="CTRL_BOARD42" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD13_ART_NO" parentDevice="CTRL_BOARD13" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD23_ART_NO" parentDevice="CTRL_BOARD23" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD33_ART_NO" parentDevice="CTRL_BOARD33" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD43_ART_NO" parentDevice="CTRL_BOARD43" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD14_ART_NO" parentDevice="CTRL_BOARD14" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD24_ART_NO" parentDevice="CTRL_BOARD24" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD34_ART_NO" parentDevice="CTRL_BOARD34" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD44_ART_NO" parentDevice="CTRL_BOARD44" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD15_ART_NO" parentDevice="CTRL_BOARD15" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD25_ART_NO" parentDevice="CTRL_BOARD25" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD35_ART_NO" parentDevice="CTRL_BOARD35" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD45_ART_NO" parentDevice="CTRL_BOARD45" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD11_SERIAL_NO" parentDevice="CTRL_BOARD11" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD21_SERIAL_NO" parentDevice="CTRL_BOARD21" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD31_SERIAL_NO" parentDevice="CTRL_BOARD31" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD41_SERIAL_NO" parentDevice="CTRL_BOARD41" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD12_SERIAL_NO" parentDevice="CTRL_BOARD12" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD22_SERIAL_NO" parentDevice="CTRL_BOARD22" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD32_SERIAL_NO" parentDevice="CTRL_BOARD32" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD42_SERIAL_NO" parentDevice="CTRL_BOARD42" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD13_SERIAL_NO" parentDevice="CTRL_BOARD13" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD23_SERIAL_NO" parentDevice="CTRL_BOARD23" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD33_SERIAL_NO" parentDevice="CTRL_BOARD33" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_CTRL_BOARD43_SERIAL_NO" parentDevice="CTRL_BOARD43" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD14_SERIAL_NO" parentDevice="CTRL_BOARD14" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD24_SERIAL_NO" parentDevice="CTRL_BOARD24" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD34_SERIAL_NO" parentDevice="CTRL_BOARD34" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD44_SERIAL_NO" parentDevice="CTRL_BOARD44" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD15_SERIAL_NO" parentDevice="CTRL_BOARD15" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD25_SERIAL_NO" parentDevice="CTRL_BOARD25" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD35_SERIAL_NO" parentDevice="CTRL_BOARD35" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CTRL_BOARD45_SERIAL_NO" parentDevice="CTRL_BOARD45" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD11_TYPE" parentDevice="POWER_BOARD11" resourceID="SYS_PROPERTY_138" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_POWER_BOARD21_TYPE" parentDevice="POWER_BOARD21" resourceID="SYS_PROPERTY_138" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_POWER_BOARD31_TYPE" parentDevice="POWER_BOARD31" resourceID="SYS_PROPERTY_138" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_POWER_BOARD41_TYPE" parentDevice="POWER_BOARD41" resourceID="SYS_PROPERTY_138" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_POWER_BOARD12_TYPE" parentDevice="POWER_BOARD12" resourceID="SYS_PROPERTY_138" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_POWER_BOARD22_TYPE" parentDevice="POWER_BOARD22" resourceID="SYS_PROPERTY_138" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_POWER_BOARD32_TYPE" parentDevice="POWER_BOARD32" resourceID="SYS_PROPERTY_138" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_POWER_BOARD42_TYPE" parentDevice="POWER_BOARD42" resourceID="SYS_PROPERTY_138" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_POWER_BOARD13_TYPE" parentDevice="POWER_BOARD13" resourceID="SYS_PROPERTY_138" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_POWER_BOARD23_TYPE" parentDevice="POWER_BOARD23" resourceID="SYS_PROPERTY_138" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_POWER_BOARD33_TYPE" parentDevice="POWER_BOARD33" resourceID="SYS_PROPERTY_138" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_POWER_BOARD43_TYPE" parentDevice="POWER_BOARD43" resourceID="SYS_PROPERTY_138" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD14_TYPE" parentDevice="POWER_BOARD14" resourceID="SYS_PROPERTY_138" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD24_TYPE" parentDevice="POWER_BOARD24" resourceID="SYS_PROPERTY_138" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD34_TYPE" parentDevice="POWER_BOARD34" resourceID="SYS_PROPERTY_138" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD44_TYPE" parentDevice="POWER_BOARD44" resourceID="SYS_PROPERTY_138" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD15_TYPE" parentDevice="POWER_BOARD15" resourceID="SYS_PROPERTY_138" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD25_TYPE" parentDevice="POWER_BOARD25" resourceID="SYS_PROPERTY_138" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD35_TYPE" parentDevice="POWER_BOARD35" resourceID="SYS_PROPERTY_138" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD45_TYPE" parentDevice="POWER_BOARD45" resourceID="SYS_PROPERTY_138" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD11_HW_ID" parentDevice="POWER_BOARD11" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_POWER_BOARD21_HW_ID" parentDevice="POWER_BOARD21" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_POWER_BOARD31_HW_ID" parentDevice="POWER_BOARD31" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_POWER_BOARD41_HW_ID" parentDevice="POWER_BOARD41" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_POWER_BOARD12_HW_ID" parentDevice="POWER_BOARD12" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_POWER_BOARD22_HW_ID" parentDevice="POWER_BOARD22" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_POWER_BOARD32_HW_ID" parentDevice="POWER_BOARD32" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_POWER_BOARD42_HW_ID" parentDevice="POWER_BOARD42" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_POWER_BOARD13_HW_ID" parentDevice="POWER_BOARD13" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_POWER_BOARD23_HW_ID" parentDevice="POWER_BOARD23" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_POWER_BOARD33_HW_ID" parentDevice="POWER_BOARD33" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    	<Property name="PROPERTY_POWER_BOARD43_HW_ID" parentDevice="POWER_BOARD43" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD14_HW_ID" parentDevice="POWER_BOARD14" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD24_HW_ID" parentDevice="POWER_BOARD24" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD34_HW_ID" parentDevice="POWER_BOARD34" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD44_HW_ID" parentDevice="POWER_BOARD44" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD15_HW_ID" parentDevice="POWER_BOARD15" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD25_HW_ID" parentDevice="POWER_BOARD25" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD35_HW_ID" parentDevice="POWER_BOARD35" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD45_HW_ID" parentDevice="POWER_BOARD45" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD11_HW_REV" parentDevice="POWER_BOARD11" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD21_HW_REV" parentDevice="POWER_BOARD21" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD31_HW_REV" parentDevice="POWER_BOARD31" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD41_HW_REV" parentDevice="POWER_BOARD41" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD12_HW_REV" parentDevice="POWER_BOARD12" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD22_HW_REV" parentDevice="POWER_BOARD22" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD32_HW_REV" parentDevice="POWER_BOARD32" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD42_HW_REV" parentDevice="POWER_BOARD42" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD13_HW_REV" parentDevice="POWER_BOARD13" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD23_HW_REV" parentDevice="POWER_BOARD23" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD33_HW_REV" parentDevice="POWER_BOARD33" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD43_HW_REV" parentDevice="POWER_BOARD43" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD14_HW_REV" parentDevice="POWER_BOARD14" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD24_HW_REV" parentDevice="POWER_BOARD24" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD34_HW_REV" parentDevice="POWER_BOARD34" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD44_HW_REV" parentDevice="POWER_BOARD44" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD15_HW_REV" parentDevice="POWER_BOARD15" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD25_HW_REV" parentDevice="POWER_BOARD25" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD35_HW_REV" parentDevice="POWER_BOARD35" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD45_HW_REV" parentDevice="POWER_BOARD45" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD11_HW_LEG_ID" parentDevice="POWER_BOARD11" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD21_HW_LEG_ID" parentDevice="POWER_BOARD21" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD31_HW_LEG_ID" parentDevice="POWER_BOARD31" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD41_HW_LEG_ID" parentDevice="POWER_BOARD41" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD12_HW_LEG_ID" parentDevice="POWER_BOARD12" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD22_HW_LEG_ID" parentDevice="POWER_BOARD22" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD32_HW_LEG_ID" parentDevice="POWER_BOARD32" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD42_HW_LEG_ID" parentDevice="POWER_BOARD42" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD13_HW_LEG_ID" parentDevice="POWER_BOARD13" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD23_HW_LEG_ID" parentDevice="POWER_BOARD23" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD33_HW_LEG_ID" parentDevice="POWER_BOARD33" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD43_HW_LEG_ID" parentDevice="POWER_BOARD43" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD14_HW_LEG_ID" parentDevice="POWER_BOARD14" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD24_HW_LEG_ID" parentDevice="POWER_BOARD24" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD34_HW_LEG_ID" parentDevice="POWER_BOARD34" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD44_HW_LEG_ID" parentDevice="POWER_BOARD44" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD15_HW_LEG_ID" parentDevice="POWER_BOARD15" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD25_HW_LEG_ID" parentDevice="POWER_BOARD25" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD35_HW_LEG_ID" parentDevice="POWER_BOARD35" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD45_HW_LEG_ID" parentDevice="POWER_BOARD45" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD11_HW_LEG_REV" parentDevice="POWER_BOARD11" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD21_HW_LEG_REV" parentDevice="POWER_BOARD21" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD31_HW_LEG_REV" parentDevice="POWER_BOARD31" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD41_HW_LEG_REV" parentDevice="POWER_BOARD41" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD12_HW_LEG_REV" parentDevice="POWER_BOARD12" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD22_HW_LEG_REV" parentDevice="POWER_BOARD22" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD32_HW_LEG_REV" parentDevice="POWER_BOARD32" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD42_HW_LEG_REV" parentDevice="POWER_BOARD42" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD13_HW_LEG_REV" parentDevice="POWER_BOARD13" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD23_HW_LEG_REV" parentDevice="POWER_BOARD23" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD33_HW_LEG_REV" parentDevice="POWER_BOARD33" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD43_HW_LEG_REV" parentDevice="POWER_BOARD43" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD14_HW_LEG_REV" parentDevice="POWER_BOARD14" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD24_HW_LEG_REV" parentDevice="POWER_BOARD24" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD34_HW_LEG_REV" parentDevice="POWER_BOARD34" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD44_HW_LEG_REV" parentDevice="POWER_BOARD44" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD15_HW_LEG_REV" parentDevice="POWER_BOARD15" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD25_HW_LEG_REV" parentDevice="POWER_BOARD25" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD35_HW_LEG_REV" parentDevice="POWER_BOARD35" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD45_HW_LEG_REV" parentDevice="POWER_BOARD45" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD11_ART_NO" parentDevice="POWER_BOARD11" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD21_ART_NO" parentDevice="POWER_BOARD21" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD31_ART_NO" parentDevice="POWER_BOARD31" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD41_ART_NO" parentDevice="POWER_BOARD41" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD12_ART_NO" parentDevice="POWER_BOARD12" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD22_ART_NO" parentDevice="POWER_BOARD22" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD32_ART_NO" parentDevice="POWER_BOARD32" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD42_ART_NO" parentDevice="POWER_BOARD42" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD13_ART_NO" parentDevice="POWER_BOARD13" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD23_ART_NO" parentDevice="POWER_BOARD23" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD33_ART_NO" parentDevice="POWER_BOARD33" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD43_ART_NO" parentDevice="POWER_BOARD43" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD14_ART_NO" parentDevice="POWER_BOARD14" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD24_ART_NO" parentDevice="POWER_BOARD24" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD34_ART_NO" parentDevice="POWER_BOARD34" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD44_ART_NO" parentDevice="POWER_BOARD44" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD15_ART_NO" parentDevice="POWER_BOARD15" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD25_ART_NO" parentDevice="POWER_BOARD25" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD35_ART_NO" parentDevice="POWER_BOARD35" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD45_ART_NO" parentDevice="POWER_BOARD45" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD11_SERIAL_NO" parentDevice="POWER_BOARD11" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD21_SERIAL_NO" parentDevice="POWER_BOARD21" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD31_SERIAL_NO" parentDevice="POWER_BOARD31" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD41_SERIAL_NO" parentDevice="POWER_BOARD41" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD12_SERIAL_NO" parentDevice="POWER_BOARD12" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD22_SERIAL_NO" parentDevice="POWER_BOARD22" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD32_SERIAL_NO" parentDevice="POWER_BOARD32" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD42_SERIAL_NO" parentDevice="POWER_BOARD42" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD13_SERIAL_NO" parentDevice="POWER_BOARD13" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD23_SERIAL_NO" parentDevice="POWER_BOARD23" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD33_SERIAL_NO" parentDevice="POWER_BOARD33" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD43_SERIAL_NO" parentDevice="POWER_BOARD43" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD14_SERIAL_NO" parentDevice="POWER_BOARD14" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD24_SERIAL_NO" parentDevice="POWER_BOARD24" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD34_SERIAL_NO" parentDevice="POWER_BOARD34" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD44_SERIAL_NO" parentDevice="POWER_BOARD44" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD15_SERIAL_NO" parentDevice="POWER_BOARD15" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD25_SERIAL_NO" parentDevice="POWER_BOARD25" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD35_SERIAL_NO" parentDevice="POWER_BOARD35" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD45_SERIAL_NO" parentDevice="POWER_BOARD45" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD11_MAX_DC_LEVEL" parentDevice="POWER_BOARD11" resourceID="SYS_PROPERTY_139" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD21_MAX_DC_LEVEL" parentDevice="POWER_BOARD21" resourceID="SYS_PROPERTY_139" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD31_MAX_DC_LEVEL" parentDevice="POWER_BOARD31" resourceID="SYS_PROPERTY_139" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD41_MAX_DC_LEVEL" parentDevice="POWER_BOARD41" resourceID="SYS_PROPERTY_139" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD12_MAX_DC_LEVEL" parentDevice="POWER_BOARD12" resourceID="SYS_PROPERTY_139" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD22_MAX_DC_LEVEL" parentDevice="POWER_BOARD22" resourceID="SYS_PROPERTY_139" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD32_MAX_DC_LEVEL" parentDevice="POWER_BOARD32" resourceID="SYS_PROPERTY_139" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD42_MAX_DC_LEVEL" parentDevice="POWER_BOARD42" resourceID="SYS_PROPERTY_139" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD13_MAX_DC_LEVEL" parentDevice="POWER_BOARD13" resourceID="SYS_PROPERTY_139" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD23_MAX_DC_LEVEL" parentDevice="POWER_BOARD23" resourceID="SYS_PROPERTY_139" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD33_MAX_DC_LEVEL" parentDevice="POWER_BOARD33" resourceID="SYS_PROPERTY_139" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_POWER_BOARD43_MAX_DC_LEVEL" parentDevice="POWER_BOARD43" resourceID="SYS_PROPERTY_139" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD14_MAX_DC_LEVEL" parentDevice="POWER_BOARD14" resourceID="SYS_PROPERTY_139" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD24_MAX_DC_LEVEL" parentDevice="POWER_BOARD24" resourceID="SYS_PROPERTY_139" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD34_MAX_DC_LEVEL" parentDevice="POWER_BOARD34" resourceID="SYS_PROPERTY_139" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD44_MAX_DC_LEVEL" parentDevice="POWER_BOARD44" resourceID="SYS_PROPERTY_139" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD15_MAX_DC_LEVEL" parentDevice="POWER_BOARD15" resourceID="SYS_PROPERTY_139" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD25_MAX_DC_LEVEL" parentDevice="POWER_BOARD25" resourceID="SYS_PROPERTY_139" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD35_MAX_DC_LEVEL" parentDevice="POWER_BOARD35" resourceID="SYS_PROPERTY_139" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_POWER_BOARD45_MAX_DC_LEVEL" parentDevice="POWER_BOARD45" resourceID="SYS_PROPERTY_139" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CB1_HW_ID" parentDevice="CONTACTOR_BOARD1" resourceID="SYS_PROPERTY_144" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_CB2_HW_ID" parentDevice="CONTACTOR_BOARD2" resourceID="SYS_PROPERTY_144" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_CB3_HW_ID" parentDevice="CONTACTOR_BOARD3" resourceID="SYS_PROPERTY_144" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_CB4_HW_ID" parentDevice="CONTACTOR_BOARD4" resourceID="SYS_PROPERTY_144" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_CB1_HW_LEGACY_ID" parentDevice="CONTACTOR_BOARD1" resourceID="SYS_PROPERTY_145" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_CB2_HW_LEGACY_ID" parentDevice="CONTACTOR_BOARD2" resourceID="SYS_PROPERTY_145" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_CB3_HW_LEGACY_ID" parentDevice="CONTACTOR_BOARD3" resourceID="SYS_PROPERTY_145" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_CB4_HW_LEGACY_ID" parentDevice="CONTACTOR_BOARD4" resourceID="SYS_PROPERTY_145" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_CB1_HW_VER" parentDevice="CONTACTOR_BOARD1" resourceID="SYS_PROPERTY_033" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_CB2_HW_VER" parentDevice="CONTACTOR_BOARD2" resourceID="SYS_PROPERTY_033" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_CB3_HW_VER" parentDevice="CONTACTOR_BOARD3" resourceID="SYS_PROPERTY_033" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_CB4_HW_VER" parentDevice="CONTACTOR_BOARD4" resourceID="SYS_PROPERTY_033" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_CB1_HW_REV" parentDevice="CONTACTOR_BOARD1" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+    <Property name="PROPERTY_CB2_HW_REV" parentDevice="CONTACTOR_BOARD2" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+    <Property name="PROPERTY_CB3_HW_REV" parentDevice="CONTACTOR_BOARD3" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+    <Property name="PROPERTY_CB4_HW_REV" parentDevice="CONTACTOR_BOARD4" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_CB1_SW_VER" parentDevice="CONTACTOR_BOARD1" resourceID="SYS_PROPERTY_034" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_CB2_SW_VER" parentDevice="CONTACTOR_BOARD2" resourceID="SYS_PROPERTY_034" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_CB3_SW_VER" parentDevice="CONTACTOR_BOARD3" resourceID="SYS_PROPERTY_034" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_CB4_SW_VER" parentDevice="CONTACTOR_BOARD4" resourceID="SYS_PROPERTY_034" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_CB1_SW_REV" parentDevice="CONTACTOR_BOARD1" resourceID="SYS_PROPERTY_035" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CB2_SW_REV" parentDevice="CONTACTOR_BOARD2" resourceID="SYS_PROPERTY_035" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CB3_SW_REV" parentDevice="CONTACTOR_BOARD3" resourceID="SYS_PROPERTY_035" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CB4_SW_REV" parentDevice="CONTACTOR_BOARD4" resourceID="SYS_PROPERTY_035" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CB1_SERIAL_NO" parentDevice="CONTACTOR_BOARD1" resourceID="SYS_PROPERTY_001" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CB2_SERIAL_NO" parentDevice="CONTACTOR_BOARD2" resourceID="SYS_PROPERTY_001" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CB3_SERIAL_NO" parentDevice="CONTACTOR_BOARD3" resourceID="SYS_PROPERTY_001" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_CB4_SERIAL_NO" parentDevice="CONTACTOR_BOARD4" resourceID="SYS_PROPERTY_001" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_AWIO1_SW_VER" parentDevice="AW_IO_BOARD1" resourceID="SYS_PROPERTY_034" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_AWIO2_SW_VER" parentDevice="AW_IO_BOARD2" resourceID="SYS_PROPERTY_034" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_AWIO3_SW_VER" parentDevice="AW_IO_BOARD3" resourceID="SYS_PROPERTY_034" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_AWIO4_SW_VER" parentDevice="AW_IO_BOARD4" resourceID="SYS_PROPERTY_034" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_AWIO1_SW_REV" parentDevice="AW_IO_BOARD1" resourceID="SYS_PROPERTY_035" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AWIO2_SW_REV" parentDevice="AW_IO_BOARD2" resourceID="SYS_PROPERTY_035" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AWIO3_SW_REV" parentDevice="AW_IO_BOARD3" resourceID="SYS_PROPERTY_035" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AWIO4_SW_REV" parentDevice="AW_IO_BOARD4" resourceID="SYS_PROPERTY_035" valueType="INT" displayAttribute="External"/>
+	    <Property name="PROPERTY_AWIO1_HW_VER" parentDevice="AW_IO_BOARD1" resourceID="SYS_PROPERTY_033" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_AWIO2_HW_VER" parentDevice="AW_IO_BOARD2" resourceID="SYS_PROPERTY_033" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_AWIO3_HW_VER" parentDevice="AW_IO_BOARD3" resourceID="SYS_PROPERTY_033" valueType="STRING" displayAttribute="External"/>
+	    <Property name="PROPERTY_AWIO4_HW_VER" parentDevice="AW_IO_BOARD4" resourceID="SYS_PROPERTY_033" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_AWIO1_HW_REV" parentDevice="AW_IO_BOARD1" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AWIO2_HW_REV" parentDevice="AW_IO_BOARD2" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AWIO3_HW_REV" parentDevice="AW_IO_BOARD3" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AWIO4_HW_REV" parentDevice="AW_IO_BOARD4" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AWIO1_SERIAL_NO" parentDevice="AW_IO_BOARD1" resourceID="SYS_PROPERTY_001" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AWIO2_SERIAL_NO" parentDevice="AW_IO_BOARD2" resourceID="SYS_PROPERTY_001" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AWIO3_SERIAL_NO" parentDevice="AW_IO_BOARD3" resourceID="SYS_PROPERTY_001" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AWIO4_SERIAL_NO" parentDevice="AW_IO_BOARD4" resourceID="SYS_PROPERTY_001" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC1_SW_VER" parentDevice="AXIS_COMPUTER_1" resourceID="SYS_PROPERTY_036" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC2_SW_VER" parentDevice="AXIS_COMPUTER_2" resourceID="SYS_PROPERTY_036" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC3_SW_VER" parentDevice="AXIS_COMPUTER_3" resourceID="SYS_PROPERTY_036" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC4_SW_VER" parentDevice="AXIS_COMPUTER_4" resourceID="SYS_PROPERTY_036" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC1_HW_ID" parentDevice="AXIS_COMPUTER_1" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC2_HW_ID" parentDevice="AXIS_COMPUTER_2" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC3_HW_ID" parentDevice="AXIS_COMPUTER_3" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC4_HW_ID" parentDevice="AXIS_COMPUTER_4" resourceID="SYS_PROPERTY_132" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_AXC1_HW_REV" parentDevice="AXIS_COMPUTER_1" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+    <Property name="PROPERTY_AXC2_HW_REV" parentDevice="AXIS_COMPUTER_2" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+    <Property name="PROPERTY_AXC3_HW_REV" parentDevice="AXIS_COMPUTER_3" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+    <Property name="PROPERTY_AXC4_HW_REV" parentDevice="AXIS_COMPUTER_4" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+    <Property name="PROPERTY_AXC1_FPGA_SW_VER" parentDevice="AXIS_COMPUTER_1" resourceID="SYS_PROPERTY_040" valueType="INT" displayAttribute="External"/>
+    <Property name="PROPERTY_AXC2_FPGA_SW_VER" parentDevice="AXIS_COMPUTER_2" resourceID="SYS_PROPERTY_040" valueType="INT" displayAttribute="External"/>
+    <Property name="PROPERTY_AXC3_FPGA_SW_VER" parentDevice="AXIS_COMPUTER_3" resourceID="SYS_PROPERTY_040" valueType="INT" displayAttribute="External"/>
+    <Property name="PROPERTY_AXC4_FPGA_SW_VER" parentDevice="AXIS_COMPUTER_4" resourceID="SYS_PROPERTY_040" valueType="INT" displayAttribute="External"/>
+    <Property name="PROPERTY_AXC1_BOARD_NAME" parentDevice="AXIS_COMPUTER_1" resourceID="SYS_PROPERTY_092" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_AXC2_BOARD_NAME" parentDevice="AXIS_COMPUTER_2" resourceID="SYS_PROPERTY_092" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_AXC3_BOARD_NAME" parentDevice="AXIS_COMPUTER_3" resourceID="SYS_PROPERTY_092" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_AXC4_BOARD_NAME" parentDevice="AXIS_COMPUTER_4" resourceID="SYS_PROPERTY_092" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_AXC1_HW_LEG_ID" parentDevice="AXIS_COMPUTER_1" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC2_HW_LEG_ID" parentDevice="AXIS_COMPUTER_2" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC3_HW_LEG_ID" parentDevice="AXIS_COMPUTER_3" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC4_HW_LEG_ID" parentDevice="AXIS_COMPUTER_4" resourceID="SYS_PROPERTY_133" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC1_HW_LEG_REV" parentDevice="AXIS_COMPUTER_1" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC2_HW_LEG_REV" parentDevice="AXIS_COMPUTER_2" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC3_HW_LEG_REV" parentDevice="AXIS_COMPUTER_3" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC4_HW_LEG_REV" parentDevice="AXIS_COMPUTER_4" resourceID="SYS_PROPERTY_134" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC1_CPU_FIRM_VER" parentDevice="AXIS_COMPUTER_1" resourceID="SYS_PROPERTY_140" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC2_CPU_FIRM_VER" parentDevice="AXIS_COMPUTER_2" resourceID="SYS_PROPERTY_140" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC3_CPU_FIRM_VER" parentDevice="AXIS_COMPUTER_3" resourceID="SYS_PROPERTY_140" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC4_CPU_FIRM_VER" parentDevice="AXIS_COMPUTER_4" resourceID="SYS_PROPERTY_140" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC1_CPU_FIRM_REV" parentDevice="AXIS_COMPUTER_1" resourceID="SYS_PROPERTY_141" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC2_CPU_FIRM_REV" parentDevice="AXIS_COMPUTER_2" resourceID="SYS_PROPERTY_141" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC3_CPU_FIRM_REV" parentDevice="AXIS_COMPUTER_3" resourceID="SYS_PROPERTY_141" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC4_CPU_FIRM_REV" parentDevice="AXIS_COMPUTER_4" resourceID="SYS_PROPERTY_141" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC1_FPGA_FIRM_VER" parentDevice="AXIS_COMPUTER_1" resourceID="SYS_PROPERTY_142" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC2_FPGA_FIRM_VER" parentDevice="AXIS_COMPUTER_2" resourceID="SYS_PROPERTY_142" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC3_FPGA_FIRM_VER" parentDevice="AXIS_COMPUTER_3" resourceID="SYS_PROPERTY_142" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC4_FPGA_FIRM_VER" parentDevice="AXIS_COMPUTER_4" resourceID="SYS_PROPERTY_142" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC1_FPGA_FIRM_REV" parentDevice="AXIS_COMPUTER_1" resourceID="SYS_PROPERTY_143" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC2_FPGA_FIRM_REV" parentDevice="AXIS_COMPUTER_2" resourceID="SYS_PROPERTY_143" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC3_FPGA_FIRM_REV" parentDevice="AXIS_COMPUTER_3" resourceID="SYS_PROPERTY_143" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC4_FPGA_FIRM_REV" parentDevice="AXIS_COMPUTER_4" resourceID="SYS_PROPERTY_143" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC1_ART_NO" parentDevice="AXIS_COMPUTER_1" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC2_ART_NO" parentDevice="AXIS_COMPUTER_2" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC3_ART_NO" parentDevice="AXIS_COMPUTER_3" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC4_ART_NO" parentDevice="AXIS_COMPUTER_4" resourceID="SYS_PROPERTY_136" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC1_SERIAL_NO" parentDevice="AXIS_COMPUTER_1" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC2_SERIAL_NO" parentDevice="AXIS_COMPUTER_2" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC3_SERIAL_NO" parentDevice="AXIS_COMPUTER_3" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_AXC4_SERIAL_NO" parentDevice="AXIS_COMPUTER_4" resourceID="SYS_PROPERTY_137" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_MC_CPU_BOARD_TYPE" parentDevice="MC_CPU" resourceID="SYS_PROPERTY_089" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_MC_CPU_TYPE" parentDevice="MC_CPU" resourceID="SYS_PROPERTY_091" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_ROBAPI_SUB_TOTAL_CURR" parentDevice="ROBAPI_SUB_TOTAL" resourceID="SYS_PROPERTY_042" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_ROBAPI_SUB_TOTAL_PEAK" parentDevice="ROBAPI_SUB_TOTAL" resourceID="SYS_PROPERTY_041" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_ROBAPI_SUB_TOTAL_MAX" parentDevice="ROBAPI_SUB_TOTAL" resourceID="SYS_PROPERTY_043" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_ROBAPI_SUB_PERS_CURR" parentDevice="ROBAPI_SUB_PERS" resourceID="SYS_PROPERTY_042" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_ROBAPI_SUB_PERS_PEAK" parentDevice="ROBAPI_SUB_PERS" resourceID="SYS_PROPERTY_041" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_ROBAPI_SUB_PERS_MAX" parentDevice="ROBAPI_SUB_PERS" resourceID="SYS_PROPERTY_043" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_ROBAPI_SUB_IO_CURR" parentDevice="ROBAPI_SUB_IO" resourceID="SYS_PROPERTY_042" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_ROBAPI_SUB_IO_PEAK" parentDevice="ROBAPI_SUB_IO" resourceID="SYS_PROPERTY_041" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_ROBAPI_SUB_IO_MAX" parentDevice="ROBAPI_SUB_IO" resourceID="SYS_PROPERTY_043" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_ROBAPI_SUB_HIGH_PRIO_CURR" parentDevice="ROBAPI_SUB_HIGH_PRIO" resourceID="SYS_PROPERTY_042" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_ROBAPI_SUB_HIGH_PRIO_PEAK" parentDevice="ROBAPI_SUB_HIGH_PRIO" resourceID="SYS_PROPERTY_041" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_ROBAPI_SUB_HIGH_PRIO_MAX" parentDevice="ROBAPI_SUB_HIGH_PRIO" resourceID="SYS_PROPERTY_043" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_ROBAPI_SUB_MISC_CURR" parentDevice="ROBAPI_SUB_MISC" resourceID="SYS_PROPERTY_042" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_ROBAPI_SUB_MISC_PEAK" parentDevice="ROBAPI_SUB_MISC" resourceID="SYS_PROPERTY_041" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_ROBAPI_SUB_MISC_MAX" parentDevice="ROBAPI_SUB_MISC" resourceID="SYS_PROPERTY_043" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_ROBAPI_EVENTS_SENT" parentDevice="ROBAPI_EVENTS_SENT" resourceID="SYS_PROPERTY_044" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_ROBAPI_EVENTMSG_SENT" parentDevice="ROBAPI_EVENTS_SENT" resourceID="SYS_PROPERTY_045" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_IPM_CURRENT" parentDevice="IPM" resourceID="SYS_PROPERTY_046" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_IPM_PEAK" parentDevice="IPM" resourceID="SYS_PROPERTY_047" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_IPM_MAX" parentDevice="IPM" resourceID="SYS_PROPERTY_048" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_IPM_DENIED" parentDevice="IPM" resourceID="SYS_PROPERTY_049" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_CFG_CURRENT_FREE" resourceID="SYS_PROPERTY_050" parentDevice="CFG_DB" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_CFG_MAX" resourceID="SYS_PROPERTY_051" parentDevice="CFG_DB" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_CFG_LARGEST_FREE_BLOCK" resourceID="SYS_PROPERTY_052" parentDevice="CFG_DB" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_LANG1_NAME" resourceID="SYS_PROPERTY_053" parentDevice="TEXT_DB_LANG1" valueType="STRING" displayAttribute="Internal"/>
+		<Property name="PROPERTY_LANG1_STR_CURR" resourceID="SYS_PROPERTY_054" parentDevice="TEXT_DB_LANG1" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_LANG1_STR_MAX" resourceID="SYS_PROPERTY_055" parentDevice="TEXT_DB_LANG1" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_LANG1_CHAR_CURR" resourceID="SYS_PROPERTY_056" parentDevice="TEXT_DB_LANG1" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_LANG1_CHAR_MAX" resourceID="SYS_PROPERTY_057" parentDevice="TEXT_DB_LANG1" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_LANG2_NAME" resourceID="SYS_PROPERTY_053" parentDevice="TEXT_DB_LANG2" valueType="STRING" displayAttribute="Internal"/>
+		<Property name="PROPERTY_LANG2_STR_CURR" resourceID="SYS_PROPERTY_054" parentDevice="TEXT_DB_LANG2" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_LANG2_STR_MAX" resourceID="SYS_PROPERTY_055" parentDevice="TEXT_DB_LANG2" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_LANG2_CHAR_CURR" resourceID="SYS_PROPERTY_056" parentDevice="TEXT_DB_LANG2" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_LANG2_CHAR_MAX" resourceID="SYS_PROPERTY_057" parentDevice="TEXT_DB_LANG2" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_LANG3_NAME" resourceID="SYS_PROPERTY_053" parentDevice="TEXT_DB_LANG3" valueType="STRING" displayAttribute="Internal"/>
+		<Property name="PROPERTY_LANG3_STR_CURR" resourceID="SYS_PROPERTY_054" parentDevice="TEXT_DB_LANG3" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_LANG3_STR_MAX" resourceID="SYS_PROPERTY_055" parentDevice="TEXT_DB_LANG3" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_LANG3_CHAR_CURR" resourceID="SYS_PROPERTY_056" parentDevice="TEXT_DB_LANG3" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_LANG3_CHAR_MAX" resourceID="SYS_PROPERTY_057" parentDevice="TEXT_DB_LANG3" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_RAM_MEM_CURR_FREE" parentDevice="RAM_MEMORY" resourceID="SYS_PROPERTY_058" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_RAM_MEM_LOW_PEAK_FREE" parentDevice="RAM_MEMORY" resourceID="SYS_PROPERTY_059" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_RAM_MEM_LARGEST_FREE_BLOCK" parentDevice="RAM_MEMORY" resourceID="SYS_PROPERTY_060" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_MC_FAN1_SPEED" resourceID="SYS_PROPERTY_066" parentDevice="MAIN_COMPUTER_FANS" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_RPM"/>
+		</Property>
+		<Property name="PROPERTY_MC_FAN2_SPEED" resourceID="SYS_PROPERTY_061" parentDevice="MAIN_COMPUTER_FANS" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_RPM"/>
+		</Property>
+		<Property name="PROPERTY_FD_CURR" parentDevice="FILE_DESCRIPTORS" resourceID="SYS_PROPERTY_063" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_FD_PEAK" parentDevice="FILE_DESCRIPTORS" resourceID="SYS_PROPERTY_064" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_FD_MAX" parentDevice="FILE_DESCRIPTORS" resourceID="SYS_PROPERTY_065" valueType="INT" displayAttribute="Internal"/>		
+		<Property name="PROPERTY_CPU_LOAD_CURRENT" resourceID="SYS_PROPERTY_073" parentDevice="CPU_LOAD" valueType="INT" displayAttribute="Internal">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_CPU_LOAD_AVERAGE" resourceID="SYS_PROPERTY_074" parentDevice="CPU_LOAD" valueType="INT" displayAttribute="Internal">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_CPU_LOAD_PEAK" resourceID="SYS_PROPERTY_075" parentDevice="CPU_LOAD" valueType="INT" displayAttribute="Internal">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_CPU_LOAD_MAX" resourceID="SYS_PROPERTY_076" parentDevice="CPU_LOAD" valueType="INT" displayAttribute="Internal">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_SYSTEM_UPTIME" resourceID="SYS_PROPERTY_109" parentDevice="SYSTEM_UPTIME" valueType="STRING" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_CLOCK_TIME"/>
+		</Property>
+		<Property name="PROPERTY_PSC1_SW_VER" parentDevice="SAFETY_CONTROLLER_1" resourceID="SYS_PROPERTY_034" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_PSC2_SW_VER" parentDevice="SAFETY_CONTROLLER_2" resourceID="SYS_PROPERTY_034" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_PSC3_SW_VER" parentDevice="SAFETY_CONTROLLER_3" resourceID="SYS_PROPERTY_034" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_PSC4_SW_VER" parentDevice="SAFETY_CONTROLLER_4" resourceID="SYS_PROPERTY_034" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_RAPID_MEM_FREE" parentDevice="RAPID_MEMORY" resourceID="SYS_PROPERTY_077" valueType="STRING" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_MEGABYTE"/>
+		</Property>
+		<Property name="PROPERTY_RAPID_MEM_TOTAL" parentDevice="RAPID_MEMORY" resourceID="SYS_PROPERTY_078" valueType="STRING" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_MEGABYTE"/>
+		</Property>
+		<Property name="PROPERTY_RAPID_LOAD_CURRENT" resourceID="SYS_PROPERTY_147" parentDevice="RAPID_PERFORMANCE" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_RAPID_LOAD_ACCUMULATED" resourceID="SYS_PROPERTY_148" parentDevice="RAPID_PERFORMANCE" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_PERCENT"/>
+		</Property>
+		<Property name="PROPERTY_RAPID_FILES_CURR" parentDevice="RAPID_FILES" resourceID="SYS_PROPERTY_079" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_RAPID_FILES_PEAK" parentDevice="RAPID_FILES" resourceID="SYS_PROPERTY_080" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_RAPID_FILES_MAX" parentDevice="RAPID_FILES" resourceID="SYS_PROPERTY_081" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_RAPID_SOCKETS_CURR" parentDevice="RAPID_SOCKETS" resourceID="SYS_PROPERTY_082" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_RAPID_SOCKETS_PEAK" parentDevice="RAPID_SOCKETS" resourceID="SYS_PROPERTY_083" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_RAPID_SOCKETS_MAX" parentDevice="RAPID_SOCKETS" resourceID="SYS_PROPERTY_084" valueType="INT" displayAttribute="Internal"/>
+		<Property name="PROPERTY_PSC1_SW_REV" parentDevice="SAFETY_CONTROLLER_1" resourceID="SYS_PROPERTY_086" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_PSC2_SW_REV" parentDevice="SAFETY_CONTROLLER_2" resourceID="SYS_PROPERTY_086" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_PSC3_SW_REV" parentDevice="SAFETY_CONTROLLER_3" resourceID="SYS_PROPERTY_086" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_PSC4_SW_REV" parentDevice="SAFETY_CONTROLLER_4" resourceID="SYS_PROPERTY_086" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_MC_CPU_RAM_SIZE" parentDevice="MC_CPU_MEMORY" resourceID="SYS_PROPERTY_090" valueType="INT" displayAttribute="External">
+			<QuantityData resourceID="SYS_UNIT_MEGABYTE"/>
+		</Property>
+		<Property name="PROPERTY_PSC1_BOARD_NAME" parentDevice="SAFETY_CONTROLLER_1" resourceID="SYS_PROPERTY_092" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_PSC2_BOARD_NAME" parentDevice="SAFETY_CONTROLLER_2" resourceID="SYS_PROPERTY_092" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_PSC3_BOARD_NAME" parentDevice="SAFETY_CONTROLLER_3" resourceID="SYS_PROPERTY_092" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_PSC4_BOARD_NAME" parentDevice="SAFETY_CONTROLLER_4" resourceID="SYS_PROPERTY_092" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_PBUS_CARD_TYPE" parentDevice="PROFIBUS_BOARD" resourceID="SYS_PROPERTY_105" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_PBUS_HW_VER" parentDevice="PROFIBUS_BOARD" resourceID="SYS_PROPERTY_033" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_PBUS_HW_REV" parentDevice="PROFIBUS_BOARD" resourceID="SYS_PROPERTY_032" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_PBUS_SERIAL_NO" parentDevice="PROFIBUS_BOARD" resourceID="SYS_PROPERTY_001" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_PBUS_CHANNEL_0" parentDevice="PROFIBUS_BOARD" resourceID="SYS_PROPERTY_098" valueType="TEXT_ID" displayAttribute="External">
+			<PropertyTextResources>
+				<PropertyTextResource number="0" resourceID="SYS_RESOURCE_NOT_CONFIGURED"/>
+				<PropertyTextResource number="1" resourceID="SYS_RESOURCE_CONFIGURED"/>
+			</PropertyTextResources>
+		</Property>
+		<Property name="PROPERTY_PBUS_CH0_ASIC" parentDevice="PROFIBUS_BOARD" resourceID="SYS_PROPERTY_099" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_PBUS_CH0_FW" parentDevice="PROFIBUS_BOARD" resourceID="SYS_PROPERTY_100" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_PBUS_CHANNEL_1" parentDevice="PROFIBUS_BOARD" resourceID="SYS_PROPERTY_101" valueType="TEXT_ID" displayAttribute="External">
+			<PropertyTextResources>
+				<PropertyTextResource number="0" resourceID="SYS_RESOURCE_NOT_CONFIGURED"/>
+				<PropertyTextResource number="1" resourceID="SYS_RESOURCE_CONFIGURED"/>
+			</PropertyTextResources>
+		</Property>
+		<Property name="PROPERTY_PBUS_CH1_ASIC" parentDevice="PROFIBUS_BOARD" resourceID="SYS_PROPERTY_102" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_PBUS_CH1_FW" parentDevice="PROFIBUS_BOARD" resourceID="SYS_PROPERTY_103" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_DN1_BOARD_NUMBER" parentDevice="DN_BOARD1" resourceID="SYS_PROPERTY_104" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_DN2_BOARD_NUMBER" parentDevice="DN_BOARD2" resourceID="SYS_PROPERTY_104" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_DN1_SERIAL_NO" parentDevice="DN_BOARD1" resourceID="SYS_PROPERTY_001" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_DN2_SERIAL_NO" parentDevice="DN_BOARD2" resourceID="SYS_PROPERTY_001" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_DN1_TYPE" parentDevice="DN_BOARD1" resourceID="SYS_PROPERTY_105" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_DN2_TYPE" parentDevice="DN_BOARD2" resourceID="SYS_PROPERTY_105" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_DN1_FW_VER" parentDevice="DN_BOARD1" resourceID="SYS_PROPERTY_005" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_DN2_FW_VER" parentDevice="DN_BOARD2" resourceID="SYS_PROPERTY_005" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_ABUS_NETWORK_TYPE" parentDevice="ANYBUS_CC" resourceID="SYS_PROPERTY_106" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_ABUS_SERIAL_NO" parentDevice="ANYBUS_CC" resourceID="SYS_PROPERTY_001" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_ABUS_FW_VER" parentDevice="ANYBUS_CC" resourceID="SYS_PROPERTY_005" valueType="STRING" displayAttribute="External"/>
+	  <Property name="PROPERTY_PN1_BOARD_NUMBER" parentDevice="PN_BOARD1" resourceID="SYS_PROPERTY_104" valueType="INT" displayAttribute="External"/>
+		<Property name="PROPERTY_PN1_SERIAL_NO" parentDevice="PN_BOARD1" resourceID="SYS_PROPERTY_001" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_PN1_TYPE" parentDevice="PN_BOARD1" resourceID="SYS_PROPERTY_105" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_PN1_FW_VER" parentDevice="PN_BOARD1" resourceID="SYS_PROPERTY_005" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_PN1_FW_VER_STORED" parentDevice="PN_BOARD1" resourceID="SYS_PROPERTY_149" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_PN1_INT_SLAVE_CFG_IN" parentDevice="PN_BOARD1" resourceID="SYS_PROPERTY_096" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_PN1_INT_SLAVE_CFG_OUT" parentDevice="PN_BOARD1" resourceID="SYS_PROPERTY_097" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_OS_NAME" parentDevice="OS_VERSION" resourceID="SYS_PROPERTY_107" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_OS_VERSION" parentDevice="OS_VERSION" resourceID="SYS_PROPERTY_108" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_SERVICE_BOX_SERIAL_ID" parentDevice="SERVICE_BOX" resourceID="SYS_PROPERTY_116" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_SERVICE_BOX_DATE_TIME" parentDevice="SERVICE_BOX" resourceID="SYS_PROPERTY_117" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_SERVICE_BOX_FIRMWARE" parentDevice="SERVICE_BOX" resourceID="SYS_PROPERTY_005" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_SERVICE_BOX_BASE_VERSION" parentDevice="SERVICE_BOX" resourceID="SYS_PROPERTY_119" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_SERVICE_BOX_SPECIFIC_VERSION" parentDevice="SERVICE_BOX" resourceID="SYS_PROPERTY_120" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_SERVICE_BOX_ROBOTWARE_VERSION" parentDevice="SERVICE_BOX" resourceID="SYS_PROPERTY_121" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_SERVICE_BOX_WAN_CONNECTION" parentDevice="SERVICE_BOX" resourceID="SYS_PROPERTY_122" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_SERVICE_BOX_MOBILE_OPERATOR" parentDevice="SERVICE_BOX" resourceID="SYS_PROPERTY_123" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_SERVICE_BOX_SIGNAL_STRENGTH" parentDevice="SERVICE_BOX" resourceID="SYS_PROPERTY_124" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_SERVICE_BOX_MODEM_STATUS" parentDevice="SERVICE_BOX" resourceID="SYS_PROPERTY_125" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_SERVICE_BOX_MODEM_ERROR" parentDevice="SERVICE_BOX" resourceID="SYS_PROPERTY_126" valueType="STRING" displayAttribute="External"/>
+		<Property name="PROPERTY_SERVICE_BOX_MODEM_BAND" parentDevice="SERVICE_BOX" resourceID="SYS_PROPERTY_127" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_SERVICE_BOX_DETECTED_OPERATOR" parentDevice="SERVICE_BOX" resourceID="SYS_PROPERTY_128" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_SERVICE_BOX_PORT_STATUS" parentDevice="SERVICE_BOX" resourceID="SYS_PROPERTY_129" valueType="STRING" displayAttribute="External"/>
+    <Property name="PROPERTY_SERVICE_BOX_SIM_CODE" parentDevice="SERVICE_BOX" resourceID="SYS_PROPERTY_130" valueType="STRING" displayAttribute="External"/>
+
+      <Property name="PROPERTY_CAMERA_1_NAME" parentDevice="CAMERA_1" resourceID="SYS_PROPERTY_107" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_1_VISION_SYSTEM_INDEX" parentDevice="CAMERA_1" resourceID="SYS_PROPERTY_150" valueType="INT" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_1_IP_ADDRESS" parentDevice="CAMERA_1" resourceID="SYS_PROPERTY_151" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_1_SUBNET_MASK" parentDevice="CAMERA_1" resourceID="SYS_PROPERTY_152" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_1_MAC_ADDRESS" parentDevice="CAMERA_1" resourceID="SYS_PROPERTY_153" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_1_DHCP_ENABLED" parentDevice="CAMERA_1" resourceID="SYS_PROPERTY_154" valueType="TEXT_ID" displayAttribute="External">
+         <PropertyTextResources>
+            <PropertyTextResource number="0" resourceID="SYS_RESOURCE_DISABLED"/>
+            <PropertyTextResource number="1" resourceID="SYS_RESOURCE_ENABLED"/>
+         </PropertyTextResources>
+      </Property>
+      <Property name="PROPERTY_CAMERA_1_CAMERA_MODEL" parentDevice="CAMERA_1" resourceID="SYS_PROPERTY_155" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_1_SERIAL_NUMBER" parentDevice="CAMERA_1" resourceID="SYS_PROPERTY_156" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_1_FW_VERSION" parentDevice="CAMERA_1" resourceID="SYS_PROPERTY_157" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_1_COMMUNICATION_TIMEOUT" parentDevice="CAMERA_1" resourceID="SYS_PROPERTY_158" valueType="INT" displayAttribute="External">
+         <QuantityData resourceID="SYS_UNIT_MILLISECONDS"/>
+      </Property>
+      <Property name="PROPERTY_CAMERA_1_STATUS" parentDevice="CAMERA_1" resourceID="SYS_PROPERTY_159" valueType="TEXT_ID" displayAttribute="External">
+         <PropertyTextResources>
+            <PropertyTextResource number="0" resourceID="SYS_RESOURCE_UNKNOWN"/>
+            <PropertyTextResource number="1" resourceID="SYS_RESOURCE_DISCONNECTED"/>
+            <PropertyTextResource number="2" resourceID="SYS_RESOURCE_STANDBY"/>
+            <PropertyTextResource number="3" resourceID="SYS_RESOURCE_RUNNING"/>
+         </PropertyTextResources>
+      </Property>
+      <Property name="PROPERTY_CAMERA_2_NAME" parentDevice="CAMERA_2" resourceID="SYS_PROPERTY_107" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_2_VISION_SYSTEM_INDEX" parentDevice="CAMERA_2" resourceID="SYS_PROPERTY_150" valueType="INT" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_2_IP_ADDRESS" parentDevice="CAMERA_2" resourceID="SYS_PROPERTY_151" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_2_SUBNET_MASK" parentDevice="CAMERA_2" resourceID="SYS_PROPERTY_152" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_2_MAC_ADDRESS" parentDevice="CAMERA_2" resourceID="SYS_PROPERTY_153" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_2_DHCP_ENABLED" parentDevice="CAMERA_2" resourceID="SYS_PROPERTY_154" valueType="TEXT_ID" displayAttribute="External">
+         <PropertyTextResources>
+            <PropertyTextResource number="0" resourceID="SYS_RESOURCE_DISABLED"/>
+            <PropertyTextResource number="1" resourceID="SYS_RESOURCE_ENABLED"/>
+         </PropertyTextResources>
+      </Property>
+      <Property name="PROPERTY_CAMERA_2_CAMERA_MODEL" parentDevice="CAMERA_2" resourceID="SYS_PROPERTY_155" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_2_SERIAL_NUMBER" parentDevice="CAMERA_2" resourceID="SYS_PROPERTY_156" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_2_FW_VERSION" parentDevice="CAMERA_2" resourceID="SYS_PROPERTY_157" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_2_COMMUNICATION_TIMEOUT" parentDevice="CAMERA_2" resourceID="SYS_PROPERTY_158" valueType="INT" displayAttribute="External">
+         <QuantityData resourceID="SYS_UNIT_MILLISECONDS"/>
+      </Property>
+      <Property name="PROPERTY_CAMERA_2_STATUS" parentDevice="CAMERA_2" resourceID="SYS_PROPERTY_159" valueType="TEXT_ID" displayAttribute="External">
+         <PropertyTextResources>
+            <PropertyTextResource number="0" resourceID="SYS_RESOURCE_UNKNOWN"/>
+            <PropertyTextResource number="1" resourceID="SYS_RESOURCE_DISCONNECTED"/>
+            <PropertyTextResource number="2" resourceID="SYS_RESOURCE_STANDBY"/>
+            <PropertyTextResource number="3" resourceID="SYS_RESOURCE_RUNNING"/>
+         </PropertyTextResources>
+      </Property>
+      <Property name="PROPERTY_CAMERA_3_NAME" parentDevice="CAMERA_3" resourceID="SYS_PROPERTY_107" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_3_VISION_SYSTEM_INDEX" parentDevice="CAMERA_3" resourceID="SYS_PROPERTY_150" valueType="INT" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_3_IP_ADDRESS" parentDevice="CAMERA_3" resourceID="SYS_PROPERTY_151" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_3_SUBNET_MASK" parentDevice="CAMERA_3" resourceID="SYS_PROPERTY_152" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_3_MAC_ADDRESS" parentDevice="CAMERA_3" resourceID="SYS_PROPERTY_153" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_3_DHCP_ENABLED" parentDevice="CAMERA_3" resourceID="SYS_PROPERTY_154" valueType="TEXT_ID" displayAttribute="External">
+         <PropertyTextResources>
+            <PropertyTextResource number="0" resourceID="SYS_RESOURCE_DISABLED"/>
+            <PropertyTextResource number="1" resourceID="SYS_RESOURCE_ENABLED"/>
+         </PropertyTextResources>
+      </Property>
+      <Property name="PROPERTY_CAMERA_3_CAMERA_MODEL" parentDevice="CAMERA_3" resourceID="SYS_PROPERTY_155" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_3_SERIAL_NUMBER" parentDevice="CAMERA_3" resourceID="SYS_PROPERTY_156" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_3_FW_VERSION" parentDevice="CAMERA_3" resourceID="SYS_PROPERTY_157" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_3_COMMUNICATION_TIMEOUT" parentDevice="CAMERA_3" resourceID="SYS_PROPERTY_158" valueType="INT" displayAttribute="External">
+         <QuantityData resourceID="SYS_UNIT_MILLISECONDS"/>
+      </Property>
+      <Property name="PROPERTY_CAMERA_3_STATUS" parentDevice="CAMERA_3" resourceID="SYS_PROPERTY_159" valueType="TEXT_ID" displayAttribute="External">
+         <PropertyTextResources>
+            <PropertyTextResource number="0" resourceID="SYS_RESOURCE_UNKNOWN"/>
+            <PropertyTextResource number="1" resourceID="SYS_RESOURCE_DISCONNECTED"/>
+            <PropertyTextResource number="2" resourceID="SYS_RESOURCE_STANDBY"/>
+            <PropertyTextResource number="3" resourceID="SYS_RESOURCE_RUNNING"/>
+         </PropertyTextResources>
+      </Property>
+      <Property name="PROPERTY_CAMERA_4_NAME" parentDevice="CAMERA_4" resourceID="SYS_PROPERTY_107" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_4_VISION_SYSTEM_INDEX" parentDevice="CAMERA_4" resourceID="SYS_PROPERTY_150" valueType="INT" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_4_IP_ADDRESS" parentDevice="CAMERA_4" resourceID="SYS_PROPERTY_151" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_4_SUBNET_MASK" parentDevice="CAMERA_4" resourceID="SYS_PROPERTY_152" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_4_MAC_ADDRESS" parentDevice="CAMERA_4" resourceID="SYS_PROPERTY_153" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_4_DHCP_ENABLED" parentDevice="CAMERA_4" resourceID="SYS_PROPERTY_154" valueType="TEXT_ID" displayAttribute="External">
+         <PropertyTextResources>
+            <PropertyTextResource number="0" resourceID="SYS_RESOURCE_DISABLED"/>
+            <PropertyTextResource number="1" resourceID="SYS_RESOURCE_ENABLED"/>
+         </PropertyTextResources>
+      </Property>
+      <Property name="PROPERTY_CAMERA_4_CAMERA_MODEL" parentDevice="CAMERA_4" resourceID="SYS_PROPERTY_155" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_4_SERIAL_NUMBER" parentDevice="CAMERA_4" resourceID="SYS_PROPERTY_156" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_4_FW_VERSION" parentDevice="CAMERA_4" resourceID="SYS_PROPERTY_157" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_4_COMMUNICATION_TIMEOUT" parentDevice="CAMERA_4" resourceID="SYS_PROPERTY_158" valueType="INT" displayAttribute="External">
+         <QuantityData resourceID="SYS_UNIT_MILLISECONDS"/>
+      </Property>
+      <Property name="PROPERTY_CAMERA_4_STATUS" parentDevice="CAMERA_4" resourceID="SYS_PROPERTY_159" valueType="TEXT_ID" displayAttribute="External">
+         <PropertyTextResources>
+            <PropertyTextResource number="0" resourceID="SYS_RESOURCE_UNKNOWN"/>
+            <PropertyTextResource number="1" resourceID="SYS_RESOURCE_DISCONNECTED"/>
+            <PropertyTextResource number="2" resourceID="SYS_RESOURCE_STANDBY"/>
+            <PropertyTextResource number="3" resourceID="SYS_RESOURCE_RUNNING"/>
+         </PropertyTextResources>
+      </Property>
+      <Property name="PROPERTY_CAMERA_5_NAME" parentDevice="CAMERA_5" resourceID="SYS_PROPERTY_107" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_5_VISION_SYSTEM_INDEX" parentDevice="CAMERA_5" resourceID="SYS_PROPERTY_150" valueType="INT" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_5_IP_ADDRESS" parentDevice="CAMERA_5" resourceID="SYS_PROPERTY_151" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_5_SUBNET_MASK" parentDevice="CAMERA_5" resourceID="SYS_PROPERTY_152" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_5_MAC_ADDRESS" parentDevice="CAMERA_5" resourceID="SYS_PROPERTY_153" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_5_DHCP_ENABLED" parentDevice="CAMERA_5" resourceID="SYS_PROPERTY_154" valueType="TEXT_ID" displayAttribute="External">
+         <PropertyTextResources>
+            <PropertyTextResource number="0" resourceID="SYS_RESOURCE_DISABLED"/>
+            <PropertyTextResource number="1" resourceID="SYS_RESOURCE_ENABLED"/>
+         </PropertyTextResources>
+      </Property>
+      <Property name="PROPERTY_CAMERA_5_CAMERA_MODEL" parentDevice="CAMERA_5" resourceID="SYS_PROPERTY_155" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_5_SERIAL_NUMBER" parentDevice="CAMERA_5" resourceID="SYS_PROPERTY_156" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_5_FW_VERSION" parentDevice="CAMERA_5" resourceID="SYS_PROPERTY_157" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_5_COMMUNICATION_TIMEOUT" parentDevice="CAMERA_5" resourceID="SYS_PROPERTY_158" valueType="INT" displayAttribute="External">
+         <QuantityData resourceID="SYS_UNIT_MILLISECONDS"/>
+      </Property>
+      <Property name="PROPERTY_CAMERA_5_STATUS" parentDevice="CAMERA_5" resourceID="SYS_PROPERTY_159" valueType="TEXT_ID" displayAttribute="External">
+         <PropertyTextResources>
+            <PropertyTextResource number="0" resourceID="SYS_RESOURCE_UNKNOWN"/>
+            <PropertyTextResource number="1" resourceID="SYS_RESOURCE_DISCONNECTED"/>
+            <PropertyTextResource number="2" resourceID="SYS_RESOURCE_STANDBY"/>
+            <PropertyTextResource number="3" resourceID="SYS_RESOURCE_RUNNING"/>
+         </PropertyTextResources>
+      </Property>
+      <Property name="PROPERTY_CAMERA_6_NAME" parentDevice="CAMERA_6" resourceID="SYS_PROPERTY_107" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_6_VISION_SYSTEM_INDEX" parentDevice="CAMERA_6" resourceID="SYS_PROPERTY_150" valueType="INT" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_6_IP_ADDRESS" parentDevice="CAMERA_6" resourceID="SYS_PROPERTY_151" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_6_SUBNET_MASK" parentDevice="CAMERA_6" resourceID="SYS_PROPERTY_152" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_6_MAC_ADDRESS" parentDevice="CAMERA_6" resourceID="SYS_PROPERTY_153" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_6_DHCP_ENABLED" parentDevice="CAMERA_6" resourceID="SYS_PROPERTY_154" valueType="TEXT_ID" displayAttribute="External">
+         <PropertyTextResources>
+            <PropertyTextResource number="0" resourceID="SYS_RESOURCE_DISABLED"/>
+            <PropertyTextResource number="1" resourceID="SYS_RESOURCE_ENABLED"/>
+         </PropertyTextResources>
+      </Property>
+      <Property name="PROPERTY_CAMERA_6_CAMERA_MODEL" parentDevice="CAMERA_6" resourceID="SYS_PROPERTY_155" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_6_SERIAL_NUMBER" parentDevice="CAMERA_6" resourceID="SYS_PROPERTY_156" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_6_FW_VERSION" parentDevice="CAMERA_6" resourceID="SYS_PROPERTY_157" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_6_COMMUNICATION_TIMEOUT" parentDevice="CAMERA_6" resourceID="SYS_PROPERTY_158" valueType="INT" displayAttribute="External">
+         <QuantityData resourceID="SYS_UNIT_MILLISECONDS"/>
+      </Property>
+      <Property name="PROPERTY_CAMERA_6_STATUS" parentDevice="CAMERA_6" resourceID="SYS_PROPERTY_159" valueType="TEXT_ID" displayAttribute="External">
+         <PropertyTextResources>
+            <PropertyTextResource number="0" resourceID="SYS_RESOURCE_UNKNOWN"/>
+            <PropertyTextResource number="1" resourceID="SYS_RESOURCE_DISCONNECTED"/>
+            <PropertyTextResource number="2" resourceID="SYS_RESOURCE_STANDBY"/>
+            <PropertyTextResource number="3" resourceID="SYS_RESOURCE_RUNNING"/>
+         </PropertyTextResources>
+      </Property>
+      <Property name="PROPERTY_CAMERA_7_NAME" parentDevice="CAMERA_7" resourceID="SYS_PROPERTY_107" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_7_VISION_SYSTEM_INDEX" parentDevice="CAMERA_7" resourceID="SYS_PROPERTY_150" valueType="INT" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_7_IP_ADDRESS" parentDevice="CAMERA_7" resourceID="SYS_PROPERTY_151" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_7_SUBNET_MASK" parentDevice="CAMERA_7" resourceID="SYS_PROPERTY_152" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_7_MAC_ADDRESS" parentDevice="CAMERA_7" resourceID="SYS_PROPERTY_153" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_7_DHCP_ENABLED" parentDevice="CAMERA_7" resourceID="SYS_PROPERTY_154" valueType="TEXT_ID" displayAttribute="External">
+         <PropertyTextResources>
+            <PropertyTextResource number="0" resourceID="SYS_RESOURCE_DISABLED"/>
+            <PropertyTextResource number="1" resourceID="SYS_RESOURCE_ENABLED"/>
+         </PropertyTextResources>
+      </Property>
+      <Property name="PROPERTY_CAMERA_7_CAMERA_MODEL" parentDevice="CAMERA_7" resourceID="SYS_PROPERTY_155" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_7_SERIAL_NUMBER" parentDevice="CAMERA_7" resourceID="SYS_PROPERTY_156" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_7_FW_VERSION" parentDevice="CAMERA_7" resourceID="SYS_PROPERTY_157" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_7_COMMUNICATION_TIMEOUT" parentDevice="CAMERA_7" resourceID="SYS_PROPERTY_158" valueType="INT" displayAttribute="External">
+         <QuantityData resourceID="SYS_UNIT_MILLISECONDS"/>
+      </Property>
+      <Property name="PROPERTY_CAMERA_7_STATUS" parentDevice="CAMERA_7" resourceID="SYS_PROPERTY_159" valueType="TEXT_ID" displayAttribute="External">
+         <PropertyTextResources>
+            <PropertyTextResource number="0" resourceID="SYS_RESOURCE_UNKNOWN"/>
+            <PropertyTextResource number="1" resourceID="SYS_RESOURCE_DISCONNECTED"/>
+            <PropertyTextResource number="2" resourceID="SYS_RESOURCE_STANDBY"/>
+            <PropertyTextResource number="3" resourceID="SYS_RESOURCE_RUNNING"/>
+         </PropertyTextResources>
+      </Property>
+      <Property name="PROPERTY_CAMERA_8_NAME" parentDevice="CAMERA_8" resourceID="SYS_PROPERTY_107" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_8_VISION_SYSTEM_INDEX" parentDevice="CAMERA_8" resourceID="SYS_PROPERTY_150" valueType="INT" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_8_IP_ADDRESS" parentDevice="CAMERA_8" resourceID="SYS_PROPERTY_151" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_8_SUBNET_MASK" parentDevice="CAMERA_8" resourceID="SYS_PROPERTY_152" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_8_MAC_ADDRESS" parentDevice="CAMERA_8" resourceID="SYS_PROPERTY_153" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_8_DHCP_ENABLED" parentDevice="CAMERA_8" resourceID="SYS_PROPERTY_154" valueType="TEXT_ID" displayAttribute="External">
+         <PropertyTextResources>
+            <PropertyTextResource number="0" resourceID="SYS_RESOURCE_DISABLED"/>
+            <PropertyTextResource number="1" resourceID="SYS_RESOURCE_ENABLED"/>
+         </PropertyTextResources>
+      </Property>
+      <Property name="PROPERTY_CAMERA_8_CAMERA_MODEL" parentDevice="CAMERA_8" resourceID="SYS_PROPERTY_155" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_8_SERIAL_NUMBER" parentDevice="CAMERA_8" resourceID="SYS_PROPERTY_156" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_8_FW_VERSION" parentDevice="CAMERA_8" resourceID="SYS_PROPERTY_157" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_8_COMMUNICATION_TIMEOUT" parentDevice="CAMERA_8" resourceID="SYS_PROPERTY_158" valueType="INT" displayAttribute="External">
+         <QuantityData resourceID="SYS_UNIT_MILLISECONDS"/>
+      </Property>
+      <Property name="PROPERTY_CAMERA_8_STATUS" parentDevice="CAMERA_8" resourceID="SYS_PROPERTY_159" valueType="TEXT_ID" displayAttribute="External">
+         <PropertyTextResources>
+            <PropertyTextResource number="0" resourceID="SYS_RESOURCE_UNKNOWN"/>
+            <PropertyTextResource number="1" resourceID="SYS_RESOURCE_DISCONNECTED"/>
+            <PropertyTextResource number="2" resourceID="SYS_RESOURCE_STANDBY"/>
+            <PropertyTextResource number="3" resourceID="SYS_RESOURCE_RUNNING"/>
+         </PropertyTextResources>
+      </Property>
+      <Property name="PROPERTY_CAMERA_9_NAME" parentDevice="CAMERA_9" resourceID="SYS_PROPERTY_107" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_9_VISION_SYSTEM_INDEX" parentDevice="CAMERA_9" resourceID="SYS_PROPERTY_150" valueType="INT" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_9_IP_ADDRESS" parentDevice="CAMERA_9" resourceID="SYS_PROPERTY_151" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_9_SUBNET_MASK" parentDevice="CAMERA_9" resourceID="SYS_PROPERTY_152" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_9_MAC_ADDRESS" parentDevice="CAMERA_9" resourceID="SYS_PROPERTY_153" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_9_DHCP_ENABLED" parentDevice="CAMERA_9" resourceID="SYS_PROPERTY_154" valueType="TEXT_ID" displayAttribute="External">
+         <PropertyTextResources>
+            <PropertyTextResource number="0" resourceID="SYS_RESOURCE_DISABLED"/>
+            <PropertyTextResource number="1" resourceID="SYS_RESOURCE_ENABLED"/>
+         </PropertyTextResources>
+      </Property>
+      <Property name="PROPERTY_CAMERA_9_CAMERA_MODEL" parentDevice="CAMERA_9" resourceID="SYS_PROPERTY_155" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_9_SERIAL_NUMBER" parentDevice="CAMERA_9" resourceID="SYS_PROPERTY_156" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_9_FW_VERSION" parentDevice="CAMERA_9" resourceID="SYS_PROPERTY_157" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_9_COMMUNICATION_TIMEOUT" parentDevice="CAMERA_9" resourceID="SYS_PROPERTY_158" valueType="INT" displayAttribute="External">
+         <QuantityData resourceID="SYS_UNIT_MILLISECONDS"/>
+      </Property>
+      <Property name="PROPERTY_CAMERA_9_STATUS" parentDevice="CAMERA_9" resourceID="SYS_PROPERTY_159" valueType="TEXT_ID" displayAttribute="External">
+         <PropertyTextResources>
+            <PropertyTextResource number="0" resourceID="SYS_RESOURCE_UNKNOWN"/>
+            <PropertyTextResource number="1" resourceID="SYS_RESOURCE_DISCONNECTED"/>
+            <PropertyTextResource number="2" resourceID="SYS_RESOURCE_STANDBY"/>
+            <PropertyTextResource number="3" resourceID="SYS_RESOURCE_RUNNING"/>
+         </PropertyTextResources>
+      </Property>
+      <Property name="PROPERTY_CAMERA_10_NAME" parentDevice="CAMERA_10" resourceID="SYS_PROPERTY_107" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_10_VISION_SYSTEM_INDEX" parentDevice="CAMERA_10" resourceID="SYS_PROPERTY_150" valueType="INT" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_10_IP_ADDRESS" parentDevice="CAMERA_10" resourceID="SYS_PROPERTY_151" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_10_SUBNET_MASK" parentDevice="CAMERA_10" resourceID="SYS_PROPERTY_152" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_10_MAC_ADDRESS" parentDevice="CAMERA_10" resourceID="SYS_PROPERTY_153" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_10_DHCP_ENABLED" parentDevice="CAMERA_10" resourceID="SYS_PROPERTY_154" valueType="TEXT_ID" displayAttribute="External">
+         <PropertyTextResources>
+            <PropertyTextResource number="0" resourceID="SYS_RESOURCE_DISABLED"/>
+            <PropertyTextResource number="1" resourceID="SYS_RESOURCE_ENABLED"/>
+         </PropertyTextResources>
+      </Property>
+      <Property name="PROPERTY_CAMERA_10_CAMERA_MODEL" parentDevice="CAMERA_10" resourceID="SYS_PROPERTY_155" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_10_SERIAL_NUMBER" parentDevice="CAMERA_10" resourceID="SYS_PROPERTY_156" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_10_FW_VERSION" parentDevice="CAMERA_10" resourceID="SYS_PROPERTY_157" valueType="STRING" displayAttribute="External"/>
+      <Property name="PROPERTY_CAMERA_10_COMMUNICATION_TIMEOUT" parentDevice="CAMERA_10" resourceID="SYS_PROPERTY_158" valueType="INT" displayAttribute="External">
+         <QuantityData resourceID="SYS_UNIT_MILLISECONDS"/>
+      </Property>
+      <Property name="PROPERTY_CAMERA_10_STATUS" parentDevice="CAMERA_10" resourceID="SYS_PROPERTY_159" valueType="TEXT_ID" displayAttribute="External">
+         <PropertyTextResources>
+            <PropertyTextResource number="0" resourceID="SYS_RESOURCE_UNKNOWN"/>
+            <PropertyTextResource number="1" resourceID="SYS_RESOURCE_DISCONNECTED"/>
+            <PropertyTextResource number="2" resourceID="SYS_RESOURCE_STANDBY"/>
+            <PropertyTextResource number="3" resourceID="SYS_RESOURCE_RUNNING"/>
+         </PropertyTextResources>
+      </Property>
+
+
+   </Properties>	
+</DevicesStructure>

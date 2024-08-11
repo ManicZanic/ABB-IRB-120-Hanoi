@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.TPU.Controls.Paint">
+  <Strings>
+    <String ID="Right" Text="R" />
+    <String ID="Left" Text="L" />
+    <String ID="Idle" Text="空闲" />
+    <String ID="Position" Text="{0}m" />
+    <String ID="Waiting" Text="等待" />
+    <String ID="Conveyor" Text="传输带 " />
+    <String ID="State.Idle" Text="空闲" />
+    <String ID="State.Connected" Text="连接的" />
+    <String ID="State.Waiting" Text="等待对象" />
+    <String ID="Angle" Text="角度：" />
+    <String ID="AngleUnit" Text="°" />
+    <String ID="Vertical" Text="垂直：" />
+    <String ID="VerticalUnit" Text="mm." />
+    <String ID="AngleBrake" Text="角度刹车" />
+    <String ID="VerticalBrake" Text="垂直刹车" />
+    <String ID="ServoEnabled" Text="伺服使能" />
+    <String ID="Calibrated" Text="已校准" />
+    <String ID="Brake" Text="刹车" />
+    <String ID="Servo" Text="伺服" />
+  </Strings>
+</Resources>

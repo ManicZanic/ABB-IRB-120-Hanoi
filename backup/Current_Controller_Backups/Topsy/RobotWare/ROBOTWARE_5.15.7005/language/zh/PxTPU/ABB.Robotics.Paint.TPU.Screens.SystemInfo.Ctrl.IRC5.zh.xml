@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.TPU.Screens.SystemInfo.Ctrl.IRC5">
+  <Strings>
+    <String ID="Controller" Text="控制器" />
+    <String ID="Version" Text="版本" />
+    <String ID="Name" Text="名称" />
+    <String ID="SystemName" Text="系统名" />
+    <String ID="Options" Text="选项" />
+    <String ID="Options.Controller" Text="控制器" />
+    <String ID="Options.DriveModule" Text="驱动模块" />
+    <String ID="Options.Additional" Text="附加" />
+    <String ID="Option" Text="选项" />
+    <String ID="Network" Text="网络" />
+    <String ID="IP" Text="IP" />
+    <String ID="Subnet" Text="子网" />
+    <String ID="Gateway" Text="网关" />
+    <String ID="MAC" Text="MAC" />
+    <String ID="ControllerInformation" Text="控制器信息" />
+    <String ID="ControllerProperties" Text="控制器属性" />
+    <String ID="SystemProperties" Text="系统属性" />
+    <String ID="ControlModule" Text="控制模块" />
+    <String ID="ID" Text="ID" />
+    <String ID="CurrentSystem" Text="当然系统" />
+    <String ID="InstalledSystems" Text="安装的系统({0})" />
+    <String ID="SerialNo" Text="序列号" />
+    <String ID="Key" Text="钥匙" />
+  </Strings>
+</Resources>

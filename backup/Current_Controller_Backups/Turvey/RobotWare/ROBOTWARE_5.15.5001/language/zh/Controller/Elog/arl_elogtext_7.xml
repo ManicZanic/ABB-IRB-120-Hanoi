@@ -1,0 +1,556 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="ARL" domainNo="4" lang="zh" elogTextVersion="1.0" min="1477" max="1583">
+  <Message number="1477" eDefine="SYS_ERR_ARL_WST_TIMEOUT">
+    <Title>超时</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />已超过指令 WaitSyncTask 的自变量 <arg format="%s" ordinal="2" /> 中设置的时间。<p />程序引用 <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1483" eDefine="SYS_ERR_ARL_SYNCID">
+    <Title>自变量错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />ID 的值是负值或不是整数。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>检查可选自变量 ID 的值。该值必须是一个非负整数。</Actions>
+  </Message>
+  <Message number="1484" eDefine="SYS_ERR_ARL_SMON_TIMEOUT">
+    <Title>超时</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />已超过指令 SyncMoveOn 的自变量 <arg format="%s" ordinal="2" /> 中设置的时间。<p />程序引用 <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1486" eDefine="SYS_ERR_ARL_TCPROB_NOTDEF">
+    <Title>指令错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />指令 <arg format="%s" ordinal="2" /> 仅在程序任务中定义了一台 TCP 机器人时可用。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>－检查配置。<p />－如果任务不需要 TCP 机器人，则必须删除该指令。</Actions>
+  </Message>
+  <Message number="1487" eDefine="SYS_ERR_ARL_TCPROB_NOTACT">
+    <Title>指令错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />指令 <arg format="%s" ordinal="2" /> 仅在 TCP 机器人处于激活状态时才会运行。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>在任务中启动 TCP 机器人。</Actions>
+  </Message>
+  <Message number="1488" eDefine="SYS_ERR_ARL_ROB_AXIS_VAL">
+    <Title>值错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />未在程序任务中定义任何 TCP 机器人。一个或若干机器人的轴数值输入不等于 9E9。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>将机器人轴值更改为 9E9。</Actions>
+  </Message>
+  <Message number="1489" eDefine="SYS_ERR_ARL_MOV_ROB_AXIS_VAL">
+    <Title>值错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />机器人轴 <arg format="%s" ordinal="2" /> 无法运转，因此不必进行监控。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>将轴 <arg format="%s" ordinal="4" /> 的值更改为 9E9。</Actions>
+  </Message>
+  <Message number="1490" eDefine="SYS_ERR_ARL_SMOFF_TIMEOUT">
+    <Title>超时</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />已超过指令 SyncMoveOn 的自变量 <arg format="%s" ordinal="2" /> 中设置的时间。<p />程序引用 <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1491" eDefine="SYS_ERR_ARL_TCPROB_DEF">
+    <Title>指令错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />如果在程序任务中定义了一台 TCP 机器人，指令 <arg format="%s" ordinal="2" /> 就不可用。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>－检查配置。<p />－如果任务不需要 TCP 机器人，则必须删除该指令。</Actions>
+  </Message>
+  <Message number="1492" eDefine="SYS_ERR_ARL_MECUNT_NOTACT">
+    <Title>指令错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />指令 <arg format="%s" ordinal="2" /> 仅在 TCP 机械单元处于活动状态时才会运行。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>在任务中启动机械单元。</Actions>
+  </Message>
+  <Message number="1493" eDefine="SYS_ERR_ARL_NO_TCPROB">
+    <Title>执行错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />任务中无任何 TCP 机器人可用。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>任务中必须存在 TCP 机器人才能运行指令。</Actions>
+  </Message>
+  <Message number="1494" eDefine="SYS_ERR_ARL_TASK_MECUNIT">
+    <Title>指令错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />任务不能控制机械单元 <arg format="%s" ordinal="2" />。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>检查配置。<p /></Actions>
+  </Message>
+  <Message number="1495" eDefine="SYS_ERR_ARL_MOVE_PP_SYNC_ON">
+    <Title>移动 PP 错误
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />无法从独立模式转换到同步模式。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>重新启动当前指令受阻。<p />系统可以处于同步运动模式，或仍处于独立运动模式。<p /></Consequences>
+    <Causes>运行活动指令时程序停止。然后在程序内执行 PP 移动。
+</Causes>
+    <Actions>移动 PP 后重新启动程序。必须在所有程序任务内移动 PP。要保持定义良好的系统状态，应将 PP 移至 main。
+</Actions>
+  </Message>
+  <Message number="1496" eDefine="SYS_ERR_ARL_MOVE_PP_SYNC_OFF">
+    <Title>移动 PP 错误
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />暂时无法从同步模式转换到独立模式。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>重新启动当前指令受阻。<p />系统可处于同步运动模式，或仍处于独立运动模式。
+</Consequences>
+    <Causes>运行活动指令时程序停止。随后执行程序内的 PP 移动。
+</Causes>
+    <Actions>移动 PP 后重新启动程序。必须在所有程序任务内移动 PP。要保持定义良好的系统状态，应将 PP 移至 main。
+</Actions>
+  </Message>
+  <Message number="1497" eDefine="SYS_ERR_ARL_MOVE_PP_WAITSYNC">
+    <Title>移动 PP 通知
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />指令 <arg format="%s" ordinal="2" /> 在本任务中处于活动状态。某些情况下，在程序内移动 PP 会很危险。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>在 RAPID 程序内移动 PP 可能导致机器人之间  RAPID  任务不同步或/和发生碰撞。
+</Consequences>
+    <Causes>运行活动 <arg format="%s" ordinal="4" /> 指令时 RAPID 程序内的 PP 移动。
+</Causes>
+    <Actions>将 PP 移至该程序任务中的适当位置。
+</Actions>
+  </Message>
+  <Message number="1498" eDefine="SYS_ERR_ARL_MECH_USERFRAME_NOT_FOUND">
+    <Title>机械单元 <arg format="%s" ordinal="1" /> 中无已定义的 UserFrame！ </Title>
+    <Description>工件 <arg format="%s" ordinal="2" /> 包含一个与未定义用户坐标协动的机械单元。</Description>
+    <Actions>检查工件的机械单元组件。</Actions>
+  </Message>
+  <Message number="1499" eDefine="SYS_ERR_ARL_SYNC_MODE">
+    <Title>同步模式</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />系统处于同步模式。指令必须拥有一个 ID。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>将包含识别号的开关 \ID 添加到指令。</Actions>
+  </Message>
+  <Message number="1500" eDefine="SYS_ERR_ARL_IND_MODE">
+    <Title>独立模式</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />系统处于独立模式。指令不能拥有一个 ID。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>从指令删除开关 \ID。</Actions>
+  </Message>
+  <Message number="1501" eDefine="SYS_ERR_ARL_ILL_ID">
+    <Title>非法 Id</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />ErrorId 包含错误的值。它必须是介于 <arg format="%s" ordinal="2" /> - <arg format="%s" ordinal="3" /> 之间的一个整数。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>更改该值。</Actions>
+  </Message>
+  <Message number="1502" eDefine="SYS_ERR_ARL_ILL_DOM">
+    <Title>非法域</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />域 <arg format="%s" ordinal="2" /> 无法使用。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>选择另一 Elog 域。</Actions>
+  </Message>
+  <Message number="1503" eDefine="SYS_ERR_ARL_ILL_TYPE">
+    <Title>非法错误类型</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />无法使用错误类型 TYPE_ALL。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>使用另一错误类型。</Actions>
+  </Message>
+  <Message number="1504" eDefine="SYS_ERR_ARL_NO_MECUNIT">
+    <Title>未指定任何机械单元</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />未向指令添加系统中的 TCP 和机械单元。<p />程序引用 <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Actions>将任务中存在的机械单元添加到指令。 <p /></Actions>
+  </Message>
+  <Message number="1505" eDefine="SYS_ERR_ARL_MECUNIT_NOT_IN_TASK">
+    <Title>机械单元不在任务中</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />任务中不存在指定的机械单元。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>将另一机械单元添加到指令。</Actions>
+  </Message>
+  <Message number="1506" eDefine="SYS_ERR_ARL_READ_NO_TCP">
+    <Title>任务不能读取 TCP 机器人</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />读取任务不能读取 TCP 机器人。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>更改配置，或将任务中存在的机械单元添加到指令。</Actions>
+  </Message>
+  <Message number="1507" eDefine="SYS_ERR_ARL_READ_ILL_MECH">
+    <Title>任务可读取其它机械单元</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />任务可读取指令中未指定的机械单元。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>更改指令中的机械单元。</Actions>
+  </Message>
+  <Message number="1508" eDefine="SYS_ERR_ARL_ILL_LOADID">
+    <Title>LoadId 错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />载荷测定对于这类机器人不适用。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>检查下一个事件日志消息，准备执行下一个用户操作。</Actions>
+  </Message>
+  <Message number="1509" eDefine="SYS_ERR_ARL_ILL_POS">
+    <Title>LoadId 错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />无效的载荷测定位置<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>更改机器人的位置。<p />检查下一个事件日志消息，准备执行下一个用户操作。<p /></Actions>
+  </Message>
+  <Message number="1510" eDefine="SYS_ERR_ARL_NO_USE_TOOL0">
+    <Title>LoadId 错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />不允许测定（或使用） tool0。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>设置应该测定的工具，在微动控制窗口中处于活动状态。<p />检查下一个事件日志消息，准备执行下一个用户操作。</Actions>
+  </Message>
+  <Message number="1511" eDefine="SYS_ERR_ARL_NO_ID_LOAD0">
+    <Title>LoadId 错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />不允许测定 load0。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>使用另一个载荷来测定。<p />检查下一个事件日志消息，准备执行下一个用户操作。</Actions>
+  </Message>
+  <Message number="1512" eDefine="SYS_ERR_ARL_INT_ERROR">
+    <Title>内部错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />Measurement axes &gt; 2 at the same time.<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>检查下一个事件日志消息，准备执行下一个用户操作。</Actions>
+  </Message>
+  <Message number="1513" eDefine="SYS_ERR_ARL_ILL_PAYLOAD">
+    <Title>LoadId 错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />选择的 PayLoad 超出限制范围。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>在系统中选择一个 PayLoad。<p />按“开始”继续。</Actions>
+  </Message>
+  <Message number="1514" eDefine="SYS_ERR_ARL_ILL_WOBJ0">
+    <Title>LoadId 错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />对 roomfix TCP，wobj0 无法激活。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>选择另一工作对象。<p />检查下一个事件日志消息，以进行下一个用户操作。</Actions>
+  </Message>
+  <Message number="1515" eDefine="SYS_ERR_ARL_ILL_METHOD">
+    <Title>LoadId 错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />选择的方法超出限制范围。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>选择一个给定的测定方法。<p />按“开始”继续。</Actions>
+  </Message>
+  <Message number="1516" eDefine="SYS_ERR_ARL_SMALL_ANGLE">
+    <Title>LoadId 错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />配置角度不适当。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>不能运行测定程序。</Consequences>
+    <Causes>选定的配置角度值小于 30，或包含另一个不能用于测定过程的值。</Causes>
+    <Actions>请选择一个介于 +/- 30 和 +/- 90 度之间的配置角度。<p />按”开始”继续。</Actions>
+  </Message>
+  <Message number="1517" eDefine="SYS_ERR_ARL_LOADID_ERR">
+    <Title>LoadId 错误</Title>
+    <Description>任务：<arg format="%s" ordinal="1" /><p />PP 已移至载荷测定例行程序的起始处，<p />现已准备好重新启动。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>服务例行程序在测量过程中停止、因用户取消而中断或由于某些其它错误而中断。<p />检查以往的事件日志消息了解原因。</Causes>
+    <Actions>1) 重新启动服务例行程序<p />2) 使用“调试 – 取消调用例行程序”退出服务例行程序的执行。<p />注意：“取消调用例行程序”将导致程序指针丢失。<p />使用“调试 – PP 移至主程序”获得新的程序指针。</Actions>
+  </Message>
+  <Message number="1518" eDefine="SYS_ERR_ARL_MECHUNIT_SEL">
+    <Title>LoadId 错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />选择的 MechUnit 超出限制范围。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>在显示屏上选择一个机械单元。<p />按”开始”继续。</Actions>
+  </Message>
+  <Message number="1519" eDefine="SYS_ERR_ARL_ILL_MASS">
+    <Title>LoadId 错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />Mass must be &gt; 0 kg.<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>指定大于 0 的质量。<p />按”开始”继续。</Actions>
+  </Message>
+  <Message number="1520" eDefine="SYS_ERR_ARL_ERR_NOT_BOOKED">
+    <Title>错误恢复常数未登记</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />错误恢复常数 <arg format="%s" ordinal="2" /> 未登记。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>使用指令 BookErrNo 登记常数，或使用系统登记的错误恢复常数（不能与 ErrRaise 一起使用）。</Actions>
+  </Message>
+  <Message number="1521" eDefine="SYS_ERR_ARL_ILL_TASKSTATUS">
+    <Title>任务状态错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />任务列表中无已启动的普通 (NORMAL) 任务。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>在任务选择面板中检查是否在任务列表中至少选择/启动了一个任务。<p />在 .cfg 文件中检查是否至少有一个选定任务是普通任务 (NORMAL)。</Actions>
+  </Message>
+  <Message number="1522" eDefine="SYS_ERR_ARL_ILL_ERR_CONSTANT">
+    <Title>使用的错误恢复常数不正确</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />错误恢复常数 <arg format="%s" ordinal="2" /> 已由系统登记。该常数不能与指令 ErrRaise 一起使用。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>用指令 BookErrNo 登记一个新的错误恢复常数。</Actions>
+  </Message>
+  <Message number="1523" eDefine="SYS_ERR_ARL_NOTINT_OR_NEG">
+    <Title>变元错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />变元 <arg format="%s" ordinal="2" /> 不是整数或是负值。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>将变元值更改为非负值整数。</Actions>
+  </Message>
+  <Message number="1524" eDefine="SYS_ERR_ARL_IN_UNDO_HANDLER">
+    <Title>指令错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />在 UNDO 处理程序中执行该程序。不允许在 UNDO 处理程序中执行指令 <arg format="%s" ordinal="2" /> 。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>删除该指令。</Actions>
+  </Message>
+  <Message number="1525" eDefine="SYS_ERR_ARL_IN_EVENT_ROUTINE">
+    <Title>指令错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />在 EVENT 例行程序中执行该程序。不允许在 EVENT 例行程序中执行指令 <arg format="%s" ordinal="2" /> 。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>删除该指令。</Actions>
+  </Message>
+  <Message number="1526" eDefine="SYS_ERR_ARL_NOT_ERROR_HANDLER">
+    <Title>指令错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />指令 <arg format="%s" ordinal="3" /> 只能用于 ERROR 处理程序。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>删除指令或将其移至 ERROR 处理程序。</Actions>
+  </Message>
+  <Message number="1527" eDefine="SYS_ERR_ARL_NO_SWITCH_ARG">
+    <Title>自变量开关缺失。</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />缺少一个自变量。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>必须定义 <arg format="%s" ordinal="3" /> 中的开关参数 \Continue 或 \BreakOff。 </Actions>
+  </Message>
+  <Message number="1528" eDefine="SYS_ERR_ARL_NOT_NOSTEPIN">
+    <Title>指令错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />指令 <arg format="%s" ordinal="2" /> 仅可用于非步进（stepin) 例行程序。</Description>
+    <Actions>删除指令或将其移至非步进(stepin) 例行程序。</Actions>
+  </Message>
+  <Message number="1529" eDefine="SYS_ERR_ARL_ILL_SWITCH">
+    <Title>指令错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />仅在任务控制机械单元时才允许使用开关 \Inpos。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>从指令删除开关 \Inpos。</Actions>
+  </Message>
+  <Message number="1530" eDefine="SYS_ERR_ARL_WOBJ_NOT_IN_TASK">
+    <Title>指令错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />无法执行指令 <arg format="%s" ordinal="2" />，而协调工件指向位于另一任务的机械单元 <arg format="%s" ordinal="3" />。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>更改工件，工件指向的机械单元应位于 TCP 机器人所处的任务。<p /><p />如果：<p />- 使用开关\UseCurWObjPos <p />- 协调工件保持静止，则即使协调工件位于其它任务时，仍可以使用 CalcJointT 功能</Actions>
+  </Message>
+  <Message number="1531" eDefine="SYS_ERR_ARL_TASK_NOT_IN_LIST">
+    <Title>任务不在 TaskList 中 </Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> 不是 TaskList 中的任务，或者不同任务中的任务列表不匹配。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>- 将当前任务添加到 TaskList。<p />- 检查不同任务中的任务列表是否相似。<p /><p />使用 PERS 变量时，可能需要卸载包含任务列表的模块，再重新加载。 </Actions>
+  </Message>
+  <Message number="1532" eDefine="SYS_ERR_ARL_MISMATCH_TASKLIST">
+    <Title>任务列表不匹配</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />同步失败是由于：<p />1) 任务列表 <arg format="%s" ordinal="2" />与其它任务中具有相同<p /> SyncID 的任务列表不匹配，或者<p />任务列表中的某个任务名称多次出现。<p />2) 首次执行指令中，任务选项面板上的激活任务<p />与以下指令中的不同。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Consequences>立即停止程序执行。</Consequences>
+    <Causes>出现该错误是由于以下原因之一：<p />1) 具有相同 SyncID <p />的任务列表其内容却不一致，或某个任务名多次出现。<p />2) 在第一个指令执行之后才在任务选项<p />面板中激活或者停用一个或者多个任务。<p /></Causes>
+    <Actions>1) 检查并修改任务列表和 SyncID，否则会再次出现相同错误。<p />2) 重新开始。指令将在任务选项面板的当前状态下执行。<p /><p /><p /></Actions>
+  </Message>
+  <Message number="1533" eDefine="SYS_ERR_ARL_MISMATCH_SYNCID">
+    <Title>SyncID 不匹配 </Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />SyncID <arg format="%s" ordinal="2" /> 与其它任务中的 SyncID 不匹配。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>使用非全局任务列表可能导致此错误。</Causes>
+    <Actions>更改 SyncID 并检查任务列表。<p />继续操作前，PP 必须移至所有任务中的 main 中。</Actions>
+  </Message>
+  <Message number="1534" eDefine="SYS_ERR_ARL_INC_SYNCHDATA">
+    <Title>Synch 数据不一致</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />在任务列表 <arg format="%s" ordinal="2" /> 中 synchdata 不一致。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>更改任务列表的内容。<p />继续操作前必须将 PP 移至所有任务中的 main。<p /></Actions>
+  </Message>
+  <Message number="1535" eDefine="SYS_ERR_ARL_UNEXP_SYNC_ON_IN_ON">
+    <Title>意外的 SyncMoveOn</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />意外的 SyncMoveOn (SyncID <arg format="%s" ordinal="2" />)。系统已处于同步模式。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>由于已执行 SyncMoveOn，程序任务已处于同步模式。<p />使用非全局任务列表可能导致此错误。</Causes>
+    <Actions>必须将 PP 移至所有任务的主程序中才能继续程序执行。<p />删除 SyncMoveOn 指令。每个 SyncMoveOn 后必须接一个 SyncMoveOff 指令。<p />请检查您的任务列表。<p /><p /><p /></Actions>
+  </Message>
+  <Message number="1536" eDefine="SYS_ERR_ARL_UNEXP_SYNC_ON_IN_WAIT_OFF">
+    <Title>意外的 SyncMoveOn</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />意外的 SyncMoveOn (SyncID <arg format="%s" ordinal="2" />)。系统正在等待 SyncMoveOff。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>删除 SyncMoveOn 指令。每个 SyncMoveOn 后面必须接一个 SyncMoveOff 指令。<p /></Actions>
+  </Message>
+  <Message number="1537" eDefine="SYS_ERR_ARL_UNEXP_SYNC_OFF_IN_WAIT_ON">
+    <Title>意外的 SyncMoveOff</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />意外的 SyncMoveOff (SyncID <arg format="%s" ordinal="2" />)。系统正在等待 SyncMoveOn。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>删除 SyncMoveOff 指令。每个 SyncMoveOn 后面必须接一个 SyncMoveOff 指令。<p /><p /></Actions>
+  </Message>
+  <Message number="1538" eDefine="SYS_ERR_ARL_READ_TASK_IN_TASKLIST">
+    <Title>错误的任务列表</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />任务列表中的任务 <arg format="%s" ordinal="2" /> 是读取任务，不能被同步。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>更改任务列表或配置。</Actions>
+  </Message>
+  <Message number="1539" eDefine="SYS_ERR_ARL_STIFF_STOP_ERROR">
+    <Title>速度太快</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />速度超过 <arg format="%s" ordinal="2" /> （mm/s）。当使用“硬停止”（开关 \停止）时，此速度太快。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>程序立即停止执行。</Consequences>
+    <Actions>更改速度或更改停止类型。</Actions>
+  </Message>
+  <Message number="1540" eDefine="SYS_ERR_ARL_TASK_READ_MECUNIT">
+    <Title>机械单元错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />任务可读取控制任务 <arg format="%s" ordinal="2" />，该任务不能控制机械单元 <arg format="%s" ordinal="3" />。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>更改 \MechUnit 或配置。</Actions>
+  </Message>
+  <Message number="1541" eDefine="SYS_ERR_ARL_IS_READ_TASK">
+    <Title>不允许位于读任务</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />不允许在读任务中执行该指令。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>删除该指令。</Actions>
+  </Message>
+  <Message number="1542" eDefine="SYS_ERR_ARL_PROG_STOP">
+    <Title>程序停止。</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />因系统中程序停止而无法恢复路径。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1543" eDefine="SYS_ERR_ARL_UNEXIST_LOAD">
+    <Title>参变量错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />载荷数据已定义，但在系统中不再可用。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>此错误可能是由以下原因之一造成的:<p />1) 指令 GripLoad 运行所在的模块可能在系统中已不再可用。<p />2) 带可选参变量 Tload 的运动指令运行所在的模块可能在系统中已不再可用。</Causes>
+    <Actions>务必运行 GripLoad load0 以重置载荷数据。<p />如果在运动指令中使用 Tload 可选参变量，则运行 SetSysData load0 来重置载荷数据。</Actions>
+  </Message>
+  <Message number="1544" eDefine="SYS_ERR_ARL_OBSOLETE_PROC">
+    <Title>绝对指令 </Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />过程 <arg format="%s" ordinal="2" /> 失效，且不会有预期的行为。<p />PFIOResto 将不起任何作用。<p />PFDOVal 和 PFGOVal 将分别起到函数 DOutput 和 Goutput 的作用。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+  </Message>
+  <Message number="1545" eDefine="SYS_ERR_ARL_LOCAL_PERS">
+    <Title>自变量错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />自变量　<arg format="%s" ordinal="2" /> 不能是类型 LOCAL PERS。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>从数据声明中删除 LOCAL。</Actions>
+  </Message>
+  <Message number="1546" eDefine="SYS_ERR_ARL_DATA_OBJ_NOT_USABLE">
+    <Title>自变量错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />系统中不存在对象 <arg format="%s" ordinal="2" /> ，属于类型 LOCAL PERS。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>－说明对象<p />－从数据声明中删除 LOCAL。</Actions>
+  </Message>
+  <Message number="1547" eDefine="SYS_ERR_ARL_MISS_OPTION">
+    <Title>变元错误</Title>
+    <Description>任务：<arg format="%s" ordinal="1" /><p />\Corr 开关必须搭配 Path Offset 选项使用。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>删除此参数或加上 Path Offset 选项。</Actions>
+  </Message>
+  <Message number="1548" eDefine="SYS_ERR_ARL_ACTIVEMOD">
+    <Title>模块错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />试图删除的模块 <arg format="%s" ordinal="2" /> 处在活动状态，因此无法删除。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>检查确保您想删除的模块不在活动状态。</Actions>
+  </Message>
+  <Message number="1549" eDefine="SYS_ERR_ARL_WRONG_PATH">
+    <Title>意外的 SyncMoveOn 或者 SyncMoveOff </Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />错误的路径层。无法在 StorePath 层中使用 SyncMoveOn 或 SyncMoveOff。<p />已使用 <arg format="%s" ordinal="2" />： <arg format="%s" ordinal="3" /><p />程序引用 <arg format="%s" ordinal="4" /><p /><p /><p /></Description>
+    <Actions>检查 RAPID 程序。</Actions>
+  </Message>
+  <Message number="1550" eDefine="SYS_ERR_ARL_PATH_REC_WRONG_STATE">
+    <Title>PathRecorder 开/关错误 </Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />无法执行 <arg format="%s" ordinal="2" /><p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>确保向后运动不是由 PathRecMoveBwd触发的,也不是由<p /> PathRecMoveFwd 终止。 </Actions>
+  </Message>
+  <Message number="1551" eDefine="SYS_ERR_ARL_PATH_REC_NOT_REACHABLE">
+    <Title>PathRecorder 移动错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />无法执行 <arg format="%s" ordinal="2" />。给定的标识符无法到达。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>确保 PathRecorder 已启动。<p />确保程序指针未被手动移动。<p />确保未超过 <arg format="%s" ordinal="4" /> 记录的移动指令的限制范围。</Actions>
+  </Message>
+  <Message number="1552" eDefine="SYS_ERR_ARL_PATH_REC_WRONG_PATH_LEVEL">
+    <Title>PathRecorder 路径级别错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />无法在当前路径级别上执行 <arg format="%s" ordinal="2" />。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>- 切换到陷阱级。<p />- 执行 StorePath 以切换路径级别。 <p /></Actions>
+  </Message>
+  <Message number="1553" eDefine="SYS_ERR_ARL_WRONG_SYS_DATA">
+    <Title>数据损坏</Title>
+    <Description>某个任务中的系统数据　<arg format="%s" ordinal="1" /> 已更改。严禁更改该数据。</Description>
+    <Actions>系统启动时已恢复该数据，但必须对程序进行检查。删除已赋值的 <arg format="%s" ordinal="2" /> 。</Actions>
+  </Message>
+  <Message number="1554" eDefine="SYS_ERR_ARL_CONC_IN_SYNC">
+    <Title>同步模式</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />系统处于同步模式时无法使用可选参数 \Conc。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>将可选参数 \Conc 从任何处于同步模式的移动指令中删除。</Actions>
+  </Message>
+  <Message number="1555" eDefine="SYS_ERR_ARL_UNIT_NOT_RUN_ATTR">
+    <Title>与单元无联络</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />与单元 <arg format="%s" ordinal="2" /> 无联络。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>该单元可能已禁用 (IODisable "UNIT1", 1;)<p />该单元电源关闭。</Causes>
+    <Actions>恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1556" eDefine="SYS_ERR_ARL_UNIT_NOT_RUNNING">
+    <Title>与单元无联络</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />与单元无联络。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>该单元可能已禁用 (IODisable "UNIT1", 1;)<p />单元电源关闭。<p /></Causes>
+    <Actions>恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1557" eDefine="SYS_ERR_ARL_IPOL_NOTSTOPPED">
+    <Title>Mec.单元未停止</Title>
+    <Description>任务：<arg format="%s" ordinal="1" /><p />不允许在未停止所有动作任务的情况下更改运行模式。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>停止程序，然后重试。</Actions>
+  </Message>
+  <Message number="1558" eDefine="SYS_ERR_ARL_NO_SWITCH">
+    <Title>自变量开关缺失</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />指令 <arg format="%s" ordinal="2" /> 缺少一个自变量。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>将 SyncOrgMoveInst 或 SyncLastMoveInst 添加到指令。</Actions>
+  </Message>
+  <Message number="1559" eDefine="SYS_ERR_ARL_NOT_PERS_TASK">
+    <Title>不是 PERS 变量</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />»»务列表 <arg format="%s" ordinal="2" /> 是 LOCAL 或 TASK 持续变量值。不允许出现这种情况。它必须是全局值。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Actions>将任务列表更改为 PERS。</Actions>
+  </Message>
+  <Message number="1560" eDefine="SYS_ERR_ARL_EMERG_STOP">
+    <Title>不能开始运动</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /> 无法开始运动。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Causes>1. 执行了紧急停止。<p />2. 系统中存在其他的错误。 </Causes>
+    <Actions>1. 如果已执行过紧急停止，请重新设置。<p />2. 请检查以往的错误消息以了解原因。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1561" eDefine="SYS_ERR_ARL_MISSING_TEXT">
+    <Title>函数键中无文本 </Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />指令 TPReadFK 在功能键中均无文本。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>指令执行时无按钮可按。 </Consequences>
+    <Actions>将文本插入至少一个 TPFK1 .. TPFK5 功能键 </Actions>
+  </Message>
+  <Message number="1562" eDefine="SYS_ERR_ARL_PROC_ERR_NOT_HANDLED">
+    <Title>可能会出现错误的循环运动</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />可能会出现错误循环运动，因为：<p />1) 出现 asychron（不同步）进程错误，且未用任何错误处理程序进行处理。<p />2) 程序指针指向某个循环指令，该指令与前一个移动指令中已执行的 MODPOS 结合。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Consequences>可能不会在当前位置启动程序，因为如果这样机器人有可能执行不希望出现的运动。</Consequences>
+    <Causes> 原因如下：<p />1) RAPID 程序缺少错误处理程序，或错误处理程序不能处理这一特定的错误<p />2) 在未以步进模式和移动步进模式运行的情况下执行了 MODPOS 操作</Causes>
+    <Actions>请采取以下措施：<p />1) 编辑程序<p />2) 移动程序指针，以便启动程序。</Actions>
+  </Message>
+  <Message number="1563" eDefine="SYS_ERR_ARL_WOBJ_MOVE_BY_ITSELF">
+    <Title>变元错误 </Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />在该 MOVE 指令中Wobj指定的机械单元 <arg format="%s" ordinal="2" /> ，是与该程序任务的机器人相同的 <arg format="%s" ordinal="3" /> 机械单元<p />。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Consequences>机器人不能自己移动工件。 </Consequences>
+    <Actions>编辑所使用的 wobjdata。 </Actions>
+  </Message>
+  <Message number="1564" eDefine="SYS_ERR_ARL_ALLMOTIONTASKS">
+    <Title>不允许从动作任务运行</Title>
+    <Description>任务：<arg format="%s" ordinal="1" /><p />不允许从动作任务运行带有 \AllMotionTasks 选项参数的 StopMove、StartMove 和 StopMoveReset 指令。<p />程序引用： <arg format="%s" ordinal="2" /></Description>
+    <Causes>只允许从作为读（或后台）程序任务运行的监控程序任务<p />停止和重新启动系统中的全部运动。</Causes>
+    <Actions>删除该指令。</Actions>
+  </Message>
+  <Message number="1565" eDefine="SYS_ERR_ARL_NOT_ALLOW_NUM_VAL">
+    <Title>非允许值</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />自变量中存在非法值 <arg format="%s" ordinal="2" />.<p /><p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>检查并更改该值。它必须是介于 <arg format="%s" ordinal="4" /> 与 <arg format="%s" ordinal="5" /> 之间的一个整数。 </Actions>
+  </Message>
+  <Message number="1566" eDefine="SYS_ERR_ARL_LIM_SIG_BITS">
+    <Title>信号超过允许的最大位数值</Title>
+    <Description>任务：<arg format="%s" ordinal="1" /><p />信号 <arg format="%s" ordinal="2" /> 过大。<p /><p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>23 位或少于 23 位的组信号可以用 num 数据类型表示，32 位或少于 32 位的组信号，如果用于 RAPID 程序，可以用 dnum 数据类型表示。</Actions>
+  </Message>
+  <Message number="1567" eDefine="SYS_ERR_ARL_DOBREAK">
+    <Title>数字输出中断</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />数字输出中断了执行。<p />程序引用 <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Actions>恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1568" eDefine="SYS_ERR_ARL_NOT_BUS">
+    <Title>指定的名称不是总线</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />总线名称 <arg format="%s" ordinal="2" /> 不存在。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Causes>单元名称拼写错误或未定义。</Causes>
+    <Actions>恢复： <arg format="%s" ordinal="4" /><p /></Actions>
+  </Message>
+  <Message number="1569" eDefine="SYS_ERR_ARL_SOCK_LISTEN_ISCONN">
+    <Title>套接字错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />套接字已连接，无法用于监听进入连接。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>使用另一套接字监听进入连接。</Actions>
+  </Message>
+  <Message number="1570" eDefine="SYS_ERR_ARL_SOCK_ACCPT_NOLISTEN">
+    <Title>套接字错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />因为未设置为监听状态，所以套接字无法接受进入连接请求。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Causes>在 SocketListen 前使用了 SocketAccept。</Causes>
+    <Actions>在尝试接受进入连接前将套接字设置为监听状态。<p /></Actions>
+  </Message>
+  <Message number="1571" eDefine="SYS_ERR_ARL_SOCK_ADDR_INUSE">
+    <Title>套接字错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />该地址和端口已被使用，无法被此套接字使用。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>恢复: <arg format="%s" ordinal="3" /><p /></Actions>
+  </Message>
+  <Message number="1572" eDefine="SYS_ERR_ARL_SOCK_CREATE_UNEXPT">
+    <Title>套接字错误
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />创建套接字时出现意外错误。<p />检查日志，了解导致错误的可能原因。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>将程序指针移至 main 并重新启动程序。
+</Actions>
+  </Message>
+  <Message number="1573" eDefine="SYS_ERR_ARL_SOCK_CREATE_TOOMANY">
+    <Title>套接字错误</Title>
+    <Description>任务：<arg format="%s" ordinal="1" /><p />无法创建更多套接字。并发套接字的最大数量为 32 个。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>关闭一个或多个套接字，以便创建新套接字。</Actions>
+  </Message>
+  <Message number="1574" eDefine="SYS_ERR_ARL_SOCK_NOTCREATED">
+    <Title>套接字错误 </Title>
+    <Description>任务； <arg format="%s" ordinal="1" /><p />必须先创建套接字才能将其用于任何套接字指令。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Causes>出现此错误的原因如下：<p />) 根本没有创建套接字。<p />) PP 移动已完成<p />) 在断电之后启动了程序。<p />) 执行 SocketCreate 后关闭了套接字。 </Causes>
+    <Actions>使用套接字之前，在程序的合适位置插入一个创建 SocketCreate 指令。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1575" eDefine="SYS_ERR_ARL_SOCK_ADDR_INVALID">
+    <Title>套接字错误 </Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />指定地址无效。唯一有效的地址是控制器的 LAN 地址或服务端口地址：192.168.125.1。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>指定 LAN 地址或服务端口地址。 </Actions>
+  </Message>
+  <Message number="1576" eDefine="SYS_ERR_ARL_SOCK_PORT_INVALID">
+    <Title>套接字错误 </Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />指定端口无效。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>建议使用 1025-4999 范围之内的端口号。 </Actions>
+  </Message>
+  <Message number="1577" eDefine="SYS_ERR_ARL_SOCK_TIMEOUT_ZERO">
+    <Title>套接字错误
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />指令中指定的超时值过低。超时值按秒数指定，且不得为零。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>使用大于零的超时值。
+</Actions>
+  </Message>
+  <Message number="1578" eDefine="SYS_ERR_ARL_SOCK_CONN_UNEXPT">
+    <Title>套接字错误
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />连接套接字时出现意外错误。<p />检查日志，了解导致错误的可能原因。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>将程序指针移至 Main 并重新启动程序。
+</Actions>
+  </Message>
+  <Message number="1579" eDefine="SYS_ERR_ARL_SOCK_CONN_REFUSE">
+    <Title>套接字错误
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />连接被远程主机拒绝。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+  </Message>
+  <Message number="1580" eDefine="SYS_ERR_ARL_SOCK_CONN_ALREADY">
+    <Title>套接字错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />套接字已经连接，无法再次连接。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Causes>已对指定套接字执行了 SocketConnect。 </Causes>
+    <Actions>在连接前关闭套接字并重新创建。<p /></Actions>
+  </Message>
+  <Message number="1581" eDefine="SYS_ERR_ARL_SOCK_TIMEOUT">
+    <Title>套接字错误
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />指令在超时期间内未完成。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>使用更高的超时值或使用一个错误处理程序重新尝试指令：<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1582" eDefine="SYS_ERR_ARL_SOCK_DATAEMPTY">
+    <Title>套接字错误
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />已指定发送或接收空数据。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>使用一个大于零的字符串、原始字节或字节阵列。
+</Actions>
+  </Message>
+  <Message number="1583" eDefine="SYS_ERR_ARL_SOCK_DATATOOBIG">
+    <Title>套接字错误
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />指定数据过大。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>一个套接字在一个指令中最多可以处理 1024 字节。
+</Actions>
+  </Message>
+</Domain>

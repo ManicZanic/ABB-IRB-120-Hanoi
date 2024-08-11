@@ -1,0 +1,605 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="ARL" domainNo="4" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="1584" max="1701">
+  <Message number="1584" eDefine="SYS_ERR_ARL_SOCK_SEND_EMPDATA">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The specified string or data to be sent is empty.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Check that the data is correct.</Actions>
+  </Message>
+  <Message number="1585" eDefine="SYS_ERR_ARL_SOCK_SEND_LENZERO">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The number of bytes to send has to be a value bigger than zero.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Change the value for the optional parameter NoOfBytes to a value bigger than zero.<p /><p /></Actions>
+  </Message>
+  <Message number="1586" eDefine="SYS_ERR_ARL_SOCK_LENINVALID">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The specified number of bytes to be sent is longer than the length of the actual data.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Change the value for the optional parameter NoOfBytes to be less than or equal to the actual data.<p />If all data should be sent remove the optional parameter.</Actions>
+  </Message>
+  <Message number="1587" eDefine="SYS_ERR_ARL_SOCK_SEND_UNEXPT">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />An unexpected error occurred when sending data.<p />Check the event log for other messages for the possible cause.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Move the program pointer to Main and restart the program.</Actions>
+  </Message>
+  <Message number="1590" eDefine="SYS_ERR_ARL_SOCK_DATAINVALID">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The byte array is invalid. A byte array can only contain integers between 0 and 255.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Change the byte array to contain valid data or use rawbytes to send complex data.</Actions>
+  </Message>
+  <Message number="1591" eDefine="SYS_ERR_ARL_SOCK_STATE_UNEXPT">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unexpected error when trying to get socket state.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Move program pointer to Main and restart program.</Actions>
+  </Message>
+  <Message number="1592" eDefine="SYS_ERR_ARL_SOCK_RECV_NODATA">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />No data was received.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Causes>The connection may have been closed by the remote host.</Causes>
+    <Actions>Move program pointer to Main and restart program.</Actions>
+  </Message>
+  <Message number="1593" eDefine="SYS_ERR_ARL_SOCK_RECV_DATATOLONG">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The data received is too long to be stored in a string. The maximum length of data that can be stored in a string is 80 characters.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Use an byte array or rawbytes to receive data longer than 80 bytes.</Actions>
+  </Message>
+  <Message number="1594" eDefine="SYS_ERR_ARL_SOCK_NOCONN">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The socket is not connected.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Causes>For client, use SocketConnect before receiving/sending data.<p />For server,  use SocketAccept before receiving/sending data.<p /></Causes>
+    <Actions>Use SocketConnect or SocketAccept to connect socket before trying to receive/send.<p /></Actions>
+  </Message>
+  <Message number="1595" eDefine="SYS_ERR_ARL_SOCK_CONNCLOSE">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The connection has been closed by the remote host.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Use error handler to re-establish connection before retrying to send/receive.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1596" eDefine="SYS_ERR_ARL_SOCK_BIND_UNEXPT">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unexpected error binding socket.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Move program pointer to Main and restart program.</Actions>
+  </Message>
+  <Message number="1597" eDefine="SYS_ERR_ARL_SOCK_BIND_ALREADY">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The socket has already been bound to an address and cannot be bound again.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Close socket and recreate before trying to bind socket to a new address.</Actions>
+  </Message>
+  <Message number="1598" eDefine="SYS_ERR_ARL_SOCK_LISTEN_UNEXPT">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unexpected error trying to listen for connections.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Move program pointer to Main and restart program.</Actions>
+  </Message>
+  <Message number="1599" eDefine="SYS_ERR_ARL_SOCK_LISTEN_NOBIND">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The socket has not been bound to an address.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Use SocketBind to specify which address to listen for incoming connections.</Actions>
+  </Message>
+  <Message number="1600" eDefine="SYS_ERR_ARL_SOCK_ACCPT_SOCKALRDY">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The specified client socket is already in use. The client socket must not be created before calling SocketAccept.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Causes>SocketAccept has already been executed for the specified socket. </Causes>
+    <Actions>Close the client socket before using it in the call to SocketAccept, or remove multiple SocketAccept with same client socket.</Actions>
+  </Message>
+  <Message number="1601" eDefine="SYS_ERR_ARL_SOCK_ACCPT_UNEXPT">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unexpected error accepting connection.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Move program pointer to Main and restart program.</Actions>
+  </Message>
+  <Message number="1602" eDefine="SYS_ERR_ARL_SOCK_RECV_UNEXPT">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unexpected error receiving data.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Move program pointer to Main and restart program.</Actions>
+  </Message>
+  <Message number="1603" eDefine="SYS_ERR_ARL_SOCK_SOCK_CREATED">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The socket has already been created.<p />A socket can only be created once and must be closed before it can be created again.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Use another socket or close socket before creating.</Actions>
+  </Message>
+  <Message number="1604" eDefine="SYS_ERR_ARL_SOCK_LISTEN_ALREADY">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The socket is already listening for incoming connections. <p />A socket can only be used once to listen for incoming connections.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Causes>Multiple use of SocketListen with same socket.</Causes>
+    <Actions>Use another socket or close socket before using it again.</Actions>
+  </Message>
+  <Message number="1605" eDefine="SYS_ERR_ARL_SOCK_SOCK_INVALID">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The socket is not valid anymore.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Consequences>The program execution is immediately halted.</Consequences>
+    <Causes>The socket used is not valid.<p />The <arg format="%s" ordinal="4" /> has probably been copied with instruction <arg format="%s" ordinal="3" />. Then the original <arg format="%s" ordinal="4" /> has been closed with <arg format="%s" ordinal="5" />. If using the copied <arg format="%s" ordinal="4" /> you will have this problem.</Causes>
+    <Actions>Use socket instructions when handling data types of <arg format="%s" ordinal="4" />.</Actions>
+  </Message>
+  <Message number="1611" eDefine="SYS_ERR_ARL_UI_NOACTION">
+    <Title>UIMsgBox - No user or program action defined</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The instruction UIMsgBox or function UIMessageBox has no user or <p />program action defined.<p />None of the option arguments \Buttons, \BtnArray,\MaxTime, \DIBreak or<p />\DOBreak are used.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Consequences>The RAPID program will be executed for ever.</Consequences>
+    <Actions>Use one or several of the arguments \Buttons, \BtnArray, \MaxTime,<p />\DIBreak or \DObreak.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1612" eDefine="SYS_ERR_ARL_UI_MAXMIN">
+    <Title>MinValue greater than MaxValue</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />In function <arg format="%s" ordinal="4" />, the argument \MinValue is greater<p />than \MaxValue.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Consequences>Not possible to continue the program execution.</Consequences>
+    <Actions>Change the RAPID program so argument \MaxValue is greater than \MinValue.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1613" eDefine="SYS_ERR_ARL_UI_INITVALUE">
+    <Title>InitValue not within specified value range</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />In function <arg format="%s" ordinal="4" />, the argument \InitValue is not<p />specified within the range \MaxValue ... \MinValue.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Consequences>Not possible to continue the program execution.</Consequences>
+    <Actions>Change the argument \InitValue so it's inside the value range.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1614" eDefine="SYS_ERR_ARL_UI_INITNOTINT">
+    <Title>InitValue is not an integer</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />In function <arg format="%s" ordinal="4" />, the argument \InitValue is not an integer value as<p />specified in argument \AsInteger.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Consequences>The program execution cannot continue.</Consequences>
+    <Actions>Change the argument \InitValue to an integer.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1615" eDefine="SYS_ERR_ARL_DATAPOS_UNDEF">
+    <Title>Reference Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The datapos <arg format="%s" ordinal="2" /> is undefined.<p />Program Ref. <arg format="%s" ordinal="3" /></Description>
+    <Actions>All datapos is retrieved with the function GetNextSym.</Actions>
+  </Message>
+  <Message number="1616" eDefine="SYS_ERR_ARL_TASKID_UNDEF">
+    <Title>Reference Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The taskid <arg format="%s" ordinal="2" /> is unknown in the system.<p />Program Ref. <arg format="%s" ordinal="3" /></Description>
+    <Actions>Program tasks must be defined in the system parameter and not in the RAPID program. (Taskid can be used as a parameter when declaring a routine).</Actions>
+  </Message>
+  <Message number="1617" eDefine="SYS_ERR_ARL_UI_BUFFER_FULL">
+    <Title>Too intense frequency of Write Instructions</Title>
+    <Description>A high usage frequency of user interface write instructions, such as TPWrite, has forced the program execution to slow down. </Description>
+    <Actions>Decrease the usage frequency of user interface write instructions. Add wait instructions, such as WaitTime, when many write instructions are used in conjunction. </Actions>
+  </Message>
+  <Message number="1618" eDefine="SYS_ERR_ARL_UI_BUTTON">
+    <Title>Argument error buttondata</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The argument Buttons of type buttondata has not allowed value.<p />Only allowed to use the predefined data of type buttondata.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Causes>Buttondata must be:<p />- an integer<p />- have a value within the predefined range</Causes>
+    <Actions>Edit the program.</Actions>
+  </Message>
+  <Message number="1619" eDefine="SYS_ERR_ARL_UI_ICON">
+    <Title>Argument error icondata</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The argument Icon of type icondata has not allowed value.<p />Only allowed to use the predefined data of type icondata.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Causes>Icondata must be:<p />- an integer<p />- have a value within the predefined range.</Causes>
+    <Actions>Edit the program.</Actions>
+  </Message>
+  <Message number="1620" eDefine="SYS_ERR_ARL_SOCK_OVERLOAD">
+    <Title>Socket Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The Socket Messaging subsystem is overloaded.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Causes>This can happen if sockets are created and closed frequently and very rapidly.</Causes>
+    <Actions>Try to rewrite the program in such a way that sockets are reused instead of closed and then recreated.</Actions>
+  </Message>
+  <Message number="1621" eDefine="SYS_ERR_ARL_STORE_PATH_KEEPSYNCH">
+    <Title>StorePath Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruction <arg format="%s" ordinal="2" /> is used with <arg format="%s" ordinal="3" /> switch in one or several tasks together with <arg format="%s" ordinal="2" /> without <arg format="%s" ordinal="3" /> switch.<p />Program Ref. <arg format="%s" ordinal="4" /></Description>
+    <Consequences>The program execution is immediately halted.</Consequences>
+    <Causes>Error in the RAPID programs.</Causes>
+    <Actions>Check that no mix of StorePath and StorePath \KeepSync is used.<p />Change the program.<p />PP must be moved in all tasks before you can continue.<p /><p /></Actions>
+  </Message>
+  <Message number="1622" eDefine="SYS_ERR_ARL_UNEXP_SYNC_INSTR">
+    <Title>Unexpected instruction </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The instruction <arg format="%s" ordinal="2" /> can only be used in between instruction <p /><arg format="%s" ordinal="3" /> and instruction <arg format="%s" ordinal="4" /> (on store path level).<p />Program Ref. <arg format="%s" ordinal="5" /><p /></Description>
+    <Consequences>The program execution is immediately halted.<p /></Consequences>
+    <Causes>Error in the RAPID program.</Causes>
+    <Actions>Check and change the RAPID program.<p />PP must be moved in all tasks before you can continue.<p /><p /></Actions>
+  </Message>
+  <Message number="1623" eDefine="SYS_ERR_ARL_MULTIPLE_SYNC_INSTR">
+    <Title>Faulty use of <arg format="%s" ordinal="2" /></Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruction <arg format="%s" ordinal="2" /> is used multiple times, or the instruction is used when already in synchronized motion mode.<p /><arg format="%s" ordinal="3" /> suspends synchronized coordinated movements.<p /><arg format="%s" ordinal="4" /> resumes synchronized coordinated movements.<p />Program Ref. <arg format="%s" ordinal="5" /></Description>
+    <Consequences>The program execution is immediately halted.<p /><p /></Consequences>
+    <Causes>Error in the RAPID program.</Causes>
+    <Actions>Check and change the RAPID program.<p />PP must be moved in all tasks before you can continue.<p /><p /><p /></Actions>
+  </Message>
+  <Message number="1625" eDefine="SYS_ERR_ARL_UNEXP_SUSP_IN_SYNCH_OFF">
+    <Title>Unexpected <arg format="%s" ordinal="2" /></Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruction <arg format="%s" ordinal="2" /> is used directly after instruction <arg format="%s" ordinal="3" />, or the system is not in synchronized motion mode. <p />A change to independent motion mode cannot be done.<p />Program Ref. <arg format="%s" ordinal="4" /></Description>
+    <Consequences>The program execution is immediately halted.</Consequences>
+    <Causes>Error in the RAPID program.</Causes>
+    <Actions>Check and change the RAPID program.<p />PP must be moved in all tasks before you can continue.<p /><p /></Actions>
+  </Message>
+  <Message number="1626" eDefine="SYS_ERR_ARL_UNEXP_STOREP_KEEPSYNC">
+    <Title>Unexpected <arg format="%s" ordinal="1" /> \<arg format="%s" ordinal="2" /></Title>
+    <Description>Task: <arg format="%s" ordinal="3" /><p />Instruction <arg format="%s" ordinal="1" /> \<arg format="%s" ordinal="2" /> is used in independent motion mode.<p />Program Ref. <arg format="%s" ordinal="4" /></Description>
+    <Consequences>The program execution is immediately halted.</Consequences>
+    <Causes>Error in the RAPID program.</Causes>
+    <Actions>Check and change the RAPID program.<p />PP must be moved in all tasks before you can continue.<p /><p /></Actions>
+  </Message>
+  <Message number="1627" eDefine="SYS_ERR_SYNCH_MODE_NEVER_SYNCHED_BEFORE_RESUME">
+    <Title>Faulty use of <arg format="%s" ordinal="2" /></Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> is used on store path level and system was not in synchronized motion mode before <arg format="%s" ordinal="3" />.<p />Program Ref. <arg format="%s" ordinal="4" /></Description>
+    <Consequences>The program execution is immediately halted.</Consequences>
+    <Causes>Error in the RAPID program.</Causes>
+    <Actions>Check and change the RAPID program.<p />PP must be moved in all tasks before you can continue.</Actions>
+  </Message>
+  <Message number="1630" eDefine="SYS_ERR_ARL_SAME_SYNCHID_WARN">
+    <Title>Unsafe Synchronization</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />To reach safe synchronization functionality, variable <arg format="%s" ordinal="2" /> should be used only one time, not in several <arg format="%s" ordinal="3" /> or <arg format="%s" ordinal="4" /> instructions. <p /><p />Program Ref. <arg format="%s" ordinal="5" /></Description>
+    <Consequences>Program tasks/movements may not always be synchronized.</Consequences>
+    <Causes>Use of <arg format="%s" ordinal="2" /> several times in the same program.</Causes>
+    <Actions>Check and change the RAPID program.</Actions>
+  </Message>
+  <Message number="1631" eDefine="SYS_ERR_ARL_IN_ALL_EVENT_ROUTINES">
+    <Title>Instruction Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The program is executing in an EVENT routine. It is not allowed to execute the current instruction in an EVENT routine with shelf <arg format="%s" ordinal="2" />.<p />Program Ref.<arg format="%s" ordinal="3" /></Description>
+    <Actions>Remove the instruction</Actions>
+  </Message>
+  <Message number="1632" eDefine="SYS_ERR_ARL_NO_USE">
+    <Title>Argument does not exist</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The functionality when using arguments TP_SCREENVIEWER and TP_PROGRAM in instruction TPShow has been removed.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>When the instruction with these arguments is executing nothing will happen.</Consequences>
+    <Actions>Remove the instruction.</Actions>
+  </Message>
+  <Message number="1633" eDefine="SYS_ERR_ARL_ONLY_UNDO">
+    <Title>Can only be used in an UNDO handler</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The instruction <arg format="%s" ordinal="2" /> can only be used in an UNDO handler.<p />Program Ref. <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Program execution will be stopped.</Consequences>
+    <Actions>Use another instruction and/or move this instruction to the UNDO handler.</Actions>
+  </Message>
+  <Message number="1634" eDefine="SYS_ERR_ARL_ILL_TASKNAME">
+    <Title>Unknown Task Name</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The task name <arg format="%s" ordinal="2" /> is unknown in the system.<p />Program Ref. <arg format="%s" ordinal="3" /></Description>
+    <Consequences>It is not possible to execute this instruction with a task name that is not found in the system.</Consequences>
+    <Causes>1. The program task is not defined in the system parameters.<p />2. The task name is wrong spelled.<p /></Causes>
+    <Actions>Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1635" eDefine="SYS_ERR_ARL_UNEXP_SYNC_OFF_IN_OFF">
+    <Title>Unexpected SyncMoveOff</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unexpected SyncMoveOff (SyncID <arg format="%s" ordinal="2" />). The system is already in unsynchronized mode.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>Use of tasklists that are non global can cause this error.</Causes>
+    <Actions>Remove the SyncMoveOff instruction. Every SyncMoveOn must be followed by one SyncMoveOff instruction.<p />Check your tasklists.<p /><p /><p /></Actions>
+  </Message>
+  <Message number="1636" eDefine="SYS_ERR_ARL_UNEXP_SYNC_OFF_FROM_UNSYNC">
+    <Title>Unexpected SyncMoveOff</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unexpected SyncMoveOff (SyncId <arg format="%s" ordinal="2" />) from Task not included in synchronized group.<p />Program Ref.<arg format="%s" ordinal="3" /></Description>
+    <Causes>Use of tasklists that are non global can cause this error.</Causes>
+    <Actions>Remove the SyncMoveOff instruction. Every SyncMoveOn must be followed by one SyncMoveOff instruction.<p />Check your tasklists.</Actions>
+  </Message>
+  <Message number="1637" eDefine="SYS_ERR_ARL_TASK_ACTIVATION_MISMATCH">
+    <Title>Task not active in task selection panel anymore</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The task <arg format="%s" ordinal="2" /> is not active in the task selection panel anymore. <p />The task <arg format="%s" ordinal="2" /> was active in task selection panel at start from main. <p />Because of that not possible to pass this <arg format="%s" ordinal="4" /> instruction. <p />Program Ref. <arg format="%s" ordinal="3" /></Description>
+    <Consequences>The program execution is immediately stopped..</Consequences>
+    <Causes>The task <arg format="%s" ordinal="2" /> has been deactivated in the task selection panel.</Causes>
+    <Actions>1) Activate task <arg format="%s" ordinal="2" /> in the task selection panel.<p />2) To permanent skip task <arg format="%s" ordinal="2" /> for the rest of this cycle run the service routine SkipTaskExec.<p />After that restart the instruction <arg format="%s" ordinal="4" />.</Actions>
+  </Message>
+  <Message number="1638" eDefine="SYS_ERR_ARL_TASK_ADDED_ERROR">
+    <Title>Not allowed task activation</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The task <arg format="%s" ordinal="2" /> is active in the task selection panel. This task was not active in the task selection panel when start from main was done. It is not allowed to add tasks in the task selection panel after start from main.<p />Program Ref. <arg format="%s" ordinal="3" /></Description>
+    <Consequences>The program execution is immediately stopped.</Consequences>
+    <Causes>1) The task <arg format="%s" ordinal="2" /> was not active when start from main was done.<p />2) Deactivation of task <arg format="%s" ordinal="2" /> with service routine <arg format="%s" ordinal="4" />, but not deactivating the task in the task selection panel. <p />3) Activation of task <arg format="%s" ordinal="2" /> that earlier was deactivated in task selection panel and deactivated with service routine <arg format="%s" ordinal="4" />.</Causes>
+    <Actions>Move PP to main to reset tasks used at start from main. Then use the task selection panel to select which tasks that you want to execute.</Actions>
+  </Message>
+  <Message number="1640" eDefine="SYS_ERR_ARL_MOVE_PP_PATH_LEVEL">
+    <Title>Move PP Warning</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Move of program pointer when path is stored may cause problems if moved to a place after the path restore.</Description>
+    <Consequences>Path may unintentionally stay in a stored state.</Consequences>
+    <Causes>Stop of program when having a stored path. Then a PP movement within the program has been done.</Causes>
+    <Actions>Ensure that restore of path is not skipped by moving PP to a RestoPath instruction if necessary.</Actions>
+  </Message>
+  <Message number="1641" eDefine="SYS_ERR_ARL_MOVE_PP_STOP_MOVE">
+    <Title>Move PP Warning</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Move of program pointer when stop motion is active may cause problems if moved to a place after stop motion deactivation.</Description>
+    <Consequences>Restart of motion may be blocked. <p />Program execution may be waiting at motion instructions.<p /></Consequences>
+    <Causes>Stop of program when stop motion is active. Then a PP movement within the program has been done.</Causes>
+    <Actions>Ensure that stop motion deactivation is not skipped.</Actions>
+  </Message>
+  <Message number="1642" eDefine="SYS_ERR_ARL_POW_ARG_RANGE">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> not within range. <p />Program Ref. <arg format="%s" ordinal="3" /></Description>
+    <Actions>
+      <arg format="%s" ordinal="4" /> must be &gt; 0 when <arg format="%s" ordinal="5" /> = 0.</Actions>
+  </Message>
+  <Message number="1643" eDefine="SYS_ERR_ARL_POW_ARG_RANGE2">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> not within range. <p />Program Ref. <arg format="%s" ordinal="3" /></Description>
+    <Actions>
+      <arg format="%s" ordinal="4" /> must be an integer when <arg format="%s" ordinal="5" /> &lt; 0</Actions>
+  </Message>
+  <Message number="1644" eDefine="SYS_ERR_ARL_SQRT_ARG_RANGE">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> not within range. <p />Program Ref. <arg format="%s" ordinal="3" /></Description>
+    <Actions>
+      <arg format="%s" ordinal="4" /> must greater or equal to 0. </Actions>
+  </Message>
+  <Message number="1645" eDefine="SYS_ERR_ARL_PROG_STOP_S">
+    <Title>Program Stopped from RAPID</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Program and movement are stopped with System Stop from RAPID.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Consequences>Due to a programmed System Stop in RAPID both program execution and movements are stopped. The problem causing the stop has preferable been presented in another log.</Consequences>
+    <Actions>Find out why the program has been stopped (maybe in other logs), correct the problem and restart the program.</Actions>
+  </Message>
+  <Message number="1646" eDefine="SYS_ERR_ARL_PROG_STOP_B">
+    <Title>Program Blocked from RAPID</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Program and movement are stopped and blocked with System Stop RAPID Block from RAPID.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Consequences>Due to a programmed System Stop RAPID Block in RAPID both program execution and movements are stopped. The problem causing the stop has preferable been presented in another log.<p /><p />If the robot is performing a circular movement, the robot has to be moved to the beginning of the circular movement before restarting the program. </Consequences>
+    <Actions>Find out why the program has been blocked (maybe in other logs), correct the problem and move program pointer in all Motion tasks before restarting the program.</Actions>
+  </Message>
+  <Message number="1647" eDefine="SYS_ERR_ARL_PROG_STOP_H">
+    <Title>Program Halted from RAPID</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Program and movement are halted with System Halt from RAPID.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Consequences>Due to a programmed System Halt in RAPID both program execution and movements are stopped. The problem causing the stop has preferable been presented in another log.</Consequences>
+    <Actions>Find out why the program has been halted (maybe in other logs), correct the problem and turn motors on before restarting the program.</Actions>
+  </Message>
+  <Message number="1648" eDefine="SYS_ERR_ARL_PATH_REC_NEWMOD">
+    <Title>Execution Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Not allowed to change run mode from forward to backward, from continues to stepwise or vice versa.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Select the original run mode and continue program execution.</Actions>
+  </Message>
+  <Message number="1649" eDefine="SYS_ERR_ARL_INCORRECT_ERRMSG">
+    <Title>Incorrect Error Message</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />At least one of the arguments in the instruction <arg format="%s" ordinal="2" /> exceeds the limitations described in the manual.<p />Program Ref. <arg format="%s" ordinal="3" /></Description>
+    <Causes>The arguments to instruction <arg format="%s" ordinal="4" /> contain limitations both on each string and the total amount of characters used in the instruction. This is described in the manual.</Causes>
+    <Actions>Consult the manual and correct the arguments.</Actions>
+  </Message>
+  <Message number="1650" eDefine="SYS_ERR_ARL_ALREADY_STOPPED">
+    <Title>Task already stopped by another task</Title>
+    <Description>The non Motion task <arg format="%s" ordinal="1" /> has executed a StopMove instruction. No stop action has, however, been taken because the Motion task <arg format="%s" ordinal="2" /> was already stopped by task <arg format="%s" ordinal="3" />.<p />Program Ref. <arg format="%s" ordinal="4" /></Description>
+    <Consequences>The Motion task must be started, with the instruction StartMove, from the task that stopped it or the switch \AllMotionTasks has to be used in StartMove from this task.</Consequences>
+  </Message>
+  <Message number="1651" eDefine="SYS_ERR_ARL_NOT_MOVE_STOPPED">
+    <Title>Ignored StartMove actions for task</Title>
+    <Description>The non Motion task <arg format="%s" ordinal="1" /> has executed a StartMove instruction. The Motion task <arg format="%s" ordinal="2" /> has, however, not been started.<p />Program Ref. <arg format="%s" ordinal="3" /></Description>
+    <Consequences>No movements can be performed if the Motion task has been stopped by another non Motion task.</Consequences>
+    <Causes>1. The Motion task has not been stopped.<p />2. The Motion task was stopped by another non Motion task <arg format="%s" ordinal="4" />.<p />This time the cause was <arg format="%s" ordinal="5" />.</Causes>
+    <Actions>Use the switch \AllMotionTasks in StartMove if this instruction should start a movement that is stopped by another non Motion task.</Actions>
+  </Message>
+  <Message number="1652" eDefine="SYS_ERR_ARL_FORCED_START_MOVE">
+    <Title>Forced StartMove action</Title>
+    <Description>The non Motion task <arg format="%s" ordinal="1" /> has executed a StartMove instruction. The instruction discovered that the Motion task <arg format="%s" ordinal="2" /> has been stopped by this task. That Motion task will be started to prevent inexplicable stopped movements.<p />Program Ref.<arg format="%s" ordinal="3" /></Description>
+    <Causes>1. The Motion task has been stopped with the switch \AllMotionTasks active in the StopMove instruction but not in the StartMove instruction.<p />2. The StopMove instruction has been executed in synchronized mode and the StartMove in independent mode.</Causes>
+  </Message>
+  <Message number="1653" eDefine="SYS_ERR_ARL_WOBJ_INTASK">
+    <Title>Argument error CalcJointT</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />It is not possible to execute the function CalcJointT with argument \UseCurWObjPos, if the coordinated workobject moved by some mechanical unit is located in the same task as the TCP robot or if the workobject is not moved by any mechanical unit at all. <p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Remove the argument \UseCurWObjPos, so can the function CalcJointT be executed and the calculation can be done with data solely from the RAPID program.</Actions>
+  </Message>
+  <Message number="1654" eDefine="SYS_ERR_ARL_WOBJ_MOVING">
+    <Title>Execution error CalcJointT</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />It was not possible to execute the function CalcJointT with argument \UseCurWObjPos, because the mechanical unit <arg format="%s" ordinal="2" /> was moving at the time of execution of CalcJointT.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Function CalcJointT with argument \UseCurWObjPos can only be executed without error, if the coordinated workobject moved by another task is standing still.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1655" eDefine="SYS_ERR_ARL_NOT_IN_NON_MOTION">
+    <Title>Argument not a Motion task</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The function/instruction <arg format="%s" ordinal="5" /> has been used with an argument that refer to a task, <arg format="%s" ordinal="2" />. That task is not a Motion task (controlling mechanical units) and can therefore not be used.<p />Program Ref. <arg format="%s" ordinal="3" /></Description>
+    <Causes>
+      <arg format="%s" ordinal="5" /> with argument \TaskRef or \TaskName can only be used without errors if the task that the arguments refer to is a Motion task.</Causes>
+    <Actions>Change the argument \TaskRef or \TaskName or remove it and restart the program execution.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1656" eDefine="SYS_ERR_ARL_NOT_ALLOW_REAL_ARLNUM_VAL">
+    <Title>Not allowed value</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Illegal value in argument <arg format="%s" ordinal="2" />.<p /><p />Program ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check and change the value. It must be between <arg format="%s" ordinal="4" /> and <arg format="%s" ordinal="5" />.</Actions>
+  </Message>
+  <Message number="1657" eDefine="SYS_ERR_ARL_FILE_NOACC_ISFILE">
+    <Title>File Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Could not access the file/device <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Causes>- The path or filename is wrong.<p />- The maximum number of simultaneously opened files is exceeded.<p />- The disk is full.<p />- Function does not support check of selected device.</Causes>
+    <Actions>- Check the path or filename.<p />- Check the disk space.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1658" eDefine="SYS_ERR_ARL_STOPMOVE_STATE">
+    <Title>Program task is in StopMove state</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />No movement will be performed in this Motion task, because the task is currently set in StopMove state ordered by some non Motion task.<p /></Description>
+    <Consequences>Not possible to start any movements.</Consequences>
+    <Causes>Some non Motion task connected to this Motion task has set the task in StopMove state.</Causes>
+    <Actions>To perform movements in this Motion task, the StopMove state must be reset by the responsible non Motion task with one of the following actions:<p />1) Execute StartMove<p />2) Start the non Motion task from main<p />a) Do power off-on if semi static non Motion task<p />b) Do installation start if static non Motion task<p />c) Set PP to main if normal non Motion task</Actions>
+  </Message>
+  <Message number="1660" eDefine="SYS_ERR_ARL_UISHOW_FULL">
+    <Title>No space left for the new view</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Maximum number of views has been exceeded.<p />There is no space left on the FlexPendant for the new view. <p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Consequences>The view will not be launched.</Consequences>
+    <Causes>Too many open views.</Causes>
+    <Actions>Close one view and try again.<p />Recovery: <arg format="%s" ordinal="3" /><p /></Actions>
+  </Message>
+  <Message number="1661" eDefine="SYS_ERR_ARL_UISHOW_FOUND">
+    <Title>Assembly could not be found</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />1) The assembly could not be found, or does not exist.<p />2) The FlexPendant Interface option is missing.<p />Status <arg format="%s" ordinal="2" />.<p />Program Ref.<arg format="%s" ordinal="3" /></Description>
+    <Consequences>The view will not be launched.<p /><p /></Consequences>
+    <Causes>1) The assembly <arg format="%s" ordinal="4" /> could not be found.<p />2) The system image does not include the required option FlexPendant Interface.<p /></Causes>
+    <Actions>1) Check inparameters. Make sure that the modules been loaded correctly<p />to the robot controller. <p />2) Check that FlexPendant Interface option is used.<p />Recovery: <arg format="%s" ordinal="5" /><p /><p /><p /></Actions>
+  </Message>
+  <Message number="1662" eDefine="SYS_ERR_ARL_UISHOW_LOAD">
+    <Title>Assembly could not be loaded</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The assembly was found but could not be loaded.<p />Status <arg format="%s" ordinal="2" />.<p />Program Ref.<arg format="%s" ordinal="3" /></Description>
+    <Consequences>The view will not be launched.<p /></Consequences>
+    <Actions>Make sure that the loaded modules are executable files for the FlexPendant.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1663" eDefine="SYS_ERR_ARL_UISHOW_INST">
+    <Title>Instance could not be created</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The assembly exist but no new instance could be created.<p />Status <arg format="%s" ordinal="2" />.<p />Program Ref.<arg format="%s" ordinal="3" /></Description>
+    <Consequences>The view will not be launched.</Consequences>
+    <Actions>Make sure that the loaded modules are executable files for the FlexPendant.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1664" eDefine="SYS_ERR_ARL_UISHOW_TYPE">
+    <Title>The typename is invalid for this assembly</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The inparameter <arg format="%s" ordinal="2" /> is invalid. The typename does not match the assembly.<p />Status <arg format="%s" ordinal="3" />.<p />Program Ref <arg format="%s" ordinal="4" />.</Description>
+    <Consequences>The view will not be launched.<p /><p /></Consequences>
+    <Actions>Check the inparameters.<p />Recovery: <arg format="%s" ordinal="5" /><p /></Actions>
+  </Message>
+  <Message number="1665" eDefine="SYS_ERR_ARL_UISHOW_ID">
+    <Title>
+      <arg format="%s" ordinal="1" /> does not match assembly to load</Title>
+    <Description>Task: <arg format="%s" ordinal="2" /><p />The type or name of the assembly does not match with the used <arg format="%s" ordinal="1" />.<p />Status <arg format="%s" ordinal="3" />.<p />Program Ref <arg format="%s" ordinal="4" />.</Description>
+    <Consequences>The view will not be launched.<p /></Consequences>
+    <Causes>Use of <arg format="%s" ordinal="1" /> without setting it to 0 first. </Causes>
+    <Actions>Set <arg format="%s" ordinal="1" /> to 0 before using it.<p />Recovery: <arg format="%s" ordinal="5" /><p /></Actions>
+  </Message>
+  <Message number="1666" eDefine="SYS_ERR_ARL_UISHOW_FATAL">
+    <Title>Fatal UIShow error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unknown error code <arg format="%s" ordinal="2" /> received.<p />Program Ref. <arg format="%s" ordinal="3" /></Description>
+    <Consequences>The program execution is immediately stopped.<p /></Consequences>
+    <Actions>Report this to ABB Robotics.</Actions>
+  </Message>
+  <Message number="1667" eDefine="SYS_ERR_ARL_UI_INT_FATAL">
+    <Title>Fatal UI error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruction or function used with switch <arg format="%s" ordinal="2" /> and without optional argument <arg format="%s" ordinal="3" />. <p />Program Ref. <arg format="%s" ordinal="4" /></Description>
+    <Consequences>The program execution is immediately stopped.<p /></Consequences>
+    <Causes>An illegal combination of optional arguments and switches was used.</Causes>
+    <Actions>Correct the RAPID program.</Actions>
+  </Message>
+  <Message number="1670" eDefine="SYS_ERR_ARL_ANYTYPE_NO_ARR">
+    <Title>Entire Array Not Allowed As Argument</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The argument <arg format="%s" ordinal="2" /> is of data type any type and can for that reason only be checked during runtime.<p />An entire array cannot be used as argument even if the array is of right data type.<p />Program ref. <arg format="%s" ordinal="3" /></Description>
+    <Consequences>The program execution is immediately stopped.</Consequences>
+    <Actions>Replace the array with a valid argument.</Actions>
+  </Message>
+  <Message number="1671" eDefine="SYS_ERR_ARL_POLLRATE_HIGH">
+    <Title>Too high poll rate</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The specified poll rate is too high for the robot system.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Consequences>The system can be overloaded.</Consequences>
+    <Actions>Change instruction WaitUntil, argument \PollRate to a value greater than or<p />equal to 0.01 s.</Actions>
+  </Message>
+  <Message number="1672" eDefine="SYS_ERR_ARL_NOT_ALLOWED_COMB">
+    <Title>Invalid Combination</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Invalid combination of parameters in Trigg<p />Program Ref: <arg format="%s" ordinal="2" /></Description>
+    <Actions>Either run Trigg without \Time optional argument, or use TriggRampAO with optional argument \Time to specify that the RampLength is seconds instead of distance.</Actions>
+  </Message>
+  <Message number="1673" eDefine="SYS_ERR_ARL_INDX_OUTOFBOUNDS">
+    <Title>Index Out Of Bounds</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Index for cfg instance was out of bounds<p />Program Ref: <arg format="%s" ordinal="2" /></Description>
+    <Actions>Check and change the RAPID program.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1674" eDefine="SYS_ERR_SPEED_REFRESH_LIM">
+    <Title>Value Out Of Bounds</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Parameter <arg format="%s" ordinal="2" /> is not between the range of 0 to 100.<p />Program Ref: <arg format="%s" ordinal="3" /></Description>
+    <Actions>Check and change the RAPID program.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1675" eDefine="SYS_ERR_ARL_INT_INVALID">
+    <Title>Not Integer</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Parameter <arg format="%s" ordinal="2" /> is not an integer.<p />Program Ref: <arg format="%s" ordinal="3" /></Description>
+    <Actions>Check the RAPID program, or use ERROR handler<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1676" eDefine="SYS_ERR_ARL_IO_NOTFND">
+    <Title>Device access error</Title>
+    <Description>Task:<arg format="%s" ordinal="1" /><p />Unable to open File or Serial channel, '<arg format="%s" ordinal="2" />' does not exist.<p />Program Ref: <arg format="%s" ordinal="3" /></Description>
+    <Actions>Check file or serial channel name.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1677" eDefine="SYS_ERR_ARL_IO_FULL">
+    <Title>Device access error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unable to write to file: <arg format="%s" ordinal="2" />, the disc is full.<p />Program Ref: <arg format="%s" ordinal="3" /></Description>
+    <Actions>Make sure there are enough free space on the disc.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1678" eDefine="SYS_ERR_ARL_IO_WPROT">
+    <Title>Device access error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unable to write to file : <arg format="%s" ordinal="2" />, The file is write protected.<p />Program Ref:<arg format="%s" ordinal="3" /></Description>
+    <Actions>Remove the write protection of the file or select a different filename.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1679" eDefine="SYS_ERR_ARL_IO_MAXDESC">
+    <Title>Device access error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The maximum number of simultaneously opened files is exceeded.<p />Program Ref: <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Close one or more I/O devices and try again<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1680" eDefine="SYS_ERR_ARL_NOTSYMBOL">
+    <Title>String too long</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The string <arg format="%s" ordinal="2" /> exceeds the maximum number of characters allowed for a module.<p />Program Ref: <arg format="%s" ordinal="3" /></Description>
+    <Actions>Change the string for module name.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1682" eDefine="SYS_ERR_ARL_MAXIOEVENTS">
+    <Title>Too many subscriptions from I/O</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The number of simultaneous subscriptions on signal events has been exceeded.<p />Program Ref: <arg format="%s" ordinal="2" /></Description>
+    <Actions>Remove some subscriptions on signals or change the time for the event.<p />(i.e any ISignalXX or TriggIO)</Actions>
+  </Message>
+  <Message number="1683" eDefine="SYS_ERR_ARL_NOLISTNO">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The argument <arg format="%s" ordinal="2" /> must be given when searching for a not named parameter.<p />Program Ref: <arg format="%s" ordinal="3" /></Description>
+    <Actions>Add the parameter <arg format="%s" ordinal="2" /> to the instruction.</Actions>
+  </Message>
+  <Message number="1684" eDefine="SYS_ERR_ARL_MAXULONG">
+    <Title>Value Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The argument <arg format="%s" ordinal="2" /> is outside the range of value type unsigned long.<p />Program Ref: <arg format="%s" ordinal="3" /></Description>
+    <Causes>The value is too large.</Causes>
+    <Actions>Use a smaller value for <arg format="%s" ordinal="2" /></Actions>
+  </Message>
+  <Message number="1685" eDefine="SYS_ERR_ARL_ARG_COMB_NOT_VALID">
+    <Title>Not valid value</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />A wrong combination of switch and value is used.<p />The signal can have values between:<p />Min: <arg format="%s" ordinal="2" /><p />Max: <arg format="%s" ordinal="3" /><p />Switch and value used: <arg format="%s" ordinal="4" /><p />Program Ref. <arg format="%s" ordinal="5" /><p /></Description>
+    <Consequences>The program execution is immediately stopped.</Consequences>
+    <Causes>Wrong value used, or wrong switch used.</Causes>
+    <Actions>Change the value used, or change the switch argument.</Actions>
+  </Message>
+  <Message number="1687" eDefine="SYS_ERR_ARL_OPEN_ERR">
+    <Title>File Open Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unable to open <arg format="%s" ordinal="2" /><p />Program Ref: <arg format="%s" ordinal="3" /><p />An unknown error occurred while opening the file.</Description>
+    <Causes>- If the file was located on an USB disk, check that the disk is not removed, or has to many files in root folder.<p />- Check that the given file is not a directory<p /></Causes>
+    <Actions>Do a check of Probable Causes.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1688" eDefine="SYS_ERR_ARL_USE_OF_PERS">
+    <Title>Invalid Argument</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Inparameter <arg format="%s" ordinal="2" /> is declared as a PERS. <p />Program Ref: <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>The program execution is immediately stopped.<p /></Consequences>
+    <Causes>Using a PERS in argument <arg format="%s" ordinal="2" /> to instruction <arg format="%s" ordinal="4" />.</Causes>
+    <Actions>Replace the PERS with a valid argument.</Actions>
+  </Message>
+  <Message number="1690" eDefine="SYS_ERR_ARL_RLMQ_IMPROPER_TYPE">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The argument <arg format="%s" ordinal="2" /> is of the type <arg format="%s" ordinal="3" /> and is not valid to use.<p />Program Ref. <arg format="%s" ordinal="4" /></Description>
+    <Consequences>The program execution is immediately stopped.<p /></Consequences>
+    <Actions>Check the data type. Non-value, semi-value types or motsetdata data type cannot be used.</Actions>
+  </Message>
+  <Message number="1691" eDefine="SYS_ERR_ARL_RLMQ_INV_SLOT_NAME">
+    <Title>RMQ Error - Client name not valid</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The name <arg format="%s" ordinal="2" /> cannot be found. It is not a valid RMQ client name.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>A non valid name is used.</Causes>
+    <Actions>Change name to search for.<p />Recovery: <arg format="%s" ordinal="4" /><p /></Actions>
+  </Message>
+  <Message number="1692" eDefine="SYS_ERR_ARL_RLMQ_INV_SLOT">
+    <Title>RMQ Error - Not valid Slot</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The <arg format="%s" ordinal="2" /> used is not valid.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>Communication with client with current <arg format="%s" ordinal="2" /> is no longer possible.</Consequences>
+    <Causes>1) The <arg format="%s" ordinal="2" /> has not been initialized. <p />2) The destination slot is not valid anymore. This can happen if a remote client has disconnected from the controller.<p />3) Instruction RMQSendWait was restarted after a power fail. When the instruction is restarted, the <arg format="%s" ordinal="2" /> is set to 0. </Causes>
+    <Actions>Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1693" eDefine="SYS_ERR_ARL_RLMQ_IPC_MSGSIZE">
+    <Title>RMQ Error - Max size for message exceeded</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The size of the data in <arg format="%s" ordinal="2" /> exceeds maximum size. <p />Program Ref. <arg format="%s" ordinal="3" /></Description>
+    <Consequences>The message will not be sent.</Consequences>
+    <Causes>Trying to send larger messages then <arg format="%s" ordinal="4" />. Due to limitations in RMQ, such big messages cannot be sent.<p /></Causes>
+    <Actions>Send smaller messages.<p />Recovery: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1694" eDefine="SYS_ERR_ARL_RLMQ_INV_TYPE">
+    <Title>RMQ Error - Not equal data types</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The data type in the rmqmessage is of the type <arg format="%s" ordinal="2" /> and the data type in argument Data is of the type <arg format="%s" ordinal="3" />.<p />Program Ref. <arg format="%s" ordinal="4" />.</Description>
+    <Consequences>No data can be fetched.</Consequences>
+    <Causes>1) The data type in the rmqmessage is of type <arg format="%s" ordinal="2" /> and the data type used in argument Data is of type <arg format="%s" ordinal="3" />. <p />2) If the data types has equal names, the structure of the data can be different.</Causes>
+    <Actions>1) Use data type <arg format="%s" ordinal="2" /> in argument Data. <p />2) Check that the data types are equal defined in both sender and receiver code.<p />Recovery: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1695" eDefine="SYS_ERR_ARL_RLMQ_INV_DIM">
+    <Title>RMQ Error - Not equal dimensions on data</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The data types are equal, but the dimensions differs between the data in the message and the parameter used in argument <arg format="%s" ordinal="2" /><p />Program Ref. <arg format="%s" ordinal="3" /></Description>
+    <Consequences>The data could not be copied.</Consequences>
+    <Actions>Use a parameter in argument <arg format="%s" ordinal="2" /> with equal dimensions as the data in the message.<p />Recovery: <arg format="%s" ordinal="4" /><p /></Actions>
+  </Message>
+  <Message number="1696" eDefine="SYS_ERR_ARL_RLMQ_ERR_EXEC_LEV">
+    <Title>RMQ Error - Not valid use of instruction</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The instruction <arg format="%s" ordinal="2" /> is only supported on TRAP level.<p />Program Ref. <arg format="%s" ordinal="3" /></Description>
+    <Consequences>The program execution is immediately stopped.</Consequences>
+    <Causes>Instruction <arg format="%s" ordinal="2" /> is used either on user execution level or normal execution level.</Causes>
+    <Actions>Remove instruction, or move it to a TRAP routine.</Actions>
+  </Message>
+  <Message number="1697" eDefine="SYS_ERR_ARL_RLMQ_NO_RMQ">
+    <Title>RMQ Error - No RMQ configured</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />No RMQ is configured for task <arg format="%s" ordinal="1" />.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Consequences>The program execution is immediately stopped.</Consequences>
+    <Causes>No configuration has been added for the RAPID Message Queue.</Causes>
+    <Actions>Add configuration for the RAPID Message Queue.</Actions>
+  </Message>
+  <Message number="1698" eDefine="SYS_ERR_ARL_RLMQ_SENDWAIT_ERR">
+    <Title>RMQ Error - Faulty use of instruction</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruction <arg format="%s" ordinal="2" /> can only be used on normal level, not in a TRAP routine or service routine.<p />Program Ref. <arg format="%s" ordinal="3" /></Description>
+    <Consequences>The program execution is immediately stopped.</Consequences>
+    <Causes>Instruction <arg format="%s" ordinal="2" /> used on wrong level.</Causes>
+    <Actions>Use instruction on normal level.</Actions>
+  </Message>
+  <Message number="1699" eDefine="SYS_ERR_ARL_RLMQ_MSGSIZE">
+    <Title>RMQ Error - Max size for message exceeded</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The size of the data in <arg format="%s" ordinal="2" /> exceeds maximum size. <p />Program Ref. <arg format="%s" ordinal="3" /></Description>
+    <Consequences>The message will not be sent.</Consequences>
+    <Causes>Trying to send larger messages then allowed. The receiving client is not configured to receive the size of the message sent.</Causes>
+    <Actions>Change the size of the RMQ for the receiver, or send smaller messages.<p />Recovery:<arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1700" eDefine="SYS_ERR_ARL_RLMQ_INOINUSE">
+    <Title>RMQ Error - Interrupt setup failed</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Two different interrupt identities cannot be used for the same data type in instruction <arg format="%s" ordinal="2" />. Each data type need a unique interrupt identity and unique TRAP routine.<p />Program Ref. <arg format="%s" ordinal="3" /></Description>
+    <Consequences>The program execution is immediately stopped.<p /></Consequences>
+    <Causes>Same data type is used in two <arg format="%s" ordinal="2" /> instructions with two different interrupt identities.<p /></Causes>
+    <Actions>An unique interrupt identity is needed for each data type when order and enable interrupts for a specific data type.<p /><p /></Actions>
+  </Message>
+  <Message number="1701" eDefine="SYS_ERR_ARL_RLMQ_NOMSG">
+    <Title>RMQ Error - No message to collect</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruction <arg format="%s" ordinal="2" /> failed. There was no message to collect.<p />Program Ref. <arg format="%s" ordinal="3" /></Description>
+    <Consequences>No message was collected.</Consequences>
+    <Causes>1) This can happen if the power fail occur between the trap was ordered and the instruction <arg format="%s" ordinal="2" /> was executed.<p />2) If multiple use of <arg format="%s" ordinal="2" /> in a TRAP routine.<p />3) If using <arg format="%s" ordinal="2" /> in a TRAP routine that execute without any new message in the RMQ.<p /><p /></Causes>
+    <Actions>Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+</Domain>

@@ -1,0 +1,55 @@
+77::
+0:
+Class rlsc
+1:
+string
+2:
+ANYTYPE#
+3:
+ToNode
+4:
+Variable
+5:
+SCWrite
+6:
+errnum
+7:
+Failed to send
+8:
+to node
+9:
+to all nodes
+10:
+visiondata
+11:
+bool
+12:
+num
+13:
+robtarget
+14:
+vd_ready
+15:
+vd_error
+16:
+vd_count
+17:
+vd_data1
+18:
+vd_data2
+19:
+vd_data3
+20:
+vd_data4
+21:
+vd_model
+22:
+vd_pos
+
+errnum
+23:
+is not defined
+24:
+The node
+
+

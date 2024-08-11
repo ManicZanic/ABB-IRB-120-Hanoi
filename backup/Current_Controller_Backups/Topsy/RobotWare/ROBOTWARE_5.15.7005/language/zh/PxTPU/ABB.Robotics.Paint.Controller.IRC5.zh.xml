@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.Controller.IRC5">
+  <Strings>
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.CoordinateSystem.Base" Text="基准" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.CoordinateSystem.World" Text="大地" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.CoordinateSystem.Tool" Text="工具" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.CoordinateSystem.Workobject" Text="工件" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.IncrementalSize.None" Text="无" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.IncrementalSize.Small" Text="小" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.IncrementalSize.Medium" Text="中" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.IncrementalSize.Large" Text="大" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.IncrementalSize.User" Text="用户" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Rapid.ExecutionState.Unknown" Text="未知" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Rapid.ExecutionState.Ready" Text="准备" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Rapid.ExecutionState.Stopped" Text="停止" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Rapid.ExecutionState.Running" Text="运行中" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Rapid.ExecutionState.UnInitiated" Text="未初始化" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Rapid.SymbolType.Variable" Text="变量" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Rapid.SymbolType.Constant" Text="常量" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Rapid.SymbolType.Persistent" Text="永久变量" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.ControllerState.EmergencyStop" Text="紧急停止" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.ControllerState.NotAcknowledged" Text="未获知的" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.ControllerState.GuardStop" Text="防护停止" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.ControllerState.MotorsOff" Text="马达断电" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.ControllerState.MotorsOn" Text="马达上电" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.ControllerState.Init" Text="初始中" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.ControllerState.SysFail" Text="系统失败" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.ControllerState.Unknown" Text="未知" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.RobMechUnitStatus.Initiated" Text="已初始化" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.RobMechUnitStatus.Locked" Text="锁定的" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.RobMechUnitStatus.LockedShow" Text="锁定的" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.RobMechUnitStatus.NotAMSSynchronized" Text="转数计数器未更新" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.RobMechUnitStatus.NotSMSSynchronized" Text="转数计数器未更新" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.RobMechUnitStatus.NotCalibrated" Text="未校准" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.RobMechUnitStatus.NotCommutated" Text="未整流" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.RobMechUnitStatus.Synchronized" Text="已校准" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.RobMechUnitStatus.Undefined" Text="未定义" />
+  </Strings>
+</Resources>

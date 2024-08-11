@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.TPU.Screens.Robot.Diagnosis">
+  <Forms>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Robot.Diagnosis.TpuWndRobot" Text="系统状态" Width="320" Height="192">
+      <Menu ref="menuWndIO" />
+      <Controls>
+        <Control ID="rtRobotState" Text="机器人状态" Name="ABB.Robotics.Paint.TPU.Controls.TpuRectangle" Left="4" Top="4" Width="313" Height="185" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Robot.Diagnosis.TpuWndSaveDiag" Text="诊断" Width="320" Height="192">
+      <Menu ref="menuTpuWndSaveDiag" />
+      <Controls>
+        <Control ID="pbImage" Text="tpuPictureBox1" Name="ABB.Robotics.Paint.TPU.Controls.TpuPictureBox" Left="12" Top="83" Width="64" Height="64" />
+        <Control ID="lblFolder" Text="文件夹：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="91" Top="109" Width="226" Height="20" />
+        <Control ID="lblInformation" Text="您的系统的当然状态信息将被采集并保存到控制器当中" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="3" Top="3" Width="314" Height="48" />
+        <Control ID="lblFileName" Text="文件名：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="91" Top="57" Width="226" Height="20" />
+      </Controls>
+    </Form>
+  </Forms>
+  <Menus>
+    <Menu ID="menuWndIO">
+      <MenuItem ID="SaveDiagnostics" Text="保存诊断" />
+    </Menu>
+    <Menu ID="menuTpuWndSaveDiag">
+      <MenuItem ID="Save" Text="保存" />
+    </Menu>
+  </Menus>
+  <Strings>
+    <String ID="Ok" Text="OK" />
+    <String ID="Warning" Text="警告" />
+    <String ID="Error" Text="错误" />
+    <String ID="EmyStopNotAcknowledged" Text="紧急停止未被获知" />
+    <String ID="CreatingSystemDiagnostics" Text="保存系统诊断" />
+    <String ID="SavingSystemDiagnostics" Text="保存'{0}'..." />
+    <String ID="SystemDiagnosticsFinished" Text="系统诊断已保存" />
+    <String ID="SystemDiagnosticsFailed" Text="保存系统诊断失败" />
+    <String ID="Robot" Text="机器人" />
+    <String ID="IOSystem" Text="IO系统" />
+    <String ID="Rapid" Text="Rapid" />
+    <String ID="Motion" Text="动作" />
+    <String ID="Task" Text="任务" />
+    <String ID="MechanicalUnit" Text="机械单元" />
+    <String ID="IOBus" Text="IO总线" />
+    <String ID="WrongStateMessage" Text="'{0}''{1}'在'{2}'状态中 期望的状态是'{3}'" />
+    <String ID="Path" Text="路径" />
+  </Strings>
+</Resources>

@@ -1,0 +1,522 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="OPR" domainNo="1" lang="zh" elogTextVersion="1.0" min="175" max="1229">
+  <Message number="175" eDefine="SYS_ERR_OPR_BGRND_REFSTART_SYNTAX">
+    <Title>后台任务 <arg format="%s" ordinal="1" /></Title>
+    <Description>由于语法错误而拒绝启动。</Description>
+  </Message>
+  <Message number="176" eDefine="SYS_ERR_OPR_BGRND_REFSTART_UNDEF">
+    <Title>后台任务 <arg format="%s" ordinal="1" /></Title>
+    <Description>拒绝启动。无法加载模块。</Description>
+    <Causes>目标目录中的模块文件丢失。</Causes>
+    <Actions>1. 将模块文件复制到目标目录。<p />2. 执行 I-START 。</Actions>
+  </Message>
+  <Message number="177" eDefine="SYS_ERR_OPR_BGRND_REFSTART_NOMEM">
+    <Title>任务拒绝启动</Title>
+    <Description>任务 <arg format="%s" ordinal="1" />：<p />程序内存不足，或程序内存破损。可能是模块丢失或数据未安装。</Description>
+    <Actions>1. 卸载/重新加载模块并热启动。<p />2. 拆分大的数据结构。<p />3. P-启动系统。<p />4. 增加任务的堆栈大小。</Actions>
+  </Message>
+  <Message number="178" eDefine="SYS_ERR_OPR_BGRND_STEP_NOT_ALLOWED">
+    <Title>无法逐步执行静态/半静态任务。</Title>
+    <Description>任务 <arg format="%s" ordinal="1" /> 无法开始。<p />静态/半静态任务只能在连续模式下运行。</Description>
+    <Consequences>不会开始任何任务。</Consequences>
+    <Causes>尝试执行（前进或后退）静态/半静态任务。</Causes>
+    <Actions>在连续模式下开始 <arg format="%s" ordinal="1" /> 。</Actions>
+  </Message>
+  <Message number="185" eDefine="SYS_ERR_OPR_PREP_TASK_NOMEM">
+    <Title>任务未准备就绪，无法启动</Title>
+    <Description>任务 <arg format="%s" ordinal="1" />：<p />程序内存不足，或程序内存破损。可能是模块丢失或未安装数据。</Description>
+    <Actions>1. 卸载/重新加载模块并热启动。<p />2. 拆分大的数据结构。<p />3. P-启动系统。<p /></Actions>
+  </Message>
+  <Message number="190" eDefine="SYS_ERR_OPR_PROT_AREA_HEAL">
+    <Title>保护区域未完成</Title>
+    <Description>任务 <arg format="%s" ordinal="2" />的某个保护区域中间出现电源故障。系统正尝试自修复。</Description>
+  </Message>
+  <Message number="191" eDefine="SYS_ERR_OPR_PROT_AREA_PEND_ERR">
+    <Title>保护区域未完成</Title>
+    <Description>任务 <arg format="%s" ordinal="2" />的某个保护区域中间出现电源故障。已从队列中移除暂挂错误。</Description>
+  </Message>
+  <Message number="192" eDefine="SYS_ERR_OPR_PROT_AREA_PEND_EXIT">
+    <Title>保护区域未完成</Title>
+    <Description>任务 <arg format="%s" ordinal="2" />的某个保护区域中间出现电源故障。已从队列中移除暂挂退出。</Description>
+  </Message>
+  <Message number="193" eDefine="SYS_ERR_OPR_PROT_AREA_CYCLE">
+    <Title>保护区域未完成</Title>
+    <Description>任务 <arg format="%s" ordinal="2" />的某个保护区域中间出现电源故障。这可能导致额外的程序循环。</Description>
+  </Message>
+  <Message number="194" eDefine="SYS_ERR_OPR_PROT_AREA_RESTART">
+    <Title>保护区域未完成</Title>
+    <Description>任务 <arg format="%s" ordinal="2" />的某个保护区域中间出现电源故障。任务将从主例行程序重新启动。</Description>
+  </Message>
+  <Message number="195" eDefine="SYS_ERR_OPR_PROT_AREA_RESET">
+    <Title>保护区域未完成</Title>
+    <Description>任务 <arg format="%s" ordinal="2" />的某个保护区域中间出现电源故障。已重置所有任务，所有用户程序已丢失。</Description>
+    <Actions>尝试保存用户程序，并执行系统热启动</Actions>
+  </Message>
+  <Message number="196" eDefine="SYS_ERR_OPR_PROT_AREA_UNDEF">
+    <Title>保护区域未完成</Title>
+    <Description>任务 <arg format="%s" ordinal="2" />的某个保护区域中间出现电源故障。 </Description>
+  </Message>
+  <Message number="210" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_POW_ON">
+    <Title>执行已取消</Title>
+    <Description>重新启动会取消任务 <arg format="%.16s" ordinal="2" /> 中 POWER ON（电源开启）系统事件例行程序的执行。</Description>
+  </Message>
+  <Message number="211" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_STOP">
+    <Title>执行已取消</Title>
+    <Description>重新启动会取消任务 <arg format="%.16s" ordinal="2" /> 中 STOP（停止）系统事件例行程序的执行。</Description>
+  </Message>
+  <Message number="212" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_ESTOP">
+    <Title>执行已取消</Title>
+    <Description>重新启动会取消任务 <arg format="%.16s" ordinal="2" /> 中 EMERGENCY STOP（紧急停止）系统事件例行程序的执行。</Description>
+  </Message>
+  <Message number="213" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_START">
+    <Title>执行已取消</Title>
+    <Description>重新启动会取消任务 <arg format="%.16s" ordinal="2" /> 中 START（启动）系统事件例行程序的执行。</Description>
+  </Message>
+  <Message number="214" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_RESTART">
+    <Title>执行已取消</Title>
+    <Description>重新启动会取消任务 <arg format="%.16s" ordinal="2" /> 中 RESTART（重新启动）系统事件例行程序的执行。</Description>
+  </Message>
+  <Message number="215" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_RESET">
+    <Title>执行已取消</Title>
+    <Description>重新启动会取消任务 <arg format="%.16s" ordinal="2" /> 中 RESET（重置）系统事件例行程序的执行。</Description>
+  </Message>
+  <Message number="216" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_INTERNAL">
+    <Title>执行已取消</Title>
+    <Description>重新启动会取消任务 <arg format="%.16s" ordinal="2" /> 中 INTERNAL（内部）系统事件例行程序的执行。</Description>
+  </Message>
+  <Message number="217" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_USER">
+    <Title>执行已取消</Title>
+    <Description>重新启动会取消任务 <arg format="%.16s" ordinal="2" /> 中 USER（用户）系统事件例行程序的执行。</Description>
+  </Message>
+  <Message number="218" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_UNDEF">
+    <Title>执行已取消</Title>
+    <Description>重新启动会取消任务 <arg format="%.16s" ordinal="2" />中的执行任务。 </Description>
+  </Message>
+  <Message number="219" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_STEP">
+    <Title>执行被取消</Title>
+    <Description>	重新启动会取消执行 STEP 系统事件例程的任务 <arg format="%.16s" ordinal="2" />。</Description>
+    <Actions />
+  </Message>
+  <Message number="230" eDefine="SYS_ERR_OPR_BACKUP_STEP_PREP">
+    <Title>备份步骤就绪</Title>
+    <Description>备份步骤 Prepare 已就绪。</Description>
+  </Message>
+  <Message number="231" eDefine="SYS_ERR_OPR_BACKUP_STEP_CONF">
+    <Title>备份步骤就绪</Title>
+    <Description>备份步骤 Configuration 已就绪。</Description>
+  </Message>
+  <Message number="232" eDefine="SYS_ERR_OPR_BACKUP_STEP_TASK">
+    <Title>备份步骤就绪</Title>
+    <Description>任务备份就绪。</Description>
+  </Message>
+  <Message number="250" eDefine="SYS_ERR_OPR_RESTORE_STEP_PREP">
+    <Title>恢复步骤就绪</Title>
+    <Description>恢复步骤"准备"已就绪。</Description>
+  </Message>
+  <Message number="251" eDefine="SYS_ERR_OPR_RESTORE_STEP_CONF">
+    <Title>恢复步骤就绪</Title>
+    <Description>恢复步骤"配置"已就绪。</Description>
+  </Message>
+  <Message number="252" eDefine="SYS_ERR_OPR_RESTORE_STEP_TASK">
+    <Title>恢复步骤就绪</Title>
+    <Description>任务恢复就绪。</Description>
+  </Message>
+  <Message number="253" eDefine="SYS_ERR_OPR_RESTORE_STEP_USER_TASK">
+    <Title>恢复步骤就绪</Title>
+    <Description>"用户任务"的恢复就绪。</Description>
+  </Message>
+  <Message number="260" eDefine="SYS_ERR_OPR_PACKAGING_DIAG_INFO_OK">
+    <Title>生成系统诊断信息
+</Title>
+    <Description>系统诊断信息已成功生成为文件 <arg format="%s" ordinal="1" /></Description>
+  </Message>
+  <Message number="261" eDefine="SYS_ERR_OPR_PACKAGING_DIAG_INFO_FAILED">
+    <Title>不可用的系统诊断信息</Title>
+    <Description>用户请求将诊断系统信息保存为文件 <arg format="%s" ordinal="1" />。系统无法满足请求。</Description>
+    <Consequences>向 ABB 支持报告系统问题时，通常会使用诊断系统信息。</Consequences>
+    <Causes>系统处于这种状态时，则无法生成要求的信息。<p />请检查设备留下足够的空间。</Causes>
+    <Actions>如果遇到系统问题，请联系 ABB 支持。</Actions>
+  </Message>
+  <Message number="270" eDefine="SYS_ERR_OPR_CBC_INFO">
+    <Title>循环制动闸检查完成</Title>
+    <Description>已对安全控制器监控的全部制动闸完成了循环制动闸检查。</Description>
+  </Message>
+  <Message number="271" eDefine="SYS_ERR_OPR_CBC_INFO_START">
+    <Title>循环制动闸检查已启动</Title>
+    <Description>循环制动闸检查已启动。</Description>
+  </Message>
+  <Message number="300" eDefine="SYS_ERR_OPR_PSTART_ORD_SYS">
+    <Title>已下达 P-START 指令</Title>
+    <Description>已从系统下达 P-START 指令。</Description>
+  </Message>
+  <Message number="301" eDefine="SYS_ERR_OPR_PSTART_ORD_MAN">
+    <Title>已下达 P-START 指令</Title>
+    <Description>配置过程中已自动或手动下达 P-START 指令。</Description>
+  </Message>
+  <Message number="304" eDefine="SYS_ERR_OPR_UPDATE_READY">
+    <Title>已下达更新指令</Title>
+    <Description>程序配置的更新已执行。</Description>
+  </Message>
+  <Message number="350" eDefine="SYS_ERR_OPR_REFRESH_FAILD">
+    <Title>任务更新失败</Title>
+    <Description>系统无法将任务 <arg format="%s" ordinal="1" /> 更新至新配置。</Description>
+  </Message>
+  <Message number="351" eDefine="SYS_ERR_OPR_TASK_REMOVED">
+    <Title>任务已删除</Title>
+    <Description>因为配置更改，已删除任务 <arg format="%s" ordinal="1" /> 。</Description>
+  </Message>
+  <Message number="352" eDefine="SYS_ERR_OPR_TASK_ADDED">
+    <Title>任务已添加</Title>
+    <Description>因为配置更改，已安装任务 <arg format="%s" ordinal="1" /> 。</Description>
+  </Message>
+  <Message number="353" eDefine="SYS_ERR_OPR_TASK_REINSTALLED">
+    <Title>任务已重新安装</Title>
+    <Description>因为配置更改，已重新安装任务 <arg format="%s" ordinal="1" /> 。</Description>
+  </Message>
+  <Message number="354" eDefine="SYS_ERR_OPR_RESTORE_ERR_ABORT_IN_BSTART">
+    <Title>由于系统数据丢失，恢复被中止。</Title>
+    <Description>由于上次关机时未正常保存系统数据，系统正使用系统数据的备份。由于此原因，再次尝试执行目录 <arg format="%s" ordinal="1" /> 的上一个恢复指令，但被中止。<p /></Description>
+    <Consequences>无法加载 RAPID 程序或模块。</Consequences>
+    <Causes>上次关机时未正常保存系统数据。</Causes>
+    <Actions>通过备份-重新启动或系统重装恢复丢失的系统数据后，请验证备份目录 <arg format="%s" ordinal="2" /> 是否正确，然后再执行恢复。</Actions>
+  </Message>
+  <Message number="355" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_UNK">
+    <Title>恢复错误</Title>
+    <Description>执行“任务”恢复时出现错误。试图加载到未知任务， <arg format="%s" ordinal="1" />。 </Description>
+    <Consequences>
+      <arg format="%s" ordinal="1" /> 加载已中止。 </Consequences>
+    <Causes>当前系统没有与用于创建备份的系统相同的选项。</Causes>
+  </Message>
+  <Message number="400" eDefine="SYS_ERR_OPR_UAS_LOGON_USER">
+    <Title>用户 <arg format="%s" ordinal="1" /> 已登录</Title>
+    <Description>用户 <arg format="%s" ordinal="1" /> 使用 <arg format="%s" ordinal="2" /> 登录。</Description>
+  </Message>
+  <Message number="401" eDefine="SYS_ERR_OPR_UAS_LOGOFF_USER">
+    <Title>用户 <arg format="%s" ordinal="1" /> 已注销</Title>
+    <Description>用户 <arg format="%s" ordinal="1" /> 使用 <arg format="%s" ordinal="2" /> 注销。</Description>
+  </Message>
+  <Message number="420" eDefine="SYS_ERR_OPR_UNSAFE_ROBOT_MOVEMENTS">
+    <Title>新的不安全机器人路径
+</Title>
+    <Description>修改任务 <arg format="%s" ordinal="1" />内的目标后删除机器人路径。由于此原因，机器人将移至程序指针下达的移动指令所指的位置。将跳过在修改目标与程序指针之间的移动指令。
+</Description>
+    <Consequences>编程速度用于此移动操作。<p />新的未测试的路径可能包含会导致碰撞的障碍物。
+</Consequences>
+    <Actions>检查程序指针，必要时移动。<p />降低速度。
+</Actions>
+  </Message>
+  <Message number="421" eDefine="SYS_ERR_OPR_PLANNED_PATH_NOT_ABORTED">
+    <Title>计划路径未中止</Title>
+    <Description>目标已被修改，该目标可能是计划机器人路径的一部分。新的目标位置将在下次执行指令和目标时使用。</Description>
+    <Consequences>当前计划路径使用的是原先的目标位置。</Consequences>
+    <Actions>如果当前计划路径不安全，请移动程序指针，中止该路径。</Actions>
+  </Message>
+  <Message number="1020" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_DEF">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Prepare 时出现错误。未知错误。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1021" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_21">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Prepare 时出现错误。常规检查。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1022" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_22">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Prepare 时出现错误。目录包含有待创建的项目。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1023" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_23">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Prepare 时出现错误。目录缺少至少一个必要项。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1024" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_24">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Prepare 时出现错误。目录不存在。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1025" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_25">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Prepare 时出现错误。无法创建目录。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1026" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_26">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Prepare 时出现错误。写入备份时出现错误。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1027" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_27">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Prepare 时出现错误。读取配置参数时出现错误。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1028" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_28">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Prepare 时出现错误。写入配置参数时出现错误。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1029" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_29">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Prepare 时出现错误。结构层次太多。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1030" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_30">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Prepare 时出现错误。无更多目标。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1031" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_31">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Prepare 时出现错误。目录缺少至少一个必要项。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1032" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_32">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Prepare 时出现错误。系统版本与备份不匹配。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1033" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_33">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Prepare 时出现错误。恢复配置参数时出现错误。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1034" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_34">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Prepare 时出现错误。恢复配置参数时出现错误。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1035" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_35">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Prepare 时出现错误。当前系统与备份不匹配。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1036" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_36">
+    <Title>备份错误</Title>
+    <Description>执行“准备”备份步骤时出现错误。写入错误。</Description>
+    <Consequences>备份无法完成。</Consequences>
+    <Causes>您可能不具备备份驱动器的写入权限。<p />驱动器可能已满。<p />如果是网络驱动器，则您的连接可能已断开。</Causes>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1037" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_37">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Prepare 时出现错误。至少有一个模块名过长。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1038" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_38">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Prepare 时出现错误。未知任务。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1039" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_39">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Prepare 时出现错误。存储介质已满。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1040" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_40">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Prepare 时出现错误。无法删除项目。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1041" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_41">
+    <Title>备份错误</Title>
+    <Description>在备份步骤“准备”期间出错。在验证系统时出错。<p />系统中未安装 system.xml</Description>
+    <Consequences>备份已终止。</Consequences>
+    <Causes>系统中未安装 system.xml</Causes>
+    <Actions>重新安装系统。</Actions>
+  </Message>
+  <Message number="1042" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_42">
+    <Title>备份错误</Title>
+    <Description>在备份步骤“准备”期间出错。在验证系统时出错。<p />SYSTEM 目录中不存在 system.xml。</Description>
+    <Consequences>备份已终止。</Consequences>
+    <Causes>SYSTEM 目录中不存在 system.xml。</Causes>
+    <Actions>重新安装系统。</Actions>
+  </Message>
+  <Message number="1043" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_43">
+    <Title>备份错误</Title>
+    <Description>在备份步骤“准备”期间出错。在验证系统时出错。<p />HOME 目录中不存在 linked_m.sys。</Description>
+    <Consequences>备份已终止。</Consequences>
+    <Causes>HOME 目录中不存在 linked_m.sys。</Causes>
+    <Actions>重新安装系统。</Actions>
+  </Message>
+  <Message number="1044" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_44">
+    <Title>备份错误</Title>
+    <Description>验证备份路径时发生错误。<p /></Description>
+    <Consequences>备份已终止。</Consequences>
+    <Causes>备份路径含有无效字符。</Causes>
+    <Actions>验证备份路径。</Actions>
+  </Message>
+  <Message number="1045" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_45">
+    <Title>备份错误</Title>
+    <Description>创建备份目录时因没有访问权限而发生错误。</Description>
+    <Consequences>备份已终止。</Consequences>
+    <Causes>没有访问给定备份路径的权限。</Causes>
+    <Actions>验证访问权限。</Actions>
+  </Message>
+  <Message number="1120" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_DEF">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Configuration 时出现错误。未知错误。</Description>
+  </Message>
+  <Message number="1121" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_21">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Configuration 时出现错误。常规检查。</Description>
+  </Message>
+  <Message number="1122" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_22">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Configuration 时出现错误。目录包含有待创建的项目。</Description>
+  </Message>
+  <Message number="1123" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_23">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Configuration 时出现错误。目录缺少至少一个必要项。</Description>
+  </Message>
+  <Message number="1124" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_24">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Configuration 时出现错误。目录不存在。</Description>
+  </Message>
+  <Message number="1125" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_25">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Configuration 时出现错误。无法创建目录。</Description>
+  </Message>
+  <Message number="1126" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_26">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Configuration 时出现错误。写入备份时出现错误。</Description>
+  </Message>
+  <Message number="1127" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_27">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Configuration 时出现错误。读取配置参数时出现错误。</Description>
+  </Message>
+  <Message number="1128" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_28">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Configuration 时出现错误。写入配置参数时出现错误。</Description>
+  </Message>
+  <Message number="1129" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_29">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Configuration 时出现错误。结构层次太多。</Description>
+  </Message>
+  <Message number="1130" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_30">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Configuration 时出现错误。无更多目标。</Description>
+  </Message>
+  <Message number="1131" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_31">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Configuration 时出现错误。目录缺少至少一个必要项。</Description>
+  </Message>
+  <Message number="1132" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_32">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Configuration 时出现错误。系统版本与备份不匹配。</Description>
+  </Message>
+  <Message number="1133" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_33">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Configuration 时出现错误。恢复配置参数时出现错误。</Description>
+  </Message>
+  <Message number="1134" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_34">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Configuration 时出现错误。恢复配置参数时出现错误。</Description>
+  </Message>
+  <Message number="1135" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_35">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Configuration 时出现错误。当前系统与备份不匹配。</Description>
+  </Message>
+  <Message number="1136" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_36">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Configuration 时出现错误。写入错误。</Description>
+  </Message>
+  <Message number="1137" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_37">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Configuration 时出现错误。至少有一个模块名过长。</Description>
+  </Message>
+  <Message number="1138" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_38">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Configuration 时出现错误。未知任务。</Description>
+  </Message>
+  <Message number="1139" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_39">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Configuration 时出现错误。存储介质已满。</Description>
+  </Message>
+  <Message number="1140" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_40">
+    <Title>备份错误</Title>
+    <Description>执行备份步骤 Configuration 时出现错误。无法删除项目。</Description>
+  </Message>
+  <Message number="1220" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_DEF">
+    <Title>备份错误</Title>
+    <Description>执行"任务"备份时出现错误。未知错误。</Description>
+  </Message>
+  <Message number="1221" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_21">
+    <Title>备份错误</Title>
+    <Description>执行"任务"备份时出现错误。常规检查。</Description>
+  </Message>
+  <Message number="1222" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_22">
+    <Title>备份错误</Title>
+    <Description>执行"任务"备份时出现错误。目录包含有待创建的项目。</Description>
+  </Message>
+  <Message number="1223" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_23">
+    <Title>备份错误</Title>
+    <Description>执行"任务"备份时出现错误。目录缺少至少一个必要项。</Description>
+  </Message>
+  <Message number="1224" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_24">
+    <Title>备份错误</Title>
+    <Description>执行"任务"备份时出现错误。目录不存在。</Description>
+  </Message>
+  <Message number="1225" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_25">
+    <Title>备份错误</Title>
+    <Description>执行"任务"备份时出现错误。无法创建目录。</Description>
+  </Message>
+  <Message number="1226" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_26">
+    <Title>备份错误</Title>
+    <Description>执行"任务"备份时出现错误。写入备份时出现错误。</Description>
+  </Message>
+  <Message number="1227" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_27">
+    <Title>备份错误</Title>
+    <Description>执行"任务"备份时出现错误。读取配置参数时出现错误。</Description>
+  </Message>
+  <Message number="1228" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_28">
+    <Title>备份错误</Title>
+    <Description>执行"任务"备份时出现错误。写入配置参数时出现错误。</Description>
+  </Message>
+  <Message number="1229" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_29">
+    <Title>备份错误</Title>
+    <Description>执行"任务"备份时出现错误。结构层次太多。</Description>
+  </Message>
+</Domain>

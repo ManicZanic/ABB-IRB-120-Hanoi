@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.TPU.Screens.Paint.Base">
+  <Forms />
+  <Menus />
+  <Strings>
+    <String ID="Service.PaintCommand.Executing" Text="执行'{0}'" />
+    <String ID="Service.PaintCommand.Failed" Text="'{0}'失败！" />
+  </Strings>
+</Resources>

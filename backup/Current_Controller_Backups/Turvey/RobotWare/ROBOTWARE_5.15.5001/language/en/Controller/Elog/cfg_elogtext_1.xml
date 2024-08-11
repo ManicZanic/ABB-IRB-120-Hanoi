@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="CFG" domainNo="12" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="1" max="12">
+  <Message number="1" eDefine="SYS_ERR_CFG_OUT_OF_MEM">
+    <Title>Out of memory in cfg</Title>
+    <Description>There is not enough memory in the cfg database for this operation.</Description>
+    <Consequences>The configuration file will not be installed.</Consequences>
+    <Actions>1) Try to use the option: delete existing parameters before loading<p />when loading the configuration file. This will delete all previous configuration settings for the domain.<p />2) Increase the size of the configuration database.</Actions>
+  </Message>
+  <Message number="2" eDefine="SYS_ERR_CFG_WRITE_PROT">
+    <Title>Instance can not be saved</Title>
+    <Description>Not allowed to overwrite instance in line <arg format="%d" ordinal="1" /> of file <arg format="%s" ordinal="2" />.<p /></Description>
+    <Consequences>The instance may be write protected and the configuration in file will not be installed.</Consequences>
+    <Causes>-</Causes>
+    <Actions>You are not allowed to change the instance.</Actions>
+  </Message>
+  <Message number="3" eDefine="SYS_ERR_CFG_VERSION">
+    <Title>Wrong domain version or incorrect file</Title>
+    <Description>The cfg domain version of file <arg format="%s" ordinal="1" /> is wrong. The software is made for version <arg format="%s" ordinal="2" />.</Description>
+    <Consequences>The configuration in file will not be installed.</Consequences>
+    <Causes>-</Causes>
+    <Actions>1) Re-edit the configuration file, and change the version of the cfg domain.</Actions>
+  </Message>
+  <Message number="4" eDefine="SYS_ERR_CFG_LINE_ERR">
+    <Title>Line too long </Title>
+    <Description>Line <arg format="%d" ordinal="1" /> in file <arg format="%s" ordinal="2" /> contains <arg format="%s" ordinal="3" /> characters, which is more than the allowed <arg format="%d" ordinal="4" />.<p /></Description>
+    <Consequences>The configuration in file will not be installed.</Consequences>
+    <Causes>-</Causes>
+    <Actions>1) Re-edit the configuration file and reduce the number of characters, e.g. by splitting the instance into several lines. End each line, except the last one, with a trailing backslash "\" to achieve this.</Actions>
+  </Message>
+  <Message number="5" eDefine="SYS_ERR_CFG_ATTR_ERR">
+    <Title>Attribute value out of allowed range</Title>
+    <Description>Attribute <arg format="%s" ordinal="3" /> on line <arg format="%d" ordinal="1" /> in file <arg format="%s" ordinal="2" /> is out of the allowed range. The allowed range is &lt; <arg format="%s" ordinal="4" />&gt; - &lt; <arg format="%s" ordinal="5" />&gt;.<p /></Description>
+    <Consequences>The configuration in file will not be installed.</Consequences>
+    <Causes>-</Causes>
+    <Actions>1) Re-edit the configuration file and change the value on the attribute to fit inside the allowed range.</Actions>
+  </Message>
+  <Message number="6" eDefine="SYS_ERR_CFG_DUB_NAME">
+    <Title>Instance name occupied</Title>
+    <Description>Instance in line <arg format="%d" ordinal="1" /> in file <arg format="%s" ordinal="2" /> is already occupied.</Description>
+    <Consequences>The configuration in file will not be installed.</Consequences>
+    <Causes>-</Causes>
+    <Actions>1) Re-edit the configuration file and change the instance name to add it to the file OR <p />2) Use the "Replace" mode to overwrite the instance previously using the name. This may be selected when loading the configuration file using RobotStudio, and the procedure is detailed in the RobotStudio Manual.</Actions>
+  </Message>
+  <Message number="7" eDefine="SYS_ERR_CFG_ILLEGAL_ELEMENT">
+    <Title>Unknown type or attribute in cfg file</Title>
+    <Description>Type/attribute in position <arg format="%d" ordinal="1" /> on line <arg format="%d" ordinal="2" /> of file <arg format="%s" ordinal="3" /> is not recognized.</Description>
+    <Consequences>The configuration in file will not be installed.</Consequences>
+    <Causes>The configuration type may not be installed, illegal/mistyped attribute, or the name is too long.</Causes>
+    <Actions>1) Re-edit the configuration file.</Actions>
+  </Message>
+  <Message number="8" eDefine="SYS_ERR_CFG_MISSING_ATTR">
+    <Title>Mandatory attribute is missing in cfg file</Title>
+    <Description>Missing mandatory attribute <arg format="%s" ordinal="1" /> on line <arg format="%d" ordinal="2" /> in file <arg format="%s" ordinal="3" />.</Description>
+    <Consequences>The configuration in file will not be installed.</Consequences>
+    <Causes>Missing/mistyped mandatory attribute.</Causes>
+    <Actions>1) Re-edit the configuration file.</Actions>
+  </Message>
+  <Message number="9" eDefine="SYS_ERR_CFG_NO_NAME">
+    <Title>Missing instance name in cfg file</Title>
+    <Description>Missing instance name on line <arg format="%d" ordinal="1" /> in file <arg format="%s" ordinal="2" />.</Description>
+    <Consequences>The configuration in file will not be installed.</Consequences>
+    <Causes>-</Causes>
+    <Actions>1) Re-edit the configuration file.</Actions>
+  </Message>
+  <Message number="10" eDefine="SYS_ERR_CFG_STRING_ERR">
+    <Title>Configuration attribute value out of the allowed range</Title>
+    <Description>Configuration attribute <arg format="%s" ordinal="3" /> on line <arg format="%d" ordinal="1" /> in file <arg format="%s" ordinal="2" /> is out of the allowed range. The max. allowed length is <arg format="%s" ordinal="4" /> characters.</Description>
+    <Consequences>The configuration in file will not be installed. </Consequences>
+    <Causes>-</Causes>
+    <Actions>1) Re-edit the configuration file and change the value on the attribute to fit inside the allowed range.</Actions>
+  </Message>
+  <Message number="11" eDefine="SYS_ERR_CFG_VERSION_STRING">
+    <Title>Illegal version string</Title>
+    <Description>The version string in configuration file <arg format="%s" ordinal="1" /> has illegal format.</Description>
+    <Consequences>The configuration in file will not be installed.</Consequences>
+    <Causes>The configuration file is made for a different system version/revision.<p />The version string in the configuration file is mistyped/missing.<p />The configuration file is corrupted.</Causes>
+    <Actions>1) Re-edit the configuration file and change the version string according to this layout:<p /> "domain":"cfg domain version":"version":"revision"::.</Actions>
+  </Message>
+  <Message number="12" eDefine="SYS_ERR_CFG_DOMAIN_ERR">
+    <Title>Illegal domain name</Title>
+    <Description>The domain name <arg format="%s" ordinal="2" /> in configuration file <arg format="%s" ordinal="1" /> is illegal.</Description>
+    <Consequences>The configuration in file will not be installed.</Consequences>
+    <Causes>The domain name may be mistyped or the domain is not installed in the system.<p /></Causes>
+    <Actions>1) Re-edit the configuration file and change the domain name.</Actions>
+  </Message>
+</Domain>

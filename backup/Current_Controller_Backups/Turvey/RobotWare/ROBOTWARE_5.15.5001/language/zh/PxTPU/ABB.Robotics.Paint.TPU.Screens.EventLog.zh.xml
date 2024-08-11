@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.TPU.Screens.DateTime">
+  <Forms>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.EventLog.TpuWndEventOverview" Text="事件日志" Width="320" Height="192" Icon="EventLog32.gif">
+      <Menu ref="menuTpuWndEventOverview" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.EventLog.TpuWndEventLog" Text="" Width="320" Height="192" Icon="EventLog32.gif">
+      <Menu ref="menuWndEventLog" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.EventLog.TpuWndEventMessage" Text="消息" Width="320" Height="192" Icon="EventLog32.gif">
+      <Menu ref="menuWndEventMessage" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.EventLog.TpuWndEventPopup" Text="消息" Width="320" Height="192" Icon="EventLog32.gif">
+      <Menu ref="menuWndEventPopup" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.EventLog.TpuWndEventsView" Text="柱状图" Width="320" Height="192" Icon="EventLog32.gif">
+      <Menu ref="menuTpuWndEventsView" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.EventLog.TpuWndEventMessageBase" Text="" Width="320" Height="192">
+      <Controls />
+    </Form>
+  </Forms>
+  <Menus>
+    <Menu ID="menuTpuWndEventsView">
+      <MenuItem ID="Update" Text="更新" />
+      <MenuItem ID="History" Text="历史" />
+      <MenuItem ID="DayOfWeek" Text="周" />
+      <MenuItem ID="TimeOfDay" Text="日" />
+    </Menu>
+    <Menu ID="menuTpuWndEventOverview">
+      <MenuItem ID="Histogram" Text="柱状图" />
+      <MenuItem ID="btn2" Text="" />
+      <MenuItem ID="btn3" Text="" />
+      <MenuItem ID="btn4" Text="" />
+      <MenuItem ID="ClearLogs" Text="清除日志" Grant="UAS_EVENTLOG_CLEAR" />
+    </Menu>
+    <Menu ID="menuWndEventLog">
+      <MenuItem ID="Update" Text="更新" />
+      <MenuItem ID="Filter" Text="过滤">
+        <MenuItem ID="FilterError" Text="错误" />
+        <MenuItem ID="FilterWarning" Text="警告" />
+        <MenuItem ID="FilterInformation" Text="信息" />
+      </MenuItem>
+      <MenuItem ID="AllMsgs" Text="所有消息" />
+      <MenuItem ID="btn4" Text="" />
+      <MenuItem ID="Clear" Text="清除" Grant="UAS_EVENTLOG_CLEAR" />
+    </Menu>
+    <Menu ID="menuWndEventMessage">
+      <MenuItem ID="Newer" Text="更新的" />
+      <MenuItem ID="Older" Text="更老的" />
+    </Menu>
+    <Menu ID="menuWndEventPopup">
+      <MenuItem ID="Acknowledge" Text="获知" />
+      <MenuItem ID="btn2" Text="" />
+      <MenuItem ID="btn3" Text="" />
+      <MenuItem ID="btn4" Text="" />
+      <MenuItem ID="Suspend" Text="悬挂" />
+    </Menu>
+  </Menus>
+  <Strings>
+    <String ID="Category" Text="种类" />
+    <String ID="Messages" Text="消息" />
+    <String ID="Latest" Text="最新" />
+    <String ID="ClearAllLogs" Text="清除所有日志？" />
+    <String ID="LoadingMessages" Text="载入消息..." />
+    <String ID="Loading" Text="装载中..." />
+    <String ID="CountInfo" Text="[{0}/{1}]{2}" />
+    <String ID="NewMessage" Text="*" />
+    <String ID="Code" Text="代码" />
+    <String ID="Title" Text="标题" />
+    <String ID="DateTime" Text="日期&amp;时间" />
+    <String ID="ClearMessagesInDomain" Text="清除所有消息在域'{0}'?" />
+    <String ID="History" Text="历史" />
+    <String ID="DayOfWeek" Text="天" />
+    <String ID="TimeOfDay" Text="小时" />
+    <String ID="WeekDays" Text="星期一;星期二;星期三;星期四;星期五;星期六;星期天；" />
+  </Strings>
+</Resources>

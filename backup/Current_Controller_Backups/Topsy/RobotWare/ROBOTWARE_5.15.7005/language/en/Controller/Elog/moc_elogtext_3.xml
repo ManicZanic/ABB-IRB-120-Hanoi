@@ -1,0 +1,422 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="MOC" domainNo="5" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="280" max="366">
+  <Message number="280" eDefine="SYS_ERR_MOC_MULTIPLE_MECH_UNIT_IN_ONE_PGM">
+    <Title>System configuration</Title>
+    <Description>Mechanical Unit <arg format="%s" ordinal="1" /> is defined in more than one RAPID program.</Description>
+    <Actions>Check the configuration file. <p /> I-start the system with correct parameters.</Actions>
+  </Message>
+  <Message number="281" eDefine="SYS_ERR_MOC_IPOL_STOP_PROCESS_EVENT">
+    <Title>Process failed</Title>
+    <Description>Task: <arg format="%.16s" ordinal="1" /><p />A process in the task <arg format="%.16s" ordinal="1" /> has failed. This is caused by a failure of a process in this task or a synchronized task if MultiMove is used.<p /><arg format="%.40s" ordinal="2" /></Description>
+    <Actions>Check other messages occurring at the same time for the reason.<p />Recovery: <arg format="%.16s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="282" eDefine="SYS_ERR_MOC_CNV_REC_NOT_READY">
+    <Title>Record not ready</Title>
+    <Description> Record not ready to activate </Description>
+    <Actions>Make sure that record is finished  before activating.<p />Check sensor_start_signal  </Actions>
+  </Message>
+  <Message number="283" eDefine="SYS_ERR_MOC_CNV_REC_FILE_UNKNOWN">
+    <Title>Unknown record file name</Title>
+    <Description> Record file name:  <arg format="%s" ordinal="1" /> is unknown. </Description>
+    <Actions>Check file name or existence with file manager. <p />Record a new file  </Actions>
+  </Message>
+  <Message number="284" eDefine="SYS_ERR_MOC_CANNOT_ACTIVATE_MECH_UNIT">
+    <Title>Cannot activate Mechanical Unit</Title>
+    <Description>The Mechanical Unit <arg format="%s" ordinal="1" /> cannot be activated because it is not connected to a RAPID task.</Description>
+    <Actions>Check that the connection between Mechanical Unit and RAPID task is done correctly in the Controller configuration.</Actions>
+  </Message>
+  <Message number="285" eDefine="SYS_ERR_MOC_DITHER_CTRLMA">
+    <Title>DitherAct not possible</Title>
+    <Description>Dithering is not possible to activate.<p /></Description>
+    <Actions>Verify that a joint that can be used with DitherAct is chosen.</Actions>
+  </Message>
+  <Message number="286" eDefine="SYS_ERR_MOC_COORDINATED_FRAME_CHAIN">
+    <Title>Mix of coordinated frames</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />More than one unit move frames, reason <arg format="%d" ordinal="3" />:<p />1 It is not allowed to have a chain of coordinated frames.<p />2 It is not allowed to exchange the unit that control the frame in a cornerzone.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>1 Rearrange the units so that all units, which perform coordinated movements, are following the same unit.<p />2 Insert a finepoint or a not coordinated movement between the two coordinated movements.</Actions>
+  </Message>
+  <Message number="287" eDefine="SYS_ERR_MOC_UNIT_NOT_STOPPED_COORDINATED_FRAME">
+    <Title>Unit not stopped in a controlled position</Title>
+    <Description>The robot <arg format="%s" ordinal="2" /> is semi coordinated to Unit <arg format="%s" ordinal="1" /> from another task and the Unit has been moved or the regain to the path failed.</Description>
+    <Consequences>Program run or restart will be interrupted.</Consequences>
+    <Actions>Check all programs that the semi coordinated movement is separated with finepoints and WaitSyncTask instructions before and after the movement and that the Unit is not moved between. Note that WaitSyncTask also is needed after the semi coordination before SyncMoveOn and SyncMoveResume.<p />Check that the Unit is moved to the wanted position before the semi coordinated movement. After SyncMoveOff, SyncMoveSuspend, ActUnit, DeactUnit or ClearPath the Unit must be moved (with a new movement instruction) to a position to define the frame so the other task can read it. The position can be a new position, or the current position of the Unit.<p />Check if the program for the Unit is active in the task selection panel.</Actions>
+  </Message>
+  <Message number="288" eDefine="SYS_ERR_MOC_SYNC_ID_MISSMATCH">
+    <Title>Sync ID mismatch</Title>
+    <Description>The specified id number for the move instruction has to be equal for all cooperating program tasks.<p />Current id number mismatch <arg format="%d" ordinal="1" />, <arg format="%d" ordinal="2" />.</Description>
+    <Actions>Verify that the specified id numbers are equal and that all PP are synchronized before program start.</Actions>
+  </Message>
+  <Message number="289" eDefine="SYS_ERR_MOC_POINT_TYPE_MISSMATCH">
+    <Title>Point type mismatch at sync</Title>
+    <Description>The move instructions with syncId = <arg format="%d" ordinal="1" />, have a mix between finepoints and zonepoints.</Description>
+    <Actions>Make sure that the move instruction in all cooperating program tasks specifies the same kind of point type, either finepoints or zonepoints.</Actions>
+  </Message>
+  <Message number="290" eDefine="SYS_ERR_MOC_RCS_GET_NEXTSTEP_NO_LICENSE">
+    <Title>Service unavailable</Title>
+    <Description>Unable to obtain correct license.</Description>
+    <Actions>Please check the license settings.</Actions>
+  </Message>
+  <Message number="294" eDefine="SYS_ERR_MOC_SENSOR_MEMORY_TRANSMISSION_ERROR">
+    <Title>Transmission error of data</Title>
+    <Description>Transmission of data between cabinet and SMB-memory has failed.</Description>
+    <Causes>Cable, or transmission electronics failed. Electrical interference high.</Causes>
+    <Actions>- Restart try once more.<p />- Check cables.<p />- Check SMB-board.<p />- Check drive module.</Actions>
+  </Message>
+  <Message number="295" eDefine="SYS_ERR_MOC_SENSOR_MEMORY_DATA_MISSING">
+    <Title>Motion data missing</Title>
+    <Description>Data in SMB- and cabinet memory missing for mechanical unit <arg format="%s" ordinal="1" />.</Description>
+    <Causes>Configuration file missing. New SMB-board together with new cabinet.</Causes>
+    <Actions>- Load new configuration files.</Actions>
+  </Message>
+  <Message number="296" eDefine="SYS_ERR_MOC_SENSOR_MEMORY_DATA_DIFFERENCE">
+    <Title>SMB memory data difference</Title>
+    <Description>Data in SMB memory is not same as in cabinet for mechanical unit <arg format="%s" ordinal="1" />.</Description>
+    <Causes>Not the same data or serial number in SMB memory and cabinet. Manipulator (SMB module) or cabinet exchanged or configuration parameters changed.</Causes>
+    <Actions>Check status via teach pendant and check if right configuration data (serial number) loaded in cabinet. Check that serial number belongs to the manipulator connected to the cabinet. If not, replace configuration files or manually transfer data from SMB memory to cabinet if cabinet has been exchanged.<p />If Serial Measurement Board replaced with board from another manipulator (serial numbers not the same), clear first SMB memory via teach pendant and then transfer data from cabinet to SMB.</Actions>
+  </Message>
+  <Message number="297" eDefine="SYS_ERR_MOC_SENSOR_MEMORY_DATA_UPDATED_IN_SMB">
+    <Title>Memory updated in SMB</Title>
+    <Description>Data for mechanical unit <arg format="%s" ordinal="1" /> is moved from cabinet to SMB-memory.</Description>
+    <Causes />
+    <Actions />
+  </Message>
+  <Message number="298" eDefine="SYS_ERR_MOC_SENSOR_MEMORY_DATA_UPDATED_IN_CAB">
+    <Title>Memory updated in cabinet</Title>
+    <Description>Data for mechanical unit <arg format="%s" ordinal="1" /> is moved from SMB-memory to cabinet.</Description>
+    <Causes />
+    <Actions />
+  </Message>
+  <Message number="299" eDefine="SYS_ERR_MOC_SPEED_CONTROL_WARNING">
+    <Title>Speed control warning</Title>
+    <Description>Speed for Unit  <arg format="%s" ordinal="1" /> is reduced due to limiting Unit  <arg format="%s" ordinal="2" />.<p />Task: <arg format="%.16s" ordinal="3" /> Instruction line: <arg format="%.40s" ordinal="4" /></Description>
+    <Causes>Programmed speed too high on this Unit or movement too long on limiting Unit </Causes>
+    <Actions>Change path or programmed speed .<p />Set speed control off  </Actions>
+  </Message>
+  <Message number="300" eDefine="SYS_ERR_MOC_SENSOR_MEMORY_MISSING">
+    <Title>SMB memory not used</Title>
+    <Description>SMB-memory is not used for this mechanical unit.</Description>
+    <Causes>Additional axes can't and should not use the SMB-memory.</Causes>
+    <Actions />
+  </Message>
+  <Message number="301" eDefine="SYS_ERR_MOC_SENSOR_MEMORY_HEADER_MISSING">
+    <Title>All SMB data missing</Title>
+    <Description>All data is missing in SMB-memory at board <arg format="%d" ordinal="3" />, link <arg format="%d" ordinal="2" />, drive module <arg format="%d" ordinal="1" />.</Description>
+    <Causes>An error in SMB-memory or communication has occurred. The data has been cleared.</Causes>
+    <Actions>If proper data exists in cabinet - transfer the data to SMB-memory. If still problem - check communication cable to SMB-board. Replace SMB-board.</Actions>
+  </Message>
+  <Message number="302" eDefine="SYS_ERR_MOC_SENSOR_MEMORY_SN_MISSING">
+    <Title>Sensor data missing</Title>
+    <Description>No serial number is defined for mechanical unit <arg format="%s" ordinal="1" /> in SMB-memory.</Description>
+    <Causes>The SMB-memory has been cleared or new SMB-board has been installed.</Causes>
+    <Actions>If proper data exists in cabinet - transfer the data to SMB-memory.</Actions>
+  </Message>
+  <Message number="303" eDefine="SYS_ERR_MOC_SENSOR_MEMORY_SN_MISSING_IN_CAB">
+    <Title>Cabinet data missing</Title>
+    <Description>No serial number is defined for mechanical unit <arg format="%s" ordinal="1" /> in cabinet.</Description>
+    <Causes>The cabinet memory has been cleared or new cabinet has been installed..</Causes>
+    <Actions>If proper data exists in SMB-memory - transfer the data to cabinet memory.</Actions>
+  </Message>
+  <Message number="305" eDefine="SYS_ERR_MOC_SENSOR_MEMORY_OLD_BOARD_USED">
+    <Title>Old SMB board used</Title>
+    <Description>Old SMB board used without data memory.</Description>
+    <Causes />
+    <Actions>Replace board with a new with data memory or set parameter "Use old SMB" in configuration MOTION/ROBOT.</Actions>
+  </Message>
+  <Message number="306" eDefine="SYS_ERR_MOC_LOAD_IDENTIFICATION_SINGULAR">
+    <Title>Load identification error</Title>
+    <Description>Cannot perform load identification because configuration angle makes inertia matrix singular.</Description>
+    <Actions>- Move axis 6 on the robot about 30 degrees in any direction.</Actions>
+  </Message>
+  <Message number="307" eDefine="SYS_ERR_MOC_EXTRANGE_INSTALLED">
+    <Title>Extended working range</Title>
+    <Description>The option Extended working range has been installed. <p />Make sure that the mechanical stop has been removed.</Description>
+  </Message>
+  <Message number="308" eDefine="SYS_ERR_MOC_TIMEOUT_WAITING_FOR_INPOS">
+    <Title>In Position timeout</Title>
+    <Description>Condition for finepoint not fulfilled within <arg format="%.3f" ordinal="1" /> seconds.</Description>
+    <Actions>Check tuning of additional axes, In Position Conditions (In Position Range, Zero Speed) and check if disturbance of resolver cables.</Actions>
+  </Message>
+  <Message number="309" eDefine="SYS_ERR_MOC_SENSOR_MEMORY_ABSACC_ERROR">
+    <Title>AbsAcc error</Title>
+    <Description>Data moved from SMB-memory to cabinet. AbsAcc data not valid in SMB-memory. AbsAcc cleared in cabinet for mechanical unit <arg format="%s" ordinal="1" />.</Description>
+    <Actions>Load new AbsAcc data if data available.</Actions>
+  </Message>
+  <Message number="310" eDefine="SYS_ERR_MOC_INDEPENDENT_JOINT_NOT_ACTIVE">
+    <Title>Independent joint not active</Title>
+    <Description>Mechanical unit <arg format="%s" ordinal="1" /> with independent joint is not active.</Description>
+    <Actions>Activate the mechanical unit before executing the independent joint instruction.</Actions>
+  </Message>
+  <Message number="311" eDefine="SYS_ERR_MOC_CANNOT_ACTIVATE_MECH_UNIT_IN_TASK">
+    <Title>Cannot activate Mechanical Unit in task</Title>
+    <Description>The Mechanical Unit <arg format="%s" ordinal="1" /> cannot be activated in specified task.<p /></Description>
+    <Actions>Check the connection between Mechanical Unit and RAPID task in the Controller configuration.<p /></Actions>
+  </Message>
+  <Message number="312" eDefine="SYS_ERR_MOC_MECH_UNIT_ALREADY_ACTIVE_IN_TASK">
+    <Title>Mechanical Unit already active in other task</Title>
+    <Description>Cannot activate Mechanical Unit <arg format="%s" ordinal="1" />, since it is already active in another RAPID task.</Description>
+  </Message>
+  <Message number="313" eDefine="SYS_ERR_MOC_SG_MOVE_ERROR">
+    <Title>Independent move reset failed</Title>
+    <Description>Independent reset movement failed for <arg format="%s" ordinal="1" />, a synchronized movement (MoveL/MoveJ) of the servo tool occurred during the independent reset movement.</Description>
+    <Actions>Make sure the synchronized speed of the servo tool is zero during execution of independent reset movements.</Actions>
+  </Message>
+  <Message number="314" eDefine="SYS_ERR_MOC_SG_MOVE_OUT_OF_REACH">
+    <Title>Independent move outside reach</Title>
+    <Description>Programmed independent move position for <arg format="%s" ordinal="1" />is outside reach. Programmed position = <arg format="%f" ordinal="2" /> mm.</Description>
+    <Actions>Adjust independent move position.<p />Check working range of the servo tool.</Actions>
+  </Message>
+  <Message number="315" eDefine="SYS_ERR_MOC_STOP_PROCESS_SEGMENT_EXPECTED">
+    <Title>Corner path failure</Title>
+    <Description>Task: <arg format="%.16s" ordinal="1" /><p />Interpolation and process stopped before the corner path due to some of the following reasons:<p />- Time delay.<p />- Closely programmed points.<p />- System requires high CPU-load. <p /><arg format="%.40s" ordinal="2" /></Description>
+    <Actions>- Reduce the number of instructions between consecutive move instructions.<p />- Reduce speed, use wider spaced points, use /CONC option.<p />- Increase ipol_prefetch_time.<p />Recovery: <arg format="%.16s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="316" eDefine="SYS_ERR_MOC_ABSACC_NOT_ACTIVATED">
+    <Title>Absolute accuracy not activated</Title>
+    <Description>Absolute accuracy function not activated.</Description>
+    <Consequences>Robot positioning will not be absolute accurate.</Consequences>
+    <Actions>1. Switch AbsAcc on by changing Robot system parameter Use Robot Calibration to calib. <p />Verify status in jogging window. <p />2. Also make sure that absacc.cfg is loaded into controller memory. <p />Verify that data exists in a backup.</Actions>
+  </Message>
+  <Message number="317" eDefine="SYS_ERR_MOC_DISCONNECT_NOT_ALLOWED">
+    <Title>Disconnecting the Drive Module not allowed</Title>
+    <Description>An attempt was made to disconnect drive module <arg format="%d" ordinal="1" />, which is not allowed.</Description>
+    <Consequences>The system goes to state Motors OFF, and then disconnects the Drive Module.</Consequences>
+    <Causes>Disconnecting drive modules is only allowed in the Motors OFF state.</Causes>
+    <Actions>Make sure that the system is in Motors OFF state before disconnecting the Drive Module.</Actions>
+  </Message>
+  <Message number="318" eDefine="SYS_ERR_MOC_RECONNECT_NOT_ALLOWED">
+    <Title>Reconnecting the Drive Module not allowed</Title>
+    <Description>Drive Module  should not be reconnected since the system is not in the state Motors OFF.</Description>
+    <Consequences>An attempt was made to reconnect drive module <arg format="%d" ordinal="1" />, which is not allowed.  </Consequences>
+    <Causes>Reconnecting drive modules is only allowed in the Motors OFF status.</Causes>
+    <Actions>Make sure that the system is in Motors OFF state before reconnecting the Drive Module.</Actions>
+  </Message>
+  <Message number="319" eDefine="SYS_ERR_MOC_CANNOT_ACTIVATE_UNIT">
+    <Title>Cannot activate Mechanical Unit</Title>
+    <Description>An attempt was made to activate mechanical unit <arg format="%s" ordinal="1" />, which failed.</Description>
+    <Consequences>The mechanical unit remains deactivated.</Consequences>
+    <Causes>The mechanical unit is connected to Drive Module <arg format="%d" ordinal="2" /> which is disconnected.</Causes>
+    <Actions>1) Reconnect the Drive Module. 2) Retry to activate the Mechanical Unit.</Actions>
+  </Message>
+  <Message number="320" eDefine="SYS_ERR_MOC_DRIVE_MODULE_DISCONNECTED">
+    <Title>Drive Module has been disconnected</Title>
+    <Description>Drive Module <arg format="%d" ordinal="1" />  has been disconnected.</Description>
+    <Consequences>No mechanical units connected to the drive module may be operated.</Consequences>
+  </Message>
+  <Message number="321" eDefine="SYS_ERR_MOC_DRIVE_MODULE_RECONNECTED">
+    <Title>Drive Module has been reconnected</Title>
+    <Description>Drive Module <arg format="%d" ordinal="1" /> has been reconnected after being disconnected.</Description>
+    <Consequences>All mechanical units connected to drive module <arg format="%d" ordinal="1" /> may be operated.</Consequences>
+  </Message>
+  <Message number="322" eDefine="SYS_ERR_MOC_MECH_UNIT_NOT_CONNECTED_TO_TASK">
+    <Title>Mechanical Unit not connected to Motion task</Title>
+    <Description>Cannot activate Mechanical Unit <arg format="%s" ordinal="1" />, since it is not connected to any Motion task.</Description>
+    <Actions>Check the connection between Mechanical Unit and RAPID task in the Controller configuration.<p /></Actions>
+  </Message>
+  <Message number="323" eDefine="SYS_ERR_MOC_FC_GET_FORCE_FAILED">
+    <Title>Failed to read force sensor</Title>
+    <Description>Failed to return calibrated force sensor reading.</Description>
+    <Causes>Force control system not calibrated.</Causes>
+    <Actions>Use the instruction FCCalib before using this instruction.</Actions>
+  </Message>
+  <Message number="324" eDefine="SYS_ERR_MOC_FC_CALIBRATE_FAILED">
+    <Title>Force control calibration failed</Title>
+    <Description>Failed to calibrate the force control system.</Description>
+    <Causes>The system is not in position control.</Causes>
+    <Actions>Make sure the robot is in position control mode before using the FCCalib instruction.</Actions>
+  </Message>
+  <Message number="325" eDefine="SYS_ERR_MOC_FC_FORCE_MODE_FAILED">
+    <Title>Failed to activate force control</Title>
+    <Description>Activation of force control failed.</Description>
+    <Causes>The system is either not calibrated or we are already in force control. Another reason for this could be incorrect arguments.</Causes>
+    <Actions>Only use the FCAct or FCPress1LStart instruction when the force control system is calibrated and we are in position control.  Check all arguments to the activation instruction.</Actions>
+  </Message>
+  <Message number="326" eDefine="SYS_ERR_MOC_FC_POSITION_MODE_FAILED">
+    <Title>Failed to deactivate force control</Title>
+    <Description>Failed to return to position control.</Description>
+    <Causes>Can not set position control if the robot is moving due to external forces or ordered references.</Causes>
+    <Actions>Stop any active references and remove any external forces and try again.</Actions>
+  </Message>
+  <Message number="327" eDefine="SYS_ERR_MOC_FC_START_REFERENCES_FAILED">
+    <Title>Failed to start references</Title>
+    <Description>Failed to start the user specified references</Description>
+    <Causes>Only allowed to start references when in force control.</Causes>
+    <Actions>Must activate force control before trying to start references.</Actions>
+  </Message>
+  <Message number="328" eDefine="SYS_ERR_MOC_FC_SETUP_SPRING_STIFFNESS_FAILED">
+    <Title>Parameter error in FCRefSprForce or FCRefSprTorque</Title>
+    <Description>Error in parameter Stiffness in instruction FCRefSprForce or FCRefSprTorque.</Description>
+    <Actions>Change the parameter Stiffness in instruction FCRefSprForce or FCRefSprTorque to a value larger than zero.<p /></Actions>
+  </Message>
+  <Message number="329" eDefine="SYS_ERR_MOC_FC_SETUP_MAX_FORCE_FAILED">
+    <Title>Parameter error in FCRefSprForce</Title>
+    <Description>Error in parameter MaxForce in instruction FCRefSprForce. </Description>
+    <Actions>Change the parameter MaxForce in instruction FCRefSprForce to a value larger than zero. </Actions>
+  </Message>
+  <Message number="330" eDefine="SYS_ERR_MOC_FC_SETUP_MAX_TORQUE_FAILED">
+    <Title>Parameter error in FCRefSprTorque</Title>
+    <Description>Error in parameter MaxTorque in instruction FCRefSprTorque.</Description>
+    <Actions>Change the parameter MaxTorque in instruction FCRefSprTorque to a value larger than zero.  </Actions>
+  </Message>
+  <Message number="333" eDefine="SYS_ERR_MOC_FC_SETUP_POS_REF_FAILED">
+    <Title>Error FCRefLine, FCRefRot or FCRefCircle</Title>
+    <Description>The parameter Distance in instruction FCRefLine or instruction FCRefRot and the parameters Radius and Speed in instruction FCRefCircle have to be larger than zero. </Description>
+    <Actions>Change the parameters above according to the manual.</Actions>
+  </Message>
+  <Message number="335" eDefine="SYS_ERR_MOC_FC_SETUP_POS_SPIRAL_FAILED">
+    <Title>Parameter error in FCRefSpiral</Title>
+    <Description>Not allowed parameter value used in function FCRefSpiral.   </Description>
+    <Causes>Error in parameter values of function FCRefSpiral.</Causes>
+    <Actions>Modify the parameter values in function FCRefSpiral.</Actions>
+  </Message>
+  <Message number="336" eDefine="SYS_ERR_MOC_FC_GET_DATA_FAILED">
+    <Title>Parameter error in FCGetProcessData</Title>
+    <Description>Failed to retrieve process information. </Description>
+    <Causes>Using the optional parameter DataAtTrigTime  in instruction FCGetProcessData. If no trig has occurred this error is reported.</Causes>
+    <Actions>Remove the optional parameter.</Actions>
+  </Message>
+  <Message number="337" eDefine="SYS_ERR_MOC_FC_SENSOR_NOT_SETUP">
+    <Title>Force sensor not setup</Title>
+    <Description>Error in the force sensor parameters.</Description>
+    <Actions>Check the force sensor configuration parameters.</Actions>
+  </Message>
+  <Message number="338" eDefine="SYS_ERR_MOC_FC_SETUP_ADVANCED_CONDITION_FAILED">
+    <Title>Parameter error in FCCondAdvanced</Title>
+    <Description>Error in parameter LogicCond in instruction FCCondAdvanced. </Description>
+    <Actions>Modify the parameter LogicCond in instruction FCCondAdvanced.</Actions>
+  </Message>
+  <Message number="339" eDefine="SYS_ERR_MOC_FC_SETUP_TIME_CONDITION_FAILED">
+    <Title>Parameter error in FCCondTime</Title>
+    <Description>Error in parameter Time in instruction FCCondTime.</Description>
+    <Actions>Change the parameter Time in instruction FCCondTime to a value larger than zero. </Actions>
+  </Message>
+  <Message number="340" eDefine="SYS_ERR_MOC_FC_SETUP_BOX_FAILED">
+    <Title>Error in force control box definition</Title>
+    <Description>An error in the parameter Box in either FCCondPos or FCSupvPos.</Description>
+    <Actions>Change the parameter Box in either FCCondPos or FCSupvPos.</Actions>
+  </Message>
+  <Message number="341" eDefine="SYS_ERR_MOC_FC_SETUP_CYLINDER_FAILED">
+    <Title>Error in force control cylinder definition</Title>
+    <Description>An error in the parameter Cylinder in either FCCondPos or FCSupvPos. </Description>
+    <Actions>Change the parameter Cylinder in either FCCondPos or FCSupvPos. </Actions>
+  </Message>
+  <Message number="342" eDefine="SYS_ERR_MOC_FC_SETUP_SPHERE_FAILED">
+    <Title>Error in force control sphere definition</Title>
+    <Description>An error in the parameter Sphere in either FCCondPos or FCSupvPos.   </Description>
+    <Actions>Change the parameter Sphere in either FCCondPos or FCSupvPos. </Actions>
+  </Message>
+  <Message number="343" eDefine="SYS_ERR_MOC_FC_SETUP_CONE_FAILED">
+    <Title>Error in force control cone definition</Title>
+    <Description>An error in the parameters for either FCCondOrient or FCSupvOrient.</Description>
+    <Actions>Change the parameters in either FCCondOrient or FCSupvOrient.</Actions>
+  </Message>
+  <Message number="344" eDefine="SYS_ERR_MOC_FC_JOINT_LIMIT">
+    <Title>Joints outside limits in force control</Title>
+    <Description>One or more joints are outside their working range in force control.</Description>
+    <Actions>Modify the program to avoid the physical joint limits.</Actions>
+  </Message>
+  <Message number="345" eDefine="SYS_ERR_MOC_FC_SUPERVISION_ERROR">
+    <Title>Force control supervision error</Title>
+    <Description>The user specified supervision has trigged. The type is <arg format="%d" ordinal="1" />.<p /><p />Types:<p /><p />1: TCP position<p />2: Tool orientation<p />3: TCP speed<p />4: Reorientation speed<p />5: Force<p />6: Torque<p />7: Teach TCP speed<p />8: Teach Reorientation speed</Description>
+    <Consequences>The robot will stop.</Consequences>
+    <Actions>Deactivate force control.<p />Modify the supervision or the program.</Actions>
+  </Message>
+  <Message number="346" eDefine="SYS_ERR_MOC_TEMP_SUPERVISION">
+    <Title>Motor temperature error</Title>
+    <Description>Motor temperature for joint <arg format="%d" ordinal="1" /> is too high.</Description>
+    <Consequences>It is not possible to continue until the motor has cooled down.</Consequences>
+  </Message>
+  <Message number="348" eDefine="SYS_ERR_MOC_TEST_SIGNAL_DEFINE_ERROR">
+    <Title>Test signal error</Title>
+    <Description>Definition of a test signal failed for <arg format="%s" ordinal="1" />, axis <arg format="%d" ordinal="2" /> on channel <arg format="%d" ordinal="3" />.</Description>
+    <Causes>The Mechanical Unit is not active.<p />The test signal number does not correspond to an actual test signal.<p />The channel number is too high.</Causes>
+  </Message>
+  <Message number="349" eDefine="SYS_ERR_MOC_DUPLICATE_SYNC_ID_ERROR">
+    <Title>Synchronization ID Warning</Title>
+    <Description>Two consecutive synchronized move instructions in <arg format="%s" ordinal="3" /> have the same synchronization ID value <arg format="%d" ordinal="1" />.</Description>
+    <Consequences>If the ID value is repeated for more than one move instruction it can be very difficult to keep track of which move instructions are synchronized. This can, for example, cause problems when modifying positions.</Consequences>
+    <Actions>Change the synchronized move instruction <arg format="%s" ordinal="2" /> in <arg format="%s" ordinal="3" /> so that it has a unique synchronization ID value.</Actions>
+  </Message>
+  <Message number="350" eDefine="SYS_ERR_MOC_SWEQ_NOT_ALLOWED">
+    <Title> Software Equalizing Not Allowed</Title>
+    <Description>It is not possible to run Software Equalizing since Independent Move is active.</Description>
+    <Actions>Make sure independent move is not active when executing a Software Equalizing servo spot.</Actions>
+  </Message>
+  <Message number="351" eDefine="SYS_ERR_MOC_INDEPENDENT_NOT_ALLOWED">
+    <Title>Independent Move not allowed</Title>
+    <Description>It is not possible to execute an Independent Move when Software Equalizing is active.</Description>
+    <Actions>Make sure Software Equalizing is off when executing an Independent Gun Move.</Actions>
+  </Message>
+  <Message number="352" eDefine="SYS_ERR_MOC_TOOL_OFFS_MISMATCH">
+    <Title>Number of move instruction mismatch</Title>
+    <Description>Using the path recorder within synchronised motion requires:<p />That Tool offset must be present for all or none cooperating program tasks.<p />That all cooperating program tasks move backwards/forwards the same number of move instructions.</Description>
+    <Actions>Verify that the all tasks or none of the tasks use the optional argument Tool Offset.<p />Verify that the pathrec identifier moving towards are at the same position in all tasks within the synchronised block.</Actions>
+  </Message>
+  <Message number="353" eDefine="SYS_ERR_MOC_CNV_NO_UNIT_FOUND">
+    <Title>Failed to read data from encoder card</Title>
+    <Description>The system has failed to read data from one encoder card.</Description>
+    <Consequences>The tracking accuracy during acceleration and deceleration might be reduced.</Consequences>
+    <Causes>Wrong unit name has probably been specified in the process parameter for<p /><arg format="%s" ordinal="1" /></Causes>
+    <Actions>1) Check that the correct unit name is specified in the process parameter<p /> eio unit name for <arg format="%s" ordinal="1" /></Actions>
+  </Message>
+  <Message number="354" eDefine="SYS_ERR_MOC_FC_SETUP_FORCE_AMPLITUDE_WARNING">
+    <Title>Ordered force reference is too large</Title>
+    <Description>The ordered force reference is larger than the configured maximum value.</Description>
+    <Consequences>The ordered force reference has been reduced to the configured value.</Consequences>
+    <Actions>To allow a larger reference force the system parameters need to be updated. Note that there is an absolute limit of force reference size that depends on the robot type.</Actions>
+  </Message>
+  <Message number="355" eDefine="SYS_ERR_MOC_FC_SETUP_TORQUE_AMPLITUDE_WARNING">
+    <Title>Ordered torque reference is too large </Title>
+    <Description>The ordered torque reference is larger than the configured maximum value.</Description>
+    <Consequences>The ordered torque has been reduced to the configured maximum value.</Consequences>
+    <Actions>To allow a larger reference torque the system parameters need to be updated.</Actions>
+  </Message>
+  <Message number="356" eDefine="SYS_ERR_MOC_FC_SETUP_MAX_FORCE_WARNING">
+    <Title>Ordered MaxForce is too large </Title>
+    <Description>The parameter MaxForce in instruction FCRefSprForce is larger than the configured maximum value.</Description>
+    <Consequences>The parameter MaxForce has been reduced to the configured maximum value.<p /></Consequences>
+    <Actions>To allow a larger value the system parameters need to be updated. </Actions>
+  </Message>
+  <Message number="357" eDefine="SYS_ERR_MOC_FC_SETUP_MAX_TORQUE_WARNING">
+    <Title>Ordered MaxTorque is too large</Title>
+    <Description>The parameter MaxTorque in instruction FCRefSprTorque is larger than the configured maximum value.</Description>
+    <Consequences>The parameter MaxTorque has been reduced to the configured maximum value.</Consequences>
+    <Actions>To allow a larger value the system parameters need to be updated.</Actions>
+  </Message>
+  <Message number="358" eDefine="SYS_ERR_MOC_FC_SINGULARITY">
+    <Title>Close to singularity when in force control</Title>
+    <Description>Close to singularity when in force control mode for robot <arg format="%s" ordinal="1" />.</Description>
+    <Actions>Modify path away from the singularity or change to joint interpolation.</Actions>
+  </Message>
+  <Message number="359" eDefine="SYS_ERR_MOC_REC_WRONG_LEVEL">
+    <Title>Path Recorder on StorePath level not allowed</Title>
+    <Description>The Path Recorder can only be used on base path level. The Path Recorder has been stopped.</Description>
+    <Actions>Stop Path Recorder before StorePath, restart it after RestoPath.</Actions>
+  </Message>
+  <Message number="361" eDefine="SYS_ERR_MOC_BRAKE_RELEASE_SUPERVISION">
+    <Title>Brake release error</Title>
+    <Description>Too large position error of joint <arg format="%s" ordinal="1" /> after brake release.</Description>
+    <Actions>Try once more. Check cables. Check hardware. Check tuning if error on additional axis.</Actions>
+  </Message>
+  <Message number="362" eDefine="SYS_ERR_MOC_BRAKE_RELEASE_TIME_OUT">
+    <Title>Brake release time out</Title>
+    <Description>Joint <arg format="%s" ordinal="1" /> was not in position after max time for brake release.</Description>
+    <Actions>Try once more. Check cables. Check hardware. Check tuning if error on additional axis.</Actions>
+  </Message>
+  <Message number="363" eDefine="SYS_ERR_MOC_SYNC_MOVE_ON">
+    <Title>SyncMoveOn failed</Title>
+    <Description>Starting synchronized movements failed due to an internal error.</Description>
+    <Consequences>It is not possible to restart the programs from the current position.</Consequences>
+    <Actions>Move the program pointers and try again.</Actions>
+  </Message>
+  <Message number="364" eDefine="SYS_ERR_MOC_CURRENT_VECTOR_WARNING">
+    <Title>Axis in current vector mode</Title>
+    <Description>Warning: Joint <arg format="%s" ordinal="2" /> is configured in <arg format="%s" ordinal="1" /> data as a current vector axis. Drive system will be disconnected for this axis during normal operation.</Description>
+    <Actions>Run service program to activate the current vector.<p />Set configuration data for the DRIVE SYSTEM parameter current_vector_on to FALSE, for normal operation..</Actions>
+  </Message>
+  <Message number="366" eDefine="SYS_ERR_MOC_REFSUP_ERROR">
+    <Title>Reference Error</Title>
+    <Description>An error has occurred in the reference calculation. Internal status <arg format="%d" ordinal="1" />.</Description>
+    <Consequences>The controller goes to Motors Off</Consequences>
+    <Actions>Check the error logs for previous errors that could be causing this problem.<p />Try to restart the program possibly after moving the program pointer.<p />Restart the controller.</Actions>
+  </Message>
+</Domain>

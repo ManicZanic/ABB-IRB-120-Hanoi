@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Resource Name="CALPEND" Language="cs">
+  <Text Name="200">
+    <Value>Nebyla provedena kalibrace.</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="201">
+    <Value>Konec</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="202">
+    <Value>OK</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="203">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="204">
+    <Value>Osa</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="205">
+    <Value>Stisknutím OK proces ukoncíte.</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="206">
+    <Value>Robot je v kalibracní pozici.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="207">
+    <Value>Chcete-li robot kalibrovat:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="208">
+    <Value>1. Prejdìte do nabídky Rùzné</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="209">
+    <Value>2. Vyberte Servis-Zobrazit-Kalibrace</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="210">
+    <Value>3. Vyberte Kalib.-Jemná kalibrace</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="211">
+    <Value>4. Restartujte tento program</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="212">
+    <Value>5. Po provedení krokù 1-4 stisknìte OK</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="213">
+    <Value>Zrušit</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="214">
+    <Value>Pokracujte stisknutím OK.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="215">
+    <Value>Ukoncete postup stisknutím OK.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="216">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="217">
+    <Value>Nastavte Levelmeter 2000 do režimu A B</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="218">
+    <Value>byl prekrocen limit serízení</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="219">
+    <Value>Umístìte jednotku na základnu</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="220">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="221">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="222">
+    <Value>Upozornìní: Po stisknutí OK se robot zacne pohybovat</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="223">
+    <Value>Referencní úrovnì základny...</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="224">
+    <Value>Ref.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="225">
+    <Value>Reference základny pøipraveny</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="226">
+    <Value>Umístìte jednotku na osu 1</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="227">
+    <Value>Vyrovnávání osy</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="228">
+    <Value>Korekcní hodnota [stupnì]</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="229">
+    <Value>je pøipraveno</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="230">
+    <Value>Umístìte jednotku na zadní stranu osy 2</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="231">
+    <Value>Umístìte jednotku na prední stranu osy 2.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="232">
+    <Value>Umístìte jednotku na trubkovou hrídel</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="233">
+    <Value>Upozornení! Osa 4 se bude pohybovat</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="234">
+    <Value>-90 stupnu pred vyladením</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="235">
+    <Value>Umístìte jednotku na prírubu</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="236">
+    <Value>Upozornìní! Osy 4 a 5 se budou pohybovat</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="237">
+    <Value>Umístete jednotku pod prírubu</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="238">
+    <Value>Nebylo dosazeno pozadované presnosti</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="239">
+    <Value>  OK: Pokracování v procesu</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="240">
+    <Value>  Zrušit: Ukoncení procesu</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="241">
+    <Value>Vyberte moznost.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="242">
+    <Value>Stávající moznosti.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="243">
+    <Value>Typ robota:        .</Value>
+    <Comment>Text length 20 chars (end with dot)</Comment>
+  </Text>
+  <Text Name="244">
+    <Value>Robot:             .</Value>
+    <Comment>Text length 20 chars (end with dot)</Comment>
+  </Text>
+  <Text Name="245">
+    <Value>Vybrané osy:       .</Value>
+    <Comment>Text length 20 chars (end with dot)</Comment>
+  </Text>
+  <Text Name="246">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="247">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="248">
+    <Value>Pouzijìte stávající moznost nebo je zmente.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="249">
+    <Value>Konec</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="250">
+    <Value>Zmenit</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="251">
+    <Value>Prijmout</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="252">
+    <Value>[0]-Predchozí strana  Dalsí strana-[9]</Value>
+    <Comment>Length must be 35 chars</Comment>
+  </Text>
+  <Text Name="253">
+    <Value>Pomocí numer. kláv. vyberte typ robota:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="254">
+    <Value>Nesprávná volba, vyberte znovu!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="255">
+    <Value>Vybraný typ robota:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="256">
+    <Value>[1]-Osa 1              Osa 2-[2]</Value>
+    <Comment>Length must be 32 chars</Comment>
+  </Text>
+  <Text Name="257">
+    <Value>[3]-Osa 3              Osa 4-[4]</Value>
+    <Comment>Length must be 32 chars</Comment>
+  </Text>
+  <Text Name="258">
+    <Value>[5]-Osa 5              Osa 6-[6]</Value>
+    <Comment>Length must be 32 chars</Comment>
+  </Text>
+  <Text Name="259">
+    <Value>[8]-Vse              Vymazat-[2]</Value>
+    <Comment>Length must be 32 chars</Comment>
+  </Text>
+  <Text Name="260">
+    <Value>[0]-Prijmout</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="261">
+    <Value>Vybrané osy</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="262">
+    <Value>Vyberte osy ke kalibraci:                      </Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="263">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="264">
+    <Value>Znovu</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="265">
+    <Value>Kalibrace byla úspesne dokoncena!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="266">
+    <Value>Kalibrace se NEZDARILA. </Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="267">
+    <Value>Ulozit parametry calib.cfg? </Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="268">
+    <Value>Ne</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="269">
+    <Value>Ano</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="270">
+    <Value>Vyberte I/O zarízení, které chcete pouzít.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="271">
+    <Value>Vlozte prosím disketu nebo odstrante</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="272">
+    <Value>zruste ochranu proti zápisu.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="273">
+    <Value>Operace ukládání se nezdarila.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="274">
+    <Value>Kalibrace byla provedena</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="275">
+    <Value> kalibracním kyvadlem</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="276">
+    <Value>Posunutí dekodéru pred kalibrací:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="277">
+    <Value>Posunutí dekodéru po kalibraci:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="278">
+    <Value>Zkontrolujte, zda je Levelmeter zapnutý.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="279">
+    <Value>Varování! Kalibrace vyzaduje tool0.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="280">
+    <Value>Je-li nasazen nástroj, sejmete jej.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="281">
+    <Value>Umístete jednotku na serizovací desku.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="282">
+    <Value>Otocte jednotku o 180 stupnu.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="283">
+    <Value>Úrovne posunutí...</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="284">
+    <Value>Referencní posunutí nuly pripraveno.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="285">
+    <Value>více nez jedna otácka osy</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="286">
+    <Value>od pùvodní synchronizacní pozice.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="287">
+    <Value>Prepnutí na rucní jemnou kalibraci.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="288">
+    <Value>Vyberte automatickou nebo rucní jemnou kalib.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="289">
+    <Value>Rucní</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="290">
+    <Value>Automatickou</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="291">
+    <Value>Vyberte mech. jednotku ke kalibraci</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="292">
+    <Value>Nebyla vybrána platná mech.jedn., konec.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="293">
+    <Value>Pockejte na dokoncení jemné kalibrace!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="294">
+    <Value>Jemná kalibrace byla úspesne dokoncena!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="295">
+    <Value>Kalibrace posunutí nuly snímacu.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="296">
+    <Value>Umístìte jednotku na desku seriz.posunu.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="297">
+    <Value>Otocte jednotku o 180 stupnu.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="298">
+    <Value>Preskakuje se kalibr. posunutí nuly.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="299">
+    <Value>Upozornení! Osa 6 se bude pohybovat</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="300">
+    <Value>+82,5 stupnu pred vyladením</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="301">
+    <Value>Osa není v blízkosti 0 stupnu, konec.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="302">
+    <Value>Pozice robota:    .</Value>
+    <Comment>Text length 20 chars (end with dot)</Comment>
+  </Text>
+  <Text Name="303">
+    <Value>Poz.</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="304">
+    <Value>Osy</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="305">
+    <Value>Alternativní pozice:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="306">
+    <Value>[0]-Odstranení vsech uzivatelských pozic</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="307">
+    <Value>[1]-Kalib. osy 1 s uzivatelem def. osami 2-6</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="308">
+    <Value>[2]-Kalib. osy 2 s uzivatelem def. osami 3-6</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="309">
+    <Value>[3]-Kalib. osy 3 s uzivatelem def. osami 4-6</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="310">
+    <Value>[9]-Zpet</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="311">
+    <Value>Vyberte alternativu:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="312">
+    <Value>Osa v uzivatelsky definované pozici.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="313">
+    <Value>Pred pridáním osy odstrante pozici.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="314">
+    <Value>Rucne prestavte osy</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="315">
+    <Value>do pozadované pozice.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="316">
+    <Value>Seritte snímace na nulový úhel.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="317">
+    <Value>Upozornení! Nepohybujte deskou.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="318">
+    <Value>
+    </Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="319">
+    <Value>Chcete pouzít metodu preklápení</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="320">
+    <Value>pro kalibraci os 3, 4 a 5?</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="321">
+    <Value>K tomu je potreba kryt kyvadla,</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="322">
+    <Value>který lze na prírubu umístit</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="323">
+    <Value>bez adaptéru.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="324">
+    <Value>Vyrovnávání osy 3:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="325">
+    <Value>Na prírube musí být</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="326">
+    <Value>umísteno kyvadlo bez adaptéru,</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="327">
+    <Value>pouzíváte-li metodu preklápení.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="328">
+    <Value>Umístìte kyvadlo na prírubu.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="329">
+    <Value>Vyrovnávání osy 4:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="330">
+    <Value>Vyrovnávání osy 5:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="331">
+    <Value>Vyrovnávání osy 6:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="332">
+    <Value>Upozornení!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="333">
+    <Value>Automatická jemná kalibrace pracuje</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="334">
+    <Value>pouze pro RW 4.0.100 nebo vyssí</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="335">
+    <Value>Preskocit</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="336">
+    <Value>Místo kalibrace:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="337">
+    <Value>Výrobní závod ve Västerås</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="338">
+    <Value>nebo</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="339">
+    <Value>kalibrace v provozu</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="340">
+    <Value>výroba</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="341">
+    <Value>provoz</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="342">
+    <Value>Vítejte v Kalibraci kyvadla II</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="343">
+    <Value>Slouzí ke kontrole posunutí kyv. snímacu,</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="344">
+    <Value>nebylo-li kyvadlo urcitou dobu pouzito.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="345">
+    <Value>Umístete jednotku na horní stranu osy 3.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="346">
+    <Value>Umístete tyc mezi kyvadlo a cep.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="347">
+    <Value>Vyjmete tyc z príruby.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="348">
+    <Value>Upozornení! Presun osy 6 na 0 stupnu.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="349">
+    <Value>Pokud bude tyc ponechána na míste, dojde k jejímu zlomení.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="350">
+    <Value>Snímac nesleduje pohyb robota.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="351">
+    <Value>Zkontrolujte instalaci kyvadla.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="352">
+    <Value>Byla nalezena kalibracní pozice s osou</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="353">
+    <Value>st.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="354">
+    <Value>se nyní presune na</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="355">
+    <Value>Stisknete tlacítko OK a poté sejmete cárový kód sériového císla</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="356">
+    <Value>Vynecháno sejmutí cárového kódu!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="357">
+    <Value>Sériové císlo je treba zadat rucne.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="358">
+    <Value>Cekání na sériové císlo...</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="359">
+    <Value>Sejmuté sériové císlo:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="360">
+    <Value>Opak.sejmutí</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="361">
+    <Value>Chyba pri ctení cárového kódu!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="362">
+    <Value>Nactený cárový kód:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="363">
+    <Value>Pozadovaný formát</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="364">
+    <Value>Stisknete tlacítko opakování a znovu sejmete cárový kód.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="365">
+    <Value>Provedte jemnou kalibraci robota a stisknete tlacítko OK</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="366">
+    <Value>Vyberte príkaz ABB-Kalibrace</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="367">
+    <Value>Vyberte robota, kterého chcete kalibrovat, napr. ROB_1</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="368">
+    <Value>Vyberte príkaz Param. kalibrace-Jemná kalibrace</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="369">
+    <Value>Vyberte osu a stisknete tlacítko Kalibrovat</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="370">
+    <Value>Spustte tento program znovu</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="371">
+    <Value>Hlavní nabídka kalibrace</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="372">
+    <Value>Kalibrovat osu</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="373">
+    <Value>Kalibrovat Ax1:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="374">
+    <Value>Návrat do hlavní nabídky nebo Konec?</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="375">
+    <Value>Návrat</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="376">
+    <Value>Kalibrace odkazu na domácí pozici</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="377">
+    <Value>Vyberte alternativu:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="378">
+    <Value>Definujte referencní pozici</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="379">
+    <Value>Pouzijte referencní pozici po provedení servisu</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="380">
+    <Value>Definujte osu, u níz byl proveden servis</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="381">
+    <Value>Zápestí</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="382">
+    <Value>Domácí odkaz jiz existuje!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="383">
+    <Value>Odstrante </Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="384">
+    <Value>a klepnete na tlacítko OK.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="385">
+    <Value>Ref. rozdíl (nástroj - základna):</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="386">
+    <Value>Snímac</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="387">
+    <Value>Výsledek zapsán do</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="388">
+    <Value>Ref. pozice úspešne ulozena!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="389">
+    <Value>neexistuje!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="390">
+    <Value>Nejdríve musí být definován domácí odkaz,</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="391">
+    <Value>operace se zastavuje.</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="392">
+    <Value>Chyba pri ctení</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="393">
+    <Value>prerusuje se</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="394">
+    <Value>Zajistete, aby byla osa, u níz byl proveden servis,</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="395">
+    <Value>jemne zkalibrována!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="396">
+    <Value>Rucní prestavení os je povoleno</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="397">
+    <Value>Prestavte robota rucne do domácí referencní pozice</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="398">
+    <Value>Pozice osy  bude nactena ze souboru</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="399">
+    <Value>Varování! Robot není v blízkosti domácí pozice</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="400">
+    <Value>Stisknutím tlacítka HOME jej prestavte do domácí pozice</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="401">
+    <Value>Pokud jsou v ceste prekázky, nejdríve rucne prestavte osy</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="402">
+    <Value>Domu</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="403">
+    <Value>Sejmete kyvadlo a opet je namontujte na nástroj</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="404">
+    <Value>Úrovne domácích odkazu...</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="405">
+    <Value>Domácí odkazy pripraveny</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="406">
+    <Value>Varování! Rozdíl odkazu na základnu</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="407">
+    <Value>RefA-StoredRefA=</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="408">
+    <Value>RefB-StoredRefB=</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="409">
+    <Value>Stisknutím tlacítka OK pokracujte v kalibraci ale posun snímace</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="410">
+    <Value>by mel být zkontrolován</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="411">
+    <Value>Rozdíl:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="412">
+    <Value>Snímac</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="413">
+    <Value>Nejprve rucne prestavte robota na cílové hodnoty snímace:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="414">
+    <Value>Cílová hodnota</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="415">
+    <Value>Poté jemne zkalibrujete osu a stisknete tlacítko Test</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="416">
+    <Value>Test</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="417">
+    <Value>Presnost je prijatelná!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="418">
+    <Value>Aktualizace pameti SMB pro kloub</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="419">
+    <Value>1. Kalibracní kyvadlo II</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="420">
+    <Value>2. Referencní kalibrace</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="421">
+    <Value>Zvolte rucní na automatické vyrovnání osy:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="422">
+    <Value>Zvolte osu pro automatické vyrovnání:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="423">
+    <Value>Kalibrovat dalsí osu?</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="424">
+    <Value>Nabídka Kalibrace</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="425">
+    <Value>Sejmete kyvadlo a opet je namontujte na osu 2</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="426">
+    <Value>zádný</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="427">
+    <Value>a</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="428">
+    <Value>nový</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="429">
+    <Value>Kontrola platnosti ulozeného souboru</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="430">
+    <Value>Soubor je v porádku</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="431">
+    <Value>Validace kalibracních hodnot</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="432">
+    <Value>Montáz snímace není táz, jako</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="433">
+    <Value>pri ulození odkazu!</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="434">
+    <Value>Nelze pokracovat v kalibraci</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="435">
+    <Value>2 os zvolených pro</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="436">
+    <Value>referencní kalibraci</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="437">
+    <Value>Je treba opakovat tuto operaci podruhé</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="438">
+    <Value>Opakování</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="439">
+    <Value>z</Value>
+    <Comment>Maximum length 39 chars, Context: Iteration 1 of 2 for axis 5</Comment>
+  </Text>
+  <Text Name="440">
+    <Value>pro osu</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="441">
+    <Value>Rozdíl v kalibraci motoru: [Ulozená - Aktuální]:</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="442">
+    <Value>rad</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="443">
+    <Value>Odkazy jsou platné</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="444">
+    <Value>ODKAZY NEJSOU PLATNÉ</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="445">
+    <Value>Bylo zmeneno prílis mnoho os</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="446">
+    <Value>Umístete kyvadlo na nástroj</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="447">
+    <Value>Umístìte jednotku na rámec osy 2</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="448">
+    <Value>Osa 2 se bude pohybovat</Value>
+    <Comment>Maximum length 39 chars, Context: Axis 2 will move to xx deg</Comment>
+  </Text>
+  <Text Name="449">
+    <Value>Osa 2 musí mít úhel 90 stupòù</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="450">
+    <Value>Pro referenèní mìøení</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="451">
+    <Value>Calibrate with unit below flange</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="452">
+    <Value>Calibrate with unit on flange adapter</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="453">
+    <Value>Reference measurment on tubeshaft</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="454">
+    <Value>Reference measurment on tool</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="455">
+    <Value>Place Unit on tool</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="456">
+    <Value>Remove and remount Unit on tubeshaft</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+</Resource>

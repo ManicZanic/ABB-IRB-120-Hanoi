@@ -1,0 +1,1222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Domain xmlns="urn:abb-robotics-cfg-rules" cfgName="MOC" resourceID="MOC001" cfgRulesVersion="1.3">
+<Type cfgName="MOTION_SYSTEM" resourceID="MOC002" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC003" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="min_temp_ambient_cabinet" resourceID="MOC004" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_temp_ambient_cabinet" resourceID="MOC005" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="min_temp_ambient_robot" resourceID="MOC006" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_temp_ambient_robot" resourceID="MOC007" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="sens_mem_mode" resourceID="MOC008" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="smb_memory_update_time" resourceID="MOC009" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="MOTION_PLANNER" resourceID="MOC010" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC011" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="dynamic_resolution" resourceID="MOC012" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC013">0.1667</CfgValue>
+<CfgValue resourceID="MOC014">0.3333</CfgValue>
+<CfgValue resourceID="MOC015">0.5000</CfgValue>
+<CfgValue resourceID="MOC016">0.6667</CfgValue>
+<CfgValue resourceID="MOC017">0.8333</CfgValue>
+<CfgValue resourceID="MOC018">1.0000</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="path_resolution" resourceID="MOC019" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="std_servo_queue_time" resourceID="MOC020" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="brake_on_timeout" resourceID="MOC021" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="use_spline_parameters" resourceID="MOC022" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC023">motion_planner_1</CfgValue>
+<CfgValue resourceID="MOC024">3stepstoservomp_1</CfgValue>
+<CfgValue resourceID="MOC025">4stepstoservomp_1</CfgValue>
+<CfgValue resourceID="MOC026">5stepstoservomp_1</CfgValue>
+<CfgValue resourceID="MOC027">motion_planner_2</CfgValue>
+<CfgValue resourceID="MOC028">3stepstoservomp_2</CfgValue>
+<CfgValue resourceID="MOC029">4stepstoservomp_2</CfgValue>
+<CfgValue resourceID="MOC030">5stepstoservomp_2</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="teach_mode_max_speed" resourceID="MOC031" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="process_linearization_time" resourceID="MOC032" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="ipol_prefetch_time" resourceID="MOC033" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="event_preset_time" resourceID="MOC034" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="cpu_load_equalization" resourceID="MOC035" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="restricted_circlepoint" resourceID="MOC036" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC037">1</CfgValue>
+<CfgValue resourceID="MOC038">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="circle_speed_priority" resourceID="MOC039" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC040">1</CfgValue>
+<CfgValue resourceID="MOC041">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="use_motion_sup" resourceID="MOC042" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="MOTION_SUP" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="motion_sup_permanent_off" resourceID="MOC043" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC044">1</CfgValue>
+<CfgValue resourceID="MOC045">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="motion_sup_max_level" resourceID="MOC046" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm">
+<DisplayFilterLookup domainCfgName="SYS" typeCfgName="PRESENT_OPTIONS" parameterCfgName="name" operandParameterCfgName="requires_option_colldect">
+<ConditionFilter parameterCfgName="name" operand="valEqual" operandCfgValue="colldect"/>
+</DisplayFilterLookup>
+</Parameter>
+<Parameter cfgName="remove_corner_path_warning" resourceID="MOC047" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC048">1</CfgValue>
+<CfgValue resourceID="MOC049">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="require_event_accuracy" resourceID="MOC050" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC051">1</CfgValue>
+<CfgValue resourceID="MOC052">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="high_interpolation_priority" resourceID="MOC053" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC054">1</CfgValue>
+<CfgValue resourceID="MOC055">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="speed_control_warning" resourceID="MOC056" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC057">1</CfgValue>
+<CfgValue resourceID="MOC058">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="speed_control_percent" resourceID="MOC059" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="extended_dec_dist" resourceID="MOC060" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="weave_path_pose_filter_bandwidth" resourceID="MOC061" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="number_of_event_objects" resourceID="MOC062" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="MECHANICAL_UNIT" resourceID="MOC063" addRemoveInstances="true" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC064" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="use_activation_relay" resourceID="MOC065" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<EmptyValue/>
+</ListValue>
+<LookupParameterValue domainCfgName="MOC" typeCfgName="RELAY" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="use_brake_relay" resourceID="MOC066" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<EmptyValue/>
+</ListValue>
+<LookupParameterValue domainCfgName="MOC" typeCfgName="RELAY" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="use_connection_relay" resourceID="MOC067" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<EmptyValue/>
+</ListValue>
+<LookupParameterValue domainCfgName="MOC" typeCfgName="RELAY" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="stand_by_state" resourceID="MOC068" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC069">1</CfgValue>
+<CfgValue resourceID="MOC070">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="use_robot" resourceID="MOC071" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<EmptyValue/>
+</ListValue>
+<LookupParameterValue domainCfgName="MOC" typeCfgName="ROBOT" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="use_single_0" resourceID="MOC072" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<EmptyValue/>
+</ListValue>
+<LookupParameterValue domainCfgName="MOC" typeCfgName="SINGLE" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="use_single_1" resourceID="MOC073" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<EmptyValue/>
+</ListValue>
+<LookupParameterValue domainCfgName="MOC" typeCfgName="SINGLE" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="use_single_2" resourceID="MOC074" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<EmptyValue/>
+</ListValue>
+<LookupParameterValue domainCfgName="MOC" typeCfgName="SINGLE" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="use_single_3" resourceID="MOC075" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<EmptyValue/>
+</ListValue>
+<LookupParameterValue domainCfgName="MOC" typeCfgName="SINGLE" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="use_single_4" resourceID="MOC076" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<EmptyValue/>
+</ListValue>
+<LookupParameterValue domainCfgName="MOC" typeCfgName="SINGLE" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="use_single_5" resourceID="MOC077" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<EmptyValue/>
+</ListValue>
+<LookupParameterValue domainCfgName="MOC" typeCfgName="SINGLE" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="allow_move_of_user_frame" resourceID="MOC078" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC079">1</CfgValue>
+<CfgValue resourceID="MOC080">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="activate_at_start_up" resourceID="MOC081" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC082">1</CfgValue>
+<CfgValue resourceID="MOC083">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="deactivation_forbidden" resourceID="MOC084" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC085">1</CfgValue>
+<CfgValue resourceID="MOC086">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="allow_activation_from_any_motion_task" resourceID="MOC087" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC088">1</CfgValue>
+<CfgValue resourceID="MOC089">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="deactivate_ptc_at_disconnect" resourceID="MOC090" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC091">1</CfgValue>
+<CfgValue resourceID="MOC092">0</CfgValue>
+</ListValue>
+</Parameter>
+</Type>
+<Type cfgName="RELAY" resourceID="MOC093" addRemoveInstances="true" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC094" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="out_signal" resourceID="MOC095" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="in_signal" resourceID="MOC096" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="ROBOT" resourceID="MOC097" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC098" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modReadOnly"/>
+<Parameter cfgName="use_robot_type" resourceID="MOC099" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modReadOnly">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="ROBOT_TYPE" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="use_old_smb" resourceID="MOC100" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC101">1</CfgValue>
+<CfgValue resourceID="MOC102">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="use_robot_calib" resourceID="MOC103" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="ROBOT_CALIB" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="use_joint_0" resourceID="MOC104" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="JOINT" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="use_joint_1" resourceID="MOC105" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="JOINT" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="use_joint_2" resourceID="MOC106" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="JOINT" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="use_joint_3" resourceID="MOC107" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="JOINT" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="use_joint_4" resourceID="MOC108" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="JOINT" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="use_joint_5" resourceID="MOC109" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="JOINT" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="base_frame_pos_x" resourceID="MOC110" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="base_frame_pos_y" resourceID="MOC111" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="base_frame_pos_z" resourceID="MOC112" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="base_frame_orient_u0" resourceID="MOC113" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="base_frame_orient_u1" resourceID="MOC114" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="base_frame_orient_u2" resourceID="MOC115" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="base_frame_orient_u3" resourceID="MOC116" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="base_frame_coordinated" resourceID="MOC117" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<EmptyValue/>
+</ListValue>
+<LookupParameterValue domainCfgName="MOC" typeCfgName="SINGLE" parameterCfgName="name" userEdit="false"/>
+<LookupParameterValue domainCfgName="MOC" typeCfgName="ROBOT" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="gravity_alpha" resourceID="MOC118" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="gravity_beta" resourceID="MOC119" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="gamma_rotation" resourceID="MOC120" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="upper_work_area_x" resourceID="MOC121" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="lower_work_area_x" resourceID="MOC122" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="upper_work_area_y" resourceID="MOC123" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="lower_work_area_y" resourceID="MOC124" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="upper_work_area_z" resourceID="MOC125" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="lower_work_area_z" resourceID="MOC126" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="lower_arm_cp_bound_x" resourceID="MOC127" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="lower_arm_cp_bound_y" resourceID="MOC128" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="lower_arm_cp_bound_z" resourceID="MOC129" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="upper_arm_cp_bound_x" resourceID="MOC130" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="upper_arm_cp_bound_y" resourceID="MOC131" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="upper_arm_cp_bound_z" resourceID="MOC132" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="use_six_axis_corvec" resourceID="MOC133" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC134">1</CfgValue>
+<CfgValue resourceID="MOC135">0</CfgValue>
+</ListValue>
+<DisplayFilterLookup domainCfgName="SYS" typeCfgName="PRESENT_OPTIONS" parameterCfgName="name" operandParameterCfgName="requires_option_Cnv">
+<ConditionFilter parameterCfgName="name" operand="valEqual" operandCfgValue="Cnv"/>
+</DisplayFilterLookup>
+</Parameter>
+<Parameter cfgName="track_convey_with_robot" resourceID="MOC136" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC137">1</CfgValue>
+<CfgValue resourceID="MOC138">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="use_kinematic_corvec" resourceID="MOC139" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC140">1</CfgValue>
+<CfgValue resourceID="MOC141">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="no_joints_prepcalc" resourceID="MOC142" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC143">1</CfgValue>
+<CfgValue resourceID="MOC144">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="corvec_correction_level" resourceID="MOC145" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_external_pos_adjustment" resourceID="MOC146" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="conveyor_tool_change_mode" resourceID="MOC147" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="use_fc_master" resourceID="MOC148" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="FC_MASTER" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="use_pmc_sensor" resourceID="MOC149" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="PMC_SENSOR" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="seven_axes_hp_motion" resourceID="MOC150" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<EmptyValue/>
+</ListValue>
+<LookupParameterValue domainCfgName="MOC" typeCfgName="SINGLE" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="time_to_inpos" resourceID="MOC151" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm">
+<DisplayFilterLookup domainCfgName="SYS" typeCfgName="PRESENT_OPTIONS" parameterCfgName="name" operandParameterCfgName="requires_option_Cnv">
+<ConditionFilter parameterCfgName="name" operand="valEqual" operandCfgValue="Cnv"/>
+</DisplayFilterLookup>
+</Parameter>
+<Parameter cfgName="use_css" resourceID="MOC152" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="CSS" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="ori_superv_off" resourceID="MOC153" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC154">1</CfgValue>
+<CfgValue resourceID="MOC155">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="not_moving_speed_level" resourceID="MOC156" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_accel_to_track_conveyor" resourceID="MOC157" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="load_id_test_speed_factor" resourceID="MOC158" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="ROBOT_SERIAL_NUMBER" resourceID="MOC159" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC160" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modReadOnly"/>
+<Parameter cfgName="robot_serial_number_high_part" resourceID="MOC161" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="robot_serial_number_low_part" resourceID="MOC162" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="MOTION_SUP" resourceID="MOC163" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC164" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modReadOnly"/>
+<Parameter cfgName="jog_col_detect_on" resourceID="MOC165" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modWriteEnabled">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC166">1</CfgValue>
+<CfgValue resourceID="MOC167">0</CfgValue>
+</ListValue>
+<DisplayFilterLookup domainCfgName="SYS" typeCfgName="PRESENT_OPTIONS" parameterCfgName="name" operandParameterCfgName="requires_option_colldect">
+<ConditionFilter parameterCfgName="name" operand="valEqual" operandCfgValue="colldect"/>
+</DisplayFilterLookup>
+</Parameter>
+<Parameter cfgName="jog_col_detect_level" resourceID="MOC168" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modWriteEnabled">
+<DisplayFilterLookup domainCfgName="SYS" typeCfgName="PRESENT_OPTIONS" parameterCfgName="name" operandParameterCfgName="requires_option_colldect">
+<ConditionFilter parameterCfgName="name" operand="valEqual" operandCfgValue="colldect"/>
+</DisplayFilterLookup>
+</Parameter>
+<Parameter cfgName="path_col_detect_on" resourceID="MOC169" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modWriteEnabled">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC170">1</CfgValue>
+<CfgValue resourceID="MOC171">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="path_col_detect_level" resourceID="MOC172" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modWriteEnabled">
+<DisplayFilterLookup domainCfgName="SYS" typeCfgName="PRESENT_OPTIONS" parameterCfgName="name" operandParameterCfgName="requires_option_colldect">
+<ConditionFilter parameterCfgName="name" operand="valEqual" operandCfgValue="colldect"/>
+</DisplayFilterLookup>
+</Parameter>
+<Parameter cfgName="collision_detection_memory" resourceID="MOC173" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="manipulator_supervision_on" resourceID="MOC174" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC175">1</CfgValue>
+<CfgValue resourceID="MOC176">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="manipulator_supervision_level" resourceID="MOC177" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="SINGLE" resourceID="MOC178" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC179" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="serial_number_high_part" resourceID="MOC180" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="serial_number_low_part" resourceID="MOC181" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="use_single_type" resourceID="MOC182" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="SINGLE_TYPE" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="use_joint" resourceID="MOC183" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="JOINT" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="base_frame_pos_x" resourceID="MOC184" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="base_frame_pos_y" resourceID="MOC185" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="base_frame_pos_z" resourceID="MOC186" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="base_frame_orient_u0" resourceID="MOC187" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="base_frame_orient_u1" resourceID="MOC188" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="base_frame_orient_u2" resourceID="MOC189" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="base_frame_orient_u3" resourceID="MOC190" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="base_frame_coordinated" resourceID="MOC191" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<EmptyValue/>
+</ListValue>
+<LookupParameterValue domainCfgName="MOC" typeCfgName="ROBOT" parameterCfgName="name" userEdit="false"/>
+<LookupParameterValue domainCfgName="MOC" typeCfgName="SINGLE" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="gravity_alpha" resourceID="MOC192" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="gravity_beta" resourceID="MOC193" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="not_moving_speed_level" resourceID="MOC194" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="ignore_joint_wzone" resourceID="MOC195" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC196">1</CfgValue>
+<CfgValue resourceID="MOC197">0</CfgValue>
+</ListValue>
+</Parameter>
+</Type>
+<Type cfgName="SINGLE_TYPE" resourceID="MOC198" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC199" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="mechanics" resourceID="MOC200" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC201">TRACK</CfgValue>
+<CfgValue resourceID="MOC202">FREE_ROT</CfgValue>
+<CfgValue resourceID="MOC203">SG_LIN</CfgValue>
+<CfgValue resourceID="MOC204">EXT_LIN</CfgValue>
+<CfgValue resourceID="MOC205">EXT_ROT</CfgValue>
+<CfgValue resourceID="MOC206">SS_LIN</CfgValue>
+<CfgValue resourceID="MOC207">SS_ROT</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="indexing_move" resourceID="MOC208" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC209">1</CfgValue>
+<CfgValue resourceID="MOC210">0</CfgValue>
+</ListValue>
+<DisplayFilterLookup domainCfgName="SYS" typeCfgName="PRESENT_OPTIONS" parameterCfgName="name" operandParameterCfgName="requires_option_Cnv">
+<ConditionFilter parameterCfgName="name" operand="valEqual" operandCfgValue="Cnv"/>
+</DisplayFilterLookup>
+</Parameter>
+<Parameter cfgName="pretrig_time" resourceID="MOC211" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm">
+<DisplayFilterLookup domainCfgName="SYS" typeCfgName="PRESENT_OPTIONS" parameterCfgName="name" operandParameterCfgName="requires_option_Cnv">
+<ConditionFilter parameterCfgName="name" operand="valEqual" operandCfgValue="Cnv"/>
+</DisplayFilterLookup>
+</Parameter>
+<Parameter cfgName="pocket_size" resourceID="MOC212" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm">
+<DisplayFilterLookup domainCfgName="SYS" typeCfgName="PRESENT_OPTIONS" parameterCfgName="name" operandParameterCfgName="requires_option_Cnv">
+<ConditionFilter parameterCfgName="name" operand="valEqual" operandCfgValue="Cnv"/>
+</DisplayFilterLookup>
+</Parameter>
+</Type>
+<Type cfgName="PATH_SENSOR_SYNC" resourceID="MOC213" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC214" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_adv_dist_for_decel" resourceID="MOC215" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_delay_dist_for_decel" resourceID="MOC216" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_sync_speed" resourceID="MOC217" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="min_sync_speed" resourceID="MOC218" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_sync_accel" resourceID="MOC219" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="stop_type" resourceID="MOC220" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC221">NO_STOP</CfgValue>
+<CfgValue resourceID="MOC222">SYS_STOP</CfgValue>
+<CfgValue resourceID="MOC223">STOP_ON_PATH</CfgValue>
+<CfgValue resourceID="MOC224">STOP_MESSAGE</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="sync_type" resourceID="MOC225" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC226">MINIMAL_DIST</CfgValue>
+<CfgValue resourceID="MOC227">NOM_SPEED_SENS</CfgValue>
+<CfgValue resourceID="MOC228">NOM_SPEED_CALC</CfgValue>
+<CfgValue resourceID="MOC229">MIN_DIST_CALC</CfgValue>
+<CfgValue resourceID="MOC230">ROBOT_TO_ROBOT</CfgValue>
+<CfgValue resourceID="MOC231">ROBOT_TO_PRESS</CfgValue>
+<CfgValue resourceID="MOC232">ROBOT_TO_HPRESS</CfgValue>
+<CfgValue resourceID="MOC233">LOW_SPEED_SYNC</CfgValue>
+<CfgValue resourceID="MOC234">SYNC_TO_PROF1</CfgValue>
+<CfgValue resourceID="MOC235">SYNC_TO_IMM</CfgValue>
+<CfgValue resourceID="MOC236">SYNC_TO_TPRESS</CfgValue>
+<CfgValue resourceID="MOC237">HIGH_SPEED_SYNC</CfgValue>
+</ListValue>
+</Parameter>
+</Type>
+<Type cfgName="JOINT" resourceID="MOC238" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC239" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="logical_axis" resourceID="MOC240" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="use_process" resourceID="MOC241" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="PROCESS" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="follower_to_joint" resourceID="MOC242" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="JOINT" parameterCfgName="name" userEdit="true"/>
+</Parameter>
+<Parameter cfgName="lock_joint_in_ipol" resourceID="MOC243" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC244">1</CfgValue>
+<CfgValue resourceID="MOC245">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="use_drive_system" resourceID="MOC246" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="DRIVE_SYSTEM" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="use_drive_module" resourceID="MOC247" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="DRIVE_MODULE" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="drive_module" resourceID="MOC248" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="DRIVE_MODULE" resourceID="MOC249" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC250" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="number" resourceID="MOC251" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="low_voltage_power_supply_hold_time" resourceID="MOC252" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="DRIVE_MODULE_USER_DATA" resourceID="MOC253" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC254" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="disconnect_allowed" resourceID="MOC255" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC256">1</CfgValue>
+<CfgValue resourceID="MOC257">0</CfgValue>
+</ListValue>
+</Parameter>
+</Type>
+<Type cfgName="MEASUREMENT_CHANNEL" resourceID="MOC258" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC259" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="measurement_link" resourceID="MOC260" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="board_position" resourceID="MOC261" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="measurement_node" resourceID="MOC262" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="disconnect_at_deactivate" resourceID="MOC263" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC264">1</CfgValue>
+<CfgValue resourceID="MOC265">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="max_normalized_input_level" resourceID="MOC266" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="min_normalized_input_level" resourceID="MOC267" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="acc_limitation_active" resourceID="MOC268" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC269">1</CfgValue>
+<CfgValue resourceID="MOC270">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="acc_limit_min" resourceID="MOC271" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="PMC_SENSOR_SETUP" resourceID="MOC272" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC273" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="sensor_type" resourceID="MOC274" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC275">1</CfgValue>
+<CfgValue resourceID="MOC276">2</CfgValue>
+<CfgValue resourceID="MOC277">3</CfgValue>
+<CfgValue resourceID="MOC278">4</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="board_type" resourceID="MOC279" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="MEASUREMENT_BOARD_TYPE" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="link" resourceID="MOC280" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="board" resourceID="MOC281" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="serial_number" resourceID="MOC282" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_voltage" resourceID="MOC283" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fx_value1" resourceID="MOC284" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fx_value2" resourceID="MOC285" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fx_value3" resourceID="MOC286" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fx_value4" resourceID="MOC287" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fx_value5" resourceID="MOC288" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fx_value6" resourceID="MOC289" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fy_value1" resourceID="MOC290" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fy_value2" resourceID="MOC291" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fy_value3" resourceID="MOC292" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fy_value4" resourceID="MOC293" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fy_value5" resourceID="MOC294" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fy_value6" resourceID="MOC295" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fz_value1" resourceID="MOC296" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fz_value2" resourceID="MOC297" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fz_value3" resourceID="MOC298" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fz_value4" resourceID="MOC299" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fz_value5" resourceID="MOC300" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fz_value6" resourceID="MOC301" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="tx_value1" resourceID="MOC302" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="tx_value2" resourceID="MOC303" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="tx_value3" resourceID="MOC304" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="tx_value4" resourceID="MOC305" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="tx_value5" resourceID="MOC306" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="tx_value6" resourceID="MOC307" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="ty_value1" resourceID="MOC308" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="ty_value2" resourceID="MOC309" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="ty_value3" resourceID="MOC310" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="ty_value4" resourceID="MOC311" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="ty_value5" resourceID="MOC312" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="ty_value6" resourceID="MOC313" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="tz_value1" resourceID="MOC314" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="tz_value2" resourceID="MOC315" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="tz_value3" resourceID="MOC316" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="tz_value4" resourceID="MOC317" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="tz_value5" resourceID="MOC318" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="tz_value6" resourceID="MOC319" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fx_scale" resourceID="MOC320" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fy_scale" resourceID="MOC321" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fz_scale" resourceID="MOC322" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="tx_scale" resourceID="MOC323" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="ty_scale" resourceID="MOC324" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="tz_scale" resourceID="MOC325" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fx_value_max" resourceID="MOC326" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fy_value_max" resourceID="MOC327" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fz_value_max" resourceID="MOC328" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="tx_value_max" resourceID="MOC329" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="ty_value_max" resourceID="MOC330" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="tz_value_max" resourceID="MOC331" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="safety_channel_disabled" resourceID="MOC332" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC333">1</CfgValue>
+<CfgValue resourceID="MOC334">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="safety_channel_level" resourceID="MOC335" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="saturation_check_disabled" resourceID="MOC336" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC337">1</CfgValue>
+<CfgValue resourceID="MOC338">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="max_time_in_sat_warn" resourceID="MOC339" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_time_in_sat_err" resourceID="MOC340" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_sensor_output_voltage" resourceID="MOC341" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="saturation_check_percentage" resourceID="MOC342" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="ARM" resourceID="MOC343" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC344" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="independent_joint_on" resourceID="MOC345" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC346">1</CfgValue>
+<CfgValue resourceID="MOC347">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="upper_joint_bound" resourceID="MOC348" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="lower_joint_bound" resourceID="MOC349" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="ind_upper_joint_bound" resourceID="MOC350" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm">
+<DisplayFilterLookup domainCfgName="SYS" typeCfgName="PRESENT_OPTIONS" parameterCfgName="name" operandParameterCfgName="requires_option_indepmove">
+<ConditionFilter parameterCfgName="name" operand="valEqual" operandCfgValue="indepmove"/>
+</DisplayFilterLookup>
+</Parameter>
+<Parameter cfgName="ind_lower_joint_bound" resourceID="MOC351" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm">
+<DisplayFilterLookup domainCfgName="SYS" typeCfgName="PRESENT_OPTIONS" parameterCfgName="name" operandParameterCfgName="requires_option_indepmove">
+<ConditionFilter parameterCfgName="name" operand="valEqual" operandCfgValue="indepmove"/>
+</DisplayFilterLookup>
+</Parameter>
+<Parameter cfgName="cal_position" resourceID="MOC352" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="performance_quota" resourceID="MOC353" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="supervision_jam_time_factor" resourceID="MOC354" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="supervision_load_factor" resourceID="MOC355" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="supervision_speed_factor" resourceID="MOC356" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="supervision_pos_factor" resourceID="MOC357" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="ext_const_torque" resourceID="MOC358" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="use_customer_arm_load" resourceID="MOC359" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<EmptyValue/>
+</ListValue>
+<LookupParameterValue domainCfgName="MOC" typeCfgName="ARM_LOAD" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="use_check_point" resourceID="MOC360" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<EmptyValue/>
+</ListValue>
+<LookupParameterValue domainCfgName="MOC" typeCfgName="ARM_CHECK_POINT" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="ext_prop_torque" resourceID="MOC361" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="ext_prop_zero_angle" resourceID="MOC362" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="load_id_acc_ratio" resourceID="MOC363" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="angle_acc_ratio" resourceID="MOC364" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="deactivate_cyclic_brake_check_arm" resourceID="MOC365" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC366">1</CfgValue>
+<CfgValue resourceID="MOC367">0</CfgValue>
+</ListValue>
+</Parameter>
+</Type>
+<Type cfgName="ARM_CHECK_POINT" resourceID="MOC368" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC369" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="position_x" resourceID="MOC370" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="position_y" resourceID="MOC371" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="position_z" resourceID="MOC372" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="ARM_LOAD" resourceID="MOC373" addRemoveInstances="true" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC374" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="mass" resourceID="MOC375" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="mass_centre_x" resourceID="MOC376" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="mass_centre_y" resourceID="MOC377" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="mass_centre_z" resourceID="MOC378" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="inertia_x" resourceID="MOC379" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="inertia_y" resourceID="MOC380" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="inertia_z" resourceID="MOC381" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="ACC_DATA" resourceID="MOC382" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC383" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="wc_acc" resourceID="MOC384" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="wc_dec" resourceID="MOC385" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="wc_dacc_ratio" resourceID="MOC386" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="wc_ddec_ratio" resourceID="MOC387" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="TRANSMISSION" resourceID="MOC388" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC389" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="rotating_move" resourceID="MOC390" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC391">1</CfgValue>
+<CfgValue resourceID="MOC392">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="transm_joint" resourceID="MOC393" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="high_gear" resourceID="MOC394" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="low_gear" resourceID="MOC395" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="BRAKE" resourceID="MOC396" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC397" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="control_off_speed_limit" resourceID="MOC398" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="brake_ramp_speed_limit" resourceID="MOC399" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="absolute_brake_torque" resourceID="MOC400" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="brake_control_on_delay_time" resourceID="MOC401" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="brake_control_on_min_delay_time" resourceID="MOC402" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="control_off_delay_time" resourceID="MOC403" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_brake_release_time" resourceID="MOC404" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="use_brake_type" resourceID="MOC405" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="BRAKE_TYPE" parameterCfgName="name" userEdit="true"/>
+</Parameter>
+<Parameter cfgName="max_static_arm_torque" resourceID="MOC406" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_brake_time" resourceID="MOC407" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="SUPERVISION" resourceID="MOC408" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC409" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="brake_release_supervision_on" resourceID="MOC410" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC411">1</CfgValue>
+<CfgValue resourceID="MOC412">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="speed_supervision_on" resourceID="MOC413" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC414">1</CfgValue>
+<CfgValue resourceID="MOC415">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="position_supervision_on" resourceID="MOC416" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC417">1</CfgValue>
+<CfgValue resourceID="MOC418">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="counter_supervision_on" resourceID="MOC419" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC420">1</CfgValue>
+<CfgValue resourceID="MOC421">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="jam_supervision_on" resourceID="MOC422" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC423">1</CfgValue>
+<CfgValue resourceID="MOC424">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="load_supervision_on" resourceID="MOC425" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC426">1</CfgValue>
+<CfgValue resourceID="MOC427">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="power_up_position_on" resourceID="MOC428" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC429">1</CfgValue>
+<CfgValue resourceID="MOC430">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="in_position_range" resourceID="MOC431" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="normalized_zero_speed" resourceID="MOC432" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="joint_affect_forced_Kp" resourceID="MOC433" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC434">1</CfgValue>
+<CfgValue resourceID="MOC435">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="Kp_forced_on_limit" resourceID="MOC436" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="Kp_forced_off_limit" resourceID="MOC437" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="thermal_supervision_sensitivity_ratio" resourceID="MOC438" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="SUPERVISION_TYPE" resourceID="MOC439" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC440" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fc_position_limit" resourceID="MOC441" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fc_speed_limit_factor" resourceID="MOC442" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="dynamic_power_up_position_limit" resourceID="MOC443" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="teach_mode_speed_max_main" resourceID="MOC444" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_jam_time" resourceID="MOC445" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_overload_time" resourceID="MOC446" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="auto_mode_max_speed_sup_limit" resourceID="MOC447" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="influence_group" resourceID="MOC448" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="teach_mode_speed_max_dsp" resourceID="MOC449" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="brake_release_position_alarm_limit" resourceID="MOC450" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="brake_release_position_ok_ratio" resourceID="MOC451" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="PROCESS" resourceID="MOC452" addRemoveInstances="true" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC453" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="use_sg_process" resourceID="MOC454" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="SG_PROCESS" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="use_linked_m_proc" resourceID="MOC455" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="LINKED_M_PROCESS" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+</Type>
+<Type cfgName="SG_PROCESS" resourceID="MOC456" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC457" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="use_force_master" resourceID="MOC458" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="FORCE_MASTER" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="sync_check_off" resourceID="MOC459" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC460">1</CfgValue>
+<CfgValue resourceID="MOC461">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="min_close_time_adjust" resourceID="MOC462" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="close_position_adjust" resourceID="MOC463" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="pre_sync_delay_time" resourceID="MOC464" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_motor_torque" resourceID="MOC465" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="post_sync_time" resourceID="MOC466" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="calib_mode" resourceID="MOC467" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="calib_force_high" resourceID="MOC468" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="calib_force_low" resourceID="MOC469" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="calib_time" resourceID="MOC470" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="no_of_active_db_posts" resourceID="MOC471" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_force_1" resourceID="MOC472" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_torque_1" resourceID="MOC473" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_force_2" resourceID="MOC474" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_torque_2" resourceID="MOC475" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_force_3" resourceID="MOC476" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_torque_3" resourceID="MOC477" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_force_4" resourceID="MOC478" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_torque_4" resourceID="MOC479" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_force_5" resourceID="MOC480" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_torque_5" resourceID="MOC481" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_force_6" resourceID="MOC482" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_torque_6" resourceID="MOC483" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_force_7" resourceID="MOC484" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_torque_7" resourceID="MOC485" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_force_8" resourceID="MOC486" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_torque_8" resourceID="MOC487" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_force_9" resourceID="MOC488" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_torque_9" resourceID="MOC489" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_force_10" resourceID="MOC490" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_torque_10" resourceID="MOC491" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_pos_1" resourceID="MOC492" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_pos_2" resourceID="MOC493" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_pos_3" resourceID="MOC494" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_pos_4" resourceID="MOC495" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_pos_5" resourceID="MOC496" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_pos_6" resourceID="MOC497" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_pos_7" resourceID="MOC498" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_pos_8" resourceID="MOC499" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_pos_9" resourceID="MOC500" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="squeeze_pos_10" resourceID="MOC501" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="soft_stop_timeout" resourceID="MOC502" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="brake_release_delay" resourceID="MOC503" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="LINKED_M_PROCESS" resourceID="MOC504" addRemoveInstances="true" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC505" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="offset_adj_delay_time" resourceID="MOC506" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_offset" resourceID="MOC507" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_offset_speed" resourceID="MOC508" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="offset_speed_ratio" resourceID="MOC509" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="kp_offset" resourceID="MOC510" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="ramp_time" resourceID="MOC511" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="torque_follower" resourceID="MOC512" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC513">1</CfgValue>
+<CfgValue resourceID="MOC514">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="torque_distribution" resourceID="MOC515" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="follower_axis_pos_accuracy_reduction" resourceID="MOC516" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="FORCE_MASTER" resourceID="MOC517" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC518" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="use_force_master_control" resourceID="MOC519" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="FORCE_MASTER_CONTROL" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="ramp_torque_ref_closing" resourceID="MOC520" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="bandwidth_ramping" resourceID="MOC521" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="bandwidth_lp" resourceID="MOC522" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="col_speed" resourceID="MOC523" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="alarm_torque" resourceID="MOC524" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="distance_to_contact_position" resourceID="MOC525" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="force_ready_detection_bandwidth" resourceID="MOC526" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="force_ready_detection_speed" resourceID="MOC527" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="ramp_time" resourceID="MOC528" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="delay_ramp" resourceID="MOC529" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="ramp_time_switch" resourceID="MOC530" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC531">1</CfgValue>
+<CfgValue resourceID="MOC532">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="max_pos_error_closing" resourceID="MOC533" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="ramp_to_real_contact" resourceID="MOC534" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC535">1</CfgValue>
+<CfgValue resourceID="MOC536">0</CfgValue>
+</ListValue>
+</Parameter>
+</Type>
+<Type cfgName="FORCE_MASTER_CONTROL" resourceID="MOC537" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC538" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="no_of_posts" resourceID="MOC539" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="torque_1" resourceID="MOC540" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="torque_2" resourceID="MOC541" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="torque_3" resourceID="MOC542" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="torque_4" resourceID="MOC543" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="torque_5" resourceID="MOC544" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="torque_6" resourceID="MOC545" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="Kv_1" resourceID="MOC546" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="Kv_2" resourceID="MOC547" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="Kv_3" resourceID="MOC548" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="Kv_4" resourceID="MOC549" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="Kv_5" resourceID="MOC550" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="Kv_6" resourceID="MOC551" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="speed_lim_1" resourceID="MOC552" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="speed_lim_2" resourceID="MOC553" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="speed_lim_3" resourceID="MOC554" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="speed_lim_4" resourceID="MOC555" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="speed_lim_5" resourceID="MOC556" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="speed_lim_6" resourceID="MOC557" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="DRIVE_SYSTEM" resourceID="MOC558" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC559" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="use_dc_link" resourceID="MOC560" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="DC_LINK" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="use_drive_unit" resourceID="MOC561" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="DRIVE_UNIT" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="current_vector_on" resourceID="MOC562" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC563">1</CfgValue>
+<CfgValue resourceID="MOC564">0</CfgValue>
+</ListValue>
+</Parameter>
+</Type>
+<Type cfgName="MAINS" resourceID="MOC565" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC566" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="u_tolerance_min" resourceID="MOC567" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="u_tolerance_max" resourceID="MOC568" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="DRIVE_UNIT" resourceID="MOC569" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC570" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modReadOnly"/>
+<Parameter cfgName="unit_position" resourceID="MOC571" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="MOTOR" resourceID="MOC572" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC573" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="use_motor_type" resourceID="MOC574" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="MOTOR_TYPE" parameterCfgName="name" userEdit="true"/>
+</Parameter>
+<Parameter cfgName="use_motor_calib" resourceID="MOC575" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="MOTOR_CALIB" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+</Type>
+<Type cfgName="MOTOR_TYPE" resourceID="MOC576" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC577" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="pole_pairs" resourceID="MOC578" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="i_max" resourceID="MOC579" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="ke" resourceID="MOC580" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="torque_0" resourceID="MOC581" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="r_stator_20" resourceID="MOC582" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="l_stator" resourceID="MOC583" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="MOTOR_CALIB" resourceID="MOC584" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC585" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="com_offset" resourceID="MOC586" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="valid_com_offset" resourceID="MOC587" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC588">1</CfgValue>
+<CfgValue resourceID="MOC589">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="cal_offset" resourceID="MOC590" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="valid_cal_offset" resourceID="MOC591" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC592">1</CfgValue>
+<CfgValue resourceID="MOC593">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="cal_sensor_position" resourceID="MOC594" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="STRESS_DUTY_CYCLE" resourceID="MOC595" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC596" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="speed_absolute_max" resourceID="MOC597" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="torque_absolute_max" resourceID="MOC598" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="CONTROL_PARAMETERS" resourceID="MOC599" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC600" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="friction_ffw_on" resourceID="MOC601" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC602">1</CfgValue>
+<CfgValue resourceID="MOC603">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="friction_ffw_level" resourceID="MOC604" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="friction_ffw_ramp" resourceID="MOC605" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="UCCM0" resourceID="MOC606" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC607" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="Kp" resourceID="MOC608" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="Kv" resourceID="MOC609" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="Ti" resourceID="MOC610" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="speed_max_n" resourceID="MOC611" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="acc_max_n" resourceID="MOC612" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="dec_max_n" resourceID="MOC613" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="CSS" resourceID="MOC614" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC615" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="act_smoothness_time" resourceID="MOC616" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="deact_smoothness_time" resourceID="MOC617" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_pos_error_x" resourceID="MOC618" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_pos_error_y" resourceID="MOC619" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_pos_error_z" resourceID="MOC620" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_pos_error_rx" resourceID="MOC621" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_pos_error_ry" resourceID="MOC622" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_pos_error_rz" resourceID="MOC623" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_speed_error_x" resourceID="MOC624" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_speed_error_y" resourceID="MOC625" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_speed_error_z" resourceID="MOC626" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_speed_error_rx" resourceID="MOC627" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_speed_error_ry" resourceID="MOC628" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_speed_error_rz" resourceID="MOC629" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="damping_stability_limit" resourceID="MOC630" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="force_offset_ramp" resourceID="MOC631" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="dynamic_to_static_fric_ratio" resourceID="MOC632" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="stiffness_non_soft_dir_min" resourceID="MOC633" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="stiffness_non_soft_dir_max" resourceID="MOC634" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="stiffness_min" resourceID="MOC635" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="stiffness_max" resourceID="MOC636" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="stiffness_to_damping_ratio" resourceID="MOC637" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="stiffness_non_soft_dir_min_move" resourceID="MOC638" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="stiffness_non_soft_dir_max_move" resourceID="MOC639" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="stiffness_min_move" resourceID="MOC640" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="stiffness_max_move" resourceID="MOC641" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="stiffness_to_damping_ratio_move" resourceID="MOC642" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="auto_reactivation_disabled" resourceID="MOC643" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC644">1</CfgValue>
+<CfgValue resourceID="MOC645">0</CfgValue>
+</ListValue>
+</Parameter>
+</Type>
+<Type cfgName="FC_MASTER" resourceID="MOC646" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC647" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="use_fc_sensor" resourceID="MOC648" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="FC_SENSOR" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="use_fc_kinematics" resourceID="MOC649" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="FC_KINEMATICS" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="use_fc_application" resourceID="MOC650" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="FC_APPLICATION" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="use_fc_speed_change" resourceID="MOC651" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="FC_SPEED_CHANGE" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+</Type>
+<Type cfgName="PMC_SENSOR" resourceID="MOC652" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC653" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="use_pmc_sensor_setup" resourceID="MOC654" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="PMC_SENSOR_SETUP" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+</Type>
+<Type cfgName="FC_SENSOR" resourceID="MOC655" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC656" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm">
+<LookupParameterValue domainCfgName="MOC" typeCfgName="PMC_SENSOR" parameterCfgName="name" userEdit="false"/>
+</Parameter>
+<Parameter cfgName="force_sensor_frame_pos_x" resourceID="MOC657" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="force_sensor_frame_pos_y" resourceID="MOC658" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="force_sensor_frame_pos_z" resourceID="MOC659" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="force_sensor_frame_orient_u0" resourceID="MOC660" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="force_sensor_frame_orient_u1" resourceID="MOC661" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="force_sensor_frame_orient_u2" resourceID="MOC662" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="force_sensor_frame_orient_u3" resourceID="MOC663" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="force_sensor_mount_unit_name" resourceID="MOC664" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="force_sensor_type" resourceID="MOC665" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC666">1</CfgValue>
+<CfgValue resourceID="MOC667">2</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="force_sensor_noise" resourceID="MOC668" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="FC_KINEMATICS" resourceID="MOC669" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC670" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="damping_fx" resourceID="MOC671" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="damping_fy" resourceID="MOC672" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="damping_fz" resourceID="MOC673" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="damping_tx" resourceID="MOC674" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="damping_ty" resourceID="MOC675" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="damping_tz" resourceID="MOC676" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="force_loop_filter_bandwidth" resourceID="MOC677" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="force_frame_filter_bandwidth" resourceID="MOC678" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="FC_APPLICATION" resourceID="MOC679" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC680" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_force" resourceID="MOC681" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_force_change" resourceID="MOC682" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_torque" resourceID="MOC683" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_torque_change" resourceID="MOC684" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_lin_speed" resourceID="MOC685" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_rot_speed" resourceID="MOC686" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_lin_acc" resourceID="MOC687" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_rot_acc" resourceID="MOC688" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="axc_force_min" resourceID="MOC689" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="axc_force_max" resourceID="MOC690" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="axc_torque_min" resourceID="MOC691" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="axc_torque_max" resourceID="MOC692" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="spd_superv_override_factor" resourceID="MOC693" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_lin_speed_press" resourceID="MOC694" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_rot_speed_press" resourceID="MOC695" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="keep_contact_when_deactivating_fc" resourceID="MOC696" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC697">1</CfgValue>
+<CfgValue resourceID="MOC698">0</CfgValue>
+</ListValue>
+</Parameter>
+</Type>
+<Type cfgName="FC_SPEED_CHANGE" resourceID="MOC699" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC700" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="speed_ratio_min" resourceID="MOC701" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="no_of_speed_levels" resourceID="MOC702" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="speed_ratio_delta" resourceID="MOC703" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="speed_max_update_period" resourceID="MOC704" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fdb_type" resourceID="MOC705" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC706">0</CfgValue>
+<CfgValue resourceID="MOC707">1</CfgValue>
+<CfgValue resourceID="MOC708">2</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="fdb_offset" resourceID="MOC709" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fdb_lp_active" resourceID="MOC710" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC711">1</CfgValue>
+<CfgValue resourceID="MOC712">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="fdb_lp_bandwidth" resourceID="MOC713" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="max_tcp_speed" resourceID="MOC714" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="recover_rule_fdb_ratio" resourceID="MOC715" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="dec_rule_safety_fdb_to_ref_ratio" resourceID="MOC716" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="dec_rule_safety_fdb_time" resourceID="MOC717" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fdb_trend_step_size" resourceID="MOC718" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="fdb_dac_channel" resourceID="MOC719" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="dec_rule1_fdb_to_ref_ratio" resourceID="MOC720" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="dec_rule1_fdb_trend" resourceID="MOC721" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="dec_rule2_fdb_to_ref_ratio" resourceID="MOC722" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="dec_rule2_fdb_trend" resourceID="MOC723" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="inc_rule1_fdb_to_ref_ratio" resourceID="MOC724" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="inc_rule1_fdb_trend" resourceID="MOC725" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="inc_rule2_fdb_to_ref_ratio" resourceID="MOC726" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="inc_rule2_fdb_trend" resourceID="MOC727" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="LCM0" resourceID="MOC728" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC729" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="Kp" resourceID="MOC730" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="Kv" resourceID="MOC731" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="Ti" resourceID="MOC732" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="use_inpos_forced_control" resourceID="MOC733" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC734">1</CfgValue>
+<CfgValue resourceID="MOC735">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="Kp_forced_factor" resourceID="MOC736" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="Ki_forced_factor" resourceID="MOC737" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="Kp_raise_time" resourceID="MOC738" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="notch_filter_active" resourceID="MOC739" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC740">1</CfgValue>
+<CfgValue resourceID="MOC741">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="notch_filter_frequency" resourceID="MOC742" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="notch_filter_width" resourceID="MOC743" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="notch_auto_mode" resourceID="MOC744" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC745">1</CfgValue>
+<CfgValue resourceID="MOC746">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="notch_auto_no_weave_freq" resourceID="MOC747" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="notch_auto_min_frequency" resourceID="MOC748" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="notch_auto_max_rel_change" resourceID="MOC749" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="ffw_mode" resourceID="MOC750" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC751">0</CfgValue>
+<CfgValue resourceID="MOC752">1</CfgValue>
+<CfgValue resourceID="MOC753">2</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="bandwidth" resourceID="MOC754" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="resonance_frequency" resourceID="MOC755" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="resonance_damping" resourceID="MOC756" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="delay_time" resourceID="MOC757" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="inertia" resourceID="MOC758" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="soft_servo_K_max_factor" resourceID="MOC759" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="soft_servo_K_min_factor" resourceID="MOC760" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="soft_servo_Kp_Kv_ratio_factor" resourceID="MOC761" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="soft_servo_t_ramp" resourceID="MOC762" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="CFRIC_BLOCK" resourceID="MOC763" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC764" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="friction_ff_on" resourceID="MOC765" userInput="cfgDefaultOk" parameterType="typeBoolean" modifyOptions="modRestartWarm">
+<ListValue userEdit="false">
+<CfgValue resourceID="MOC766">1</CfgValue>
+<CfgValue resourceID="MOC767">0</CfgValue>
+</ListValue>
+</Parameter>
+<Parameter cfgName="friction_ff_level" resourceID="MOC768" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="friction_ff_ramp" resourceID="MOC769" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="JOG_PARAMETERS" resourceID="MOC770" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC771" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="linear_step_size" resourceID="MOC772" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="reorient_step_size" resourceID="MOC773" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="joint_step_size" resourceID="MOC774" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="SIS_EXTERNAL" resourceID="MOC775" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC776" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="prod_time_service_interval" resourceID="MOC777" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="prod_time_warning_level" resourceID="MOC778" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="calender_time_service_interval" resourceID="MOC779" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="calender_time_warning_level" resourceID="MOC780" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="gear_box_warning_level" resourceID="MOC781" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="ambient_temperature" resourceID="MOC782" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+<Type cfgName="SIS_EXTERNAL_SINGLE" resourceID="MOC783" addRemoveInstances="false" instanceVisibility="showAll">
+<Parameter cfgName="name" resourceID="MOC784" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="prod_time_service_interval" resourceID="MOC785" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="prod_time_warning_level" resourceID="MOC786" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="calender_time_service_interval" resourceID="MOC787" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="calender_time_warning_level" resourceID="MOC788" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="gear_box_warning_level" resourceID="MOC789" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm"/>
+<Parameter cfgName="ambient_temperature" resourceID="MOC790" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm"/>
+</Type>
+</Domain>

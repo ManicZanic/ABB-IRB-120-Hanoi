@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Resource Name="sis_texts" Language="ro">
+  <Text Name="1">
+    <Value>OK</Value>
+    <Comment>Used for function keys TPReadFK, no_of_char 5</Comment>
+  </Text>
+  <Text Name="2">
+    <Value>Res.</Value>
+    <Comment>Used for function keys TPReadFK, no_of_char 5</Comment>
+  </Text>
+  <Text Name="3">
+    <Value>Da</Value>
+    <Comment>Used for function keys TPReadFK, no_of_char 5</Comment>
+  </Text>
+  <Text Name="4">
+    <Value>Nu</Value>
+    <Comment>Used for function keys TPReadFK, no_of_char 5</Comment>
+  </Text>
+  <Text Name="5">
+    <Value>OK</Value>
+    <Comment>Status of issue i.e. Gear Oil OK, no_of_char 5</Comment>
+  </Text>
+  <Text Name="6">
+    <Value>NOK</Value>
+    <Comment>Status of issue i.e. Gear Oil NOK, no_of_char 5</Comment>
+  </Text>
+  <Text Name="7">
+    <Value>Ies.</Value>
+    <Comment>Exit of service routine, no_of_char 5</Comment>
+  </Text>
+  <Text Name="8">
+    <Value>Revoc</Value>
+    <Comment>no_of_char 5 </Comment>
+  </Text>
+  <Text Name="10">
+    <Value>Sistem de informatii întretinere</Value>
+    <Comment>Title in main window, no_of_char 38</Comment>
+  </Text>
+  <Text Name="11">
+    <Value>Timp calendar</Value>
+    <Comment>First item in main window's menu Calendar Time, no_of_char 15</Comment>
+  </Text>
+  <Text Name="12">
+    <Value>Timp function.</Value>
+    <Comment>Second item in main window's menu Product Time, no_of_char 15</Comment>
+  </Text>
+  <Text Name="13">
+    <Value>Reductor</Value>
+    <Comment>Third item in main window's menu Gear oil, no_of_char 15</Comment>
+  </Text>
+  <Text Name="20">
+    <Value>Iesiti?</Value>
+    <Comment>Exit or no, no_of_char 39</Comment>
+  </Text>
+  <Text Name="21">
+    <Value>Resetati?</Value>
+    <Comment>Reset or not reset, no_of_char 39</Comment>
+  </Text>
+  <Text Name="22">
+    <Value>Interval de întretinere depasit!</Value>
+    <Comment>Service level exceeded, no_of_char 39</Comment>
+  </Text>
+  <Text Name="23">
+    <Value>Date indisponibile!</Value>
+    <Comment>Promted when there's no data available, no_of_char 39
+</Comment>
+  </Text>
+  <Text Name="30">
+    <Value>Întret. preced.:</Value>
+    <Comment>First item Calendar Time window, no_of_char 15</Comment>
+  </Text>
+  <Text Name="31">
+    <Value>Timp scurs:</Value>
+    <Comment>Second item Calendar Time window, Elapsed days since last service, no_of_char 15</Comment>
+  </Text>
+  <Text Name="32">
+    <Value>Urmat. întret.:</Value>
+    <Comment>Third item Calendar Time window  Date of next service, no_of_char 15</Comment>
+  </Text>
+  <Text Name="33">
+    <Value>Timp ramas:</Value>
+    <Comment>Fourth item Calendar Time window, Days to next service, no_of_char 15</Comment>
+  </Text>
+  <Text Name="34">
+    <Value>zi(le)</Value>
+    <Comment>Unit of time, no_of_char 16</Comment>
+  </Text>
+  <Text Name="40">
+    <Value>Interv. întret:</Value>
+    <Comment>First item in Production window, Total number of production hours, no_of_char 15</Comment>
+  </Text>
+  <Text Name="41">
+    <Value>Timp scurs:</Value>
+    <Comment>Second item Production window, Number of production hours since last service, no_of_char 15</Comment>
+  </Text>
+  <Text Name="42">
+    <Value>Timp ramas:</Value>
+    <Comment>Third item Production window, Number of production hours to last service, no_of_char 15</Comment>
+  </Text>
+  <Text Name="43">
+    <Value>ore</Value>
+    <Comment>Unit of time, no_of_char 15</Comment>
+  </Text>
+  <Text Name="44">
+    <Value>minute</Value>
+    <Comment>Unit of time, no_of_char 15</Comment>
+  </Text>
+  <Text Name="50">
+    <Value>Axa</Value>
+    <Comment>Joint, no_of_char 5</Comment>
+  </Text>
+  <Text Name="51">
+    <Value>Timp utilizat:</Value>
+    <Comment>Consumed time of estimated service interval, Perscent, no_of_char 15</Comment>
+  </Text>
+  <Text Name="52">
+    <Value>Timp scurs:</Value>
+    <Comment>Time since last service, no_of_char 16</Comment>
+  </Text>
+  <Text Name="53">
+    <Value>Timp ramas:</Value>
+    <Comment>Estimated remaining time, no_of_char 16</Comment>
+  </Text>
+  <Text Name="54">
+    <Value>ore</Value>
+    <Comment>Unit of time, no_of_char 16</Comment>
+  </Text>
+  <Text Name="55">
+    <Value>Alegeti o unitate mecanica</Value>
+    <Comment>Second unit, simple instruction, no_of_char 39</Comment>
+  </Text>
+  <Text Name="56">
+    <Value>Date SIS indisponibile pentru</Value>
+    <Comment>no_of_char 39</Comment>
+  </Text>
+</Resource>

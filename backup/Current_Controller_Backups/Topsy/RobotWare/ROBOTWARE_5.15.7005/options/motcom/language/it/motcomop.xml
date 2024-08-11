@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Resource Name="MOTCOM" Language="it">
+  <Text Name="100">
+    <Value>Routine di servizio di commutazione del motore</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="101">
+    <Value>Il modo Commutazione è disattivato</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="102">
+    <Value>Continua</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="103">
+    <Value>"Si desidera commutare un altro asse?"</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="104">
+    <Value>"Attivare l'unità nella finestra del comando ad impulsi"</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="105">
+    <Value>Attenzione</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="106">
+    <Value>Il modo Commutazione per l'unità meccanica</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="107">
+    <Value>verrà ora attivato, ed i freni rilasciati.</Value>
+    <Comment>Maximum length 55 chars. Part two of sentence starting with item 106</Comment>
+  </Text>
+  <Text Name="108">
+    <Value>Prestar attenzione al movimento incontrollato dell'asse.</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="109">
+    <Value>Impossibile selezionare unità meccaniche da questo task</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="110">
+    <Value>Selezionare l'asse</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="111">
+    <Value>Immettere il numero dell'asse da commutare</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="112">
+    <Value>Premere OK per applicare corrente al motore</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="113">
+    <Value>per poterlo spostare alla posizione di commutazione.</Value>
+    <Comment>Maximum length 55 chars. Part two of sentence starting with item 112</Comment>
+  </Text>
+  <Text Name="114">
+    <Value>Spostamento nella posizione di commutazione</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="115">
+    <Value>Angolo corrente del Resolver: </Value>
+    <Comment>Maximum length 55 chars. Numerical value will be appended</Comment>
+  </Text>
+  <Text Name="116">
+    <Value>Premere Comm per commutare, oppure Step per muovere il motore in avanti</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="117">
+    <Value>Commutare o muovere</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="118">
+    <Value>Commuta</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="119">
+    <Value>"Premere OK per commutare il motore"</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="120">
+    <Value>La commutazione del motore è terminata</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="121">
+    <Value>Far procedere la posizione del motore</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="122">
+    <Value>"Premere Step- o Step+ per muovere il motore"</Value>
+    <Comment>Maximum length 55 chars. Do not translate Step+ and Step-.</Comment>
+  </Text>
+  <Text Name="123">
+    <Value>Riazzerare il modo Commutazione</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="124">
+    <Value>Uscire dal modo Commutazione?</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="125">
+    <Value>Il modo Commutazione è disattivato</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="126">
+    <Value>“Selezione dell'unità meccanica”</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="127">
+    <Value>"Il sistema deve trovarsi in modalità manuale"</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="128">
+    <Value>La routine di servizio aiuterà a commutare i motori.</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="129">
+    <Value>Leggere la documentazione prima di procedere.</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="130">
+    <Value>Reset</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="131">
+    <Value>OK</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="132">
+    <Value>Annulla</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="133">
+    <Value>Comm</Value>
+    <Comment>Maximum length 7 chars. Short name for Commutation</Comment>
+  </Text>
+  <Text Name="134">
+    <Value>Passo</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="135">
+    <Value>Passo-</Value>
+    <Comment>Maximum length 7 chars. Step with minus sign.</Comment>
+  </Text>
+  <Text Name="136">
+    <Value>Passo+</Value>
+    <Comment>Maximum length 7 chars. Step with plus sign.</Comment>
+  </Text>
+  <Text Name="137">
+    <Value>Sì</Value>
+    <Comment>Maximum length 7 chars.</Comment>
+  </Text>
+  <Text Name="138">
+    <Value>No</Value>
+    <Comment>Maximum length 7 chars.</Comment>
+  </Text>
+  <Text Name="139">
+    <Value>Attivare l'unità meccanica</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="140">
+    <Value>Premere Act per attivare l'unità meccanica.</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="141">
+    <Value>Act</Value>
+    <Comment>Maximum length 7 chars.</Comment>
+  </Text>
+</Resource>

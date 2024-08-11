@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.TPU.Screens.DateTime">
+  <Forms>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.DateTime.TpuWndDateTime" Text="日期时间" Width="320" Height="192" Background="SkinRoboBell.jpg" Icon="DateTime32.gif">
+      <Menu ref="menuTpuWndDateTime" />
+      <Controls>
+        <Control ID="lblTime" Text="时：分" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="90" Top="99" Width="91" Height="18" />
+        <Control ID="lblDate" Text="年-月-日" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="90" Top="35" Width="185" Height="18" />
+      </Controls>
+    </Form>
+  </Forms>
+  <Menus>
+    <Menu ID="menuTpuWndDateTime">
+      <MenuItem ID="OK" Text="OK" Grant="UAS_CONTROLLER_PROPERTIES_WRITE" />
+      <MenuItem ID="Cancel" Text="取消" />
+    </Menu>
+  </Menus>
+</Resources>

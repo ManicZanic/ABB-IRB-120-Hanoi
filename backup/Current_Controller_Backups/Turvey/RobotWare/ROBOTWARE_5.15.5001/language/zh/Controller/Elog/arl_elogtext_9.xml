@@ -1,0 +1,597 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="ARL" domainNo="4" lang="zh" elogTextVersion="1.0" min="1702" max="1807">
+  <Message number="1702" eDefine="SYS_ERR_ARL_RLMQ_MSG_NOT_VALID">
+    <Title>RMQ 错误 - <arg format="%s" ordinal="2" /> 无效</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />在变元 <arg format="%s" ordinal="2" /> 中使用了无效数据。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Consequences>程序立即停止执行。<p /></Consequences>
+    <Causes>使用了一个不含任何有效数据变量 <arg format="%s" ordinal="2" />。该变量已被初始化，变量中未拷贝到任何有效数据。</Causes>
+    <Actions>检查 RAPID 程序。 </Actions>
+  </Message>
+  <Message number="1703" eDefine="SYS_ERR_ARL_RLMQ_DATA_NOT_FIT">
+    <Title>RMQ 错误 – 无法复制数据</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />数据类型 <arg format="%s" ordinal="2" /> 超过了支持针对任务 <arg format="%s" ordinal="3" /> 配置的 RMQ 的最大大小。<p />程序引用 <arg format="%s" ordinal="4" /></Description>
+    <Consequences>没有收到消息。<p /></Consequences>
+    <Causes>未根据所发送数据的大小来配置接收任务的 RMQ。发送客户端发送的数据超过了任务 <arg format="%s" ordinal="3" /> 的 RMQ 所能接收的数据大小。 </Causes>
+    <Actions>增加任务 <arg format="%s" ordinal="3" /> 的 RMQ 的大小。<p />或者发送较少的数据。<p />恢复： <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1704" eDefine="SYS_ERR_ARL_RLMQ_FULL_QUEUE">
+    <Title>RMQ 错误 - 队列满</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />名为 <arg format="%s" ordinal="2" /> 的客户端无法接收更多消息。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Consequences>所发消息将被丢弃。<p /></Consequences>
+    <Causes>客户端接收消息的速率与发送器发送消息的速率不同。如果使用指令 <arg format="%s" ordinal="4" />，在每个 <arg format="%s" ordinal="4" /> 指令之间可能需要一个等待时间。 </Causes>
+    <Actions>客户端应接收消息，以便为新消息腾出空位。<p />或者发送器应限制所发消息的数量。<p />恢复: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1705" eDefine="SYS_ERR_ARL_RLMQ_TOUT">
+    <Title>RMQ 错误 – 时限已超过</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />编定的等待时间已超过。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Consequences>无法保证消息已到达客户端。<p /></Consequences>
+    <Causes>1) 对于应收到消息的客户端，其收到的消息并不是指定的消息类型。消息已被丢弃。<p />2) 客户端已收到消息，在回答中发送的数据类型不符合用于指令 <arg format="%s" ordinal="4" /> 的 <arg format="%s" ordinal="3" /> 的指定数据类型¡£<p />3) 客户端已收到消息。回答延迟，所以指令 <arg format="%s" ordinal="4" /> 的超时时间已过。</Causes>
+    <Actions>1) 检查客户端程序。<p />2) 增加指令 <arg format="%s" ordinal="4" /> 的等待时间。<p />恢复： <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1706" eDefine="SYS_ERR_ARL_RLMQ_TOUT2">
+    <Title>RMQ 错误 – 时限已超过</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /> 编定的等待时间已超过。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Consequences>没有收到消息。</Consequences>
+    <Causes>已超过指令 <arg format="%s" ordinal="3" /> 的超时时间。</Causes>
+    <Actions>增加指令 <arg format="%s" ordinal="3" /> 的等待时间。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1707" eDefine="SYS_ERR_ARL_RLMQ_ILLMODE">
+    <Title>RMQ 错误 - 指令在当前模式中无效</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> 只有当 RMQ 在 <arg format="%s" ordinal="3" /> 模式中配置时才允许。<p />程序引用： <arg format="%s" ordinal="4" /></Description>
+    <Consequences>程序立即停止执行。</Consequences>
+    <Causes>RMQ 是在 <arg format="%s" ordinal="5" /> 模式中配置的</Causes>
+    <Actions>将 <arg format="%s" ordinal="1" /> 中 RAPID Message Queue 的配置改为 <arg format="%s" ordinal="3" /> 模式，或使用当前模式中允许使用的指令。</Actions>
+  </Message>
+  <Message number="1708" eDefine="SYS_ERR_ARL_RLMQ_INV_MSG">
+    <Title>RMQ 错误 － 无效的消息</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />收到的 RMQ 消息无效。<p />程序引用： <arg format="%s" ordinal="2" /></Description>
+    <Consequences>收到的 RMQ 消息已被丢弃。</Consequences>
+    <Causes>收到的 RMQ 消息的报头或数据部分已损坏。</Causes>
+    <Actions>恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1711" eDefine="SYS_ERR_ARL_NOT_PERCENTAGE">
+    <Title>数值不是百分数</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />变元的数值 <arg format="%s" ordinal="2" /> 不是一个有效的百分数。<p />程序引用： <arg format="%s" ordinal="3" /></Description>
+    <Actions>在 0 到 100 范围内检查数值。</Actions>
+  </Message>
+  <Message number="1712" eDefine="SYS_ERR_ARL_UNEXIST_TOOL">
+    <Title>变元错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />工具数据 <arg format="%s" ordinal="2" /> 已经给出定义，但是不再在系统中可用。<p />程序引用： <arg format="%s" ordinal="3" /></Description>
+    <Causes>工具数据可能在一个系统中不再可用的模块中定义。</Causes>
+  </Message>
+  <Message number="1713" eDefine="SYS_ERR_ARL_UNEXIST_WOBJ">
+    <Title>变元错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />Wobjdata <arg format="%s" ordinal="2" /> 已经被定义，但是不再在系统中可用。<p />程序引用： <arg format="%s" ordinal="3" /></Description>
+    <Consequences>Wobjdata 可能已在一个系统中不再可用的模块中定义。</Consequences>
+  </Message>
+  <Message number="1714" eDefine="SYS_ERR_ARL_ERREVFULL">
+    <Title>错误事件过多</Title>
+    <Description>       任务 <arg format="%s" ordinal="1" /> 已经停止执行。队列中未处理的错误事件过多。系统一次只能处理一个事件。
+    </Description>
+    <Consequences>系统进入锁定状态，将程序指针移至任意位置之前，系统无法重新启动。</Consequences>
+    <Causes>在处理进程错误时发生断电故障重新启动（热启动）。</Causes>
+    <Actions>在处理进程错误时切勿热启动系统。如果需要热启动，先在所有任务中将 PP 移至 Main 以重置进程错误。</Actions>
+  </Message>
+  <Message number="1715" eDefine="SYS_ERR_ARL_CSS_SOFTDIR">
+    <Title>无效的方向</Title>
+    <Description>任务：<arg format="%s" ordinal="1" /><p />变元 <arg format="%s" ordinal="2" /> 必须为以下任意一个：CSS_X、CSS_Y、CSS_Z、CSS_XY、CSS_XZ、CSS_YZ、CSS_XYZ、CSS_XYRZ<p />程序引用： <arg format="%s" ordinal="3" /></Description>
+    <Actions>检查 <arg format="%s" ordinal="2" /> 的值</Actions>
+  </Message>
+  <Message number="1716" eDefine="SYS_ERR_ARL_CSS_OFFSETDIR">
+    <Title>无效的偏移方向</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />变元 <arg format="%s" ordinal="2" /> 必须为<p />CSS_POSX、CSS_NEGX、CSS_POSY、CSS_NEGY、CSS_POSZ、CSS_NEGZ<p />程序引用： <arg format="%s" ordinal="3" /></Description>
+    <Actions>检查 <arg format="%s" ordinal="2" /> 的值</Actions>
+  </Message>
+  <Message number="1717" eDefine="SYS_ERR_ARL_LOW_VALUE">
+    <Title>值过低</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />变元 <arg format="%s" ordinal="2" /> 的值过低。<p />程序引用： <arg format="%s" ordinal="3" /></Description>
+    <Actions>增加 <arg format="%s" ordinal="2" /> 的值</Actions>
+  </Message>
+  <Message number="1718" eDefine="SYS_ERR_ARL_INVDIM">
+    <Title>无效的尺寸</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />搜索符号的尺寸 <arg format="%s" ordinal="2" /> 与变元中的尺寸 <arg format="%s" ordinal="3" /> 不兼容。<p />程序引用： <arg format="%s" ordinal="4" />.<p /><p />'{0}' 的尺寸表示给定的符号不属于数组类型。</Description>
+    <Actions>恢复： <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1719" eDefine="SYS_ERR_ARL_DIMPAR">
+    <Title>非法参数</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />变元 <arg format="%s" ordinal="2" /> 中的符号是来自参数的数组。在 SetDataVal/GetDataVal 中使用来自参数的数组为非法。<p />程序引用： <arg format="%s" ordinal="3" /></Description>
+  </Message>
+  <Message number="1720" eDefine="SYS_ERR_ARL_WSIP_REC">
+    <Title>路径不在停止点中</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />以下任务的路径没有完成： <arg format="%s" ordinal="2" /> 确保任务正在运行。<p />程序引用： <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>任务未运行或者运动已停止。</Causes>
+    <Actions>恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1721" eDefine="SYS_ERR_ARL_INVTYPE">
+    <Title>无效的变元</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />变元 <arg format="%s" ordinal="3" /> 中的类型 <arg format="%s" ordinal="2" /> 无效。<p />程序引用： <arg format="%s" ordinal="4" /></Description>
+    <Actions>将类型更改为无效类型 (<arg format="%s" ordinal="5" />)。<p /></Actions>
+  </Message>
+  <Message number="1722" eDefine="SYS_ERR_ARL_HIGH_VALUE">
+    <Title>值过高</Title>
+    <Description>             任务： <arg format="%s" ordinal="1" /><p />变元 <arg format="%s" ordinal="2" /> 的值过高。该值必须介于 <arg format="%s" ordinal="4" /> 和 <arg format="%s" ordinal="5" /> 之间<p />程序引用： <arg format="%s" ordinal="3" /></Description>
+  </Message>
+  <Message number="1723" eDefine="SYS_ERR_ARL_BUS_STATE_ERR">
+    <Title>总线处于错误状态</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />I/O 单元 <arg format="%s" ordinal="2" /> 无法激活。总线 <arg format="%s" ordinal="3" /> 处于错误状态。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Consequences>单元 <arg format="%s" ordinal="2" /> 无法激活。</Consequences>
+    <Causes>总线处于错误状态。</Causes>
+    <Actions>恢复:<arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1724" eDefine="SYS_ERR_ARL_MOVING_WOBJ">
+    <Title>当前工作对象无效</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />采用移动工作对象时，不允许笛卡尔软伺服激活。只允许编程的用户帧。<p />程序引用： <arg format="%s" ordinal="2" /></Description>
+  </Message>
+  <Message number="1725" eDefine="SYS_ERR_ARL_INVCFG">
+    <Title>无效的配置设置</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />笛卡尔软伺服的配置参数无效。<p />当前组合会造成不稳定的行为。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>更改笛卡尔软伺服的配置</Actions>
+  </Message>
+  <Message number="1726" eDefine="SYS_ERR_ARL_NO_RESET">
+    <Title>任务的 StopMoveReset 操作被忽略</Title>
+    <Description>任务：<arg format="%s" ordinal="1" /><p />StopMoveReset 指令对系统不起作用<p />程序引用： <arg format="%s" ordinal="2" /></Description>
+    <Consequences>StopMove 未重设。</Consequences>
+    <Causes>1. 动作任务尚未停止。<p />2. 动作任务已被另一非动作任务停止：<arg format="%s" ordinal="3" />。<p />这次的原因是 <arg format="%s" ordinal="4" />。</Causes>
+    <Actions>如果 StopMoveReset 指令要从另一个非动作任务重设 StopMove，则要在该指令中使用开关 \AllMotionTasks。 <p /></Actions>
+  </Message>
+  <Message number="1727" eDefine="SYS_ERR_ARL_FSIZE">
+    <Title>不能使用 num 数据类型来表示大小 </Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />使用指令 <arg format="%s" ordinal="2" /> 来读取文件系统的大小时，检测到值太大而无法将设置为 num 数据类型。<p />程序引用：<arg format="%s" ordinal="3" /></Description>
+    <Consequences>无法读取大小。</Consequences>
+    <Causes>不能使用 num 表示大小。</Causes>
+    <Actions>使用开关来指定用于在其中显示大小的其他单元。<p />恢复： <arg format="%s" ordinal="4" /><p /></Actions>
+  </Message>
+  <Message number="1730" eDefine="SYS_ERR_ARL_TRIGGIOS_SIG_BITS">
+    <Title>信号超过允许的最大位数值</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />信号 <arg format="%s" ordinal="2" /> 过大。如果使用大于 23 位的信号，请使用可接收长达 32 位的信号的 triggiosdnum 数据类型。<p /><p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>如果在 <arg format="%s" ordinal="4" /> 指令中使用 triggios 数据类型，群信号可以为 23 位或更小。</Actions>
+  </Message>
+  <Message number="1731" eDefine="SYS_ERR_ARL_TRIGGIOS_SIGNAME_ERR">
+    <Title>信号名称未定义</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />信号 <arg format="%s" ordinal="2" /> 是系统中未知的信号。<p />程序引用 <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Consequences>立即停止程序执行。</Consequences>
+    <Causes>必须在系统参数中定义信号。</Causes>
+    <Actions>在系统参数中定义信号。</Actions>
+  </Message>
+  <Message number="1732" eDefine="SYS_ERR_ARL_TRIGGIOS_MAX">
+    <Title>使用的 trig 过多</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />对指令 <arg format="%s" ordinal="2" /> 设置了过多的 trig。极限为 <arg format="%s" ordinal="3" />。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Consequences>立即停止程序执行。</Consequences>
+    <Actions>在 <arg format="%s" ordinal="2" /> 指令中删除一些 trig 操作。</Actions>
+  </Message>
+  <Message number="1737" eDefine="SYS_ERR_ARL_INDCNV_ORDER">
+    <Title>指令顺序错误</Title>
+    <Description>
+			任务:<arg format="%s" ordinal="1" /><p />指令 <arg format="%s" ordinal="2" /> 需在指令 <arg format="%s" ordinal="3" /> 之前执行。<p />程序引用 <arg format="%s" ordinal="4" />。
+		</Description>
+    <Causes>
+			在指令 <arg format="%s" ordinal="3" /> 之前执行了指令 <arg format="%s" ordinal="2" />。
+		</Causes>
+    <Actions>
+			按正确的顺序执行指令。<p />恢复： <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1738" eDefine="SYS_ERR_ARL_WRISTIP_REQUIRED">
+    <Title>需要 Wrist Interpolation 选项</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />使用指令 <arg format="%s" ordinal="2" /> 时采用了要求 Wrist Interpolation 选项的开关。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Consequences>程序立即停止执行。</Consequences>
+    <Causes>Robotware 选项丢失。</Causes>
+    <Actions>切勿使用以下任何开关： <arg format="%s" ordinal="4" />。</Actions>
+  </Message>
+  <Message number="1739" eDefine="SYS_ERR_ARL_STOREPATH_REQUIRED">
+    <Title>需要 StorePath</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /> 指令 <arg format="%s" ordinal="2" /> 正在错误处理程序或陷阱例行程序中执行。在基础之外的其他层上使用移动指令前，先使用 <arg format="%s" ordinal="3" /> 。<p />程序引用 <arg format="%s" ordinal="4" /></Description>
+    <Consequences>立即停止程序执行。</Consequences>
+    <Causes>移动指令在没有保存路径的情况下执行。</Causes>
+    <Actions>使用移动指令 <arg format="%s" ordinal="2" /> 前，先执行 <arg format="%s" ordinal="3" /> 。<p />请阅读 RAPID 手册中的编程类型示例，以了解在 TRAP 例行程序和错误处理程序中如何使用移动指令。</Actions>
+  </Message>
+  <Message number="1740" eDefine="SYS_ERR_ARL_MASS_IDENTIFY_ERR">
+    <Title>载荷测定失败</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />警告！<p />无法测量 <arg format="%s" ordinal="2" /> 的质量，因为自动载荷测定的重量太小。<p />程序引用 <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>请人工预估实际载荷，并手动编辑 RAPID 程序。<p /></Actions>
+  </Message>
+  <Message number="1741" eDefine="SYS_ERR_ARL_CALC_OVERFLOW">
+    <Title>计算溢出</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />计算结果超出范围 0 - 4294967295。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Consequences>计算会返回错误。</Consequences>
+    <Causes>运算中的值可能过大。</Causes>
+    <Actions>恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1742" eDefine="SYS_ERR_ARL_CALC_NEG">
+    <Title>相减得负值</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /> 相减结果是负数。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Consequences>计算会返回错误。</Consequences>
+    <Causes>减运算中的第一个值小于第二个值。</Causes>
+    <Actions>确保减运算中的第一个值大于第二个值。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1743" eDefine="SYS_ERR_ARL_CALC_DIVZERO">
+    <Title>除数为零</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />除数为零<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Consequences>计算会返回错误。</Consequences>
+    <Causes>除数为零。</Causes>
+    <Actions>恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1744" eDefine="SYS_ERR_ARL_IN_ERROR_HANDLER">
+    <Title>指令错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />正在 ERROR 处理程序中执行该程序。不允许在 ERROR 处理程序中执行指令 <arg format="%s" ordinal="2" /> 。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Actions>删除该指令</Actions>
+  </Message>
+  <Message number="1745" eDefine="SYS_ERR_ARL_IN_BWD_HANDLER">
+    <Title>指令错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />正在 BACKWARD 处理程序中执行该程序。不允许在 BACKWARD 处理程序中执行指令 <arg format="%s" ordinal="2" /> 。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Actions>删除该指令</Actions>
+  </Message>
+  <Message number="1746" eDefine="SYS_ERR_ARL_AT_USER_LEVEL">
+    <Title>指令错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />正在 USER 层上执行程序，即在事件例行程序或服务例行程序中。不允许在 USER 层上执行指令 <arg format="%s" ordinal="2" /> 。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Actions>删除该指令</Actions>
+  </Message>
+  <Message number="1747" eDefine="SYS_ERR_ARL_PROCSIGNAL_OFF">
+    <Title>进程信号关闭</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /> 进程信号 <arg format="%s" ordinal="2" /> 已设置为关闭 (0)。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Consequences>抛出了可恢复性错误 ERR_PROCSIGNAL_OFF。</Consequences>
+    <Causes>可选变元 \ProcSignal 已用于指令 ProcerrRecovery。该信号使用户可以打开/关闭指令 ProcerrRecovery。</Causes>
+    <Actions>请添加 ERR_PROCSIGNAL_OFF 错误的错误处理程序，或从指令调用中删除可选的变元 \ProcSignal。</Actions>
+  </Message>
+  <Message number="1748" eDefine="SYS_ERR_ARL_ILLEGVAL_REC">
+    <Title>值错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /> 变元 <arg format="%s" ordinal="2" /> 中存在非法值。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Actions>请检查 RAPID 程序。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1749" eDefine="SYS_ERR_ARL_MAXULONG_REC">
+    <Title>值错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />参数 <arg format="%s" ordinal="2" /> 的值超出极限。<p />程序引用： <arg format="%s" ordinal="3" /></Description>
+    <Causes>值太大。</Causes>
+    <Actions>请使用较小的 <p /> 值。 <arg format="%s" ordinal="2" />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1750" eDefine="SYS_ERR_ARL_NOT_ALLOW_SIGNAL_VAL">
+    <Title>非允许值</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />变元 <arg format="%s" ordinal="2" /> 中存在非法值。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Causes>1) 系统将表达式解释为 num 数据类型，该值超过了 num 的最大整数值（值 8388608）。<p />2) 系统将表达式解释为 dnum 数据类型，该值超过了 dnum 的最大整数值（值 4503599627370496）。</Causes>
+    <Actions>检查并更改该值。<p />参数名称 <arg format="%s" ordinal="2" /> 可以为您提供有关系统如何解释 indata 的信息。</Actions>
+  </Message>
+  <Message number="1751" eDefine="SYS_ERR_ARL_ARRAY_TO_SMALL">
+    <Title>数组大小错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /> 数组 <arg format="%s" ordinal="2" /> 的大小小于 <arg format="%s" ordinal="3" /> 中的元素数量。<p />程序引用 <arg format="%s" ordinal="4" /></Description>
+    <Consequences>立即停止程序执行。</Consequences>
+    <Actions>更改数组大小以容纳所有元素。</Actions>
+  </Message>
+  <Message number="1752" eDefine="SYS_ERR_ARL_NUM_LIMIT">
+    <Title>Num 限制错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /> 参数 <arg format="%s" ordinal="2" /> 的值超出限制。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Actions>恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1753" eDefine="SYS_ERR_ARL_FRIC_INV_PATH_LEV">
+    <Title>无效的路径层</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /> 程序引用 <arg format="%s" ordinal="2" /><p /><arg format="%s" ordinal="3" /> 需要机器人在第一个路径层上运行。</Description>
+    <Consequences>立即停止程序执行。<p /></Consequences>
+    <Causes>在错误的路径层上执行 <arg format="%s" ordinal="3" /> 。<p /></Causes>
+    <Actions>检查 RAPID 程序。</Actions>
+  </Message>
+  <Message number="1754" eDefine="SYS_ERR_ARL_FRIC_PATH_REC_CLEAR">
+    <Title>Path Recorder 已清除</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />警告！<p />Path Recorder 已清除。进行摩擦测定前，保存路径已清除。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+  </Message>
+  <Message number="1755" eDefine="SYS_ERR_ARL_FRIC_PATH_TIME">
+    <Title>路径时间太长</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /> 摩擦调节的执行时间太长。 <arg format="%s" ordinal="2" /> &gt; <arg format="%s" ordinal="3" /> 是以秒为单位的最大时间。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Consequences>立即停止程序执行。<p /></Consequences>
+    <Actions>提高速度或缩短路径长度。</Actions>
+  </Message>
+  <Message number="1756" eDefine="SYS_ERR_ARL_FRIC_NO_INIT">
+    <Title>缺少 FricIdInit</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> 必须在 <arg format="%s" ordinal="3" /> 之前执行 <p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Consequences>立即停止程序执行。</Consequences>
+  </Message>
+  <Message number="1757" eDefine="SYS_ERR_ARL_FRIC_MECHUNIT">
+    <Title>未找到机械单元。</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />未找到机械单元 <arg format="%s" ordinal="2" /> 。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>立即停止程序执行。</Consequences>
+    <Actions>请指定其他的机械单元。</Actions>
+  </Message>
+  <Message number="1758" eDefine="SYS_ERR_ARL_FRIC_FRICLEV_ARR">
+    <Title>数组太小</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /> 使用的数组太小。<p />数组的大小 <arg format="%s" ordinal="2" /> 必须等于机器人轴的数量 <arg format="%s" ordinal="3" />。<p />程序引用 <arg format="%s" ordinal="4" /></Description>
+    <Consequences>立即停止程序执行。</Consequences>
+    <Actions>请增加数组的大小 <arg format="%s" ordinal="2" />.</Actions>
+  </Message>
+  <Message number="1759" eDefine="SYS_ERR_ALLOWED_BITS">
+    <Title>信号超过允许的最大位数值</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />信号 <arg format="%s" ordinal="2" /> 过大。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Actions>23 位及以下的群信号可在 IF 语句中使用，并赋值给 num 数据类型。<p />24 - 32 位群信号不能在 IF 语句中使用。而应使用函数 <arg format="%s" ordinal="4" /> 或 <arg format="%s" ordinal="5" />。</Actions>
+  </Message>
+  <Message number="1760" eDefine="SYS_ERR_ARL_FRIC_IN_SYNC">
+    <Title>
+      <arg format="%s" ordinal="1" /> （处于同步模式时）</Title>
+    <Description>任务： <arg format="%s" ordinal="2" /><p /><arg format="%s" ordinal="1" /> 无法与同步移动一起使用。<p />程序引用： <arg format="%s" ordinal="3" /></Description>
+    <Consequences>立即停止程序执行。</Consequences>
+    <Actions>请删除 <arg format="%s" ordinal="4" /> 和 <arg format="%s" ordinal="5" /> 之间的所有SyncMoveOn</Actions>
+  </Message>
+  <Message number="1761" eDefine="SYS_ERR_ARL_PACK_UNPACK_LIM">
+    <Title>数值超出范围</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />整数值 <arg format="%s" ordinal="2" /> 无法拷贝到 <arg format="%s" ordinal="3" /> 数据类型。数值超出了 <arg format="%s" ordinal="3" /> 数据类型的限制。<p />程序引用： <arg format="%s" ordinal="4" /><p /><p /></Description>
+    <Consequences>程序立即停止执行。</Consequences>
+    <Actions>使用 <arg format="%s" ordinal="5" /> 类型的变量代替 <arg format="%s" ordinal="3" /> 类型的变量。</Actions>
+  </Message>
+  <Message number="1762" eDefine="SYS_ERR_ARL_INVALID_VALUE">
+    <Title>变元字符串值无效</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />变元字符串 <arg format="%s" ordinal="2" /> 无效，无法转换。<p />程序引用： <arg format="%s" ordinal="3" /></Description>
+    <Consequences>程序立即停止执行。</Consequences>
+    <Causes>1) 唯一有效的字母字符为 a-f 和 A-F，且仅对 HexToDec 有效。<p />2) 字符“.”、“-”和“+”对 HexToDec 无效。<p />3) 字符“-”对 DecToHex 无效。<p />4) 该值不是有效整数。</Causes>
+    <Actions>编辑变元值字符串，使其变为有效并可转换。</Actions>
+  </Message>
+  <Message number="1763" eDefine="SYS_ERR_ARL_VALUE_TOO_HIGH">
+    <Title>变元字符串值过高</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />变元字符串 <arg format="%s" ordinal="2" /> 的值超过了系统中所支持的最高值。<p />程序引用： <arg format="%s" ordinal="3" /></Description>
+    <Consequences>变元值字符串会被转换，但它被设为所支持的最高值 (9223372036854775807)。</Consequences>
+    <Causes>变元字符串值超过了所支持的最高值。</Causes>
+    <Actions>编辑变元值字符串，以使它不超过所支持的最高值。</Actions>
+  </Message>
+  <Message number="1764" eDefine="SYS_ERR_ARL_ADD_ILLEGCOMB">
+    <Title>
+      <arg format="%s" ordinal="2" /> 中的错误组合</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />使用指令 <arg format="%s" ordinal="2" /> 时，不能将一个 dnum 静态变量加到一个 num 静态变量中。<p />程序引用： <arg format="%s" ordinal="3" /></Description>
+    <Causes>被加的值属于 dnum 类型，而应更改的静态变量为 num。</Causes>
+    <Actions>请阅读 RAPID 参考手册中有关 <arg format="%s" ordinal="2" /> 的内容</Actions>
+  </Message>
+  <Message number="1765" eDefine="SYS_ERR_ARL_VAL_TOO_HIGH">
+    <Title>变元值过高</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />变元 <arg format="%s" ordinal="2" /> 中的值过高。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Causes>变元值超过了所支持的最高值。 (<arg format="%s" ordinal="4" />)</Causes>
+    <Actions>减小变元 <arg format="%s" ordinal="2" /> 的值。<p />恢复： <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1766" eDefine="SYS_ERR_ARL_ILLEGCOMB">
+    <Title>精度将丢失</Title>
+    <Description>任务：<arg format="%s" ordinal="1" /><p />使用了可选变元 <arg format="%s" ordinal="2" />，并且组信号包含 <arg format="%s" ordinal="3" /> 位。这可能会导致可选变元 <arg format="%s" ordinal="2" /> 中使用的变量失去精度。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Consequences>程序立即停止执行。<p /></Consequences>
+    <Causes>使用了变元 <arg format="%s" ordinal="2" />，并且值的精度有丢失的风险。<p />23 位或少于 23 位的组信号可以用 num 数据类型表示，32 位或少于 32 位的组信号，如果用于 RAPID 程序，可以用 dnum 数据类型表示。<p /><p /></Causes>
+    <Actions>要避免 <arg format="%s" ordinal="2" /> 中使用的变量失去精度，请换用可选变元 <arg format="%s" ordinal="5" />。<p /></Actions>
+  </Message>
+  <Message number="1767" eDefine="SYS_ERR_ARL_TCPROB_NOTDEF2">
+    <Title>指令错误</Title>
+    <Description>任务：<arg format="%s" ordinal="1" /><p />从非动作任务中使用了指令 <arg format="%s" ordinal="2" />，而任务 <arg format="%s" ordinal="1" /> 所连接的动作任务并不控制 TCP 机器人。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>程序立即停止执行。<p /><p /></Consequences>
+    <Causes>
+      <arg format="%s" ordinal="2" /> 用于一个非动作任务中，而该任务所连接的动作任务不控制 TCP 机器人。</Causes>
+    <Actions>- 检查配置。<p />- 必须删除指令。非动作任务 <arg format="%s" ordinal="1" /> 连接到了一个不控制 TCP 机器人的动作任务。 </Actions>
+  </Message>
+  <Message number="1768" eDefine="SYS_ERR_ARL_SWITCH_MISSING">
+    <Title>开关缺失</Title>
+    <Description>任务：<arg format="%s" ordinal="1" /><p />执行指令/函数时需要开关 <arg format="%s" ordinal="2" />。<p /><p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>程序立即停止执行。</Consequences>
+    <Actions>使用指令/函数时候添加开关</Actions>
+  </Message>
+  <Message number="1769" eDefine="SYS_ERR_ARL_NODE_NOT_FOUND">
+    <Title>未找到服务数据</Title>
+    <Description>任务：<arg format="%s" ordinal="1" /><p />无法找到机械单元 <arg format="%s" ordinal="2" /> 的服务数据。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Consequences>不会读取任何服务数据。</Consequences>
+    <Causes>不存在这类适合此机械单元的服务数据。</Causes>
+    <Actions>检查是否为机械单元定义了指定的服务数据。</Actions>
+  </Message>
+  <Message number="1770" eDefine="SYS_ERR_ARL_CAM_UNDEF">
+    <Title>系统访问错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />未知摄像头单元 <arg format="%s" ordinal="2" />。<p />cameradev 类型的数据在系统中未知。<p />程序引用 <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Causes>在程序中陈述了 cameradev 类型的数据。</Causes>
+    <Actions>删除程序中 cameradev 数据的陈述，使用一种预定义的 cameradev 类型的数据（由系统自动定义）。</Actions>
+  </Message>
+  <Message number="1771" eDefine="SYS_ERR_ARL_CAM_LOAD_INTERRUPTED">
+    <Title>取消作业加载</Title>
+    <Description>对摄像头 <arg format="%s" ordinal="2" /> 进行的作业 <arg format="%s" ordinal="1" /> 的加载已被取消。</Description>
+    <Consequences>作业可能已成功载入摄像头，也可能未成功载入。</Consequences>
+    <Causes>在作业被正确载入摄像头前，RAPID 程序中有一个 PP 动作。作业在指令 <arg format="%s" ordinal="3" /> 执行前未能完全载入摄像头。</Causes>
+    <Actions>将一个新的作业载入名为 <arg format="%s" ordinal="2" /> 的摄像头。</Actions>
+  </Message>
+  <Message number="1772" eDefine="SYS_ERR_ARL_CAM_OPT_ARGUMENT">
+    <Title>参数错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />没有在指令中指定如下所列的任何可选参变量。<p />程序引用:<arg format="%s" ordinal="2" /><p />缺少以下可选变元之一:<p /><arg format="%s" ordinal="3" /><p /><arg format="%s" ordinal="4" /><p /><arg format="%s" ordinal="5" /></Description>
+    <Consequences>程序立即停止执行。</Consequences>
+    <Actions>至少指定其中一个参变量。</Actions>
+  </Message>
+  <Message number="1773" eDefine="SYS_ERR_ARL_VIS_MAN_INSTR_TIMEOUT">
+    <Title>超时</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />超时中断了使用摄像头 <arg format="%s" ordinal="2" /> 的指令的执行。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Actions>使用更大的超时值或使用错误处理程序重试指令。<p />恢复：<arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1774" eDefine="SYS_ERR_ARL_CAM_TYPE_MISMATCH">
+    <Title>类型错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />无法将 <arg format="%s" ordinal="2" /> 设置成当前类型 (<arg format="%s" ordinal="3" />) 的变量。检查使用的可选参变量，并使用正确类型的变元。<p />程序引用: <arg format="%s" ordinal="4" /><p /></Description>
+    <Consequences>程序立即停止执行。</Consequences>
+    <Causes>
+      <arg format="%s" ordinal="5" /> 中使用的参变量类型不正确。</Causes>
+    <Actions>检查 RAPID 程序，并使用其他类型的变量来存储数据。<p /></Actions>
+  </Message>
+  <Message number="1775" eDefine="SYS_ERR_ARL_VIS_MAN_ERR_BUSY">
+    <Title>向摄像头持续发出请求</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />不允许对一个摄像头同时进行多个并行请求。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>请求未执行。</Consequences>
+    <Causes>名为 <arg format="%s" ordinal="3" /> 的摄像头收到多个请求。</Causes>
+    <Actions>等待一段时间后再重试。<p />如果要从不同的任务访问同一摄像头，可使用指令 WaitTestAndSet，以防同时访问摄像头。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1776" eDefine="SYS_ERR_ARL_VIS_MAN_NO_MORE_DATA">
+    <Title>没有其他可用的数据</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />摄像头 <arg format="%s" ordinal="2" /> 没有其他可用的数据。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>无法读取任何数据。</Consequences>
+    <Causes>原因有：<p />1) 没有其他可用的数据<p />2) 没有与所用 <arg format="%s" ordinal="4" /> 匹配的结果。</Causes>
+    <Actions>1) 检查摄像头是否请求了一个图像。<p />2) 检查确保从 "output to RAPID" 中配置的结果映射完整。<p /><p />如果使用了 <arg format="%s" ordinal="4" />，检查确保其为所用的正确变量。<p />恢复： <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1777" eDefine="SYS_ERR_ARL_VIS_MAN_CAM_NOT_ON_NETWORK">
+    <Title>摄像头未连接</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />摄像头 <arg format="%s" ordinal="2" /> 未连接。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>程序立即停止执行。<p /></Consequences>
+    <Causes>出现该错误的原因可能是：<p />1) 摄像头未连接到控制器。<p />2) 摄像头没电。<p />3) 摄像头的 IP 地址无效。<p />4) 摄像头无名称。<p />5) 摄像头未连接到正确的网络接口。通常只支持服务端口。<p /></Causes>
+    <Actions>1) 检查机器人控制器与摄像头之间的电缆连接。<p />2) 检查摄像头上的电源和连接 LED 指示灯是否点亮。<p />3) 使用 RobotStudio 检查 IP 地址是否正确配置。<p />4) 为摄像头规定一个有效的名称。 <p /></Actions>
+  </Message>
+  <Message number="1778" eDefine="SYS_ERR_ARL_VIS_MAN_ERR_FAILED_TO_LOAD">
+    <Title>加载作业失败</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />为摄像头 <arg format="%s" ordinal="3" /> 加载名为 <arg format="%s" ordinal="2" /> 的作业时失败。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Consequences>程序立即停止执行。<p /></Consequences>
+    <Causes>1) 作业 <arg format="%s" ordinal="2" /> 不正确或不可用。<p />2) 摄像头 <arg format="%s" ordinal="2" /> 内存不足。</Causes>
+    <Actions>检查摄像头上是否有名为 <arg format="%s" ordinal="2" /> 的作业。<p /></Actions>
+  </Message>
+  <Message number="1779" eDefine="SYS_ERR_ARL_VIS_MAN_CAM_OUT_OF_MEM">
+    <Title>摄像头内存不足</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />由于摄像头 <arg format="%s" ordinal="2" /> 内存不足，操作失败。<p />程序引用: <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>程序立即停止执行。</Consequences>
+  </Message>
+  <Message number="1780" eDefine="SYS_ERR_ARL_VIS_MAN_CAM_NOT_RUNNING">
+    <Title>摄像头在程序模式中</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />由于摄像头 <arg format="%s" ordinal="2" /> 处在程序模式，操作失败。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>只有在摄像头处在运行模式时，才能使用该函数或指令。</Causes>
+    <Actions>要更改到运行模式，请使用指令 <arg format="%s" ordinal="4" />。<p />恢复： <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1781" eDefine="SYS_ERR_ARL_VIS_MAN_CAM_RUNNING">
+    <Title>摄像头在运行模式中</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />由于摄像头 <arg format="%s" ordinal="2" /> 处在运行模式，操作失败。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>只有在摄像头处在程序模式时，才能使用该函数或指令。</Causes>
+    <Actions>要更改到程序模式，请使用指令 <arg format="%s" ordinal="4" />。<p />恢复： <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1782" eDefine="SYS_ERR_ARL_VIS_MAN_NOTSUPPORTED">
+    <Title>摄像头不支持此操作</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />由于摄像头不支持当前操作<p />（使用开关 <arg format="%s" ordinal="2" />），操作失败。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>程序立即停止执行。</Consequences>
+    <Causes>正在使用本摄像头类型不支持的功能。</Causes>
+    <Actions>检查摄像头支持的功能。</Actions>
+  </Message>
+  <Message number="1783" eDefine="SYS_ERR_ARL_VIS_MAN_COM_TIMEOUT">
+    <Title>通信超时</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />与摄像头 <arg format="%s" ordinal="2" /> 的通信超时。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>程序立即停止执行。<p />摄像头处在不确定的状态。向摄像头发出的命令可能已执行，也可能未执行。</Consequences>
+    <Causes>摄像头不响应。</Causes>
+    <Actions>检查摄像头与控制器之间的连接。<p />重新启动摄像头并重试。 </Actions>
+  </Message>
+  <Message number="1784" eDefine="SYS_ERR_ARL_VIS_MAN_COM_ERR">
+    <Title>通信错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />与摄像头 <arg format="%s" ordinal="2" /> 的通信发生错误。摄像头连接可能已断开。<p />程序引用: <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>程序立即停止执行。</Consequences>
+  </Message>
+  <Message number="1785" eDefine="SYS_ERR_ARL_VIS_MAN_INV_PARAM_NAME_SET">
+    <Title>参数无法修改</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />无法识别、修改参数 <arg format="%s" ordinal="2" />，或者正在试图设置错误类型的值。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>程序立即停止执行。</Consequences>
+    <Causes>无法修改单元格。原因可能是：<p />1) 不存在指定名称的单元格。<p />2) 单元格必须为 EditInt、EditFloat 或 EditString 类型。<p />3) 试图为单元格设置的类型错误，例如，将字符串值设置为浮点类型。</Causes>
+    <Actions>检查使用的参数并检查单元格设置。</Actions>
+  </Message>
+  <Message number="1786" eDefine="SYS_ERR_ARL_VIS_MAN_PARAM_OUT_OF_RANGE">
+    <Title>参数超出范围</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />摄像头 <arg format="%s" ordinal="3" /> 的 <arg format="%s" ordinal="2" /> 参数使用的值超出范围。<p />程序引用: <arg format="%s" ordinal="4" /><p /></Description>
+    <Consequences>程序立即停止执行。</Consequences>
+    <Causes>无法设置参数值。</Causes>
+    <Actions>检查所使用的值。</Actions>
+  </Message>
+  <Message number="1787" eDefine="SYS_ERR_ARL_VIS_MAN_INV_PARAM_NAME_GET">
+    <Title>参数无法读取</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />无法读取或识别参数 <arg format="%s" ordinal="2" />。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>程序立即停止执行。</Consequences>
+    <Causes>无法修改单元格。原因可能是：<p />1) 指定名称的单元格不存在。<p />2) 单元格不属于 EditInt、EditFloat 或 EditString 类型。 </Causes>
+    <Actions>检查单元格的类型。</Actions>
+  </Message>
+  <Message number="1788" eDefine="SYS_ERR_ARL_CAM_NO_JOB_LOADING">
+    <Title>没有正在加载的摄像头任务</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />没有正在加载的摄像头 <arg format="%s" ordinal="2" /> 的任务。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>程序立即停止执行。</Consequences>
+    <Causes>未对摄像头 <arg format="%s" ordinal="2" /> 请求加载命令。</Causes>
+    <Actions>检查确保在当前指令前使用了 <arg format="%s" ordinal="4" />。</Actions>
+  </Message>
+  <Message number="1789" eDefine="SYS_ERR_ARL_VIS_MAN_GETRES_WITH_TOUT_NO_DATA">
+    <Title>没有其他可用的数据</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />摄像头 <arg format="%s" ordinal="2" /> 没有其他可用的数据。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>无法读取任何数据。</Consequences>
+    <Causes>没有与所用 <arg format="%s" ordinal="4" /> 匹配的结果。</Causes>
+    <Actions>恢复: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1791" eDefine="SYS_ERR_ARL_CSS_ZERO_MASS_NOT_ALLOWED">
+    <Title>零质量时不允许执行 SoftMove。</Title>
+    <Description>任务：<arg format="%s" ordinal="1" /><p />调用 CSSAct 时的当前载荷数据的质量为 <arg format="%f" ordinal="2" /> 千克。SoftMove 需要有精确的载荷定义。这通常由作为工具定义一部分的载荷定义来设置。<p />程序引用： <arg format="%s" ordinal="3" /></Description>
+    <Consequences>当 SoftMove 检测到质量小于等于 0.001 千克时，将不允许启动。<p />因此 CSSAct 指令无法使用 tool0 运行。<p /></Consequences>
+    <Causes>指令 CSSAct 运行时的当前工具为 tool0 或其他质量过小的工具。当前工具由运动指令设置，或通过在执行 CSSAct 指令之前进行微动控制来设置。<p /></Causes>
+    <Actions>使用尽可能精确的工具定义。使用载荷测定。<p />如果 SoftMove 的简单测试仅使用安装法兰作为工具，则需要创建一个类似于 tool0 的工具定义，但质量要大于 0.002 千克。<p /></Actions>
+  </Message>
+  <Message number="1792" eDefine="SYS_ERR_ARL_NOT_ALLOWED_ON_THIS_LEVEL">
+    <Title>指令不允许执行。</Title>
+    <Description>任务：<arg format="%s" ordinal="1" /><p />指令 <arg format="%s" ordinal="2" /> 只能在动作任务的普通级别执行。 </Description>
+    <Consequences>程序将停止执行。</Consequences>
+    <Causes>指令 <arg format="%s" ordinal="2" /> 在 TRAP 或后台任务中使用。</Causes>
+  </Message>
+  <Message number="1793" eDefine="SYS_ERR_ARL_RESTART_PROC_ARR_FULL">
+    <Title>TriggInt 停止错误</Title>
+    <Description>无法再存储任何 trig 重启操作。<p />可能导致此问题的指令有：<p /><arg format="%s" ordinal="1" /></Description>
+    <Consequences>程序立即停止执行。</Consequences>
+    <Causes>当使用的运动指令在机器人运动路径上的指定位置处使用中断，且停止后收到的事件超过系统能够处理的数量时，此错误将使程序停止执行。<p /></Causes>
+    <Actions>尝试增加运动的长度或减慢运动的速度可以解决此问题。<p />如果发生此问题，请向 ABB Robotics 报告。</Actions>
+  </Message>
+  <Message number="1794" eDefine="SYS_ERR_ARL_CLEARPATH_SEARCH">
+    <Title>搜索错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />搜索指令 <arg format="%s" ordinal="2" /> 检测到路径和搜索对象已被删除。<p />程序引用: <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>指令 <arg format="%s" ordinal="2" /> 无法读取位置。程序立即停止执行。<p /></Consequences>
+    <Causes>1) 在信号更改之前，一个陷阱例行程序TRAP会执行 <arg format="%s" ordinal="4" /> 指令。<p />2) 一个陷阱例行程序TRAP 执行了 <arg format="%s" ordinal="4" /> 指令，但在 <arg format="%s" ordinal="2" /> 准备就绪（未发生信号检测）时，<arg format="%s" ordinal="2" /> 检测到搜索对象已被删除。</Causes>
+    <Actions>在陷阱例行程序 TRAP 中结合使用错误处理和长跳转来停止 <arg format="%s" ordinal="2" /> 指令,或重新编写 RAPID 程序。请参见指令 <arg format="%s" ordinal="4" /> 的文档，了解如何通过长跳转实现错误处理。</Actions>
+  </Message>
+  <Message number="1795" eDefine="SYS_ERR_ARL_PAYLOAD_MODE">
+    <Title>载荷模式不正确</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />载荷模式不正确。<p />程序引用:<arg format="%s" ordinal="2" /></Description>
+    <Consequences>程序立即停止执行。<p /><p /></Consequences>
+    <Causes>1) 如果在运动指令中使用 \TLoad 可选参变量，则配置参数 ModalPayloadMode 应设置为 0。<p />2) 如果使用 GripLoad 指令，则配置参数 ModalPayloadMode 应设置为 1。<p />3) 如果使用 LoadId 指令并将配置参数 ModalPayloadMode 设置为 0，则无法测定有效载荷。<p /></Causes>
+    <Actions>针对域 SYS、类型 SYS_MISC 检查配置参数 ModalPayLoadMode 的值。</Actions>
+  </Message>
+  <Message number="1796" eDefine="SYS_ERR_ARL_LOAD_MASS_NEG">
+    <Title>变元错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />在使用的载荷数据中，质量为负值。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>在将载荷用于微动控制或程序运动之前，先定义正确的载荷。可以使用服务例行程序 LoadIdentify 对载荷<p />执行载荷测定。 </Actions>
+  </Message>
+  <Message number="1797" eDefine="SYS_ERR_ARL_SIGNAL_NOT_VALID">
+    <Title>信号不可访问</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />信号 <arg format="%s" ordinal="2" /> 不可访问。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>此错误可能是由以下原因之一造成的:<p />* 单元未运行<p />* 信号配置出错<p /></Causes>
+    <Actions> 恢复:<arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1798" eDefine="SYS_ERR_ARL_SPEEDLIM_NO_TCP_ROB">
+    <Title>未找到 TCP 机器人</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />该任务不控制用作 TCP 机器人的机械单元。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>程序立即停止执行。</Consequences>
+    <Causes>没有为此任务找到 TCP 机器人。</Causes>
+    <Actions>检查 RAPID 程序。指令 <arg format="%s" ordinal="3" /> 只能用于可控制 TCP 机器人的 RAPID 任务。</Actions>
+  </Message>
+  <Message number="1799" eDefine="SYS_ERR_ARL_SPEEDLIM_VALUE">
+    <Title>速度值太低</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />在参变量 <arg format="%s" ordinal="3" /> 中使用的速度值 (<arg format="%s" ordinal="2" />) 太低。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Consequences>无法使用当前速度值。</Consequences>
+    <Causes>使用的速度值低于最小速度值。</Causes>
+    <Actions>在参变量 <arg format="%s" ordinal="3" /> 中增加速度值。<p />恢复: <arg format="%s" ordinal="5" /><p /></Actions>
+  </Message>
+  <Message number="1800" eDefine="SYS_ERR_ARL_SETNONMOTEXEC_NO_AUTO">
+    <Title>需要手动操作</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />任务 <arg format="%s" ordinal="1" /> 已发出启动机器人运动的指令。<p />在手动减速或手动全速模式下，需要重新激活启用设备。<p /><p /></Description>
+    <Causes>已在手动减速或手动全速模式下执行启动机器人运动的指令。</Causes>
+    <Actions>释放并重新激活启用设备。重新开始执行 RAPID 程序。<p />注意:如果使用 MultiMove 系统，则所有机器人和外轴都将在下一次程序启动之后开始运动。</Actions>
+  </Message>
+  <Message number="1801" eDefine="SYS_ERR_ARL_NOT_IN_SYNC_MODE">
+    <Title>在同步模式中</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />无法在同步模式中执行 <arg format="%s" ordinal="2" />。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>程序立即停止执行。<p /></Consequences>
+    <Causes>系统处于同步模式中的基本路径级别或存储路径级别。</Causes>
+    <Actions>在执行当前指令之前，取消同步。</Actions>
+  </Message>
+  <Message number="1804" eDefine="SYS_ERR_ARL_REJ_OPMODE_MANFS">
+    <Title>不允许的命令</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />不允许在“手动全速”模式中更改非动作执行设置。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Consequences>系统状态保持不变，不执行请求的操作。<p /></Consequences>
+    <Actions>确保不在“手动全速”模式中更改非动作执行设置。 </Actions>
+  </Message>
+  <Message number="1805" eDefine="SYS_ERR_ARL_ILL_DIMENSION">
+    <Title>非法尺寸</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />对变元 <arg format="%s" ordinal="3" /> 使用的尺寸 <arg format="%s" ordinal="2" /> 无效。<p />要求的尺寸：<arg format="%s" ordinal="4" /><p />程序引用<arg format="%s" ordinal="5" /></Description>
+    <Causes>在可选变元上使用了错误的尺寸或错误的值。</Causes>
+    <Actions>检查并更改 RAPID 程序。<p />恢复：ERR_ARRAY_SIZE<p /></Actions>
+  </Message>
+  <Message number="1806" eDefine="SYS_ERR_ARL_ILL_MATRIX_SINGULAR">
+    <Title>矩阵 A 为奇异矩阵</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />变元 A 中使用的矩阵为奇异矩阵，线性方程组无法解开。<p />程序引用 <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Actions>修改矩阵 A。<p />恢复： <arg format="%s" ordinal="3" /><p /></Actions>
+  </Message>
+  <Message number="1807" eDefine="SYS_ERR_ARL_NOT_ENOUGH_MEM">
+    <Title>内存不足</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />分配的内存不足以完成当前计算。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Consequences>程序立即停止执行。</Consequences>
+    <Causes>启动时分配的内存太小，不够进行计算。</Causes>
+    <Actions>请在指令中使用较小些的矩阵。<p />如果不可能，向 ABB Robotics 报告该问题。</Actions>
+  </Message>
+</Domain>

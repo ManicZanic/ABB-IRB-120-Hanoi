@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="ARL" domainNo="4" lang="zh" elogTextVersion="1.0" min="1" max="106">
+  <Message number="1" eDefine="SYS_ERR_ARL_ARGDUPOPT">
+    <Title>自变量错误</Title>
+    <Description>可选自变量 <arg format="%.16s" ordinal="1" /> 已在同一例行程序调用中使用一次以上。</Description>
+    <Actions>1) 确保可选参数在同一例行程序调用中使用不超过一次。</Actions>
+  </Message>
+  <Message number="2" eDefine="SYS_ERR_ARL_ARGEXCVAL">
+    <Title>自变量错误</Title>
+    <Description>已为一个以上的参数指定自变量 <arg format="%.16s" ordinal="1" /> 。</Description>
+    <Actions>选择参数的参数列表包含互斥参数。<p />1) 确保该自变量仅用于一个参数。</Actions>
+  </Message>
+  <Message number="3" eDefine="SYS_ERR_ARL_ARGEXPRQA">
+    <Title>自变量错误</Title>
+    <Description>应为所需参数 <arg format="%.16s" ordinal="1" /> 指定一个自变量，但找到的可选自变量为 <arg format="%.16s" ordinal="2" /> 。</Description>
+    <Actions>1) 确保所有自变量的指定顺序与调用例行程序参数的顺序相同。</Actions>
+  </Message>
+  <Message number="4" eDefine="SYS_ERR_ARL_ARGNOTREF">
+    <Title>自变量错误</Title>
+    <Description>REF 参数的自变量 <arg format="%.16s" ordinal="1" /> 不是数据引用。</Description>
+    <Actions>1) 确保该自变量为数据或参数引用。</Actions>
+  </Message>
+  <Message number="5" eDefine="SYS_ERR_ARL_ARGNOTVP">
+    <Title>自变量错误</Title>
+    <Description>INOUT 参数的自变量 <arg format="%.16s" ordinal="1" /> 不是变量或可变量，或者是只读值。</Description>
+    <Actions>1) 确保自变量为变量或可变量参数，且不是只读自变量。<p />2) 确保该自变量未写在括号 () 中。</Actions>
+  </Message>
+  <Message number="6" eDefine="SYS_ERR_ARL_ARGOPAVAL">
+    <Title>自变量错误</Title>
+    <Description>参数 <arg format="%.16s" ordinal="1" /> 缺少可选自变量值。</Description>
+    <Actions>仅可用名称指定的唯一参数为 "switch" （开关）参数。必须为所有其它参数赋值。<p />1) 确保参数拥有一个值。</Actions>
+  </Message>
+  <Message number="7" eDefine="SYS_ERR_ARL_ARGOPAW">
+    <Title>自变量错误</Title>
+    <Description>未在自变量列表的正确位置中找到可选自变量 <arg format="%.16s" ordinal="1" /></Description>
+    <Actions>1) 确保所有自变量的指定顺序与调用例行程序参数的顺序相同。</Actions>
+  </Message>
+  <Message number="8" eDefine="SYS_ERR_ARL_ARGREFOPP">
+    <Title>自变量错误</Title>
+    <Description>可选参数 <arg format="%.16s" ordinal="1" /> 的参考值缺失。</Description>
+    <Actions>每个可选参数必须拥有一个自变量，用前置反斜线字符 (\) 指定。<p />1) 将所需自变量更改为可选自变量。</Actions>
+  </Message>
+  <Message number="9" eDefine="SYS_ERR_ARL_ARGREFRQC">
+    <Title>自变量错误</Title>
+    <Description>条件自变量中必要参数 <arg format="%.16s" ordinal="1" /> 的参考值缺失。</Description>
+    <Actions>可选参数的每个条件值必须引用调用例行程序中的某一可选参数。<p />1) 更改条件值。</Actions>
+  </Message>
+  <Message number="10" eDefine="SYS_ERR_ARL_ARGREFRQP">
+    <Title>自变量错误</Title>
+    <Description>可选自变量中必要参数 <arg format="%.16s" ordinal="1" /> 的参考值缺失。</Description>
+    <Actions>每个必要参数必须拥有一个引用自变量，用前置反斜线字符 (\) 指定。<p />1) 将可选自变量更改为必要自变量。</Actions>
+  </Message>
+  <Message number="11" eDefine="SYS_ERR_ARL_ARGRQAW">
+    <Title>自变量错误</Title>
+    <Description>未在自变量列表的正确位置中找到必要自变量 <arg format="%.16s" ordinal="1" /></Description>
+    <Actions>确保所有自变量的指定顺序与调用例行程序参数的顺序相同。</Actions>
+  </Message>
+  <Message number="12" eDefine="SYS_ERR_ARL_ARGSWTVAL">
+    <Title>自变量错误</Title>
+    <Description>"switch" （开关）自变量 <arg format="%.16s" ordinal="1" /> 拥有一个值。<p /></Description>
+    <Causes>不需要给 "switch" 参数对应的自变量赋值。</Causes>
+    <Actions>1) 删除该值。</Actions>
+  </Message>
+  <Message number="13" eDefine="SYS_ERR_ARL_ARGTFA">
+    <Title>自变量错误</Title>
+    <Description>调用例行程序 <arg format="%.16s" ordinal="1" /> 的调用指令自变量过少。</Description>
+    <Actions>例行程序调用指令必须为调用例行程序的所有必要参数供值。自变量列表包含的自变量必须和参数列表中的参数一样多。<p />1) 添加更多自变量，以便和参数列表匹配。</Actions>
+  </Message>
+  <Message number="14" eDefine="SYS_ERR_ARL_ARGTMA">
+    <Title>自变量错误</Title>
+    <Description>调用例行程序 <arg format="%.16s" ordinal="1" /> 的调用指令自变量过多。</Description>
+    <Actions>仅需提供由调用例行程序参数列表定义的自变量。自变量列表包含的自变量必须和参数列表中的参数一样多。<p />1) 从自变量列表中删除多余的自变量。</Actions>
+  </Message>
+  <Message number="15" eDefine="SYS_ERR_ARL_ARRDIMPOS">
+    <Title>数据声明错误</Title>
+    <Description>数组维数为 <arg format="%i" ordinal="1" />，且只可能是 1, 2 或 3。</Description>
+    <Actions>1) 更改维表达式。</Actions>
+  </Message>
+  <Message number="16" eDefine="SYS_ERR_ARL_ARRTMD">
+    <Title>数据声明错误</Title>
+    <Description>数组定义中<p /> 维数过多<p /></Description>
+    <Actions> 数组最多可具有 3 维。<p /> 重写程序，使所需维数<p /> 不超过 3 维。 </Actions>
+  </Message>
+  <Message number="17" eDefine="SYS_ERR_ARL_DATNOTARR">
+    <Title>类型错误</Title>
+    <Description>索引数据 <arg format="%.18s" ordinal="1" />, <arg format="%.18s" ordinal="2" /> 不属于数组类型。</Description>
+    <Actions>只能为声明为数组的数据编写索引。<p />1) 删除索引或索引集。<p />2) 声明数据为数组。</Actions>
+  </Message>
+  <Message number="18" eDefine="SYS_ERR_ARL_DATNOTREC">
+    <Title>类型错误</Title>
+    <Description>数据 <arg format="%.18s" ordinal="1" />, <arg format="%.18s" ordinal="2" /> 不属于记录类型。</Description>
+    <Actions>仅为记录类型数据提供组件。<p />1) 检查引用数据的类型和名称。</Actions>
+  </Message>
+  <Message number="19" eDefine="SYS_ERR_ARL_ERRSDB">
+    <Title>限制错误</Title>
+    <Description>任务 <arg format="%s" ordinal="1" />：创建可变量时出错 <arg format="%s" ordinal="4" />。<p />将可变量插入<p />数据库时出错。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Consequences>创建的可变量无法用于 RAPID 程序。</Consequences>
+    <Causes>程序内存已满或已粉碎。</Causes>
+    <Actions>检查可否将大型数据结构拆分成小块。<p />使用已安装的模块可以节省程序内存。</Actions>
+  </Message>
+  <Message number="20" eDefine="SYS_ERR_ARL_EXPNOTCON">
+    <Title>数据声明错误</Title>
+    <Description>表达式 <arg format="%.16s" ordinal="1" /> 不是常量表达式。</Description>
+    <Actions>包含在数据声明内的任何表达式必须是常量表达式。<p />1) 确保表达式不包含变量、可变量参考值或函数调用。</Actions>
+  </Message>
+  <Message number="21" eDefine="SYS_ERR_ARL_FUNRETEXP">
+    <Title>指令错误</Title>
+    <Description>RETURN 指令中缺少的表达式。</Description>
+    <Causes>函数内的 RETURN 指令必须指定一个返回值。</Causes>
+    <Actions>1) 添加一个值表达式。</Actions>
+  </Message>
+  <Message number="22" eDefine="SYS_ERR_ARL_ICTMULOPS">
+    <Title>类型错误</Title>
+    <Description>运算符 "*" 的操作数类型不能用于 <arg format="%.18s" ordinal="1" /> 和 <arg format="%.18s" ordinal="2" /> 。</Description>
+    <Actions>允许的操作数类型组合是："num"*"num"、"num"*"pos"、"pos"*"num"、 "pos"*"pos" 和 "orient"*"orient"。<p />1) 检查操作数类型。</Actions>
+  </Message>
+  <Message number="23" eDefine="SYS_ERR_ARL_ILLGOTO">
+    <Title>指令错误</Title>
+    <Description>无法将控制传送到另一个指令列表。</Description>
+    <Actions>无法跳转到程序流程指令。<p />1) 确保标签位于 GOTO 指令所处指令列表，无论是在同一层还是外层。</Actions>
+  </Message>
+  <Message number="24" eDefine="SYS_ERR_ARL_ILTADDLOP">
+    <Title>类型错误</Title>
+    <Description>二元运算符 "+" 或 "-" 的左操作数存在非法类型 <arg format="%.18s" ordinal="1" /> 。<p /></Description>
+    <Actions>二元运算符 "+" 的允许操作数类型是 "num"、"pos" 和 "string"， 二元运算符 "-" 的则为 "num" 和 "pos"。<p />1) 检查操作数类型。</Actions>
+  </Message>
+  <Message number="25" eDefine="SYS_ERR_ARL_ILTADDOP">
+    <Title>类型错误</Title>
+    <Description>一元运算符 "+" 或 "-" 的操作数存在非法类型 <arg format="%.18s" ordinal="1" /> 。</Description>
+    <Actions>一元运算符 "+" 和 "-" 的允许操作数类型是 "num" 和 "pos"。<p />1) 检查操作数类型。</Actions>
+  </Message>
+  <Message number="26" eDefine="SYS_ERR_ARL_ILTADDROP">
+    <Title>类型错误</Title>
+    <Description>二元运算符 "+" 或 "-" 的右操作数存在非法类型 <arg format="%.18s" ordinal="1" /> 。</Description>
+    <Actions>二元运算符 "+" 的允许操作数类型是 "num"、"pos" 和 "string"， 二元运算符 "-" 的则为 "num" 和 "pos"。<p />1) 检查操作数类型。</Actions>
+  </Message>
+  <Message number="27" eDefine="SYS_ERR_ARL_ILTDIVLOP">
+    <Title>类型错误</Title>
+    <Description>运算符 "/"、"DIV" 或 "MOD" 的左操作数存在非法类型 <arg format="%.18s" ordinal="1" /> 。</Description>
+    <Actions>运算符 "/"、"DIV" 或 "MOD" 的允许操作数类型是 "num"。<p />1) 检查操作数类型。</Actions>
+  </Message>
+  <Message number="28" eDefine="SYS_ERR_ARL_ILTDIVROP">
+    <Title>类型错误</Title>
+    <Description>运算符 "/"、"DIV" 或 "MOD" 的右操作数存在非法类型 <arg format="%.18s" ordinal="1" /> 。</Description>
+    <Actions>运算符 "/"、"DIV" 或 "MOD" 的允许操作数类型是 "num"。<p />1) 检查操作数类型。</Actions>
+  </Message>
+  <Message number="29" eDefine="SYS_ERR_ARL_ILTLTLOP">
+    <Title>类型错误</Title>
+    <Description>运算符 '&lt;', '&lt;=', '&gt;' 或 '&gt;=' 的左操作数存在非法类型 <arg format="%.18s" ordinal="1" /> 。</Description>
+    <Actions>运算符 "&lt;", "&lt;=", "&gt;" 或 "&gt;=" 的允许操作数类型是 "num"。<p />1) 检查操作数类型。</Actions>
+  </Message>
+  <Message number="30" eDefine="SYS_ERR_ARL_ILTLTROP">
+    <Title>类型错误</Title>
+    <Description>运算符 "&lt;"、"&lt;="、"&gt;" 或 "&gt;=" 的或操作数存在非法类型 <arg format="%.18s" ordinal="1" /> 。</Description>
+    <Actions>运算符 "&lt;"、"&lt;="、"&gt;" 或 "&gt;=" 的允许操作数类型是 "num"。<p />1) 检查操作数类型。</Actions>
+  </Message>
+  <Message number="31" eDefine="SYS_ERR_ARL_ILTMULLOP">
+    <Title>类型错误</Title>
+    <Description>运算符 "*" 的左操作数存在非法类型 <arg format="%.18s" ordinal="1" /> 。</Description>
+    <Actions>运算符 "*" 的允许操作数类型是 "num"、"pos" 或 "orient"。<p />1) 检查操作数类型。</Actions>
+  </Message>
+  <Message number="32" eDefine="SYS_ERR_ARL_ILTMULROP">
+    <Title>类型错误</Title>
+    <Description>运算符 "*" 的右操作数存在非法类型 <arg format="%.18s" ordinal="1" /> 。</Description>
+    <Actions>运算符 "*" 的允许操作数类型是 "num"、"pos" 或 "orient"。<p />1) 检查操作数类型。</Actions>
+  </Message>
+  <Message number="33" eDefine="SYS_ERR_ARL_ILTNOTOP">
+    <Title>类型错误</Title>
+    <Description>运算符 "NOT" 的操作数存在非法类型 <arg format="%.18s" ordinal="1" /> 。</Description>
+    <Actions>运算符 "NOT" 的允许操作数类型是 "bool"。<p />1) 检查操作数类型。</Actions>
+  </Message>
+  <Message number="34" eDefine="SYS_ERR_ARL_ILTORLOP">
+    <Title>类型错误</Title>
+    <Description>运算符 "OR"、"XOR" 或 "AND" 的左操作数存在非法类型 <arg format="%.18s" ordinal="1" /> 。</Description>
+    <Actions>运算符 "OR"、"XOR" 或 "AND" 的允许操作数类型是 "bool"。<p />1) 检查操作数类型。</Actions>
+  </Message>
+  <Message number="35" eDefine="SYS_ERR_ARL_ILTORROP">
+    <Title>类型错误</Title>
+    <Description>运算符 "OR"、"XOR" 或 "AND" 的右操作数存在非法类型 <arg format="%.18s" ordinal="1" /> 。<p /></Description>
+    <Actions>运算符 "OR", "XOR" 或 "AND" 的允许操作数类型是 "bool"。<p />1) 检查操作数类型。</Actions>
+  </Message>
+  <Message number="36" eDefine="SYS_ERR_ARL_INCNIND">
+    <Title>类型错误</Title>
+    <Description>
+      <arg format="%i" ordinal="2" /> 维数组 <arg format="%.18s" ordinal="1" /> 的索引列表中索引数不正确。<p /></Description>
+    <Actions>1) 确保索引列表中的索引数与索引数据组的维数相符。</Actions>
+  </Message>
+  <Message number="37" eDefine="SYS_ERR_ARL_LOCRTNCON">
+    <Title>数据声明错误</Title>
+    <Description> 例行程序常数说明中<p /> LOCAL 非法<p /></Description>
+    <Actions> 只有程序数据声明才可拥有<p /> LOCAL 属性。删除 LOCAL<p /> 属性或将说明移至<p /> 例行程序之外。 </Actions>
+  </Message>
+  <Message number="38" eDefine="SYS_ERR_ARL_LOCRTNVAR">
+    <Title>数据声明错误</Title>
+    <Description> 例行程序变量说明中<p /> LOCAL 非法<p /></Description>
+    <Actions> 只有程序数据声明才可拥有<p /> LOCAL 属性。删除 LOCAL<p /> 属性或将说明移至<p /> 例行程序之外。 </Actions>
+  </Message>
+  <Message number="39" eDefine="SYS_ERR_ARL_NAMAMBCON">
+    <Title>名称错误</Title>
+    <Description> 常数名称<p /><arg format="%.16s" ordinal="1" /> 不明确<p /></Description>
+    <Actions> 例行程序数据必须具有在例行程序内<p /> 唯一的名称。程序数据<p /> 必须具有在模块内<p /> 唯一的名称。重命名数据或更改<p /> 不一致的名称。 </Actions>
+  </Message>
+  <Message number="40" eDefine="SYS_ERR_ARL_NAMAMBGC">
+    <Title>名称错误</Title>
+    <Description> 全局常量<p /> 名称 <arg format="%.16s" ordinal="1" /> 不明确<p /></Description>
+    <Actions> 在整个程序的所有全局类型、数据、<p /> 全局例行程序和模块中，全局数据必须<p /> 拥有唯一的名称<p /> 。重命名数据<p /> 或更改不一致的名称。 </Actions>
+  </Message>
+  <Message number="41" eDefine="SYS_ERR_ARL_NAMAMBGP">
+    <Title>名称错误</Title>
+    <Description> 全局持续变量<p /> 名称 <arg format="%.16s" ordinal="1" /> 不明确<p /></Description>
+    <Actions> 在整个程序的所有全局类型、数据、<p /> 全局例行程序和模块中，全局数据必须<p /> 拥有唯一的名称<p /> 。重命名数据<p /> 或更改不一致的名称。 </Actions>
+  </Message>
+  <Message number="42" eDefine="SYS_ERR_ARL_NAMAMBGR">
+    <Title>名称错误</Title>
+    <Description> 全局例行程序<p /> 名称 <arg format="%.16s" ordinal="1" /> 不明确<p /></Description>
+    <Actions> 在整个程序的所有全局类型、数据、<p /> 全局例行程序和模块中，全局例行程序必须<p /> 拥有唯一的名称<p /> 。重命名例行程序<p /> 或更改不一致的名称。 </Actions>
+  </Message>
+  <Message number="43" eDefine="SYS_ERR_ARL_NAMAMBGV">
+    <Title>名称错误</Title>
+    <Description> 全局变量<p /> 名称 <arg format="%.16s" ordinal="1" /> 不明确<p /></Description>
+    <Actions> 在整个程序的所有全局类型、数据、<p /> 全局例行程序和模块中，全局数据必须<p /> 拥有唯一的名称<p /> 。重命名数据<p /> 或更改不一致的名称。 </Actions>
+  </Message>
+  <Message number="44" eDefine="SYS_ERR_ARL_NAMAMBLAB">
+    <Title>名称错误</Title>
+    <Description> 标记名称<p /><arg format="%.16s" ordinal="1" /> 不明确<p /></Description>
+    <Actions> 标记必须拥有在例行程序内<p /> 唯一的名称。重命名标记或<p /> 更改不一致的名称。 </Actions>
+  </Message>
+  <Message number="45" eDefine="SYS_ERR_ARL_NAMAMBMOD">
+    <Title>名称错误</Title>
+    <Description> 模块名称<p /><arg format="%.16s" ordinal="1" /> 不明确<p /></Description>
+    <Actions> 在整个程序内的所有全局类型、全局数据、<p /> 全局例行程序和模块中，模块必须<p /> 拥有唯一的名称<p /> 。重命名模块<p /> 更改不一致的名称。 </Actions>
+  </Message>
+  <Message number="46" eDefine="SYS_ERR_ARL_NAMAMBPAR">
+    <Title>名称错误</Title>
+    <Description> 参数名称<p /><arg format="%.16s" ordinal="1" /> 不明确<p /></Description>
+    <Actions> 参数必须拥有例行程序内<p /> 唯一的名称。重命名数据<p /> 或更改不一致的<p /> 名称。 </Actions>
+  </Message>
+  <Message number="47" eDefine="SYS_ERR_ARL_NAMAMBPER">
+    <Title>名称错误</Title>
+    <Description> 持续变量名称<p /><arg format="%.16s" ordinal="1" /> 不明确<p /></Description>
+    <Actions> 程序数据必须拥有模块内<p /> 唯一的名称。重命名数据<p /> 或更改不一致的名称。 </Actions>
+  </Message>
+  <Message number="48" eDefine="SYS_ERR_ARL_NAMAMBRTN">
+    <Title>名称错误</Title>
+    <Description> 例行程序名称<p /><arg format="%.16s" ordinal="1" /> 不明确<p /></Description>
+    <Actions> 例行程序必须拥有在模块内<p /> 唯一的名称。重命名例行程序或<p /> 更改不一致的名称。 </Actions>
+  </Message>
+  <Message number="49" eDefine="SYS_ERR_ARL_NAMAMBVAR">
+    <Title>名称错误</Title>
+    <Description> 变量名称<p /><arg format="%.16s" ordinal="1" /> 不明确<p /></Description>
+    <Actions> 例行程序数据必须具有在例行程序内<p /> 唯一的名称。程序数据<p /> 必须具有在模块内<p /> 唯一的名称。重命名数据或更改<p /> 不一致的名称。 </Actions>
+  </Message>
+  <Message number="50" eDefine="SYS_ERR_ARL_NETADDOPS">
+    <Title>类型错误</Title>
+    <Description> 二元运算符 "=" 或 "&lt;&gt;" 的<p />操作数类型<p /><arg format="%.18s" ordinal="1" /> 和 <arg format="%.18s" ordinal="2" /><p /> 不相同<p /></Description>
+    <Actions>运算符 '+' 和 '-' 的两个操作符<p /> 必须具有相同的类型。请检查<p /> 操作数的类型。 </Actions>
+  </Message>
+  <Message number="51" eDefine="SYS_ERR_ARL_NETEQOPS">
+    <Title>类型错误</Title>
+    <Description> 运算符 "=" 或 "&lt;&gt;" 的<p />操作数类型<p /><arg format="%.18s" ordinal="2" /> &lt;arg format="%.18s" ordinal="1"/&gt; 和 &lt;arg format="%.18s" ordinal="2"/&gt;<p /> 不相同<p /></Description>
+    <Actions> 运算符 "=" 和 "&lt;&gt;" 的两个操作数<p /> 必须具有相同的类型。请检查<p /> 操作数的类型。 </Actions>
+  </Message>
+  <Message number="52" eDefine="SYS_ERR_ARL_NOTRETEXP">
+    <Title>指令错误</Title>
+    <Description> 具有表达式的<p /> RETRUN 只允许出现在函数中<p /></Description>
+    <Actions> 在过程或陷阱中，RETURN<p /> 指令不必指定一个<p /> 返回值表达式。删除表达式。 </Actions>
+  </Message>
+  <Message number="54" eDefine="SYS_ERR_ARL_NSDARRAGG">
+    <Title>类型错误</Title>
+    <Description> 数组<p /> 类型 (<arg format="%i" ordinal="1" />) 和聚集 (<arg format="%i" ordinal="2" />)<p /> 具有不同的维数<p /></Description>
+    <Actions> 确保聚集中的表达式数量<p /> 与数组的维数<p /> 相同。 </Actions>
+  </Message>
+  <Message number="55" eDefine="SYS_ERR_ARL_NVTATGT">
+    <Title>类型错误</Title>
+    <Description> 赋值目标<p /> 类型 <arg format="%.18s" ordinal="1" /> 不是值或<p /> 半值类型<p /></Description>
+    <Actions> 赋值数据的类型<p /> 必须是值或半值<p /> 。非值类型数据只能<p /> 由指令或函数专门预定义的<p /> 特殊类型设置。 </Actions>
+  </Message>
+  <Message number="56" eDefine="SYS_ERR_ARL_NVTEQLOP">
+    <Title>类型错误</Title>
+    <Description>类型 <arg format="%.18s" ordinal="1" /> 运算符  '=' 或 '&lt;&gt;' 的左操作数类型非值或半值类型</Description>
+    <Actions>运算符  '=' 或 '&lt;&gt;' 可仅用于在值或半值类型的表达式中。如果要进行比较，则需要特殊类型指定的预定义功能。</Actions>
+  </Message>
+  <Message number="57" eDefine="SYS_ERR_ARL_NVTEQROP">
+    <Title>类型错误</Title>
+    <Description>类型 <arg format="%.18s" ordinal="1" /> 运算符  '=' 或 '&lt;&gt;' 的右操作数非值或半值类型</Description>
+    <Actions>运算符  '=' 或 '&lt;&gt;' 可仅用于在值或半值类型的表达式中。如果要进行比较，则需要特殊类型指定的预定义功能。</Actions>
+  </Message>
+  <Message number="58" eDefine="SYS_ERR_ARL_NVTTSTEXP">
+    <Title>类型错误</Title>
+    <Description> TEST 表达式<p /> 类型 <arg format="%.18s" ordinal="1" /> 不是值或<p /> 半值类型<p /></Description>
+    <Actions> TEST 指令只能应用于<p /> 值或半值类型的<p /> 。如要进行比较，<p /> 则需采用专门预定义的<p /> 特殊类型的函数。 </Actions>
+  </Message>
+  <Message number="59" eDefine="SYS_ERR_ARL_PHRCONVAL">
+    <Title>数据声明错误</Title>
+    <Description> 指定常量定义中<p /> 不允许插入<p /> 值表达式的占位符<p /></Description>
+    <Actions> 完成数据声明或将<p /> 数据名称改为占位符。 </Actions>
+  </Message>
+  <Message number="60" eDefine="SYS_ERR_ARL_PHRDDNDIM">
+    <Title>数据声明错误</Title>
+    <Description>指定常量或变量定义中<p /> 不允许<p /> 插入数组维数占位符<p /></Description>
+    <Actions> 完成数据声明或将<p /> 数据名称改为占位符。 </Actions>
+  </Message>
+  <Message number="61" eDefine="SYS_ERR_ARL_PHRPARDIM">
+    <Title>例行程序声明错误</Title>
+    <Description> 指定的例行程序定义中<p /> 不允许插入<p /> 参数数组维数的占位符<p /></Description>
+    <Actions> 完成参数声明或将<p /> 例行程序名称改为占位符<p /> 。 </Actions>
+  </Message>
+  <Message number="62" eDefine="SYS_ERR_ARL_PHRPARNAM">
+    <Title>名称错误</Title>
+    <Description> 指定例行程序定义中<p /> 不允许插入<p /> 参数名称占位符<p /></Description>
+    <Actions> 完成例行程序声明或将<p /> 例行程序名称改为占位符<p /> 。 </Actions>
+  </Message>
+  <Message number="63" eDefine="SYS_ERR_ARL_PHRPERVAL">
+    <Title>数据声明错误</Title>
+    <Description> 指定持续变量定义中<p /> 不允许插入<p /> 初始值表达式的占位符<p /></Description>
+    <Actions> 完成数据声明或将<p /> 数据名称改为占位符。 </Actions>
+  </Message>
+  <Message number="64" eDefine="SYS_ERR_ARL_PHRRTNPAR">
+    <Title>例行程序声明错误</Title>
+    <Description> 指定例行程序定义中<p /> 不允许插入<p /> 参数的占位符<p /></Description>
+    <Actions> 完成参数声明，<p /> 删除占位符，或将<p /> 例行程序名称改为占位符。 </Actions>
+  </Message>
+  <Message number="65" eDefine="SYS_ERR_ARL_PHRTYP">
+    <Title>引用错误</Title>
+    <Description> 指定数据、记录组件或例行程序定义中<p /> 不允许<p /> 插入类型的占位符<p /></Description>
+    <Actions> 完成数据或例行程序声明，<p /> 或将数据或例行程序名称改为<p /> 占位符。 </Actions>
+  </Message>
+  <Message number="66" eDefine="SYS_ERR_ARL_PHRVARVAL">
+    <Title>数据声明错误</Title>
+    <Description> 指定变量定义中<p /> 不允许插入<p /> 初始值表达式的占位符。<p /></Description>
+    <Actions> 完成数据声明或将<p /> 数据名称改为占位符。 </Actions>
+  </Message>
+  <Message number="67" eDefine="SYS_ERR_ARL_RECAGGTFC">
+    <Title>类型错误</Title>
+    <Description> 记录<p /> 类型集合中的组件太少。<p /><arg format="%.18s" ordinal="1" /><p /></Description>
+    <Actions> 确保集合中的表达式数量<p /> 与记录类型中的<p /> 组件数相同。 </Actions>
+  </Message>
+  <Message number="68" eDefine="SYS_ERR_ARL_RECAGGTMC">
+    <Title>类型错误</Title>
+    <Description> 记录<p /> 类型集合中的组件过多。<p /><arg format="%.18s" ordinal="1" /><p /></Description>
+    <Actions> 确保集合中的表达式数量<p /> 与记录类型中的<p /> 组件数相同。 </Actions>
+  </Message>
+  <Message number="69" eDefine="SYS_ERR_ARL_REFAMBDAT">
+    <Title>引用错误</Title>
+    <Description> 数据引用<p /><arg format="%.16s" ordinal="1" /> 不明确<p /></Description>
+    <Actions> 在该程序位置至少<p /> 可以看见另外一个<p /> 与引用数据同名的对象。确保<p /> 所有对象名称满足<p /> 唯一性命名规则。 </Actions>
+  </Message>
+  <Message number="70" eDefine="SYS_ERR_ARL_REFAMBFUN">
+    <Title>引用错误
+</Title>
+    <Description>功能引用 <arg format="%.16s" ordinal="1" /> 有歧义
+</Description>
+    <Actions>在该程序位置至少能看见另外一个与引用功能同名的对象。确保所有对象名称能满足唯一性命名规则。
+</Actions>
+  </Message>
+  <Message number="71" eDefine="SYS_ERR_ARL_REFAMBLAB">
+    <Title>引用错误</Title>
+    <Description> 标记引用<p /><arg format="%.16s" ordinal="1" /> 不明确<p /></Description>
+    <Actions> 在该程序位置至少<p /> 可以看见另外一个<p /> 与引用标记同名的对象。确保<p /> 所有对象名称满足<p /> 唯一性命名规则。 </Actions>
+  </Message>
+  <Message number="72" eDefine="SYS_ERR_ARL_REFAMBPRC">
+    <Title>引用错误</Title>
+    <Description> 过程<p /> 引用 <arg format="%.16s" ordinal="1" /> 不明确<p /></Description>
+    <Actions> 在该程序位置至少<p /> 可以看见另外一个<p /> 与引用过程同名的对象。确保<p /> 所有对象名称满足<p /> 唯一性命名规则。 </Actions>
+  </Message>
+  <Message number="73" eDefine="SYS_ERR_ARL_REFAMBTRP">
+    <Title>引用错误</Title>
+    <Description> 中断程序引用<p /><arg format="%.16s" ordinal="1" /> 不明确<p /></Description>
+    <Actions> 在该程序位置至少<p /> 可以看见另外一个<p /> 与引用中断程序同名的对象。确保<p /> 所有对象名称满足<p /> 唯一性命名规则。 </Actions>
+  </Message>
+  <Message number="74" eDefine="SYS_ERR_ARL_REFNOTDAT">
+    <Title>引用错误</Title>
+    <Description>
+      <arg format="%.16s" ordinal="1" />
+      <p /> 不是完整的数据引用<p /></Description>
+    <Actions> 指定的名称确认了一个<p /> 非数据对象。检查要求的数据<p /> 是否被其它同名对象<p /> 隐藏。 </Actions>
+  </Message>
+  <Message number="75" eDefine="SYS_ERR_ARL_REFNOTFUN">
+    <Title>引用错误</Title>
+    <Description>
+      <arg format="%.16s" ordinal="1" />
+      <p /> 不是函数引用<p /></Description>
+    <Actions> 指定的名称确认了一个<p /> 非函数对象。检查要求的函数<p /> 是否被其它同名对象<p /> 隐藏。 </Actions>
+  </Message>
+  <Message number="76" eDefine="SYS_ERR_ARL_REFNOTLAB">
+    <Title>引用错误</Title>
+    <Description>
+      <arg format="%.16s" ordinal="1" />
+      <p /> 不是标记引用<p /></Description>
+    <Actions> 指定的名称确认了一个<p /> 非标记对象。检查要求的标记<p /> 是否被其它同名对象<p /> 隐藏。 </Actions>
+  </Message>
+  <Message number="77" eDefine="SYS_ERR_ARL_REFNOTOPC">
+    <Title>引用错误</Title>
+    <Description>
+      <arg format="%.16s" ordinal="1" />
+      <p /> 不是条件自变量值中的<p /> 可选参数引用<p /></Description>
+    <Actions> 指定的名称确认了一个<p /> 非可选参数对象。更改<p /> 名称，以便引用可选<p /> 参数。 </Actions>
+  </Message>
+  <Message number="78" eDefine="SYS_ERR_ARL_REFNOTOPP">
+    <Title>引用错误</Title>
+    <Description>
+      <arg format="%.16s" ordinal="1" />
+      <p /> 不是可选参数引用<p /></Description>
+    <Actions> 指定的名称确认了一个<p /> 非可选参数对象。更改<p /> 名称，以便引用可选<p /> 参数。 </Actions>
+  </Message>
+  <Message number="79" eDefine="SYS_ERR_ARL_REFNOTPRC">
+    <Title>引用错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />： <arg format="%.16s" ordinal="2" /> 不是过程引用<p /></Description>
+    <Actions> 指定的名称确认了一个<p /> 非过程对象。检查要求的过程<p /> 是否被其它同名对象<p /> 隐藏。</Actions>
+  </Message>
+  <Message number="80" eDefine="SYS_ERR_ARL_REFNOTRQP">
+    <Title>引用错误</Title>
+    <Description>
+      <arg format="%.16s" ordinal="1" />
+      <p /> 不是要求的参数引用<p /></Description>
+    <Actions> 指定的名称确认了一个<p /> 非要求的参数对象。更改<p /> 名称，以便引用必要<p /> 参数。 </Actions>
+  </Message>
+  <Message number="81" eDefine="SYS_ERR_ARL_REFNOTTRP">
+    <Title>引用错误</Title>
+    <Description>
+      <arg format="%.16s" ordinal="1" />
+      <p /> 不是中断程序引用<p /></Description>
+    <Actions> 指定的名称确认了一个<p /> 非中断程序对象。检查所需的中断程序<p /> 是否被其它同名对象<p /> 隐藏。 </Actions>
+  </Message>
+  <Message number="82" eDefine="SYS_ERR_ARL_REFNOTTYP">
+    <Title>引用错误</Title>
+    <Description>
+      <arg format="%.16s" ordinal="1" />
+      <p /> 不是类型名称<p /></Description>
+    <Actions> 指定的名称确认了一个<p /> 非类型对象。检查所需的类型<p /> 是否被其它同名对象<p /> 隐藏。 </Actions>
+  </Message>
+  <Message number="83" eDefine="SYS_ERR_ARL_REFNOTVT">
+    <Title>类型错误</Title>
+    <Description>
+      <arg format="%.16s" ordinal="1" />
+      <p /> 不是值类型<p /></Description>
+    <Actions> 只有缺少初始值的变量<p /> 和 "VAR" 模式参数可以是<p /> 半值或非值类型。 </Actions>
+  </Message>
+  <Message number="86" eDefine="SYS_ERR_ARL_REFUNKLAB">
+    <Title>引用错误</Title>
+    <Description> 引用了<p /> 未知标记 <arg format="%.16s" ordinal="1" /><p /></Description>
+    <Actions> 例行程序不包含具有指定名称的<p /> 标记（或其它对象）。 </Actions>
+  </Message>
+  <Message number="87" eDefine="SYS_ERR_ARL_REFUNKOPP">
+    <Title>引用错误</Title>
+    <Description> 引用了<p /> 未知可选参数<p /><arg format="%.16s" ordinal="1" /><p /></Description>
+    <Actions> 调用的例行程序不包含具有指定名称的<p /> 可选参数（或其它对象）<p /> 。 </Actions>
+  </Message>
+  <Message number="89" eDefine="SYS_ERR_ARL_REFUNKRCP">
+    <Title>引用错误</Title>
+    <Description> 引用了<p /> 未知记录组件<p /><arg format="%.16s" ordinal="1" /><p /></Description>
+    <Actions> 记录类型不包含具有指定名称的<p /> 记录组件。 </Actions>
+  </Message>
+  <Message number="90" eDefine="SYS_ERR_ARL_REFUNKRQP">
+    <Title>引用错误</Title>
+    <Description> 引用了<p /> 未知必要参数<p /><arg format="%.16s" ordinal="1" /><p /></Description>
+    <Actions> 调用的例行程序不包含具有指定名称的<p /> 必要参数（或其它对象）<p /> 。 </Actions>
+  </Message>
+  <Message number="92" eDefine="SYS_ERR_ARL_REFUNKTYP">
+    <Title>引用错误</Title>
+    <Description> 未知类型名称<p /><arg format="%.16s" ordinal="1" /><p /></Description>
+    <Actions> 从该程序位置不能看见 <p /> 具有指定名称的数据类型<p /> （或其它对象）。 </Actions>
+  </Message>
+  <Message number="93" eDefine="SYS_ERR_ARL_ROATGT">
+    <Title>指令错误</Title>
+    <Description> 赋值目标<p /> 是只读目标<p /></Description>
+    <Actions> 被赋值的数据不能是<p /> 常量、只读变量或<p /> 只读持续变量。 </Actions>
+  </Message>
+  <Message number="94" eDefine="SYS_ERR_ARL_RTNPER">
+    <Title>数据声明错误</Title>
+    <Description> 例行程序中<p /> 不允许持续变量说明<p /></Description>
+    <Actions> 持续变量只能在 <p /> 模块层说明。将持续变量说明<p /> 移出例行程序。 </Actions>
+  </Message>
+  <Message number="95" eDefine="SYS_ERR_ARL_RTNRSEEXP">
+    <Title>指令错误</Title>
+    <Description> 无表达式的 <p /> RAISE 只允许出现在错误处理程序中。<p /></Description>
+    <Actions> 将错误编号表达式添加到 <p /> RAISE 指令。 </Actions>
+  </Message>
+  <Message number="96" eDefine="SYS_ERR_ARL_RTNRTY">
+    <Title>指令错误</Title>
+    <Description> RETRY 只<p /> 允许出现在错误处理程序中<p /></Description>
+    <Actions> RETRY 指令只能用于<p /> 错误处理程序。请删除它。 </Actions>
+  </Message>
+  <Message number="97" eDefine="SYS_ERR_ARL_RTNTNX">
+    <Title>指令错误</Title>
+    <Description> TRYNEXT 只 <p /> 允许出现在错误句处理程序中</Description>
+    <Actions> TRYNEXT 指令只能用于<p /> 错误处理程序。请删除它。 </Actions>
+  </Message>
+  <Message number="98" eDefine="SYS_ERR_ARL_SWTIN">
+    <Title>参数错误</Title>
+    <Description> "switch" <p /> 参数必须具有传送模式 IN<p /></Description>
+    <Actions> 删除参数传送模式<p /> 分类符。如果 IN 传送模式不<p /> 足以解决问题，请更改参数的<p /> 数据类型。 </Actions>
+  </Message>
+  <Message number="99" eDefine="SYS_ERR_ARL_SWTNOTDIM">
+    <Title>参数错误</Title>
+    <Description> 无法确定<p /> "switch" 参数的维数<p /></Description>
+    <Actions> 删除数组维<p /> 规范，或更改参数的<p /> 数据类型。 </Actions>
+  </Message>
+  <Message number="100" eDefine="SYS_ERR_ARL_SWTOPP">
+    <Title>参数错误</Title>
+    <Description> "switch" 仅 <p /> 适用于可选参数<p /></Description>
+    <Actions> 将参数更改为可选 <p /> 参数，或更改参数的<p /> 数据类型。如果对象不是<p /> 参数，请更改数据类型。 </Actions>
+  </Message>
+  <Message number="101" eDefine="SYS_ERR_ARL_TYPMM">
+    <Title>类型错误</Title>
+    <Description> 预期类型 <arg format="%.18s" ordinal="1" /><p /> 和找到的类型 <arg format="%.18s" ordinal="2" /><p /> 不匹配<p /></Description>
+    <Actions> 表达式不是预期的 <p /> 数据类型。 </Actions>
+  </Message>
+  <Message number="102" eDefine="SYS_ERR_ARL_TYPMMAGG">
+    <Title>类型错误</Title>
+    <Description> 集合和预期类型 <arg format="%.18s" ordinal="1" /><p /> 不匹配<p /><arg format="%.18s" ordinal="1" /><p /></Description>
+    <Actions> 集合与预期数据类型<p /> 不匹配。 </Actions>
+  </Message>
+  <Message number="103" eDefine="SYS_ERR_ARL_TYPMMSDB">
+    <Title>类型错误</Title>
+    <Description> 持续变量<p /><arg format="%.18s" ordinal="1" />, <arg format="%.16s" ordinal="2" /> 类型 <p /> 不匹配<p /></Description>
+    <Actions> 已存在一个名称相同<p /> 但数据类型不同的持续变量数据<p /> 。重命名持续变量或更改<p /> 其数据类型。 </Actions>
+  </Message>
+  <Message number="104" eDefine="SYS_ERR_ARL_UNDARRDIM">
+    <Title>数据声明错误</Title>
+    <Description> 无法确定 <p /> 数组维数（循环常量<p /> 参考值？）<p /></Description>
+    <Actions> 检查是否正确定义了<p /> 所有引用常量。如果这样，程序就会<p /> 过于复杂。请尝试重写<p /> 声明。 </Actions>
+  </Message>
+  <Message number="105" eDefine="SYS_ERR_ARL_UNDCONTYP">
+    <Title>数据声明错误</Title>
+    <Description> 无法确定 <p /> 常量值（循环常量参考值？）<p /> 类型<p /></Description>
+    <Actions> 检查是否正确定义了<p /> 所有引用常量。如果这样，程序就会<p /> 过于复杂。请尝试重写<p /> 声明。 </Actions>
+  </Message>
+  <Message number="106" eDefine="SYS_ERR_ARL_UNDCONVAL">
+    <Title>数据声明错误</Title>
+    <Description> 无法评估 <p /> 常量值表达式（循环<p /> 常量参考值？）<p /></Description>
+    <Actions> 检查是否正确定义了<p /> 所有引用常量。如果这样，程序就会<p /> 过于复杂。请尝试重写<p /> 声明。 </Actions>
+  </Message>
+</Domain>

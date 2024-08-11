@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="RAPID" domainNo="15" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="330" max="330">
+  <Message number="330" eDefine="SYS_ERR_RAPID_INSTALLATION_ERROR">
+    <Title>RAPID error in module</Title>
+    <Description>Task:<arg format="%s" ordinal="1" /><p />Module (line/column): <arg format="%s" ordinal="2" /><p /><p />There is an error with symbol: <arg format="%s" ordinal="3" /></Description>
+  </Message>
+</Domain>

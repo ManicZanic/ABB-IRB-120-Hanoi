@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.TPU.Screens">
+  <Forms>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.TpuPopupBrowseFolder">
+      <Controls>
+        <Control ID="lblFolder" Text="选择文件夹" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="4" Top="4" Width="197" Height="16" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.TpuPopupBrowser">
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.TpuPopupEditDouble">
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.TpuPopupEditString">
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.TpuPopupMessage">
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.TpuPopupSelect">
+      <Controls>
+        <Control ID="gridItems" Text="gridItems" Name="ABB.Robotics.Paint.TPU.Controls.TpuGrid" Left="6" Top="21" Width="263" Height="123" />
+        <Control ID="lblTitle" Text="选择" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="6" Top="3" Width="263" Height="16" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.TpuWndDiagnosis" Text="诊断">
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.TpuWndHelp" Text="帮助">
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.TpuWndLanguage" Text="语言">
+      <Menu ref="menuSelectLanguage" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.TpuWndMain" Text="Home" Background="SkinRoboBell.jpg">
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.TpuWndMenu">
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.TpuWndMessageBox" Text="消息箱">
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.TpuWndTitleBar">
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Wizard.TpuWndWizard" Text="向导">
+      <Menu ref="menuWizard" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Wizard.TpuWndWizardPage" Text="" Width="230" Height="192">
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Wizard.TpuWndWizardPage" Text="" Width="230" Height="192" />
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.TpuPopupAlphaPad" Text="" Width="256" Height="164">
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.TpuPopupNumPad" Text="" Width="136" Height="164">
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.TpuPopupText" Text="" Width="300" Height="172">
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.TpuWndSelect" Text="" Width="320" Height="192">
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Wizard.TpuWizardStep" Text="" Width="50" Height="32">
+      <Controls />
+    </Form>
+  </Forms>
+  <Menus>
+    <Menu ID="menuWizard">
+      <MenuItem ID="" Text="" />
+      <MenuItem ID="" Text="" />
+      <MenuItem ID="Cancel" Text="取消" />
+      <MenuItem ID="Previous" Text="向前" />
+      <MenuItem ID="Next" Text="向后" />
+    </Menu>
+    <Menu ID="menuSelectLanguage">
+      <MenuItem ID="mitemOk" Text="OK" />
+      <MenuItem ID="mitemCancel" Text="取消" />
+    </Menu>
+  </Menus>
+  <Strings>
+    <String ID="OK" Text="OK" />
+    <String ID="Cancel" Text="取消" />
+    <String ID="Yes" Text="Yes" />
+    <String ID="No" Text="No" />
+    <String ID="Message.Wait" Text="请等待..." />
+    <String ID="NoAValidNumber" Text="不是一个有效数." />
+    <String ID="Failed" Text="失败" />
+    <String ID="InitValue" Text="-" />
+    <String ID="Wizard.Next" Text="向后" />
+    <String ID="Wizard.Finish" Text="结束" />
+    <String ID="Sym" Text="Sym" />
+    <String ID="Abc" Text="Abc" />
+  </Strings>
+</Resources>

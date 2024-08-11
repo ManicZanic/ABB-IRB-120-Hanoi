@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+******************************************************************************
+*
+* MMC_cfgtext.xml - MMC XML Text Definition File
+*
+* DESCRIPTION:
+*   This file contains the XML text definitions for Man-machine communication.
+*
+* Revision: 1.0
+*
+* History: 22/6-04 Created. ATMA/RO/AIRD/Daniel Wadenhof
+*	   11/8-04 Improved/implemented more help-texts. ATMA/RO/AIRD/Daniel
+*		   Wadenhof
+*
+* Copyright (c) ABB Automation Technologies AB 2004 All rights reserved
+*
+******************************************************************************
+-->
+<Resources xmlns="urn:abb-robotics-cfg-text" language="en" cfgTextVersion="1.1">
+	<Text resourceID="MMC_AI">Analog Input</Text>
+	<Text resourceID="MMC_AO">Analog Output</Text>
+	<Text resourceID="MMC_AltNo">Parameter alternative number</Text>
+	<Text resourceID="MMC_DI">Digital Input</Text>
+	<Text resourceID="MMC_DO">Digital Output</Text>
+	<Text resourceID="MMC_GI">Group Input</Text>
+	<Text resourceID="MMC_GO">Group Output</Text>
+	<Text resourceID="MMC_InstrName">Instruction name</Text>
+	<Text resourceID="MMC_MC1">Most Common Instruction - List 1</Text>
+	<Text resourceID="MMC_MC2">Most Common Instruction - List 2</Text>
+	<Text resourceID="MMC_MC3">Most Common Instruction - List 3</Text>
+	<Text resourceID="MMC_MMC">Man-machine communication</Text>
+	<Text resourceID="MMC_MostCommonIO">Most Common I/O Signal</Text>
+	<Text resourceID="MMC_Name">Name</Text>
+	<Text resourceID="MMC_No">No</Text>
+	<Text resourceID="MMC_OnlyMecTask">Visible in motion task only</Text>
+	<Text resourceID="MMC_ParamNo">Parameter number</Text>
+	<Text resourceID="MMC_SignalName">Signal Name</Text>
+	<Text resourceID="MMC_SignalType">Signal Type</Text>
+	<Text resourceID="MMC_Yes">Yes</Text>
+	<Text resourceID="MMC_PROD_PERM">Production permission</Text>
+	<Text resourceID="MMC_EXEC_MODE">Run mode</Text>
+	<Text resourceID="MMC_Permission">Permission</Text>
+	<Text resourceID="MMC_EXEC_PERM_RW">Changeable in Auto</Text>
+	<Text resourceID="MMC_EXEC_PERM_R">Restricted in Auto</Text>
+	<Text resourceID="MMC_WARN_AT_START">Warning at Start</Text>
+	<Text resourceID="MMC_PP_at_CURSOR">PP at Cursor</Text>
+	<Text resourceID="MMC_WARN">Cursor PP Diff Warning</Text>
+	<Text resourceID="MMC_TRUE">TRUE</Text>
+	<Text resourceID="MMC_FALSE">FALSE</Text>
+	<Text resourceID="MMC_BUTTON_CURSOR">Show PP to Cursor Button</Text>
+	<Text resourceID="MMC_AUTO_SWITCH_OF_JOG_UNIT">Automatically switch jog unit</Text>
+	<Text resourceID="MMC_ENABLED">Enable switch jog unit</Text>
+	<Text resourceID="MMC_BACKUP_DEFAULT">Backup settings</Text>
+	<Text resourceID="MMC_BACKUP_NAME">Name</Text>
+	<Text resourceID="MMC_BACKUP_PATH">Path</Text>
+	<Text resourceID="MMC_UNIQUE_NAME">Unique name</Text>
+	<Text resourceID="MMC_DISABLE_NAME_CHANGE">Disable name change</Text>
+	
+
+
+
+	<!-- Help texts -->
+	<Text resourceID="HLP_MMC_AltNo">The argument-number of the optional parameter to use. The parameter number must also be specified</Text>
+	<Text resourceID="HLP_MMC_InstrName">The name of the instruction as defined. Must be edited if "name" is not a valid instruction-name</Text>
+	<!--
+	<Text resourceID="HLP_MMC_MC1">NOT IMPLEMENTED!! - Pick list 1</Text>
+	<Text resourceID="HLP_MMC_MC2">NOT IMPLEMENTED!! - Pick list 2</Text>
+	<Text resourceID="HLP_MMC_MC3">NOT IMPLEMENTED!! - Pick list 3</Text>
+	<Text resourceID="HLP_MMC_MMC">NOT IMPLEMENTED!! - Man-machine communication</Text>
+	<Text resourceID="HLP_MMC_MostCommonIO">NOT IMPLEMENTED!! - Most Common I/O</Text> 
+	-->
+	<Text resourceID="HLP_MMC_Name">The string to be shown in the picklist</Text>
+	<Text resourceID="HLP_MMC_OnlyMecTask">Defines if the instruction shall only be visible in motion-tasks</Text>
+	<Text resourceID="HLP_MMC_ParamNo">The parameter-number of the optional parameter. The parameter alternative number must also be specified</Text>
+	<Text resourceID="HLP_MMC_SignalName">The name of the I/O signal. The I/O signal must be configured</Text>
+	<Text resourceID="HLP_MMC_SignalType">The type of I/O signal</Text>
+	<Text resourceID="HLP_MMC_Prod_Perm">Different permissions during Production.</Text>
+	<Text resourceID="HLP_MMC_Warn_at_Start">Used if a warning should be presented if PP and cursor are not on the same instruction at start.</Text>
+	<Text resourceID="HLP_MMC_PP_at_Cursor">TRUE if a warning should be presented if PP and cursor are not on the same instruction at start.</Text>
+	<Text resourceID="HLP_MMC_Button_Cursor">TRUE if the button "Cursor" should be visible on the warning</Text>
+	<Text resourceID="HLP_MMC_Auto_Switch_of_Jog_Unit">Used if the unit to be jogged should switch when switching editor</Text>
+	<Text resourceID="HLP_MMC_Enabled">TRUE if there should be an automatically switch of jog unit when switching editor</Text>
+</Resources>

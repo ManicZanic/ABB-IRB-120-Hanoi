@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Resource Name="sis_texts" Language="pl">
+  <Text Name="1">
+    <Value>OK</Value>
+    <Comment>Used for function keys TPReadFK, no_of_char 5</Comment>
+  </Text>
+  <Text Name="2">
+    <Value>Resetuj</Value>
+    <Comment>Used for function keys TPReadFK, no_of_char 5</Comment>
+  </Text>
+  <Text Name="3">
+    <Value>Tak</Value>
+    <Comment>Used for function keys TPReadFK, no_of_char 5</Comment>
+  </Text>
+  <Text Name="4">
+    <Value>Nie</Value>
+    <Comment>Used for function keys TPReadFK, no_of_char 5</Comment>
+  </Text>
+  <Text Name="5">
+    <Value>OK</Value>
+    <Comment>Status of issue i.e. Gear Oil OK, no_of_char 5</Comment>
+  </Text>
+  <Text Name="6">
+    <Value>Nie OK</Value>
+    <Comment>Status of issue i.e. Gear Oil NOK, no_of_char 5</Comment>
+  </Text>
+  <Text Name="7">
+    <Value>Wyjdz</Value>
+    <Comment>Exit of service routine, no_of_char 5</Comment>
+  </Text>
+  <Text Name="8">
+    <Value>Anuluj</Value>
+    <Comment>no_of_char 5 </Comment>
+  </Text>
+  <Text Name="10">
+    <Value>Instrukcja obslugi — system informacji serwisowych</Value>
+    <Comment>Title in main window, no_of_char 38</Comment>
+  </Text>
+  <Text Name="11">
+    <Value>Czas kalendarzowy</Value>
+    <Comment>First item in main window's menu Calendar Time, no_of_char 15</Comment>
+  </Text>
+  <Text Name="12">
+    <Value>Czas pracy</Value>
+    <Comment>Second item in main window's menu Product Time, no_of_char 15</Comment>
+  </Text>
+  <Text Name="13">
+    <Value>Przekladnia</Value>
+    <Comment>Third item in main window's menu Gear oil, no_of_char 15</Comment>
+  </Text>
+  <Text Name="20">
+    <Value>Wyjsc?</Value>
+    <Comment>Exit or no, no_of_char 39</Comment>
+  </Text>
+  <Text Name="21">
+    <Value>Resetowac?</Value>
+    <Comment>Reset or not reset, no_of_char 39</Comment>
+  </Text>
+  <Text Name="22">
+    <Value>Przekroczono limit czasu serwisu!</Value>
+    <Comment>Service level exceeded, no_of_char 39</Comment>
+  </Text>
+  <Text Name="23">
+    <Value>Brak dostepnych danych!</Value>
+    <Comment>Promted when there's no data available, no_of_char 39
+</Comment>
+  </Text>
+  <Text Name="30">
+    <Value>Poprz. serwis:</Value>
+    <Comment>First item Calendar Time window, no_of_char 15</Comment>
+  </Text>
+  <Text Name="31">
+    <Value>Czas, który uplynal:</Value>
+    <Comment>Second item Calendar Time window, Elapsed days since last service, no_of_char 15</Comment>
+  </Text>
+  <Text Name="32">
+    <Value>Kolejny serwis:</Value>
+    <Comment>Third item Calendar Time window  Date of next service, no_of_char 15</Comment>
+  </Text>
+  <Text Name="33">
+    <Value>Pozostaly czas:</Value>
+    <Comment>Fourth item Calendar Time window, Days to next service, no_of_char 15</Comment>
+  </Text>
+  <Text Name="34">
+    <Value>dni</Value>
+    <Comment>Unit of time, no_of_char 16</Comment>
+  </Text>
+  <Text Name="40">
+    <Value>Limit czasu serwisu:</Value>
+    <Comment>First item in Production window, Total number of production hours, no_of_char 15</Comment>
+  </Text>
+  <Text Name="41">
+    <Value>Czas, który uplynal:</Value>
+    <Comment>Second item Production window, Number of production hours since last service, no_of_char 15</Comment>
+  </Text>
+  <Text Name="42">
+    <Value>Pozostaly czas:</Value>
+    <Comment>Third item Production window, Number of production hours to last service, no_of_char 15</Comment>
+  </Text>
+  <Text Name="43">
+    <Value>h</Value>
+    <Comment>Unit of time, no_of_char 15</Comment>
+  </Text>
+  <Text Name="44">
+    <Value>min.</Value>
+    <Comment>Unit of time, no_of_char 15</Comment>
+  </Text>
+  <Text Name="50">
+    <Value>Os</Value>
+    <Comment>Joint, no_of_char 5</Comment>
+  </Text>
+  <Text Name="51">
+    <Value>Wykorzystany czas:</Value>
+    <Comment>Consumed time of estimated service interval, Perscent, no_of_char 15</Comment>
+  </Text>
+  <Text Name="52">
+    <Value>Czas, który uplynal:</Value>
+    <Comment>Time since last service, no_of_char 16</Comment>
+  </Text>
+  <Text Name="53">
+    <Value>Pozostaly czas:</Value>
+    <Comment>Estimated remaining time, no_of_char 16</Comment>
+  </Text>
+  <Text Name="54">
+    <Value>h</Value>
+    <Comment>Unit of time, no_of_char 16</Comment>
+  </Text>
+  <Text Name="55">
+    <Value>Wybierz urzadzenie mechaniczne</Value>
+    <Comment>Second unit, simple instruction, no_of_char 39</Comment>
+  </Text>
+  <Text Name="56">
+    <Value>Brak dostepnych danych SIS dla</Value>
+    <Comment>no_of_char 39</Comment>
+  </Text>
+</Resource>

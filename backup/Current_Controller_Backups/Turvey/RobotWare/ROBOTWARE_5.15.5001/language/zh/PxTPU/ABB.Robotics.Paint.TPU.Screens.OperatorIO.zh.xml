@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.TPU.Screens.OperatorIO">
+  <Forms>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.OperatorIO.TpuWndOperatorIO" Text="操作日志" Width="320" Height="192" Icon="Scroll32.gif">
+      <Controls />
+      <Menu ref="menuTpuWndOperatorIO" />
+    </Form>
+  </Forms>
+  <Menus>
+    <Menu ID="menuTpuWndOperatorIO">
+      <MenuItem ID="Suspend" Text="悬挂" />
+      <MenuItem ID="" Text="" />
+      <MenuItem ID="" Text="" />
+      <MenuItem ID="" Text="" />
+      <MenuItem ID="Clear" Text="清除" />
+    </Menu>
+  </Menus>
+</Resources>

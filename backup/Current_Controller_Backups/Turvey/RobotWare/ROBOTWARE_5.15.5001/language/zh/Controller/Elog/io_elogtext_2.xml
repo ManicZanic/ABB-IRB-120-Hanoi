@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="EIO" domainNo="7" lang="zh" elogTextVersion="1.0" min="1232" max="1356">
+  <Message number="1232" eDefine="SYS_EIO_PBUS_TOO_MANY_SLAVES">
+    <Title>内部 Profibus 从控过多</Title>
+    <Description>系统中定义的内部 Profibus 从控过多。</Description>
+    <Consequences>无法配置 Profibus I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt;。无法与该单元<p />进行通信。</Consequences>
+    <Causes>配置其他<p />内部从控后，将 Profibus I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 定义为内部从控。<p />内部从控的最大数量为 1。</Causes>
+    <Actions>1. 确保系统参数正确。<p />2. 确保 Profibus 二进制文件正确。</Actions>
+  </Message>
+  <Message number="1241" eDefine="SYS_EIO_UNT_TOO_MANY_UNITS_ON_BUS">
+    <Title>I/O 总线上的 I/O 单元太多</Title>
+    <Description>I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />I/O 总线上的 I/O 单元的数量不能超过 &lt;<arg format="%s" ordinal="2" />&gt;。 <arg format="%d" ordinal="3" />.<p /><p />该 I/O 单元已被拒绝。</Description>
+    <Actions>减少定义的 I/O 单元的数量并重新启动系统。</Actions>
+  </Message>
+  <Message number="1244" eDefine="SYS_EIO_IBS_UNIT_WRONG_TYPE">
+    <Title>Interbus 单元类型不正确</Title>
+    <Description>位于地址 &lt;<arg format="%s" ordinal="2" />&gt; 的 I/O 单元&lt;<arg format="%s" ordinal="1" />&gt; 拥有系统不支持的单元类型。</Description>
+    <Consequences>I/O 单元未配置，系统无法使用。</Consequences>
+    <Causes>连接至网络的一个或多个单元的硬件版本不受系统支持。</Causes>
+    <Actions>1. 使用某一正确的版本替换不受支持的 I/O 单元。<p />2. 确保系统参数正确。<p />3. 重新配置 Interbus 网络。</Actions>
+  </Message>
+  <Message number="1245" eDefine="SYS_EIO_IBS_UNIT_NOT_IN_MPM">
+    <Title>Interbus 配置内未定义 I/O 单元</Title>
+    <Description>I/O 单元 &lt;<arg format="%d" ordinal="1" />.<arg format="%d" ordinal="2" />&gt; 未配置至 Interbus 配置中的任何地址。</Description>
+    <Consequences>I/O 单元未配置，系统无法使用。</Consequences>
+    <Causes>Interbus 配置内缺少用于定义 I/O 单元的数据。</Causes>
+    <Actions>使用“过程数据”菜单下的 CMD 工具更改 Interbus 配置。为 I/O 单元添加一个地址。CMD 工具由当地 ABB 代表提供。</Actions>
+  </Message>
+  <Message number="1246" eDefine="SYS_EIO_IBS_RW_DATA_ERROR">
+    <Title>无法访问 Interbus 数据</Title>
+    <Description>访问 Interbus 电路板数据接口被拒绝。 <arg format="%s" ordinal="1" /> 不工作，错误代码 <arg format="%d" ordinal="2" />. </Description>
+    <Actions>1. Interbus 电路板可能发生故障。必要时更换出现故障的电路板。<p />2. 检查内部 Interbus 配置。</Actions>
+  </Message>
+  <Message number="1248" eDefine="SYS_EIO_IBS_UNKNOWN_UNIT">
+    <Title>Interbus I/O 单元配置不匹配</Title>
+    <Description>具有地址 &lt;<arg format="%s" ordinal="1" />&gt;的 Interbus I/O 单元已在系统参数中配置，但未在 Interbus 配置中配置。</Description>
+    <Consequences>I/O 单元未配置，系统无法使用。</Consequences>
+    <Causes>Interbus 配置中的 Interbus 单元地址与系统参数中的不同，或者在 Interbus 配置中尚未配置该单元。</Causes>
+    <Actions>1. 确保系统参数正确。<p />2. 重新配置 Interbus 网络。</Actions>
+  </Message>
+  <Message number="1249" eDefine="SYS_EIO_IBS_UNDEF_UNIT">
+    <Title>Interbus I/O 单元配置不匹配</Title>
+    <Description>具有地址 &lt;<arg format="%d" ordinal="1" />.<arg format="%d" ordinal="2" />&gt; 的 Interbus I/O 单元已在 Interbus 配置中配置，但未在系统参数中配置。</Description>
+    <Consequences>I/O 单元未配置，系统无法使用。</Consequences>
+    <Causes>Interbus 配置中的 Interbus 单元地址与系统参数中的不同，或者系统参数中尚未配置该单元。</Causes>
+    <Actions>1. 确保系统参数正确。<p />2. 重新配置 Interbus 网络。</Actions>
+  </Message>
+  <Message number="1250" eDefine="SYS_EIO_IBS_ERROR_CFG_BOARD">
+    <Title>无法配置 Interbus 电路板</Title>
+    <Description>下载 Interbus 配置文件至 Interbus 电路板时出错。Interbus ÌØ¶¨´íÎó´úÂë£º <arg format="%d" ordinal="1" />.</Description>
+    <Consequences>I/O 总线未配置，系统无法使用。</Consequences>
+    <Causes>指定 Interbus 配置文件的路径指出文件错误或该配置文件不正确。</Causes>
+    <Actions>1. 1) 使用 RobotStudio 检查配置文件的路径。<p />2. 确保配置文件正确。<p />3. 检查 Interbus 手册中指定的 Interbus 特定错误代码：固件检修和错误消息。</Actions>
+  </Message>
+  <Message number="1258" eDefine="SYS_EIO_IBS_NO_CFG_FILE_FOUND">
+    <Title>找不到配置文件</Title>
+    <Description>没有找到系统参数中配置的 Interbus 配置文件 &lt;<arg format="%s" ordinal="1" />&gt;。</Description>
+    <Consequences>I/O 总线未配置，系统无法使用。</Consequences>
+    <Causes>Interbus 配置文件不存在，或系统参数中指定的路径不正确。</Causes>
+    <Actions>1. 确保 Interbus 配置文件的位置正确。<p />2. 使用 RobotStudio 检查配置文件的路径。</Actions>
+  </Message>
+  <Message number="1259" eDefine="SYS_EIO_IBS_CFG_READ_ERROR">
+    <Title>无法读取 Interbus 配置文件</Title>
+    <Description>尝试读取 Interbus 电路板配置文件 &lt;<arg format="%s" ordinal="1" />&gt; 时出错。</Description>
+    <Consequences>I/O 总线未配置，系统无法使用。</Consequences>
+    <Actions>1. 将 Interbus 配置文件重新载入机器人控制器。<p />2. 重新启动系统。</Actions>
+  </Message>
+  <Message number="1260" eDefine="SYS_EIO_IBS_BUS_ERR_NO_DEV">
+    <Title>Interbus 总线故障</Title>
+    <Description>控制系统无法与 Interbus 网络进行通信。Interbus 特定错误代码： <arg format="%d" ordinal="1" />. </Description>
+    <Consequences>部分 Interbus 网络无法访问，取决于网络拓扑和故障性质。</Consequences>
+    <Causes>多次出现错误可能导致此情况。详情请参阅标准 Interbus 说明文件。</Causes>
+    <Actions>1. 确保所有通信电缆和连接器正常工作，并使用推荐类型<p />2. 检查 Interbus 手册中指定的 Interbus 特定错误代码：固件检修和错误消息。</Actions>
+  </Message>
+  <Message number="1261" eDefine="SYS_EIO_WRONG_PHY_CHANNEL">
+    <Title>传输层故障</Title>
+    <Description>用于传输层 <arg format="%s" ordinal="1" /> 的物理信道无效。</Description>
+    <Actions>验证物理信道是否有效，请参阅手册。</Actions>
+  </Message>
+  <Message number="1262" eDefine="SYS_EIO_FIELDBUS_COMM_ERR">
+    <Title>Fieldbus 通信失败</Title>
+    <Description>在 Mac ID 为 <arg format="%d" ordinal="2" /> 的单元上与 "<arg format="%s" ordinal="1" />" 主控的通信失败。<p /></Description>
+    <Actions>1. 检查与网关的连接</Actions>
+  </Message>
+  <Message number="1263" eDefine="SYS_EIO_CAN_COMM_ERR">
+    <Title>CAN 通信失败</Title>
+    <Description>CAN 因为 <arg format="%s" ordinal="1" /> 而通信失败。<p />代码： <arg format="%d" ordinal="2" /></Description>
+  </Message>
+  <Message number="1273" eDefine="SYS_EIO_UNT_UNKNOWN">
+    <Title>I/O 单元配置不匹配</Title>
+    <Description>地址为 <arg format="%s" ordinal="2" /> 的 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 已在系统参数中配置，但在 I/O 总线具体配置中却找不到。</Description>
+    <Causes>1. 系统参数中的 I/O 单元地址与 I/O 总线具体配置中的不同。<p />2. I/O 总线具体配置中尚未配置 I/O 单元。</Causes>
+    <Actions>1. 检查系统参数中的 I/O 单元配置<p />2. 检查 I/O 总线具体配置</Actions>
+  </Message>
+  <Message number="1274" eDefine="SYS_EIO_IBS_UNDEF_OPMODE">
+    <Title>Interbus 总线故障</Title>
+    <Description>控制系统无法确定 Interbus 电路板的总线操作模式。</Description>
+    <Actions>重新启动系统。</Actions>
+  </Message>
+  <Message number="1276" eDefine="SYS_EIO_UNT_CONTACT_RESTORED">
+    <Title>与 I/O 单元建立通信</Title>
+    <Description>与 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 建立通信。</Description>
+  </Message>
+  <Message number="1278" eDefine="SYS_EIO_FTP_PERMISSION_DENIED">
+    <Title>安装许可被拒绝</Title>
+    <Description>拒绝将目录 &lt;<arg format="%s" ordinal="1" />&gt; 安装至服务器 &lt;<arg format="%s" ordinal="2" />&gt;。</Description>
+    <Actions>检查用户名和密码。</Actions>
+  </Message>
+  <Message number="1288" eDefine="SYS_EIO_FTP_MOUNT_PATH_TOO_LARGE">
+    <Title>安装路径太长</Title>
+    <Description>安装路径太长。安装路径包括 FTP 服务器安装点和服务器路径。<p />- 最大长度：&lt;<arg format="%d" ordinal="1" />&gt;<p />- 所使用的协议： &lt;<arg format="%s" ordinal="2" />&gt;</Description>
+    <Actions>更改 FTP 服务器安装点或服务器路径。</Actions>
+  </Message>
+  <Message number="1289" eDefine="SYS_EIO_COMM_PARTITION_TOO_BIG">
+    <Title>内存分区太大</Title>
+    <Description>无法配置用于通信的内存分区。请求的分区为 <arg format="%8d" ordinal="1" /> kB。将使用系统分区。</Description>
+    <Actions>减少 commPartSize。</Actions>
+  </Message>
+  <Message number="1290" eDefine="SYS_EIO_FTP_DEVICE_ADD_ERROR">
+    <Title>无法添加 FTP 设备</Title>
+    <Description>将 FTP 设备 &lt;<arg format="%s" ordinal="1" />&gt; 添加至操作系统已失败。<p />应用程序协议 &lt;<arg format="%s" ordinal="2" />&gt;。</Description>
+    <Actions>更改 FTP 设备配置的本地路径。</Actions>
+  </Message>
+  <Message number="1291" eDefine="SYS_EIO_FTP_DEVICE_INVALID_LOCAL_PATH">
+    <Title>本地路径无效</Title>
+    <Description>FTP 设备 &lt;<arg format="%s" ordinal="1" />&gt; 的本地路径无效。</Description>
+    <Actions>本地路径必须用以下项目结尾：</Actions>
+  </Message>
+  <Message number="1293" eDefine="SYS_EIO_DN_C1_INPUT_SIZE_ERR">
+    <Title>输入大小无效</Title>
+    <Description>在 DeviceNet I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 上，连接 1 输入大小与 I/O 单元不匹配。</Description>
+    <Actions>1. 更改配置中的大小。<p />2. 检查模块。<p />3. 使用 DN_GENERIC 单元类型</Actions>
+  </Message>
+  <Message number="1294" eDefine="SYS_EIO_DN_C1_OUTPUT_SIZE_ERR">
+    <Title>输出大小无效</Title>
+    <Description>在 DeviceNet I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 上，连接 1 的输出大小与 I/O 单元不匹配。</Description>
+    <Actions>1. 更改配置中的大小。<p />2. 检查模块。<p />3. 使用 DN_GENERIC 单元类型</Actions>
+  </Message>
+  <Message number="1295" eDefine="SYS_EIO_DN_C2_INPUT_SIZE_ERR">
+    <Title>输入大小无效</Title>
+    <Description>在 DeviceNet I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 上，连接 2 输入大小与 I/O 单元不匹配。<p /></Description>
+    <Actions>1. 更改配置中的大小。<p />2. 检查模块。<p /></Actions>
+  </Message>
+  <Message number="1296" eDefine="SYS_EIO_DN_C2_OUTPUT_SIZE_ERR">
+    <Title>输出大小无效</Title>
+    <Description>在 DeviceNet I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 上，连接 2 的输出大小与 I/O 单元不匹配。<p /></Description>
+    <Actions>1. 更改配置中的大小。<p />2. 检查模块。<p /></Actions>
+  </Message>
+  <Message number="1297" eDefine="SYS_EIO_DN_CONNECTION_SUPPORT_ERR">
+    <Title>连接类型无效</Title>
+    <Description>DeviceNet I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 不支持 <arg format="%s" ordinal="2" /> 连接。</Description>
+    <Actions>1. 更改配置中的连接 1 类型和/或连接 2 类型。<p />2. 使用 DN_GENERIC 单元类型。</Actions>
+  </Message>
+  <Message number="1298" eDefine="SYS_EIO_DN_MASTER_DUP_MAC_ERR">
+    <Title>重复地址</Title>
+    <Description>I/O 总线 &lt;<arg format="%s" ordinal="1" />&gt; 上的 DeviceNet 主控的地址 &lt;<arg format="%d" ordinal="2" />&gt; 被网络上的另一个 I/O 单元占用。</Description>
+    <Actions>1. 更改配置中的主地址。<p />2. 从网络断开占用该地址的 I/O 单元。<p />3. 重新启动系统。</Actions>
+  </Message>
+  <Message number="1299" eDefine="SYS_EIO_DN_BUS_POWER_ERR">
+    <Title>DeviceNet 总线上无电</Title>
+    <Description>DeviceNet 电源的 24 V 电源缺失。</Description>
+    <Consequences>无法通过 DeviceNet 总线 &lt;<arg format="%s" ordinal="1" />&gt; 进行通信。</Consequences>
+    <Causes>电源单元、线路、电源的输入电压或输出负载均可能导致断电。请参阅《故障排除手册》和电路图！</Causes>
+    <Actions>1. 检查电源单元的所有线路。<p />2. 测量输出和输入电压水平。<p />3. 如果需要，请更换有问题的 I/O 单元。</Actions>
+  </Message>
+  <Message number="1300" eDefine="SYS_EIO_DN_BUSERROR_WARNING_ERR">
+    <Title>DeviceNet 总线通信警告</Title>
+    <Description>DeviceNet 总线 &lt;<arg format="%s" ordinal="1" />&gt; 上发生少量通信错误。</Description>
+    <Consequences>将维持正常操作，包括在 DeviceNet 上的操作。</Consequences>
+    <Causes>故障可能是由干扰、电源设备和电缆或通信电缆引起的。</Causes>
+    <Actions>1. 确保正确连接所有终端电阻。<p />2. 确保所有通信电缆和连接器正常工作，并使用推荐类型。<p />3. 检查网络拓扑和电缆长度。<p />4. 确保 DeviceNet 电源设备正常工作。更换故障单元。<p /></Actions>
+  </Message>
+  <Message number="1301" eDefine="SYS_EIO_DN_BUSOFF_ERR">
+    <Title>总线关闭，DeviceNet 总线通信故障</Title>
+    <Description>DeviceNet 总线 &lt;<arg format="%s" ordinal="1" />&gt; 上发生大量通信错误。</Description>
+    <Consequences>DeviceNet 总线上的所有通信都已停止。</Consequences>
+    <Causes>故障可能是由干扰、电源设备和电缆或通信电缆引起的。</Causes>
+    <Actions>       1. 确保 DeviceNet 电源设备正常工作。更换故障 I/O 单元。<p />2. 确保正确连接所有终端电阻。<p />3. 确保所有通信电缆和连接器正常工作，并使用推荐类型。<p />4. 检查网络拓扑和电缆长度。<p />5. 重新启动系统。</Actions>
+  </Message>
+  <Message number="1302" eDefine="SYS_EIO_DN_NO_OPT">
+    <Title>未安装 DeviceNet 选项</Title>
+    <Description>已安装一个 DeviceNet 主控/从控电路板，但尚未安装 DeviceNet 选项。</Description>
+    <Consequences>无法在 DeviceNet 上进行通信。如果未安装上述选项，配置 DeviceNet 时可能发生继发性错误。</Consequences>
+    <Causes>可能已尝试在未正确安装选项的情况下添加 DeviceNet 功能。</Causes>
+    <Actions>1. 如果需要 DeviceNet 选项：配置一个包含此选项的新系统，并安装系统。<p />2. 如果不需要 DeviceNet 选项：配置一个不包含此选项的新系统，并安装系统。</Actions>
+  </Message>
+  <Message number="1303" eDefine="SYS_EIO_DN_VENDOR_ID_ERR">
+    <Title>DeviceNet 供应商 ID 无效</Title>
+    <Description>从 DeviceNet I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 读取的供应商 ID 与单元类型配置中的值不匹配。<p />- 配置：&lt;<arg format="%d" ordinal="2" />&gt;<p />- 实际值： &lt;<arg format="%d" ordinal="3" />&gt;</Description>
+    <Actions>1. 更改配置中的供应商 ID。<p />2. 检查 I/O 单元的类型是否正确。</Actions>
+  </Message>
+  <Message number="1304" eDefine="SYS_EIO_DN_DEVICE_TYPE_ERR">
+    <Title>DeviceNet 设备类型无效</Title>
+    <Description>从 DeviceNet I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 读取的设备类型与单元类型配置中的值不匹配。<p />- 配置： &lt;<arg format="%d" ordinal="2" />&gt;<p />- 实际值： &lt;<arg format="%d" ordinal="3" />&gt;</Description>
+    <Actions>1. 更改配置中的设备类型。<p />2. 检查 I/O 单元的类型是否正确。</Actions>
+  </Message>
+  <Message number="1305" eDefine="SYS_EIO_DN_PRODUCT_CODE_ERR">
+    <Title>DeviceNet 产品编号无效</Title>
+    <Description>从 DeviceNet I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 读取的产品编号与单元类型配置中的值不匹配。<p />- 配置：&lt;<arg format="%d" ordinal="2" />&gt;<p />- 实际值： &lt;<arg format="%d" ordinal="3" />&gt;</Description>
+    <Actions>1. 更改配置中的产品编号。<p />2. 检查 I/O 单元的类型是否正确。</Actions>
+  </Message>
+  <Message number="1306" eDefine="SYS_EIO_DN_UNKNOWN_ERR">
+    <Title>DeviceNet 未知错误</Title>
+    <Description>从 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 报告了一个未知错误，错误代码 <arg format="%d" ordinal="2" />。</Description>
+    <Actions>1. 重新启动系统。<p />2. 向 ABB 报告问题。</Actions>
+  </Message>
+  <Message number="1307" eDefine="SYS_EIO_DN_GENERIC_C1">
+    <Title>DeviceNet 通用连接 1</Title>
+    <Description>在 DeviceNet I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 上，连接 1 配置为通用。<p />真实值：<p />- 连接 1 类型：&lt;<arg format="%s" ordinal="2" />&gt;<p />- 连接 1 输入大小： &lt;<arg format="%d" ordinal="3" />&gt;<p />- 连接 1 输入大小： &lt;<arg format="%d" ordinal="4" />&gt;</Description>
+    <Actions>1. 使用正确的值创建新的单元类型。<p />2. 更新目前的单元类型配置。</Actions>
+  </Message>
+  <Message number="1308" eDefine="SYS_EIO_DN_GENERIC_C2">
+    <Title>DeviceNet 通用连接 2</Title>
+    <Description>在 DeviceNet I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 上，连接 2 配置为通用。<p />真实值：<p />- 连接 2 类型：&lt;<arg format="%s" ordinal="2" />&gt;<p />- 连接 2 输入大小：&lt;<arg format="%d" ordinal="3" />&gt;<p />- 连接 2 输出大小： &lt;<arg format="%d" ordinal="4" />&gt;
+  </Description>
+    <Actions>     1. 使用正确的值创建新的单元类型。<p />2. 更新目前的单元类型配置。
+  </Actions>
+  </Message>
+  <Message number="1309" eDefine="SYS_EIO_DN_GENERIC_IDENT">
+    <Title>DeviceNet 通用单元标识</Title>
+    <Description>在 DeviceNet I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 上，标识配置为通用。<p />真实值：<p />- 供应商 ID：&lt;<arg format="%d" ordinal="2" />&gt;<p />- 产品编号： &lt;<arg format="%d" ordinal="3" />&gt;<p />- 设备类型： &lt;<arg format="%d" ordinal="4" />&gt;</Description>
+    <Actions>1. 使用正确的值创建新的单元类型。<p />2. 更新目前的单元类型配置。</Actions>
+  </Message>
+  <Message number="1310" eDefine="SYS_EIO_DN_ALLOC_BY_OTHER_MASTER">
+    <Title>DeviceNet I/O 单元连接错误</Title>
+    <Description>DeviceNet I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 被另一个主控占用。</Description>
+    <Actions>1. 检查配置。<p />2. 打开 I/O 单元的电源。</Actions>
+  </Message>
+  <Message number="1311" eDefine="SYS_EIO_DN_NOTHING_CONNECTED">
+    <Title>无法在 DeviceNet 总线上建立通信</Title>
+    <Description>无法在 DeviceNet 总线&lt;<arg format="%s" ordinal="1" /> 上建立通信，&gt; 因为未物理连接 I/O 单元。</Description>
+    <Actions>1. 检查电缆和连接器。<p />2. 将 I/O 单元连接到 I/O 总线。<p />3. 重新启动系统。<p />4. 从配置中删除 I/O 总线 &lt;<arg format="%s" ordinal="1" />&gt; 上的 I/O 单元。</Actions>
+  </Message>
+  <Message number="1312" eDefine="SYS_EIO_DN_EXPL_CONN_NOT_CONFIGURED">
+    <Title>未启用 DeviceNet I/O 单元显式连接</Title>
+    <Description>DeviceNet I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 未启用显式消息连接。</Description>
+    <Actions>更改配置。</Actions>
+  </Message>
+  <Message number="1313" eDefine="SYS_EIO_CMD_TYPE_ORDER_INVALID">
+    <Title>现场总线命令类型的指令编号不是唯一的。</Title>
+    <Description>I/O 配置无效。<p />现场总线命令 &lt;<arg format="%s" ordinal="1" />&gt; 和 &lt;<arg format="%s" ordinal="2" />&gt; 已连接至相同单元类型 &lt;<arg format="%s" ordinal="3" />&gt; 并拥有相同的指令编号 &lt;<arg format="%d" ordinal="4" />&gt;。<p />连接至相同 I/O 单元的命令的指令编号必须是唯一的。<p /><p />该命令已被拒绝。</Description>
+    <Actions>纠正配置。</Actions>
+  </Message>
+  <Message number="1314" eDefine="SYS_EIO_CMD_COMMANDTYPE_INVALID">
+    <Title>现场总线命令类型无效</Title>
+    <Description>I/O 配置无效。<p />某条现场总线命令引用了无效/未知的命令类型 &lt; <arg format="%s" ordinal="1" />&gt;。<p />所有现场总线命令必须引用现有命令类型。<p /><p />该现场总线命令已被拒绝。</Description>
+    <Actions>纠正命令的现场总线命令类型。</Actions>
+  </Message>
+  <Message number="1315" eDefine="SYS_EIO_CMD_TABLE_ERR">
+    <Title>超过最大现场总线命令数量</Title>
+    <Description>I/O 配置无效。<p />已超过 I/O 系统内的最大现场总线命令数量 <arg format="%d" ordinal="1" />。<p /></Description>
+    <Actions>修改 I/O 系统的配置（即减少现场总线命令数量），使其不超过最大限值。</Actions>
+  </Message>
+  <Message number="1316" eDefine="SYS_EIO_CMD_TYPE_TABLE_ERR">
+    <Title>超过最大现场总线命令类型数量</Title>
+    <Description>I/O 配置无效。<p />已超过 I/O 系统内的最大现场总线命令类型数量 <arg format="%d" ordinal="1" />。</Description>
+    <Actions>修改 I/O 系统的配置（即减少现场总线命令类型的数量），使其不超过最大限值。 </Actions>
+  </Message>
+  <Message number="1317" eDefine="SYS_EIO_FCI_UNIT_RESET">
+    <Title>I/O 单元重置</Title>
+    <Description>I/O 总线 &lt;<arg format="%s" ordinal="2" />&gt; 上的 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 已通过 总线命令 &lt;<arg format="%s" ordinal="3" />&gt; 重置，以确保激活总线命令值。<p />这会导致 I/O 单元在重新启动时断开连接，但它会重新获得连接。</Description>
+    <Causes>在 I/O 系统配置中为 I/O 单元定义了总线重置命令。</Causes>
+  </Message>
+  <Message number="1320" eDefine="SYS_EIO_ACC_TABLE_ERR">
+    <Title>超过最大 I/O 访问级别数量 </Title>
+    <Description>I/O 配置无效。<p />已超过 I/O 系统内的最大 I/O 访问级别数量 <arg format="%d" ordinal="1" />&gt;。</Description>
+    <Actions>修改 I/O 系统的配置（减少 I/O 访问级别数量），使其不超过最大限值。</Actions>
+  </Message>
+  <Message number="1321" eDefine="SYS_EIO_SIG_ACC_INVALID">
+    <Title>I/O 访问级别无效</Title>
+    <Description>I/O 配置无效。<p />I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 引用了无效/未定义的 I/O 访问级别 &lt;<arg format="%s" ordinal="2" />&gt;。<p />全部 I/O 信号必须忽略访问级别或引用现有的访问级别。<p /><p />该 I/O 信号已被拒绝。
+    </Description>
+    <Actions>更改为现有的 I/O 访问级别或定义新的 I/O 访问级别。</Actions>
+  </Message>
+  <Message number="1323" eDefine="SYS_EIO_SIG_BIT_MAXMIN">
+    <Title>位值无效</Title>
+    <Description>       I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />最小位值 &lt;<arg format="%s" ordinal="3" />&gt; 不能小于 &lt;<arg format="%s" ordinal="2" />&gt;。<p />最大位值&lt;<arg format="%s" ordinal="4" />&gt; 不能超过 &lt;<arg format="%s" ordinal="5" />&gt;。<p />最小位值必须小于最大位值。<p /><p />该 I/O 信号已被拒绝。</Description>
+    <Actions>       1. 检查 I/O 信号是否配置正确的编码类型。<p />2. 检查最小和最大位值是否正确。</Actions>
+  </Message>
+  <Message number="1324" eDefine="SYS_EIO_SIG_PHYLIM_MAXMIN">
+    <Title>物理限值超出范围</Title>
+    <Description>I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />最小物理限值必须小于最大物理限值。<p /><p />该 I/O 信号已被拒绝。</Description>
+    <Actions>纠正 I/O 信号的物理限值，使最小值小于最大值。</Actions>
+  </Message>
+  <Message number="1325" eDefine="SYS_EIO_BUS_PROTECTED">
+    <Title>I/O 总线配置无效</Title>
+    <Description>I/O 总线 &lt; <arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />用户定义（外部加载）的 I/O 总线不得指定为本地类型。<p /><p />该 I/O 总线已被拒绝。</Description>
+    <Actions>更改 I/O 总线类型。</Actions>
+  </Message>
+  <Message number="1326" eDefine="SYS_EIO_DRV_PROTECTED">
+    <Title>单元类型配置无效</Title>
+    <Description>单元类型 &lt; <arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />用户定义（外部加载）的单元类型不得指定为本地类型。<p /><p />此 I/O 总线已被拒绝。</Description>
+    <Actions>更改 I/O 单元类型的总线类型。</Actions>
+  </Message>
+  <Message number="1328" eDefine="SYS_EIO_INVALID_RAPID_IDENT">
+    <Title>名称无效</Title>
+    <Description>I/O 配置无效。<p />配置实例 &lt;<arg format="%s" ordinal="1" />&gt;不符合 RAPID 标识符的规则。<p /><p />该配置实例已被拒绝。</Description>
+    <Actions>纠正配置实例的名称，使它符合下列规则：<p /><p />RAPID 标识符规则：<p />1. 长度不得超过 16 个字符。<p />2. 首字符必须使用字母（a-z 或 A-Z）。<p />3. 其后的字符必须为字母（a-z 或 A-Z）、数字 (0-9) 或下划线 (_)。</Actions>
+  </Message>
+  <Message number="1329" eDefine="SYS_EIO_BUS_CONNECTOR_ID_INVALID">
+    <Title>无效的连接器 ID</Title>
+    <Description>I/O 总线的 I/O 配置 &lt;<arg format="%s" ordinal="1" />&gt; 无效。<p />没有为 &lt;<arg format="%s" ordinal="2" />&gt; 总线类型选择连接器 ID 或选择了无效的连接器 ID。<p /><p />该 I/O 总线已被拒绝。</Description>
+    <Actions>为 I/O 总线选择一个有效的连接器 ID。</Actions>
+  </Message>
+  <Message number="1330" eDefine="SYS_EIO_BUS_CONNECTOR_ID_DUPLICATED">
+    <Title>总线类型冲突</Title>
+    <Description>I/O 总线 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />存在具有相同连接器 ID &lt;<arg format="%s" ordinal="3" />&gt; 的重复 &lt;<arg format="%s" ordinal="2" />&gt; I/O 总线。<p />相同类型的 I/O 总线必须拥有唯一的连接器 ID。<p /><p />该 I/O 总线已被拒绝。</Description>
+    <Actions>纠正 I/O 总线的连接器 ID。</Actions>
+  </Message>
+  <Message number="1331" eDefine="SYS_EIO_BUS_BUSTYPE_INVALID">
+    <Title>总线类型无效</Title>
+    <Description>I/O 总线 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />总线类型 &lt;<arg format="%s" ordinal="2" />&gt; 无效或未知。<p /><p />已安装的有效总线类型为：<arg format="%s" ordinal="3" /><arg format="%s" ordinal="4" /><arg format="%s" ordinal="5" /><p /><p /></Description>
+    <Consequences>该 I/O 总线已被拒绝，依赖其的功能将无法工作。</Consequences>
+    <Actions>纠正 I/O 总线的总线类型。</Actions>
+  </Message>
+  <Message number="1332" eDefine="SYS_EIO_BUS_RECOVERY_TIME">
+    <Title>恢复时间无效</Title>
+    <Description>I/O 总线 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />恢复时间参数 &lt;<arg format="%d" ordinal="2" />&gt; 的值不正确。<p /><p />恢复时间（尝试重新获得与丢失单元联络的频率）不得少于 5 秒。<p /><p />该 I/O 总线已被拒绝。</Description>
+    <Actions>纠正 I/O 总线的恢复时间。</Actions>
+  </Message>
+  <Message number="1333" eDefine="SYS_EIO_BUS_BAUDRATE_INVALID">
+    <Title>无效的 DeviceNet 波特率</Title>
+    <Description>I/O 总线 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />DeviceNet 波特率参数的值 &lt;<arg format="%d" ordinal="2" />&gt; 不正确。<p /><p />有效的 DeviceNet 波特率是：<p />- 125<p />- 250<p />- 500 <p /><p />此 I/O 总线已被拒绝。</Description>
+    <Actions>纠正 I/O 总线的 DeviceNet 波特率。</Actions>
+  </Message>
+  <Message number="1334" eDefine="SYS_EIO_CMD_TYPE_DRV_UNDEF">
+    <Title>命令类型未引用单元类型</Title>
+    <Description>I/O 配置无效。<p />未定义命令类型 &lt;<arg format="%s" ordinal="1" />&gt; 对单元类型的引用。<p />所有命令类型都必须引用现有的单元类型。<p /><p />该命令类型已被拒绝。</Description>
+    <Actions>为命令类型定义单元类型引用。</Actions>
+  </Message>
+  <Message number="1335" eDefine="SYS_EIO_CMD_TYPE_DRV_INVALID">
+    <Title>单元类型无效</Title>
+    <Description>命令类型 &lt; <arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />单元类型 &lt;<arg format="%s" ordinal="2" />&gt; 无效/未知。<p /><p />所有命令类型都必须引用现有/已定义的单元类型。<p /><p />该命令类型已被拒绝。</Description>
+    <Actions>纠正命令类型的单元类型。</Actions>
+  </Message>
+  <Message number="1336" eDefine="SYS_EIO_CMD_TYPE_PATH_UNDEF">
+    <Title>命令类型不带路径</Title>
+    <Description>I/O 配置无效。<p />没有为命令类型 &lt;<arg format="%s" ordinal="1" />&gt; 定义路径。<p /><p />此命令类型已被拒绝。</Description>
+    <Actions>为此命令类型定义路径 &lt;<arg format="%s" ordinal="2" />&gt;。</Actions>
+  </Message>
+  <Message number="1337" eDefine="SYS_EIO_CMD_TYPE_SERVICE_UNDEF">
+    <Title>命令类型不带服务标识符</Title>
+    <Description>I/O 配置无效。<p />没有为命令类型 &lt;<arg format="%s" ordinal="1" />&gt; 定义服务标识符。<p /><p />此命令类型已被拒绝。</Description>
+    <Actions>为此命令类型定义服务标识符 &lt;<arg format="%s" ordinal="2" />&gt;。</Actions>
+  </Message>
+  <Message number="1338" eDefine="SYS_EIO_CMD_TYPE_SERVICE_INVALID">
+    <Title>无效的服务标识符</Title>
+    <Description>I/O 配置无效。<p />服务标识符 &lt;<arg format="%ld" ordinal="2" />&gt; 对于命令类型 &lt;<arg format="%s" ordinal="1" />&gt; 无效。<p /><p />有效的服务标识符为:<p />&lt;<arg format="%s" ordinal="3" />&gt;<p /><p />此命令类型已被拒绝。</Description>
+    <Actions>为此命令类型更正服务标识符。</Actions>
+  </Message>
+  <Message number="1339" eDefine="SYS_EIO_CMD_UNIT_UNDEF">
+    <Title>现场总线命令未引用 I/O 单元</Title>
+    <Description>I/O 配置无效。<p />某条现场总线命令没有引用 I/O 单元。<p /><p />所有现场总线命令必须引用现有 I/O 单元。<p /><p />该现场总线命令已被拒绝。</Description>
+    <Actions>定义现场总线命令的 I/O 单元引用。</Actions>
+  </Message>
+  <Message number="1340" eDefine="SYS_EIO_CMD_UNIT_INVALID">
+    <Title>I/O 单元无效</Title>
+    <Description>I/O 配置无效。<p />某条现场总线命令引用了无效/未知的 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt;。<p /><p />所有现场总线命令必须引用现有 I/O 单元。<p /><p />该现场总线命令已被拒绝。</Description>
+    <Actions>纠正用于现场总线命令的 I/O 单元。</Actions>
+  </Message>
+  <Message number="1341" eDefine="SYS_EIO_CMD_COMMANDTYPE_UNDEF">
+    <Title>现场总线命令，未引用命令类型</Title>
+    <Description>I/O 配置无效。<p />一个现场总线命令没有引用命令类型。<p /><p />所有现场总线命令必须引用现有命令类型。<p /><p /> 这个现场总线命令已被拒绝。</Description>
+    <Actions>定义用于现场总线命令的命令类型引用。</Actions>
+  </Message>
+  <Message number="1342" eDefine="SYS_EIO_CMD_UNITTYPE_MISMATCH">
+    <Title>单元类型不匹配</Title>
+    <Description>I/O 配置无效。<p />某条现场总线命令引用了一个 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt;，而命令类型 &lt;<arg format="%s" ordinal="2" />&gt; 引用不同的单元类型。<p /><p />现场总线命令引用的 I/O 单元和命令类型必须引用相同的单元类型。<p /><p />该现场总线命令已被拒绝。</Description>
+    <Actions>纠正配置。</Actions>
+  </Message>
+  <Message number="1344" eDefine="SYS_EIO_SIG_UNITMAP_UNDEF">
+    <Title>单元映射未定义</Title>
+    <Description>I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />单元映射未定义或者为空。<p />必须对所有物理 I/O 信号（即，连接到单元的信号）指定单元映射。<p /><p />该 I/O 信号已被拒绝。</Description>
+    <Actions>定义 I/O 信号的单元映射。</Actions>
+  </Message>
+  <Message number="1346" eDefine="SYS_EIO_SIG_UNITMAP_OUT_OF_RANGE">
+    <Title>单元映射超出范围</Title>
+    <Description>I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />单元映射 &lt;arg format="%s" ordinal="2"/&gt;&gt; 无效，因为位 &lt;<arg format="%d" ordinal="3" />&gt; 超出范围。<p />单元映射中的所有位必须在范围 [0, <arg format="%d" ordinal="4" />] 内。<p /><p />该 I/O 信号已被拒绝。</Description>
+    <Actions>纠正单元映射。</Actions>
+  </Message>
+  <Message number="1347" eDefine="SYS_EIO_SIG_UNITMAP_OVERLAPPING">
+    <Title>单元映射包含迭加区段</Title>
+    <Description>I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />单元映射 &lt;<arg format="%s" ordinal="2" />&gt; 包含彼此迭加的区段（例如，位 <arg format="%d" ordinal="3" />）。<p /><p />该 I/O 信号已被拒绝。</Description>
+    <Actions>纠正单元映射。</Actions>
+  </Message>
+  <Message number="1348" eDefine="SYS_EIO_SIG_UNITMAP_UNEXP_CHAR">
+    <Title>单元映射包含意外字符</Title>
+    <Description>I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />在单元映射的位置 &lt;<arg format="%d" ordinal="3" />&gt; 发现意外的结束或字符：&lt;<arg format="%s" ordinal="2" />&gt;。<p /><p />该 I/O 信号已被拒绝。</Description>
+    <Actions>更改单元映射以符合以下语法：<p /><p />- {bit} = ([0-9]+)<p />- {range} = ([0-9]+[-][0-9]+)<p />- {segment} = ({bit} | {range})<p />- {unit map} = ({segment}[,])*{segment}<p /><p />有效单元映射的示例：<p />- "1"<p />- "0-7, 15-8"<p />- "1,4-3,7"</Actions>
+  </Message>
+  <Message number="1349" eDefine="SYS_EIO_SIG_SIZE_INVALID">
+    <Title>信号大小无效</Title>
+    <Description>I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />信号类型与信号大小不匹配。<p />信号大小 &lt;<arg format="%d" ordinal="3" />&gt; 由单元映射确定：&lt;<arg format="%s" ordinal="2" />&gt;。<p /><p />该 I/O 信号已被拒绝。</Description>
+    <Actions>更改信号类型或者单元映射以满足以下规则：<p /><p />- 数字 I/O 信号的大小必须恰好是一位。<p />- 模拟和组 I/O 信号的大小必须介于 2 和 32 位之间。
+    </Actions>
+  </Message>
+  <Message number="1350" eDefine="SYS_EIO_DRV_BUSTYPE_INVALID">
+    <Title>总线类型无效</Title>
+    <Description>I/O 配置无效。<p />单元类型 &lt;<arg format="%s" ordinal="1" />&gt; 拥有无效/未知的总线类型 &lt;<arg format="%s" ordinal="2" />&gt;。<p /><p />已安装的有效总线类型为：<arg format="%s" ordinal="3" /><arg format="%s" ordinal="4" /><arg format="%s" ordinal="5" /><p /><p /></Description>
+    <Consequences>此单元类型已被拒绝，所有依赖其的功能将无法工作。</Consequences>
+    <Actions>更改单元类型的总线类型。</Actions>
+  </Message>
+  <Message number="1351" eDefine="SYS_EIO_DRV_C1_TYPE_INVALID">
+    <Title>连接 1 类型无效</Title>
+    <Description>I/O 配置无效。<p />单元类型 &lt;<arg format="%s" ordinal="1" />&gt; 包含一个无效/未知的连接 1 类型 &lt;<arg format="%s" ordinal="2" />&gt;. <p /><p />连接 1 的类型必须为以下其中一种：<p />- POLLED<p />- STROBE<p />- COS<p />- CYCLIC<p />- COS_ACKSUP<p />- CYCLIC_ACKSUP<p /><p />此单元类型已被拒绝。</Description>
+    <Actions>纠正单元类型的连接 1 类型。<p /><p /></Actions>
+  </Message>
+  <Message number="1352" eDefine="SYS_EIO_DRV_C2_TYPE_INVALID">
+    <Title>连接 2 类型无效</Title>
+    <Description>I/O 配置无效。<p />单元类型 &lt;<arg format="%s" ordinal="1" />&gt; 包含一个无效/未知的连接 2 类型 &lt;<arg format="%s" ordinal="2" />&gt;. <p /><p />连接 2 的类型必须忽略或为以下其中一种：<p />- POLLED<p />- STROBE<p />- COS<p />- CYCLIC<p />- COS_ACKSUP<p />- CYCLIC_ACKSUP<p /><p />此单元类型已被拒绝。</Description>
+    <Actions>纠正单元类型的连接 2 类型。</Actions>
+  </Message>
+  <Message number="1353" eDefine="SYS_EIO_UNT_DRV_UNDEF">
+    <Title>单元未引用单元类型</Title>
+    <Description>I/O 配置无效。<p />未定义 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 对单元类型的引用。<p /><p />该 I/O 信号已被拒绝。</Description>
+    <Actions>为 I/O 单元定义单元类型引用。</Actions>
+  </Message>
+  <Message number="1354" eDefine="SYS_EIO_UNT_BUS_UNDEF">
+    <Title>I/O 单元未引用 I/O 总线</Title>
+    <Description>I/O 配置无效。<p />未定义 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 对 I/O 总线的引用。<p /><p />该 I/O 单元已被拒绝。</Description>
+    <Actions>定义 I/O 单元的 I/O 总线引用。</Actions>
+  </Message>
+  <Message number="1355" eDefine="SYS_EIO_UNT_TRUSTLEVEL_INVALID">
+    <Title>trustlevel 无效</Title>
+    <Description>I/O 配置无效。<p />单元类型 &lt;<arg format="%s" ordinal="1" />&gt; 包含一个无效/未知的 trustlevel &lt;<arg format="%s" ordinal="2" />&gt;. <p /><p />有效的 trustlevel 值包括：<p />- 0 (必需)<p />- 1（缺失时出错）<p />- 2（接受缺失）<p />-3（缺失时停止）<p /><p />此命令类型已被拒绝。</Description>
+    <Actions>更改单元类型的 trustlevel。</Actions>
+  </Message>
+  <Message number="1356" eDefine="SYS_EIO_UNT_BUSTYPE_MISMATCH">
+    <Title>总线类型不匹配</Title>
+    <Description>I/O 配置无效。<p />单元 &lt;<arg format="%s" ordinal="1" />&gt; 引用带有不同总线类型的 I/O 总线和单元类型。<p /><p />该 I/O 单元已被拒绝。</Description>
+    <Actions>1. 检查 I/O 单元是否连接至正确的 I/O 总线，以及该 I/O 总线的总线类型是否正确。<p />2. 检查 I/O 单元是否引用正确的单元类型，以及该单元类型的总线类型是否正确。</Actions>
+  </Message>
+</Domain>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!-- File: CIR_EIO_cfgtext.xml                                 -->
+<!-- Purpose:  This file contains CIR related EIO text resources -->
+<!-- Reference:  "Configuration Rules Writers Guide.doc" -->
+<Resources xmlns="urn:abb-robotics-cfg-text" language="en" cfgTextVersion="1.0">
+    <Text resourceID="EIO501">I/O</Text>
+    <Text resourceID="EIO502">System Input</Text>
+    <Text resourceID="EIO503">Signal Name</Text>	
+    <Text resourceID="EIO504">Action</Text>
+
+    <Text resourceID="EIO505">Motors On</Text>
+    <Text resourceID="EIO506">Motors Off</Text>
+    <Text resourceID="EIO507">Start</Text>
+    <Text resourceID="EIO508">Start at Main</Text>
+    <Text resourceID="EIO509">Stop</Text>
+    <Text resourceID="EIO510">Stop at end of Cycle</Text>
+    <Text resourceID="EIO511">Interrupt</Text>
+    <Text resourceID="EIO512">Load and Start</Text>
+    <Text resourceID="EIO513">Reset Emergency stop</Text>
+    <Text resourceID="EIO514">Reset Execution Error Signal</Text>
+    <Text resourceID="EIO515">Motors On and Start</Text>
+    <Text resourceID="EIO516">Stop at end of Instruction</Text>
+    <Text resourceID="EIO517">System Restart</Text>
+    <Text resourceID="EIO518">AckErrDialog</Text>
+    <Text resourceID="EIO519">Quick Stop</Text>
+    <Text resourceID="EIO520">Soft Stop</Text>
+    <Text resourceID="EIO521">Set I/O In Auto</Text>
+
+    <Text resourceID="EIO522">System Output</Text>
+    <Text resourceID="EIO523">Signal Name</Text>
+    <Text resourceID="EIO524">Status</Text>
+    <Text resourceID="EIO525">Motor On</Text>
+    <Text resourceID="EIO526">Motor Off</Text>
+    <Text resourceID="EIO527">Cycle On</Text>
+    <Text resourceID="EIO528">Emergency Stop</Text>
+    <Text resourceID="EIO529">Auto On</Text>
+    <Text resourceID="EIO530">Runchain Ok</Text>
+    <Text resourceID="EIO531">TCP Speed</Text>
+    <Text resourceID="EIO532">Execution Error</Text>
+    <Text resourceID="EIO533">Motors On State</Text>
+    <Text resourceID="EIO534">Motors Off State</Text>
+    <Text resourceID="EIO535">Power Fail Error</Text>
+    <Text resourceID="EIO536">Motion Supervision Triggered</Text>
+    <Text resourceID="EIO537">Motion Supervision On</Text>
+    <Text resourceID="EIO538">Path return Region Error</Text>
+    <Text resourceID="EIO539">TCP Speed Reference</Text>
+    <Text resourceID="EIO540">Simulated I/O</Text>
+    <Text resourceID="EIO541">Argument</Text>
+    <Text resourceID="EIO542">Continuous</Text>
+    <Text resourceID="EIO543">Cycle</Text>
+    <Text resourceID="EIO544">Mechanical Unit Active</Text>
+    <Text resourceID="EIO545">Argument1</Text>
+    <Text resourceID="EIO546">Argument2</Text>
+    <Text resourceID="EIO547">TaskExecuting</Text>
+    <Text resourceID="EIO548">Load</Text>
+    <Text resourceID="EIO549">Backup</Text>
+    <Text resourceID="EIO550">Mechanical Unit Not Moving</Text>
+    <Text resourceID="EIO551">Production Execution Error</Text>
+    <Text resourceID="EIO552">Backup in progress</Text>
+    <Text resourceID="EIO553">Backup error</Text>
+    <Text resourceID="EIO554">Argument3</Text>
+    <Text resourceID="EIO555">Argument4</Text>
+    <Text resourceID="EIO556">Unique Name</Text>
+    <Text resourceID="EIO557">OverWrite</Text>
+    <Text resourceID="EIO559">Argument5</Text>	
+    <Text resourceID="EIO560">No Date</Text>
+    <Text resourceID="EIO561">Add Date</Text>
+    <Text resourceID="EIO562">SimMode</Text>
+    <Text resourceID="EIO563">Argument3</Text>    
+    <Text resourceID="EIO564">Disable backup</Text>
+    <Text resourceID="EIO565">Limit Speed</Text>
+    <Text resourceID="EIO566">Argument6</Text>
+
+    <Text resourceID="HLP_CIREIO_002">The type System Input is useful when using PLCs to control the Robot System</Text>
+    <Text resourceID="HLP_CIREIO_003">The signal name can be chosen from all Digital Input signal that is possible to write to</Text>
+    <Text resourceID="HLP_CIREIO_004">The Action points out what will happend when the signal is set.</Text>
+    <Text resourceID="HLP_CIREIO_005">For some actions an argument is needed, e.g. to to declare what module shall be loaded at LoadStart</Text>
+    <Text resourceID="HLP_CIREIO_006">The type System Out is useful when using PLCs to read outputs from the Robot System</Text>
+    <Text resourceID="HLP_CIREIO_007">The signal name can be chosen from all Digital Output signals that is possible to read</Text>
+    <Text resourceID="HLP_CIREIO_008">The Action points out what has happend when the signal is set.</Text>
+
+</Resources>

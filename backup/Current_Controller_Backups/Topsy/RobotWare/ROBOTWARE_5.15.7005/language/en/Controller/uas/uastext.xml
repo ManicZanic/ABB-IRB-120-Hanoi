@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!-- File: uastext.xml                                 -->
+<!-- Purpose:  This file contains UAS text resources for the builtin grants -->
+<!-- Reference:  "UAS TRS.doc" and "Client Localization TRS.doc"-->
+
+<Resources xmlns="urn:abb-robotics-uas-text" language="en">
+	<Text resourceID="FULL_ACCESS">Full access</Text>
+	<Text resourceID="HLP_FULL_ACCESS">
+		This grant includes all controller grants, also new grants added in future RobotWare versions. The grant does not include any application grants, nor the "Safety Controller configuration" grant.
+	</Text>
+	
+	<Text resourceID="UAS_ADMINISTRATION">Manage UAS settings</Text>
+	<Text resourceID="HLP_UAS_ADMINISTRATION">
+		Gives access to read and write the UAS configuration, that is to read, add, remove and modify UAS users and groups.
+	</Text>
+
+	<Text resourceID="CFG_WRITE">Modify configuration</Text>
+	<Text resourceID="HLP_CFG_WRITE">
+		Gives access to modify the configuration database, that is load configuration files, change system parameter values and add/delete instances.
+	</Text>
+	
+	<Text resourceID="BACKUP">Backup and save</Text>
+	<Text resourceID="HLP_BACKUP">
+		Gives access to perform a backup and to save modules, programs and configuration files.
+	</Text>
+	
+	<Text resourceID="CONTROLLER_PROPERTIES_WRITE">Modify controller properties</Text>
+	<Text resourceID="HLP_CONTROLLER_PROPERTIES_WRITE">
+		Gives access to set controller name, controller ID and system clock.
+	</Text>
+	
+	<Text resourceID="EVENTLOG_CLEAR">Delete log</Text>
+	<Text resourceID="HLP_EVENTLOG_CLEAR">
+		Gives access to delete messages in the controller Event Log.
+	</Text>
+	
+	<Text resourceID="FTP_READ">Read access to controller disks</Text>
+	<Text resourceID="HLP_FTP_READ">
+		Gives external read access to controller disks. This grant is only valid for explicit disk access, for example with an FTP client or the File Manager of RoboStudio Online. It is possible, for example, to load a program from /hd0a without this grant.
+	</Text>
+
+	<Text resourceID="FTP_WRITE">Write access to controller disks</Text>
+	<Text resourceID="HLP_FTP_WRITE">
+		Gives external write access to controller disks. This grant is only valid for explicit disk access, for example with an FTP	client or the File Manager of RoboStudio Online. It is possible, for example, to save a program to the controller disk or perform a backup without this grant.
+	</Text>
+
+	<Text resourceID="IO_WRITE">IO write access</Text>
+	<Text resourceID="HLP_IO_WRITE">
+		Gives access to perform the following: Set I/O signal value, Set signal as simulated and remove simulation, Set I/O unit and bus as enabled/disabled
+	</Text>
+
+	<Text resourceID="REMOTE_WARMSTART">Remote warm start</Text>
+	<Text resourceID="HLP_REMOTE_WARMSTART">
+		Gives access to perform warm start and shutdown (S-start) from a remote location. No grant is required to perform warm start via a local device, as for example the FlexPendant.
+	</Text>
+	
+	<Text resourceID="RESTORE">Restore a backup</Text>
+	<Text resourceID="HLP_RESTORE">
+		Gives access to restore backup and perform B-start.
+	</Text>
+	
+	<Text resourceID="SYSTEM_ADMINISTRATION">Administration of installed systems</Text>
+	<Text resourceID="HLP_SYSTEM_ADMINISTRATION">
+		Gives access to perform the following: Install new system, P-start, I-start, X-start, C-start, Select System, Install system from device. This grant gives full FTP access, that is, the grant gives the same rights as Read access to controller disks and Write access to controller disks.
+	</Text>	
+		
+	<Text resourceID="RAPID_EDIT">Edit RAPID code</Text>
+	<Text resourceID="HLP_RAPID_EDIT">
+		Gives access to perform the following: Modify code in existing RAPID modules, Frame calibration (tool, workobj), Commit ModPos/HotEdit positions to current values, Rename program
+	</Text>	
+		
+	<Text resourceID="RAPID_LOADPROGRAM">Load program</Text>
+	<Text resourceID="HLP_RAPID_LOADPROGRAM">
+		Gives access to load/delete modules and program.
+	</Text>	
+		
+	<Text resourceID="RAPID_MODPOS">Perform ModPos and HotEdit</Text>
+	<Text resourceID="HLP_RAPID_MODPOS">
+		Gives access to perform the following: Modify or teach positions in RAPID code (ModPos), During execution modify positions in RAPID code single points or as a path (HotEdit), Restore ModPos/HotEdit positions to original, Modify current value of any RAPID variable.
+	</Text>	
+
+	<Text resourceID="RAPID_CURRVALUE">Modify current value</Text>
+	<Text resourceID="HLP_RAPID_CURRVALUE">
+		Gives access to modify current value of any RAPID variable. The grant is a subset of grant "Perform ModPos and HotEdit".
+	</Text>	
+	
+	<Text resourceID="RAPID_EXECUTE">Execute program</Text>
+	<Text resourceID="HLP_RAPID_EXECUTE">
+		Gives access to perform the following: Start/step program (stop is always allowed), Move PP to Main, Execute service routines
+	</Text>	
+		
+	<Text resourceID="RAPID_DEBUG">Program debug</Text>
+	<Text resourceID="HLP_RAPID_DEBUG">
+		Gives access to perform the following: Move PP to routine, Move PP to cursor, HoldToRun, Activate/deactivate RAPID tasks, Request write access from the FlexPendant, Enable/disable non-motion execution.
+	</Text>
+
+  <Text resourceID="CALIBRATE">Calibration</Text>
+  <Text resourceID="HLP_CALIBRATE">
+    Gives access to perform the following: Fine calibrate mechanical unit, Calibrate base frame, Update/clear SMB data. Note! Frame calibration (tool, wobj) requires the grant RAPID code. Manual offset of mechanical unit calibration data and loading new calibration data from file require grant Modify configuration.
+  </Text>
+
+  <Text resourceID="REVOLUTION_COUNTER_UPDATE">Revolution counter update</Text>
+	<Text resourceID="HLP_REVOLUTION_COUNTER_UPDATE">
+		Gives access to perform revolution counter update.
+	</Text>	
+		
+	<Text resourceID="SPEED_DECREASE">Decrease production speed</Text>
+	<Text resourceID="HLP_SPEED_DECREASE">
+		Gives access to decrease speed from 100% in Auto mode.
+	</Text>	
+
+	<Text resourceID="SAFETY_CONFIG">Safety Controller configuration</Text>
+	<Text resourceID="HLP_SAFETY_CONFIG">
+		Gives access to perform a configuration of the Safety Controller. Only valid for the PSC-option. This grant is not included in the "Full access" grant.
+	</Text>	
+
+	<!-- The builtin application grants -->
+	<Text resourceID="FP_ABB_MENU_ACCESS">Access to the ABB menu on FlexPendant</Text>
+	<Text resourceID="HLP_FP_ABB_MENU_ACCESS">
+		Value true gives access to the ABB menu on the FlexPendant. This is the default value if a user does not have the grant. Value false means that the user cannot access the ABB menu when the controller is in Auto mode. The grant has no effect in Manual mode.
+	</Text>	
+
+	<Text resourceID="FP_AUTO_LOGOFF">Log off FlexPendant user when switching to Auto</Text>
+	<Text resourceID="HLP_FP_AUTO_LOGOFF">
+		A user having this grant is automatically logged off from the FlexPendant when switching from Manual mode to Auto mode.
+	</Text>	
+</Resources>

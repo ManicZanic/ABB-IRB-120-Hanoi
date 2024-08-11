@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.TPU.Screens.BootLoader">
+  <Forms>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.BootLoader.TpuWndBootLoader" Text="" Width="320" Height="192">
+      <Menu ref="menuTpuWndBootLoader" />
+      <Controls>
+        <Control ID="lblCopyright" Text="Copyright©2007 ABB Robotics" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="10" Top="173" Width="300" Height="18" />
+        <Control ID="lblIpAddress" Text="控制器IP地址：{0}" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="10" Top="93" Width="300" Height="18" />
+        <Control ID="lblSelectedSystem" Text="选择系统：{0}" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="10" Top="113" Width="300" Height="18" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.BootLoader.TpuWndBootLoaderNetwork" Text="网络设置" Width="320" Height="192" Icon="Network24.gif">
+      <Menu ref="menuTpuWndBootLoaderNetwork" />
+      <Controls>
+        <Control ID="tpuRbFixedIP" Text="固定IP" Name="ABB.Robotics.Paint.TPU.Controls.TpuRadioButton" Left="3" Top="52" Width="305" Height="18" />
+        <Control ID="tpuRbDHCP" Text="DHCP（自动）" Name="ABB.Robotics.Paint.TPU.Controls.TpuRadioButton" Left="4" Top="29" Width="304" Height="17" />
+        <Control ID="tpuRbNoIpAddress" Text="没有IP地址" Name="ABB.Robotics.Paint.TPU.Controls.TpuRadioButton" Left="4" Top="4" Width="304" Height="19" />
+        <Control ID="lblGateway" Text="网关：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="22" Top="156" Width="95" Height="24" />
+        <Control ID="lblSubnetMask" Text="子网掩码：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="22" Top="118" Width="95" Height="24" />
+        <Control ID="lblIpAddress" Text="IP地址：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="22" Top="79" Width="95" Height="24" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.BootLoader.TpuWndBootLoaderSelect" Text="选择系统" Width="320" Height="192" Icon="Folders24.gif">
+      <Menu ref="menuWndBootLoaderSelect" />
+      <Controls />
+    </Form>
+  </Forms>
+  <Menus>
+    <Menu ID="menuTpuWndBootLoader">
+      <MenuItem ID="Network" Text="网络" />
+      <MenuItem ID="System" Text="系统" />
+      <MenuItem ID="Restart" Text="重启" />
+    </Menu>
+    <Menu ID="menuTpuWndBootLoaderNetwork">
+      <MenuItem ID="OK" Text="OK" />
+      <MenuItem ID="Cancel" Text="取消" />
+    </Menu>
+    <Menu ID="menuWndBootLoaderSelect">
+      <MenuItem ID="Back" Text="返回" />
+      <MenuItem ID="Select" Text="选择" />
+      <MenuItem ID="Delete" Text="删除" />
+    </Menu>
+  </Menus>
+  <Strings>
+    <String ID="ControllerIPaddress" Text="控制器IP地址：{0}" />
+    <String ID="SelectedSystem" Text="选择系统：{0}" />
+    <String ID="Version" Text="引导程序{0}" />
+    <String ID="RestartWithSystem" Text="控制器将重启为系统’{0}‘.点Yes来继续，不要放弃" />
+    <String ID="RestartNoSystem" Text="控制器将重启并不载入任何系统" />
+    <String ID="System" Text="系统" />
+    <String ID="DeletingSystem" Text="删除系统：{0}...请等待！" />
+    <String ID="DeleteSystemMessage" Text="系统'{0}'将被删除.操作不可恢复.点Yes继续，No放弃" />
+    <String ID="SystemChanged" Text="系统已经更改，保持更改？" />
+    <String ID="Restarting" Text="重启中..." />
+    <String ID="NoSystem" Text="-=无系统=-" />
+    <String ID="NoSystemsInstalled" Text="没有安装系统" />
+    <String ID="NewSettingsRestart" Text="新的网络设置已保存                                                        为了启用新的设置，你必须重启控制器                     现在重启吗？" />
+  </Strings>
+</Resources>

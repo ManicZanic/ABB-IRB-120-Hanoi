@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--****************************************************
+* uas_grants.xml  - User Authorization Grants List
+*
+* $Revision: 1.13 $
+*
+* DESCRIPTION:
+*   This file contains the XML values for the User Authorization
+*   System (UAS) Grants List.  The list also contains the builtin application grants.
+*	This file is used by the controller and by
+*   the tools when adding grants to a group for the controller.
+*   The Grants list contains the grants for the controller including past
+*	grants and possible versions and revisions.
+*
+*	The order of the grants decides the order RSO UAS Administration Tool will use.
+*
+* Copyright (c) ABB 2004 All rights reserved
+*-->
+<!-- The version attribute should be updated when changes are made to the list of grants. Mainly for reference to uas_groups_template.xml -->
+<UAS_Grants xmlns="urn:abb-robotics-uas-grants" version="6">
+	<Grant name="UAS_FULL_ACCESS" resourceID="FULL_ACCESS" helpID="HLP_FULL_ACCESS">
+		<StartVersion>
+			<Major>5</Major>
+			<Minor>04</Minor>
+			<Revision>0</Revision>
+		</StartVersion>
+	</Grant>
+	<Grant name="UAS_UAS_ADMINISTRATION" resourceID="UAS_ADMINISTRATION" helpID="HLP_UAS_ADMINISTRATION">
+		<StartVersion>
+			<Major>5</Major>
+			<Minor>04</Minor>
+			<Revision>0</Revision>
+		</StartVersion>
+	</Grant>
+	
+	<!-- Production grants (Do not take title too seriously. Just a coarse grouping of grants) -->
+	<Grant name="UAS_RAPID_EXECUTE" resourceID="RAPID_EXECUTE" helpID="HLP_RAPID_EXECUTE">
+		<StartVersion>
+			<Major>5</Major>
+			<Minor>6</Minor>
+			<Revision>0</Revision>
+		</StartVersion>
+	</Grant>
+	<Grant name="UAS_RAPID_MODPOS" resourceID="RAPID_MODPOS" helpID="HLP_RAPID_MODPOS">
+		<StartVersion>
+			<Major>5</Major>
+			<Minor>6</Minor>
+			<Revision>0</Revision>
+		</StartVersion>
+	</Grant>
+	<Grant name="UAS_RAPID_CURRVALUE" resourceID="RAPID_CURRVALUE" helpID="HLP_RAPID_CURRVALUE">
+		<StartVersion>
+			<Major>5</Major>
+			<Minor>7</Minor>
+			<Revision>3</Revision>
+		</StartVersion>
+	</Grant>
+	<Grant name="UAS_IO_WRITE" resourceID="IO_WRITE" helpID="HLP_IO_WRITE">
+		<StartVersion>
+			<Major>5</Major>
+			<Minor>05</Minor>
+			<Revision>0</Revision>
+		</StartVersion>
+	</Grant>
+	<Grant name="UAS_BACKUP" resourceID="BACKUP" helpID="HLP_BACKUP">
+		<StartVersion>
+			<Major>5</Major>
+			<Minor>05</Minor>
+			<Revision>0</Revision>
+		</StartVersion>
+	</Grant>
+
+	<!-- Service grants (Do not take title too seriously. Just a coarse grouping of grants) -->
+	<Grant name="UAS_RESTORE" resourceID="RESTORE" helpID="HLP_RESTORE">
+		<StartVersion>
+			<Major>5</Major>
+			<Minor>05</Minor>
+			<Revision>0</Revision>
+		</StartVersion>
+	</Grant>	
+	<Grant name="UAS_CFG_WRITE" resourceID="CFG_WRITE" helpID="HLP_CFG_WRITE">
+		<StartVersion>
+			<Major>5</Major>
+			<Minor>04</Minor>
+			<Revision>0</Revision>
+		</StartVersion>
+	</Grant>
+	<Grant name="UAS_RAPID_LOADPROGRAM" resourceID="RAPID_LOADPROGRAM" helpID="HLP_RAPID_LOADPROGRAM">
+		<StartVersion>
+			<Major>5</Major>
+			<Minor>6</Minor>
+			<Revision>0</Revision>
+		</StartVersion>
+	</Grant>
+	<Grant name="UAS_REMOTE_WARMSTART" resourceID="REMOTE_WARMSTART" helpID="HLP_REMOTE_WARMSTART">
+		<StartVersion>
+			<Major>5</Major>
+			<Minor>05</Minor>
+			<Revision>0</Revision>
+		</StartVersion>
+	</Grant>
+	<Grant name="UAS_RAPID_EDIT" resourceID="RAPID_EDIT" helpID="HLP_RAPID_EDIT">
+		<StartVersion>
+			<Major>5</Major>
+			<Minor>6</Minor>
+			<Revision>0</Revision>
+		</StartVersion>
+	</Grant>
+	<Grant name="UAS_RAPID_DEBUG" resourceID="RAPID_DEBUG" helpID="HLP_RAPID_DEBUG">
+		<StartVersion>
+			<Major>5</Major>
+			<Minor>6</Minor>
+			<Revision>0</Revision>
+		</StartVersion>
+	</Grant>
+		<Grant name="UAS_SPEED_DECREASE" resourceID="SPEED_DECREASE" helpID="HLP_SPEED_DECREASE">
+		<StartVersion>
+			<Major>5</Major>
+			<Minor>6</Minor>
+			<Revision>0</Revision>
+		</StartVersion>
+	</Grant>
+		<Grant name="UAS_SAFETY_CONFIG" resourceID="SAFETY_CONFIG" helpID="HLP_SAFETY_CONFIG">
+		<StartVersion>
+			<Major>5</Major>
+			<Minor>7</Minor>
+			<Revision>0</Revision>
+		</StartVersion>
+	</Grant>
+	
+	<!-- Installation grants (Do not take title too seriously. Just a coarse grouping of grants) -->
+  <Grant name="UAS_REVOLUTION_COUNTER_UPDATE" resourceID="REVOLUTION_COUNTER_UPDATE" helpID="HLP_REVOLUTION_COUNTER_UPDATE">
+    <StartVersion>
+      <Major>5</Major>
+      <Minor>9</Minor>
+      <Revision>0</Revision>
+    </StartVersion>
+  </Grant>
+	<Grant name="UAS_CALIBRATE" resourceID="CALIBRATE" helpID="HLP_CALIBRATE">
+		<StartVersion>
+			<Major>5</Major>
+			<Minor>6</Minor>
+			<Revision>0</Revision>
+		</StartVersion>
+	</Grant>
+		<Grant name="UAS_SYSTEM_ADMINISTRATION" resourceID="SYSTEM_ADMINISTRATION" helpID="HLP_SYSTEM_ADMINISTRATION">
+		<StartVersion>
+			<Major>5</Major>
+			<Minor>05</Minor>
+			<Revision>0</Revision>
+		</StartVersion>
+	</Grant>
+	<Grant name="UAS_FTP_READ" resourceID="FTP_READ" helpID="HLP_FTP_READ">
+		<StartVersion>
+			<Major>5</Major>
+			<Minor>05</Minor>
+			<Revision>0</Revision>
+		</StartVersion>
+	</Grant>
+	<Grant name="UAS_FTP_WRITE" resourceID="FTP_WRITE" helpID="HLP_FTP_WRITE">
+		<StartVersion>
+			<Major>5</Major>
+			<Minor>05</Minor>
+			<Revision>0</Revision>
+		</StartVersion>
+	</Grant>
+	<Grant name="UAS_CONTROLLER_PROPERTIES_WRITE" resourceID="CONTROLLER_PROPERTIES_WRITE" helpID="HLP_CONTROLLER_PROPERTIES_WRITE">
+		<StartVersion>
+			<Major>5</Major>
+			<Minor>05</Minor>
+			<Revision>0</Revision>
+		</StartVersion>
+	</Grant>
+	<Grant name="UAS_EVENTLOG_CLEAR" resourceID="EVENTLOG_CLEAR" helpID="HLP_EVENTLOG_CLEAR">
+		<StartVersion>
+			<Major>5</Major>
+			<Minor>05</Minor>
+			<Revision>0</Revision>
+		</StartVersion>
+	</Grant>
+	
+	<!-- The builtin application grants -->
+	<ApplicationGrant key="FP_UAS_ABB_MENU_ACCESS" valueType="typeList" resourceID="FP_ABB_MENU_ACCESS" helpID="HLP_FP_ABB_MENU_ACCESS">
+		<StartVersion>
+			<Major>5</Major>
+			<Minor>6</Minor>
+			<Revision>0</Revision>
+		</StartVersion>
+		<ListValue>
+			<Value>true</Value>
+			<Value>false</Value>
+		</ListValue>
+	</ApplicationGrant>
+	<ApplicationGrant key="FP_UAS_AUTO_LOGOFF" valueType="typeBoolean" resourceID="FP_AUTO_LOGOFF" helpID="HLP_FP_AUTO_LOGOFF">
+		<StartVersion>
+			<Major>5</Major>
+			<Minor>6</Minor>
+			<Revision>0</Revision>
+		</StartVersion>
+	</ApplicationGrant>
+</UAS_Grants>

@@ -1,0 +1,182 @@
+全部事件日志消息。
+日期:	2000-05-19 00:09:15
+系统名称：	120-500794
+控制器名称：	192.168.0.5
+控制器 ID
+	120-500794
+
+RobotWare:	5.15.2005
+密码:	rXXXYgp73IH1XXXXbXXX1rXXXU#wCGgPNDArV6
+选项:	
+	RW Control module key
+	RobotWare OS and English
+	644-5 Chinese
+	748-1 DeviceNet Lean
+	608-1 World Zones
+	616-1 PC Interface
+	623-1 Multitasking
+
+DriveModule1
+密码:	tGcQeQ-3jhlb
+选项:	
+	RW Drive module 1 key
+	ABB standard manipulator
+		IRB 120
+			120-0.58/3
+			Drive System 09 120/140/1400/1600/260 Compact
+				1-Phase Power Supply
+					No additional drive
+
+
+
+公用 个日志消息
+SeqNo     	类型  	类别                  	代码      	标题                                      	日期                  	说明	自变量
+248308    	I   	操作                  	10016   	已请求自动模式                                 	2000-05-19 00:09:01 	已向系统发送指令，准备进入自动模式。	{args: }
+248309    	I   	操作                  	10010   	电机下电 (OFF) 状态                           	2000-05-19 00:09:01 	系统处于电机下电 (OFF) 状态。从手动模式切换至自动模式，或者程序执行过程中电机上电 (ON) 电路被打开后，系统就会进入此状态。	{args: }
+248310    	I   	操作                  	10017   	已确认自动模式                                 	2000-05-19 00:09:03 	系统处于自动模式。	{args: }
+
+操作 个日志消息
+SeqNo     	类型  	类别                  	代码      	标题                                      	日期                  	说明	自变量
+248282    	I   	操作                  	10011   	电机上电(ON) 状态                             	2000-05-19 00:03:14 	系统处于电机上电 (ON) 状态。	{args: }
+248284    	I   	操作                  	10012   	安全防护停止状态                                	2000-05-19 00:03:17 	系统处于防护停止状态。从自动方式切换为手动方式，或者由于出现紧急停止、常规停止、自动停止或上级停止而导致的电机开启电路被断开后，均会进入此状态。	{args: }
+248285    	I   	操作                  	10010   	电机下电 (OFF) 状态                           	2000-05-19 00:03:17 	系统处于电机下电 (OFF) 状态。从手动模式切换至自动模式，或者程序执行过程中电机上电 (ON) 电路被打开后，系统就会进入此状态。	{args: }
+248289    	I   	操作                  	10011   	电机上电(ON) 状态                             	2000-05-19 00:03:49 	系统处于电机上电 (ON) 状态。	{args: }
+248293    	I   	操作                  	10002   	程序指针已经复位                                	2000-05-19 00:04:30 	任务 T_ROB1 的程序指针已经复位。	{args: "1", "0", "T_ROB1"}
+248295    	I   	操作                  	10015   	已选择手动模式                                 	2000-05-19 00:04:48 	系统处于手动模式。	{args: }
+248296    	I   	操作                  	10012   	安全防护停止状态                                	2000-05-19 00:04:48 	系统处于防护停止状态。从自动方式切换为手动方式，或者由于出现紧急停止、常规停止、自动停止或上级停止而导致的电机开启电路被断开后，均会进入此状态。	{args: }
+248297    	I   	操作                  	10016   	已请求自动模式                                 	2000-05-19 00:04:50 	已向系统发送指令，准备进入自动模式。	{args: }
+248298    	I   	操作                  	10010   	电机下电 (OFF) 状态                           	2000-05-19 00:04:50 	系统处于电机下电 (OFF) 状态。从手动模式切换至自动模式，或者程序执行过程中电机上电 (ON) 电路被打开后，系统就会进入此状态。	{args: }
+248299    	I   	操作                  	10015   	已选择手动模式                                 	2000-05-19 00:04:55 	系统处于手动模式。	{args: }
+248300    	I   	操作                  	10012   	安全防护停止状态                                	2000-05-19 00:04:55 	系统处于防护停止状态。从自动方式切换为手动方式，或者由于出现紧急停止、常规停止、自动停止或上级停止而导致的电机开启电路被断开后，均会进入此状态。	{args: }
+248301    	I   	操作                  	10016   	已请求自动模式                                 	2000-05-19 00:06:54 	已向系统发送指令，准备进入自动模式。	{args: }
+248302    	I   	操作                  	10010   	电机下电 (OFF) 状态                           	2000-05-19 00:06:54 	系统处于电机下电 (OFF) 状态。从手动模式切换至自动模式，或者程序执行过程中电机上电 (ON) 电路被打开后，系统就会进入此状态。	{args: }
+248303    	I   	操作                  	10017   	已确认自动模式                                 	2000-05-19 00:07:09 	系统处于自动模式。	{args: }
+248305    	I   	操作                  	10002   	程序指针已经复位                                	2000-05-19 00:07:18 	任务 T_ROB1 的程序指针已经复位。	{args: "1", "0", "T_ROB1"}
+248306    	I   	操作                  	10015   	已选择手动模式                                 	2000-05-19 00:07:48 	系统处于手动模式。	{args: }
+248307    	I   	操作                  	10012   	安全防护停止状态                                	2000-05-19 00:07:48 	系统处于防护停止状态。从自动方式切换为手动方式，或者由于出现紧急停止、常规停止、自动停止或上级停止而导致的电机开启电路被断开后，均会进入此状态。	{args: }
+248308    	I   	操作                  	10016   	已请求自动模式                                 	2000-05-19 00:09:01 	已向系统发送指令，准备进入自动模式。	{args: }
+248309    	I   	操作                  	10010   	电机下电 (OFF) 状态                           	2000-05-19 00:09:01 	系统处于电机下电 (OFF) 状态。从手动模式切换至自动模式，或者程序执行过程中电机上电 (ON) 电路被打开后，系统就会进入此状态。	{args: }
+248310    	I   	操作                  	10017   	已确认自动模式                                 	2000-05-19 00:09:03 	系统处于自动模式。	{args: }
+
+系统 个日志消息
+SeqNo     	类型  	类别                  	代码      	标题                                      	日期                  	说明	自变量
+248232    	E   	系统                  	20293   	系统输入受限                                  	2000-05-18 23:40:55 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248233    	E   	系统                  	20293   	系统输入受限                                  	2000-05-18 23:40:58 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248234    	E   	系统                  	20293   	系统输入受限                                  	2000-05-18 23:41:32 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248236    	E   	系统                  	20293   	系统输入受限                                  	2000-05-18 23:41:44 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248238    	E   	系统                  	20293   	系统输入受限                                  	2000-05-18 23:42:51 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248244    	E   	系统                  	20293   	系统输入受限                                  	2000-05-18 23:45:48 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248245    	E   	系统                  	20293   	系统输入受限                                  	2000-05-18 23:46:03 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248255    	E   	系统                  	20293   	系统输入受限                                  	2000-05-18 23:49:25 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248257    	E   	系统                  	20293   	系统输入受限                                  	2000-05-18 23:49:34 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248264    	E   	系统                  	20293   	系统输入受限                                  	2000-05-18 23:50:19 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248275    	E   	系统                  	20293   	系统输入受限                                  	2000-05-18 23:53:23 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248277    	E   	系统                  	20293   	系统输入受限                                  	2000-05-18 23:57:22 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248286    	E   	系统                  	20072   	不允许该命令                                  	2000-05-19 00:03:28 	电机下电 ( Motors OFF) 状态下不允许该命令。	{args: "142"}
+248287    	E   	系统                  	20072   	不允许该命令                                  	2000-05-19 00:03:40 	电机下电 ( Motors OFF) 状态下不允许该命令。	{args: "142"}
+248288    	E   	系统                  	20072   	不允许该命令                                  	2000-05-19 00:03:46 	电机下电 ( Motors OFF) 状态下不允许该命令。	{args: "142"}
+248290    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 00:03:51 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248291    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 00:03:52 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248292    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 00:03:56 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248294    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 00:04:32 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248304    	E   	系统                  	20072   	不允许该命令                                  	2000-05-19 00:07:12 	电机下电 ( Motors OFF) 状态下不允许该命令。	{args: "142"}
+
+硬件 个日志消息
+SeqNo     	类型  	类别                  	代码      	标题                                      	日期                  	说明	自变量
+6483      	E   	硬件                  	37001   	电机开启 (ON) 接触器启动错误                       	2013-08-07 20:02:56 	驱动模块 1 中的电机开启 (ON) 接触器 1 未能按命令关闭。	{args: "1", "1"}
+6714      	E   	硬件                  	37001   	电机开启 (ON) 接触器启动错误                       	2013-08-08 16:00:16 	驱动模块 1 中的电机开启 (ON) 接触器 1 未能按命令关闭。	{args: "1", "1"}
+6752      	E   	硬件                  	37001   	电机开启 (ON) 接触器启动错误                       	2013-08-08 16:03:39 	驱动模块 1 中的电机开启 (ON) 接触器 1 未能按命令关闭。	{args: "1", "1"}
+95363     	E   	硬件                  	37001   	电机开启 (ON) 接触器启动错误                       	2013-10-26 08:31:29 	驱动模块 1 中的电机开启 (ON) 接触器 1 未能按命令关闭。	{args: "1", "1"}
+97918     	E   	硬件                  	37001   	电机开启 (ON) 接触器启动错误                       	2013-10-29 07:03:42 	驱动模块 1 中的电机开启 (ON) 接触器 1 未能按命令关闭。	{args: "1", "1"}
+
+程序 个日志消息
+SeqNo     	类型  	类别                  	代码      	标题                                      	日期                  	说明	自变量
+247859    	W   	程序                  	41581   	套接字错误                                   	2000-05-18 18:59:56 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+247860    	W   	程序                  	41581   	套接字错误                                   	2000-05-18 19:00:57 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+247861    	W   	程序                  	41581   	套接字错误                                   	2000-05-18 19:01:58 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+247862    	W   	程序                  	41581   	套接字错误                                   	2000-05-18 19:02:58 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+247863    	W   	程序                  	41581   	套接字错误                                   	2000-05-18 19:03:59 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+247864    	W   	程序                  	41581   	套接字错误                                   	2000-05-18 19:05:00 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+247865    	W   	程序                  	40210   	已从队列中移除中断                               	2000-05-18 19:05:18 	已在任务 T_ROB1 中删除中断队列的所有中断。 	{args: "T_ROB1"}
+247867    	W   	程序                  	41581   	套接字错误                                   	2000-05-18 19:06:00 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+247871    	W   	程序                  	40210   	已从队列中移除中断                               	2000-05-18 19:14:22 	已在任务 T_ROB1 中删除中断队列的所有中断。 	{args: "T_ROB1"}
+247876    	W   	程序                  	40210   	已从队列中移除中断                               	2000-05-18 19:14:49 	已在任务 T_ROB1 中删除中断队列的所有中断。 	{args: "T_ROB1"}
+247880    	W   	程序                  	41581   	套接字错误                                   	2000-05-18 19:15:02 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248035    	W   	程序                  	41581   	套接字错误                                   	2000-05-18 20:28:05 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248036    	W   	程序                  	41581   	套接字错误                                   	2000-05-18 20:29:05 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248037    	W   	程序                  	41581   	套接字错误                                   	2000-05-18 20:30:06 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248038    	W   	程序                  	41581   	套接字错误                                   	2000-05-18 20:31:07 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248039    	W   	程序                  	41581   	套接字错误                                   	2000-05-18 20:32:08 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248040    	W   	程序                  	40210   	已从队列中移除中断                               	2000-05-18 20:32:52 	已在任务 T_ROB1 中删除中断队列的所有中断。 	{args: "T_ROB1"}
+248042    	W   	程序                  	41581   	套接字错误                                   	2000-05-18 20:33:08 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248088    	W   	程序                  	41581   	套接字错误                                   	2000-05-18 21:06:43 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248198    	W   	程序                  	40210   	已从队列中移除中断                               	2000-05-18 22:03:21 	已在任务 T_ROB1 中删除中断队列的所有中断。 	{args: "T_ROB1"}
+
+动作 个日志消息
+SeqNo     	类型  	类别                  	代码      	标题                                      	日期                  	说明	自变量
+248179    	W   	动作                  	50024   	转角路径故障                                  	2000-05-18 21:52:13 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248180    	W   	动作                  	50024   	转角路径故障                                  	2000-05-18 21:53:01 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248181    	W   	动作                  	50024   	转角路径故障                                  	2000-05-18 21:53:29 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248182    	W   	动作                  	50024   	转角路径故障                                  	2000-05-18 21:54:28 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248183    	W   	动作                  	50024   	转角路径故障                                  	2000-05-18 21:55:02 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248184    	W   	动作                  	50024   	转角路径故障                                  	2000-05-18 21:55:30 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248185    	W   	动作                  	50024   	转角路径故障                                  	2000-05-18 21:55:58 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248186    	W   	动作                  	50024   	转角路径故障                                  	2000-05-18 21:56:31 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248187    	W   	动作                  	50024   	转角路径故障                                  	2000-05-18 21:57:17 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248188    	W   	动作                  	50024   	转角路径故障                                  	2000-05-18 21:57:49 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248189    	W   	动作                  	50024   	转角路径故障                                  	2000-05-18 21:58:27 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248190    	W   	动作                  	50024   	转角路径故障                                  	2000-05-18 21:59:16 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248191    	W   	动作                  	50024   	转角路径故障                                  	2000-05-18 21:59:55 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248192    	W   	动作                  	50024   	转角路径故障                                  	2000-05-18 22:00:22 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248193    	W   	动作                  	50024   	转角路径故障                                  	2000-05-18 22:01:00 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248194    	W   	动作                  	50024   	转角路径故障                                  	2000-05-18 22:01:29 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248195    	W   	动作                  	50024   	转角路径故障                                  	2000-05-18 22:01:56 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248196    	W   	动作                  	50024   	转角路径故障                                  	2000-05-18 22:02:35 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248197    	W   	动作                  	50024   	转角路径故障                                  	2000-05-18 22:03:07 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248283    	E   	动作                  	50052   	关节速度错误                                  	2000-05-19 00:03:17 	由于系统错误或冲突，关节 rob1_2 的速度相对于指定速度是错误的。	{args: "rob1_2"}
+
+IO 与通信 个日志消息
+SeqNo     	类型  	类别                  	代码      	标题                                      	日期                  	说明	自变量
+163655    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-02-21 17:47:35 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+170509    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-02-25 20:14:49 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+179274    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-03-05 17:25:19 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+196327    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-03-18 02:26:11 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+197293    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-03-18 18:50:18 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+199344    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-03-19 23:58:27 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+200807    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-03-21 05:30:57 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+208167    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-03-26 05:35:41 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+210038    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-04-27 18:56:23 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+210071    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-04-27 19:12:28 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+221302    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-05-02 17:42:19 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+229010    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-05-06 04:07:10 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+229021    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-05-06 05:47:27 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+233193    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-05-08 05:58:53 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+233202    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-05-08 06:00:11 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+235537    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-05-09 07:07:54 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+242964    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-05-13 14:57:02 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+242973    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-05-13 15:04:19 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+248213    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-05-18 23:34:33 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+248266    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-05-18 23:51:25 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+
+内部 个日志消息
+SeqNo     	类型  	类别                  	代码      	标题                                      	日期                  	说明	自变量
+191994    	E   	内部                  	100000  	内部错误                                    	2000-03-14 12:52:03 	Master.c 1508 master_request_control: Resource 1 instance 0 requested by internal client 3 held by local client 42 ( with  on FlexPendant)	{args: "Master.c 1508 master_request_control: Resource 1 instance 0 requested by internal client 3 held by local client 42 ( with  on FlexPendant)"}
+191995    	E   	内部                  	100000  	内部错误                                    	2000-03-14 12:52:03 	Cabts.c 10503 Regain on path: master_request_control returnd -2	{args: "Cabts.c 10503 Regain on path: master_request_control returnd -2"}
+191996    	E   	内部                  	100000  	内部错误                                    	2000-03-14 12:52:03 	Cabts.c 9612  An order_regain_to_path failed -2 	{args: "Cabts.c 9612  An order_regain_to_path failed -2 "}
+196328    	E   	内部                  	100000  	内部错误                                    	2000-03-18 02:26:23 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+197294    	E   	内部                  	100000  	内部错误                                    	2000-03-18 18:50:30 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+199345    	E   	内部                  	100000  	内部错误                                    	2000-03-19 23:58:39 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+200808    	E   	内部                  	100000  	内部错误                                    	2000-03-21 05:31:09 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+208168    	E   	内部                  	100000  	内部错误                                    	2000-03-26 05:35:53 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+210039    	E   	内部                  	100000  	内部错误                                    	2000-04-27 18:56:35 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+210072    	E   	内部                  	100000  	内部错误                                    	2000-04-27 19:12:40 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+221303    	E   	内部                  	100000  	内部错误                                    	2000-05-02 17:42:31 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+229011    	E   	内部                  	100000  	内部错误                                    	2000-05-06 04:07:22 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+229022    	E   	内部                  	100000  	内部错误                                    	2000-05-06 05:47:39 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+233194    	E   	内部                  	100000  	内部错误                                    	2000-05-08 05:59:05 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+233203    	E   	内部                  	100000  	内部错误                                    	2000-05-08 06:00:23 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+235538    	E   	内部                  	100000  	内部错误                                    	2000-05-09 07:08:06 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+242965    	E   	内部                  	100000  	内部错误                                    	2000-05-13 14:57:14 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+242974    	E   	内部                  	100000  	内部错误                                    	2000-05-13 15:04:31 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+248214    	E   	内部                  	100000  	内部错误                                    	2000-05-18 23:34:45 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+248267    	E   	内部                  	100000  	内部错误                                    	2000-05-18 23:51:37 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}

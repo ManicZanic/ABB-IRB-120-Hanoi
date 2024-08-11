@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Resource Name="MOTCOM" Language="rum">
+  <Text Name="100">
+    <Value>Rutina de întretinere comutare motor</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="101">
+    <Value>Modul de comutare este oprit</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="102">
+    <Value>Continuare</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="103">
+    <Value>"Doriti sa comutati alta axa?"</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="104">
+    <Value>"Activati unitatea în fereastra de pilotare manuala"</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="105">
+    <Value>Avertizare</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="106">
+    <Value>Modul de comutare pentru unitatea mecanica</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="107">
+    <Value>va fi activat acum, iar frânele vor fi eliberate.</Value>
+    <Comment>Maximum length 55 chars. Part two of sentence starting with item 106</Comment>
+  </Text>
+  <Text Name="108">
+    <Value>Atentie la miscarile necontrolate ale axei.</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="109">
+    <Value>Lipsa unitati mecanice selectabile din aceasta sarcina</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="110">
+    <Value>Selectare axa</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="111">
+    <Value>Introduceti numarul axei de comutat</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="112">
+    <Value>Apasati OK pentru a-i aplica motorului curent</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="113">
+    <Value>ca sa îl deplasati la pozitia de comutare.</Value>
+    <Comment>Maximum length 55 chars. Part two of sentence starting with item 112</Comment>
+  </Text>
+  <Text Name="114">
+    <Value>Deplasare la pozitia de comutare</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="115">
+    <Value>Unghi curent rezolver: </Value>
+    <Comment>Maximum length 55 chars. Numerical value will be appended</Comment>
+  </Text>
+  <Text Name="116">
+    <Value>Ap. Com. pt. comut. sau Pas pt. deplas. mot. pas cu pas</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="117">
+    <Value>Comutare sau pas cu pas</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="118">
+    <Value>Comutare</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="119">
+    <Value>"Apasati OK pentru comutarea motorului"</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="120">
+    <Value>Comutare motor finalizata</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="121">
+    <Value>Pozitie motor pas cu pas</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="122">
+    <Value>"Apasati Step- sau Step+ pentru deplasarea motorului"</Value>
+    <Comment>Maximum length 55 chars. Do not translate Step+ and Step-.</Comment>
+  </Text>
+  <Text Name="123">
+    <Value>Resetare mod de comutare</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="124">
+    <Value>Doriti sa iesiti din modul de comutare?</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="125">
+    <Value>Modul de comutare este oprit</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="126">
+    <Value>"Selectati o unitate mecanica"</Value>
+    <Comment>Maximum length 39 chars</Comment>
+  </Text>
+  <Text Name="127">
+    <Value>"Sistemul trebuie sa fie în modul manual"</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="128">
+    <Value>Rutina de întretinere va va ajuta sa comut. motoarele.</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="129">
+    <Value>Va rugam cititi documentatia înainte de a continua.</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="130">
+    <Value>Reset.</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="131">
+    <Value>OK</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="132">
+    <Value>Revoc.</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="133">
+    <Value>Com.</Value>
+    <Comment>Maximum length 7 chars. Short name for Commutation</Comment>
+  </Text>
+  <Text Name="134">
+    <Value>Pas</Value>
+    <Comment>Maximum length 7 chars</Comment>
+  </Text>
+  <Text Name="135">
+    <Value>Step-</Value>
+    <Comment>Maximum length 7 chars. Step with minus sign.</Comment>
+  </Text>
+  <Text Name="136">
+    <Value>Step+</Value>
+    <Comment>Maximum length 7 chars. Step with plus sign.</Comment>
+  </Text>
+  <Text Name="137">
+    <Value>Da</Value>
+    <Comment>Maximum length 7 chars.</Comment>
+  </Text>
+  <Text Name="138">
+    <Value>Nu</Value>
+    <Comment>Maximum length 7 chars.</Comment>
+  </Text>
+  <Text Name="139">
+    <Value>Activare unitate mecanica</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="140">
+    <Value>Apasati Activ. pentru activarea unitatii mecanice.</Value>
+    <Comment>Maximum length 55 chars</Comment>
+  </Text>
+  <Text Name="141">
+    <Value>Activ.</Value>
+    <Comment>Maximum length 7 chars.</Comment>
+  </Text>
+</Resource>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.TPU.Screens.RestartController">
+  <Forms>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.RestartController.TpuWndResetController" Text="重启" Width="320" Height="192" Background="Restart.jpg" Icon="Restart32.gif">
+      <Menu ref="menuTpuWndResetController" />
+      <Controls />
+    </Form>
+  </Forms>
+  <Menus>
+    <Menu ID="menuTpuWndResetController">
+      <MenuItem ID="Advanced" Text="高级的">
+        <MenuItem ID="PStart" Text="P-启动" Grant="UAS_SYSTEM_ADMINISTRATION" />
+        <MenuItem ID="XStart" Text="X-启动" Grant="UAS_SYSTEM_ADMINISTRATION" />
+        <MenuItem ID="CStart" Text="C-启动" Grant="UAS_SYSTEM_ADMINISTRATION" />
+        <MenuItem ID="IStart" Text="I-启动" Grant="UAS_SYSTEM_ADMINISTRATION" />
+        <MenuItem ID="BStart" Text="B-启动" Grant="UAS_RESTORE" />
+        <MenuItem ID="SStart" Text="关机" />
+      </MenuItem>
+      <MenuItem ID="Dummy" Text="" />
+      <MenuItem ID="Dummy" Text="" />
+      <MenuItem ID="Dummy" Text="" />
+      <MenuItem ID="WarmStart" Text="热启动" />
+    </Menu>
+  </Menus>
+  <Strings>
+    <String ID="Mode" Text="模式" />
+    <String ID="Description" Text="描述" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.RestartMode.WarmStart" Text="热启动" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.RestartMode.PStart" Text="P-启动" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.RestartMode.XStart" Text="X-启动" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.RestartMode.ColdStart" Text="C-启动" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.RestartMode.IStart" Text="I-启动" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.RestartMode.BStart" Text="B-启动" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.RestartMode.SStart" Text="S-启动" />
+    <String ID="WarmStartDescription" Text="重启系统" />
+    <String ID="PStartDescription" Text="重启系统并重装所有模块" />
+    <String ID="XStartDescription" Text="悬挂系统并启动bootloader" />
+    <String ID="ColdStartDescription" Text="删除系统然后启动bootloader" />
+    <String ID="IStartDescription" Text="重新安装系统" />
+    <String ID="BStartDescription" Text="用装载的备份重启系统" />
+    <String ID="SStartDescription" Text="关掉系统" />
+    <String ID="WarmStartOnly" Text="按'{0}'按钮来重启控制器或在'{1}'子菜单下选择更多的重启方式" />
+    <String ID="WarmStartMessage" Text="{0}.系统将被热启动.{1}" />
+    <String ID="PStartMessage" Text="{0}.系统将被重启并且所有模块将被重载.{1}" />
+    <String ID="XStartMessage" Text="{0}.系统将被悬挂并且bootloader将被启动.{1}" />
+    <String ID="ColdStartMessage" Text="{0}.系统将被删除并且bootloader将被启动.{1}" />
+    <String ID="IStartMessage" Text="{0}.系统将被重新安装.{1}" />
+    <String ID="BStartMessage" Text="{0}.系统将使用装载的备份被重启.{1}" />
+    <String ID="SStartMessage" Text="{0}.系统将关闭.{1}" />
+    <String ID="PressYesToContinue" Text="点Yes继续，No放弃" />
+    <String ID="Restarting" Text="重启中..." />
+    <String ID="RestartRequestFailed" Text="重启请求失败." />
+    <String ID="RestartRejectedByUAS" Text="重启被UAS拒绝." />
+    <String ID="FailedToRequestMaster" Text="请求主控权失败." />
+  </Strings>
+</Resources>

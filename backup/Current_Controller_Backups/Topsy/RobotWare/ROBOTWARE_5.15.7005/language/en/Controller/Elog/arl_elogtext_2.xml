@@ -1,0 +1,521 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="ARL" domainNo="4" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="107" max="257">
+  <Message number="107" eDefine="SYS_ERR_ARL_UNDVARTYP">
+    <Title>Data declaration error</Title>
+    <Description>Cannot determine <p />type of variable value (circular <p />constant references?) <p /></Description>
+    <Actions>Check that any referred constants are <p />correctly defined. If so, the program is <p />too complex. Try to rewrite the <p />declarations.</Actions>
+  </Message>
+  <Message number="108" eDefine="SYS_ERR_ARL_UNKAGGTYP">
+    <Title>Type error</Title>
+    <Description>Unknown aggregate <p />type <p /></Description>
+    <Actions>An aggregate may not be used in this <p />position since there is no expected data <p />type. Declare data with the desired data <p />type and aggregate value. Use the name <p />of the data instead of the aggregate.</Actions>
+  </Message>
+  <Message number="109" eDefine="SYS_ERR_ARL_UNDRCPTYP">
+    <Title>Type definition error</Title>
+    <Description>Cannot determine <p />type of record component <p /><arg format="%.16s" ordinal="1" /><p />(circular type definitions?) <p /></Description>
+    <Actions>Check that the type of the component is <p />correctly defined. If so, it could be <p />a circular definition, the type of a <p />component could not refer to the its <p />own record type.</Actions>
+  </Message>
+  <Message number="110" eDefine="SYS_ERR_ARL_NAMAMBREC">
+    <Title>Reference error</Title>
+    <Description>Record name <p /><arg format="%.16s" ordinal="1" /> is ambiguous <p /></Description>
+    <Actions>At least one other object sharing the <p />same name as the referred record name is <p />visible from this program position. Make <p />sure that all object names fulfill the <p />naming rules regarding uniqueness.</Actions>
+  </Message>
+  <Message number="111" eDefine="SYS_ERR_ARL_NAMAMBGREC">
+    <Title>Name error</Title>
+    <Description>Global record <p />name <arg format="%.16s" ordinal="1" /> ambiguous <p /></Description>
+    <Actions>Global type must have names that are <p />unique among all the global types, data, <p />global routines and modules in the <p />entire program. Rename the record <p />or change the conflicting name.</Actions>
+  </Message>
+  <Message number="112" eDefine="SYS_ERR_ARL_NAMAMBALI">
+    <Title>Reference error</Title>
+    <Description>Alias name <p /><arg format="%.16s" ordinal="1" /> is ambiguous <p /></Description>
+    <Actions>At least one other object sharing the <p />same name as the referred alias name is <p />visible from this program position. Make <p />sure that all object names fulfill the <p />naming rules regarding uniqueness.</Actions>
+  </Message>
+  <Message number="113" eDefine="SYS_ERR_ARL_NAMAMBGALI">
+    <Title>Name error</Title>
+    <Description>Global alias <p />name <arg format="%.16s" ordinal="1" /> ambiguous <p /></Description>
+    <Actions>Global type must have names that are <p />unique among all the global types, data, <p />global routines and modules in the <p />entire program. Rename the alias <p />or change the conflicting name.</Actions>
+  </Message>
+  <Message number="114" eDefine="SYS_ERR_ARL_ALITOALI">
+    <Title>Type definition error</Title>
+    <Description>Type reference <p />of alias name <arg format="%.16s" ordinal="1" /><p />is an alias type <p /></Description>
+    <Actions>Check that the type of the component is <p />correctly defined. If so, it could be <p />a circular definition. The type of a <p />component could not refer to its <p />own record type.</Actions>
+  </Message>
+  <Message number="115" eDefine="SYS_ERR_ARL_UNDALITYP">
+    <Title>Type definition error</Title>
+    <Description>Cannot determine <p />type of alias <arg format="%.16s" ordinal="1" /><p />(circular type definitions?)<p /></Description>
+    <Actions>Check that the type of the alias is <p />correctly defined. If so, it could be <p />a circular definition, the type of an <p />alias could not refer to a record that <p />use this alias as a component.</Actions>
+  </Message>
+  <Message number="116" eDefine="SYS_ERR_ARL_NAMAMBRCP">
+    <Title>Reference error</Title>
+    <Description>Record component name <p /><arg format="%.16s" ordinal="2" /> is ambiguous <p /></Description>
+    <Actions>At least one other object sharing the <p />same name as the referred component is <p />visible from this program position. Make <p />sure that all object names fulfill the <p />aming rules regarding uniqueness.</Actions>
+  </Message>
+  <Message number="117" eDefine="SYS_ERR_ARL_PHRRECRCP">
+    <Title>Type definition error</Title>
+    <Description>Place holder for <p />record component not allowed in <p />definition of named record <p /></Description>
+    <Actions>Complete the definition or change <p />the data name to a place holder. </Actions>
+  </Message>
+  <Message number="119" eDefine="SYS_ERR_ARL_SEMIRCP">
+    <Title>Reference error</Title>
+    <Description>Cannot use the semi-value type <p /><arg format="%.16s" ordinal="1" /> for record components <p /></Description>
+    <Actions />
+  </Message>
+  <Message number="120" eDefine="SYS_ERR_ARL_ILLREFTASK">
+    <Title>Reference error</Title>
+    <Description>Illegal reference <p />to installed task object <p /><arg format="%.16s" ordinal="1" /> from shared object <p /></Description>
+    <Actions>Install the referred object shared, or <p />install the referring ReaL object/ <p />archive or RAPID module in each task <p />(not shared).</Actions>
+  </Message>
+  <Message number="121" eDefine="SYS_ERR_ARL_SEMIARR">
+    <Title>Reference error</Title>
+    <Description>Cannot use semi-value type for arrays <p /></Description>
+    <Actions />
+  </Message>
+  <Message number="122" eDefine="SYS_ERR_ARL_REFNOTPRC_LNK">
+    <Title>Reference error</Title>
+    <Description>
+      <arg format="%.16s" ordinal="1" /> not procedure reference <p /></Description>
+    <Actions> The specified name identifies an object  other than a procedure. <p /> Check if the desired procedure is hidden by some other object with the same name. </Actions>
+  </Message>
+  <Message number="123" eDefine="SYS_ERR_ARL_ARGNOTPER_LNK">
+    <Title>Argument error</Title>
+    <Description> Argument for 'PERS' parameter <arg format="%.16s" ordinal="1" /> is not a persistent reference or is read only <p /></Description>
+    <Actions> Make sure the argument is just a persistent or persistent parameter reference and that it is writable. <p /> Do not use () around the argument. </Actions>
+  </Message>
+  <Message number="124" eDefine="SYS_ERR_ARL_ARGNOTVAR_LNK">
+    <Title>Argument error</Title>
+    <Description> Argument for 'VAR' parameter <arg format="%.16s" ordinal="1" /> is not variable reference or is read only <p /></Description>
+    <Actions> Make sure the argument is just a variable or variable parameter reference and that it is writable. <p /> Do not use () around the argument. </Actions>
+  </Message>
+  <Message number="125" eDefine="SYS_ERR_ARL_CNTNOTVAR_LNK">
+    <Title>Instruction error</Title>
+    <Description> The Interrupt number is not static variable reference, or it is shared, or it is read only <p /></Description>
+    <Actions> Make sure the interrupt number is just a variable or variable parameter  reference. The variable must be static and not shared. The variable may <p /> not be read only. </Actions>
+  </Message>
+  <Message number="126" eDefine="SYS_ERR_ARL_MAXINTVAL_LNK">
+    <Title>Value error</Title>
+    <Description> Integer value <arg format="%G" ordinal="1" /> is too large <p /></Description>
+    <Actions> The value of the expression must be an integer value. The current value is  outside the integer range. </Actions>
+  </Message>
+  <Message number="127" eDefine="SYS_ERR_ARL_NOTINTVAL_LNK">
+    <Title>Value error</Title>
+    <Description>
+      <arg format="%G" ordinal="1" /> is not an  integer value <p /></Description>
+    <Actions> The value of the expression must be an  exact integer value. The current value  has a fraction part. </Actions>
+  </Message>
+  <Message number="128" eDefine="SYS_ERR_ARL_REFUNKDAT_LNK">
+    <Title>Reference error</Title>
+    <Description> Reference to unknown entire data <arg format="%.16s" ordinal="1" /><p /></Description>
+    <Actions> No data (or other object) with the specified name is visible from this <p /> program position. </Actions>
+  </Message>
+  <Message number="129" eDefine="SYS_ERR_ARL_REFUNKFUN_LNK">
+    <Title>Reference error</Title>
+    <Description> Reference to unknown function <arg format="%.16s" ordinal="1" /><p /></Description>
+    <Actions> No function (or other object) with the  specified name is visible from this  program position. </Actions>
+  </Message>
+  <Message number="130" eDefine="SYS_ERR_ARL_REFUNKPRC_LNK">
+    <Title>Reference error</Title>
+    <Description> Reference to unknown procedure <arg format="%.16s" ordinal="1" /><p /></Description>
+    <Actions> No procedure (or other object) with the  specified name is visible from this  program position. </Actions>
+  </Message>
+  <Message number="131" eDefine="SYS_ERR_ARL_REFUNKTRP_LNK">
+    <Title>Reference error</Title>
+    <Description> Reference to unknown trap <arg format="%.16s" ordinal="1" /><p /></Description>
+    <Actions> No trap (or other object) with the specified name is visible from this program position. </Actions>
+  </Message>
+  <Message number="135" eDefine="SYS_ERR_ARL_EXPECTED">
+    <Title>Syntax error.</Title>
+    <Description>Expected <arg format="%.16s" ordinal="1" /><p /></Description>
+    <Actions />
+  </Message>
+  <Message number="136" eDefine="SYS_ERR_ARL_UNEXPECTED">
+    <Title>Syntax error</Title>
+    <Description>Unexpected <arg format="%.16s" ordinal="1" /><p /></Description>
+    <Actions />
+  </Message>
+  <Message number="137" eDefine="SYS_ERR_ARL_EXPECTED_OTHER">
+    <Title>Syntax error</Title>
+    <Description> Expected <arg format="%.16s" ordinal="1" /> but found <arg format="%.16s" ordinal="2" /><p /></Description>
+    <Actions />
+  </Message>
+  <Message number="138" eDefine="SYS_ERR_ARL_STACK_BACKEDUP">
+    <Title>Syntax error</Title>
+    <Description>Syntax error, stack backed up </Description>
+    <Actions />
+  </Message>
+  <Message number="139" eDefine="SYS_ERR_ARL_PARSING_TERM">
+    <Title>Syntax error</Title>
+    <Description>Syntax error, parsing terminated </Description>
+    <Actions />
+  </Message>
+  <Message number="140" eDefine="SYS_ERR_ARL_NUM_LIT_OUT_RANGE">
+    <Title>Numerical value for symbol <arg format="%s" ordinal="1" /> is out of range.</Title>
+    <Description>Numerical value for symbol <arg format="%s" ordinal="1" /> is out of range.</Description>
+    <Actions>Make the value smaller</Actions>
+  </Message>
+  <Message number="141" eDefine="SYS_ERR_ARL_STR_TOO_LONG">
+    <Title>String too long</Title>
+    <Description>The string <arg format="%s" ordinal="1" /> is too long.</Description>
+    <Actions>Make the string shorter.</Actions>
+  </Message>
+  <Message number="142" eDefine="SYS_ERR_ARL_TXID_OUT_RANGE">
+    <Title>TxId is out of range</Title>
+    <Description>The Text identifier <arg format="%s" ordinal="1" /> is out of range.</Description>
+    <Actions />
+  </Message>
+  <Message number="143" eDefine="SYS_ERR_ARL_AGG_OUT_RANGE">
+    <Title>Aggregate is out of range</Title>
+    <Description>The aggregate <arg format="%s" ordinal="1" /> is out of range.</Description>
+    <Actions>Make the aggregate smaller</Actions>
+  </Message>
+  <Message number="144" eDefine="SYS_ERR_ARL_INT_OUT_RANGE">
+    <Title>Integer out of range</Title>
+    <Description>The integer <arg format="%s" ordinal="1" /> is out of range.</Description>
+    <Actions>Make the integer smaller.</Actions>
+  </Message>
+  <Message number="145" eDefine="SYS_ERR_ARL_PARSE_STACK_FULL">
+    <Title>Parser stack is full</Title>
+    <Description>The parser stack is full.</Description>
+    <Actions>Reduce program complexity</Actions>
+  </Message>
+  <Message number="146" eDefine="SYS_ERR_ARL_HEAP_SPACE_EMPTY">
+    <Title>Not enough heap space.</Title>
+    <Description>There is not enough heap space to fulfill the action.</Description>
+    <Actions>Rewrite your program </Actions>
+  </Message>
+  <Message number="147" eDefine="SYS_ERR_ARL_RESERVED_WORD">
+    <Title>Identifier is reserved word in current language</Title>
+    <Description>The identifier <arg format="%s" ordinal="1" /> is a reserved word in current language.</Description>
+    <Actions>Change the name of the identifier</Actions>
+  </Message>
+  <Message number="148" eDefine="SYS_ERR_ARL_ID_TOO_LONG">
+    <Title>Identifier too long</Title>
+    <Description>The name of the identifier <arg format="%s" ordinal="1" /> is too long.</Description>
+    <Actions>Rename the identifier with a shorter name.</Actions>
+  </Message>
+  <Message number="149" eDefine="SYS_ERR_ARL_PLACEHOLD_TOO_LONG">
+    <Title>Placeholder  too long</Title>
+    <Description>The placeholder <arg format="%s" ordinal="1" /> is too long.</Description>
+    <Actions>Rename the placeholder with a shorter name.</Actions>
+  </Message>
+  <Message number="150" eDefine="SYS_ERR_ARL_UNEXP_UNKN">
+    <Title>Unexpected unknown token</Title>
+    <Description>Unexpected unknown token.</Description>
+    <Actions>Remove the unknown token.</Actions>
+  </Message>
+  <Message number="151" eDefine="SYS_ERR_ARL_ALREADY_INIT_PERS">
+    <Title>Initial value of PERS not updated.</Title>
+    <Description>The initial value of PERS: <arg format="%s" ordinal="1" /> will not be updated. <p />A PERS with the same name in another task has already an initial value of the PERS.</Description>
+    <Actions> Check the value in the Program Data window to see that the PERS have the correct value. <p />if necessary, unload modules with that PERS from all tasks and reload with new initial value. <p />The PERS is of type: <arg format="%s" ordinal="2" />.</Actions>
+  </Message>
+  <Message number="152" eDefine="SYS_ERR_ARL_LOCTSKVAR">
+    <Title>Data declaration error</Title>
+    <Description>TASK illegal in routine variable declaration</Description>
+    <Actions>Only program data declarations may have the TASK attribute. Remove the TASK attribute or move the declaration outside of the routine.</Actions>
+  </Message>
+  <Message number="155" eDefine="SYS_ERR_ARL_ARGNOTPER">
+    <Title>Argument error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Argument for <p />'PERS' parameter <arg format="%.16s" ordinal="2" /> is not <p />persistent reference or is read only <p /></Description>
+    <Actions>Make sure the argument is just a persistent or persistent parameter reference and that it is writable. Do not use () around the argument. </Actions>
+  </Message>
+  <Message number="156" eDefine="SYS_ERR_ARL_ARGNOTVAR">
+    <Title>Argument error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Argument for 'VAR' parameter <arg format="%.16s" ordinal="2" /> is not variable reference or is read only </Description>
+    <Actions>Make sure the argument <p />is just a variable or variable <p />parameter reference and that <p />it is writable. <p />Do not use () around the argument.</Actions>
+  </Message>
+  <Message number="157" eDefine="SYS_ERR_ARL_CNTNOTVAR">
+    <Title>Instruction error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Interrupt number is not a static variable reference, <p />is shared, or is read only. <p /></Description>
+    <Actions>Make sure the interrupt number is just <p />a variable or variable parameter <p />reference. The variable must be <p />static and not shared. The variable may <p />not be read only.</Actions>
+  </Message>
+  <Message number="158" eDefine="SYS_ERR_ARL_MAXINTVAL">
+    <Title>Value error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Integer value <p /><arg format="%G" ordinal="2" /> too large <p /></Description>
+    <Actions>The value of the expression must be an <p />integer value. The current value is <p />outside the integer range.</Actions>
+  </Message>
+  <Message number="159" eDefine="SYS_ERR_ARL_NOTINTVAL">
+    <Title>Value error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: <arg format="%G" ordinal="2" /> not <p />integer value <p /></Description>
+    <Actions>The value of the expression must be an <p />exact integer value. The current value <p />has a fraction part. </Actions>
+  </Message>
+  <Message number="160" eDefine="SYS_ERR_RAPID_CODE_ERROR">
+    <Title>Errors in RAPID program.</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: There are errors in the RAPID program. </Description>
+    <Actions>Check for RAPID errors using Check program <p />in the Program editor and correct <p />the program.</Actions>
+  </Message>
+  <Message number="161" eDefine="SYS_ERR_ARL_OPTION_MISSING">
+    <Title>Option is missing.</Title>
+    <Description>The instruction <arg format="%.16s" ordinal="1" /> requires the option <arg format="%.16s" ordinal="2" />.</Description>
+    <Consequences>The program will not execute properly.</Consequences>
+    <Causes>The system image doesn't include the required option.</Causes>
+    <Actions>Update the system image with the required option.</Actions>
+  </Message>
+  <Message number="162" eDefine="SYS_ERR_ARL_RAPID_CODE_ERROR_BACK">
+    <Title>Errors in RAPID program.</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: There are errors in the RAPID program.</Description>
+    <Actions>Take the following actions to be able to debug the program:<p />1 Change the type of the task to NORMAL. <p />2 Restart the controller. <p />3 Check for RAPID errors and correct the program. </Actions>
+  </Message>
+  <Message number="165" eDefine="SYS_ERR_ARL_REFUNKDAT">
+    <Title>Reference error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Reference to <p />unknown entire data <arg format="%.16s" ordinal="2" /><p /></Description>
+    <Actions>No data (or other object) with the <p />specified name is visible from this <p />program position. </Actions>
+  </Message>
+  <Message number="166" eDefine="SYS_ERR_ARL_REFUNKFUN">
+    <Title>Reference error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Reference to unknown function <arg format="%.16s" ordinal="2" /><p /></Description>
+    <Actions>No function (or other object) with the <p />specified name is visible from this <p />program position. </Actions>
+  </Message>
+  <Message number="168" eDefine="SYS_ERR_ARL_REFUNKPRC">
+    <Title>Reference error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Reference to unknown procedure <arg format="%.16s" ordinal="2" /><p /></Description>
+    <Actions>No procedure (or other object) with the specified name is visible from this program position. <p />To avoid run time errors like this, add code in error handler to handle this. <p /> ERRNO will be set to "ERR_REFUNKPRC".</Actions>
+  </Message>
+  <Message number="170" eDefine="SYS_ERR_ARL_REFUNKTRP">
+    <Title>Reference error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Reference to unknown trap <arg format="%.16s" ordinal="2" /><p /></Description>
+    <Actions>No trap (or other object) with the <p />specified name is visible from this <p />program position.</Actions>
+  </Message>
+  <Message number="171" eDefine="SYS_ERR_ARL_REFUNKSYM">
+    <Title>Reference error</Title>
+    <Description>Task <arg format="%s" ordinal="1" />:<p />Reference to unknown data (or other object) found during execution of module <arg format="%s" ordinal="2" />.</Description>
+    <Actions>Check the program for unresolved references.</Actions>
+  </Message>
+  <Message number="172" eDefine="SYS_ERR_ARL_REFUNKMOD">
+    <Title>Reference error</Title>
+    <Description>Task <arg format="%s" ordinal="1" />:<p />Reference to unknown module <arg format="%s" ordinal="2" />.</Description>
+    <Actions>No module (or other object) with the specified name is visible from this program position. Check the program for incorrect module reference or if the module is missing.<p /></Actions>
+  </Message>
+  <Message number="173" eDefine="SYS_ERR_ARL_REFNOTMOD">
+    <Title>Reference error</Title>
+    <Description>Task <arg format="%s" ordinal="1" />:<p />Reference to object <arg format="%s" ordinal="2" /> that is not a module.</Description>
+    <Actions>The specified name identifies an object other than a module. <p />Check the program for incorrect module reference.</Actions>
+  </Message>
+  <Message number="174" eDefine="SYS_ERR_ARL_REFAMBMOD">
+    <Title>Reference error</Title>
+    <Description>Task <arg format="%s" ordinal="1" />:<p />Reference to module <arg format="%s" ordinal="2" /> is ambiguous.</Description>
+    <Actions>At least one other object sharing the same name as the referred module is  visible from this program position. Make sure that all object names fulfill the naming rules regarding uniqueness.</Actions>
+  </Message>
+  <Message number="175" eDefine="SYS_ERR_ARL_REFAMBPRC2">
+    <Title>Reference error</Title>
+    <Description>Task <arg format="%s" ordinal="1" />:<p />Reference to procedure <arg format="%s" ordinal="2" /> is ambiguous.</Description>
+    <Actions>At least one other object sharing the same name as the referred procedure is  visible from this program position. Make sure that all object names fulfill the naming rules regarding uniqueness.</Actions>
+  </Message>
+  <Message number="191" eDefine="SYS_ERR_ARL_ALRDYCNT">
+    <Title>Instruction error</Title>
+    <Description> Task <arg format="%.16s" ordinal="1" />: Variable and trap <p /> routine already connected <p /></Description>
+    <Actions> It is not legal to connect a specific <p /> variable with a trap routine <p /> more than once. </Actions>
+  </Message>
+  <Message number="192" eDefine="SYS_ERR_ARL_ARGDUPCND">
+    <Title>Argument error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: <arg format="%.16s" ordinal="2" /><p /> is second present conditional argument <p />for excluding parameters <p /></Description>
+    <Actions>Arguments may not be present for more <p />than one parameter from a list of <p />parameters that exclude each other. </Actions>
+  </Message>
+  <Message number="193" eDefine="SYS_ERR_ARL_CALLPROC">
+    <Title>Execution error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Late binding <p />procedure call error <arg format="%i" ordinal="2" /><p /></Description>
+    <Actions>There is an error in the procedure call <p />instruction. See previous message for <p />the actual cause.</Actions>
+  </Message>
+  <Message number="194" eDefine="SYS_ERR_ARL_DIVZERO">
+    <Title>Value error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Division by zero <p /></Description>
+    <Actions>Cannot divide by 0. Rewrite the program <p />so that the divide operation is not <p />executed when the divisor is 0.</Actions>
+  </Message>
+  <Message number="195" eDefine="SYS_ERR_ARL_EXCRTYMAX">
+    <Title>Limit error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: <p />The configured maximum <p />number of RETRYs (<arg format="%i" ordinal="2" /> retries) <p />is exceeded. <p /></Description>
+    <Actions>The error correction performed before <p />the RETRY instruction is executed, is <p />probably not enough to cure the error. <p />Check the error handler. </Actions>
+  </Message>
+  <Message number="196" eDefine="SYS_ERR_ARL_EXECPHR">
+    <Title>Instruction error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Attempt to <p />execute place holder <p /></Description>
+    <Actions>Remove the place holder or the <p />instruction containing it, or make the <p />instruction complete. Then continue <p />execution.</Actions>
+  </Message>
+  <Message number="197" eDefine="SYS_ERR_ARL_FNCNORET">
+    <Title>Execution error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Function does not <p />return any value <p /></Description>
+    <Actions>The end of the function has been reached <p />without a RETURN instruction being <p />executed. Add a RETURN instruction <p />specifying a function return value.
+</Actions>
+  </Message>
+  <Message number="198" eDefine="SYS_ERR_ARL_ILLQUAT">
+    <Title>Value error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Illegal <p />orientation value <p /><arg format="%.40s" ordinal="2" /><p /></Description>
+    <Actions>Attempt to use illegal orientation <p />(quaternion) value </Actions>
+  </Message>
+  <Message number="199" eDefine="SYS_ERR_ARL_ILLRAISE">
+    <Title>Value error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Illegal error number <arg format="%i" ordinal="2" /> in <arg format="%s" ordinal="3" />.</Description>
+    <Actions>Use error numbers in the range 1-90 or book error numbers with the instruction BookErrNo.</Actions>
+  </Message>
+  <Message number="200" eDefine="SYS_ERR_ARL_INOMAX">
+    <Title>Limit error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: No more interrupt <p />number available <p /></Description>
+    <Actions>There is a limited number of interrupt <p />numbers available. Rewrite the program <p />to use fewer interrupt numbers. This <p />message may also occur as a consequence <p />of a system error.</Actions>
+  </Message>
+  <Message number="202" eDefine="SYS_ERR_ARL_NOTEQDIM">
+    <Title>Type error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Dimensions <arg format="%i" ordinal="2" /><p />and <arg format="%i" ordinal="3" /> of conformant array <p />dimension number <arg format="%i" ordinal="4" /> are incompatible <p /></Description>
+    <Actions>The array is not of the expected size. <p />Array assignment may only be performed <p />on arrays of identical size. </Actions>
+  </Message>
+  <Message number="203" eDefine="SYS_ERR_ARL_NOTPRES">
+    <Title>Reference error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Optional <p />parameter <arg format="%.16s" ordinal="2" /> not present <p /></Description>
+    <Actions>The value of a non-present optional <p />parameter may not be referred. Use the <p />predefined function 'Present' to check <p />the presence of the parameter before <p />using its value.</Actions>
+  </Message>
+  <Message number="204" eDefine="SYS_ERR_ARL_OUTOFBND">
+    <Title>Value error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Array index <arg format="%i" ordinal="2" /><p />for dimension number <arg format="%i" ordinal="3" /> out of bounds <p />(1-<arg format="%i" ordinal="4" />)<p /></Description>
+    <Actions>The array index value is non-positive or <p />violates the declared size of the array. </Actions>
+  </Message>
+  <Message number="205" eDefine="SYS_ERR_ARL_STRTOOLNG">
+    <Title>Value error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: RAPID String <arg format="%.16s" ordinal="2" /> too long </Description>
+    <Actions>String value exceeds the maximum allowed length. Rewrite the program to use strings of less length. </Actions>
+  </Message>
+  <Message number="206" eDefine="SYS_ERR_ARL_INTQUEFULL">
+    <Title>Interrupt queue full</Title>
+    <Description>Execution of all normal tasks has stopped. Too many interrupts has occurred in <arg format="%.16s" ordinal="1" /> while executing a trap routine.</Description>
+    <Consequences>The system goes to blocked state and can not be restarted before moving the program pointer to an arbitrary position.</Consequences>
+    <Causes>Too many interrupts has occurred while executing a trap routine. This can be caused by heavy CPU load.<p /></Causes>
+    <Actions>1) Minimize execution time in the trap routine. <p />2) Disable/enable interrupts while executing a trap routine using the Isleep or Iwatch commands.</Actions>
+  </Message>
+  <Message number="207" eDefine="SYS_ERR_ARL_ILLRERAISE">
+    <Title>Value error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Illegal error number <arg format="%i" ordinal="2" /> in <arg format="%s" ordinal="3" /></Description>
+    <Actions>Error numbers used in an ERROR handler must be positive.</Actions>
+  </Message>
+  <Message number="208" eDefine="SYS_ERR_ARL_ERREVT_QUEFULL">
+    <Title>Error event queue full</Title>
+    <Description>Task <arg format="%s" ordinal="1" />: The program was already executing an error event when a new event occurred.</Description>
+    <Actions>Attend the cause of the error event and restart the program.</Actions>
+  </Message>
+  <Message number="209" eDefine="SYS_ERR_ARL_ERR_CONTEXT_CONSUMED">
+    <Title>Error context already consumed</Title>
+    <Description>An error event in task <arg format="%s" ordinal="1" /> has occurred. The context of the RAPID instruction that has generated this event is however already consumed. No error handling is therefore possible to execute.</Description>
+    <Actions>Attend the cause of the error event and restart the program.</Actions>
+  </Message>
+  <Message number="210" eDefine="SYS_ERR_ARL_INTERRUPT_REMOVED">
+    <Title>Interrupt removed from queue</Title>
+    <Description>All interrupts have been deleted from the interrupt queue in task <arg format="%s" ordinal="1" />.</Description>
+    <Consequences>No trap routines, connected with the interrupt, may be executed.</Consequences>
+    <Causes>-The program has been stopped <p />-A service routine or an event routine may be executing. <p />-The program is executing in step mode.</Causes>
+    <Actions>-</Actions>
+  </Message>
+  <Message number="221" eDefine="SYS_ERR_ARL_ABORT">
+    <Title>Execution error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Execution aborted <p /></Description>
+    <Actions>Execution was aborted due to a fatal <p />error.</Actions>
+  </Message>
+  <Message number="222" eDefine="SYS_ERR_ARL_EXSTOVFL">
+    <Title>Limit error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Execution stack <p />overflow <p /></Description>
+    <Actions>The program is too complex to execute. <p />Probably the program contains recursive <p />routines.</Actions>
+  </Message>
+  <Message number="223" eDefine="SYS_ERR_ARL_FATAL">
+    <Title>Execution error</Title>
+    <Description>The execution of task <arg format="%.16s" ordinal="1" /> has been stopped by a runtime error.</Description>
+    <Consequences>The program execution is immediately halted. </Consequences>
+    <Causes>The program error is considered UNRECOVERABLE so no error recovery attempt by an error handler routine (if used) was allowed. The actual cause of the error may vary, and is likely to be specified in an event log message logged simultaneously as this one.</Causes>
+    <Actions>1) Check other event log messages logged simultaneously to determine the actual cause. </Actions>
+  </Message>
+  <Message number="224" eDefine="SYS_ERR_ARL_ILLREAL">
+    <Title>Execution error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Illegal return <p />code <arg format="%i" ordinal="2" /> from ReaL routine <p />This is always caused by an internal <p />error in the ReaL routine.<p /></Description>
+    <Actions />
+  </Message>
+  <Message number="225" eDefine="SYS_ERR_ARL_NORESTART">
+    <Title>Execution error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Execution could <p />not be restarted <p />Execution of the program could not be <p />continued after power failure.<p /></Description>
+    <Actions> Restart the program.</Actions>
+  </Message>
+  <Message number="226" eDefine="SYS_ERR_ARL_PRCNOTARLID">
+    <Title>Name error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Procedure name <p /><arg format="%.40s" ordinal="2" /><p />is not a RAPID identifier excluding <p />reserved words <p /></Description>
+    <Actions>The procedure name, must be a legal <p />RAPID identifier not equal to any of <p />the reserved words of the RAPID <p />language. Change the name expression. </Actions>
+  </Message>
+  <Message number="227" eDefine="SYS_ERR_ARL_RTSTOVFL">
+    <Title>Limit error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Runtime stack <p />overflow <p />The program is too complex to execute. <p />Probably the program contains recursive <p />routines. <p /></Description>
+    <Actions />
+  </Message>
+  <Message number="228" eDefine="SYS_ERR_ARL_UNHANDLOGW">
+    <Title>Execution error</Title>
+    <Description>The execution of task <arg format="%.16s" ordinal="1" /> has been stopped by a runtime error <arg format="%i" ordinal="2" />.</Description>
+    <Consequences>The program execution is immediately halted. </Consequences>
+    <Causes>The program error is considered RECOVERABLE but the error was not recovered. The actual cause of the error may vary, and is likely to be specified in an event log message logged simultaneously as this one.</Causes>
+    <Actions>1) Check other event log messages logged simultaneously to determine the actual cause. </Actions>
+  </Message>
+  <Message number="229" eDefine="SYS_ERR_ARL_UNHANDRAISE">
+    <Title>Execution error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Unhandled error <p /></Description>
+    <Actions>An error occurred in called instruction but was not handled by any ERROR clause in the program. <p />Check the previous error or warning in the common log for the cause.<p /></Actions>
+  </Message>
+  <Message number="230" eDefine="SYS_ERR_ARL_UNHANDUNKW">
+    <Title>Execution error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Unhandled <p />non-fatal runtime error <p /></Description>
+    <Actions>A non-fatal runtime error has occurred <p />but was not handled by any ERROR <p />clause.</Actions>
+  </Message>
+  <Message number="241" eDefine="SYS_ERR_ARL_ILLDIM">
+    <Title>Value error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Array dimension <p />number <arg format="%G" ordinal="2" /> out of range (1-<arg format="%i" ordinal="3" />) <p /></Description>
+    <Actions>The value of the 'DimNo' parameter of <p />the 'Dim' function must be an integer <p />value in the specified range. </Actions>
+  </Message>
+  <Message number="242" eDefine="SYS_ERR_ARL_NOTARR">
+    <Title>Type error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Data is not an array </Description>
+    <Actions>The 'DatObj' parameter of the 'Dim' function must be an array. </Actions>
+  </Message>
+  <Message number="243" eDefine="SYS_ERR_ARL_UNKINO">
+    <Title>Value error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Unknown interrupt <p />number <p /></Description>
+    <Actions>Check that the specified interrupt <p />variable has been initialized by <p />CONNECT, and that the interrupt has been <p />defined using the ISignalDI or other <p />interrupt definition instruction. </Actions>
+  </Message>
+  <Message number="244" eDefine="SYS_ERR_ARL_NONVAL">
+    <Title>Value error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: <p />Object <arg format="%.16s" ordinal="2" /> is of non-value type <p /></Description>
+    <Actions>Use expression or data object of value or semivalue type. </Actions>
+  </Message>
+  <Message number="245" eDefine="SYS_ERR_ARL_NOTMATCH">
+    <Title>Parameter error</Title>
+    <Description>Parameters in <arg format="%.16s" ordinal="1" /><p />and <arg format="%.16s" ordinal="2" /> is not <p />matching (late binding) <p /></Description>
+    <Actions>Make sure that all procedures that are <p /> called from the same late binding node <p />have matching parameters. I.e. they <p />should be matching concerning base type, <p />mode and required/optional parameters. </Actions>
+  </Message>
+  <Message number="246" eDefine="SYS_ERR_ARL_INOISSAFE">
+    <Title>Cannot Deactivate Safe Interrupt</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />It is not possible to deactivate a Safe Interrupt with the instruction ISleep.<p />Program ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="251" eDefine="SYS_ERR_ARL_AMBSYMNAM">
+    <Title>Name error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Ambiguous symbol <p />name <arg format="%.16s" ordinal="2" /><p /></Description>
+    <Actions>Installed objects must have names that <p />are unique. Rename the object or change <p />the conflicting name. </Actions>
+  </Message>
+  <Message number="252" eDefine="SYS_ERR_ARL_ERRPERSDB">
+    <Title>Limit error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Error <arg format="%i" ordinal="2" /> when <p />creating sdb entry for <arg format="%.16s" ordinal="3" /><p /></Description>
+    <Actions>An error occurred when the persistent <p />was to be inserted into the shared <p />database. Probably the database is full. </Actions>
+  </Message>
+  <Message number="253" eDefine="SYS_ERR_ARL_ILLALIOFALI">
+    <Title>Type definition error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Alias <p /><arg format="%.16s" ordinal="2" /> of alias <p /><arg format="%.16s" ordinal="3" /> not allowed <p /></Description>
+    <Actions>It is not possible to define an alias <p />type equal to another alias type. <p />Instead, define two alias types equal to <p />the same atomic or record type. </Actions>
+  </Message>
+  <Message number="254" eDefine="SYS_ERR_ARL_ILLANYDIM">
+    <Title>Symbol definition error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: 'ANYTYPE#' <p />parameter <arg format="%.16s" ordinal="2" /> cannot be <p />dimensioned <p /></Description>
+    <Actions>Remove the dimension specification. <p />'ANYTYPE#' includes array types. </Actions>
+  </Message>
+  <Message number="255" eDefine="SYS_ERR_ARL_ILLANYTYP">
+    <Title>Symbol definition error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: 'ANYTYPE#' only <p />allowed for parameter (not for <p /><arg format="%.16s" ordinal="2" />) <p /></Description>
+    <Actions>Use another type.</Actions>
+  </Message>
+  <Message number="256" eDefine="SYS_ERR_ARL_ILLFIRSTALT">
+    <Title>Parameter error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: 'alt' must not be <p />set for first optional parameter <p /><arg format="%.16s" ordinal="2" /> in alternatives list <p /></Description>
+    <Actions>Make sure that only the second and <p />following in each list of excluding <p />optional parameters are marked as <p />alternatives. </Actions>
+  </Message>
+  <Message number="257" eDefine="SYS_ERR_ARL_ILLREFDIM">
+    <Title>Parameter error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: REF mode <p />parameter <arg format="%.16s" ordinal="2" /> cannot be <p />dimensioned <p /></Description>
+    <Actions>Remove the array dimension <p />specification, or change the mode of the <p />parameter. </Actions>
+  </Message>
+</Domain>

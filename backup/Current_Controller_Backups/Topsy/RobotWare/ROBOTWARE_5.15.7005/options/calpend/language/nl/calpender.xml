@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Resource Name="CALPEND" Language="nl">
+  <Text Name="100">
+    <Value>Fout bij lezen van apparaat</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="101">
+    <Value>Sensor A onjuist aangesloten</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="102">
+    <Value>Verkeerd adres voor sensor A</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="103">
+    <Value>Sensor B onjuist aangesloten</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="104">
+    <Value>Verkeerd adres voor sensor B</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="105">
+    <Value>Geen contact met eenheid</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="106">
+    <Value>Onverwachte fout!</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="107">
+    <Value>Onjuist COM2-instelling.</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="108">
+    <Value>Timeout! Er is geen streepjescode gescand.</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="109">
+    <Value>Fout bij lezen streepjescode, bezig met afbreken.</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="110">
+    <Value>Fout geretourneerd door functie</Value>
+    <Comment>
+    </Comment>
+  </Text>
+</Resource>

@@ -1,0 +1,566 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="HW" domainNo="3" lang="zh" elogTextVersion="1.0" min="4201" max="7078">
+  <Message number="4201" eDefine="SYS_ERR_HW_DRIVE_NOT_CONFIGURED">
+    <Title>未配置已连接的驱动单元</Title>
+    <Description>       驱动模块 <arg format="%d" ordinal="1" /> 中驱动单元位置为 <arg format="%d" ordinal="2" /> 的驱动单元已连接，但未在配置中使用。
+    </Description>
+    <Consequences>可以进行操作，但将不会使用额外的驱动单元。</Consequences>
+    <Causes>配置中未使用驱动单元。</Causes>
+    <Actions>       1) 删除不需要的额外驱动单元。<p />2) 重新安装驱动模块键支持额外驱动单元的系统。
+    </Actions>
+  </Message>
+  <Message number="4202" eDefine="SYS_ERR_HW_DRIVE_LOST_COMMUNICATION_ERROR">
+    <Title>与驱动单元的通信中断</Title>
+    <Description>       在驱动模块 <arg format="%d" ordinal="1" /> 中，轴计算机与单元位置为 <arg format="%d" ordinal="2" /> 的驱动单元的通信已中断。
+    </Description>
+    <Consequences>纠正该错误之前无法进行任何操作。系统进入零转矩的电机关闭摂状态。</Consequences>
+    <Causes>该驱动单元和轴计算机之间存在通信问题。</Causes>
+    <Actions>       1) 检查所有电缆是否已正确连接。<p />2) 检查该驱动单元是否拥有逻辑电源。<p />3) 检查/更换以太网电缆。<p />4) 检查其他硬件事件日志消息。<p />5) 检查事件日志中的电源单元错误消息。<p />6) 检查电源单元与驱动单元之间的接线。<p />7) 检查电源单元的 24V 输出。 
+    </Actions>
+  </Message>
+  <Message number="4203" eDefine="SYS_ERR_HW_MOTOR_CURRENT_OVERLOAD_ERROR">
+    <Title>电机的电流太大</Title>
+    <Description>
+电机的电流对于关节 <arg format="%s" ordinal="2" /> 而言太大，该关节连接到了驱动装置中装置位置 <arg format="%d" ordinal="3" /> 和节点 <arg format="%d" ordinal="4" /> 的驱动模块 <arg format="%d" ordinal="1" /> 。
+    </Description>
+    <Consequences>纠正故障之前将无法进行任何操作。系统将转到“电机关闭”状态。</Consequences>
+    <Causes>1) 电机配置不正确。<p />2) 轴的载荷可能太大或者电机可能已失速（可能因碰撞）。<p />3) 电机对于驱动装置而言太小。<p />4) 电机相之间出现短路或接地。</Causes>
+    <Actions>1) 检查电机配置是否正确。<p />2) 检查机器人是否未发生碰撞。<p />3) 如果可能，降低用户程序的速度。<p />4) 检查轴载荷对于电机而言是否不太大。<p />5) 验证最大电机电流与驱动装置的最大电流相比是否不太小。<p />6) 通过分别测量电机电缆和电机的电阻来对其检查。测量前先断开连接。</Actions>
+  </Message>
+  <Message number="4251" eDefine="SYS_ERR_HW_REC_MAINS_PHASE_MISSING_WARNING">
+    <Title>输入电源的相位缺失</Title>
+    <Description>
+在驱动模块 <arg format="%d" ordinal="1" /> 中，位于驱动单元位置 <arg format="%d" ordinal="2" /> 的整流器单元检测到某相的功率丢失。
+    </Description>
+    <Consequences>系统可能因直流链路电压过低而停止。</Consequences>
+    <Causes>1) 输入电源某相的电压丢失。<p />2) 线路或内部三相组件存在某种故障。<p />3) 整流器单元有问题。</Causes>
+    <Actions>
+1) 检查机柜输入电源的所有输入相。 <p />2) 检查内部的所有三相组件（主开关、电源滤波器、保险丝、接触器）和驱动模块中的线路。
+    </Actions>
+  </Message>
+  <Message number="4252" eDefine="SYS_ERR_HW_REC_NO_INCOMMING_MAINS_ERROR">
+    <Title>输入电源缺失</Title>
+    <Description>
+在驱动模块 <arg format="%d" ordinal="1" /> 中，位于驱动单元位置 <arg format="%d" ordinal="2" /> 的整流器单元检测到电源电压丢失。
+    </Description>
+    <Consequences>除非纠正故障，否则无法进行任何操作。系统转入“电机关闭”状态。</Consequences>
+    <Causes>1) 输入电源的电压丢失。<p />2) 线路或内部三相组件存在某种故障。<p />3) 整流器单元有问题。</Causes>
+    <Actions>
+1) 检查输入电源的电压。<p />2) 检查内部的所有三相组件（主开关、电源滤波器、保险丝、接触器）和驱动模块中的线路。 <p /></Actions>
+  </Message>
+  <Message number="4255" eDefine="SYS_ERR_HW_REC_TEMP_ERROR">
+    <Title>整流器温度错误</Title>
+    <Description>
+在驱动模块 <arg format="%d" ordinal="1" /> 中，位于驱动单元位置 <arg format="%d" ordinal="2" /> 的整流器单元达到过高的温度水平。
+    </Description>
+    <Consequences>除非整流器冷却下来，否则无法进行任何操作。系统转入“电机关闭”状态。</Consequences>
+    <Causes>1) 散热风扇可能有问题，或者可能气流不畅。<p />2) 环境温度可能过高。<p />3) 系统运行期间可能长时间处于转矩过高状态。</Causes>
+    <Actions>
+1) 验证风扇是否在运行以及气流是否未受阻。<p />2) 验证环境温度是否未超过机柜的额定温度值。<p />3) 如果可能，请重新编写用户程序，以便减少硬加速和硬减速量。<p />4) 减少由重力或外力产生的静态转矩。
+    </Actions>
+  </Message>
+  <Message number="4256" eDefine="SYS_ERR_HW_REC_TEMP_WARNING">
+    <Title>整流器温度警告</Title>
+    <Description>
+在驱动模块 <arg format="%d" ordinal="1" /> 中，位于驱动单元位置 <arg format="%d" ordinal="2" /> 的整流器单元即将达到过高的温度水平。
+    </Description>
+    <Consequences>虽可以继续操作，但由于相对于所允许的最高温度的裕度太小，因此将无法保持长时间操作。</Consequences>
+    <Causes>1) 散热风扇可能有问题，或者可能气流不畅。<p />2) 环境温度可能过高。<p />3) 系统运行期间可能长时间处于转矩过高状态。</Causes>
+    <Actions>
+1) 验证风扇是否在运行以及气流是否未受阻。<p />2) 验证环境温度是否未超过机柜的额定温度值。<p />3) 如果可能，请重新编写用户程序，以便减少硬加速和硬减速量。<p />4) 减少由重力或外力产生的静态转矩。
+    </Actions>
+  </Message>
+  <Message number="4257" eDefine="SYS_ERR_HW_REC_BLEEDER_OPEN_ERROR">
+    <Title>泄流电阻电路开路</Title>
+    <Description>
+在驱动模块 <arg format="%d" ordinal="1" /> 中，连接至位于驱动单元位置 <arg format="%d" ordinal="2" /> 的整流器单元的泄流电阻的阻值过大（开路）。
+    </Description>
+    <Consequences>除非纠正故障，否则无法进行任何操作。系统转入“电机关闭”状态。<p /><p />危险高压：系统断电时，直流链路可能不会被放电。<p /></Consequences>
+    <Causes>这可能是泄流电阻或其电缆存在故障造成的。</Causes>
+    <Actions>
+可能存在危险高压。<p />1) 确保泄流电阻电缆正确连接至整流器单元。<p />2) 断开泄流电阻，然后检查电缆并测量泄流电阻值。预期电阻应约为 <arg format="%d" ordinal="3" /> 欧姆。
+    </Actions>
+  </Message>
+  <Message number="4258" eDefine="SYS_ERR_HW_REC_BLEEDER_SHORT_ERROR">
+    <Title>泄流电阻电路短路</Title>
+    <Description>
+在驱动模块 <arg format="%d" ordinal="1" /> 中，连接至位于驱动单元位置 <arg format="%d" ordinal="2" /> 的整流器单元的泄流电阻给出了短路指示。
+    </Description>
+    <Consequences>除非纠正故障，否则无法进行任何操作。系统转入“电机关闭”状态。<p /><p />危险高压：系统断电时，直流链路可能不会被放电。<p /></Consequences>
+    <Causes>这可能是泄流电阻或其电缆存在故障造成的。</Causes>
+    <Actions>
+可能存在危险高压。<p />1) 确保泄流电阻电缆正确连接至整流器单元。<p />2) 断开泄流电阻，然后检查电缆并测量泄流电阻值。预期电阻应约为 <arg format="%d" ordinal="3" /> 欧姆。<p />3) 检查泄流电路是否发生对地短路。
+    </Actions>
+  </Message>
+  <Message number="4261" eDefine="SYS_ERR_HW_REC_INRUSH_RELAY_ERROR">
+    <Title>整流器启动错误</Title>
+    <Description>
+在驱动模块 <arg format="%d" ordinal="1" /> 中，驱动单元位置 <arg format="%d" ordinal="2" /> 处的整流器单元中的涌入控制继电器给出了错误指示。
+    </Description>
+    <Consequences>除非纠正故障，否则无法进行任何操作。系统转入“电机关闭”状态。</Consequences>
+    <Causes>这可能是整流器涌入控制继电器发生故障造成的。</Causes>
+    <Actions>重新启动系统并重试。如果问题仍然存在，请更换该单元。</Actions>
+  </Message>
+  <Message number="4262" eDefine="SYS_ERR_HW_REC_AC_FREQUENCY_WARNING">
+    <Title>输入电源频率警告</Title>
+    <Description>
+在驱动模块 <arg format="%d" ordinal="1" /> 中，输入电源电压的频率有误。位于驱动单元位置 <arg format="%d" ordinal="2" /> 的整流器单元报告了该问题。
+    </Description>
+    <Consequences>系统可能因直流链路电压过低而停止。</Consequences>
+    <Causes>1) 输入电源的频率不符合规格。<p />2) 电机相之间或同大地之间发生短路。</Causes>
+    <Actions>1) 检查并调整输入电源的频率。<p />2) 通过分别测量电机及其电缆的电阻来执行检查。测量前先断开连接。</Actions>
+  </Message>
+  <Message number="4263" eDefine="SYS_ERR_HW_REC_INRUSH_RESISTOR_OPEN_ERROR">
+    <Title>整流器启动错误</Title>
+    <Description>
+在驱动模块 <arg format="%d" ordinal="1" /> 中，驱动单元位置 <arg format="%d" ordinal="2" /> 处的整流器单元中的 DC-link 电压过低。
+    </Description>
+    <Consequences>在纠正故障前无法进行任何操作。系统将转到“电机关闭”状态。</Consequences>
+    <Causes>1) 整流器输入的 AC 电压级别过低。<p />2) 这可能是整流器涌流控制电阻发生故障造成的。<p />3) DC-link 上出现短路。</Causes>
+    <Actions>1) 重新启动系统并重试。<p />2) 检查进线电源电压。<p />3) 如果新安装的系统带有电源变压器 - 检查变压器的电压选择。<p />4) 如果驱动单元具有附加轴 - 检查 DC-link 的接线。<p />5) 如果问题依然存在，请更换单元。</Actions>
+  </Message>
+  <Message number="4264" eDefine="SYS_ERR_HW_REC_INRUSH_ACTIVE_ERROR">
+    <Title>整流器涌入限制功能在“电机打开”状态下被激活</Title>
+    <Description>
+在驱动模块 <arg format="%d" ordinal="1" /> 中，驱动单元位置 <arg format="%d" ordinal="2" /> 处的整流器单元中的涌入控制电阻错误闭合。
+    </Description>
+    <Consequences>系统转入“电机关闭”状态以保护硬件。</Consequences>
+    <Causes>当直流链路电压变得过低且电源的所有相均缺失时，会发生该错误。 </Causes>
+    <Actions>
+1) 检查硬件事件日志中是否有其他错误。<p />2) 检查输入电源的电压。<p />3) 检查是否已使用变压器上的跳线选择了正确的电压（可选）。<p />4) 检查内部的所有三相组件（主开关、电源滤波器、保险丝、接触器）和驱动模块中的线路。
+    </Actions>
+  </Message>
+  <Message number="4265" eDefine="SYS_ERR_HW_REC_DC_LINK_SHORT_CIRCUIT_ERROR">
+    <Title>直流链路短路错误 </Title>
+    <Description>
+在驱动模块 <arg format="%d" ordinal="1" /> 中，位于驱动单元位置 <arg format="%d" ordinal="2" /> 的整流器单元中的直流链路发生短路。
+    </Description>
+    <Consequences>除非纠正故障，否则无法进行任何操作。系统转入“电机关闭”状态。</Consequences>
+    <Causes>
+1) 附加驱动单元的直流链路电缆损坏或连接不当。<p />2) 驱动单元或整流器单元发生内部错误。</Causes>
+    <Actions>检查直流链路电缆和连接器。</Actions>
+  </Message>
+  <Message number="4266" eDefine="SYS_ERR_HW_REC_INRUSH_AND_BLEEDER_ACTIVE_ERROR">
+    <Title>整流器涌入限制功能和泄流电阻处于活动状态</Title>
+    <Description>
+在驱动模块 <arg format="%d" ordinal="1" /> 中，当整流器单元位于单元位置 <arg format="%d" ordinal="2" /> 时，涌入控制电阻在泄流电阻处于活动状态的同时被激活。<p />涌入控制电阻位于整流器单元中。<p />泄流电阻连接至整流器单元或带有嵌入式整流器的驱动单元。
+    </Description>
+    <Consequences>系统转入“电机关闭”状态以保护硬件。</Consequences>
+    <Causes>当输入电源电压对整流器而言过高时，最有可能发生该问题。</Causes>
+    <Actions>1) 检查输入电源电压是否符合驱动单元的规格。<p />2) 检查是否已使用变压器上的跳线选择了正确的电压（可选）。</Actions>
+  </Message>
+  <Message number="4267" eDefine="SYS_ERR_HW_REC_TOO_MANY_RECTIFIERS_CONNECTED">
+    <Title>连接了太多的整流器</Title>
+    <Description>
+			系统在驱动模块 <arg format="%d" ordinal="1" /> 中检测到的整流器数目超过了其处理能力。当检测到位于单元位置 <arg format="%d" ordinal="2" /> 的驱动单元时，已达到极限。
+		</Description>
+    <Consequences>除非纠正故障，否则无法进行任何操作。系统转入“系统故障”状态。</Consequences>
+    <Causes>
+			1) 连接了太多带有整流器的驱动单元。 <p />2) 
+		</Causes>
+    <Actions>
+			1) 验证连接到驱动单元通信线路的驱动单元的类型是否适当。<p />2) 断开未使用的驱动单元。
+		</Actions>
+  </Message>
+  <Message number="4268" eDefine="SYS_ERR_HW_REC_RECTIFIER_CHARGING_ERROR">
+    <Title>整流器充电错误</Title>
+    <Description>
+在驱动模块 <arg format="%d" ordinal="1" /> 中，驱动单元位置 <arg format="%d" ordinal="2" /> 处的整流器单元中的 DC-link 电压过低。
+    </Description>
+    <Consequences>在纠正故障前无法进行任何操作。系统将转到“电机关闭”状态。</Consequences>
+    <Causes>1) 整流器输入的 AC 电压级别过低。<p />2) 这可能是整流器泄流装置发生故障造成的。<p />3) 泄流电阻或其接线出现故障。<p />4) DC-link 上发生短路。
+	</Causes>
+    <Actions>1) 重新启动系统并重试。<p />2) 检查进线电源电压。<p />3) 如果新安装的系统带有电源变压器 - 检查变压器的电压选择。<p />4) 检查泄流电阻及其接线。<p />5) 如果问题依然存在，请更换单元。</Actions>
+  </Message>
+  <Message number="4300" eDefine="SYS_ERR_HW_INV_UNKNOWN_DSQC_NUMBER">
+    <Title>未知的驱动单元类型</Title>
+    <Description>       在驱动模块 <arg format="%d" ordinal="1" /> 中，单元位置为 <arg format="%d" ordinal="2" /> 的驱动单元拥有未知的硬件标识 <arg format="%s" ordinal="3" />。
+    </Description>
+    <Consequences>纠正该错误之前无法进行任何操作。系统进入“系统故障”状态。</Consequences>
+    <Causes>驱动单元不受支持或发生故障。</Causes>
+    <Actions>           1) 检验驱动单元是否受 RobotWare 版本的支持。如果需要，升级 RobotWare。<p />2) 更换驱动单元。
+      </Actions>
+  </Message>
+  <Message number="4303" eDefine="SYS_ERR_HW_INV_IQ_REGULATION_WARNING">
+    <Title>电机电流警告</Title>
+    <Description>
+对于关节 <arg format="%s" ordinal="2" />，电流控制器检测到了电机的过大转矩电流偏差。将关节连接到驱动装置中装置位置 <arg format="%d" ordinal="3" /> 和节点 <arg format="%d" ordinal="4" /> 的驱动模块 <arg format="%d" ordinal="1" /> 。
+    </Description>
+    <Consequences>将可以进行操作，但系统接近于出现停止错误。</Consequences>
+    <Causes>1) 配置文件中的电机数据可能有误。<p />2) 电机电缆连接不当或已损坏。<p />3) 电机电缆的相之间出现短路或相接地。<p />4) 直流母线电压可能过低。<p />5) 传入主电压不符合规格。</Causes>
+    <Actions>
+1) 验证配置文件中的电机数据对于此关节是否正确。检查配置文件的方法将在《故障排除手册》中详述。<p />2) 验证电机电缆未受损或连接不良。<p />3) 验证电机电缆内部未出现短路或接地。<p />4) 验证事件日志中未显示直流母线错误。<p />5) 验证传入主电压符合规格。
+    </Actions>
+  </Message>
+  <Message number="4304" eDefine="SYS_ERR_HW_INV_ID_REGULATION_WARNING">
+    <Title>电机电流警告</Title>
+    <Description>
+对于关节 <arg format="%s" ordinal="2" />，电流控制器检测到了电机的过大电流偏差。将关节连接到驱动装置中装置位置 <arg format="%d" ordinal="3" /> 和节点 <arg format="%d" ordinal="4" /> 的驱动模块 <arg format="%d" ordinal="1" /> 。
+    </Description>
+    <Consequences>将可以进行操作，但系统接近于出现停止错误。</Consequences>
+    <Causes>1) 配置文件中的电机数据可能有误。<p />2) 电机电缆连接不当或已损坏。<p />3) 电机电缆的相之间出现短路或相接地。<p />4) 直流母线电压可能过低。<p />5) 传入主电压不符合规格。</Causes>
+    <Actions>
+1) 验证配置文件中的电机数据对于此关节是否正确。检查配置文件的方法将在《故障排除手册》中详述。<p />2) 验证电机电缆未受损或连接不良。<p />3) 验证电机电缆内部未出现短路或接地。<p />4) 验证事件日志中未显示直流母线错误。<p />5) 验证传入主电压符合规格。
+    </Actions>
+  </Message>
+  <Message number="4306" eDefine="SYS_ERR_HW_INV_OVER_TEMP_ERROR">
+    <Title>驱动单元温度错误</Title>
+    <Description>       接点 <arg format="%s" ordinal="2" /> 的驱动单元已达到温度极限。接点已与单元位置为 <arg format="%d" ordinal="3" /> 的驱动单元和节点 <arg format="%d" ordinal="4" /> 连接至驱动模块 <arg format="%d" ordinal="1" /> 。
+    </Description>
+    <Consequences>纠正该错误之前无法进行任何操作。系统进入“电机关闭”状态。</Consequences>
+    <Causes>       1) 散热风扇出现故障，或气流受阻。<p />2) 冷却叶片已被灰尘覆盖，削弱了冷却效果。<p />3) 环境温度可能过高。<p />4) 接点运行期间长时间处于转矩过高状态。
+    </Causes>
+    <Actions>       1) 检验风扇是否正在运转以及气流是否受阻。<p />2) 清洁冷却叶片。<p />3) 请检验环境温度是否超过机柜的额定温度值。<p />4) 如果可能，请重写用户程序，减少紧急加速和紧急减速的次数。<p />5) 降低因重力或外力导致的静态转矩。 
+    </Actions>
+  </Message>
+  <Message number="4307" eDefine="SYS_ERR_HW_INV_OVER_TEMP_WARNING">
+    <Title>驱动单元温度警告</Title>
+    <Description>       接点 <arg format="%s" ordinal="2" /> 的驱动单元接近温度极限。接点已于单元位置为 <arg format="%d" ordinal="3" /> 的驱动单元和节点 <arg format="%d" ordinal="4" /> 连接至驱动模块 <arg format="%d" ordinal="1" /> 。
+    </Description>
+    <Consequences>可以继续，但与最大允许温度的差值太小而无法维持长期操作。</Consequences>
+    <Causes>       1) 散热风扇出现故障，或气流受阻。<p />2) 冷却叶片已被灰尘覆盖，削弱了冷却效果。<p />3) 环境温度可能过高。<p />4) 接点运行期间长时间处于转矩过高状态。
+    </Causes>
+    <Actions>       1) 检验风扇是否正在运转以及气流是否受阻。<p />2) 清洁冷却叶片。<p />3) 请检验环境温度是否超过机柜的额定温度值。<p />4) 如果可能，请重写用户程序，减少紧急加速和紧急减速的次数。<p />5) 降低因重力或外力导致的静态转矩。 
+    </Actions>
+  </Message>
+  <Message number="4308" eDefine="SYS_ERR_HW_INV_OVER_TEMP_CRITICAL_ERROR">
+    <Title>驱动单元严重温度错误</Title>
+    <Description>       接点 <arg format="%s" ordinal="2" /> 的驱动单元已达到严重温度极限。接点已于单元位置为 <arg format="%d" ordinal="3" /> 的驱动单元和节点 <arg format="%d" ordinal="4" /> 连接至驱动模块 <arg format="%d" ordinal="1" /> 。
+    </Description>
+    <Consequences>纠正该错误之前无法进行任何操作。系统进入零转矩的“电机关闭”状态。</Consequences>
+    <Causes>       1) 散热风扇出现故障，或气流受阻。<p />2) 冷却叶片已被灰尘覆盖，削弱了冷却效果。<p />3) 环境温度可能过高。<p />4) 接点运行期间长时间处于转矩过高状态。
+    </Causes>
+    <Actions>       1) 检验风扇是否正在运转以及气流是否受阻。<p />2) 清洁冷却叶片。<p />3) 请检验环境温度是否超过机柜的额定温度值。<p />4) 如果可能，请重写用户程序，减少紧急加速和紧急减速的次数。<p />5) 降低因重力或外力导致的静态转矩。 
+    </Actions>
+  </Message>
+  <Message number="4309" eDefine="SYS_ERR_HW_INV_OVER_CURRENT_ERROR">
+    <Title>驱动晶体管的电流太大</Title>
+    <Description>
+驱动装置晶体管的电流对于关节 <arg format="%s" ordinal="2" /> 太大。将关节连接到驱动装置中装置位置 <arg format="%d" ordinal="3" /> 和节点 <arg format="%d" ordinal="4" /> 的驱动模块 <arg format="%d" ordinal="1" /> 。
+    </Description>
+    <Consequences>纠正故障之前将无法进行任何操作。系统将转到“电机关闭”状态。</Consequences>
+    <Causes>
+1) 电机配置不正确。<p />2) 轴的载荷可能太大或者电机可能已失速（可能因碰撞）。<p />3) 电机相之间出现短路或接地。 </Causes>
+    <Actions>
+1) 检查电机配置是否正确。<p />2) 检查机器人是否未发生碰撞。<p />3) 如果可能，降低用户程序的速度。<p />4) 检查轴载荷对于驱动装置而言是否不太大。<p />5) 通过分别测量电机电缆和电机的电阻来对其检查。测量前先断开连接。
+    </Actions>
+  </Message>
+  <Message number="4311" eDefine="SYS_ERR_HW_INV_VOLTAGE_SAT_WARNING">
+    <Title>驱动变流器饱和警告</Title>
+    <Description>
+关节 <arg format="%s" ordinal="2" /> 的驱动单元已达到最大输出电压。关节连接到驱动模块 <arg format="%d" ordinal="1" /> 中的驱动单元，单元位置为 <arg format="%d" ordinal="3" />，节点为 <arg format="%d" ordinal="4" />。
+    </Description>
+    <Consequences>虽可以工作，但系统很有可能发生停止错误。</Consequences>
+    <Causes>
+1) 电机未正确连接到驱动单元。<p />2) 配置中的电机数据不正确。<p />3) 直流链路电压过低。<p />4) 电机的相与相之间或同大地之间发生短路。
+    </Causes>
+    <Actions>
+1) 检查电机电缆和连接器。<p />2) 检查电机参数配置。<p />3) 检查是否有其他硬件事件日志消息。<p />4) 检查整流器单元的进线电源电压，调整电源容差的最小值。<p />5) 分别测量电机及其电缆的电阻来执行检查。测量前先断开连接。 </Actions>
+  </Message>
+  <Message number="4312" eDefine="SYS_ERR_HW_INV_UNIT_NOT_FOUND">
+    <Title>缺失驱动装置</Title>
+    <Description>
+对于关节 <arg format="%s" ordinal="1" />，系统无法找到配置的驱动装置。为驱动装置中装置位置 <arg format="%d" ordinal="3" /> 的驱动模块 <arg format="%d" ordinal="2" /> 配置关节。
+    </Description>
+    <Consequences>系统将转到“系统故障”状态。</Consequences>
+    <Causes>
+配置了关节但未找到驱动装置。
+    </Causes>
+    <Actions>
+1) 验证驱动模块中包含配置的关节的驱动装置。<p />2) 验证驱动装置位置的配置正确无误。<p />3) 验证驱动装置之间的电缆正确插入了正确的连接器位置。<p />4) 如果电缆连接正确，则可能已受损，应予以更换。<p />5) 在事件日志中检查电源装置的错误消息。<p />6) 检查电源装置与驱动装置之间的布线情况。<p />7) 检查电源装置的 24V 输出。
+    </Actions>
+  </Message>
+  <Message number="4313" eDefine="SYS_ERR_HW_INV_WRONG_DSQC_NUMBER">
+    <Title>错误的驱动单元类型</Title>
+    <Description>
+在驱动模块 <arg format="%d" ordinal="1" /> 中，单元位置为 <arg format="%d" ordinal="2" /> 的驱动单元的硬件标识与配置中指定的标识不同。安装的驱动单元硬件标识为 <arg format="%s" ordinal="3" />，配置的标识为 <arg format="%s" ordinal="4" />。
+    </Description>
+    <Consequences>在纠正故障前无法进行任何操作。系统将转到“系统故障”状态。</Consequences>
+    <Causes>驱动单元类型与安装键中指定的驱动单元类型不匹配。</Causes>
+    <Actions>
+1) 检验驱动单元位置是否正确，即以太网电缆是否已正确连接。<p />2) 检验驱动模块键是否与安装的硬件匹配。<p />3) 将驱动单元替换为驱动模块键中指定的驱动单元。
+    </Actions>
+  </Message>
+  <Message number="4314" eDefine="SYS_ERR_HW_INV_NODE_NOT_FOUND">
+    <Title>驱动单元节点缺失</Title>
+    <Description>         对于接点 <arg format="%s" ordinal="1" />，驱动单元不支持配置的接点编号。已为驱动模块 <arg format="%d" ordinal="2" /> 与单元位置为 <arg format="%d" ordinal="3" /> 的驱动单元和节点 <arg format="%d" ordinal="4" /> 配置接点。
+    </Description>
+    <Consequences>系统进入“系统故障”状态。</Consequences>
+    <Causes>         对于配置的驱动单元类型，配置的驱动单元节点不受支持。
+    </Causes>
+    <Actions>         检查配置中的驱动单元节点编号。
+    </Actions>
+  </Message>
+  <Message number="4316" eDefine="SYS_ERR_HW_INV_IQ_REGULATION_ERROR">
+    <Title>电机电流错误</Title>
+    <Description>对于关节 <arg format="%s" ordinal="2" />，电流控制器检测到电机的转矩电流偏差过大。关节连接到驱动模块 <arg format="%d" ordinal="1" /> 中的驱动单元，单元位置为 <arg format="%d" ordinal="3" />，节点为 <arg format="%d" ordinal="4" />。 </Description>
+    <Consequences>系统将转到“电机关闭”状态。</Consequences>
+    <Causes>1) 配置文件中的电机数据可能有误。<p />2) 电机电缆连接不当或已损坏。<p />3) 电机电缆的相与相之间或相与大地之间出现短路。<p />4) 直流链路电压可能过低。<p />5) 进线电源电压不符合规格。 </Causes>
+    <Actions>
+1) 验证配置文件中的电机数据对于此关节是否正确。《故障排除手册》详述了如何检查配置文件。<p />2) 验证电机电缆未受损或连接不良。<p />3) 验证电机电缆内部未出现短路或接地。<p />4) 验证事件日志中未显示直流链路错误。<p />5) 验证进线电源电压符合规格。更改电源容差最小值，以便反映实际的电源电压。 
+  </Actions>
+  </Message>
+  <Message number="4317" eDefine="SYS_ERR_HW_INV_ID_REGULATION_ERROR">
+    <Title>电机电流错误</Title>
+    <Description>对于关节 <arg format="%s" ordinal="2" />，电流控制器检测到电机的电流偏差过大。关节连接到驱动模块 <arg format="%d" ordinal="1" /> 中的驱动单元，单元位置为 <arg format="%d" ordinal="3" />，节点为 <arg format="%d" ordinal="4" />。
+   </Description>
+    <Consequences>系统将转到“电机关闭”状态。</Consequences>
+    <Causes>1) 配置文件中的电机数据可能有误。<p />2) 电机电缆连接不当或已损坏。<p />3) 电机电缆的相与相之间或相与大地之间出现短路。<p />4) 直流链路电压可能过低。<p />5) 进线电源电压不符合规格。 </Causes>
+    <Actions>1) 验证配置文件中的电机数据对于此关节是否正确。《故障排除手册》详述了如何检查配置文件。<p />2) 验证电机电缆未受损或连接不良。<p />3) 验证电机电缆内部未出现短路或接地。<p />4) 验证事件日志中未显示直流链路错误。<p />5) 验证进线电源电压符合规格。更改电源容差最小值，以便反映实际的电源电压。<p /></Actions>
+  </Message>
+  <Message number="4318" eDefine="SYS_ERR_HW_INV_VOLTAGE_SAT_ERROR">
+    <Title>驱动变流器饱和错误</Title>
+    <Description>接点 <arg format="%s" ordinal="2" /> 的驱动单元已达到最大输出电压。接点被连接到驱动单元 <arg format="%d" ordinal="1" /> ，其中，驱动单元位于单元位置 <arg format="%d" ordinal="3" /> 和节点 <arg format="%d" ordinal="4" /> 处。 </Description>
+    <Consequences>系统转入“电机关闭”状态 </Consequences>
+    <Causes>1) 电机未正确连接到驱动单元。<p />2) 配置中的电机数据不正确。<p />3) 直流链路电压过低。<p />4) 电机相之间或同大地之间发生短路。 </Causes>
+    <Actions>1) 检查电机电缆和连接器。<p />2) 检查电机参数配置。<p />3) 检查其他硬件事件日志消息。<p />4) 检查整流器单元输入电源的电压。<p />5) 通过分别测量电机及其电缆的电阻来执行检查。测量前先断开连接。</Actions>
+  </Message>
+  <Message number="4319" eDefine="SYS_ERR_HW_INV_FAILURE">
+    <Title>驱动装置的关键性错误</Title>
+    <Description>
+关节 <arg format="%s" ordinal="2" /> 的驱动装置给出了未加详细说明的错误，但可能是由于温度过高或短路。将关节连接到驱动装置中装置位置 <arg format="%d" ordinal="3" /> 和节点 <arg format="%d" ordinal="4" /> 的驱动模块 <arg format="%d" ordinal="1" /> 。
+      </Description>
+    <Consequences>纠正故障之前将无法进行任何操作。系统将转到“电机关闭”状态，转矩为零。</Consequences>
+    <Causes>
+1) 冷却风扇可能有故障，或者可能气流不畅。<p />2) 冷却翼片上覆盖有灰尘，会降低冷却效果。<p />3) 环境温度可能太高。<p />4) 关节可能在过高转矩的情况下延时运行了一段时间。<p />5) 电缆或连接器的相之间出现短路或接地。<p />6) 电机的相之间出现短路或接地。
+      </Causes>
+    <Actions>
+1) 验证风扇正在运行以及气流未受阻。<p />2) 清洁冷却翼片。<p />3) 验证环境温度未超过机柜的温度额定值。<p />4) 如果可能，重新编写用户程序来减少硬加速量和硬减速量。<p />5) 减少由重力或外部力产生的静态转矩。<p />6) 检查/更换电缆和连接器。<p />7) 检查/更换电机。
+      </Actions>
+  </Message>
+  <Message number="4320" eDefine="SYS_ERR_HW_INV_TOO_MANY_DRIVE_NODES_CONNECTED">
+    <Title>连接了太多的驱动节点</Title>
+    <Description>系统在驱动模块 <arg format="%d" ordinal="1" /> 中检测到的驱动节点数目超过了其处理能力。当检测到位于单元位置 <arg format="%d" ordinal="2" /> 处的驱动单元时，发生错误。</Description>
+    <Consequences>在纠正故障前无法进行任何操作。系统将转到“系统故障”状态。</Consequences>
+    <Causes>1) 连接到驱动单元通信链路的驱动单元过多。<p />2) 已连接的驱动单元可能类型错误，并且可能装配了过多的驱动节点。</Causes>
+    <Actions>1) 验证连接到驱动单元通信链路的驱动单元的类型是否适当。<p />2) 断开未使用的驱动单元的连接。</Actions>
+  </Message>
+  <Message number="4321" eDefine="SYS_ERR_HW_INV_TOO_MANY_USING_SAME_EXCITATION">
+    <Title>驱动单元配置错误</Title>
+    <Description> 在驱动模块 <arg format="%d" ordinal="1" /> 中，位于位置 <arg format="%d" ordinal="2" /> 处的驱动单元发生配置错误，原因是驱动单元与测量系统之间不匹配。驱动单元只能支持具有相同测量激励的 <arg format="%d" ordinal="4" /> 关节。在向系统添加关节 <arg format="%s" ordinal="3" /> 时发生错误。 <p /><p /></Description>
+    <Consequences>在纠正故障前无法进行任何操作。系统将转到“系统故障”状态。</Consequences>
+    <Causes>过多的关节都在使用相同的测量激励，并且都在使用相同的驱动单元。 </Causes>
+    <Actions>
+		1) 通过重新路由硬件和配置中的关节测量节点连接，将关节 <arg format="%s" ordinal="3" /> 或另一个具有相同节点激励的关节移动至其他激励（EXC1 - EXC2）。<p />2) 重新启动系统。
+	</Actions>
+  </Message>
+  <Message number="4322" eDefine="SYS_ERR_HW_INV_WRONG_RECTIFIER_CONFIG_ERROR">
+    <Title>驱动单元配置错误</Title>
+    <Description>
+在驱动模块 <arg format="%d" ordinal="1" /> 中，位于位置 <arg format="%d" ordinal="2" /> 处的驱动单元正在使用错误的整流器。 <p /><p /></Description>
+    <Consequences>在纠正故障前无法进行任何操作。系统将转到“系统故障”状态。</Consequences>
+    <Causes>驱动单元必须始终配置一个整流器，其单元位置要低于或等于变流器。已配置的整流器和驱动单元之间不得有任何其他整流器。</Causes>
+    <Actions>
+		1) 检查附加轴的配置文件是否为驱动系统 09 类型。<p />2) 更改附加轴配置中使用的整流器（dc_link）。<p />3) 删除安装在已配置的整流器与驱动单元之间的未使用的整流器。
+	</Actions>
+  </Message>
+  <Message number="4400" eDefine="SYS_ERR_HW_PU_DC_VOLTAGE_TOO_HIGH_ERROR">
+    <Title>DC 链路电压过高</Title>
+    <Description>       在驱动模块 <arg format="%d" ordinal="1" /> 中，单元位置为 <arg format="%d" ordinal="2" /> 的驱动单元拥有过高的 DC 链路电压。 
+    </Description>
+    <Consequences>纠正该错误之前无法进行任何操作。系统进入电机关闭摂状态。<p /><p />高压警告：系统断电时，DC 链路会非常缓慢的放电（大约 1 小时）。<p /></Consequences>
+    <Causes>1) 泄流电阻未连接或发生故障。<p />2) 用户程序可能包含太多操纵器轴减速。如果系统装有附加的轴，则更有可能发生这种故障。</Causes>
+    <Actions>       可能存在高压警告。<p />1) 请确保泄流电阻电缆已正确连接至整流器单元。<p />2) 断开泄流电阻，并检查电缆和测量泄流电阻值。预期的电阻值应约为 <arg format="%d" ordinal="3" /> ohm。<p />3) 重写用户程序，减少紧急减速的数量。
+    </Actions>
+  </Message>
+  <Message number="4401" eDefine="SYS_ERR_HW_PU_DC_TOO_LOW_WARNING">
+    <Title>直流链路电压过低警告</Title>
+    <Description>
+			在驱动模块 <arg format="%d" ordinal="1" /> 中，位于单元位置 <arg format="%d" ordinal="2" /> 处的驱动单元的直流链路电压接近下限。
+		</Description>
+    <Consequences>虽可以工作，但系统很有可能发生停止错误。</Consequences>
+    <Causes>整流器单元的进线电源电压不符合规格。</Causes>
+    <Actions>
+			1) 检查是否有其他有关电源电压问题的硬件事件日志消息。<p />2) 检查进线电源电压。更改电源容差最小值，以便电源电压位于指定的间隔之内。<p />3) 检查是否使用变压器上的跳线选择了正确的电压（可选）。<p />4) 检查驱动模块内部的所有三相组件（主开关、电源滤波器、保险丝和接触器）和线路。<p /></Actions>
+  </Message>
+  <Message number="4402" eDefine="SYS_ERR_HW_PU_DC_TOO_LOW_ERROR">
+    <Title>直流链路电压过低</Title>
+    <Description>
+在驱动模块 <arg format="%d" ordinal="1" /> 中，直流链路电压对于单元位置 <arg format="%d" ordinal="2" /> 处的驱动单元而言过低。
+    </Description>
+    <Consequences>在纠正故障前无法进行任何操作。系统将转到“电机关闭”状态。</Consequences>
+    <Causes>整流器单元的进线电源电压不符合规格。</Causes>
+    <Actions>
+1) 检查是否有其他有关电源电压问题的硬件事件日志消息。<p />2) 检查进线电源电压。更改电源容差最小值，以便电源电压位于指定的间隔之内。<p />3) 检查是否使用变压器上的跳线选择了正确的电压（可选）。<p />4) 检查驱动模块内部的所有三相组件（主开关、电源滤波器、保险丝和接触器）和线路。<p /></Actions>
+  </Message>
+  <Message number="4404" eDefine="SYS_ERR_HW_PU_DC_VOLTAGE_CRITICAL_TOO_HIGH_ERROR">
+    <Title>DC 链路电压严重过高</Title>
+    <Description>       在驱动模块 <arg format="%d" ordinal="1" /> 中，单元位置为 <arg format="%d" ordinal="2" /> 的驱动单元拥有严重过高的 DC 链路电压。
+    </Description>
+    <Consequences>纠正该错误之前无法进行任何操作。系统进入零转矩的“电机关闭”状态。<p /><p />高压警告：系统断电时，DC 链路会非常缓慢的放电（大约 1 小时）。<p /></Consequences>
+    <Causes>1) 泄流电阻未连接或发生故障。<p />2) 用户程序可能包含太多操纵器轴减速。如果系统装有附加轴，则更有可能发生这种故障。</Causes>
+    <Actions>       可能存在高压警告。<p />1) 请确保泄流电阻电缆已正确连接至整流器单元。<p />2) 断开泄流电阻，并检查电缆和测量泄流电阻值。预期的电阻值应约为 <arg format="%d" ordinal="3" /> ohm。<p />3) 重写用户程序，减少紧急减速的数量。
+    </Actions>
+  </Message>
+  <Message number="4405" eDefine="SYS_ERR_HW_PU_DC_VOLTAGE_WARNING">
+    <Title>DC 链路电压过高警告</Title>
+    <Description>       在驱动模块 <arg format="%d" ordinal="1" /> 中，单元位置为 <arg format="%d" ordinal="2" /> 的驱动单元拥有接近最大限制的 DC 链路电压。
+    </Description>
+    <Consequences>操作将可以进行，但系统将发生停止错误。<p /><p />高压警告：系统断电时，DC 链路会非常缓慢的放电（大约 1 小时）。<p /></Consequences>
+    <Causes>1) 泄流电阻未连接或发生故障。<p />2) 用户程序可能包含太多操纵器轴减速。如果系统装有附加轴，则更有可能发生这种故障。</Causes>
+    <Actions>       可能存在高压警告。<p />1) 请确保泄流电阻电缆已正确连接至整流器单元。<p />2) 断开泄流电阻，并检查电缆和测量泄流电阻值。预期的电阻值应约为 <arg format="%d" ordinal="3" /> ohm。<p />3) 重写用户程序，减少紧急减速的数量。
+    </Actions>
+  </Message>
+  <Message number="4406" eDefine="SYS_ERR_HW_PU_LOGIC_VOLTAGE_ERROR">
+    <Title>驱动装置电源错误</Title>
+    <Description>
+在驱动模块 <arg format="%d" ordinal="1" /> 中，装置位置 <arg format="%d" ordinal="2" /> 的驱动装置已检测到逻辑电源存在问题。
+    </Description>
+    <Consequences>纠正故障之前将无法进行任何操作。系统将转到“电机关闭”状态，转矩为零。</Consequences>
+    <Causes>
+驱动的 24V 逻辑电源暂时或经常丢失。</Causes>
+    <Actions>
+1) 在事件日志中检查电源装置的错误消息。<p />2) 检查电源装置与驱动装置之间的布线情况。<p />3) 检查电源装置的 24V 输出。
+    </Actions>
+  </Message>
+  <Message number="4407" eDefine="SYS_ERR_HW_PU_INTERNAL_ERROR">
+    <Title>驱动单元内部错误</Title>
+    <Description>在驱动模块 <arg format="%d" ordinal="1" /> 中，单元位置为 <arg format="%d" ordinal="2" /> 的驱动单元已指示发生了内部错误。</Description>
+    <Consequences>系统进入零转矩的“系统故障”状态。 </Consequences>
+    <Causes>驱动单元固件中发生了内部错误。</Causes>
+    <Actions>通过使用主电源开关来重新启动系统。</Actions>
+  </Message>
+  <Message number="4408" eDefine="SYS_ERR_HW_PU_EEPROM_ERROR">
+    <Title>驱动单元硬件数据错误</Title>
+    <Description>在驱动模块 <arg format="%d" ordinal="1" /> 中，单元位置为 <arg format="%d" ordinal="2" /> 的驱动单元中存储有已损坏的信息。</Description>
+    <Consequences>系统进入“系统故障”状态。 </Consequences>
+    <Causes>存储在驱动单元上的驱动单元信息的完整性检查已失败。</Causes>
+    <Actions>1) 通过使用主电源开关重新启动系统来重试。<p />2) 更换发生故障的驱动单元。</Actions>
+  </Message>
+  <Message number="4409" eDefine="SYS_ERR_HW_PU_STARTUP_ERROR">
+    <Title>驱动装置启动错误</Title>
+    <Description>系统未能完成驱动装置的初始化阶段。驱动装置位于装置位置 <arg format="%d" ordinal="2" /> 的驱动模块 <arg format="%d" ordinal="1" /> 中。</Description>
+    <Consequences>系统将转到“系统故障”状态。 </Consequences>
+    <Causes>系统未能完成该驱动装置的初始化阶段。</Causes>
+    <Actions>1) 使用主电源开关重启系统来进行重试。<p />2) 检查其他硬件事件日志消息。</Actions>
+  </Message>
+  <Message number="4410" eDefine="SYS_ERR_HW_PU_TOO_MANY_UNITS_CONNECTED">
+    <Title>连接了太多的驱动单元</Title>
+    <Description> 系统在驱动模块 <arg format="%d" ordinal="1" /> 中检测到的驱动单元数目超过了其处理能力。所支持的最大驱动单元数目为 <arg format="%d" ordinal="2" /> 个，但检测到 <arg format="%d" ordinal="3" /> 个。 </Description>
+    <Consequences> 除非纠正故障，否则无法进行任何操作。系统转入“系统故障”状态。</Consequences>
+    <Causes> 1) 连接了太多的驱动单元。 <p /></Causes>
+    <Actions> 1) 断开未使用的驱动单元。 </Actions>
+  </Message>
+  <Message number="4411" eDefine="SYS_ERR_HW_PU_DC_LINK_ERROR">
+    <Title>直流链路错误</Title>
+    <Description> 系统检测到某个未被任何关节使用的驱动单元中的 DC 总线电压意外过低。该驱动单元位于驱动模块 <arg format="%d" ordinal="1" /> 中，单元位置为 <arg format="%d" ordinal="2" />。</Description>
+    <Consequences>在纠正故障前无法进行任何操作。系统将转到“电机关闭”状态。</Consequences>
+    <Causes> 1) 进线电源缺失。<p />2) DC 总线电缆与驱动单元的连接不良。<p />3) DC 总线上发生短路。短路可能位于驱动单元内，也可能位于电缆内。<p /></Causes>
+    <Actions> 1) 检查进线电源。<p />2) 检查 DC 线路。<p />3) 检查是否发生任何短路。<p />4) 更换驱动单元。</Actions>
+  </Message>
+  <Message number="7001" eDefine="SYS_ERR_HW_AUX_RUN_RELAY">
+    <Title>电机开启 (ON) 接触器启动错误</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="2" /> 中的电机开启 (ON) 接触器 <arg format="%d" ordinal="1" /> 未能按命令关闭。</Description>
+    <Consequences>无法手动或自动运行机械单元。</Consequences>
+    <Causes>1) 接触器运行链已打开。<p />2) 接触器本身存在机械或电气故障。<p />3) 教导器使动装置切换速度过快，或者系统配置不正确。这种故障很少与其他故障同时发生，如发生这种情况，则可在错误日志中找到与此相关的消息。</Causes>
+    <Actions>1) 要恢复正常工作，首先要确认错误，然后松开使动装置并在约 1 秒钟之后再次按下该装置。<p />2) 检查安全系统上的电缆和连接。<p />3) 检查在时间上与此错误一致的其他任何错误日志消息，以获得线索。<p />4) 检查与电机开启 (ON) 接触器继电器有关的系统动作配置。《故障排除手册》详述了如何检查配置文件。</Actions>
+  </Message>
+  <Message number="7043" eDefine="SYS_ERR_HW_AUX_PU_DRVOVLD">
+    <Title>安全信号过载</Title>
+    <Description>AC_ON 或 SPEED 信号消耗过多电流。  </Description>
+    <Consequences>安全系统关闭这些信号，从而使系统转入“系统故障”（对于 AC_ON）或“系统中断”（对于 SPEED）状态。</Consequences>
+    <Causes>与电路连接的某一负载过高，或者可能是安全系统发生故障。 请参阅电路图！</Causes>
+    <Actions>1) 检查与 AC_ON 和 SPEED 电路相连的所有负载<p />2) 检查安全系统线路和连接器，如果需要，请更换所有故障单元。</Actions>
+  </Message>
+  <Message number="7044" eDefine="SYS_ERR_HW_AUX_PU_USERDOOVLD">
+    <Title>安全面板数字输出信号过载</Title>
+    <Description>安全面板用户数字输出消耗过多的电流。</Description>
+    <Consequences>安全面板关闭这些信号，系统进入 SYS HALT 状态。</Consequences>
+    <Causes>与电路连接的某一荷载过高，或安全面板发生故障。请参阅电路图！</Causes>
+    <Actions>1) 检查与用户数字输出连接的所有荷载<p />2) 检查安全面板接线和连接器，必要时更换所有故障单元。</Actions>
+  </Message>
+  <Message number="7045" eDefine="SYS_ERR_HW_AUX_PU_PANFAN">
+    <Title>外部计算机风扇故障</Title>
+    <Description>控制模块中的外部计算机风扇转速过低。</Description>
+    <Consequences>对系统无影响。控制模块温度会升高。</Consequences>
+    <Causes>风扇、接线或电源故障。请参阅电路图！</Causes>
+    <Actions>1) 检查与外部计算机风扇的接线状况。<p />2) 检查风扇，必要时更换所有故障单元。</Actions>
+  </Message>
+  <Message number="7046" eDefine="SYS_ERR_HW_AUX_PU_PANEL24OVLD">
+    <Title>安全信号过载</Title>
+    <Description>24 V 面板电源消耗过多电流。 </Description>
+    <Consequences>安全系统关闭这一信号，从而使系统转入“系统中断”状态。</Consequences>
+    <Causes>与电路连接的某一负载过高，或者可能是安全系统单元发生故障。请参阅电路图！</Causes>
+    <Actions>1) 检查与 24V 面板电路相连的所有负载。<p />2) 检查安全系统的线路。</Actions>
+  </Message>
+  <Message number="7049" eDefine="SYS_ERR_HW_AUX_ACTIVATION_RELAY">
+    <Title>启动接触器启动错误</Title>
+    <Description>机械单元 <arg format="%s" ordinal="1" /> 的启动继电器未能关闭。</Description>
+    <Consequences>无法手动或自动运行机械单元。</Consequences>
+    <Causes>系统中配置的启动继电器可能存在故障，或系统未正确配置。</Causes>
+    <Actions>1) 检查接触器并确保其接头正确连接。<p />2) 检查启动继电器的系统动作配置。《故障排除手册》详述了如何检查配置文件。</Actions>
+  </Message>
+  <Message number="7050" eDefine="SYS_ERR_HW_AUX_CPU_TEMP">
+    <Title>主机过热</Title>
+    <Description>主机单元或主机处理器处理器温度过高。</Description>
+    <Consequences>系统可能受损。</Consequences>
+    <Causes>该单元过载，可能是因为风扇故障，或气流不畅。</Causes>
+    <Actions>1) 确保风扇正在运行。<p />2) 检查单元风扇气流是否畅通。</Actions>
+  </Message>
+  <Message number="7053" eDefine="SYS_ERR_HW_AUX_CMOS_BATTERY">
+    <Title>CMOS 电池电压过低</Title>
+    <Description>计算机电路板上的 CMOS 电池耗尽。</Description>
+    <Consequences>重新启动系统时，系统将采用错误的设置或无法重新启动。</Consequences>
+    <Causes>电池故障。</Causes>
+    <Actions>1. 更换 CMOS 电池</Actions>
+  </Message>
+  <Message number="7054" eDefine="SYS_ERR_HW_AUX_MAIN_FAN">
+    <Title>计算机单元风扇故障</Title>
+    <Description>计算机单元风扇转速过低。</Description>
+    <Consequences>对系统无影响。计算机单元温度会升高。</Consequences>
+    <Causes>风扇、接线或电源故障。请参阅电路图！</Causes>
+    <Actions>1) 检查计算机单元风扇的接线。<p />2) 检查风扇。<p />3) 检查风扇电源。<p />4) 必要时更换有故障的组件。</Actions>
+  </Message>
+  <Message number="7056" eDefine="SYS_ERR_HW_AUX_LM78_FAN3_ERROR">
+    <Title>散热风扇错误</Title>
+    <Description>散热风扇停转或转速过低（低于 <arg format="%.f" ordinal="1" /> rpm）。</Description>
+    <Actions>1. 检查风扇电缆。<p />2. 更换风扇。</Actions>
+  </Message>
+  <Message number="7062" eDefine="SYS_ERR_HW_AUX_VOLTAGE_ALARM">
+    <Title>计算机模块电源警告</Title>
+    <Description>计算机模块电源的 <arg format="%.f" ordinal="1" /> V 电压实际为 <arg format="%.f" ordinal="2" /> V，超出允许范围。</Description>
+    <Consequences>- </Consequences>
+    <Causes>电源单元、接线、电源输入电压或输出荷载均可造成电压失常。请参阅《故障排除手册》和电路图！</Causes>
+    <Actions>1) 检查电源单元的所有接线。<p />2) 测量输出和输入电压。<p />3) 必要时更换故障单元。</Actions>
+  </Message>
+  <Message number="7069" eDefine="SYS_ERR_HW_AUX_PSU_FAIL">
+    <Title>备用电源故障</Title>
+    <Description>维持备用电压的控制模块中的后备电池出现故障。</Description>
+    <Consequences>关闭电源后，必须执行 B 类重启。关闭电源后不会保存对系统数据的更改。</Consequences>
+    <Causes>原因包括后备电池、接线或充电器故障。</Causes>
+    <Actions>电池充电完毕前不要关闭主电源，否则系统可能会执行冷启动！<p />1) 检查后备电池的接线和连接器。<p />2) 检查后备电池。<p />3) 检查电源。<p />4) 必要时更换出现故障的单元。</Actions>
+  </Message>
+  <Message number="7070" eDefine="SYS_ERR_HW_AUX_PSU_TEMP">
+    <Title>控制模块电源温度过高</Title>
+    <Description>控制模块电源中的温度过高。</Description>
+    <Consequences>系统会立即关闭。</Consequences>
+    <Causes>原因包括散热不良、电源荷载过高或电源故障。</Causes>
+    <Actions>1. 检查散热风扇。<p />2) 检查输出电源。<p />3) 必要时更换故障单元。</Actions>
+  </Message>
+  <Message number="7074" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_TOO_LOW_PRES">
+    <Title>净化压力过低</Title>
+    <Description>清除与操纵器接口电路板 (MIB) <arg format="%i" ordinal="2" /> 关联的系统编号 <arg format="%i" ordinal="1" /> 。</Description>
+    <Actions>检查净化气源并查看以下装置是否存在泄漏：<p />1. 净化单元。<p />2. 软管导管。<p />3. 操纵器本身。</Actions>
+  </Message>
+  <Message number="7075" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_TOO_HIGH_PRES">
+    <Title>净化压力过高</Title>
+    <Description>清除与操纵器接口电路板 (MIB) <arg format="%i" ordinal="2" /> 关联的系统编号 <arg format="%i" ordinal="1" /> 。</Description>
+    <Actions>检查净化单元和气源。</Actions>
+  </Message>
+  <Message number="7076" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_UNEXP_LOW_FLOW">
+    <Title>净化气流速度异常低</Title>
+    <Description>清除与操纵器接口电路板 (MIB) <arg format="%i" ordinal="2" /> 关联的系统编号 <arg format="%i" ordinal="1" /> 。</Description>
+    <Actions>检查净化单元和气源。查看净化系统是否存在泄漏。</Actions>
+  </Message>
+  <Message number="7077" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_UNEXP_HIGH_FLOW">
+    <Title>净化气流速度异常高</Title>
+    <Description>清除与操纵器接口电路板 (MIB) <arg format="%i" ordinal="2" /> 关联的系统编号 <arg format="%i" ordinal="1" /> 。</Description>
+    <Actions>检查净化单元和气源。</Actions>
+  </Message>
+  <Message number="7078" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_UNAC_TIMER_DIV1">
+    <Title>净化计时器偏差</Title>
+    <Description>在过程接口电路板 (PIB) 和操纵器接口电路板 (MIB) <arg format="%i" ordinal="1" /> 净化计时器之间不可接受的偏差。 </Description>
+    <Consequences>重启净化计时器。 </Consequences>
+    <Actions>1. 检查串行外设接口 (SPI) 电缆。<p />2. 如果有问题可更换 MIB。<p />3. 如果有问题可更换 PIB。<p /><p /></Actions>
+  </Message>
+</Domain>

@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="HW" domainNo="3" lang="zh" elogTextVersion="1.0" min="7080" max="7249">
+  <Message number="7080" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_CFG_FAULT">
+    <Title>净化配置无效。</Title>
+    <Description>操纵器接口电路板 (MIB) <arg format="%i" ordinal="1" /> X19 上的净化时间键值无效。 </Description>
+    <Consequences>使用了默认时间 (300s)。 <p /><p /></Consequences>
+    <Causes>净化时间键值错误或丢失。</Causes>
+    <Actions>1. 检查确保净化时间键值正确安装。<p />2. 更换净化时间键值。</Actions>
+  </Message>
+  <Message number="7081" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_UNAC_TIMER_DIV2">
+    <Title>净化计时器偏差</Title>
+    <Description>操纵器接口电路板 (MIB) <arg format="%i" ordinal="1" /> 净化计时器的 CPLD 与 FPGA 固件之间不可接受的偏差。 </Description>
+    <Consequences>重启净化计时器。</Consequences>
+    <Actions>如果有问题则更换 MIB。</Actions>
+  </Message>
+  <Message number="7082" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_OUT_FAULT">
+    <Title>PIB 和 MIB 输出之间的偏差</Title>
+    <Description>在净化中继和功率中继的输出状态上过程接口电路板 (PIB) 和操纵器接口电路板 (MIB) <arg format="%i" ordinal="1" /> 不兼容。 </Description>
+    <Consequences>重新启动净化序列。</Consequences>
+  </Message>
+  <Message number="7083" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_SHUTDOWN">
+    <Title>净化系统存在假信号</Title>
+    <Description>机械臂接口电路板 (MIB) <arg format="%i" ordinal="1" /> 报告了净化故障。净化系统检测到传感器的压力不正常。电机和喷涂设备关闭，主计算机可能会接到断开串行测量单元 (SMU) 连接的通知。具体取决于信号配时。 </Description>
+    <Consequences>电机和喷涂设备关闭，运行链打开并也可能断开 SMU 连接。</Consequences>
+    <Actions>1. 检查气源。<p />2. 检查空气出口是否未被堵塞。<p />3. 检查净化传感器和净化传感器的线缆。 </Actions>
+  </Message>
+  <Message number="7090" eDefine="SYS_ERR_HW_AUX_PTC_ERROR">
+    <Title>传感器 <arg format="%i" ordinal="1" /> 温度过高</Title>
+    <Description>检测到机械臂控制电路板 (MCOB) <arg format="%i" ordinal="2" /> 上的系统过热。传感器 1-7:电机 1-7。传感器 8:串行测量电路板。运行链已打开。</Description>
+    <Actions>请等待过热的电机或设备冷却下来。</Actions>
+  </Message>
+  <Message number="7094" eDefine="SYS_ERR_HW_CONNECTION_RELAY_NOT_ACTIVE">
+    <Title>启动连接错误</Title>
+    <Description>无法启动 <arg format="%s" ordinal="1" />。连接继电器输入 <arg format="%s" ordinal="2" /> 指示未连接。</Description>
+    <Actions>1. 检查机械单元是否连接。<p />2. 检查连接继电器输入信号设置。</Actions>
+  </Message>
+  <Message number="7095" eDefine="SYS_ERR_HW_AUX_BRAKE_POWER_FAULT">
+    <Title>制动闸电源故障</Title>
+    <Description>机械臂控制电路板 (MCOB) <arg format="%i" ordinal="1" /> 上的制动闸电源监控检测到电源信号故障，并已打开所有制动闸。<p /></Description>
+    <Actions>1. 检查 MCOB 上的制动闸电源。<p />2. 检查机柜中的制动闸电源继电器。<p />3. 检查 MCOB 上的制动闸电源信号是否存在干扰。<p />4. 检查制动闸是否存在短路。<p /></Actions>
+  </Message>
+  <Message number="7096" eDefine="SYS_ERR_HW_AUX_BRAKE_POWER_FAULT2">
+    <Title>制动闸电源故障</Title>
+    <Description>机械臂控制电路板 (MCOB/MCB) <arg format="%i" ordinal="1" /> 上的制动闸电源监控检测到电源信号故障，并已打开所有制动闸。</Description>
+    <Actions>1. 检查 MCOB/MCB 上的制动闸电源。<p />2. 检查机柜中的制动闸电源供电情况。<p />3. 检查 MCOB/MCB 上的制动闸电源信号是否存在干扰。<p />4. 检查制动闸是否存在短路。<p /></Actions>
+  </Message>
+  <Message number="7097" eDefine="SYS_ERR_HW_AUX_BRAKE_SHORT_CIRCUIT">
+    <Title>制动闸短路故障</Title>
+    <Description>机械臂控制电路板 (MCOB/MCB) <arg format="%i" ordinal="1" /> 上的制动闸监控检测到轴 <arg format="%d" ordinal="2" /> 存在短路，并已打开所有制动闸。 </Description>
+    <Actions>1. 检查制动闸上是否存在短路。 </Actions>
+  </Message>
+  <Message number="7098" eDefine="SYS_ERR_HW_AUX_BRAKE_OPEN_CIRCUIT">
+    <Title>制动闸断路故障</Title>
+    <Description>机械臂控制电路板 (MCOB/MCB) <arg format="%i" ordinal="1" /> 上的制动闸监控检测到轴 <arg format="%d" ordinal="2" /> 存在断路，并已打开所有制动闸。 </Description>
+    <Actions>1. 检查制动闸上是否存在断路。 </Actions>
+  </Message>
+  <Message number="7099" eDefine="SYS_ERR_HW_AUX_PTC_ERROR2">
+    <Title>传感器 <arg format="%i" ordinal="1" /> 温度过高</Title>
+    <Description>检测到机械臂控制电路板 (MCOB/MCB) <arg format="%i" ordinal="2" /> 上的系统过热。已对电机、串行测量单元 (SMU) 或处理设备上的传感器进行监控。运行链已打开。<p />传感器 1-8:机器人电机 1-8。传感器 9:SMU。传感器 10-14:过程 1-5。请参阅当前机器人配置了解更多详细信息。 <p /><p /></Description>
+    <Actions>请等待过热的电机或设备冷却下来。</Actions>
+  </Message>
+  <Message number="7100" eDefine="SYS_ERR_HW_AUX_FLASH_DISK_ERROR">
+    <Title>I/O 节点闪盘错误</Title>
+    <Description>闪盘名称： <arg format="%s" ordinal="1" /><p />闪盘功能： <arg format="%s" ordinal="2" /><p />错误描述： <arg format="%s" ordinal="3" /></Description>
+    <Actions>报告错误。</Actions>
+  </Message>
+  <Message number="7101" eDefine="SYS_ERR_HW_AUX_BRAKE_RELAY">
+    <Title>制动器故障</Title>
+    <Description>机械单元 <arg format="%s" ordinal="1" /> 的制动器未能啮合。</Description>
+    <Consequences>机械单元在电机关闭时可能损毁。</Consequences>
+    <Causes>制动继电器配置错误或出现故障。如果使用外接制动继电器，则必须在动作配置文件中正确定义该继电器。</Causes>
+    <Actions>1) 检查是否在配置文件中正确定义了外接制动继电器（如果使用的话）。<p />2) 检查是否在 I/O 配置文件中正确定义了对应的 I/O 信号。有关如何检查配置文件的详情，请参阅《故障排除手册》。</Actions>
+  </Message>
+  <Message number="7102" eDefine="SYS_ERR_HW_AUX_PSU_24VCOOL">
+    <Title>电源警告，24V COOL 电压失常</Title>
+    <Description>控制模块电源的 24V COOL 输出功率超出正常范围。</Description>
+    <Consequences>对系统无影响。</Consequences>
+    <Causes>控制模块电源单元接线或输出荷载可能会引起电压失常。电源情况请参阅《故障排除手册》和电路图！</Causes>
+    <Actions>1) 检查控制模块电源单元的所有接线。<p />2) 检查输出电压，必要时更换所有故障单元。</Actions>
+  </Message>
+  <Message number="7103" eDefine="SYS_ERR_HW_AUX_PSU_24VSYS">
+    <Title>电源警告，24V SYS 电压失常</Title>
+    <Description>控制模块电源的 24V SYS 输出功率超出正常范围。</Description>
+    <Consequences>对系统无影响。</Consequences>
+    <Causes>控制模块电源单元、接线或输出荷载可能会引起电压失常。电源情况请参阅《故障排除手册》和电路图！</Causes>
+    <Actions>1) 检查控制模块电源单元的所有接线。<p />2) 检查输出电压，必要时更换所有故障单元。</Actions>
+  </Message>
+  <Message number="7104" eDefine="SYS_ERR_HW_AUX_PSU_NOBACKUP">
+    <Title>无可用的备用电压！</Title>
+    <Description>维持备用电压的后备电池出现故障。</Description>
+    <Consequences>关闭电源后，必须执行 B 类重启。关闭电源后不会保存对系统数据的更改。</Consequences>
+    <Causes>原因包括后备电池、接线或充电器故障。</Causes>
+    <Actions>检查系统前，请执行受控关机操作，以确保所有系统数据正确保存。<p />1) 检查后备电池的接线和连接器。<p />2) 检查后备电池。<p />3) 检查电源。<p />4) 必要时更换故障单元。</Actions>
+  </Message>
+  <Message number="7105" eDefine="SYS_ERR_HW_AUX_PSU_REGAINED_CONTACT">
+    <Title>重新与电源通信</Title>
+    <Description>主机与控制模块电源恢复通信。</Description>
+  </Message>
+  <Message number="7106" eDefine="SYS_ERR_HW_AUX_PSU_UC_DRAINED">
+    <Title>后备电池电压偏低</Title>
+    <Description>计算机单元的后备电池电压过低，无法正常工作。</Description>
+    <Consequences>对系统无影响。关闭电源后不会保存对系统数据的更改。</Consequences>
+    <Causes>原因包括后备电池、接线或充电器故障。</Causes>
+    <Actions>检查系统前，请执行受控关机操作，以确保所有系统数据正确保存。<p />1) 检查后备电池的接线和连接器。<p />2) 检查后备电池。<p />3) 检查电源。<p />4) 必要时更换故障单元。</Actions>
+  </Message>
+  <Message number="7107" eDefine="SYS_ERR_HW_AUX_PSU_UC_FAIL">
+    <Title>后备电池故障</Title>
+    <Description>控制模块中的后备电池发生故障。</Description>
+    <Consequences>如果关闭电源，则必须执行 B 类重启。电源关闭时不会进行备份。</Consequences>
+    <Causes>原因包括后备电池、接线或充电器故障。</Causes>
+    <Actions>检查系统前，请执行受控关机操作，以确保所有系统数据正确保存。<p />1) 检查后备电池的电缆和连接器。<p />2) 检查后备电池。<p />3) 必要时更换故障单元。</Actions>
+  </Message>
+  <Message number="7108" eDefine="SYS_ERR_HW_AUX_PSU_NO_CONTACT">
+    <Title>通信中断：电源和计算机</Title>
+    <Description>主机与控制模块电源之间的通信中断。</Description>
+    <Consequences>主机无法检索状态消息或关闭电源。关闭电源后不会保存对系统数据的更改。</Consequences>
+    <Causes>连接主机和控制模块电源的 USB 电缆受损或断开，也可能是电源出现故障。</Causes>
+    <Actions>检查系统前，请执行受控关机操作，以确保所有系统数据正确保存。<p />1) 检查控制模块电源的所有接线和连接器。<p />2)  检查电源单元，必要时更换故障单元。</Actions>
+  </Message>
+  <Message number="7200" eDefine="SYS_ERR_HW_AUX_EMY_24V_OK">
+    <Title>电源故障：紧急停止电源</Title>
+    <Description>24V 紧急停止电源的故障。安全接口电路板 (SIB) 的反馈。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查电缆和连接。<p />2. 检查电源。</Actions>
+  </Message>
+  <Message number="7201" eDefine="SYS_ERR_HW_AUX_FAILSAFE_24V_O">
+    <Title>电源故障：24V 故障保护电源</Title>
+    <Description>24V 故障保护电源的故障。安全接口电路板 (SIB) 的反馈。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查电缆和连接。<p />2. 检查电源。</Actions>
+  </Message>
+  <Message number="7202" eDefine="SYS_ERR_HW_AUX_IO_24V_OK">
+    <Title>电源故障：24V I/O 电源</Title>
+    <Description>24V I/O 电源的故障。安全接口电路板 (SIB) 的反馈。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查电缆和连接。<p />2. 检查电源。</Actions>
+  </Message>
+  <Message number="7203" eDefine="SYS_ERR_HW_AUX_24V_SYS_ENA">
+    <Title>电源故障：24V SYS 电源</Title>
+    <Description>当 24V SYS &lt; 18V 时报告电源故障。操纵器接口电路板 (MIB) 的反馈 <arg format="%i" ordinal="1" />。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查电缆和连接。<p />2. 检查电源。</Actions>
+  </Message>
+  <Message number="7204" eDefine="SYS_ERR_HW_AUX_24V_IO_ENA">
+    <Title>电源故障：24V I/O 电源</Title>
+    <Description>当 24V I/O &lt; 18V 时报告电源故障。操纵器接口电路板 (MIB) 的反馈 <arg format="%i" ordinal="1" />。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查电缆和连接。<p />2. 检查电源。</Actions>
+  </Message>
+  <Message number="7205" eDefine="SYS_ERR_HW_AUX_12V_ENA">
+    <Title>电源故障：12V 净化电源</Title>
+    <Description>当 12V 净化 &lt; 10.8V 时报告电源故障。操纵器接口电路板 (MIB) 的反馈 <arg format="%i" ordinal="1" />。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查电缆和连接。<p />2. 检查电源。</Actions>
+  </Message>
+  <Message number="7206" eDefine="SYS_ERR_HW_AUX_12V_TPU">
+    <Title>电源故障：12V TPU 电源</Title>
+    <Description>12V 教导器单元 (TPU) 电源故障。Pendant 接口电路板 (TIB) 的反馈。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查电缆和连接。<p />2. 检查电源。</Actions>
+  </Message>
+  <Message number="7207" eDefine="SYS_ERR_HW_AUX_BATT_LOW">
+    <Title>电池电量低。</Title>
+    <Description>串行测量电路板 (SMB) 上的电池备份放完电的时间不超过 2 个月。从此消息首次显示之时算起。电池安装在操纵器接口电路板 (MIB) 上。</Description>
+    <Actions>更换 MIB 上安装的电池。</Actions>
+  </Message>
+  <Message number="7208" eDefine="SYS_ERR_HW_AUX_TRAFO_TEMP">
+    <Title>变压器过热</Title>
+    <Description>变压器中的温度过高。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Causes>该单元过载，可能是因为风扇故障，或气流不畅。</Causes>
+    <Actions>1) 确保风扇正在运行。<p />2) 检查进入风扇单元的气流是否畅通。</Actions>
+  </Message>
+  <Message number="7209" eDefine="SYS_ERR_HW_AUX_CABINET_TEMP">
+    <Title>机柜中过热</Title>
+    <Description>机柜中的温度过高。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Causes>该单元过载，可能是因为风扇故障，或气流不畅。</Causes>
+    <Actions>1) 确保风扇正在运行。<p />2) 检查进入风扇单元的气流是否畅通。</Actions>
+  </Message>
+  <Message number="7210" eDefine="SYS_ERR_HW_AUX_KM1_ERROR">
+    <Title>接触器 KM1 故障</Title>
+    <Description>电机接触器 KM1 上观察到一个故障。 </Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查电缆和连接。<p />2. 检查接触器。</Actions>
+  </Message>
+  <Message number="7211" eDefine="SYS_ERR_HW_AUX_KM2_ERROR">
+    <Title>接触器 KM2 故障</Title>
+    <Description>在电机接触器 KM2 上观察到一个故障。 </Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查电缆和连接。<p />2. 检查接触器。</Actions>
+  </Message>
+  <Message number="7212" eDefine="SYS_ERR_HW_AUX_KM101_ERROR">
+    <Title>接触器 KM101 故障</Title>
+    <Description>电机接触器 KM101 上观察到一个故障。 </Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查电缆和连接。<p />2. 检查接触器。</Actions>
+  </Message>
+  <Message number="7213" eDefine="SYS_ERR_HW_AUX_KM102_ERROR">
+    <Title>接触器 KM102 故障</Title>
+    <Description>电机接触器 KM102 上观察到一个故障。 </Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查电缆和连接。<p />2. 检查接触器。</Actions>
+  </Message>
+  <Message number="7214" eDefine="SYS_ERR_HW_AUX_RUN_CH1">
+    <Title>运行链 1 馈电冲突</Title>
+    <Description>安全接口电路板 (SIB) 和操纵器接口电路板 (MIB) <arg format="%i" ordinal="1" /> 报告运行链 1 反馈信号存在偏差。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查电缆和连接。<p />2. 如果有故障则更换 SIB。<p />3. 如果有故障则更换 MIB。<p /></Actions>
+  </Message>
+  <Message number="7215" eDefine="SYS_ERR_HW_AUX_RUN_CH2">
+    <Title>运行链 2 馈电冲突</Title>
+    <Description>安全接口电路板 (SIB) 和操纵器接口电路板 (MIB) <arg format="%i" ordinal="1" /> 报告运行链 2 反馈信号存在偏差。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查电缆和连接。<p />2. 如果有故障则更换 SIB。<p />3. 如果有故障则更换 MIB。<p /></Actions>
+  </Message>
+  <Message number="7216" eDefine="SYS_ERR_HW_AUX_BRAKE_CH1">
+    <Title>制动链 1 馈电冲突</Title>
+    <Description>安全接口电路板 (SIB) 和操纵器接口电路板 (MIB) <arg format="%i" ordinal="1" /> 报告制动闸链 1 反馈信号存在偏差。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查电缆和连接。<p />2. 如果有故障则更换 SIB。<p />3. 如果有故障则更换 MIB。<p /></Actions>
+  </Message>
+  <Message number="7217" eDefine="SYS_ERR_HW_AUX_BRAKE_CH2">
+    <Title>制动链 2 馈电冲突</Title>
+    <Description>安全接口电路板 (SIB) 和操纵器接口电路板 (MIB) <arg format="%i" ordinal="1" /> 报告制动闸链 2 反馈信号存在偏差。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查电缆和连接。<p />2. 如果有故障则更换 SIB。<p />3. 如果有故障则更换 MIB。<p /></Actions>
+  </Message>
+  <Message number="7218" eDefine="SYS_ERR_HW_AUX_CABIN_CH1">
+    <Title>机柜互联链 1 馈电冲突</Title>
+    <Description>安全接口电路板 (SIB) 和操纵器接口电路板 (MIB) <arg format="%i" ordinal="1" /> 报告机柜互联链 1 反馈信号存在偏差。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查电缆和连接。<p />2. 如果有故障则更换 SIB。<p />3. 如果有故障则更换 MIB。<p /></Actions>
+  </Message>
+  <Message number="7219" eDefine="SYS_ERR_HW_AUX_CABIN_CH2">
+    <Title>机柜互联链 2 馈电冲突</Title>
+    <Description>安全接口电路板 (SIB) 和操纵器接口电路板 (MIB) <arg format="%i" ordinal="1" /> 报告机柜互联链 2 反馈信号存在偏差。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查电缆和连接。<p />2. 如果有故障则更换 SIB。<p />3. 如果有故障则更换 MIB。<p /></Actions>
+  </Message>
+  <Message number="7220" eDefine="SYS_ERR_HW_AUX_HV_CH1">
+    <Title>HV 互联链 1 馈电冲突</Title>
+    <Description>安全接口电路板 (SIB) 和操纵器接口电路板 (MIB) <arg format="%i" ordinal="1" /> 报告高电压互联链 1 反馈信号存在偏差。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查电缆和连接。<p />2. 如果有故障则更换 SIB。<p />3. 如果有故障则更换 MIB。<p /></Actions>
+  </Message>
+  <Message number="7221" eDefine="SYS_ERR_HW_AUX_HV_CH2">
+    <Title>HV 互联链 2 馈电冲突</Title>
+    <Description>安全接口电路板 (SIB) 和操纵器接口电路板 (MIB) <arg format="%i" ordinal="1" /> 报告高电压互联链 2 反馈信号存在偏差。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查电缆和连接。<p />2. 如果有故障则更换 SIB。<p />3. 如果有故障则更换 MIB。<p /></Actions>
+  </Message>
+  <Message number="7222" eDefine="SYS_ERR_HW_AUX_SYS2_ILCK">
+    <Title>系统 2 互联链馈电冲突</Title>
+    <Description>安全接口电路板 (SIB) 和操纵器接口电路板 (MIB) <arg format="%i" ordinal="1" /> 报告系统 2 互联链反馈信号存在偏差。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查电缆和连接。<p />2. 如果有故障则更换 SIB。<p />3. 如果有故障则更换 MIB。<p /></Actions>
+  </Message>
+  <Message number="7223" eDefine="SYS_ERR_HW_AUX_MAIN_RLY">
+    <Title>主中继链馈电冲突</Title>
+    <Description>安全接口电路板 (SIB) 和操纵器接口电路板 (MIB) <arg format="%i" ordinal="1" /> 报告主中继链反馈信号存在偏差。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查电缆和连接。<p />2. 如果有故障则更换 SIB。<p />3. 如果有故障则更换 MIB。<p /></Actions>
+  </Message>
+  <Message number="7224" eDefine="SYS_ERR_HW_AUX_CAB_ILCK1">
+    <Title>机柜互联链 1 冲突</Title>
+    <Description>安全接口电路板 (SIB) 上的输入和输出信号之间的机柜互联链 1 上存在偏差。</Description>
+    <Consequences>油漆启用链打开。</Consequences>
+    <Actions>1. 检查电缆和连接。<p />2. 如果有故障则更换 SIB。</Actions>
+  </Message>
+  <Message number="7225" eDefine="SYS_ERR_HW_AUX_CAB_ILCK2">
+    <Title>机柜互联链 2 冲突</Title>
+    <Description>安全接口电路板 (SIB) 上的输入和输出信号之间的机柜互联链 2 上存在偏差。</Description>
+    <Consequences>油漆启用链打开。</Consequences>
+    <Actions>1. 检查电缆和连接。<p />2. 如果有故障则更换 SIB。</Actions>
+  </Message>
+  <Message number="7226" eDefine="SYS_ERR_HW_AUX_HV_ILCK1">
+    <Title>HV 互联链 1 冲突</Title>
+    <Description>安全接口电路板 (SIB) 上的输入和输出信号之间的高电压 (HV) 互联链 1 上存在偏差。</Description>
+    <Consequences>油漆启用链打开。</Consequences>
+    <Actions>1. 检查电缆和连接。<p />2. 如果有故障则更换 SIB。</Actions>
+  </Message>
+  <Message number="7227" eDefine="SYS_ERR_HW_AUX_HV_ILCK2">
+    <Title>HV 互联链 2 冲突</Title>
+    <Description>安全接口电路板 (SIB) 上的输入和输出信号之间的高电压 (HV) 互联链 2 上存在偏差。</Description>
+    <Consequences>油漆启用链打开。</Consequences>
+    <Actions>1. 检查电缆和连接。<p />2. 如果有故障则更换 SIB。</Actions>
+  </Message>
+  <Message number="7228" eDefine="SYS_ERR_HW_AUX_CAB_CH">
+    <Title>SIB 机柜互联链冲突</Title>
+    <Description>仅开启了两个机柜互联链中的一个。安全接口电路板 (SIB) 的报告。</Description>
+    <Consequences>油漆启用链打开。</Consequences>
+    <Actions>如果有故障则更换 SIB。</Actions>
+  </Message>
+  <Message number="7229" eDefine="SYS_ERR_HW_AUX_HV_CH">
+    <Title>SIB 的 HV 互联链冲突</Title>
+    <Description>仅开启了两个高压 (HV) 互联链中的一个。安全接口电路板 (SIB) 的报告。</Description>
+    <Consequences>油漆启用链打开。</Consequences>
+    <Actions>如果有故障则更换 SIB。</Actions>
+  </Message>
+  <Message number="7230" eDefine="SYS_ERR_HW_AUX_CBC_WARN">
+    <Title>制动闸性能警告</Title>
+    <Description>       循环制动闸检查指示机械单元 <arg format="%s" ordinal="1" /> 轴编号 <arg format="%s" ordinal="2" /> 没有足够的制动转矩。
+    </Description>
+    <Consequences>这只是警告，不需要立即采取措施。</Consequences>
+  </Message>
+  <Message number="7231" eDefine="SYS_ERR_HW_AUX_CBC_ERR">
+    <Title>制动闸性能错误</Title>
+    <Description>       循环制动闸检查发现机械单元 <arg format="%s" ordinal="1" /> 轴编号 <arg format="%s" ordinal="2" /> 制动转矩过低。<p />驱动模块编号 <arg format="%s" ordinal="3" /> 的安全控制器不允许使用此制动闸。
+    </Description>
+    <Consequences>       警告：这个轴的制动闸性能过低。<p /><p />在制动闸确认制动转矩之前，只能按照配置器中对循环制动闸检查设置指定的“减至最大速度 (mm/s)”来移动机器人。
+    </Consequences>
+    <Actions>       
+1) 再次运行循环制动闸检查。<p />2) 将电机与其制动闸互换。
+    </Actions>
+  </Message>
+  <Message number="7232" eDefine="SYS_ERR_HW_AUX_CBC_ARM_TRQ">
+    <Title>循环制动闸检查配置错误</Title>
+    <Description>
+循环制动闸检查发现机械单元 <arg format="%s" ordinal="1" /> 轴编号 <arg format="%s" ordinal="2" /> 的制动闸未定义制动闸转矩要求水平。
+    </Description>
+    <Consequences>循环制动闸检查将继续，但不会对此轴执行有效的制动闸检查。</Consequences>
+    <Causes>为此轴指定的动作配置数据不正确。</Causes>
+    <Actions>
+您为此轴指定的动作配置数据不正确：<p />1) 如果测试轴壳，请为参数 max_static_arm_torque 指定一个值。<p />2) 如果不测试轴，则在动作配置中停用循环制动闸检查。
+    </Actions>
+  </Message>
+  <Message number="7233" eDefine="SYS_ERR_HW_AUX_CBC_ARM_CBC">
+    <Title>循环制动闸检查配置错误</Title>
+    <Description>
+循环制动闸检查发现机械单元 <arg format="%s" ordinal="1" /> 轴编号 <arg format="%s" ordinal="2" /> 的制动闸应按照配置进行测试。但实际的机械单元不能包含在安全控制器中，因为启动/停用操作可在运行时完成。
+    </Description>
+    <Consequences>其他机械单元会继续进行循环制动闸检查。</Consequences>
+    <Causes>为此轴指定的动作配置数据不正确。</Causes>
+    <Actions>
+为此轴指定的动作配置数据不正确：<p />1) 已经指定了循环制动闸检查，但不应对此轴执行检查<p />2) 机械单元在启动时必须处于活动状态，并且不得允许停用
+    </Actions>
+  </Message>
+  <Message number="7240" eDefine="SYS_ERR_HW_AUX_CAB_CH_FB">
+    <Title>MIB 机柜互联链冲突</Title>
+    <Description>仅开启了两个机柜互联链中的一个。操纵器接口电路板 (MIB) 的报告 <arg format="%i" ordinal="1" />。</Description>
+    <Consequences>油漆启用链打开。</Consequences>
+    <Actions>如果有问题则更换 MIB。</Actions>
+  </Message>
+  <Message number="7241" eDefine="SYS_ERR_HW_AUX_HV_CH_FB">
+    <Title>MIB 的 HV 互联链冲突</Title>
+    <Description>仅开启了两个高压 (HV) 链中的一个。操纵器接口电路板 (MIB) 的报告 <arg format="%i" ordinal="1" />。</Description>
+    <Consequences>油漆启用链打开。</Consequences>
+    <Actions>如果有问题则更换 MIB。</Actions>
+  </Message>
+  <Message number="7242" eDefine="SYS_ERR_HW_AUX_RUN_CH">
+    <Title>SIB 运行链冲突</Title>
+    <Description>仅开启了安全接口电路板 (SIB) 两个运行链反馈中的一个。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>如果有故障则更换 SIB。</Actions>
+  </Message>
+  <Message number="7243" eDefine="SYS_ERR_HW_AUX_BRAKE_CH">
+    <Title>SIB 制动链冲突</Title>
+    <Description>仅开启了安全接口电路板 (SIB) 两个制动链信号中的一个。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>如果有故障则更换 SIB。</Actions>
+  </Message>
+  <Message number="7244" eDefine="SYS_ERR_HW_AUX_RUN_CH_FB">
+    <Title>MIB 运行链冲突 <arg format="%d" ordinal="1" /></Title>
+    <Description>仅开启了操纵器接口电路板 (MIB) 两个运行链反馈信号中的一个。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>如果有问题则更换 MIB。</Actions>
+  </Message>
+  <Message number="7245" eDefine="SYS_ERR_HW_AUX_BRAKE_CH_FB">
+    <Title>MIB 制动链冲突 <arg format="%d" ordinal="1" /></Title>
+    <Description>仅开启了操纵器接口电路板 (MIB) 两个制动链反馈信号中的一个。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>如果有问题则更换 MIB。</Actions>
+  </Message>
+  <Message number="7246" eDefine="SYS_ERR_HW_AUX_ES_RESET">
+    <Title>紧急停止中继冲突</Title>
+    <Description>仅开启了安全接口电路板 (SIB) 两个紧急停止链中的一个。</Description>
+    <Consequences>系统保留在“紧急停止”状态。</Consequences>
+    <Actions>1. 按紧急停止并再次复位紧急停止。<p />2. 如果有故障则更换 SIB。</Actions>
+  </Message>
+  <Message number="7247" eDefine="SYS_ERR_HW_FAN_DRIVE_SYSTEM">
+    <Title>循环风扇 <arg format="%i" ordinal="1" /> 故障</Title>
+    <Description>位于机柜后侧的驱动系统循环风扇已停止或旋转非常缓慢。</Description>
+    <Consequences>驱动系统的温度将会升高。</Consequences>
+    <Causes>风扇、接线或电源故障。请参阅电路图！</Causes>
+    <Actions>1. 检查风扇电缆。<p />2. 检查电源。<p />3. 检查风扇。</Actions>
+  </Message>
+  <Message number="7248" eDefine="SYS_ERR_HW_FAN_DOOR">
+    <Title>循环风扇 <arg format="%i" ordinal="1" /> 发生故障</Title>
+    <Description>位于机柜前门的循环风扇已停止或旋转非常缓慢。</Description>
+    <Consequences>机柜内的温度将会升高。</Consequences>
+    <Causes>风扇、接线或电源故障。请参阅电路图！</Causes>
+    <Actions>1. 检查风扇电缆。<p />2. 检查电源。<p />3. 检查风扇。</Actions>
+  </Message>
+  <Message number="7249" eDefine="SYS_ERR_HW_AUX_GLITCH_ES_INPUTS">
+    <Title>紧急停止电路存在假信号</Title>
+    <Description>几毫秒内检测到信号有两次或多次状态变化。导致此消息最可能的原因是 ES_INPUT 电路接触不良。</Description>
+    <Consequences>电机和喷涂设备可能会关闭。</Consequences>
+    <Actions>检查安全系统上 ES_INPUT 的电缆和连接。</Actions>
+  </Message>
+</Domain>

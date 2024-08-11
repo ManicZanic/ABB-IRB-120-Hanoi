@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.TPU.Screens.Paint">
+  <Forms>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.TpuWndProduction" Text="生产" Width="320" Height="192" Background="SkinManualTest.jpg">
+      <Menu ref="menuTpuWndProduction" />
+      <Controls>
+        <Control ID="lblTxtspeed" Text="速度：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="227" Top="12" Width="49" Height="18" />
+        <Control ID="lblTxtJobs" Text="队列中任务：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="168" Top="145" Width="100" Height="18" />
+        <Control ID="tpuJobNext" Text="下一工作任务：" Name="ABB.Robotics.Paint.TPU.Controls.Paint.TpuJob" Left="168" Top="51" Width="126" Height="90" />
+        <Control ID="tpuJobCurrent" Text="当前任务：" Name="ABB.Robotics.Paint.TPU.Controls.Paint.TpuJob" Left="26" Top="51" Width="126" Height="90" />
+        <Control ID="lblTxtBrushNumber" Text="刷子号：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="26" Top="164" Width="100" Height="18" />
+        <Control ID="lblTxtBrushTable" Text="刷子表：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="26" Top="145" Width="100" Height="18" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.TpuWndJobQueue" Text="队列" Width="320" Height="192" Background="SkinConveyor.jpg">
+      <Menu ref="menuTpuWndJobQueue" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.TpuWndColorChange" Text="换色" Width="320" Height="192" Icon="Palette32.gif">
+      <Menu ref="menuTpuWndColorChange" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.TpuWndBackupRestore" Text="备份" Width="320" Height="192" Icon="Safe32.gif">
+      <Menu ref="menuTpuWndBackupRestore" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.TpuWndPositionTeach" Text="PosTeach" Width="320" Height="192" Icon="WindowEnvironment32.gif">
+      <Menu ref="menuTpuWndPositionTeach" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.TpuWndUserTool" Text="UserTool" Width="320" Height="192" Icon="WindowEnvironment32.gif">
+      <Menu ref="menuTpuWndUserTool" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.TpuWndCbs" Text="Cbs" Width="320" Height="192" Icon="Cartridge32.gif">
+      <Menu ref="menuTpuWndCbs" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.TpuWndConveyorWizardStart" Text="向导" Width="320" Height="192" Background="Wizard320x192.png" Icon="MagicWand32.gif">
+      <Menu ref="menuTpuWndConveyorWizard" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.TpuWndConveyorWizardConnect" Text="向导" Width="320" Height="192" Background="Wizard320x192.png" Icon="MagicWand32.gif">
+      <Menu ref="menuTpuWndConveyorWizard" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.TpuPopupSelectMaterial" Text="" Width="275" Height="150">
+      <Controls>
+        <Control ID="lblTitle" Text="选择：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="6" Top="3" Width="263" Height="16" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.TpuPopupJob" Text="" Width="240" Height="152">
+      <Controls>
+        <Control ID="btnCancel" Text="取消" Name="ABB.Robotics.Paint.TPU.Controls.TpuButton" Left="168" Top="121" Width="64" Height="23" />
+        <Control ID="btnOK" Text="OK" Name="ABB.Robotics.Paint.TPU.Controls.TpuButton" Left="98" Top="121" Width="64" Height="23" />
+        <Control ID="lblTxtQuantity" Text="数量：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="9" Top="86" Width="71" Height="20" />
+        <Control ID="lblTxtOption" Text="JobOption:" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="9" Top="60" Width="71" Height="20" />
+        <Control ID="lblTxtMaterial" Text="材料：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="9" Top="34" Width="71" Height="20" />
+        <Control ID="lblTxtProgram" Text="程序：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="9" Top="8" Width="71" Height="20" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.TpuPopupSelectProgram" Text="" Width="275" Height="150">
+      <Controls>
+        <Control ID="lblTitle" Text="选择：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="6" Top="3" Width="263" Height="16" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.TpuWndProductionLog" Text="生产日志" Width="320" Height="192">
+      <Controls>
+        <Control ID="lblDate" Text="日期：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="12" Top="32" Width="48" Height="18" />
+        <Control ID="lblCycleTime" Text="周期时间：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="164" Top="32" Width="84" Height="18" />
+        <Control ID="tpuRectangle1" Text="上一个任务" Name="ABB.Robotics.Paint.TPU.Controls.TpuRectangle" Left="3" Top="3" Width="314" Height="55" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.TpuWndUserTool" Text="" Width="320" Height="192" />
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.TpuWndUserTool" Text="" Width="320" Height="192" />
+  </Forms>
+  <Menus>
+    <Menu ID="menuTpuWndProduction">
+      <MenuItem ID="Start" Text="开始" />
+      <MenuItem ID="ResetErr" Text="重置错误" />
+      <MenuItem ID="Enable" Text="使能">
+        <MenuItem ID="EnableAppl" Text="Appl" />
+        <MenuItem ID="EnableMtrlSupp" Text="MtrlSupp" />
+      </MenuItem>
+      <MenuItem ID="Queue" Text="队列">
+        <MenuItem ID="QueueAppend" Text="附加" />
+        <MenuItem ID="QueueClear" Text="清除" />
+      </MenuItem>
+      <MenuItem ID="Log" Text="日志" />
+      <MenuItem ID="Load" Text="装载">
+        <MenuItem ID="LoadProgram" Text="程序" />
+        <MenuItem ID="LoadMaterial" Text="材料" />
+        <MenuItem ID="LoadTable" Text="表" />
+      </MenuItem>
+      <MenuItem ID="Speed" Text="速度" Grant="UAS_SPEED_DECREASE" GrantMode="Automatic">
+        <MenuItem ID="Speed.25%" Text="25%" Grant="UAS_SPEED_DECREASE" GrantMode="Automatic" />
+        <MenuItem ID="Speed.100%" Text="100%" Grant="UAS_SPEED_DECREASE" GrantMode="Automatic" />
+        <MenuItem ID="Speed.Decrease" Text="-%" Grant="UAS_SPEED_DECREASE" GrantMode="Automatic" />
+        <MenuItem ID="Speed.Increase" Text="+%" Grant="UAS_SPEED_DECREASE" GrantMode="Automatic" />
+      </MenuItem>
+    </Menu>
+    <Menu ID="menuTpuWndJobQueue">
+      <MenuItem ID="Append" Text="附加" />
+      <MenuItem ID="Edit" Text="编辑" />
+      <MenuItem ID="Insert" Text="插入" />
+      <MenuItem ID="Delete" Text="删除" />
+      <MenuItem ID="Clear" Text="清除" />
+    </Menu>
+    <Menu ID="menuTpuWndColorChange">
+      <MenuItem ID="Enable" Text="使能">
+        <MenuItem ID="EnableAppl" Text="Appl" />
+        <MenuItem ID="EnableMtrlSupp" Text="MtrlSupp" />
+      </MenuItem>
+      <MenuItem ID="Material" Text="材料" />
+      <MenuItem ID="Clean" Text="清洗" />
+      <MenuItem ID="ResetErr" Text="重置错误" />
+      <MenuItem ID="Resume" Text="继续" />
+    </Menu>
+    <Menu ID="menuTpuWndBackupRestore">
+      <MenuItem ID="Backup" Text="备份" Grant="UAS_BACKUP" />
+      <MenuItem ID="Restore" Text="恢复" Grant="UAS_RESTORE" />
+      <MenuItem ID="Delete" Text="删除" Grant="UAS_BACKUP" />
+      <MenuItem ID="Device" Text="设备" Grant="UAS_BACKUP" />
+    </Menu>
+    <Menu ID="menuTpuWndPositionTeach">
+      <MenuItem ID="Define" Text="定义" />
+      <MenuItem ID="UserTool" Text="UserTool" />
+    </Menu>
+    <Menu ID="menuTpuWndUserTool">
+      <MenuItem ID="Copy" Text="复制" />
+    </Menu>
+    <Menu ID="menuTpuWndCbs">
+      <MenuItem ID="Arm" Text="手臂">
+        <MenuItem ID="ArmUp" Text="上" />
+        <MenuItem ID="ArmDown" Text="下" />
+      </MenuItem>
+      <MenuItem ID="Gripper" Text="夹子">
+        <MenuItem ID="GripperRightOpen" Text="右开" />
+        <MenuItem ID="GripperRightClose" Text="右关" />
+        <MenuItem ID="GripperLeftOpen" Text="左开" />
+        <MenuItem ID="GripperLeftClose" Text="左关" />
+      </MenuItem>
+      <MenuItem ID="Move" Text="移动">
+        <MenuItem ID="MoveLeftGripper" Text="左夹子" />
+        <MenuItem ID="MoveRightGripper" Text="右夹子" />
+        <MenuItem ID="MoveAddress" Text="地址" />
+      </MenuItem>
+      <MenuItem ID="Servo" Text="伺服">
+        <MenuItem ID="ServoEnable" Text="使能" />
+        <MenuItem ID="ServoDisable" Text="禁用" />
+        <MenuItem ID="Brake" Text="刹车">
+          <MenuItem ID="AngleBrakeHold" Text="A.Hold" />
+          <MenuItem ID="AngleBrakeRelease" Text="A.Release" />
+          <MenuItem ID="VerticalBrakeHold" Text="V.Hold" />
+          <MenuItem ID="VerticalBrakeRelease" Text="V.Release" />
+        </MenuItem>
+      </MenuItem>
+      <MenuItem ID="Service" Text="服务">
+        <MenuItem ID="ServiceReCalibrate" Text="重校准" />
+        <MenuItem ID="ResetCBS" Text="重设CBS" />
+      </MenuItem>
+    </Menu>
+    <Menu ID="menuTpuWndConveyorWizard">
+      <MenuItem ID="Dummy1" Text="" />
+      <MenuItem ID="Dummy2" Text="" />
+      <MenuItem ID="Back" Text="向前" />
+      <MenuItem ID="Next" Text="向后" />
+      <MenuItem ID="Cancel" Text="取消" />
+    </Menu>
+  </Menus>
+  <Strings>
+    <String ID="SystemAlreadyRunning" Text="系统已经运行" />
+    <String ID="ResetingErrorFailed" Text="重置错误失败！" />
+    <String ID="EnablingApplicatorFailed" Text="使能雾化器失败！" />
+    <String ID="DisablingApplicatorFailed" Text="禁用雾化器失败！" />
+    <String ID="EnablingMaterialSupplyFailed" Text="使能材料供给失败！" />
+    <String ID="DisablingMaterialSupplyFailed" Text="禁用材料供给失败！" />
+    <String ID="SelectStartupMode" Text="选择启动模式" />
+    <String ID="Starting" Text="启动中..." />
+    <String ID="StartFailed" Text="启动失败" />
+    <String ID="StartMode.StartProduction" Text="开始生产" />
+    <String ID="StartMode.Continue" Text="继续生产" />
+    <String ID="StartMode.Cancel" Text="卸载任务&amp;继续生产" />
+    <String ID="StartMode.CancelHome" Text="卸载任务，返回Home&amp;继续生产" />
+    <String ID="StartMode.HomeStartProduction" Text="返回Home&amp;开始生产" />
+    <String ID="Index" Text="索引" />
+    <String ID="Program" Text="程序" />
+    <String ID="Name" Text="名称" />
+    <String ID="SelectProgram" Text="选择程序：" />
+    <String ID="SelectingProgramFailed" Text="选择程序失败" />
+    <String ID="Material" Text="材料" />
+    <String ID="SelectMaterial" Text="选择材料：" />
+    <String ID="SelectingMaterialFailed" Text="选择材料失败！" />
+    <String ID="SelectBrushTable" Text="选择刷子表：" />
+    <String ID="SelectingBrushTableFailed" Text="选择刷子表失败！" />
+    <String ID="Job" Text="任务" />
+    <String ID="JobOption" Text="JobOption" />
+    <String ID="Qty" Text="Qty" />
+    <String ID="ClearAllJobs" Text="点OK来清除队列中所有任务" />
+    <String ID="DeleteJob" Text="点OK来删除从队列中选择的任务" />
+    <String ID="QueueFull" Text="队列满！" />
+    <String ID="ValueOutOfRange" Text="值溢出！[min:{0},max:{1}]" />
+    <String ID="Cavity" Text="腔体" />
+    <String ID="Sequence" Text="序列" />
+    <String ID="State" Text="状态" />
+    <String ID="SelectedSelected" Text="选择的：%SELECTED%" />
+    <String ID="CreateBackup" Text="你是否想要备份当前系统到'{0}'" />
+    <String ID="CopyingFiles" Text="恢复文件到控制器" />
+    <String ID="RestoringFiles" Text="恢复文件到控制器" />
+    <String ID="RestoreBackup" Text="你是否想要恢复备份'{0}'?所有的控制器数据都将被重写，完成后系统将被重设！" />
+    <String ID="BackingUp" Text="备份'{0}'..." />
+    <String ID="BackupInitiated" Text="备份'{0}'初始化..." />
+    <String ID="BackupAlreadyExists" Text="备份'{0}'已存在！" />
+    <String ID="BackupProcessData" Text="备份你的进程数据..." />
+    <String ID="BackupSystemData" Text="备份你的系统数据..." />
+    <String ID="BackupComplete" Text="备份完成" />
+    <String ID="BackupFailed" Text="备份'{0}'失败" />
+    <String ID="Restoring" Text="恢复'{0}'..." />
+    <String ID="RestoreInitiated" Text="恢复'{0}'初始化..." />
+    <String ID="RestoreProcessData" Text="恢复你的进程数据..." />
+    <String ID="RestoreSystemData" Text="恢复你的系统数据..." />
+    <String ID="RestoreMasterFailed" Text="获取配置主控权失败" />
+    <String ID="RestoreFailed" Text="恢复'{0}'失败" />
+    <String ID="DeleteBackup" Text="你确定想要删除'{0}'?" />
+    <String ID="Deleting" Text="删除'{0}'..." />
+    <String ID="DeleteFailed" Text="删 除'{0}'失败！" />
+    <String ID="DevicePath" Text="路径：{0}" />
+    <String ID="Device" Text="设备：" />
+    <String ID="AreYouSureModifyPosition" Text="你确定想要用'{2}'更改位置'{0}'及所属joint position'{1}'" />
+    <String ID="UserToolDefaultValues" Text="系统位置所用的工具'{0}'包含默认值.你是否想要从另一个工具中复制工具数据？" />
+    <String ID="State" Text="状态" />
+    <String ID="PositionDefined" Text="{0}已定义" />
+    <String ID="FailedToDefineJointtarget" Text="定义jointtarget{0}失败" />
+    <String ID="JointtargetNotFound" Text="未发现jointtarget{0}" />
+    <String ID="FailedToDefineRobtarget" Text="定义robtarget{0}失败" />
+    <String ID="ModuleNotFound" Text="未发现模块'{0}'" />
+    <String ID="Defined" Text="已定义" />
+    <String ID="Undefined" Text="未定义" />
+    <String ID="mass" Text="质量" />
+    <String ID="cog" Text="重心" />
+    <String ID="NoRapidMaster" Text="不能获取RAPID主控权，操作放弃！" />
+    <String ID="DataModifiedSaveChanges" Text="一个或多个数据已经被更改,控制器必须重启.保存更改？" />
+    <String ID="DataIsNotTooldata" Text="'{0}'不是一个工具点" />
+    <String ID="AreYouSureCopyToolData" Text="你确定希望从'{0}'中复制工具数据到'{1}'吗？" />
+    <String ID="ToolSuccessfullyCopied" Text="'{0}'复制成功！" />
+    <String ID="ReCalibrateServo" Text="即将重校准伺服.你确定要继续吗？" />
+    <String ID="LeftGripper" Text="左夹子：" />
+    <String ID="RightGripper" Text="右夹子：" />
+    <String ID="PleaseSelectWhichGripperToMove" Text="请选择移动哪个夹子！" />
+    <String ID="Calibrated" Text="CBS已校准！" />
+    <String ID="CheckingQueueLength" Text="重启后检查队列长度" />
+    <String ID="CheckingQueueLengthDetails" Text="队列中保留的对象可能引起机器人执行错误程序.检查任务队列" />
+    <String ID="-" Text="-" />
+  </Strings>
+</Resources>

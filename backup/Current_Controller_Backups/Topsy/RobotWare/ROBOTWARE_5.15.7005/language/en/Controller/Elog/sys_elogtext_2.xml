@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="SYS" domainNo="2" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="153" max="248">
+  <Message number="153" eDefine="SYS_ERR_SYS_REJ_MOTONSTART">
+    <Title>Motors On and Start rejected</Title>
+    <Description>Motors On and Start/Restart of program, via System IO, was rejected.</Description>
+    <Consequences>Program will not be possible to start.</Consequences>
+    <Causes>- The reason could be that the robot is outside of regain distance.<p />- The program was executing.<p />- An ongoing Backup operation.</Causes>
+    <Actions>- Jog robot into regain zone or move the program pointer.<p />- Stop program before activating System Input Motors On and Start.</Actions>
+  </Message>
+  <Message number="154" eDefine="SYS_ERR_SYS_REJ_STOP_INSTR">
+    <Title>Stop instruction rejected</Title>
+    <Description>Stop of program after instruction, via System IO, was rejected.<p /></Description>
+    <Actions />
+  </Message>
+  <Message number="156" eDefine="SYS_ERR_SYS_NO_ARG_ROUTINE_NAME">
+    <Title>Undefined Argument</Title>
+    <Description>Interrupt routine name for System IO<p />Manual Interrupt is not defined.<p /></Description>
+    <Actions>Configure the interrupt routine name.<p /></Actions>
+  </Message>
+  <Message number="157" eDefine="SYS_ERR_SYS_NO_ARG_PROGRAM_NAME">
+    <Title>Undefined Argument</Title>
+    <Description>Program name for System IO<p />LoadStart is not defined<p /></Description>
+    <Actions>Configure the program name.<p /></Actions>
+  </Message>
+  <Message number="158" eDefine="SYS_ERR_SYS_NO_ACTION_SIGNAL">
+    <Title>No System Input signal</Title>
+    <Description>A System Input has been configured to<p />an I/O-signal that doesn't exist.<p />System Input: <arg format="%s" ordinal="1" /><p />Signal Name: <arg format="%s" ordinal="2" /></Description>
+    <Consequences>The system goes to status SYS FAIL.</Consequences>
+    <Actions>Add signal <arg format="%s" ordinal="2" /> to eio.cfg or remove System Input <arg format="%s" ordinal="1" /> from eio.cfg.<p /><p />For every System Input a signal must be configured.</Actions>
+  </Message>
+  <Message number="159" eDefine="SYS_ERR_SYS_NO_STATUS_SIGNAL">
+    <Title>No System Output signal</Title>
+    <Description>A System Output has been configured to<p />an I/O-signal that doesn't exist.<p />System Output: <arg format="%s" ordinal="1" /><p />Signal Name: <arg format="%s" ordinal="2" /></Description>
+    <Consequences>The system goes to status SYS FAIL.</Consequences>
+    <Actions>Add signal <arg format="%s" ordinal="2" /> to eio.cfg or remove System Output <arg format="%s" ordinal="1" /> from eio.cfg.<p /><p />For every System Output a signal must be configured.</Actions>
+  </Message>
+  <Message number="161" eDefine="SYS_ERR_SYS_SYSMOD_NOT_FIND">
+    <Title>Path not found</Title>
+    <Description>The system module <arg format="%s" ordinal="2" /> in task<p /><arg format="%s" ordinal="3" /> has a corresponding<p />specification in the configuration<p />for "Task modules" that point out<p />a non existing file path<p /></Description>
+    <Actions>View "Task modules" in the "System<p />Parameter" menu and change the path<p />in the item for this system module</Actions>
+  </Message>
+  <Message number="162" eDefine="SYS_ERR_SYS_SYSMOD_WRITE">
+    <Title>Write error</Title>
+    <Description>A write error occur when the system try<p />to save the system module <arg format="%.14s" ordinal="2" /><p />at <arg format="%.37s" ordinal="3" /><p />in task <arg format="%.16s" ordinal="4" />. Or the file<p />system was full<p /></Description>
+    <Actions>View "Task modules" in the "System<p />Parameter" menu and change the path<p />in the item for this system module</Actions>
+  </Message>
+  <Message number="164" eDefine="SYS_ERR_SYS_SYSMOD">
+    <Title>Reconfig failed</Title>
+    <Description>There are still some unsaved system<p />modules.<p /></Description>
+    <Actions>Read error descriptions in earlier<p />messages.<p />Try another system start</Actions>
+  </Message>
+  <Message number="165" eDefine="SYS_ERR_SYS_FORCED_READY">
+    <Title>Program Pointer lost.</Title>
+    <Description>Restart is no longer possible from<p />current position.<p /></Description>
+    <Actions>The program has to be<p />started from the beginning.</Actions>
+  </Message>
+  <Message number="166" eDefine="SYS_ERR_SYS_SYSMOD_OLDER">
+    <Title>Refuse to save module</Title>
+    <Description>The module <arg format="%.14s" ordinal="2" /><p />is older than the source<p />at <arg format="%.37s" ordinal="3" /><p />in task <arg format="%.16s" ordinal="4" />.<p /></Description>
+    <Actions />
+  </Message>
+  <Message number="167" eDefine="SYS_ERR_SYS_USRMOD_NSAVED">
+    <Title>Unsaved module</Title>
+    <Description>The module <arg format="%.14s" ordinal="2" /><p />is changed but not saved<p />in task <arg format="%.16s" ordinal="3" />.<p /></Description>
+    <Actions />
+  </Message>
+  <Message number="170" eDefine="SYS_ERR_SYS_STOP">
+    <Title>The system was stopped</Title>
+    <Description>An error was detected, which stopped the system.</Description>
+    <Consequences>The system goes to status SYS STOP and the robot is stopped along the path. The full meaning of this status is described in the Trouble Shooting Manual, IRC5. </Consequences>
+    <Causes>A number of errors may cause this status transition. </Causes>
+    <Actions>1) Check other event log messages occurring at the same time to determine the actual cause. <p />2) Fix the cause of the fault.</Actions>
+  </Message>
+  <Message number="171" eDefine="SYS_ERR_SYS_HALT">
+    <Title>The system was halted</Title>
+    <Description>An error was detected, which halted the system.</Description>
+    <Consequences>The system goes to status SYS HALT, the program and robot motion is stopped and the motors are switched OFF. The full meaning of this status is described in the Trouble Shooting Manual, IRC5.</Consequences>
+    <Causes>A number of errors may cause this status transition.</Causes>
+    <Actions>1) Check other event log messages occurring at the same time to determine the actual cause. <p />2) Fix the cause of the fault. <p />3) Restart the program.</Actions>
+  </Message>
+  <Message number="172" eDefine="SYS_ERR_SYS_FAIL">
+    <Title>The system has failed</Title>
+    <Description>An error was detected, which caused the system to fail.</Description>
+    <Consequences>The system goes to status SYS FAIL. The program and robot motion is stopped and the motors are switched OFF. The full meaning of this status is described in the Trouble Shooting Manual, IRC5.</Consequences>
+    <Causes>A number of errors may cause this status transition.</Causes>
+    <Actions>1) Check other event log messages occurring at the same time to determine the actual cause. <p />2) Fix the cause of the fault. <p />3) Perform a system restart as detailed in the Operator's Manual, IRC5.</Actions>
+  </Message>
+  <Message number="176" eDefine="SYS_ERR_SYS_AO_OUTSIDE_LIMITS">
+    <Title>Analog System Output Outside Limits</Title>
+    <Description>The value <arg format="%f" ordinal="1" /> for the System Output <arg format="%s" ordinal="2" />, signal <arg format="%s" ordinal="3" />, is outside its limits (logical min: <arg format="%f" ordinal="4" /> m/s, logical max: <arg format="%f" ordinal="5" /> m/s).</Description>
+    <Consequences>The new value is not set; the previous value of the analogue signal is preserved.</Consequences>
+    <Causes>The logical upper and/or lower limit for the signal may be defined wrongly.</Causes>
+    <Actions>Adjust the values of the logical upper and/or lower limit for the signal and restart the controller.</Actions>
+  </Message>
+  <Message number="177" eDefine="SYS_ERR_DM_SHC_ERROR">
+    <Title>Short circuit in Motor phase circuit</Title>
+    <Description>
+      The motor or motor cable for joint <arg format="%s" ordinal="2" /> in drive module <arg format="%d" ordinal="1" />, drive unit number <arg format="%d" ordinal="3" />,  is a short circuit.
+    </Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>This may be caused by a faulty motor or motor cable. It may also be caused by contamination in the contactors for the cables or a failure of the motor windings.</Causes>
+    <Actions>
+      1) Make sure the motor cable is correctly connected to the drive unit. <p />2) Check the cable and motor by measuring their resistance respectively. Disconnect before measuring. <p />3) Replace any faulty component.
+    </Actions>
+  </Message>
+  <Message number="178" eDefine="SYS_ERR_SYS_WRONG_TASK_NAME">
+    <Title> Wrong task name configured</Title>
+    <Description>Wrong task name <arg format="%s" ordinal="1" /> configured for System Input <arg format="%s" ordinal="2" />.</Description>
+    <Consequences>The digital input signal will not be connected to the specified event.</Consequences>
+    <Actions>Change the configuration and restart the system.</Actions>
+  </Message>
+  <Message number="179" eDefine="SYS_ERR_SYS_MEMORY_USAGE_ERROR">
+    <Title>Disk memory critically low</Title>
+    <Description>The amount of free storage capacity on the disk has reached a critical level. It is now less than 10 Mb. Execution of RAPID programs is stopped.</Description>
+    <Consequences>The disk memory is very close to being completely full. When this happens the system will not be able to function.</Consequences>
+    <Causes>Too much data on the disk</Causes>
+    <Actions>1) Save the files on some other disk connected to the network. <p />2) Erase data from disk. <p />3) After removing files from the drive, restart the program.</Actions>
+  </Message>
+  <Message number="181" eDefine="SYS_ERR_SYS_REJ_SYS_RESET">
+    <Title>System Reset rejected.</Title>
+    <Description>System Reset via System IO<p />not allowed.<p /></Description>
+    <Actions />
+  </Message>
+  <Message number="184" eDefine="SYS_ERR_SYS_ERR_ARG_MODE">
+    <Title>Incorrect argument for System Inputs </Title>
+    <Description>An undefined Start Mode has been<p />declared for System IO.<p /></Description>
+    <Actions />
+  </Message>
+  <Message number="185" eDefine="SYS_ERR_SYS_ERR_CONF_NAME">
+    <Title>Incorrect Name</Title>
+    <Description>An undefined Name has been declared<p />in current runchn_bool configuration.<p /></Description>
+    <Actions />
+  </Message>
+  <Message number="187" eDefine="SYS_ERR_SYS_DUMP_CREATED">
+    <Title>Diagnostics record file created </Title>
+    <Description>Due to any of a number of faults, a system diagnostics file was created at <arg format="%s" ordinal="1" />. This file contains internal debug info and is intended for trouble shooting and debugging purposes.</Description>
+    <Consequences>The system will react to the error causing the stop as specified in its own event log text.</Consequences>
+    <Causes>A number of errors may cause this. Faults causing the system to go to status SYS FAIL will generally also create a diagnostics record file.</Causes>
+    <Actions>If required, the file may be appended to an error report sent to your local ABB representative.</Actions>
+  </Message>
+  <Message number="188" eDefine="SYS_ERR_SYS_IMAGE_FILE_CORRUPT">
+    <Title>System data is not valid</Title>
+    <Description>The contents of the file, <arg format="%s" ordinal="1" />, containing system persistent data is invalid. Internal error code: <arg format="%d" ordinal="2" />. The system has been started using last good system data saved earlier at <arg format="%s" ordinal="3" />. <p /></Description>
+    <Consequences>Any changes made in the system configuration or RAPID programs since <arg format="%s" ordinal="4" /> will NOT be available after restart. Any such changes will have to be re-implemented. </Consequences>
+    <Actions>1) Check other event log messages occurring at the same time to determine the actual cause. <p />2) If acceptable, perform a B-restart to accept starting with the loaded last good system data. <p />3) Reinstall the system. <p />4) Check the available disk storage capacity. If required, erase data to increase free storage capacity.</Actions>
+  </Message>
+  <Message number="189" eDefine="SYS_ERR_SYS_CTRL_FILE_CORRUPT">
+    <Title>Robot data not valid</Title>
+    <Description>Could not load the system independent<p />robot data from file <arg format="%s" ordinal="1" />.<p />The file exists but the content is not<p />valid. Internal code: <arg format="%d" ordinal="2" /><p /></Description>
+    <Actions>Check other logged messages for needed<p />actions.<p />Make sure there is free memory<p />left on the device.</Actions>
+  </Message>
+  <Message number="192" eDefine="SYS_ERR_SYS_MEMORY_USAGE_WARNING">
+    <Title>Disk memory low</Title>
+    <Description>The amount of free storage capacity on the disk is less than 25 MB. When reaching 10 MB, execution of RAPID programs will be stopped.</Description>
+    <Consequences>The disk memory is close to being completely full. When this happens the system will not be able to function.</Consequences>
+    <Causes>Too much data on the disk</Causes>
+    <Actions>1) Save the files on some other disk connected to the network. <p />2) Erase data from disk.</Actions>
+  </Message>
+  <Message number="193" eDefine="SYS_ERR_SYS_CTRL_FILE_NOT_SAVED">
+    <Title>Robot data update warning</Title>
+    <Description>Axis sync values and service information<p />data (SIS) was restored from backup.<p />The system independent robot data was<p />not saved during system shutdown. The<p />data was restored from latest backup.<p /></Description>
+    <Actions>Make sure there is free memory left on<p />the device.<p />The backup battery may be drained. Check<p />the hardware log.</Actions>
+  </Message>
+  <Message number="194" eDefine="SYS_ERR_SYS_SYSTEM_DATA_BACKUP_WARNING">
+    <Title>System data backup could not be created</Title>
+    <Description>The system was restored successfully<p />but a backup of the current system data<p />could not be created.<p /></Description>
+    <Actions>Make sure there is free memory left on<p />the device <arg format="%s" ordinal="1" />.</Actions>
+  </Message>
+  <Message number="195" eDefine="SYS_ERR_SYS_IMAGE_FILE_NOT_SAVED">
+    <Title>System data from last shutdown is lost</Title>
+    <Description>Normally, all system data is saved on shutdown. During the last shutdown saving data has failed. The system has been started using last good system data saved earlier at <arg format="%s" ordinal="1" />. </Description>
+    <Consequences>Any changes made in system configuration or RAPID programs since <arg format="%s" ordinal="2" /> will NOT be available after restart. Any such changes will have to be re-implemented. </Consequences>
+    <Causes>The backup energy bank may have been drained at the time of the shut down. The storage disk may be full.</Causes>
+    <Actions>1) Check other event log messages occurring at the same time to determine the actual cause. <p />2) If acceptable, perform a B-restart to accept starting with the loaded system data. <p />3) Reinstall the system. <p />4) Check the available disk storage capacity. If required, erase data to increase free storage capacity.</Actions>
+  </Message>
+  <Message number="196" eDefine="SYS_ERR_SYS_MOD_SAVED_TO_RECOVERY">
+    <Title>Module saved</Title>
+    <Description>During reconfiguration of the system a changed and not saved module was found.<p />The module was saved to<p /><arg format="%s" ordinal="2" />.<p /></Description>
+    <Actions />
+  </Message>
+  <Message number="197" eDefine="SYS_ERR_SYS_IMAGE_FILE_REMOVED">
+    <Title>System data from last shutdown can not be found</Title>
+    <Description>Normally, all system data is saved on shutdown. The file containing system persistent data cannot be found. The system has been started using last good system data saved earlier at <arg format="%s" ordinal="1" />.</Description>
+    <Consequences>Any changes made in system configuration or RAPID programs since <arg format="%s" ordinal="2" /> will NOT be available after restart. Any such changes will have to be re-implemented. </Consequences>
+    <Causes>The file containing the saved system data may have been manually moved or deleted.</Causes>
+    <Actions>1) Check the location and availability of the saved system data file. <p />2) If acceptable, perform a B-restart to accept starting with the loaded last good system data. <p />3) Reinstall the system. </Actions>
+  </Message>
+  <Message number="199" eDefine="SYS_ERR_SYS_REJ_SOFTSTOP">
+    <Title>System SoftStop Rejected</Title>
+    <Description>The System Input SoftStop is not allowed</Description>
+    <Actions />
+  </Message>
+  <Message number="200" eDefine="SYS_ERR_SYS_OPEN_LIM_PSC">
+    <Title> Limit Switch opened by SC</Title>
+    <Description>The limit switch on the robot has been opened by the Safety Controller (SC)</Description>
+    <Consequences>The system goes to the Guard stop state.</Consequences>
+    <Causes>The Safety Controller has opened the limit switch because of a safety violation.</Causes>
+    <Actions>1) Check for reason found in other event logs.<p />2)Check the cable between the contactor board and the Safety Controller<p />3)Do a Confirm Stop by pressing the Motors on push button or by activating the appropriated system input.
+</Actions>
+  </Message>
+  <Message number="201" eDefine="SYS_ERR_SYS_OPEN_LIM">
+    <Title>Limit Switch open</Title>
+    <Description>The limit switch on the robot has opened.</Description>
+    <Consequences>The system goes to the Motors OFF status.</Consequences>
+    <Causes>The robot has been run outside the working range defined by the limit switches fitted to the robot.</Causes>
+    <Actions>1) Press an eventual existing external "Override Limit" button and manually<p />jog the robot back into the working area.<p />2) Resume operation.</Actions>
+  </Message>
+  <Message number="202" eDefine="SYS_ERR_SYS_OPEN_ES">
+    <Title>Emergency Stop open </Title>
+    <Description>The emergency stop circuit has previously been broken, and while broken, an attempt was made to operate the robot.</Description>
+    <Consequences>The system remains in the Emergency Stop status.</Consequences>
+    <Causes>An attempt has been made to manoeuvre a control, e.g. the enabling device.</Causes>
+    <Actions>1) To resume operation, first reset the emergency stop button triggering the stop. <p />2) Then switch the system back to state Motors ON by pressing the Motors ON button on the Control Module.</Actions>
+  </Message>
+  <Message number="203" eDefine="SYS_ERR_SYS_OPEN_EN">
+    <Title>Enabling Device open</Title>
+    <Description>Only one of the two Enabling Device chains was opened.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>The teach pendant Enabling Device may be faulty or incorrectly connected. The teach pendant and its Enabling Device is described in the Trouble Shooting Manual, IRC5.</Causes>
+    <Actions>1) Check the teach pendant cable and its connection. <p />2) If required, replace the faulty teach pendant or its cable.</Actions>
+  </Message>
+  <Message number="204" eDefine="SYS_ERR_SYS_OPEN_OPKEY">
+    <Title>Operation Key imbalance</Title>
+    <Description>The system has detected an imbalance in the two parallel MANUAL / AUTO Operation Key circuits. </Description>
+    <Causes>The contact pair in any of the cables connected to the Operation Key circuit is not working correctly. </Causes>
+    <Actions>1) Isolate the cable connection causing the conflict<p />2) Connect the cable in a correct way</Actions>
+  </Message>
+  <Message number="205" eDefine="SYS_ERR_SYS_OPEN_AS">
+    <Title>Auto Stop open </Title>
+    <Description>The Automatic Mode Safeguarded Stop circuit has been broken.</Description>
+    <Consequences>The system goes to the Auto Stop status.</Consequences>
+    <Causes>One or more of the switch connected in series with the Automatic Mode Safeguarded Stop circuit have been opened, which may be causes by a large number of faults. This is only possible while in the Auto operational mode. The Automatic Mode Safeguarded Stop circuit is described in the Trouble Shooting Manual.</Causes>
+    <Actions>1) Locate the switch, reset it and restart the system. <p />2) Check cables and connections.</Actions>
+  </Message>
+  <Message number="206" eDefine="SYS_ERR_SYS_OPEN_GS">
+    <Title>General Stop open </Title>
+    <Description>The General  Mode Safeguarded Stop circuit has been broken.</Description>
+    <Consequences>The system goes to the General Stop status.</Consequences>
+    <Causes>One or more of the switch connected in series with the General  Mode Safeguarded Stop circuit have been opened, which may be causes by a large number of faults. This is possible in any operational mode.  The General Mode Safeguarded Stop circuit is described in the Trouble Shooting Manual.</Causes>
+    <Actions>1) Locate the switch, reset it and restart the system. <p />2) Check cables and connections.</Actions>
+  </Message>
+  <Message number="208" eDefine="SYS_ERR_SYS_OPEN_CH">
+    <Title>Chain switches open </Title>
+    <Description>A safety chain, other than Auto Stop and General Stop, has been broken. </Description>
+    <Consequences>The system goes to the Guard Stop status.</Consequences>
+    <Causes>One or more of the switch connected in series with the RUN Chain Top circuit have been opened, which may be causes by a large number of faults. The RUN Chain Top is described in the Trouble Shooting Manual and Circuit Diagram.</Causes>
+    <Actions>
+      1) Check other error messages for primary fault reason.<p />2) Locate the switch, reset it and restart the system. <p />3) Check cables and connections.
+    </Actions>
+  </Message>
+  <Message number="209" eDefine="SYS_ERR_SYS_OPEN_EXTCONT">
+    <Title>External Contactor open </Title>
+    <Description>An external contactor has been opened.</Description>
+    <Consequences>The system goes from the Motors OFF status to SYS HALT when attempting to start.</Consequences>
+    <Causes>The RUN chain of external equipment has been broken, which may be caused by the external contactor auxiliary contacts or, if used, any PLC, controlling it. The external contactor supplies power to a piece of external equipment, equivalently to how the RUN contactor supplies a robot. This fault may occur when attempting to go to the Motors ON mode only. The RUN chain is described in the Trouble Shooting Manual and Circuit Diagram.</Causes>
+    <Actions>1) Locate the switch, reset it and restart the system. <p />2) Check cables and connections. <p />3) Check the external contactor auxiliary contacts. <p />4) If used, check any PLC equipment controlling the external contactor.</Actions>
+  </Message>
+  <Message number="211" eDefine="SYS_ERR_SYS_FORBID_CLOSE_ENABLE">
+    <Title>Two channel fault, ENABLE chain</Title>
+    <Description>A switch in only one of the two ENABLE chains was briefly affected, opening the chain and then reclosing it, without the other chain being affected.<p /></Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>There may be a loose signal connection on either the axis computer or the Safety System. The ENABLE chain is described in the Trouble Shooting Manual and Circuit Diagram.</Causes>
+    <Actions>1) Check cables and connections. <p />2) Make sure all signal connectors on the axis computer board and the Safety System are securely connected. <p />3) If there is no loose connection, replace the faulty board.</Actions>
+  </Message>
+  <Message number="212" eDefine="SYS_ERR_SYS_FORBID_CLOSE_CH">
+    <Title>Two channel fault, RUN CHAIN</Title>
+    <Description>Only one of the two RUN chains was closed.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>Any of the switches connected to the RUN chain may be faulty or not correctly connected, causing only one channel to close. The RUN chain is described in the Trouble Shooting Manual, IRC5.</Causes>
+    <Actions>1) Check cables and connections. <p />2) Check other event log messages occurring at the same time to determine which switch caused the fault. <p />3) Make sure all switches are working correctly. <p />4) To assist in returning the chains to a defined status, first pressing, then resetting the Emergency Stop  <p />5) If there is no loose connection, replace the faulty switch.</Actions>
+  </Message>
+  <Message number="213" eDefine="SYS_ERR_SYS_RUNCHN_NOT_RESET">
+    <Title>Two channel fault </Title>
+    <Description>A brief status change in any of the RUN or ENABLE chains has been detected.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>This may be caused by a number of faults. The ENABLE and RUN chains are described in the Trouble Shooting Manual, IRC5.</Causes>
+    <Actions>1) Check cables and connections. <p />2) Check other event log messages occurring at the same time to determine the cause of the fault. <p />3) To assist in returning the chains to a defined status, first pressing, then resetting the Emergency Stop may work.</Actions>
+  </Message>
+  <Message number="214" eDefine="SYS_ERR_SYS_OPEN_DRV1LIM">
+    <Title>Limit Switch open, DRV1</Title>
+    <Description>The limit switch on the robot has opened.</Description>
+    <Consequences>The system goes to the Motors OFF status.</Consequences>
+    <Causes>The robot has been run outside the working range defined by the limit switches fitted to the robot.<p /></Causes>
+    <Actions>1) Press an eventual existing external "Override Limit" button and manually<p />jog the robot back into the working area.<p />2) Resume operation.</Actions>
+  </Message>
+  <Message number="215" eDefine="SYS_ERR_SYS_OPEN_SS">
+    <Title>Superior Stop open</Title>
+    <Description>The Superior  Mode Safeguarded Stop circuit has been opened.</Description>
+    <Consequences>The system goes to the Superior Stop status.</Consequences>
+    <Causes>One or more of the switch connected in series with the Superior  Mode Safeguarded Stop circuit have been opened, which may be causes by a large number of faults. This is possible in any operational mode.  The Superior Mode Safeguarded Stop circuit is described in the Trouble Shooting Manual.</Causes>
+    <Actions>1) Locate the switch, reset it and restart the system.</Actions>
+  </Message>
+  <Message number="216" eDefine="SYS_ERR_SYS_CLOSE_EN_AUTO">
+    <Title>Enabling device active in Auto mode</Title>
+    <Description>The system has detected that the Enabling device has been pressed for more than 3 seconds in Automatic operating mode.</Description>
+    <Consequences>The system goes to status Guard Stop.</Consequences>
+    <Actions>1. Release the Enabling device<p />2. Switch to Manual mode</Actions>
+  </Message>
+  <Message number="217" eDefine="SYS_ERR_SYS_OPEN_DRV2LIM">
+    <Title>Limit Switch open, DRV2</Title>
+    <Description>The limit switch on the robot has opened.</Description>
+    <Consequences>The system goes to the Motors OFF status.</Consequences>
+    <Causes>The robot has been run outside the working range defined by the limit switches fitted to the robot.</Causes>
+    <Actions>1) Press an eventual existing external "Override Limit" button and manually<p />jog the robot back into the working area.<p />2) Resume operation.</Actions>
+  </Message>
+  <Message number="218" eDefine="SYS_ERR_SYS_OPEN_DRV3LIM">
+    <Title>Limit Switch open, DRV3</Title>
+    <Description>The limit switch on the robot has opened.</Description>
+    <Consequences>The system goes to the Motors OFF status.</Consequences>
+    <Causes>The robot has been run outside the working range defined by the limit switches fitted to the robot.</Causes>
+    <Actions>1) Press an eventual existing external "Override Limit" button and manually<p />jog the robot back into the working area.<p />2) Resume operation.</Actions>
+  </Message>
+  <Message number="219" eDefine="SYS_ERR_SYS_OPEN_DRV4LIM">
+    <Title>Limit Switch open, DRV4</Title>
+    <Description>The limit switch on the robot has opened.</Description>
+    <Consequences>The system goes to the Motors OFF status.</Consequences>
+    <Causes>The robot has been run outside the working range defined by the limit switches fitted to the robot.</Causes>
+    <Actions>1) Press an eventual existing external "Override Limit" button and manually<p />jog the robot back into the working area.<p />2) Resume operation.</Actions>
+  </Message>
+  <Message number="220" eDefine="SYS_ERR_SYS_CONFLICT_SS">
+    <Title>Superior stop conflict </Title>
+    <Description>Only one of the two Superior Mode Safeguarded Stop chains was opened.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>Any of the switches connected to the Superior Stop chain may be faulty or not correctly connected, causing only one channel to close. The Superior Stop chain is described in the Trouble Shooting Manual, IRC5.</Causes>
+    <Actions>1) Check cables and connections. <p />2) Check other event log messages occurring at the same time to determine which switch caused the fault. <p />3) Make sure all switches are working correctly. <p />4) If there is no loose connection, replace the faulty switch.</Actions>
+  </Message>
+  <Message number="221" eDefine="SYS_ERR_SYS_CONFLICT_CH">
+    <Title>Run chain conflict</Title>
+    <Description>Status conflict<p />for Run chain.<p /></Description>
+    <Actions>Please check the Run chain cables.</Actions>
+  </Message>
+  <Message number="222" eDefine="SYS_ERR_SYS_CONFLICT_LIM">
+    <Title>Limit switch conflict</Title>
+    <Description>Only one of the two Limit switch chains was opened.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>Any of the switches connected to the Limit switch chain may be faulty or not correctly connected, causing only one channel to close. The Limit switch chain is described in the Trouble Shooting Manual, IRC5.</Causes>
+    <Actions>1) Check cables and connections. <p />2) Check other event log messages occurring at the same time to determine which switch caused the fault. <p />3) Make sure all switches are working correctly. <p />4) If there is no loose connection, replace the faulty switch.</Actions>
+  </Message>
+  <Message number="223" eDefine="SYS_ERR_SYS_CONFLICT_ES">
+    <Title>Emergency Stop conflict </Title>
+    <Description>Only one of the two Emergency Stop chains was opened.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>Any of the switches connected to the Emergency Stop chain may be faulty or not correctly connected, causing only one channel to close. The Emergency Stop chain is described in the Trouble Shooting Manual, IRC5.</Causes>
+    <Actions>1) Check cables and connections. <p />2) Check other event log messages occurring at the same time to determine which switch caused the fault. <p />3) Make sure all switches are working correctly. <p />4) If there is no loose connection, replace the faulty switch.</Actions>
+  </Message>
+  <Message number="224" eDefine="SYS_ERR_SYS_CONFLICT_EN">
+    <Title>Enabling Device conflict </Title>
+    <Description>Only one of the two Enabling Device chains was opened.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>The teach pendant Enabling Device may be faulty or incorrectly connected. The teach pendant and its Enabling Device is described in the Trouble Shooting Manual, IRC5.</Causes>
+    <Actions>1) Check the teach pendant cable and its connection. <p />2) If required, replace the faulty teach pendant or its cable.</Actions>
+  </Message>
+  <Message number="225" eDefine="SYS_ERR_SYS_CONFLICT_AS">
+    <Title>Auto Stop conflict </Title>
+    <Description>Only one of the two Automatic Mode Safeguarded Stop chains was opened.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>Any of the switches connected to the Auto Stop chain may be faulty or not correctly connected, causing only one channel to close. The Auto Stop chain is described in the Trouble Shooting Manual, IRC5.</Causes>
+    <Actions>1) Check cables and connections. <p />2) Check other event log messages occurring at the same time to determine which switch caused the fault. <p />3) Make sure all switches are working correctly. <p />4) If there is no loose connection, replace the faulty switch.</Actions>
+  </Message>
+  <Message number="226" eDefine="SYS_ERR_SYS_CONFLICT_GS">
+    <Title>General Stop conflict </Title>
+    <Description>Only one of the two General Mode Safeguarded Stop chains was opened.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>Any of the switches connected to the General Stop chain may be faulty or not correctly connected, causing only one channel to close. The General Stop chain is described in the Trouble Shooting Manual, IRC5.</Causes>
+    <Actions>1) Check cables and connections. <p />2) Check other event log messages occurring at the same time to determine which switch caused the fault. <p />3) Make sure all switches are working correctly. <p />4) If there is no loose connection, replace the faulty switch.</Actions>
+  </Message>
+  <Message number="227" eDefine="SYS_ERR_SYS_CONFLICT_DRV1K">
+    <Title>Motor Contactor conflict, DRV1</Title>
+    <Description>Only one of the two Motor Contactors for drive system 1 has acknowledged the activation order.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>A failure of the motor contactor auxiliary contacts or the supply to these.</Causes>
+    <Actions>1) Check cables and connections. <p />2) Check the function of the auxiliary contacts.</Actions>
+  </Message>
+  <Message number="231" eDefine="SYS_ERR_SYS_CONFLICT_SOFTES_CH_DEL">
+    <Title>Delayed Emergency Stop due to circuit imbalance</Title>
+    <Description>The system has detected an imbalance in the two parallel Emergency Stop circuits.</Description>
+    <Consequences>The system goes to status Emergency Stop after approximately 1 sec.</Consequences>
+    <Causes>The contact pair in any of the Emergency Stop buttons is not working correctly.</Causes>
+    <Actions>1. Isolate the Emergency Stop button causing the conflict. <p />2. Check the contact pair. <p />3. Make sure all connections are tight. <p />4. Replace the button if required.</Actions>
+  </Message>
+  <Message number="232" eDefine="SYS_ERR_SYS_CONFLICT_SOFTAS_CH_DEL">
+    <Title>Delayed Auto Stop due to circuit imbalance</Title>
+    <Description>The system has detected an imbalance in the two parallel Auto Stop circuits.</Description>
+    <Consequences>The system goes to status Guard Stop after approximately 1 sec.</Consequences>
+    <Causes>The contact pair in any of the safety devices connected to the Auto Stop circuit is not working correctly. </Causes>
+    <Actions>1. Isolate the safety device causing the conflict. <p />2. Make sure the device used is a two-channel device. <p />3. Check the contact pair. <p />4. Make sure all connections are tight. <p />5. Replace the device if required.</Actions>
+  </Message>
+  <Message number="233" eDefine="SYS_ERR_SYS_CONFLICT_SOFTGS_CH_DEL">
+    <Title>Delayed General Stop due to circuit imbalance</Title>
+    <Description>The system has detected an imbalance in the two parallel General Stop circuits.</Description>
+    <Consequences>The system goes to status Guard Stop after approximately 1 sec.</Consequences>
+    <Causes>The contact pair in any of the safety devices connected to the General Stop circuit is not working correctly. </Causes>
+    <Actions>1. Isolate the safety device causing the conflict. <p />2. Make sure the device used is a two-channel device. <p />3. Check the contact pair. <p />4. Make sure all connections are tight. <p />5. Replace the device if required.</Actions>
+  </Message>
+  <Message number="234" eDefine="SYS_ERR_SYS_CONFLICT_ES_CH_IMM">
+    <Title>Immediate Emergency Stop</Title>
+    <Description>The Emergency Stop circuits have been broken.</Description>
+    <Consequences>The system goes directly to status Emergency Stop.</Consequences>
+    <Causes>One or more of the red emergency stop buttons have been activated.</Causes>
+    <Actions>1) Isolate the Emergency Stop button that was opened. <p />2) Reset the button.</Actions>
+  </Message>
+  <Message number="235" eDefine="SYS_ERR_SYS_CONFLICT_AS_CH_IMM">
+    <Title>Immediate Auto Stop</Title>
+    <Description>The Auto Stop circuits have been broken.</Description>
+    <Consequences>The system goes directly to status Guard Stop.</Consequences>
+    <Causes>One or more of the safety device switches in the Auto Stop circuit have been opened </Causes>
+    <Actions>1) Isolate the safety device that was opened <p />2) Reset the device switch.</Actions>
+  </Message>
+  <Message number="236" eDefine="SYS_ERR_SYS_CONFLICT_GS_CH_IMM">
+    <Title>Immediate General Stop</Title>
+    <Description>The General Stop circuits have been broken.</Description>
+    <Consequences>The system goes directly to status Guard Stop.</Consequences>
+    <Causes>One or more of the safety device switches in the General Stop circuit have been opened </Causes>
+    <Actions>1) Isolate the safety device that was opened <p />2) Reset the device switch.</Actions>
+  </Message>
+  <Message number="237" eDefine="SYS_ERR_SYS_CONFLICT_SS_CH_IMM">
+    <Title>Immediate Superior Stop</Title>
+    <Description>The Superior Stop circuits have been broken.</Description>
+    <Consequences>The system goes directly to status Guard Stop.</Consequences>
+    <Causes>One or more of the safety device switches in the Superior Stop circuit have been opened </Causes>
+    <Actions>1) Isolate the safety device that was opened <p />2) Reset the device switch.</Actions>
+  </Message>
+  <Message number="238" eDefine="SYS_ERR_SYS_CONFLICT_SOFTSS_CH_DEL">
+    <Title>Delayed Superior Stop due to circuit imbalance</Title>
+    <Description>The system has detected an imbalance in the two parallel Superior Stop circuits.<p /></Description>
+    <Consequences>The system goes to status Guard Stop after approximately 1 sec.</Consequences>
+    <Causes>The contact pair in any of the safety devices connected to the Superior Stop circuit is not working correctly. </Causes>
+    <Actions>1. Isolate the safety device causing the conflict. <p />2. Make sure the device used is a two-channel device. <p />3. Check the contact pair. <p />4. Make sure all connections are tight. <p />5. Replace the device if required.</Actions>
+  </Message>
+  <Message number="240" eDefine="SYS_ERR_SYS_CONFLICT_ENABLE">
+    <Title>Conflict between ENABLE signals</Title>
+    <Description>A switch in only one of the two ENABLE chains was affected, without the other chain being affected.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>There may be a loose signal connection on the Safety System. The ENABLE chain is described in the Trouble Shooting Manual and Circuit Diagram.</Causes>
+    <Actions>1) Check cables and connections. <p />2) Make sure all signal connectors on the Safety System are securely connected. <p />3) If there is no loose connection, replace the faulty board.</Actions>
+  </Message>
+  <Message number="241" eDefine="SYS_ERR_SYS_CONFLICT_SPEED">
+    <Title>Operating mode conflict</Title>
+    <Description>There is a conflict between the operating mode selected on the operating mode selector on the controller cabinet front and the actual operating mode as detected by the axis computer. </Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>There may be a hardware fault in the operating mode selector or its cabling to the Safety System.</Causes>
+    <Actions>Check the operating mode selector and its cabling to the Safety System.</Actions>
+  </Message>
+  <Message number="245" eDefine="SYS_ERR_SYS_CONFLICT_DRV2RUN">
+    <Title>Run Control status conflict, DRV2</Title>
+    <Description>Status conflict between Run Control and Motor Contactors for drive system 2.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>A failure of the Motor Contactors or the supply to these.</Causes>
+    <Actions>1) Check cables and connections. <p />2) Do a Warm start.</Actions>
+  </Message>
+  <Message number="246" eDefine="SYS_ERR_SYS_CONFLICT_DRV3RUN">
+    <Title>Run Control status conflict, DRV3</Title>
+    <Description>Status conflict between Run Control and Motor Contactors for drive system 3.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>A failure of the Motor Contactors or the supply to these.</Causes>
+    <Actions>1) Check cables and connections. <p />2) Do a Warm start.</Actions>
+  </Message>
+  <Message number="247" eDefine="SYS_ERR_SYS_CONFLICT_DRV4RUN">
+    <Title>Run Control status conflict, DRV4</Title>
+    <Description>Status conflict between Run Control and Motor Contactors for drive system 4.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>A failure of the Motor Contactors or the supply to these.</Causes>
+    <Actions>1) Check cables and connections. <p />2) Do a Warm start.</Actions>
+  </Message>
+  <Message number="248" eDefine="SYS_ERR_SYS_CONFLICT_DRV2K">
+    <Title>Motor Contactor conflict, DRV2</Title>
+    <Description>Only one of the two Motor Contactors for drive system 2 has acknowledged the activation order.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>A failure of the motor contactor auxiliary contacts or the supply to these.</Causes>
+    <Actions>1) Check cables and connections. <p />2) Check the function of the auxiliary contacts.</Actions>
+  </Message>
+</Domain>

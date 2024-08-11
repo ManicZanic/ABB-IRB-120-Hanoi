@@ -1,0 +1,425 @@
+全部事件日志消息。
+日期:	2000-05-19 03:53:28
+系统名称：	120-500794
+控制器名称：	192.168.0.5
+控制器 ID
+	120-500794
+
+RobotWare:	5.15.2005
+密码:	rXXXYgp73IH1XXXXbXXX1rXXXU#wCGgPNDArV6
+选项:	
+	RW Control module key
+	RobotWare OS and English
+	644-5 Chinese
+	748-1 DeviceNet Lean
+	608-1 World Zones
+	616-1 PC Interface
+	623-1 Multitasking
+
+DriveModule1
+密码:	tGcQeQ-3jhlb
+选项:	
+	RW Drive module 1 key
+	ABB standard manipulator
+		IRB 120
+			120-0.58/3
+			Drive System 09 120/140/1400/1600/260 Compact
+				1-Phase Power Supply
+					No additional drive
+
+
+
+公用 个日志消息
+SeqNo     	类型  	类别                  	代码      	标题                                      	日期                  	说明	自变量
+248308    	I   	操作                  	10016   	已请求自动模式                                 	2000-05-19 00:09:01 	已向系统发送指令，准备进入自动模式。	{args: }
+248309    	I   	操作                  	10010   	电机下电 (OFF) 状态                           	2000-05-19 00:09:01 	系统处于电机下电 (OFF) 状态。从手动模式切换至自动模式，或者程序执行过程中电机上电 (ON) 电路被打开后，系统就会进入此状态。	{args: }
+248310    	I   	操作                  	10017   	已确认自动模式                                 	2000-05-19 00:09:03 	系统处于自动模式。	{args: }
+248311    	E   	系统                  	20072   	不允许该命令                                  	2000-05-19 00:09:35 	电机下电 ( Motors OFF) 状态下不允许该命令。	{args: "142"}
+248312    	I   	操作                  	10002   	程序指针已经复位                                	2000-05-19 00:09:47 	任务 T_ROB1 的程序指针已经复位。	{args: "1", "0", "T_ROB1"}
+248313    	E   	系统                  	20072   	不允许该命令                                  	2000-05-19 00:09:48 	电机下电 ( Motors OFF) 状态下不允许该命令。	{args: "142"}
+248314    	I   	操作                  	10011   	电机上电(ON) 状态                             	2000-05-19 00:09:57 	系统处于电机上电 (ON) 状态。	{args: }
+248315    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 00:10:03 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248316    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 00:10:11 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248317    	I   	操作                  	10002   	程序指针已经复位                                	2000-05-19 00:14:19 	任务 T_ROB1 的程序指针已经复位。	{args: "1", "0", "T_ROB1"}
+248318    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 00:14:20 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248319    	I   	操作                  	10015   	已选择手动模式                                 	2000-05-19 01:09:15 	系统处于手动模式。	{args: }
+248320    	I   	操作                  	10012   	安全防护停止状态                                	2000-05-19 01:09:15 	系统处于防护停止状态。从自动方式切换为手动方式，或者由于出现紧急停止、常规停止、自动停止或上级停止而导致的电机开启电路被断开后，均会进入此状态。	{args: }
+248321    	I   	操作                  	10010   	电机下电 (OFF) 状态                           	2000-05-19 01:09:19 	系统处于电机下电 (OFF) 状态。从手动模式切换至自动模式，或者程序执行过程中电机上电 (ON) 电路被打开后，系统就会进入此状态。	{args: }
+248322    	I   	操作                  	10011   	电机上电(ON) 状态                             	2000-05-19 01:09:19 	系统处于电机上电 (ON) 状态。	{args: }
+248323    	I   	操作                  	10012   	安全防护停止状态                                	2000-05-19 01:09:29 	系统处于防护停止状态。从自动方式切换为手动方式，或者由于出现紧急停止、常规停止、自动停止或上级停止而导致的电机开启电路被断开后，均会进入此状态。	{args: }
+248324    	I   	操作                  	10010   	电机下电 (OFF) 状态                           	2000-05-19 01:09:29 	系统处于电机下电 (OFF) 状态。从手动模式切换至自动模式，或者程序执行过程中电机上电 (ON) 电路被打开后，系统就会进入此状态。	{args: }
+248325    	I   	操作                  	10011   	电机上电(ON) 状态                             	2000-05-19 01:09:30 	系统处于电机上电 (ON) 状态。	{args: }
+248326    	I   	操作                  	10012   	安全防护停止状态                                	2000-05-19 01:09:33 	系统处于防护停止状态。从自动方式切换为手动方式，或者由于出现紧急停止、常规停止、自动停止或上级停止而导致的电机开启电路被断开后，均会进入此状态。	{args: }
+248327    	I   	操作                  	10016   	已请求自动模式                                 	2000-05-19 01:09:36 	已向系统发送指令，准备进入自动模式。	{args: }
+248328    	I   	操作                  	10010   	电机下电 (OFF) 状态                           	2000-05-19 01:09:36 	系统处于电机下电 (OFF) 状态。从手动模式切换至自动模式，或者程序执行过程中电机上电 (ON) 电路被打开后，系统就会进入此状态。	{args: }
+248329    	I   	操作                  	10017   	已确认自动模式                                 	2000-05-19 01:09:37 	系统处于自动模式。	{args: }
+248330    	I   	操作                  	10002   	程序指针已经复位                                	2000-05-19 01:09:39 	任务 T_ROB1 的程序指针已经复位。	{args: "1", "0", "T_ROB1"}
+248331    	E   	系统                  	20072   	不允许该命令                                  	2000-05-19 01:09:42 	电机下电 ( Motors OFF) 状态下不允许该命令。	{args: "142"}
+248332    	I   	操作                  	10011   	电机上电(ON) 状态                             	2000-05-19 01:09:45 	系统处于电机上电 (ON) 状态。	{args: }
+248333    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 01:09:47 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248334    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 01:10:27 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248335    	I   	操作                  	10015   	已选择手动模式                                 	2000-05-19 01:10:31 	系统处于手动模式。	{args: }
+248336    	I   	操作                  	10012   	安全防护停止状态                                	2000-05-19 01:10:31 	系统处于防护停止状态。从自动方式切换为手动方式，或者由于出现紧急停止、常规停止、自动停止或上级停止而导致的电机开启电路被断开后，均会进入此状态。	{args: }
+248337    	I   	操作                  	10016   	已请求自动模式                                 	2000-05-19 01:10:58 	已向系统发送指令，准备进入自动模式。	{args: }
+248338    	I   	操作                  	10010   	电机下电 (OFF) 状态                           	2000-05-19 01:10:58 	系统处于电机下电 (OFF) 状态。从手动模式切换至自动模式，或者程序执行过程中电机上电 (ON) 电路被打开后，系统就会进入此状态。	{args: }
+248339    	I   	操作                  	10017   	已确认自动模式                                 	2000-05-19 01:11:00 	系统处于自动模式。	{args: }
+248340    	E   	系统                  	20072   	不允许该命令                                  	2000-05-19 01:11:02 	电机下电 ( Motors OFF) 状态下不允许该命令。	{args: "142"}
+248341    	I   	操作                  	10011   	电机上电(ON) 状态                             	2000-05-19 01:11:05 	系统处于电机上电 (ON) 状态。	{args: }
+248342    	I   	操作                  	10052   	返回启动                                    	2000-05-19 01:11:22 	返回移动已启动。	{args: "0"}
+248343    	I   	操作                  	10053   	返回就绪                                    	2000-05-19 01:11:22 	返回移动就绪。	{args: "0"}
+248344    	I   	操作                  	10151   	程序已启动                                   	2000-05-19 01:11:22 	从任务的入口例行程序的第一个指令开始执行任务 T_ROB1 。起因是外部客户端。	{args: "1", "T_ROB1"}
+248345    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:11:24 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rMoveHome/MoveJ/352	{args: "T_ROB1", "/MainModule/rMoveHome/MoveJ/352"}
+248346    	W   	系统                  	20148   	确认被拒绝                                   	2000-05-19 01:11:27 	通过系统 IO 的“紧急停止”重置确认被拒绝。	{args: "-2"}
+248347    	W   	系统                  	20153   	电机上电并启动被拒绝                              	2000-05-19 01:11:27 	通过系统 I/O 执行电机上电并启动程序被拒绝。	{args: "-33"}
+248348    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:11:29 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rMoveHome/MoveJ/352	{args: "T_ROB1", "/MainModule/rMoveHome/MoveJ/352"}
+248349    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 01:12:28 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248350    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:12:48 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248351    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:13:17 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248352    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:13:57 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248353    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:14:25 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248354    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:14:53 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248355    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:15:33 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248356    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:16:04 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248357    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:16:32 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248358    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:17:00 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248359    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:17:34 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248360    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 01:18:57 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248361    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:19:12 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248362    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:19:47 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248363    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:20:15 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248364    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:20:44 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248365    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:21:19 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248366    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:21:51 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248367    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:22:23 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248368    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:23:21 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248369    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:23:56 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248370    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:24:24 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248371    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:24:53 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248372    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:25:21 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248373    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:25:51 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248374    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:26:18 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248375    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:26:50 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248376    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:27:22 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248377    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:27:54 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248378    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:28:29 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248379    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:28:56 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248380    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:29:29 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248381    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:29:56 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248382    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:30:25 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248383    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:30:52 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248384    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:31:45 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248385    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:32:29 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248386    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:33:03 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248387    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:33:33 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248388    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:34:00 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248389    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:34:38 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248390    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:35:17 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248391    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:35:45 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248392    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:36:12 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248393    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:36:47 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248394    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:37:19 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248395    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:37:47 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248396    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 01:39:09 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248397    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 01:40:10 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248398    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 01:41:11 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248399    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 01:42:12 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248400    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 01:43:12 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248401    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 01:44:13 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248402    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 01:45:14 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248403    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 01:46:14 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248404    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 01:47:15 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248405    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 01:48:16 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248406    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 01:49:16 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248407    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 01:50:17 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248408    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 01:51:18 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248409    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 01:52:19 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248410    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 01:53:19 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248411    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 01:54:20 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248412    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 01:55:21 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248413    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 01:56:21 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248414    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 01:57:22 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248415    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 01:58:23 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248416    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 01:59:23 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248417    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:00:24 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248418    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:01:25 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248419    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:02:26 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248420    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:03:26 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248421    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:04:27 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248422    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:05:28 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248423    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:06:28 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248424    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:07:29 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248425    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:08:30 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248426    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:09:30 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248427    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:10:31 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248428    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:11:32 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248429    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:12:33 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248430    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:13:33 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248431    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:14:34 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248432    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:15:35 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248433    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:16:35 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248434    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:17:36 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248435    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:18:37 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248436    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:19:37 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248437    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:20:38 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248438    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:21:39 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248439    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:22:40 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248440    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:23:40 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248441    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:24:41 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248442    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:25:42 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248443    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:26:42 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248444    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:27:43 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248445    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:28:44 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248446    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:29:44 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248447    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:30:45 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248448    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:31:46 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248449    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:32:47 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248450    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:33:47 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248451    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:34:48 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248452    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:35:49 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248453    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:36:49 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248454    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:37:50 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248455    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:38:51 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248456    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:39:51 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248457    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:40:52 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248458    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:41:53 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248459    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:42:54 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248460    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:43:54 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248461    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:44:55 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248462    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:45:56 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248463    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:46:56 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248464    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:47:57 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248465    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:48:58 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248466    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:49:58 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248467    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:50:59 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248468    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:52:00 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248469    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:53:01 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248470    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:54:01 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248471    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:55:02 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248472    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:56:03 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248473    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:57:03 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248474    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:58:04 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248475    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:59:05 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248476    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 03:00:05 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248477    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 03:01:06 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248478    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 03:02:07 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248479    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 03:03:08 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248480    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 03:04:08 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248481    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 03:05:09 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248482    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 03:06:10 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248483    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 03:07:10 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248484    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 03:08:11 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248485    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 03:09:12 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248486    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 03:10:12 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248487    	I   	操作                  	10045   	系统已重新启动                                 	2000-05-19 03:15:50 	重新启动了一个已安装的系统。	{args: }
+248488    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-05-19 03:15:51 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+248490    	I   	操作                  	10010   	电机下电 (OFF) 状态                           	2000-05-19 03:16:12 	系统处于电机下电 (OFF) 状态。从手动模式切换至自动模式，或者程序执行过程中电机上电 (ON) 电路被打开后，系统就会进入此状态。	{args: }
+248491    	W   	系统                  	20133   	自动模式中的调试设置                              	2000-05-19 03:16:12 	在自动模式中启动时已锁定一个或多个逻辑 I/O 信号。	{args: }
+248492    	I   	操作                  	10017   	已确认自动模式                                 	2000-05-19 03:16:12 	系统处于自动模式。	{args: }
+248493    	I   	操作                  	10002   	程序指针已经复位                                	2000-05-19 03:16:12 	任务 Socket 的程序指针已经复位。	{args: "2", "0", "Socket"}
+248494    	I   	操作                  	10150   	程序已启动                                   	2000-05-19 03:16:12 	从任务的入口例行程序的第一个指令开始执行任务 Socket 。起因无法判定。	{args: "2", "Socket"}
+248495    	I   	操作                  	10129   	程序已停止                                   	2000-05-19 03:16:13 	任务 T_ROB1 已停止。原因是 RESET（重置）或 POWER_ON 的事件例行程序就绪。	{args: "1", "T_ROB1"}
+248496    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:38:00 	请求的 MotOnStart 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "MotOnStart", "QuickStop", "diEmptyDone", "MotOnStart", "QuickStop"}
+248497    	E   	系统                  	20072   	不允许该命令                                  	2000-05-19 03:38:29 	电机下电 ( Motors OFF) 状态下不允许该命令。	{args: "142"}
+248498    	E   	系统                  	20072   	不允许该命令                                  	2000-05-19 03:38:32 	电机下电 ( Motors OFF) 状态下不允许该命令。	{args: "142"}
+248499    	E   	系统                  	20072   	不允许该命令                                  	2000-05-19 03:38:34 	电机下电 ( Motors OFF) 状态下不允许该命令。	{args: "142"}
+248500    	I   	操作                  	10011   	电机上电(ON) 状态                             	2000-05-19 03:38:43 	系统处于电机上电 (ON) 状态。	{args: }
+248501    	I   	操作                  	10002   	程序指针已经复位                                	2000-05-19 03:38:48 	任务 T_ROB1 的程序指针已经复位。	{args: "1", "0", "T_ROB1"}
+248502    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:38:50 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248503    	I   	操作                  	10002   	程序指针已经复位                                	2000-05-19 03:39:08 	任务 T_ROB1 的程序指针已经复位。	{args: "1", "0", "T_ROB1"}
+248504    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:39:09 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248505    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:39:11 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248506    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:40:18 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248507    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:43:51 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248508    	I   	操作                  	10002   	程序指针已经复位                                	2000-05-19 03:44:01 	任务 T_ROB1 的程序指针已经复位。	{args: "1", "0", "T_ROB1"}
+248509    	I   	操作                  	10002   	程序指针已经复位                                	2000-05-19 03:44:23 	任务 T_ROB1 的程序指针已经复位。	{args: "1", "0", "T_ROB1"}
+248510    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:44:24 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248511    	I   	操作                  	10002   	程序指针已经复位                                	2000-05-19 03:44:34 	任务 T_ROB1 的程序指针已经复位。	{args: "1", "0", "T_ROB1"}
+248512    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:44:41 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248513    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:44:42 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248514    	I   	操作                  	10002   	程序指针已经复位                                	2000-05-19 03:44:59 	任务 T_ROB1 的程序指针已经复位。	{args: "1", "0", "T_ROB1"}
+248515    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:45:29 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248516    	I   	操作                  	10012   	安全防护停止状态                                	2000-05-19 03:45:35 	系统处于防护停止状态。从自动方式切换为手动方式，或者由于出现紧急停止、常规停止、自动停止或上级停止而导致的电机开启电路被断开后，均会进入此状态。	{args: }
+248517    	I   	操作                  	10013   	紧急停止状态                                  	2000-05-19 03:45:35 	紧急停止设备将电机开启 (ON) 电路断开，系统处于紧急停止状态。 	{args: }
+248518    	I   	操作                  	10002   	程序指针已经复位                                	2000-05-19 03:45:44 	任务 T_ROB1 的程序指针已经复位。	{args: "1", "0", "T_ROB1"}
+248519    	I   	操作                  	10002   	程序指针已经复位                                	2000-05-19 03:45:53 	任务 T_ROB1 的程序指针已经复位。	{args: "1", "0", "T_ROB1"}
+248520    	I   	操作                  	10010   	电机下电 (OFF) 状态                           	2000-05-19 03:45:57 	系统处于电机下电 (OFF) 状态。从手动模式切换至自动模式，或者程序执行过程中电机上电 (ON) 电路被打开后，系统就会进入此状态。	{args: }
+248521    	I   	操作                  	10011   	电机上电(ON) 状态                             	2000-05-19 03:45:58 	系统处于电机上电 (ON) 状态。	{args: }
+248522    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:46:00 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248523    	I   	操作                  	10015   	已选择手动模式                                 	2000-05-19 03:46:06 	系统处于手动模式。	{args: }
+248524    	I   	操作                  	10012   	安全防护停止状态                                	2000-05-19 03:46:06 	系统处于防护停止状态。从自动方式切换为手动方式，或者由于出现紧急停止、常规停止、自动停止或上级停止而导致的电机开启电路被断开后，均会进入此状态。	{args: }
+248525    	I   	操作                  	10016   	已请求自动模式                                 	2000-05-19 03:46:09 	已向系统发送指令，准备进入自动模式。	{args: }
+248526    	I   	操作                  	10010   	电机下电 (OFF) 状态                           	2000-05-19 03:46:09 	系统处于电机下电 (OFF) 状态。从手动模式切换至自动模式，或者程序执行过程中电机上电 (ON) 电路被打开后，系统就会进入此状态。	{args: }
+248527    	I   	操作                  	10017   	已确认自动模式                                 	2000-05-19 03:46:21 	系统处于自动模式。	{args: }
+248528    	I   	操作                  	10002   	程序指针已经复位                                	2000-05-19 03:46:24 	任务 T_ROB1 的程序指针已经复位。	{args: "1", "0", "T_ROB1"}
+248529    	I   	操作                  	10011   	电机上电(ON) 状态                             	2000-05-19 03:46:27 	系统处于电机上电 (ON) 状态。	{args: }
+248530    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:46:29 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248531    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:47:16 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248532    	I   	操作                  	10002   	程序指针已经复位                                	2000-05-19 03:47:42 	任务 T_ROB1 的程序指针已经复位。	{args: "1", "0", "T_ROB1"}
+248533    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:47:46 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248534    	I   	操作                  	10012   	安全防护停止状态                                	2000-05-19 03:49:28 	系统处于防护停止状态。从自动方式切换为手动方式，或者由于出现紧急停止、常规停止、自动停止或上级停止而导致的电机开启电路被断开后，均会进入此状态。	{args: }
+248535    	I   	操作                  	10013   	紧急停止状态                                  	2000-05-19 03:49:28 	紧急停止设备将电机开启 (ON) 电路断开，系统处于紧急停止状态。 	{args: }
+248536    	E   	系统                  	20202   	“紧急停止”已打开                               	2000-05-19 03:49:29 	紧急停止电路在之前已断开，然而在断开时试图操作机器人。	{args: }
+248537    	I   	操作                  	10010   	电机下电 (OFF) 状态                           	2000-05-19 03:50:17 	系统处于电机下电 (OFF) 状态。从手动模式切换至自动模式，或者程序执行过程中电机上电 (ON) 电路被打开后，系统就会进入此状态。	{args: }
+248538    	I   	操作                  	10011   	电机上电(ON) 状态                             	2000-05-19 03:50:17 	系统处于电机上电 (ON) 状态。	{args: }
+248539    	I   	操作                  	10015   	已选择手动模式                                 	2000-05-19 03:50:46 	系统处于手动模式。	{args: }
+248540    	I   	操作                  	10012   	安全防护停止状态                                	2000-05-19 03:50:46 	系统处于防护停止状态。从自动方式切换为手动方式，或者由于出现紧急停止、常规停止、自动停止或上级停止而导致的电机开启电路被断开后，均会进入此状态。	{args: }
+248541    	I   	操作                  	10016   	已请求自动模式                                 	2000-05-19 03:51:48 	已向系统发送指令，准备进入自动模式。	{args: }
+248542    	I   	操作                  	10010   	电机下电 (OFF) 状态                           	2000-05-19 03:51:48 	系统处于电机下电 (OFF) 状态。从手动模式切换至自动模式，或者程序执行过程中电机上电 (ON) 电路被打开后，系统就会进入此状态。	{args: }
+248543    	I   	操作                  	10015   	已选择手动模式                                 	2000-05-19 03:51:49 	系统处于手动模式。	{args: }
+248544    	I   	操作                  	10012   	安全防护停止状态                                	2000-05-19 03:51:49 	系统处于防护停止状态。从自动方式切换为手动方式，或者由于出现紧急停止、常规停止、自动停止或上级停止而导致的电机开启电路被断开后，均会进入此状态。	{args: }
+248545    	I   	操作                  	10002   	程序指针已经复位                                	2000-05-19 03:52:19 	任务 T_ROB1 的程序指针已经复位。	{args: "1", "0", "T_ROB1"}
+248546    	I   	操作                  	10016   	已请求自动模式                                 	2000-05-19 03:52:20 	已向系统发送指令，准备进入自动模式。	{args: }
+248547    	I   	操作                  	10010   	电机下电 (OFF) 状态                           	2000-05-19 03:52:20 	系统处于电机下电 (OFF) 状态。从手动模式切换至自动模式，或者程序执行过程中电机上电 (ON) 电路被打开后，系统就会进入此状态。	{args: }
+248548    	I   	操作                  	10017   	已确认自动模式                                 	2000-05-19 03:52:25 	系统处于自动模式。	{args: }
+248549    	I   	操作                  	10011   	电机上电(ON) 状态                             	2000-05-19 03:52:28 	系统处于电机上电 (ON) 状态。	{args: }
+248550    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:52:32 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248551    	I   	操作                  	10002   	程序指针已经复位                                	2000-05-19 03:52:45 	任务 T_ROB1 的程序指针已经复位。	{args: "1", "0", "T_ROB1"}
+248552    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:52:47 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248553    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:53:12 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248554    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:53:13 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+
+操作 个日志消息
+SeqNo     	类型  	类别                  	代码      	标题                                      	日期                  	说明	自变量
+248527    	I   	操作                  	10017   	已确认自动模式                                 	2000-05-19 03:46:21 	系统处于自动模式。	{args: }
+248528    	I   	操作                  	10002   	程序指针已经复位                                	2000-05-19 03:46:24 	任务 T_ROB1 的程序指针已经复位。	{args: "1", "0", "T_ROB1"}
+248529    	I   	操作                  	10011   	电机上电(ON) 状态                             	2000-05-19 03:46:27 	系统处于电机上电 (ON) 状态。	{args: }
+248532    	I   	操作                  	10002   	程序指针已经复位                                	2000-05-19 03:47:42 	任务 T_ROB1 的程序指针已经复位。	{args: "1", "0", "T_ROB1"}
+248534    	I   	操作                  	10012   	安全防护停止状态                                	2000-05-19 03:49:28 	系统处于防护停止状态。从自动方式切换为手动方式，或者由于出现紧急停止、常规停止、自动停止或上级停止而导致的电机开启电路被断开后，均会进入此状态。	{args: }
+248535    	I   	操作                  	10013   	紧急停止状态                                  	2000-05-19 03:49:28 	紧急停止设备将电机开启 (ON) 电路断开，系统处于紧急停止状态。 	{args: }
+248537    	I   	操作                  	10010   	电机下电 (OFF) 状态                           	2000-05-19 03:50:17 	系统处于电机下电 (OFF) 状态。从手动模式切换至自动模式，或者程序执行过程中电机上电 (ON) 电路被打开后，系统就会进入此状态。	{args: }
+248538    	I   	操作                  	10011   	电机上电(ON) 状态                             	2000-05-19 03:50:17 	系统处于电机上电 (ON) 状态。	{args: }
+248539    	I   	操作                  	10015   	已选择手动模式                                 	2000-05-19 03:50:46 	系统处于手动模式。	{args: }
+248540    	I   	操作                  	10012   	安全防护停止状态                                	2000-05-19 03:50:46 	系统处于防护停止状态。从自动方式切换为手动方式，或者由于出现紧急停止、常规停止、自动停止或上级停止而导致的电机开启电路被断开后，均会进入此状态。	{args: }
+248541    	I   	操作                  	10016   	已请求自动模式                                 	2000-05-19 03:51:48 	已向系统发送指令，准备进入自动模式。	{args: }
+248542    	I   	操作                  	10010   	电机下电 (OFF) 状态                           	2000-05-19 03:51:48 	系统处于电机下电 (OFF) 状态。从手动模式切换至自动模式，或者程序执行过程中电机上电 (ON) 电路被打开后，系统就会进入此状态。	{args: }
+248543    	I   	操作                  	10015   	已选择手动模式                                 	2000-05-19 03:51:49 	系统处于手动模式。	{args: }
+248544    	I   	操作                  	10012   	安全防护停止状态                                	2000-05-19 03:51:49 	系统处于防护停止状态。从自动方式切换为手动方式，或者由于出现紧急停止、常规停止、自动停止或上级停止而导致的电机开启电路被断开后，均会进入此状态。	{args: }
+248545    	I   	操作                  	10002   	程序指针已经复位                                	2000-05-19 03:52:19 	任务 T_ROB1 的程序指针已经复位。	{args: "1", "0", "T_ROB1"}
+248546    	I   	操作                  	10016   	已请求自动模式                                 	2000-05-19 03:52:20 	已向系统发送指令，准备进入自动模式。	{args: }
+248547    	I   	操作                  	10010   	电机下电 (OFF) 状态                           	2000-05-19 03:52:20 	系统处于电机下电 (OFF) 状态。从手动模式切换至自动模式，或者程序执行过程中电机上电 (ON) 电路被打开后，系统就会进入此状态。	{args: }
+248548    	I   	操作                  	10017   	已确认自动模式                                 	2000-05-19 03:52:25 	系统处于自动模式。	{args: }
+248549    	I   	操作                  	10011   	电机上电(ON) 状态                             	2000-05-19 03:52:28 	系统处于电机上电 (ON) 状态。	{args: }
+248551    	I   	操作                  	10002   	程序指针已经复位                                	2000-05-19 03:52:45 	任务 T_ROB1 的程序指针已经复位。	{args: "1", "0", "T_ROB1"}
+
+系统 个日志消息
+SeqNo     	类型  	类别                  	代码      	标题                                      	日期                  	说明	自变量
+248498    	E   	系统                  	20072   	不允许该命令                                  	2000-05-19 03:38:32 	电机下电 ( Motors OFF) 状态下不允许该命令。	{args: "142"}
+248499    	E   	系统                  	20072   	不允许该命令                                  	2000-05-19 03:38:34 	电机下电 ( Motors OFF) 状态下不允许该命令。	{args: "142"}
+248502    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:38:50 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248504    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:39:09 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248505    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:39:11 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248506    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:40:18 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248507    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:43:51 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248510    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:44:24 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248512    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:44:41 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248513    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:44:42 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248515    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:45:29 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248522    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:46:00 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248530    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:46:29 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248531    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:47:16 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248533    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:47:46 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248536    	E   	系统                  	20202   	“紧急停止”已打开                               	2000-05-19 03:49:29 	紧急停止电路在之前已断开，然而在断开时试图操作机器人。	{args: }
+248550    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:52:32 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248552    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:52:47 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248553    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:53:12 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+248554    	E   	系统                  	20293   	系统输入受限                                  	2000-05-19 03:53:13 	请求的 Start 受 I/O 信号 diEmptyDone 所设置的系统输入 QuickStop 限制。	{args: "Start", "QuickStop", "diEmptyDone", "Start", "QuickStop"}
+
+硬件 个日志消息
+SeqNo     	类型  	类别                  	代码      	标题                                      	日期                  	说明	自变量
+6483      	E   	硬件                  	37001   	电机开启 (ON) 接触器启动错误                       	2013-08-07 20:02:56 	驱动模块 1 中的电机开启 (ON) 接触器 1 未能按命令关闭。	{args: "1", "1"}
+6714      	E   	硬件                  	37001   	电机开启 (ON) 接触器启动错误                       	2013-08-08 16:00:16 	驱动模块 1 中的电机开启 (ON) 接触器 1 未能按命令关闭。	{args: "1", "1"}
+6752      	E   	硬件                  	37001   	电机开启 (ON) 接触器启动错误                       	2013-08-08 16:03:39 	驱动模块 1 中的电机开启 (ON) 接触器 1 未能按命令关闭。	{args: "1", "1"}
+95363     	E   	硬件                  	37001   	电机开启 (ON) 接触器启动错误                       	2013-10-26 08:31:29 	驱动模块 1 中的电机开启 (ON) 接触器 1 未能按命令关闭。	{args: "1", "1"}
+97918     	E   	硬件                  	37001   	电机开启 (ON) 接触器启动错误                       	2013-10-29 07:03:42 	驱动模块 1 中的电机开启 (ON) 接触器 1 未能按命令关闭。	{args: "1", "1"}
+
+程序 个日志消息
+SeqNo     	类型  	类别                  	代码      	标题                                      	日期                  	说明	自变量
+248467    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:50:59 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248468    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:52:00 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248469    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:53:01 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248470    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:54:01 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248471    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:55:02 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248472    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:56:03 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248473    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:57:03 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248474    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:58:04 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248475    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 02:59:05 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248476    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 03:00:05 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248477    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 03:01:06 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248478    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 03:02:07 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248479    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 03:03:08 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248480    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 03:04:08 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248481    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 03:05:09 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248482    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 03:06:10 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248483    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 03:07:10 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248484    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 03:08:11 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248485    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 03:09:12 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+248486    	W   	程序                  	41581   	套接字错误                                   	2000-05-19 03:10:12 	任务： Socket指令在超时期间内未完成。程序引用 /Socket/main/SocketReceive/30	{args: "Socket", "/Socket/main/SocketReceive/30", "ERR_SOCK_TIMEOUT", "-26:1:2::0:60.000000"}
+
+动作 个日志消息
+SeqNo     	类型  	类别                  	代码      	标题                                      	日期                  	说明	自变量
+248376    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:27:22 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248377    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:27:54 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248378    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:28:29 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248379    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:28:56 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248380    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:29:29 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248381    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:29:56 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248382    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:30:25 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248383    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:30:52 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248384    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:31:45 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248385    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:32:29 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248386    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:33:03 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248387    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:33:33 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248388    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:34:00 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248389    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:34:38 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248390    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:35:17 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248391    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:35:45 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248392    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:36:12 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248393    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:36:47 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248394    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:37:19 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+248395    	W   	动作                  	50024   	转角路径故障                                  	2000-05-19 01:37:47 	任务： T_ROB1由于以下原因，转角路径作为停止点执行：- 延时。- 编程点太近- 系统要求较高的 CPU 负载。程序引用 /MainModule/rGotoMB/MoveL/564	{args: "T_ROB1", "/MainModule/rGotoMB/MoveL/564"}
+
+IO 与通信 个日志消息
+SeqNo     	类型  	类别                  	代码      	标题                                      	日期                  	说明	自变量
+170509    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-02-25 20:14:49 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+179274    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-03-05 17:25:19 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+196327    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-03-18 02:26:11 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+197293    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-03-18 18:50:18 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+199344    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-03-19 23:58:27 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+200807    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-03-21 05:30:57 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+208167    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-03-26 05:35:41 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+210038    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-04-27 18:56:23 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+210071    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-04-27 19:12:28 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+221302    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-05-02 17:42:19 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+229010    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-05-06 04:07:10 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+229021    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-05-06 05:47:27 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+233193    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-05-08 05:58:53 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+233202    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-05-08 06:00:11 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+235537    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-05-09 07:07:54 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+242964    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-05-13 14:57:02 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+242973    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-05-13 15:04:19 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+248213    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-05-18 23:34:33 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+248266    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-05-18 23:51:25 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+248488    	W   	IO 与通信              	71405   	重复的 I/O 单元映射                            	2000-05-19 03:15:51 	I/O 信号 <diRobLeave> 与 I/O 信号 <diHomePos> 具有相同的单元映射。	{args: "diRobLeave", "diHomePos"}
+
+内部 个日志消息
+SeqNo     	类型  	类别                  	代码      	标题                                      	日期                  	说明	自变量
+191995    	E   	内部                  	100000  	内部错误                                    	2000-03-14 12:52:03 	Cabts.c 10503 Regain on path: master_request_control returnd -2	{args: "Cabts.c 10503 Regain on path: master_request_control returnd -2"}
+191996    	E   	内部                  	100000  	内部错误                                    	2000-03-14 12:52:03 	Cabts.c 9612  An order_regain_to_path failed -2 	{args: "Cabts.c 9612  An order_regain_to_path failed -2 "}
+196328    	E   	内部                  	100000  	内部错误                                    	2000-03-18 02:26:23 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+197294    	E   	内部                  	100000  	内部错误                                    	2000-03-18 18:50:30 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+199345    	E   	内部                  	100000  	内部错误                                    	2000-03-19 23:58:39 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+200808    	E   	内部                  	100000  	内部错误                                    	2000-03-21 05:31:09 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+208168    	E   	内部                  	100000  	内部错误                                    	2000-03-26 05:35:53 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+210039    	E   	内部                  	100000  	内部错误                                    	2000-04-27 18:56:35 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+210072    	E   	内部                  	100000  	内部错误                                    	2000-04-27 19:12:40 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+221303    	E   	内部                  	100000  	内部错误                                    	2000-05-02 17:42:31 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+229011    	E   	内部                  	100000  	内部错误                                    	2000-05-06 04:07:22 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+229022    	E   	内部                  	100000  	内部错误                                    	2000-05-06 05:47:39 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+233194    	E   	内部                  	100000  	内部错误                                    	2000-05-08 05:59:05 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+233203    	E   	内部                  	100000  	内部错误                                    	2000-05-08 06:00:23 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+235538    	E   	内部                  	100000  	内部错误                                    	2000-05-09 07:08:06 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+242965    	E   	内部                  	100000  	内部错误                                    	2000-05-13 14:57:14 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+242974    	E   	内部                  	100000  	内部错误                                    	2000-05-13 15:04:31 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+248214    	E   	内部                  	100000  	内部错误                                    	2000-05-18 23:34:45 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+248267    	E   	内部                  	100000  	内部错误                                    	2000-05-18 23:51:37 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}
+248489    	E   	内部                  	100000  	内部错误                                    	2000-05-19 03:16:03 	Cb_mirror.c 404 Warning, application software don't match HW, application running.	{args: "Cb_mirror.c 404 Warning, application software don't match HW, application running."}

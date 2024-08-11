@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.Controls.IO.FileServices">
+  <Forms />
+  <Menus />
+  <Strings>
+    <String ID="Name" Text="名称" />
+    <String ID="Size" Text="大小" />
+    <String ID="Date" Text="日期" />
+    <String ID="Loading" Text="载入..." />
+  </Strings>
+</Resources>
