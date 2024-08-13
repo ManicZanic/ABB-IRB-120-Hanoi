@@ -1,3 +1,0 @@
-#Loaded keys in C:\abb work\abb data\Project\2013\QM130911\socket\INTERNAL\keystr.txt:
-d4aaeS9pkhcaaaabaaaipaaaR
-WSxSBVJ0gbUa	1
