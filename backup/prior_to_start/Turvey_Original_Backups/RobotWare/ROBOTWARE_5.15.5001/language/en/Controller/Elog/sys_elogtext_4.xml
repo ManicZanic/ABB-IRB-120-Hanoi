@@ -1,0 +1,660 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="SYS" domainNo="2" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="367" max="492">
+  <Message number="367" eDefine="SYS_ERR_SYS_NO_MEC_IN_MEC_UNIT_GROUP">
+    <Title>No configured mechanical units</Title>
+    <Description>The instance <arg format="%s" ordinal="1" /> of configuration type <arg format="%s" ordinal="2" /> has no mechanical unit argument.</Description>
+    <Consequences>It will not be possible to perform any actions against the motion system, i.e. execute RAPID move instructions.</Consequences>
+    <Actions>Change the configuration and restart the controller.</Actions>
+  </Message>
+  <Message number="368" eDefine="SYS_ERR_SYS_NO_TASK_CTRL_MEC_GROUP">
+    <Title>Not connected Mechanical Unit Group</Title>
+    <Description>There is no Motion task connected with the Mechanical Unit Group <arg format="%s" ordinal="1" />.<p /></Description>
+    <Consequences>It will not be possible to use the mechanical units that belong to this group.</Consequences>
+    <Causes>The cause of this error can be a missing RAPID task instance in the Controller domain of the configuration or a task that has not been configured as a Motion task.</Causes>
+    <Actions>1. Add a Motion task instance that is connected to the Mechanical Unit Group.<p />2. Change an existing non Motion task to a Motion task.<p />3. Remove the Mechanical Unit Group.<p />4. Check for misspelled names.</Actions>
+  </Message>
+  <Message number="369" eDefine="SYS_ERR_SYS_MIX_OF_SYS_MISC">
+    <Title>Confusing configuration of system parameters.</Title>
+    <Description>There is a mixture of old and new structure of type System Misc.</Description>
+    <Consequences>It is possible that not the correct parameters are configured.</Consequences>
+    <Causes>Configuration of old and new structure has been loaded into the system.</Causes>
+    <Actions>1. Check that the correct parameters are configured.<p />2. Update the parameters in System Misc with correct values.<p />3. Save the Controller domain and replace the old config file.</Actions>
+  </Message>
+  <Message number="370" eDefine="SYS_ERR_SYS_MISSING_REGAIN_DIST_CFG">
+    <Title>Failed to read configuration data for regain distance</Title>
+    <Description>The system failed to read the configuration data for the type &lt;<arg format="%s" ordinal="1" />&gt;. The regain distance is the limit when the system will warn before a start with regain movement.</Description>
+    <Consequences>Default value for the regain distance will be used.</Consequences>
+    <Causes>-The sys.cfg file loaded into the system does not contain any regain distance information. <p />-No sys.cfg file has been loaded due to file errors.</Causes>
+    <Actions>1) Load a new sys.cfg file and restart the system</Actions>
+  </Message>
+  <Message number="371" eDefine="SYS_ERR_SYS_DEFAULT_MEC_UNIT_GROUP">
+    <Title>A default Mechanical Unit Group is used</Title>
+    <Description>The configuration of task <arg format="%s" ordinal="1" /> has no connection to <arg format="%s" ordinal="2" />. The attribute <arg format="%s" ordinal="3" /> is required in a multimove system and is missing. </Description>
+    <Consequences>The task performs no movement by the mechanical unit, but can read motion data. The RAPID functions may fail, if they read motion data and is connected to the wrong mechanical unit. The Mechanical Unit Group in <arg format="%s" ordinal="4" /> has been connected to the task.</Consequences>
+    <Causes>-The attribute was not specified when the configuration was created. <p />-The configuration file could have been created in a non-multi move system.</Causes>
+    <Actions>1) Make sure the correct Mechanical Unit Group is connected to the task.</Actions>
+  </Message>
+  <Message number="372" eDefine="SYS_ERR_SYS_MISSING_MODPOS_CFG">
+    <Title>Failed to read configuration data.</Title>
+    <Description>The system failed to read the configuration data for the type &lt;<arg format="%s" ordinal="1" />&gt;.</Description>
+    <Consequences>Hotedit or modpos will not be possible.</Consequences>
+    <Causes>-The sys.cfg file loaded into the system does not contain hotedit and modpos information. <p />-No sys.cfg file has been loaded due to file errors.</Causes>
+    <Actions>Load a new sys.cfg file and restart the system</Actions>
+  </Message>
+  <Message number="380" eDefine="SYS_ERR_SYS_MECUNIT_WITHOUT_MOTIONP">
+    <Title>No Motion Planner connected to mechanical unit</Title>
+    <Description>The mechanical unit <arg format="%s" ordinal="2" /> has no Motion Planner connected.</Description>
+    <Consequences>It is not possible to use this mechanical unit in any operations such as calibration or activation.</Consequences>
+    <Causes>The cause of this error is probably an error in the configuration.</Causes>
+    <Actions>Check the Motion and/or Controller configuration.</Actions>
+  </Message>
+  <Message number="381" eDefine="SYS_ERR_POWER_FAIL_RECREATE">
+    <Title>Error when recreating path after power fail</Title>
+    <Description>The path wasn't successfully recreated.</Description>
+    <Consequences>The Program Pointer must be moved before restarting the program. It's recommended to move the robot to a safe position though the robot might not follow the original path when restarted.</Consequences>
+    <Causes>A number of errors may cause this. Faults causing the system to go to status SYS FAIL will generally also cause path recreate after powerfail to fail.</Causes>
+    <Actions>1) Check other event log messages occurring at the same time to determine the actual cause. <p />2) Fix the cause of the fault. <p />3) Move the robot to a safe position before restarting. The robot may not follow the original path. </Actions>
+  </Message>
+  <Message number="390" eDefine="SYS_ERR_SYS_MASTER_REJ_START">
+    <Title>Start rejected</Title>
+    <Description>Start/restart of program, via System IO, was rejected.<p />The reason is that write access is held by<p /><arg format="%s" ordinal="1" /> using <arg format="%s" ordinal="2" /></Description>
+    <Actions />
+  </Message>
+  <Message number="391" eDefine="SYS_ERR_SYS_MASTER_REJ_START_MAIN">
+    <Title>Start at main rejected</Title>
+    <Description>Start of program at main, via System IO, was rejected.<p />The reason is that write access is held by<p /><arg format="%s" ordinal="1" /> using <arg format="%s" ordinal="2" /></Description>
+    <Actions />
+  </Message>
+  <Message number="392" eDefine="SYS_ERR_SYS_MASTER_REJ_MANINT">
+    <Title>Manual interrupt rejected</Title>
+    <Description>Manual interrupt of program, via System IO, was rejected.<p />The reason is that write access is held by<p /><arg format="%s" ordinal="1" /> using <arg format="%s" ordinal="2" /></Description>
+    <Actions />
+  </Message>
+  <Message number="393" eDefine="SYS_ERR_SYS_MASTER_REJ_LOADSTART">
+    <Title>Load and start rejected</Title>
+    <Description>Load and start of program, via System IO, was rejected.<p />The reason is that write access is held by<p /><arg format="%s" ordinal="1" /> using <arg format="%s" ordinal="2" /></Description>
+    <Actions />
+  </Message>
+  <Message number="394" eDefine="SYS_ERR_SYS_MASTER_REJ_MOTONSTART">
+    <Title>Motors On and Start rejected.</Title>
+    <Description>Motors On and Start/restart of program, via System IO, was rejected.<p />The reason is that write access is held by<p /><arg format="%s" ordinal="1" /> using <arg format="%s" ordinal="2" /></Description>
+    <Actions />
+  </Message>
+  <Message number="395" eDefine="SYS_ERR_SYS_MASTER_REJ_LOAD">
+    <Title>Load rejected</Title>
+    <Description>Load of program via System IO, was rejected.<p />The reason is that write access is held by <p /><arg format="%s" ordinal="1" /> using <arg format="%s" ordinal="2" /></Description>
+  </Message>
+  <Message number="396" eDefine="SYS_ERR_SYS_REJ_SYNC_STATE">
+    <Title>Manual interrupt rejected </Title>
+    <Description>Manual interrupt of program, via System IO, was rejected in task <arg format="%s" ordinal="2" />.<p />Manual interrupt is not allowed during synchronized movement.</Description>
+  </Message>
+  <Message number="397" eDefine="SYS_ERR_SYS_REJ_PRCNAM">
+    <Title>Manual interrupt rejected</Title>
+    <Description>Manual interrupt of program, via System IO, was rejected in task <arg format="%s" ordinal="2" />.<p />The interrupt is connected to <arg format="%s" ordinal="3" />, which is not a valid RAPID procedure.</Description>
+    <Consequences>
+      <arg format="%s" ordinal="3" /> will not be executed.</Consequences>
+    <Causes>1. <arg format="%s" ordinal="3" /> does not exist.<p />2. <arg format="%s" ordinal="3" /> is not a procedure (PROC) that takes zero (0) parameters.</Causes>
+    <Actions>Make sure that <arg format="%s" ordinal="3" /> is an existing procedure (PROC) that takes zero (0) parameters.</Actions>
+  </Message>
+  <Message number="398" eDefine="SYS_ERR_SYS_START_EXEC">
+    <Title>Automatic Mode Rejected</Title>
+    <Description>A stopped static/semistatic task (alias background task) could not be started when automatic mode was requested.</Description>
+    <Consequences>The system can not enter automatic mode.</Consequences>
+    <Causes>A stopped static/semistatic task could not be started.</Causes>
+    <Actions>1) Switch back to manual mode.<p />2) Make sure that all static/semistatic tasks has a program/module containing the configured production entry.<p />3) Make sure that no static/semistatic task has any syntax errors.<p />4) Switch back to automatic mode and confirm.</Actions>
+  </Message>
+  <Message number="399" eDefine="SYS_ERR_SYS_START_EXEC_RESET">
+    <Title>Static/Semistatic task started</Title>
+    <Description>At least on static/semistatic task (alias background task) was not executing after startup in automatic mode.</Description>
+    <Consequences>Execution was started in at least one static/semistatic task.</Consequences>
+    <Causes>System was switched to automatic mode during warm start.</Causes>
+    <Actions>None, system has automatically reset debug settings.<p /><p />To keep debug settings in auto:<p />1) Switch back to auto mode<p />2) Set system parameter Controller/Auto Condition Reset/AllDebugSettings/Reset to NO.<p />3) Switch back to automatic mode and confirm. <p />4) For more info, see the Technical Reference Manual - System Parameters.</Actions>
+  </Message>
+  <Message number="400" eDefine="SYS_ERR_SYS_START_EXEC_KEEP">
+    <Title>Debug Settings In Auto</Title>
+    <Description>A static/semistatic task (alias background task) has been stopped.</Description>
+    <Consequences>The static/semistatic task will not be started.<p />System will not be in full production mode in auto.</Consequences>
+    <Actions>For full production mode:<p />1) Switch back to manual mode.<p />2) Set system parameter Controller/Auto Condition Reset/AllDebugSettings/Reset to Yes.<p />3) Switch back to automatic mode and confirm.<p />4) For more info, see the Technical Reference Manual - System Parameters.</Actions>
+  </Message>
+  <Message number="401" eDefine="SYS_ERR_SYS_TOO_MANY_INSTANCES">
+    <Title>Too many CFG instances </Title>
+    <Description>There are too many instances <arg format="%s" ordinal="1" /> of type <arg format="%s" ordinal="2" /> in topic <arg format="%s" ordinal="3" />.</Description>
+    <Consequences>The wrong instance may be used and cause unexpected behavior.</Consequences>
+    <Causes>There are multiple instances of <arg format="%s" ordinal="1" />of type <arg format="%s" ordinal="2" /> in topic <arg format="%s" ordinal="3" />.</Causes>
+    <Actions>Remove all instances but one.</Actions>
+  </Message>
+  <Message number="402" eDefine="SYS_ERR_SYS_RAPID_SPY">
+    <Title>Automatic Mode Rejected</Title>
+    <Description>An active RAPID Spy session could not be deactivated when automatic mode was requested.</Description>
+    <Consequences>The system cannot enter automatic mode.</Consequences>
+    <Causes>RAPID Spy could not be deactivated.</Causes>
+    <Actions>1) Switch back to manual mode. <p />2) Use an external client, e.g. RobotStudio, to deactivate RAPID Spy. <p />3) Switch back to automatic mode and confirm.</Actions>
+  </Message>
+  <Message number="403" eDefine="SYS_ERR_SYS_RAPID_SPY_RESET">
+    <Title>RAPID Spy deactivated</Title>
+    <Description>RAPID Spy was deactivated after startup in automatic mode.</Description>
+    <Consequences>RAPID Spy was deactivated.</Consequences>
+    <Causes>System was switched to automatic mode during warm start.</Causes>
+    <Actions>None, system has automatically reset debug settings.<p /><p />To keep debug settings in auto:<p />1) Switch back to manual mode<p />2) Set system parameter Controller / Auto Condition Reset / AllDebugSettings / Reset to NO.<p />3) Switch back to automatic mode and confirm.<p />4) For more info, see the Technical Reference Manual - System Parameters.</Actions>
+  </Message>
+  <Message number="404" eDefine="SYS_ERR_SYS_RAPID_SPY_KEEP">
+    <Title>Debug Settings In Auto</Title>
+    <Description>RAPID Spy is active.</Description>
+    <Consequences>RAPID Spy will not be deactivated.<p />System will not be in full production mode in auto.</Consequences>
+    <Actions>For full production mode:<p />1) Switch back to manual mode.<p />2) Set system parameter Controller / Auto Condition Reset / AllDebugSettings / Reset to Yes.<p />3) Switch back to automatic mode and confirm.<p />4) For more info, see the Technical Reference Manual - System Parameters.</Actions>
+  </Message>
+  <Message number="405" eDefine="SYS_ERR_SYS_EIO">
+    <Title>Automatic Mode Rejected</Title>
+    <Description>An active Profi Energy device could not be reseted when automatic mode was requested.</Description>
+    <Consequences>The system cannot enter automatic mode.</Consequences>
+    <Causes>A Profi Energy device could not be reseted.</Causes>
+    <Actions>1) Switch back to manual mode. <p />2) Reset the Profi Energy device. <p />3) Switch back to automatic mode and confirm.
+        </Actions>
+  </Message>
+  <Message number="406" eDefine="SYS_ERR_SYS_EIO_RESET">
+    <Title>Profi Energy device reseted</Title>
+    <Description>A Profi Energy device was reseted after startup in automatic mode.</Description>
+    <Consequences>A Profi Energy device was reseted.</Consequences>
+    <Causes>System was switched to automatic mode during warm start.</Causes>
+    <Actions>None, system has automatically reset debug settings.<p /><p />To keep debug settings in auto:<p />1) Switch back to manual mode<p />2) Set system parameter Controller / Auto Condition Reset / AllDebugSettings / Reset to NO.<p />3) Switch back to automatic mode and confirm.<p />4) For more info, see the Technical Reference Manual - System Parameters.
+        </Actions>
+  </Message>
+  <Message number="407" eDefine="SYS_ERR_SYS_EIO_KEEP">
+    <Title>Debug Settings In Auto</Title>
+    <Description>A Profi Energy device is in pause mode.</Description>
+    <Consequences>A Profi Energy device will not be reseted.<p />System will not be in full production mode in auto.
+        </Consequences>
+    <Actions>For full production mode:<p />1) Switch back to manual mode.<p />2) Set system parameter Controller / Auto Condition Reset / AllDebugSettings / Reset to Yes.<p />3) Switch back to automatic mode and confirm.<p />4) For more info, see the Technical Reference Manual - System Parameters.
+        </Actions>
+  </Message>
+  <Message number="440" eDefine="SYS_ERR_SYS_UPGRADE_FAILED_TO_INITIALIZE">
+    <Title>Failed to initialize FW upgrade framework</Title>
+    <Description>The firmware upgrade framework for hardware boards could not be initialized</Description>
+    <Consequences>No firmware upgrade of hardware boards will be performed</Consequences>
+    <Causes>An invalid xml file in the controller installation:<p /><arg format="%s" ordinal="1" /></Causes>
+    <Actions>For developers:<p />- Correct the file. Use the hw_compatibility.xsd schema to verify.<p />For other users:<p />- Reinstall the system.</Actions>
+  </Message>
+  <Message number="441" eDefine="SYS_ERR_SYS_UPGRADE_PATCH_FAILED_TO_INITIALIZE">
+    <Title>Failed to initialize firmware patch</Title>
+    <Description>Failed to initialize the firmware patch handling for hardware boards.</Description>
+    <Consequences>No firmware patches for hardware boards will be applied</Consequences>
+    <Causes>The firmware patch file was invalid:<p /><arg format="%s" ordinal="1" /></Causes>
+    <Actions>Correct the patch file. Use the schema hw_compatibility.xsd to verify.</Actions>
+  </Message>
+  <Message number="443" eDefine="SYS_ERR_SYS_UPGRADE_MULTIPLE_RESTARTS">
+    <Title>Multiple firmware upgrade restarts</Title>
+    <Description>A new restart to firmware upgrade mode was ordered after two consecutive upgrade restarts.</Description>
+    <Consequences>No further restart to firmware upgrade mode was performed.</Consequences>
+    <Causes>Firmware upgrade of a hardware board has most likely failed. The board's firmware or hardware may be corrupt.</Causes>
+    <Actions>Check the event log for previous error messages.</Actions>
+  </Message>
+  <Message number="450" eDefine="SYS_ERR_SYS_PSC_0">
+    <Title>
+      SC <arg format="%d" ordinal="1" />CBC Speed exceeded
+    </Title>
+    <Description>
+      Cyclic Brake Check (CBC) speed limit is exceeded in Safety Controller (SC) on Mechanical unit <arg format="%s" ordinal="2" />. Either CBC test interval has expired or
+      a previous Brake Check failed.
+    </Description>
+    <Actions>Decrease speed and execute Brake check </Actions>
+  </Message>
+  <Message number="451" eDefine="SYS_ERR_SYS_PSC_1">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Not synchronized
+    </Title>
+    <Description>
+      Safety Controller (SC) <arg format="%d" ordinal="1" /> is not synchronized with supervised Mechanical units.<p /></Description>
+    <Actions>
+      Move all Mechanical units supervised by Safety Controller <arg format="%d" ordinal="1" /> to the synchronization positions defined in the Safety Configuration.
+    </Actions>
+  </Message>
+  <Message number="452" eDefine="SYS_ERR_SYS_PSC_2">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Synchronized
+    </Title>
+    <Description>
+      Safety Controller (SC) <arg format="%d" ordinal="1" /> is now synchronized to supervised Mechanical units. Safety supervision can be used.
+    </Description>
+  </Message>
+  <Message number="453" eDefine="SYS_ERR_SYS_PSC_3">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Wrong Sync. Position
+    </Title>
+    <Description>
+      The positions of the supervised Mechanical units do not match the synchronization positions defined in the Safety Configuration for Safety Controller (SC) <arg format="%d" ordinal="1" /> on axis <arg format="%d" ordinal="3" />.
+    </Description>
+    <Actions>
+      - Check that all supervised Mechanical units are positioned at the configured synchronization position.<p />
+      - Check that the synchronization switch is working properly.<p />
+      - Check that motor calibration and revolution counters are updated and correct.<p />
+      - Check that the synchronization position in the Safety Configuration is correct.<p />
+      - Check for configuration error.<p />
+      - Download Motor calibration values.<p />
+      - Check if axis 4 or 6 is configured as independent, if YES, check that the EPS configuration is configured likewise.
+    </Actions>
+  </Message>
+  <Message number="454" eDefine="SYS_ERR_SYS_PSC_4">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Servo-Lag Limit exceeded
+    </Title>
+    <Description>
+      Safety Controller (SC) <arg format="%d" ordinal="1" /> detected a too big difference between the ordered and actual position, for Mechanical unit <arg format="%s" ordinal="2" /> on axis <arg format="%d" ordinal="3" />.
+    </Description>
+    <Actions>
+      - Check for collision.<p />
+      - If using external axis, check Servo Lag settings in the Safety Configuration.<p />
+      - If using Soft Servo, Check that the Operational Safety Range (OSR) Tolerance in the Safety Configuration is not set too low<p />
+      - Verify that revolution counters are updated.<p />
+      - Check for communication problems to the Main Computer, Axis Computer or the Serial Measurement Board.<p />
+      - Check if tool weight is correctly defined.<p /></Actions>
+  </Message>
+  <Message number="455" eDefine="SYS_ERR_SYS_PSC_5">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Incorrect Position Value
+    </Title>
+    <Description>
+      Incorrect position value from Serial Measurement Board detected by Safety Controller (SC) <arg format="%d" ordinal="1" /> on Mechanical unit <arg format="%s" ordinal="2" />.
+    </Description>
+    <Actions>
+      - Check resolver and resolver connections.<p />- Replace Serial Measurement Board.<p />- Replace resolver.
+    </Actions>
+  </Message>
+  <Message number="456" eDefine="SYS_ERR_SYS_PSC_6">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Reference Data Timeout
+    </Title>
+    <Description>
+      The Robot Controller has stopped sending reference data to Safety Controller (SC) <arg format="%d" ordinal="1" />.
+    </Description>
+    <Actions>
+      1. Check previous error logs for possible causes.<p />2. Restart System.
+    </Actions>
+  </Message>
+  <Message number="457" eDefine="SYS_ERR_SYS_PSC_7">
+    <Title>
+            SC <arg format="%d" ordinal="1" /> Changed Safety Configuration
+        </Title>
+    <Description>
+            The Safety Configuration for Safety Controller (SC) <arg format="%d" ordinal="1" /> has changed contents or doesn't fit with the used hardware.
+        </Description>
+    <Causes>
+            - New Safety Configuration has been downloaded, the normal case. <p />
+            - The configuration doesn't fit with the used hardware. Typically when the elog with request for new pin code is repeated. <p />
+            - Corrupt Safety Configuration. Typically when the elog with request for new pin code is repeated.
+        </Causes>
+    <Actions>
+            1. Check for new elog messages that indicates if a new Safety Configuration has been downloaded.<p />
+            2. If no new Safety Configuration has been downloaded and this elog comes after a warmstart, download a new Safety Configuration to the Safety Controller.<p />
+            3. Create and download a new Safety Configuration if this elog comes after every warmstart and there is a request for new pin code again.
+        </Actions>
+  </Message>
+  <Message number="458" eDefine="SYS_ERR_SYS_PSC_8">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Internal Failure
+    </Title>
+    <Description>
+      Internal Failure in Safety Controller (SC) <arg format="%d" ordinal="1" />.
+    </Description>
+    <Actions>
+      - Check Safety Controller cabling.<p />
+      - Check Safety Controller health on LED<p />
+      - Replace Safety Controller if remaining error<p /></Actions>
+  </Message>
+  <Message number="459" eDefine="SYS_ERR_SYS_PSC_9">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Input/Output Failure
+    </Title>
+    <Description>
+      I/O Error on Safety Controller (SC) <arg format="%d" ordinal="1" />.
+    </Description>
+    <Actions>
+      - Check Safety Controller cabling.<p />- Check Safety Controller health.<p /><p />Warm start Robot Controller, after performing recommended actions.
+    </Actions>
+  </Message>
+  <Message number="460" eDefine="SYS_ERR_SYS_PSC_10">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Safety Configuration not found
+    </Title>
+    <Description>
+      Failed to retrieve Safety Configuration for Safety Controller (SC) <arg format="%d" ordinal="1" />.
+    </Description>
+    <Actions>
+      - Warm start Robot Controller.<p />- Download a Safety Configuration to the SC.<p />- Reinstall System.
+    </Actions>
+  </Message>
+  <Message number="461" eDefine="SYS_ERR_SYS_PSC_11">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Robot Configuration not found
+    </Title>
+    <Description>
+      Failed to retrieve Robot Configuration for Safety Controller (SC) <arg format="%d" ordinal="1" />.
+    </Description>
+    <Actions>
+      - Warm start Robot Controller.<p />- Reinstall System.
+    </Actions>
+  </Message>
+  <Message number="462" eDefine="SYS_ERR_SYS_PSC_12">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Calibration Offset not found
+    </Title>
+    <Description>
+      Failed to retrieve Motor Calibration offsets for Safety Controller (SC) <arg format="%d" ordinal="1" />.
+    </Description>
+    <Actions>Download new Calibration offsets to the SC.</Actions>
+  </Message>
+  <Message number="463" eDefine="SYS_ERR_SYS_PSC_13">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Safety Configuration downloaded
+    </Title>
+    <Description>
+      Download of Safety Configuration was successful for Safety Controller (SC) <arg format="%d" ordinal="1" />.
+    </Description>
+  </Message>
+  <Message number="464" eDefine="SYS_ERR_SYS_PSC_14">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> OSR Limit exceeded
+    </Title>
+    <Description>
+      Safety Controller (SC) <arg format="%d" ordinal="1" /> detected a too big difference between the ordered and actual position inside Operational Safety Range (OSR) , for Mechanical unit <arg format="%s" ordinal="2" /> on axis <arg format="%d" ordinal="3" />.
+    </Description>
+    <Actions>
+      - Check for collision.<p />- Check that Operational Safety Range (OSR) Tolerance in the Safety Configuration is not set too low.<p />- Synchronize the Safety Controller, if the revolution counters have been updated since last synchronization.
+    </Actions>
+  </Message>
+  <Message number="465" eDefine="SYS_ERR_SYS_PSC_15">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> SAS Speed exceeded
+    </Title>
+    <Description>
+      Safe Axis Speed (SAS) violation on Mechanical unit <arg format="%s" ordinal="2" /> Axis <arg format="%d" ordinal="3" /> on Safety Controller (SC)
+    </Description>
+    <Actions>
+      Decrease speed on Axis <arg format="%d" ordinal="3" /></Actions>
+  </Message>
+  <Message number="466" eDefine="SYS_ERR_SYS_PSC_16">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Input/Output Failure
+    </Title>
+    <Description>
+      I/O Error on Safety Controller (SC) <arg format="%d" ordinal="1" /> I/O <arg format="%d" ordinal="3" /> Type <arg format="%d" ordinal="4" /><p />
+      Type 1: Input<p />
+      Type 2: Output<p /></Description>
+    <Causes>
+      - Wrong connection to I/O terminals on SC<p />- Two channel I/O mismatch<p /></Causes>
+    <Actions>
+      - Check SC cabling.<p />- Check SC health.<p /><p />Warm start Robot Controller, after performing recommended actions.
+    </Actions>
+  </Message>
+  <Message number="467" eDefine="SYS_ERR_SYS_PSC_17">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> STS speed exceeded
+    </Title>
+    <Description>
+      Safe reduced Tool Speed (STS) in Safety Controller (SC) on Mechanical unit <arg format="%s" ordinal="2" /> too high. Cause <arg format="%d" ordinal="3" />.
+    </Description>
+    <Causes>
+      1. Tool0 speed<p />2. Elbow speed<p />3. Tool speed<p />4. Additional axis speed
+    </Causes>
+    <Actions>Reduce tool speed.</Actions>
+  </Message>
+  <Message number="468" eDefine="SYS_ERR_SYS_PSC_18">
+    <Title> SC <arg format="%d" ordinal="1" /> STZ violation </Title>
+    <Description> Safe Tool Zone (STZ) <arg format="%d" ordinal="3" /> is violated on Mechanical unit <arg format="%s" ordinal="2" />. <p /> Tool <arg format="%s" ordinal="5" /> was active.<p /> Cause <arg format="%d" ordinal="4" /></Description>
+    <Causes> 1. Exceeded speed<p /> 2. Wrong tool position<p /> 3. Wrong tool orientation<p /> 4. Wrong elbow position<p /> 11. Wrong tool point 1 position<p /> 12. Wrong tool point 2 position<p /> 13. Wrong tool point 3 position<p /> 14. Wrong tool point 4 position<p /> 15. Wrong tool point 5 position<p /> 16. Wrong tool point 6 position<p /> 17. Wrong tool point 7 position<p /> 18. Wrong tool point 8 position<p /></Causes>
+    <Actions> - Reduce speed<p /> - Move Robot tool to safe position<p /> - Adjust tool orientation<p /></Actions>
+  </Message>
+  <Message number="469" eDefine="SYS_ERR_SYS_PSC_19">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> SAR violation
+    </Title>
+    <Description>
+      Safe Axis Range (SAR) <arg format="%d" ordinal="3" /> is violated on Mechanical unit <arg format="%s" ordinal="2" /> Axis <arg format="%d" ordinal="4" /></Description>
+    <Actions>Move Mechanical unit to safe position </Actions>
+  </Message>
+  <Message number="470" eDefine="SYS_ERR_SYS_PSC_20">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Synchronization Pre-warning
+    </Title>
+    <Description>
+      Synchronization required for Mechanical units supervised by Safety Controller (SC) <arg format="%d" ordinal="1" /> in less than <arg format="%d" ordinal="3" /> hour(s).
+    </Description>
+    <Actions>Perform synchronization before the time limit expires.</Actions>
+  </Message>
+  <Message number="471" eDefine="SYS_ERR_SYS_PSC_21">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Synchronization Timeout
+    </Title>
+    <Description>
+      Synchronization time limit expired for Safety Controller (SC) <arg format="%d" ordinal="1" />. Last synchronization was <arg format="%d" ordinal="3" /> hours ago.
+    </Description>
+    <Actions>Perform synchronization.</Actions>
+  </Message>
+  <Message number="472" eDefine="SYS_ERR_SYS_PSC_22">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> New Safety Configuration
+    </Title>
+    <Description>
+      Safety Controller (SC) <arg format="%d" ordinal="1" /> has received a new Safety Configuration. A new PIN-code is needed to activate.
+    </Description>
+    <Actions>
+      1. Log in as a user with Safety Configuration grants.<p />2. Enter new PIN-Code for the Safety Controller in the Control Panel.
+    </Actions>
+  </Message>
+  <Message number="473" eDefine="SYS_ERR_SYS_PSC_23">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Dual Computer mismatch
+    </Title>
+    <Description>
+      Safety Controller (SC) <arg format="%d" ordinal="1" /> have had conflicting values for a Safety Output for too long.
+    </Description>
+    <Consequences>The Safety Controller has entered a Safe State and issue an error after 10 minutes of internal mismatch, if recommended actions are not performed.</Consequences>
+    <Causes>
+      - The Mechanical unit have been parked at a position on, or close to, a supervised or monitored function limit for too long time.<p />
+      - Internal computation error in Safety Controller.
+    </Causes>
+    <Actions>Move all Mechanical units’ axes and tools well inside or outside monitored and supervised function limits.</Actions>
+  </Message>
+  <Message number="474" eDefine="SYS_ERR_SYS_PSC_24">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> I/O Supply Failure
+    </Title>
+    <Description>
+      I/O supply voltage level for Safety Controller (SC) <arg format="%d" ordinal="1" /> is out of range.
+    </Description>
+    <Causes>Either the voltage is out of limits or the voltage is missing.</Causes>
+    <Actions>
+      1. Connect 24V supply with correct voltage level to I/O supply terminals.<p />
+      2. Warm start Robot Controller.
+    </Actions>
+  </Message>
+  <Message number="475" eDefine="SYS_ERR_SYS_PSC_25">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Synchronization rejected
+    </Title>
+    <Description>
+      Safety Controller (SC) <arg format="%d" ordinal="1" /> is not correctly configured for synchronization.
+    </Description>
+    <Causes>
+      - Safety Configuration PIN is not set or is incorrect.<p />- Safety Configuration is empty.<p />- Safety Configuration is corrupt or missing.<p />- Safety Controller connected to the wrong SMB bus.<p />- I/O Power supply missing.<p /></Causes>
+    <Actions>Verify and check possible causes</Actions>
+  </Message>
+  <Message number="476" eDefine="SYS_ERR_SYS_PSC_26">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Disabled
+    </Title>
+    <Description>
+      Safety Controller (SC) <arg format="%d" ordinal="1" /> is disabled.
+    </Description>
+    <Consequences>
+      All safety supervision has been disabled in the Safety Controller. Risk for Safety hazards.
+    </Consequences>
+    <Actions>
+      Download a Safety Configuration to the Safety Controller.
+    </Actions>
+  </Message>
+  <Message number="477" eDefine="SYS_ERR_SYS_PSC_27">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> SMB Communication Failure
+    </Title>
+    <Description>
+      Safety Controller (SC) <arg format="%d" ordinal="1" /> failed to communicate with Serial Measurement Board (SMB).
+    </Description>
+    <Actions>
+      1. Make sure that the cabling from SMB to Safety Controller is connected to the right SMB connector and functional.<p />2. Restart System.<p /></Actions>
+  </Message>
+  <Message number="478" eDefine="SYS_ERR_SYS_PSC_28">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Main Supply Failure
+    </Title>
+    <Description>
+      The main power supply voltage for Safety Controller (SC) <arg format="%d" ordinal="1" /> is out of range.
+    </Description>
+    <Causes>Either the voltage is out of limit or the voltage is missing.</Causes>
+    <Actions>
+      1. Check Safety Controller cabling.<p />2. Check voltage from power supply.<p />3. Warm start Robot Controller.
+    </Actions>
+  </Message>
+  <Message number="479" eDefine="SYS_ERR_SYS_PSC_29">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Additional Axis missing
+    </Title>
+    <Description>
+      An Additional Axis that is supervised by Safety Controller (SC) <arg format="%d" ordinal="1" /> is no longer present in the System Configuration.
+    </Description>
+    <Actions>Reinstall the supervised Additional Axis, or Download a Safety Configuration without supervision of the Additional Axis.</Actions>
+  </Message>
+  <Message number="480" eDefine="SYS_ERR_SYS_PSC_30">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> SST violation
+    </Title>
+    <Description>
+      Safe Stand Still (SST) <arg format="%d" ordinal="4" /> in Safety Controller (SC)  is violated on Mechanical unit <arg format="%s" ordinal="2" /> Axis <arg format="%d" ordinal="3" />.
+    </Description>
+    <Actions>
+      - Verify RAPID program<p />- Verify process equipment<p />- Check that movement is not ongoing when SST is active<p />- Check previous elog messages<p /></Actions>
+  </Message>
+  <Message number="481" eDefine="SYS_ERR_SYS_PSC_31">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> OVR active
+    </Title>
+    <Description>
+      Override Operation (OVR) active on Safety Controller (SC) <arg format="%d" ordinal="1" /><p />
+      SafeMove will stop the robot after approximately 20 minutes with OVR active.<p />
+      Speed is limited to 250 mm/s or 18 degrees/s.<p /></Description>
+    <Actions>Deactivate signal connected to OVR input</Actions>
+  </Message>
+  <Message number="482" eDefine="SYS_ERR_SYS_PSC_32">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> OVR time out
+    </Title>
+    <Description>
+      Override Operation (OVR) has been active too long time on Safety Controller (SC) <arg format="%d" ordinal="1" />.
+    </Description>
+    <Actions>
+      1. Warmstart Robot Controller
+      2. Toggle signal connected to OVR input<p />
+      3. Activate Confirm stop by pressing Motors On push button<p />
+      4. Jog Robot back into working area<p />
+      5. Deactivate signal connected to OVR input<p /></Actions>
+  </Message>
+  <Message number="483" eDefine="SYS_ERR_SYS_PSC_33">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> CBC soon required
+    </Title>
+    <Description>
+      Cyclic Brake Check (CBC) required in less than <arg format="%d" ordinal="3" /> hours.
+    </Description>
+    <Actions>Perform a Brake Check before the time limit expires.</Actions>
+  </Message>
+  <Message number="484" eDefine="SYS_ERR_SYS_PSC_34">
+    <Title>
+       SC <arg format="%d" ordinal="1" /> CBC needs to be done
+    </Title>
+    <Description>
+       Cyclic Brake Check (CBC) time limit expired in Safety Controller (SC)or last Brake Check failed.
+    </Description>
+    <Actions>Perform a Brake Check.</Actions>
+  </Message>
+  <Message number="485" eDefine="SYS_ERR_SYS_PSC_35">
+    <Title> SC <arg format="%d" ordinal="1" /> Too low brake torque </Title>
+    <Description> Too low brake torque in Safety Controller (SC) on Mechanical unit <arg format="%s" ordinal="2" /> axis <arg format="%s" ordinal="3" />. </Description>
+    <Causes> - Axis has not been tested.<p /> - Worn out brake(s). </Causes>
+    <Actions> - Check that the failing axis is activated<p /> - If failing axis is activated replace brake(s)as soon as possible. </Actions>
+  </Message>
+  <Message number="486" eDefine="SYS_ERR_SYS_PSC_36">
+    <Title>
+       SC <arg format="%d" ordinal="1" /> CBC interrupted or incorrect
+    </Title>
+    <Description>
+       Safety Controller (SC) has detected that the last Cyclic Brake Check (CBC) on Mechanical unit <arg format="%s" ordinal="2" /> was interrupted or incorrect.
+    </Description>
+    <Actions>
+       - Check previous elogs.<p />
+       - Perform a new Brake Check only if needed, typically if elog 20485 also has been displayed.
+    </Actions>
+  </Message>
+  <Message number="487" eDefine="SYS_ERR_SYS_PSC_37">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Unsynchronized speed exceeded
+    </Title>
+    <Description>
+      Exceeded Axis speed when Safety Controller (SC) <arg format="%d" ordinal="1" /> was unsynchronized.
+    </Description>
+    <Actions>Jog Mechanical unit to synch position with low axis speed. Reduce speed to 250 mm/s or 18 degrees/s.</Actions>
+  </Message>
+  <Message number="488" eDefine="SYS_ERR_SYS_PSC_38">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Unsynchronized time limit expired
+    </Title>
+    <Description>
+      Available time to move the Robot when unsynchronized has expired for Safety Controller (SC) <arg format="%d" ordinal="1" />.
+    </Description>
+    <Actions>
+      1. Do a Confirm stop by pressing the Motors ON push button or activate System input<p />2. Synchronize SC <arg format="%d" ordinal="1" />.
+    </Actions>
+  </Message>
+  <Message number="489" eDefine="SYS_ERR_SYS_PSC_39">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> has been disabled
+    </Title>
+    <Description>
+      Safety Controller (SC) <arg format="%d" ordinal="1" /> has been disabled and no supervision functions are active.
+    </Description>
+    <Causes>Either a C-start has been performed or it's the first startup of SC.</Causes>
+    <Actions>
+      Download a Configuration to SC <arg format="%d" ordinal="1" />.
+    </Actions>
+  </Message>
+  <Message number="490" eDefine="SYS_ERR_SYS_PSC_40">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> OVR Speed exceeded
+    </Title>
+    <Description>
+      Override (OVR) Speed limit exceeded on Mechanical unit <arg format="%s" ordinal="2" />.
+    </Description>
+    <Causes>If Override (OVR) is active, then OVR speed limitations will be active</Causes>
+    <Actions>
+      - Decrease speed.<p />
+      - Deactivate OVR.<p /></Actions>
+  </Message>
+  <Message number="491" eDefine="SYS_ERR_SYS_PSC_41">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Override active during startup
+    </Title>
+    <Description>
+      Override digital input was active during startup on SC <arg format="%d" ordinal="1" /></Description>
+  </Message>
+  <Message number="492" eDefine="SYS_ERR_SYS_PSC_42">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> SST violation in Brake test
+    </Title>
+    <Description>
+      Movement detected during Brake test on Safety Controller (SC) <arg format="%d" ordinal="1" /> Mechanical unit <arg format="%s" ordinal="2" /> Axis <arg format="%d" ordinal="3" /></Description>
+    <Causes>
+      - Interrupted braketest.<p />
+      - Worn out Brakes.<p /></Causes>
+    <Actions>
+      - Restart CBC.<p />
+      - Replace Brake.<p /></Actions>
+  </Message>
+</Domain>

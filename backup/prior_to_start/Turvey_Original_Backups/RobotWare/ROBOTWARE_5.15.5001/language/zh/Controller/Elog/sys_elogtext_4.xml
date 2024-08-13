@@ -1,0 +1,529 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="SYS" domainNo="2" lang="zh" elogTextVersion="1.0" min="367" max="492">
+  <Message number="367" eDefine="SYS_ERR_SYS_NO_MEC_IN_MEC_UNIT_GROUP">
+    <Title>无已配置的机械单元</Title>
+    <Description>配置类型 <arg format="%s" ordinal="2" /> 实例 <arg format="%s" ordinal="1" /> 无机械单元自变量。</Description>
+    <Consequences>无法执行动作系统的任何操作，如执行 RAPID 动作指令。</Consequences>
+    <Actions>更改配置后重新启动控制柜。</Actions>
+  </Message>
+  <Message number="368" eDefine="SYS_ERR_SYS_NO_TASK_CTRL_MEC_GROUP">
+    <Title>未连接机械单元组</Title>
+    <Description>没有与机械单元组 <arg format="%s" ordinal="1" /> 连接的动作任务。<p /></Description>
+    <Consequences>无法使用属于该组的机械单元。</Consequences>
+    <Causes>此错误的原因可能是配置的控制器域中缺少 RAPID 任务实例，或者任务尚未配置为动作任务。</Causes>
+    <Actions>1. 添加一个连接到机械单元组的动作任务实例。<p />2. 将现有非动作任务更改为动作任务。<p />3. 删除机械单元组。<p />4. 检查是否有名称拼写错误。</Actions>
+  </Message>
+  <Message number="369" eDefine="SYS_ERR_SYS_MIX_OF_SYS_MISC">
+    <Title>系统参数配置混淆。</Title>
+    <Description>类型 System Misc 的新旧结构混杂在一起。</Description>
+    <Consequences>无法配置正确的参数。</Consequences>
+    <Causes>系统中加载了新旧结构的配置。</Causes>
+    <Actions>1. 检查配置参数是否正确。<p />2. 使用正确的值更新 System Misc 中的参数。<p />3. 保存控制器域并替换旧的配置文件。</Actions>
+  </Message>
+  <Message number="370" eDefine="SYS_ERR_SYS_MISSING_REGAIN_DIST_CFG">
+    <Title>读取返回距离的配置数据失败</Title>
+    <Description>系统无法读取配置数据，类型 &lt;<arg format="%s" ordinal="1" />&gt;. 返回距离是系统在返回移动启动之前的警告限值。</Description>
+    <Consequences>将使用返回距离的默认值。</Consequences>
+    <Causes>-加载于系统中的 sys.cfg 文件不包含任何返回距离信息。<p />-由于文件错误而未加载任何 sys.cfg 文件。</Causes>
+    <Actions>1) 加载新的 sys.cfg 文件并重新启动系统</Actions>
+  </Message>
+  <Message number="371" eDefine="SYS_ERR_SYS_DEFAULT_MEC_UNIT_GROUP">
+    <Title>使用了默认的机械单元组</Title>
+    <Description>任务 <arg format="%s" ordinal="1" /> 的配置中没有到 <arg format="%s" ordinal="2" /> 的连接。属性 <arg format="%s" ordinal="3" /> 在 multimove 系统中是必要的，但已丢失。 </Description>
+    <Consequences>该任务不执行机械单元的任何移动，但可以读取动作数据。如果它们读取动作数据，并连接到错误的机械单元，则 RAPID 功能可能失败。位于 <arg format="%s" ordinal="4" /> 中的机械单元组已连接到任务。</Consequences>
+    <Causes>-创建配置时未指定属性。<p />-配置文件可能是在非 multimove 系统中创建的。</Causes>
+    <Actions>1) 确保正确的机械单元组连接到任务。</Actions>
+  </Message>
+  <Message number="372" eDefine="SYS_ERR_SYS_MISSING_MODPOS_CFG">
+    <Title>无法阅读配置数据。</Title>
+    <Description>系统无法读取配置数据，类型&lt;<arg format="%s" ordinal="1" />&gt;。</Description>
+    <Consequences>Hotedit 或 modpos 类型的配置数据。</Consequences>
+    <Causes>- 载入系统的系统配置文件不包含 hotedit 和 modpos 信息。<p />-由于文件错误而未加载任何 sys.cfg 文件。</Causes>
+    <Actions>加载新的 sys.cfg 文件并重新启动系统</Actions>
+  </Message>
+  <Message number="380" eDefine="SYS_ERR_SYS_MECUNIT_WITHOUT_MOTIONP">
+    <Title>无运动路径文件连接到机械单元。</Title>
+    <Description>机械单元 <arg format="%s" ordinal="2" /> 未连接运动路径文件。</Description>
+    <Consequences>在任何操作中（如校准或启动）均无法使用此机械单元。</Consequences>
+    <Causes>造成此错误的原因可能是配置方面的错误。</Causes>
+    <Actions>检查运动和/或控制器配置。</Actions>
+  </Message>
+  <Message number="381" eDefine="SYS_ERR_POWER_FAIL_RECREATE">
+    <Title>断电后重新创建路径时发生错误</Title>
+    <Description>重新创建路径未成功。</Description>
+    <Consequences>必须在重新启动程序前移动“程序指针”。尽管重新启动后机器人可能不会遵循原始路径，但仍建议将机器人移至安全的位置。</Consequences>
+    <Causes>多次出现错误可能导致此情况。错误将会导致系统进入“系统故障”状态，一般还会引起断电后无法重新创建路径。</Causes>
+    <Actions>1) 检查其他同时发生的事件日志消息，以确定实际原因。<p />2) 解决故障的起因。 <p />3) 重新启动前先将机器人移至安全的位置。 机器人可能不会遵循原始路径。 </Actions>
+  </Message>
+  <Message number="390" eDefine="SYS_ERR_SYS_MASTER_REJ_START">
+    <Title>启动被拒绝</Title>
+    <Description>通过系统 IO 的程序启动/重新启动被拒绝。<p />原因是写访问权限由使用 <arg format="%s" ordinal="2" /> 的 <p /><arg format="%s" ordinal="1" /> 拥有。</Description>
+  </Message>
+  <Message number="391" eDefine="SYS_ERR_SYS_MASTER_REJ_START_MAIN">
+    <Title>主程序启动被拒绝</Title>
+    <Description>通过系统 IO 的主程序启动被拒绝。<p />原因是写访问权限由使用 <arg format="%s" ordinal="2" /> 的 <p /><arg format="%s" ordinal="1" /> 拥有。</Description>
+  </Message>
+  <Message number="392" eDefine="SYS_ERR_SYS_MASTER_REJ_MANINT">
+    <Title>手动中断被拒绝</Title>
+    <Description>通过系统 IO 的程序手动中断被拒绝。<p /> 原因是写访问权限由使用 <arg format="%s" ordinal="2" /> 的 <p /><arg format="%s" ordinal="1" /> 拥有。</Description>
+  </Message>
+  <Message number="393" eDefine="SYS_ERR_SYS_MASTER_REJ_LOADSTART">
+    <Title>加载与启动被拒绝</Title>
+    <Description>通过系统 IO 的程序加载与启动被拒绝。<p />原因是写访问权限由使用 <arg format="%s" ordinal="2" /> 的 <p /><arg format="%s" ordinal="1" /> 拥有。</Description>
+  </Message>
+  <Message number="394" eDefine="SYS_ERR_SYS_MASTER_REJ_MOTONSTART">
+    <Title>电机上电和启动被拒绝。</Title>
+    <Description>通过系统 IO 的电机上电和程序启动/重新启动被拒绝。<p />原因是写访问权限由使用 <arg format="%s" ordinal="2" /> 的 <p /><arg format="%s" ordinal="1" /> 拥有。</Description>
+  </Message>
+  <Message number="395" eDefine="SYS_ERR_SYS_MASTER_REJ_LOAD">
+    <Title>加载被拒绝</Title>
+    <Description>通过系统 IO 的程序加载被拒绝。<p />原因是写入权限由<p /><arg format="%s" ordinal="1" /> 使用 <arg format="%s" ordinal="2" />拥有。</Description>
+  </Message>
+  <Message number="396" eDefine="SYS_ERR_SYS_REJ_SYNC_STATE">
+    <Title>手动中断被拒绝 </Title>
+    <Description>在任务 <arg format="%s" ordinal="2" /> 中拒绝了通过系统 IO 手动中断程序。<p />在同步移动期间不允许手动中断。</Description>
+  </Message>
+  <Message number="397" eDefine="SYS_ERR_SYS_REJ_PRCNAM">
+    <Title>手动中断被拒绝</Title>
+    <Description>在任务 <arg format="%s" ordinal="2" /> 中已拒绝通过系统 IO 手动中断程序。<p />中断与 <arg format="%s" ordinal="3" /> 连接，这不是有效的 RAPID 过程。</Description>
+    <Consequences>
+      <arg format="%s" ordinal="3" /> 将不会执行。</Consequences>
+    <Causes>1. <arg format="%s" ordinal="3" /> 不存在。<p />2. <arg format="%s" ordinal="3" /> 不是使用零 (0) 参数的过程 (PROC)。</Causes>
+    <Actions>确保 <arg format="%s" ordinal="3" /> 是一个使用零 (0) 参数的现有过程 (PROC)。</Actions>
+  </Message>
+  <Message number="398" eDefine="SYS_ERR_SYS_START_EXEC">
+    <Title>已拒绝自动模式</Title>
+    <Description>在请求自动模式时无法启动已经停止的静态/半静态任务（别名后台任务）。</Description>
+    <Consequences>系统无法进入自动模式。</Consequences>
+    <Causes>无法启动已经停止的静态/半静态任务。</Causes>
+    <Actions>1) 切换回手动模式。<p />2) 确保全部静态/半静态任务都有一个包含已配置的生产项的程序/模块。<p />3) 确保所有静态/半静态任务无任何语法错误。<p />4) 切换回自动模式并确认。</Actions>
+  </Message>
+  <Message number="399" eDefine="SYS_ERR_SYS_START_EXEC_RESET">
+    <Title>静态/半静态任务已启动</Title>
+    <Description>在自动模式中启动之后，至少有一个静态/半静态任务（也称为后台任务）未执行。</Description>
+    <Consequences>至少在一个静态/半静态任务中启动执行。</Consequences>
+    <Causes>热启动过程中，系统已切换至自动模式。</Causes>
+    <Actions>任何一个系统都不会自动重复调试设置。<p /><p />要保持自动模式中的调试设置：<p />1) 切换回手动模式<p />2) 将系统参数 Controller/Auto Condition Reset/AllDebugSettings/Reset 设置为 NO（否）。<p />3) 切换回自动模式并确认。<p />4) 有关详情，请参阅《技术参考手册》中的“系统参数”。</Actions>
+  </Message>
+  <Message number="400" eDefine="SYS_ERR_SYS_START_EXEC_KEEP">
+    <Title>自动模式中的调试设置</Title>
+    <Description>静态/半静态任务（别名后台任务）已被停止。</Description>
+    <Consequences>静态/半静态任务不会启动。<p />系统不会自动处于完全生产模式。</Consequences>
+    <Actions>对于完全生产模式：<p />1) 切换回手动模式。<p />2) 将系统参数 Controller/Auto Condition Reset/AllDebugSettings/Reset 设置为 Yes（是）。<p />3) 切换回自动模式并确认。<p />4) 有关更多信息，请参阅《技术参考手册》中的“系统参数”。</Actions>
+  </Message>
+  <Message number="401" eDefine="SYS_ERR_SYS_TOO_MANY_INSTANCES">
+    <Title>CFG 实例过多 </Title>
+    <Description>在 <arg format="%s" ordinal="3" /> 主题中， <arg format="%s" ordinal="2" /> 类型的实例 <arg format="%s" ordinal="1" /> 过多。</Description>
+    <Consequences>可能使用错误的实例并造成意外的行为。</Consequences>
+    <Causes>在 <arg format="%s" ordinal="3" /> 主题中，有多个 <arg format="%s" ordinal="2" /> 类型的实例 <arg format="%s" ordinal="1" />。</Causes>
+    <Actions>删除所有实例，只留一个。</Actions>
+  </Message>
+  <Message number="402" eDefine="SYS_ERR_SYS_RAPID_SPY">
+    <Title>自动模式被拒绝</Title>
+    <Description>在请求自动模式时，无法停用当前活动的 RAPID Spy 会话。</Description>
+    <Consequences>系统无法进入自动模式。</Consequences>
+    <Causes>RAPID Spy 无法停用。</Causes>
+    <Actions>1) 切换回手动模式。<p />2) 使用外部客户端（例如 RobotStudio）停用 RAPID Spy。<p />3) 切换回自动模式并确认。</Actions>
+  </Message>
+  <Message number="403" eDefine="SYS_ERR_SYS_RAPID_SPY_RESET">
+    <Title>RAPID Spy 已停用</Title>
+    <Description>RAPID Spy 在以自动模式启动后被停用。</Description>
+    <Consequences>RAPID Spy 已停用。</Consequences>
+    <Causes>系统在热启动过程中切换至自动模式。</Causes>
+    <Actions>任何一个系统都不会自动重复调试设置。<p /><p />要保持自动模式中的调试设置：<p />1) 切换回手动模式<p />2) 将系统参数 Controller/Auto Condition Reset/AllDebugSettings/Reset 设置为 NO（否）。<p />3) 切换回自动模式并确认。<p />4) 有关详情，请参阅《技术参考手册》中的“系统参数”。</Actions>
+  </Message>
+  <Message number="404" eDefine="SYS_ERR_SYS_RAPID_SPY_KEEP">
+    <Title>自动模式中的调试设置</Title>
+    <Description>RAPID Spy 已激活。</Description>
+    <Consequences>RAPID Spy 将不会停用。<p />系统在自动模式下不会处于完全生产模式。</Consequences>
+    <Actions>要使用完全生产模式：<p />1) 切换回手动模式。<p />2) 将系统参数 Controller/Auto Condition Reset/AllDebugSettings/Reset 设置为 Yes（是）。<p />3) 切换回自动模式并确认。<p />4) 有关更多信息，请参阅《技术参考手册》中的“系统参数”。</Actions>
+  </Message>
+  <Message number="405" eDefine="SYS_ERR_SYS_EIO">
+    <Title>自动模式被拒绝</Title>
+    <Description>在请求自动模式时，无法重置当前活动的 Profi Energy 设备。</Description>
+    <Consequences>系统无法进入自动模式。</Consequences>
+    <Causes>Profi Energy 设备无法被重置。</Causes>
+    <Actions>1) 切换回手动模式。<p />2) 重置 Profi Energy 设备。<p />3) 切换回自动模式并确认。
+        </Actions>
+  </Message>
+  <Message number="406" eDefine="SYS_ERR_SYS_EIO_RESET">
+    <Title>Profi Energy 设备重置</Title>
+    <Description>在自动模式启动后，Profi Energy 设备被重置。</Description>
+    <Consequences>Profi Energy 设备被重置。</Consequences>
+    <Causes>系统在热启动过程中切换至自动模式。</Causes>
+    <Actions>无，系统都已经自动重设调试设置。<p /><p />要保持自动模式中的调试设置：<p />1) 切换回手动模式<p />2) 将系统参数 Controller/Auto Condition Reset/AllDebugSettings/Reset 设置为 NO（否）。<p />3) 切换回自动模式并确认。<p />4) 有关详情，请参阅《技术参考手册》中的“系统参数”。
+        </Actions>
+  </Message>
+  <Message number="407" eDefine="SYS_ERR_SYS_EIO_KEEP">
+    <Title>自动模式中的调试设置</Title>
+    <Description>Profi Energy 设备处在暂停模式。</Description>
+    <Consequences>Profi Energy 设备将不会被重置。<p />系统在自动模式下不会处于完全生产模式。
+        </Consequences>
+    <Actions>要使用完全生产模式：<p />1) 切换回手动模式。<p />2) 将系统参数 Controller/Auto Condition Reset/AllDebugSettings/Reset 设置为 Yes（是）。<p />3) 切换回自动模式并确认。<p />4) 有关更多信息，请参阅《技术参考手册》中的“系统参数”。
+        </Actions>
+  </Message>
+  <Message number="440" eDefine="SYS_ERR_SYS_UPGRADE_FAILED_TO_INITIALIZE">
+    <Title>无法初始化 FW 升级框架</Title>
+    <Description>硬件电路板的固件升级框架无法初始化</Description>
+    <Consequences>将不执行硬件板的固件升级</Consequences>
+    <Causes>在控制器安装中存在无效的 xml 文件：<p /><arg format="%s" ordinal="1" /></Causes>
+    <Actions>对于开发者：<p />- 更正该文件。使用 hw_compatibility.xsd 构架验证。<p />对于其他用户：<p />- 重新安装系统。</Actions>
+  </Message>
+  <Message number="441" eDefine="SYS_ERR_SYS_UPGRADE_PATCH_FAILED_TO_INITIALIZE">
+    <Title>初始化固件补丁失败</Title>
+    <Description>无法对硬件电路板初始化固件补丁处理。</Description>
+    <Consequences>无法应用硬件板的固件补丁</Consequences>
+    <Causes>固件补丁文件无效：<p /><arg format="%s" ordinal="1" /></Causes>
+    <Actions>更正补丁文件。使用构架 hw_compatibility.xsd 验证。</Actions>
+  </Message>
+  <Message number="443" eDefine="SYS_ERR_SYS_UPGRADE_MULTIPLE_RESTARTS">
+    <Title>多个固件升级重新启动</Title>
+    <Description>在两次连续的升级重新启动之后，发出指令要求重新启动到固件升级模式。</Description>
+    <Consequences>未进一步重新启动到固件升级模式。</Consequences>
+    <Causes>硬件电路板的固件升级失败的可能性最大。电路板的固件或硬件可能已经损坏。</Causes>
+    <Actions>查看事件日志以了解上一个错误消息。</Actions>
+  </Message>
+  <Message number="450" eDefine="SYS_ERR_SYS_PSC_0">
+    <Title>
+SC <arg format="%d" ordinal="1" /> 超出了 CBC 速度
+    </Title>
+    <Description>
+机械单元 <arg format="%s" ordinal="2" /> 上的安全控制器 (SC) 已超出循环制动闸检查 (CBC) 速度限制。CBC 测试间隔已过期或者前一制动闸检查失败。
+    </Description>
+    <Actions>降低速度并执行制动闸检查 </Actions>
+  </Message>
+  <Message number="451" eDefine="SYS_ERR_SYS_PSC_1">
+    <Title>       SC <arg format="%d" ordinal="1" /> 未同步
+    </Title>
+    <Description>       安全控制器 (SC) <arg format="%d" ordinal="1" /> 未与受监控的机械单元同步。<p /></Description>
+    <Actions>       将由安全控制器监控的所有机械单元 <arg format="%d" ordinal="1" /> 移至安全配置中定义的同步位置。
+    </Actions>
+  </Message>
+  <Message number="452" eDefine="SYS_ERR_SYS_PSC_2">
+    <Title>       SC <arg format="%d" ordinal="1" /> 已同步
+    </Title>
+    <Description>       安全控制器 (SC) <arg format="%d" ordinal="1" /> 现与受监控的机械单元同步。可使用安全监控。
+    </Description>
+  </Message>
+  <Message number="453" eDefine="SYS_ERR_SYS_PSC_3">
+    <Title>       SC <arg format="%d" ordinal="1" /> 同步错误。位置
+    </Title>
+    <Description>       监控机械单元的位置与轴 <arg format="%d" ordinal="3" /> 上的“安全控制器”(SC) 的“安全配置”中定义的同步位置不相符。
+    </Description>
+    <Actions>       - 检查定位在配置同步位置的所有监控机械单元。<p />       - 检查同步开关是否正常工作。<p />       - 检查电机校准及转数计数器是否已正确更新。<p />       - 检查“安全配置”中的同步位置是否正确。<p />       - 检查是否存在配置错误。<p />       - 下载电机校正值。<p />       - 检查轴 4 或 6 是否配置为独立的，如果“是”，则检查 EPS 配置是否以同样的方式配置。
+    </Actions>
+  </Message>
+  <Message number="454" eDefine="SYS_ERR_SYS_PSC_4">
+    <Title>       SC <arg format="%d" ordinal="1" /> 超出伺服延迟
+    </Title>
+    <Description>       “安全控制器”(SC) <arg format="%d" ordinal="1" /> 检测到轴 <arg format="%d" ordinal="3" /> 上机械单元 <arg format="%s" ordinal="3" /> 的指令位置和实际位置间存在巨大差异。
+    </Description>
+    <Actions>       - 检查碰撞。<p />       - 如果使用外部轴，检查“安全配置”中的“伺服延迟”设置。<p />       - 如果使用“软伺服”，检查“安全配置”中的“操作安全范围 (OSR) 容差”是否设置得过低<p />       - 检验机械单元转数计数器是否更新。<p />       - 检查到“主计算机”、“轴计算机”或“串行测量电路板”是否存在通信问题。<p />       - 检查是否正确定义了工具重量。<p /></Actions>
+  </Message>
+  <Message number="455" eDefine="SYS_ERR_SYS_PSC_5">
+    <Title>       SC <arg format="%d" ordinal="1" /> 不正确的位置值
+    </Title>
+    <Description>       机械单元 <arg format="%s" ordinal="2" /> 上的安全控制器 (SC) <arg format="%d" ordinal="1" /> 检测到串行测量电路板的位置值不正确。
+    </Description>
+    <Actions>       - 检查分解器和分解器连接。<p />- 更换串行测量电路板。<p />- 更换分解器。
+    </Actions>
+  </Message>
+  <Message number="456" eDefine="SYS_ERR_SYS_PSC_6">
+    <Title>       SC <arg format="%d" ordinal="1" /> 参考数据超时
+    </Title>
+    <Description>       机器人控制器已经停止向安全控制器 (SC) <arg format="%d" ordinal="1" /> 发送参考数据。
+    </Description>
+    <Actions>       1. 检查以前的错误日志以了解可能的原因。<p />2. 重新启动系统。
+    </Actions>
+  </Message>
+  <Message number="457" eDefine="SYS_ERR_SYS_PSC_7">
+    <Title>
+SC <arg format="%d" ordinal="1" /> 更改了安全配置
+        </Title>
+    <Description>
+安全控制器 (SC) <arg format="%d" ordinal="1" /> 的安全配置内容已更改，或者不适合所用硬件。
+        </Description>
+    <Causes>
+- 通常情况下，已经下载了新的安全配置。<p /> - 配置不适合所用硬件。通常发生在重复出现请求新 pin 码的 elog 消息时。<p /> - 安全配置损坏。通常发生在重复出现请求新 pin 码的 elog 消息时。
+        </Causes>
+    <Actions>
+1. 检查是否有新的 elog 消息能够指示是否下载了新的安全配置。<p />2. 如果未下载新的安全配置，并且在热启动后收到了此 elog 消息，请下载新的安全配置到安全控制器。<p />3. 如果在热启动后收到了此 elog 消息并且其中再次请求新 pin 码，创建并下载新安全配置。
+        </Actions>
+  </Message>
+  <Message number="458" eDefine="SYS_ERR_SYS_PSC_8">
+    <Title>       SC <arg format="%d" ordinal="1" /> 内部故障
+    </Title>
+    <Description>       安全控制器 (SC) <arg format="%d" ordinal="1" /> 发生内部故障。
+    </Description>
+    <Actions>       - 检查安全控制器电缆。<p />       - 检查安全控制器健康情况 LED<p />       - 如果仍然有错误则更换安全控制器<p /></Actions>
+  </Message>
+  <Message number="459" eDefine="SYS_ERR_SYS_PSC_9">
+    <Title>       SC <arg format="%d" ordinal="1" /> 输入/输出故障
+    </Title>
+    <Description>       安全控制器 (SC) <arg format="%d" ordinal="1" /> 中发生 I/O 错误。
+    </Description>
+    <Actions>       - 检查安全控制器电缆。<p />- 检查安全控制器健康情况。<p /><p />在执行建议的操作之后热启动机器人控制器。
+    </Actions>
+  </Message>
+  <Message number="460" eDefine="SYS_ERR_SYS_PSC_10">
+    <Title>       SC <arg format="%d" ordinal="1" /> 未找到安全配置
+    </Title>
+    <Description>       检索安全控制器 (SC) <arg format="%d" ordinal="1" /> 的安全配置失败。
+    </Description>
+    <Actions>       - 热启动机器人控制器。<p />- 下载安全配置到 SC 中。<p />- 重新安装系统。
+    </Actions>
+  </Message>
+  <Message number="461" eDefine="SYS_ERR_SYS_PSC_11">
+    <Title>       SC <arg format="%d" ordinal="1" /> 未找到机器人配置
+    </Title>
+    <Description>       检索安全控制器 (SC) <arg format="%d" ordinal="1" /> 的机器人配置失败。
+    </Description>
+    <Actions>       - 热启动机器人控制器。<p />- 重新安装系统。
+    </Actions>
+  </Message>
+  <Message number="462" eDefine="SYS_ERR_SYS_PSC_12">
+    <Title>       SC <arg format="%d" ordinal="1" /> 未找到校准偏移
+    </Title>
+    <Description>       检索安全控制器 (SC) <arg format="%d" ordinal="1" /> 的电机校准偏移失败。
+    </Description>
+    <Actions>下载新的校正偏移到 SC 中。</Actions>
+  </Message>
+  <Message number="463" eDefine="SYS_ERR_SYS_PSC_13">
+    <Title>       SC <arg format="%d" ordinal="1" /> 安全配置已经下载
+    </Title>
+    <Description>       安全控制器 (SC) <arg format="%d" ordinal="1" /> 的安全配置已经成功下载。
+    </Description>
+  </Message>
+  <Message number="464" eDefine="SYS_ERR_SYS_PSC_14">
+    <Title>       SC <arg format="%d" ordinal="1" /> 超出 OSR 限制
+    </Title>
+    <Description>       安全控制器 (SC) <arg format="%d" ordinal="1" /> 检测出轴 <arg format="%d" ordinal="3" /> 上机械单元 <arg format="%s" ordinal="2" /> 在操作安全范围 (OSR) 内的指令位置和实际位置存在巨大差异。
+    </Description>
+    <Actions>       - 检查碰撞。<p />- 检查安全配置中的操作安全范围 (OSR) 容差是否设置过低。<p />- 如果上次同步后已更新转数计数器，同步安全控制器。
+    </Actions>
+  </Message>
+  <Message number="465" eDefine="SYS_ERR_SYS_PSC_15">
+    <Title>       SC <arg format="%d" ordinal="1" /> SAS 超速
+    </Title>
+    <Description>       安全控制器 (SC) 上的机械单元 <arg format="%s" ordinal="2" /> 轴 <arg format="%d" ordinal="3" /> 上存在安全轴速度 (SAS) 违规
+    </Description>
+    <Actions>       降低轴 <arg format="%d" ordinal="3" /> 的速度</Actions>
+  </Message>
+  <Message number="466" eDefine="SYS_ERR_SYS_PSC_16">
+    <Title>       SC <arg format="%d" ordinal="1" /> 输入/输出故障
+    </Title>
+    <Description>       安全控制器 (SC) <arg format="%d" ordinal="1" /> I/O <arg format="%d" ordinal="3" /> 类型 <arg format="%d" ordinal="4" /> 上发生 I/O 错误<p />       类型 1：输入<p />       类型 2：输出<p /></Description>
+    <Causes>       - 错误连接到 SC 上的 I/O 端子<p />- 两个信道 I/O 不匹配<p /></Causes>
+    <Actions>       - 检查 SC 电缆。<p />- 检查 SC 健康情况。<p /><p />在执行建议的操作之后热启动机器人控制器。
+    </Actions>
+  </Message>
+  <Message number="467" eDefine="SYS_ERR_SYS_PSC_17">
+    <Title>       SC <arg format="%d" ordinal="1" /> STS 超速
+    </Title>
+    <Description>       机械单元 <arg format="%s" ordinal="2" /> 上的安全控制器 (SC) 中的“安全降低工具速度 (STS)”过高。原因 <arg format="%d" ordinal="3" />。
+    </Description>
+    <Causes>       1. Tool0 速度<p />2. 肘部速度<p />3. 工具速度<p />4. 额外的轴速度
+    </Causes>
+    <Actions>- 降低工具速度。</Actions>
+  </Message>
+  <Message number="468" eDefine="SYS_ERR_SYS_PSC_18">
+    <Title> SC <arg format="%d" ordinal="1" /> 违反了 STZ </Title>
+    <Description> 机械单元 <arg format="%s" ordinal="2" /> 违反安全工具区域 (STZ) <arg format="%d" ordinal="3" />。<p />工具 <arg format="%s" ordinal="5" /> 已激活。<p />原因 <arg format="%d" ordinal="4" /></Description>
+    <Causes> 1. 超速<p /> 2. 工具位置不正确<p /> 3. 工具方向不正确<p /> 4. 弯线位置不正确<p /> 11. 工具点 1 位置不正确<p /> 12. 工具点 2 位置不正确<p /> 13. 工具点 3 位置不正确<p /> 14. 工具点 4 位置不正确<p /> 15. 工具点 5 位置不正确<p /> 16. 工具点 6 位置不正确<p /> 17. 工具点 7 位置不正确<p /> 18. 工具点 8 位置不正确<p /></Causes>
+    <Actions> - 减速<p /> - 将机器人工具移至安全位置<p /> - 调整工具方向<p /></Actions>
+  </Message>
+  <Message number="469" eDefine="SYS_ERR_SYS_PSC_19">
+    <Title>       SC <arg format="%d" ordinal="1" /> SAR 违规
+    </Title>
+    <Description>       安全轴范围 (SAR) <arg format="%d" ordinal="3" /> 在机械单元 <arg format="%s" ordinal="2" /> 轴 <arg format="%d" ordinal="4" /> 上违规</Description>
+    <Actions>将机器单元移至安全位置 </Actions>
+  </Message>
+  <Message number="470" eDefine="SYS_ERR_SYS_PSC_20">
+    <Title>       SC <arg format="%d" ordinal="1" /> 同步预警
+    </Title>
+    <Description>       安全控制器 (SC) <arg format="%d" ordinal="1" /> 监控的机械单元所需的同步不足 <arg format="%d" ordinal="3" /> 小时。
+    </Description>
+    <Actions>在时间限制内执行同步。</Actions>
+  </Message>
+  <Message number="471" eDefine="SYS_ERR_SYS_PSC_21">
+    <Title>       SC <arg format="%d" ordinal="1" /> 同步超时
+    </Title>
+    <Description>       已超出安全控制器 (SC) <arg format="%d" ordinal="1" /> 的同步时间限制。上一次同步是在 <arg format="%d" ordinal="3" /> 小时以前。
+    </Description>
+    <Actions>执行同步。</Actions>
+  </Message>
+  <Message number="472" eDefine="SYS_ERR_SYS_PSC_22">
+    <Title>       SC <arg format="%d" ordinal="1" /> 新的安全配置
+    </Title>
+    <Description>       安全控制器 (SC) <arg format="%d" ordinal="1" /> 已经收到新的安全配置。需要激活新的 PIN 代码。
+    </Description>
+    <Actions>       1. 以具有安全配置权限的用户登录。<p />2. 在控制面板中输入安全控制器的新 PIN 代码。
+    </Actions>
+  </Message>
+  <Message number="473" eDefine="SYS_ERR_SYS_PSC_23">
+    <Title>       SC <arg format="%d" ordinal="1" /> 两台计算机不匹配
+    </Title>
+    <Description>       安全控制器 (SC) <arg format="%d" ordinal="1" /> 包含不明确的安全输出值时间太长。
+    </Description>
+    <Consequences>如果未执行建议动作，安全控制器将进入安全状态并在 10 分钟的内部不匹配之后发布一个错误。</Consequences>
+    <Causes>       - 机械单元停放在监控或监控功能限制的位置上方或靠近该位置的时间过长。<p />       - 安全控制器中出现内部计算错误。
+    </Causes>
+    <Actions>移动完全处于监控及监控功能限制内外的所有机械单元轴及工具。</Actions>
+  </Message>
+  <Message number="474" eDefine="SYS_ERR_SYS_PSC_24">
+    <Title>       SC <arg format="%d" ordinal="1" /> I/O 电源故障
+    </Title>
+    <Description>       安全控制器 (SC) 的 I/O 电源电压 <arg format="%d" ordinal="1" /> 超出范围。
+    </Description>
+    <Causes>电压超出极限或是电压故障。</Causes>
+    <Actions>       1. 使用正确的电压将 24V 电源连至 I/O 电源端子。<p />       2. 热启动机器人控制器。
+    </Actions>
+  </Message>
+  <Message number="475" eDefine="SYS_ERR_SYS_PSC_25">
+    <Title>       SC <arg format="%d" ordinal="1" /> 同步已拒绝
+    </Title>
+    <Description>       安全控制器 (SC) <arg format="%d" ordinal="1" /> 未正确配置同步。
+    </Description>
+    <Causes>       - 安全配置 PIN 未设置或不正确。<p />- 安全配置为空。<p />- 安全配置损坏或丢失。<p />- 安全控制器已连至错误的 SMB 总线。<p />- I/O 电源缺失。<p /></Causes>
+    <Actions>验证并检查可能的原因</Actions>
+  </Message>
+  <Message number="476" eDefine="SYS_ERR_SYS_PSC_26">
+    <Title>       SC <arg format="%d" ordinal="1" /> 已禁用
+    </Title>
+    <Description>       安全控制器 (SC) <arg format="%d" ordinal="1" /> 已被禁用。
+    </Description>
+    <Consequences>       安全控制器中已经禁用了全部安全监控。安全危害风险。
+    </Consequences>
+    <Actions>       下载安全配置到安全控制器。
+    </Actions>
+  </Message>
+  <Message number="477" eDefine="SYS_ERR_SYS_PSC_27">
+    <Title>       SC <arg format="%d" ordinal="1" /> SMB 通信故障
+    </Title>
+    <Description>       安全控制器 (SC) <arg format="%d" ordinal="1" /> 无法与串行测量电路板 (SMB) 通信。
+    </Description>
+    <Actions>       1. 确保从 SMB 到安全控制器的电缆已连至正确的 SMB 接头并正常工作。<p />2. 重启系统。<p /></Actions>
+  </Message>
+  <Message number="478" eDefine="SYS_ERR_SYS_PSC_28">
+    <Title>       SC <arg format="%d" ordinal="1" /> 主电源故障
+    </Title>
+    <Description>       安全控制器 (SC) <arg format="%d" ordinal="1" /> 的主电源电压超出范围。
+    </Description>
+    <Causes>电压超出极限或是电压缺失。</Causes>
+    <Actions>       1. 检查安全控制器电缆。<p />2. 检查电源的电压。<p />3. 热启动机器人控制器。
+    </Actions>
+  </Message>
+  <Message number="479" eDefine="SYS_ERR_SYS_PSC_29">
+    <Title>       SC <arg format="%d" ordinal="1" /> 附加轴缺失
+    </Title>
+    <Description>       安全控制器 (SC) <arg format="%d" ordinal="1" /> 监控的附加轴不再出现在系统配置中。
+    </Description>
+    <Actions>重新安装受监控的附加轴，或者下载没有监控附加轴的安全配置。</Actions>
+  </Message>
+  <Message number="480" eDefine="SYS_ERR_SYS_PSC_30">
+    <Title>
+SC <arg format="%d" ordinal="1" /> SST 违规
+    </Title>
+    <Description>
+在机械单元 <arg format="%s" ordinal="2" /> 的轴 <arg format="%d" ordinal="3" /> 上违反安全控制器 (SC) 中的安全静止规则 (SST) <arg format="%d" ordinal="4" />。
+    </Description>
+    <Actions>
+- 验证 Rapid 程序<p />- 验证处理设备<p />- 检查在 SST 活动时没有进行移动<p />- 检查之前的 elog 消息<p /></Actions>
+  </Message>
+  <Message number="481" eDefine="SYS_ERR_SYS_PSC_31">
+    <Title>       SC <arg format="%d" ordinal="1" /> OVR 活动
+    </Title>
+    <Description>       在安全控制器上 (SC) 覆盖操作 (OVR) 处于活动状态 <arg format="%d" ordinal="1" /><p />       在 OVR 活动大约 20 分钟之后，SafeMove 会停止机器人。<p />       速度限制为 250 mm/s 或 18 度/s。<p /></Description>
+    <Actions>停用连接到 OVR 输入的信号</Actions>
+  </Message>
+  <Message number="482" eDefine="SYS_ERR_SYS_PSC_32">
+    <Title>       SC <arg format="%d" ordinal="1" /> OVR 超时
+    </Title>
+    <Description>       安全控制器 (SC) 上的覆盖操作 (OVR) 活动时间过长 <arg format="%d" ordinal="1" />。
+    </Description>
+    <Actions>       1. 热启动机器人控制器
+2. 切换连接到 OVR 输入的信号<p />       3. 通过按“电机开启”按钮启动“确认”停止<p />       4. 微动控制机器人回到工作区<p />       5. 停止连接到 OVR 输入的信号<p /></Actions>
+  </Message>
+  <Message number="483" eDefine="SYS_ERR_SYS_PSC_33">
+    <Title>       SC <arg format="%d" ordinal="1" /> 立即需要 CBC
+    </Title>
+    <Description>       需要在 <arg format="%d" ordinal="3" /> 小时内进行循环制动闸检查 (CBC)。
+    </Description>
+    <Actions>在时间限制内执行制动器检查。</Actions>
+  </Message>
+  <Message number="484" eDefine="SYS_ERR_SYS_PSC_34">
+    <Title>
+SC <arg format="%d" ordinal="1" /> 需要进行 CBC 
+    </Title>
+    <Description>
+安全控制器 (SC) 中的循环制动闸检查 (CBC) 时间限制已到期，或上一次制动闸检查失败。
+    </Description>
+    <Actions>执行制动闸检查。</Actions>
+  </Message>
+  <Message number="485" eDefine="SYS_ERR_SYS_PSC_35">
+    <Title> SC <arg format="%d" ordinal="1" /> 制动闸转矩太低 </Title>
+    <Description> 机械单元 <arg format="%s" ordinal="2" /> 轴 <arg format="%s" ordinal="3" /> 上的安全控制器 (SC) 中的制动闸转矩太低。 </Description>
+    <Causes> - 轴尚未进行测试。<p />- 制动闸破损。 </Causes>
+    <Actions> - 检查失败轴是否已激活<p /> - 如果失败轴已激活，则尽快更换制动闸。 </Actions>
+  </Message>
+  <Message number="486" eDefine="SYS_ERR_SYS_PSC_36">
+    <Title>
+SC <arg format="%d" ordinal="1" /> CBC 已中断或不正确
+    </Title>
+    <Description>
+安全控制器 (SC) 已检测到机械单元 <arg format="%s" ordinal="2" /> 的最后一次循环制动闸检查 (CBC) 已经中断或不正确。
+    </Description>
+    <Actions>
+- 检查以前的 elog.<p />- 仅在需要时执行新制动闸检查，通常在还同时显示 elog 20485 的情况下执行。
+    </Actions>
+  </Message>
+  <Message number="487" eDefine="SYS_ERR_SYS_PSC_37">
+    <Title>       SC <arg format="%d" ordinal="1" /> 超出非同步速度
+    </Title>
+    <Description>       安全控制器 (SC) <arg format="%d" ordinal="1" /> 不同步时轴速度超速。
+    </Description>
+    <Actions>以低轴速度微动控制机器单元到同步位置。将速度降到 250 mm/s 或者 18 度/s。</Actions>
+  </Message>
+  <Message number="488" eDefine="SYS_ERR_SYS_PSC_38">
+    <Title>       SC <arg format="%d" ordinal="1" /> 不同步的时限已过
+    </Title>
+    <Description>       安全控制器 (SC) <arg format="%d" ordinal="1" /> 在不同步时移动机器人的可用时间已过。
+    </Description>
+    <Actions>       1. 通过按“电机开启”按钮或者启动系统输入来执行“确认”停止。<p />2. 同步 SC <arg format="%d" ordinal="1" />。
+    </Actions>
+  </Message>
+  <Message number="489" eDefine="SYS_ERR_SYS_PSC_39">
+    <Title>       SC <arg format="%d" ordinal="1" /> 已被停用
+    </Title>
+    <Description>       安全控制器 (SC) <arg format="%d" ordinal="1" /> 已被停用并且无监控功能处于活动状态。
+    </Description>
+    <Causes>C-启动已经执行或者这是 SC 的第一次启动。</Causes>
+    <Actions>       下载配置到 SC <arg format="%d" ordinal="1" />。
+    </Actions>
+  </Message>
+  <Message number="490" eDefine="SYS_ERR_SYS_PSC_40">
+    <Title>       SC <arg format="%d" ordinal="1" /> OVR 超速
+    </Title>
+    <Description>       机械单元 <arg format="%s" ordinal="2" />上超出了覆盖 (OVR) 速度极限。
+    </Description>
+    <Causes>如果覆盖 (OVR) 处于活动状态，那么 OVR 速度限制也会有效</Causes>
+    <Actions>       - 减速。<p />       - 停用 OVR。<p /></Actions>
+  </Message>
+  <Message number="491" eDefine="SYS_ERR_SYS_PSC_41">
+    <Title>       SC <arg format="%d" ordinal="1" /> 在启动期间覆盖处于活动状态
+    </Title>
+    <Description>       在启动期间 SC <arg format="%d" ordinal="1" /> 上覆盖数字输入处于活动状态</Description>
+  </Message>
+  <Message number="492" eDefine="SYS_ERR_SYS_PSC_42">
+    <Title>
+制动闸测试中发生 SC <arg format="%d" ordinal="1" /> SST 违规
+    </Title>
+    <Description>
+制动闸测试期间，在安全控制器 (SC) <arg format="%d" ordinal="1" /> 机械单元 <arg format="%s" ordinal="2" /> 轴 <arg format="%d" ordinal="3" /> 上检测到移动
+    </Description>
+    <Causes>
+- 制动闸测试中断。<p />- 制动闸破损。<p /></Causes>
+    <Actions>
+- 重新启动 CBC。<p />- 更换制动闸。<p /></Actions>
+  </Message>
+</Domain>

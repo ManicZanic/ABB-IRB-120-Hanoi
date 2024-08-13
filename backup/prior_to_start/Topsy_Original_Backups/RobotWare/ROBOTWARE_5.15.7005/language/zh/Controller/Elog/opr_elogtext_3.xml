@@ -1,0 +1,487 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="OPR" domainNo="1" lang="zh" elogTextVersion="1.0" min="1230" max="2514">
+  <Message number="1230" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_30">
+    <Title>备份错误</Title>
+    <Description>执行"任务"备份时出现错误。无更多目标。</Description>
+  </Message>
+  <Message number="1231" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_31">
+    <Title>备份错误</Title>
+    <Description>执行"任务"备份时出现错误。目录缺少至少一个必要项。</Description>
+  </Message>
+  <Message number="1232" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_32">
+    <Title>备份错误</Title>
+    <Description>执行"任务"备份时出现错误。系统版本与备份不匹配。</Description>
+  </Message>
+  <Message number="1233" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_33">
+    <Title>备份错误</Title>
+    <Description>执行"任务"备份时出现错误。恢复配置参数时出现错误。</Description>
+  </Message>
+  <Message number="1234" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_34">
+    <Title>备份错误</Title>
+    <Description>执行"任务"备份时出现错误。恢复配置参数时出现错误。</Description>
+  </Message>
+  <Message number="1235" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_35">
+    <Title>备份错误</Title>
+    <Description>执行"任务"备份时出现错误。当前系统与备份不匹配。</Description>
+  </Message>
+  <Message number="1236" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_36">
+    <Title>备份错误</Title>
+    <Description>执行"任务"备份时出现错误。写入错误。</Description>
+    <Actions>检查：设备无剩余空间。损坏的设备。</Actions>
+  </Message>
+  <Message number="1237" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_37">
+    <Title>备份错误</Title>
+    <Description>执行"任务"备份时出现错误。至少有一个模块名过长。</Description>
+  </Message>
+  <Message number="1238" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_38">
+    <Title>备份错误</Title>
+    <Description>执行"任务"备份时出现错误。未知任务。</Description>
+  </Message>
+  <Message number="1239" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_39">
+    <Title>备份错误</Title>
+    <Description>执行"任务"备份时出现错误。存储介质已满。</Description>
+  </Message>
+  <Message number="1240" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_40">
+    <Title>备份错误</Title>
+    <Description>执行"任务"备份时出现错误。无法删除项目。</Description>
+  </Message>
+  <Message number="1260" eDefine="SYS_ERR_OPR_BACKUP_ERR_BACKUP_FILE">
+    <Title>Backup error</Title>
+    <Description>Error while copying <arg format="%s" ordinal="1" /> to <arg format="%s" ordinal="2" />. </Description>
+    <Consequences>The file is not part of the created backup.</Consequences>
+  </Message>
+  <Message number="2020" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_DEF">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"准备"时出现错误。未知错误。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2021" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_21">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"准备"时出现错误。常规检查。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2022" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_22">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"准备"时出现错误。目录包含有待创建的项目。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2023" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_23">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"准备"时出现错误。目录缺少至少一个必要项。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2024" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_24">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"准备"时出现错误。目录不存在。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2025" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_25">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"准备"时出现错误。无法创建目录。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2026" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_26">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"准备"时出现错误。写入备份时出现错误。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2027" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_27">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"准备"时出现错误。读取配置参数时出现错误。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2028" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_28">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"准备"时出现错误。写入配置参数时出现错误。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2029" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_29">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"准备"时出现错误。结构层次太多。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2030" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_30">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"准备"时出现错误。无更多目标。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2031" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_31">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"准备"时出现错误。目录缺少至少一个必要项。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2032" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_32">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"准备"时出现错误。系统版本与备份不匹配。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2033" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_33">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"准备"时出现错误。恢复配置参数时出现错误。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2034" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_34">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"准备"时出现错误。恢复配置参数时出现错误。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2035" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_35">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"准备"时出现错误。当前系统与备份不匹配。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2036" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_36">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"准备"时出现错误。写入错误。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2037" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_37">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"准备"时出现错误。至少有一个模块名过长。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2038" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_38">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"准备"时出现错误。未知任务。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2039" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_39">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"准备"时出现错误。存储媒介质满。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2040" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_40">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"准备"时出现错误。无法删除项目。</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2120" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_DEF">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"配置"时出现错误。未知错误。</Description>
+  </Message>
+  <Message number="2121" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_21">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"配置"时出现错误。常规检查。</Description>
+  </Message>
+  <Message number="2122" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_22">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"配置"时出现错误。目录包含有待创建的项目。</Description>
+  </Message>
+  <Message number="2123" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_23">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"配置"时出现错误。目录缺少至少一个必要项。</Description>
+  </Message>
+  <Message number="2124" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_24">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"配置"时出现错误。目录不存在。</Description>
+  </Message>
+  <Message number="2125" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_25">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"配置"时出现错误。无法创建目录。</Description>
+  </Message>
+  <Message number="2126" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_26">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"配置"时出现错误。写入备份时出现错误。</Description>
+  </Message>
+  <Message number="2127" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_27">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"配置"时出现错误。读取配置参数时出现错误。</Description>
+  </Message>
+  <Message number="2128" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_28">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"配置"时出现错误。写入配置参数时出现错误。</Description>
+  </Message>
+  <Message number="2129" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_29">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"配置"时出现错误。结构层次太多。</Description>
+  </Message>
+  <Message number="2130" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_30">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"配置"时出现错误。无更多目标。</Description>
+  </Message>
+  <Message number="2131" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_31">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"配置"时出现错误。目录缺少至少一个必要项。</Description>
+  </Message>
+  <Message number="2132" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_32">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"配置"时出现错误。系统版本与备份不匹配。</Description>
+  </Message>
+  <Message number="2133" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_33">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"配置"时出现错误。恢复配置参数时出现错误。</Description>
+  </Message>
+  <Message number="2134" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_34">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"配置"时出现错误。恢复配置参数时出现错误。</Description>
+  </Message>
+  <Message number="2135" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_35">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"配置"时出现错误。当前系统与备份不匹配。</Description>
+  </Message>
+  <Message number="2136" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_36">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"配置"时出现错误。写入错误。</Description>
+  </Message>
+  <Message number="2137" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_37">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"配置"时出现错误。至少有一个模块名过长。</Description>
+  </Message>
+  <Message number="2138" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_38">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"配置"时出现错误。未知任务。</Description>
+  </Message>
+  <Message number="2139" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_39">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"配置"时出现错误。存储介质已满。</Description>
+  </Message>
+  <Message number="2140" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_40">
+    <Title>恢复错误</Title>
+    <Description>执行恢复步骤"配置"时出现错误。无法删除项目。</Description>
+  </Message>
+  <Message number="2220" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_DEF">
+    <Title>恢复错误</Title>
+    <Description>执行"任务"恢复时出现错误。未知错误。</Description>
+  </Message>
+  <Message number="2221" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_21">
+    <Title>恢复错误</Title>
+    <Description>执行"任务"恢复时出现错误。常规检查。</Description>
+  </Message>
+  <Message number="2222" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_22">
+    <Title>恢复错误</Title>
+    <Description>执行"任务"恢复时出现错误。目录包含有待创建的项目。</Description>
+  </Message>
+  <Message number="2223" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_23">
+    <Title>恢复错误</Title>
+    <Description>执行"任务"恢复时出现错误。目录缺少至少一个必要项。</Description>
+  </Message>
+  <Message number="2224" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_24">
+    <Title>恢复错误</Title>
+    <Description>执行"任务"恢复时出现错误。目录不存在</Description>
+  </Message>
+  <Message number="2225" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_25">
+    <Title>恢复错误</Title>
+    <Description>执行"任务"恢复时出现错误。无法创建目录</Description>
+  </Message>
+  <Message number="2226" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_26">
+    <Title>恢复错误</Title>
+    <Description>执行"任务"恢复时出现错误。写入备份时出现错误</Description>
+  </Message>
+  <Message number="2227" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_27">
+    <Title>恢复错误</Title>
+    <Description>执行"任务"恢复时出现错误。读取配置参数时出现错误</Description>
+  </Message>
+  <Message number="2228" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_28">
+    <Title>恢复错误</Title>
+    <Description>执行"任务"恢复时出现错误。写入配置参数时出现错误</Description>
+  </Message>
+  <Message number="2229" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_29">
+    <Title>恢复错误</Title>
+    <Description>执行"任务"恢复时出现错误。结构层次太多</Description>
+  </Message>
+  <Message number="2230" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_30">
+    <Title>恢复错误</Title>
+    <Description>执行"任务"恢复时出现错误。无更多目标</Description>
+  </Message>
+  <Message number="2231" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_31">
+    <Title>恢复错误</Title>
+    <Description>执行"任务"恢复时出现错误。目录缺少至少一个必要项。</Description>
+  </Message>
+  <Message number="2232" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_32">
+    <Title>恢复错误</Title>
+    <Description>执行"任务"恢复时出现错误。系统版本与备份不匹配。</Description>
+  </Message>
+  <Message number="2233" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_33">
+    <Title>恢复错误</Title>
+    <Description>执行"任务"恢复时出现错误。恢复配置参数时出现错误。</Description>
+  </Message>
+  <Message number="2234" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_34">
+    <Title>恢复错误</Title>
+    <Description>执行"任务"恢复时出现错误。恢复配置参数时出现错误。</Description>
+  </Message>
+  <Message number="2235" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_35">
+    <Title>恢复错误</Title>
+    <Description>执行"任务"恢复时出现错误。当前系统与备份不匹配。</Description>
+  </Message>
+  <Message number="2236" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_36">
+    <Title>恢复错误</Title>
+    <Description>执行"任务"恢复时出现错误。写入错误。</Description>
+  </Message>
+  <Message number="2237" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_37">
+    <Title>恢复错误</Title>
+    <Description>执行"任务"恢复时出现错误。至少有一个模块名过长。</Description>
+  </Message>
+  <Message number="2238" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_38">
+    <Title>恢复错误</Title>
+    <Description>执行"任务"恢复时出现错误。未知任务。</Description>
+  </Message>
+  <Message number="2239" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_39">
+    <Title>恢复错误</Title>
+    <Description>执行"任务"恢复时出现错误。存储介质已满。</Description>
+  </Message>
+  <Message number="2240" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_40">
+    <Title>恢复错误</Title>
+    <Description>执行"任务"恢复时出现错误。无法删除项目。</Description>
+  </Message>
+  <Message number="2320" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_DEF">
+    <Title>恢复错误</Title>
+    <Description>执行"用户任务"恢复时出现错误。未知错误。</Description>
+  </Message>
+  <Message number="2321" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_21">
+    <Title>恢复错误</Title>
+    <Description>执行"用户任务"恢复时出现错误。常规检查。</Description>
+  </Message>
+  <Message number="2322" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_22">
+    <Title>恢复错误</Title>
+    <Description>执行"用户任务"恢复时出现错误。目录包含有待创建的项目。</Description>
+  </Message>
+  <Message number="2323" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_23">
+    <Title>恢复错误</Title>
+    <Description>执行"用户任务"恢复时出现错误。目录缺少至少一个必要项。</Description>
+  </Message>
+  <Message number="2324" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_24">
+    <Title>恢复错误</Title>
+    <Description>执行"用户任务"恢复时出现错误。目录不存在</Description>
+  </Message>
+  <Message number="2325" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_25">
+    <Title>恢复错误</Title>
+    <Description>执行"用户任务"恢复时出现错误。无法创建目录</Description>
+  </Message>
+  <Message number="2326" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_26">
+    <Title>恢复错误</Title>
+    <Description>执行"用户任务"恢复时出现错误。写入备份时出现错误</Description>
+  </Message>
+  <Message number="2327" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_27">
+    <Title>恢复错误</Title>
+    <Description>执行"用户任务"恢复时出现错误。读取配置参数时出现错误</Description>
+  </Message>
+  <Message number="2328" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_28">
+    <Title>恢复错误</Title>
+    <Description>执行"用户任务"恢复时出现错误。写入配置参数时出现错误</Description>
+  </Message>
+  <Message number="2329" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_29">
+    <Title>恢复错误</Title>
+    <Description>执行"用户任务"恢复时出现错误。结构层次太多</Description>
+  </Message>
+  <Message number="2330" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_30">
+    <Title>恢复错误</Title>
+    <Description>执行"用户任务"恢复时出现错误。无更多目标</Description>
+  </Message>
+  <Message number="2331" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_31">
+    <Title>恢复错误</Title>
+    <Description>执行"用户任务"恢复时出现错误。目录缺少至少一个必要项。</Description>
+  </Message>
+  <Message number="2332" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_32">
+    <Title>恢复错误</Title>
+    <Description>执行"用户任务"恢复时出现错误。系统版本与备份不匹配。</Description>
+  </Message>
+  <Message number="2333" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_33">
+    <Title>恢复错误</Title>
+    <Description>执行"用户任务"恢复时出现错误。恢复配置参数时出现错误。</Description>
+  </Message>
+  <Message number="2334" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_34">
+    <Title>恢复错误</Title>
+    <Description>执行"用户任务"恢复时出现错误。恢复配置参数时出现错误。</Description>
+  </Message>
+  <Message number="2335" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_35">
+    <Title>恢复错误</Title>
+    <Description>执行"用户任务"恢复时出现错误。当前系统与备份不匹配。</Description>
+  </Message>
+  <Message number="2336" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_36">
+    <Title>恢复错误</Title>
+    <Description>执行"用户任务"恢复时出现错误。写入错误。</Description>
+  </Message>
+  <Message number="2337" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_37">
+    <Title>恢复错误</Title>
+    <Description>执行"用户任务"恢复时出现错误。至少有一个模块名过长。</Description>
+  </Message>
+  <Message number="2338" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_38">
+    <Title>恢复错误</Title>
+    <Description>执行"用户任务"恢复时出现错误。未知任务。</Description>
+  </Message>
+  <Message number="2339" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_39">
+    <Title>恢复错误</Title>
+    <Description>执行"用户任务"恢复时出现错误。存储介质已满。</Description>
+  </Message>
+  <Message number="2340" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_40">
+    <Title>恢复错误</Title>
+    <Description>执行"用户任务"恢复时出现错误。无法删除项目。</Description>
+  </Message>
+  <Message number="2510" eDefine="SYS_ERR_OPR_NET_SUBNET_MASK_ERR">
+    <Title>网络子网掩码非法</Title>
+    <Description>网络接口 <arg format="%s" ordinal="2" /> 的子网掩码 <arg format="%s" ordinal="1" /> 是非法的。</Description>
+    <Consequences>网络接口无法配置，因而不能使用。</Consequences>
+    <Causes>可能是网络子网掩码存在输入错误。</Causes>
+    <Actions>1) 确保网络子网掩码正确。</Actions>
+  </Message>
+  <Message number="2511" eDefine="SYS_ERR_OPR_NET_IP_ERR">
+    <Title>网络接口 IP 地址非法</Title>
+    <Description>接口 <arg format="%s" ordinal="2" /> 的网络 IP 地址 <arg format="%s" ordinal="1" /> 非法/缺失。</Description>
+    <Consequences>接口无法配置接口，因而不能使用。</Consequences>
+    <Causes>网络 IP 地址可能存在输入错误或已存在于网络上。</Causes>
+    <Actions>1) 确保接口 IP 地址正确，且不重复。</Actions>
+  </Message>
+  <Message number="2512" eDefine="SYS_ERR_OPR_NET_GATEWAY_ERR">
+    <Title>网关 IP 地址非法</Title>
+    <Description>默认网关 IP 地址 <arg format="%s" ordinal="1" /> 非法/缺失或 LAN（局域网）IP 地址 <arg format="%s" ordinal="2" /> 非法。</Description>
+    <Consequences>网络无法接通，因此不能使用。</Consequences>
+    <Causes>网关 IP 和/或 LAN（局域网）IP 地址可能存在输入错误。<p /></Causes>
+    <Actions>1) 确保网关 IP 和 LAN（局域网）IP 地址正确。<p /></Actions>
+  </Message>
+  <Message number="2513" eDefine="SYS_ERR_OPR_NET_DHCP_ERR">
+    <Title>无来自 DHCP 服务器的参数</Title>
+    <Description>网络接口 <arg format="%s" ordinal="1" /> 未接到任何来自 DHCP 服务器的参数。</Description>
+    <Consequences>接口无法配置，因而不能使用。</Consequences>
+    <Causes>LAN （局域网）连接未运行 - DHCP 服务器未启动。</Causes>
+    <Actions>1) 确保 LAN（局域网）电缆正在工作且连接正确。<p />2) 确保 DHCP 服务器已启动。<p />3) 手动设置 LAN（局域网）IP 地址。</Actions>
+  </Message>
+  <Message number="2514" eDefine="SYS_ERR_OPR_NET_DEVICE_ERR">
+    <Title>网络接口初始化错误</Title>
+    <Description>网络接口 <arg format="%s" ordinal="1" /> 无法初始化。</Description>
+    <Consequences>接口无法配置，因而不能使用。</Consequences>
+    <Causes>可能是网络参数错误。<p />-有可能是硬件出现故障，需要更换。</Causes>
+    <Actions>1) 确保现有接口的网络参数正确。<p />2) 替换可疑硬件，以便找出原因。</Actions>
+  </Message>
+</Domain>

@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="MOC" domainNo="5" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="184" max="279">
+  <Message number="184" eDefine="SYS_ERR_MOC_SENSOR_CORRECTION_VECTOR_123_Y">
+    <Title>Corr. vector warning</Title>
+    <Description>Sensor correction vector calculations failed due to previous error.<p /></Description>
+    <Actions />
+  </Message>
+  <Message number="185" eDefine="SYS_ERR_MOC_SENSOR_CORRECTION_VECTOR_456_Y">
+    <Title>Corr. vector warning</Title>
+    <Description>Sensor correction vector calculations failed due to previous error.<p /></Description>
+    <Actions />
+  </Message>
+  <Message number="188" eDefine="SYS_ERR_MOC_RAPID_WEAVE_TORQUE_HIGH">
+    <Title>Non optimal movement</Title>
+    <Description>Required torque too high. Manual adjustment of weave frequency or amplitude is needed.<p /></Description>
+    <Actions>Reduce weave frequency or weave amplitude in this movement. Alternatively, reduce speed.</Actions>
+  </Message>
+  <Message number="189" eDefine="SYS_ERR_MOC_RELAY_SIGNAL_MISSING">
+    <Title>Relay signal not found</Title>
+    <Description>The signal <arg format="%s" ordinal="1" /> for relay <arg format="%s" ordinal="2" /> is not found in the I/O configuration. The mechanical unit using this relay is ignored.<p /></Description>
+    <Actions>Check I/O signal definitions and System Parameters definition in topic Motion, Type: Relay.</Actions>
+  </Message>
+  <Message number="190" eDefine="SYS_ERR_MOC_GEN_SCAN_JOINT_ERROR">
+    <Title>Permanent interpolator lock error</Title>
+    <Description>Scanned number of active joints not equal to expected number of joints.<p /></Description>
+    <Actions>Check configuration of the unit that is using general kinematics.</Actions>
+  </Message>
+  <Message number="191" eDefine="SYS_ERR_MOC_TCP_SPEED_SIGNAL_ERROR">
+    <Title>Too many TCP speed's</Title>
+    <Description>The number of TCP speed's in one segment is too large. Maximum number of TCP speed's is <arg format="%d" ordinal="1" />.<p /></Description>
+    <Actions>Check if one segment has too many TCP speed's set or if a sequence of segments have increasing DipLag.</Actions>
+  </Message>
+  <Message number="192" eDefine="SYS_ERR_MOC_JOG_MODE_ERROR">
+    <Title>Jogging error</Title>
+    <Description>Jogging is started too soon after program stop.<p /></Description>
+    <Actions>Try to jog the robot again.</Actions>
+  </Message>
+  <Message number="193" eDefine="SYS_ERR_MOC_POWER_UP_SPEED_ERROR">
+    <Title>Joint not synchronized</Title>
+    <Description>The speed of joint <arg format="%s" ordinal="1" /> before power down/failure was too high.<p /></Description>
+    <Actions>Make a new update of the revolution counter.</Actions>
+  </Message>
+  <Message number="194" eDefine="SYS_ERR_MOC_CTRLMA_POS_ERROR">
+    <Title>Internal position error</Title>
+    <Description>Error caused by internal numerical limitation. Joint number <arg format="%2.0f" ordinal="1" />. Calculated reference position = <arg format="%f" ordinal="2" />.<p /></Description>
+    <Actions>- Adjust the system parameters in Uncal ctrl master 0.<p />- If TuneServo is used, adjust parameter Tune_df. </Actions>
+  </Message>
+  <Message number="195" eDefine="SYS_ERR_MOC_INDEPENDENT_MOVE_ERROR">
+    <Title>Cannot move independent</Title>
+    <Description>Joint <arg format="%s" ordinal="1" /> cannot be moved in independent mode.<p /></Description>
+    <Actions>Make sure that independent mode is not used when trying to move joint.</Actions>
+  </Message>
+  <Message number="196" eDefine="SYS_ERR_MOC_START_END_TOO_CLOSE">
+    <Title>Calibration failed</Title>
+    <Description>Points 0 and 1 too close.<p /></Description>
+    <Actions>Make a new calibration with larger distance between points 0 and 1.</Actions>
+  </Message>
+  <Message number="197" eDefine="SYS_ERR_MOC_POSE_DEFINE_COLLAPSED">
+    <Title>Calibration failed</Title>
+    <Description>Points 0, 1, 2 on a line or point 2 too close to points 0 or 1.<p /></Description>
+    <Actions>Make a new calibration with points moved so that 0, 1 and 2 are not on a line or with larger distance between point 2 and points 0 and 1.</Actions>
+  </Message>
+  <Message number="198" eDefine="SYS_ERR_MOC_CALIB_ERROR">
+    <Title>Calibration failed</Title>
+    <Description>Internal error during calibration due to unknown origin switch.<p /></Description>
+    <Actions>- Report the occurrance to ABB.<p />- Make a new calibration.</Actions>
+  </Message>
+  <Message number="200" eDefine="SYS_ERR_MOC_TORQUE_ERR_DUE_TO_HIGH_SPEED">
+    <Title>Torque error</Title>
+    <Description>Torque calculation error due to high speed for mechanical unit <arg format="%s" ordinal="2" />. Internal info code <arg format="%d" ordinal="1" /><p /></Description>
+    <Actions>- Check load data.<p />- Reduce speed.</Actions>
+  </Message>
+  <Message number="201" eDefine="SYS_ERR_MOC_ORIENTATION_OUTSIDE_REACH">
+    <Title>Orientation outside reach</Title>
+    <Description>The error of the programmed orientation exceeds the acceptance limit.</Description>
+    <Actions>- Adjust robtarget orientation.<p />- Adjust/check orientations of currently used frames: tool frame, base frame, user frame, object frame.<p />- It is possible (but not recommendable) to switch off the orientation supervision using the corresponding system parameter. Please see system parameters documentation for details (Topic Motion/Type Robot).</Actions>
+  </Message>
+  <Message number="203" eDefine="SYS_ERR_MOC_MEASUREMENT_NODE_USED">
+    <Title>Measurement node used</Title>
+    <Description>The measurement node for joint <arg format="%s" ordinal="1" /> is already used.<p /></Description>
+    <Actions>Select another node.</Actions>
+  </Message>
+  <Message number="204" eDefine="SYS_ERR_MOC_MOTION_SUPERVISION">
+    <Title>Motion supervision</Title>
+    <Description>Motion supervision triggered for axis <arg format="%d" ordinal="1" /> on mechanical unit <arg format="%s" ordinal="2" />.</Description>
+    <Consequences>The movement of mechanical unit <arg format="%s" ordinal="2" /> is halted immediately. It then returns to a position on the path on which it was running. There, it will remain in status Motors ON, awaiting a start request.</Consequences>
+    <Causes>Triggering of the motion supervision may be caused by a collision, incorrect load definition or forces in external process.</Causes>
+    <Actions>1) If possible, acknowledge the fault, and resume operation by pressing the Start button on the teach pendant. <p />2) Make sure any loads are defined and identified correctly. <p />3) If the mechanical unit is exposed to forces from the external processes, use RAPID command or system parameters to raise the supervision level.</Actions>
+  </Message>
+  <Message number="205" eDefine="SYS_ERR_MOC_DATA_LOGGER">
+    <Title>Data logger error</Title>
+    <Description>
+      <arg format="%s" ordinal="1" />
+      <p />
+    </Description>
+    <Actions>Solution:<p /><arg format="%s" ordinal="2" /></Actions>
+  </Message>
+  <Message number="206" eDefine="SYS_ERR_MOC_PROBE_WARNING">
+    <Title>Probe warning</Title>
+    <Description>Probe buffer is full.</Description>
+    <Actions />
+  </Message>
+  <Message number="207" eDefine="SYS_ERR_MOC_ADD_INTERMEDIATE_POINT">
+    <Title>Add intermediate point</Title>
+    <Description>Intermediate point not coordinated to external pos mechanical unit is necessary when changing conveyor.<p /></Description>
+    <Actions>Create an intermediate point then change the conveyor.</Actions>
+  </Message>
+  <Message number="208" eDefine="SYS_ERR_MOC_FRICTION_COMPENSATION_WARNING">
+    <Title>Missing function</Title>
+    <Description>Friction compensation can not be activated for joint <arg format="%s" ordinal="1" />.<p /></Description>
+    <Actions>Install the option Advanced Shape Tuning.</Actions>
+  </Message>
+  <Message number="209" eDefine="SYS_ERR_MOC_VALID_JOINTS_NOT_FOUND_IN_GEN">
+    <Title>Kinematic limitation</Title>
+    <Description>No acceptable solution found. Residual: <arg format="%d" ordinal="1" /> deg in orientation, <arg format="%d" ordinal="2" /> mm in x,<p /><arg format="%d" ordinal="3" /> mm in y, <arg format="%d" ordinal="4" /> mm in z.<p /></Description>
+    <Actions>Insert an intermediary point. Check singularity. Increase position and orient. tolerance. Use MoveAbsJ. Check working range.</Actions>
+  </Message>
+  <Message number="210" eDefine="SYS_ERR_MOC_LOAD_IDENTIFICATION">
+    <Title>Load identification fail</Title>
+    <Description>Cannot perform load identification because configuration angle is too small.<p /></Description>
+    <Actions>- Increase configuration angle.</Actions>
+  </Message>
+  <Message number="214" eDefine="SYS_ERR_MOC_WORK_AREA_CONFIGURATION">
+    <Title>Work area config failed</Title>
+    <Description>Possibly the defined work area is larger than max allowed area for robot <arg format="%s" ordinal="1" />.<p /></Description>
+    <Actions>Adjust the work area parameters in Robot system parameters and try again.</Actions>
+  </Message>
+  <Message number="215" eDefine="SYS_ERR_MOC_LOAD_IDENTIFICATION_INIT">
+    <Title>Load identification fail</Title>
+    <Description>Axis <arg format="%d" ordinal="1" /> will move outside working range.<p /></Description>
+    <Actions>Move the axis to a position further from the working range limit.</Actions>
+  </Message>
+  <Message number="218" eDefine="SYS_ERR_MOC_PREFETCH_EVENT_OVERWRITTEN">
+    <Title>Path not finished</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Previous motion path was not finished before new motion was sent.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Use StorePath when in Trap routines. Move the program pointer and start a new movement.</Actions>
+  </Message>
+  <Message number="220" eDefine="SYS_ERR_MOC_RELAY_INPUT_SIGNAL">
+    <Title>No input signal</Title>
+    <Description>No input signal to contactor relay for mechanical unit <arg format="%s" ordinal="1" /><p /></Description>
+    <Actions>Ensure that an input signal is connected and configured.<p /></Actions>
+  </Message>
+  <Message number="221" eDefine="SYS_ERR_MOC_CONVEY_OUTSIDE_LIMITS">
+    <Title>Object outside limit</Title>
+    <Description>Object on conveyor <arg format="%s" ordinal="1" /> is outside max dist or min dist limits. Object Dropped.<p /></Description>
+    <Actions>Check limits or reduce conveyor speed.<p /></Actions>
+  </Message>
+  <Message number="222" eDefine="SYS_ERR_MOC_LOAD_ID_MISMATCH">
+    <Title>Mismatch type - MechUnit</Title>
+    <Description>Mismatch between selected identification type and selected mechanical unit.<p /></Description>
+    <Actions>Make sure that selected type corresponds to selected mechanical unit and try again.</Actions>
+  </Message>
+  <Message number="224" eDefine="SYS_ERR_MOC_MECH_UNIT_JOINT_LOAD">
+    <Title>Cannot define load</Title>
+    <Description>It is not allowed to define a load on axis <arg format="%d" ordinal="1" /> for mechanical unit <arg format="%s" ordinal="2" /> or the interpolation is not stopped in a finepoint.<p /></Description>
+    <Actions>Change axis number, mechanical unit or change the move before to finepoint.<p /></Actions>
+  </Message>
+  <Message number="225" eDefine="SYS_ERR_MOC_SYNCHRONIZATION_WARNING">
+    <Title>Old boot safe area lost</Title>
+    <Description>Error in boot safe memory area.<p />- Area updated with new data.<p />- System unsynchronized.<p /></Description>
+    <Actions>Update all revolution counters.<p /></Actions>
+  </Message>
+  <Message number="226" eDefine="SYS_ERR_MOC_REFMA_TASK_UNDERRUN">
+    <Title>Motor reference error</Title>
+    <Description>Calculation time for motor references exceeds internal limits.<p /></Description>
+    <Actions>- Reduce load on main computer.<p />- Restart controller.<p /></Actions>
+  </Message>
+  <Message number="227" eDefine="SYS_ERR_MOC_INVALID_CHANNEL_NUMBER">
+    <Title>Test signal error</Title>
+    <Description>Invalid channel number <arg format="%d" ordinal="1" />.<p /></Description>
+    <Actions>Allowed channel numbers are 1 - 12 for test signals and 1 - 6 for data log signals.<p /></Actions>
+  </Message>
+  <Message number="228" eDefine="SYS_ERR_MOC_UNKNOWN_SIGNAL_NUMBER">
+    <Title>Test signal error</Title>
+    <Description>Unknown test signal number <arg format="%d" ordinal="1" />.<p /></Description>
+    <Actions>Make sure that a valid test signal number is defined.</Actions>
+  </Message>
+  <Message number="229" eDefine="SYS_ERR_MOC_UNKNOWN_MECH_UNIT_NAME">
+    <Title>Test signal error</Title>
+    <Description>Unknown mechanical unit <arg format="%s" ordinal="1" />.<p /></Description>
+    <Actions>Check spelling or configuration.<p /></Actions>
+  </Message>
+  <Message number="230" eDefine="SYS_ERR_MOC_INVALID_AXIS_NUMBER">
+    <Title>Test signal error</Title>
+    <Description>Invalid axis number <arg format="%d" ordinal="1" /> for mechanical unit <arg format="%s" ordinal="2" />.<p /></Description>
+    <Actions>Check mechanical unit and axis number.<p /></Actions>
+  </Message>
+  <Message number="231" eDefine="SYS_ERR_MOC_MECH_UNIT_NOT_ACTIVE">
+    <Title>Test signal error</Title>
+    <Description>Mechanical unit <arg format="%s" ordinal="1" /> not active.<p /></Description>
+    <Actions>Activate mechanical unit before defining test signals.</Actions>
+  </Message>
+  <Message number="234" eDefine="SYS_ERR_MOC_TEST_SIGNAL_OVERFLOW">
+    <Title>Overflow during logging</Title>
+    <Description>An overflow occurred when logging test signals or data log signals.<p /></Description>
+    <Actions>- Define fewer signals.<p />- Reduce load on main computer.<p />- Reduce network load.</Actions>
+  </Message>
+  <Message number="235" eDefine="SYS_ERR_MOC_REFMA_CMD_QUEUE_TIMEOUT">
+    <Title>No interrupts received</Title>
+    <Description>No interrupts received from the robot communication card within timeout.</Description>
+    <Consequences>The system goes to status SYS FAIL.</Consequences>
+    <Causes>The robot communication card may be faulty. </Causes>
+    <Actions>1) Restart the system to resume operation. <p />2) Replace the robot communication card if faulty. <p />3) Check any other error log messages coinciding in time with this one for clues.</Actions>
+  </Message>
+  <Message number="239" eDefine="SYS_ERR_MOC_EL_BRAKE_ACC">
+    <Title>Optimal Em. Stop change</Title>
+    <Description>Optimal Emergency Stop changed to Electrical brake mode because of acceleration limitation.<p /></Description>
+    <Actions>Limit acceleration in the program.</Actions>
+  </Message>
+  <Message number="240" eDefine="SYS_ERR_MOC_EL_BRAKE_TRQ">
+    <Title>Optimal Em. Stop change</Title>
+    <Description>Optimal Emergency Stop changed to Electrical brake mode because of torque limitation.<p /></Description>
+    <Actions>Check load data.<p /></Actions>
+  </Message>
+  <Message number="241" eDefine="SYS_ERR_MOC_ABSOLUTE_ACCURACY_NOT_PRESENT">
+    <Title>Missing function</Title>
+    <Description>Absolute Accuracy not purchased.<p /></Description>
+    <Actions>Change Robot system parameter Use Robot Calibration to uncalib.<p /></Actions>
+  </Message>
+  <Message number="242" eDefine="SYS_ERR_MOC_CFG_MISSMATCH">
+    <Title>Unsync due to CFG data</Title>
+    <Description>- Mismatch between controller and cfg data for joint <arg format="%s" ordinal="1" /> (calibration offset or calibration position), or<p />- Valid flags for calibration offset or commutation offset not true in cfg.<p /></Description>
+    <Actions>Update measurement system:<p />- Update revolution counter.<p />- Recalibrate joint.<p />- Change cfg data.<p /></Actions>
+  </Message>
+  <Message number="243" eDefine="SYS_ERR_MOC_ACC_LIM_IS_NOT_IMPLEMENTED">
+    <Title>No acceleration limit</Title>
+    <Description>Acceleration limitation is not implemented for robot <arg format="%s" ordinal="1" />.<p /></Description>
+  </Message>
+  <Message number="244" eDefine="SYS_ERR_MOC_ABSACC_CALIB_FAILED">
+    <Title>AbsAcc calibration failed</Title>
+    <Description>Could not perform an AbsAcc calibration.<p /></Description>
+    <Actions>- Restart controller.<p />- Check that the hard drive isn't full.<p />- Install more memory.</Actions>
+  </Message>
+  <Message number="245" eDefine="SYS_ERR_MOC_NON_MOTION_EXECUTION">
+    <Title>Command not allowed</Title>
+    <Description>Cannot set non motion execution mode when in MOTORS ON state.<p /></Description>
+    <Actions>Change to MOTORS OFF.</Actions>
+  </Message>
+  <Message number="246" eDefine="SYS_ERR_MOC_SLAVE_POSITION_ERROR">
+    <Title>Linked motor error</Title>
+    <Description>Large position offset between follower axis and master axis.<p /></Description>
+    <Actions>Start linked motor service program. Jogg the follower axis to same position as the master axis. <p /></Actions>
+  </Message>
+  <Message number="247" eDefine="SYS_ERR_MOC_CLEAR_PATH_IGNORED">
+    <Title>Clear of Path failed</Title>
+    <Description>The movement has to be stopped when the path is to be cleared.<p /></Description>
+    <Actions>Use StopMove before the ClearPath instruction. Move the program pointer and start a new movement.</Actions>
+  </Message>
+  <Message number="248" eDefine="SYS_ERR_MOC_SG_PROCESS_ERROR">
+    <Title>Servo Tool error</Title>
+    <Description>Error for tool <arg format="%s" ordinal="1" /> in state <arg format="%d" ordinal="2" /><p /><arg format="%s" ordinal="3" /><p /><arg format="%s" ordinal="4" /><p /><arg format="%s" ordinal="5" /><p /></Description>
+  </Message>
+  <Message number="249" eDefine="SYS_ERR_MOC_SG_CLOSE_WARNING">
+    <Title>Programmed force reduced</Title>
+    <Description>Programmed tip force too high for tool <arg format="%s" ordinal="1" />. Requested motor torque (Nm)= <arg format="%f" ordinal="2" />. Force was reduced to max motor torque.<p /></Description>
+    <Actions>1) Reduce programmed tip force.<p />2) Check force vs torque calibration in system parameters.<p />3) Check max motor torque in system parameters.</Actions>
+  </Message>
+  <Message number="250" eDefine="SYS_ERR_MOC_SG_CALIB_WARNING">
+    <Title>Calibration force reduced</Title>
+    <Description>Requested calibration force too high for tool <arg format="%s" ordinal="1" />. Requested motor torque (Nm)= <arg format="%f" ordinal="2" />. Force was reduced to max motor torque<p /></Description>
+    <Actions>1) Check calib forces in sys par.<p />2) Check force vs torque calibration in system parameters.<p />3) Check max motor torque in system parameters.</Actions>
+  </Message>
+  <Message number="251" eDefine="SYS_ERR_MOC_SG_OPEN_ERROR">
+    <Title>Tool opening failed</Title>
+    <Description>An ordered tool axis movement of <arg format="%s" ordinal="1" /> was detected during tool opening.<p /></Description>
+    <Actions>Make sure the tool opening is ready before executing next tool axis movement. Decrease the system parameter 'post sync time'.</Actions>
+  </Message>
+  <Message number="252" eDefine="SYS_ERR_MOC_SG_OPEN_CALIB_ERROR">
+    <Title>Tool opening failed</Title>
+    <Description>An ordered tool axis movement of <arg format="%s" ordinal="1" /> was detected during tool opening in calibration.<p /></Description>
+    <Actions>Make sure no movements of the tool axis are ordered during calibration.</Actions>
+  </Message>
+  <Message number="253" eDefine="SYS_ERR_MOC_PROCESS_DEACTIVATION_ERROR">
+    <Title>Cannot deactivate unit</Title>
+    <Description>Deactivation of mechanical unit may not be done while in process mode.<p /></Description>
+    <Actions>Make sure to leave process mode before deactivating mechanical unit.</Actions>
+  </Message>
+  <Message number="254" eDefine="SYS_ERR_MOC_SLAVE_SPEED_ERROR">
+    <Title>Linked motor error.</Title>
+    <Description>Too large speed for follower axis when follower axis is in jog mode.<p /></Description>
+    <Actions>Start linked motor service program. Reset jog mode.</Actions>
+  </Message>
+  <Message number="256" eDefine="SYS_ERR_MOC_SSYNC_POS_WARNING">
+    <Title>Sync pos warning</Title>
+    <Description>Sensor movement outside limits. The sensor start pos should be <arg format="%s" ordinal="1" /> than <arg format="%f" ordinal="2" /> and found <arg format="%f" ordinal="3" />.<p /></Description>
+    <Actions>Check programmed sensor position in robtarget. Start sync earlier or change robtarget.</Actions>
+  </Message>
+  <Message number="257" eDefine="SYS_ERR_MOC_SSYNC_SPEED_WARNING">
+    <Title>Sync speed warning</Title>
+    <Description>Programmed speed outside limits. The speed should be <arg format="%s" ordinal="1" /> than <arg format="%f" ordinal="2" /> and found <arg format="%f" ordinal="3" />.<p /></Description>
+    <Actions>- Check programmed robot speed<p />- Check sensor teach pos<p />- Check sensor nominal speed.</Actions>
+  </Message>
+  <Message number="258" eDefine="SYS_ERR_MOC_SSYNC_DIRECTION_ERROR">
+    <Title>Sensor direction error</Title>
+    <Description>Programmed sensor pos speed <arg format="%f" ordinal="1" /> and found sensor speed <arg format="%f" ordinal="2" /> in opposite direction.<p /></Description>
+    <Actions>- Check programmed sensor positions in robtarget.<p />- Start sync earlier or reduce waitsensor dist .</Actions>
+  </Message>
+  <Message number="259" eDefine="SYS_ERR_MOC_SSYNC_MAX_DIST_ERROR">
+    <Title>Sensor max dist error</Title>
+    <Description>Distance between sensor position and programmed position too large. <arg format="%f" ordinal="1" /><p /></Description>
+    <Actions>- Check programmed  sensor positions in robtarget.<p />- Check sensor speed.<p />- Start sync earlier or reduce waitsensor dist.</Actions>
+  </Message>
+  <Message number="260" eDefine="SYS_ERR_MOC_SSYNC_CHECK_DIST_ERROR">
+    <Title>Sensor Check dist error</Title>
+    <Description>Distance sensor pos to programmed pos <arg format="%f" ordinal="1" /> too large <arg format="%f" ordinal="2" />.<p /></Description>
+    <Actions>- Check programmed sensor positions in robtarget.<p />- Check sensor speed<p />- Increase max deviation.</Actions>
+  </Message>
+  <Message number="261" eDefine="SYS_ERR_MOC_MIN_LIMIT_JOINT_WZONE">
+    <Title>WZone outside work area</Title>
+    <Description>The definition of minimum limit for the World Zone <arg format="%s" ordinal="1" /> is outside work area for: <arg format="%s" ordinal="2" /><arg format="%s" ordinal="3" /><arg format="%s" ordinal="4" />...<p /></Description>
+    <Actions>Change the definition of the World Zone so the limit will be inside work area or insert 9E9 to remove an axis from test by the WZone.</Actions>
+  </Message>
+  <Message number="262" eDefine="SYS_ERR_MOC_MAX_LIMIT_JOINT_WZONE">
+    <Title>WZone outside work area</Title>
+    <Description>The definition of maximum limit for the World Zone <arg format="%s" ordinal="1" /> is outside work area for: <arg format="%s" ordinal="2" /><arg format="%s" ordinal="3" /><arg format="%s" ordinal="4" />...<p /></Description>
+    <Actions>Change the definition of the World Zone so the limit will be inside work area or insert 9E9 to remove an axis from test by the WZone.</Actions>
+  </Message>
+  <Message number="263" eDefine="SYS_ERR_MOC_TOO_HEAVY_DUTY_CYCLE">
+    <Title>Duty factor warning</Title>
+    <Description>The duty factor for the gearbox of joint <arg format="%s" ordinal="1" /> of robot <arg format="%s" ordinal="2" /> is too high. Continued running without adjustment may cause damage to motor and gearbox. Contact your local ABB service support center.<p /></Description>
+    <Actions>Reduce the speed or increase the wait time.</Actions>
+  </Message>
+  <Message number="265" eDefine="SYS_ERR_MOC_SG_CLOSE_OUT_OF_REACH">
+    <Title>Thickness out of reach</Title>
+    <Description>Servo Tool: <arg format="%s" ordinal="1" /> Programmed thickness <arg format="%f" ordinal="2" /> mm is out of reach<p /></Description>
+    <Actions>- Adjust programmed thickness<p />- Check working range (min. stroke) <p /></Actions>
+  </Message>
+  <Message number="266" eDefine="SYS_ERR_MOC_SG_CLOSE_REVERSE_DIR">
+    <Title>Close request failed</Title>
+    <Description>Not allowed to close Servo Tool:<arg format="%s" ordinal="1" /> in reverse direction<p />Pre close position: <arg format="%f" ordinal="2" /> mm<p />Programmed thickness: <arg format="%f" ordinal="3" /> mm<p /></Description>
+    <Actions>- Adjust pre close position <p />- Adjust programmed thickness<p /></Actions>
+  </Message>
+  <Message number="267" eDefine="SYS_ERR_MOC_SG_OPEN_REVERSE_DIR">
+    <Title>Open request failed</Title>
+    <Description>Not allowed to open Servo Tool:<arg format="%s" ordinal="1" /> in reverse direction<p /></Description>
+    <Actions>Check that programmed robtarget positions of the Servo Tool are larger than programmed thickness.<p /></Actions>
+  </Message>
+  <Message number="268" eDefine="SYS_ERR_MOC_SG_CALIB_REVERSE_DIR">
+    <Title>Calibration failed</Title>
+    <Description>Not allowed to calibrate Servo Tool:<arg format="%s" ordinal="1" /> from negative position<p /></Description>
+    <Actions>Adjust Servo Tool position before calibration<p /></Actions>
+  </Message>
+  <Message number="269" eDefine="SYS_ERR_MOC_SG_TUNE_OUT_OF_REACH">
+    <Title>Tune value out of limit</Title>
+    <Description>Tune value for Servo Tool: <arg format="%s" ordinal="1" /> is out of limit. Parameter: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Adjust tune value<p /></Actions>
+  </Message>
+  <Message number="271" eDefine="SYS_ERR_MOC_POOR_EVENT_ACCURACY">
+    <Title>Poor event accuracy</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The system is presently configured with time event supervision, and now an event could not be accurately activated.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Decrease the programmed speed or increase the distance between the programmed positions. Turn off this check by changing the system parameters.</Actions>
+  </Message>
+  <Message number="272" eDefine="SYS_ERR_MOC_CONFIG_READ_DATA_FAILED">
+    <Title>Motion configuration</Title>
+    <Description>Failed to read <arg format="%s" ordinal="1" /> data for <arg format="%s" ordinal="2" />, from the configuration file.</Description>
+    <Actions>Check the configuration file. <p /> I-start the system with correct parameters.<p />Check both configuration data for the current instance and any instances below in the structure.</Actions>
+  </Message>
+  <Message number="273" eDefine="SYS_ERR_MOC_CONFIG_INCORRECT_PARAMETER">
+    <Title>Motion configuration</Title>
+    <Description>Incorrect configuration parameter <arg format="%s" ordinal="1" /> for <arg format="%s" ordinal="2" />. The configuration parameter could for instance be an unknown type or a numerical value that is out of range.</Description>
+    <Actions>Check the configuration file. <p /> I-start the system with correct parameters.</Actions>
+  </Message>
+  <Message number="274" eDefine="SYS_ERR_MOC_CONFIG_READ_OR_CREATE_FAILED">
+    <Title>Motion configuration</Title>
+    <Description>Failed to read or create <arg format="%s" ordinal="1" /> with the name: <arg format="%s" ordinal="2" />. If the current instance exists it is read, else it is created. In other words, the instance could not be read or created.</Description>
+    <Actions>Check the configuration file. <p /> I-start the system with correct parameters.</Actions>
+  </Message>
+  <Message number="275" eDefine="SYS_ERR_MOC_CONFIG_READ_NEXT_DATA_FAILED">
+    <Title>Motion configuration</Title>
+    <Description>Failed to read next <arg format="%s" ordinal="1" /> name, previous name is <arg format="%s" ordinal="2" />. The previous instance is ok, but the next instance cannot be read.<p />Check also the configuration error log for more details.  </Description>
+    <Actions>Check the configuration file. <p /> I-start the system with correct parameters.</Actions>
+  </Message>
+  <Message number="276" eDefine="SYS_ERR_MOC_CONFIG_SERVO_QUEUE_LENGTH">
+    <Title>Motion configuration</Title>
+    <Description>Standard servo queue length (<arg format="%d" ordinal="1" />) out of range (min=1, max=<arg format="%d" ordinal="2" />).</Description>
+    <Actions>Check std_servo_queue_length in the configuration file. <p /> I-start the system with correct parameters.</Actions>
+  </Message>
+  <Message number="277" eDefine="SYS_ERR_MOC_CONFIG_NO_OF_JOINTS_OVERRIDE">
+    <Title>Motion configuration</Title>
+    <Description>Number of joints (<arg format="%d" ordinal="1" />) in dynamic group override. Allowed number is <arg format="%d" ordinal="2" />.</Description>
+    <Actions>Check the configuration file. <p /> I-start the system with correct parameters.</Actions>
+  </Message>
+  <Message number="278" eDefine="SYS_ERR_MOC_CONFIG_SERVO_GUN_FAILED">
+    <Title>Motion configuration</Title>
+    <Description>Failed to configure servo gun (<arg format="%s" ordinal="1" />).</Description>
+    <Actions>Check the servo gun data in the configuration file. <p /> I-start the system with correct parameters.<p /></Actions>
+  </Message>
+  <Message number="279" eDefine="SYS_ERR_MOC_CONFIG_MISSING_STCH_OPTION">
+    <Title>Motion configuration</Title>
+    <Description>Servo tool change requires option Servo Tool Change.<p />Without this option, installation of this mechanical unit is not allowed.<p /></Description>
+    <Actions>Check the configuration file. <p /> I-start the system with correct parameters.</Actions>
+  </Message>
+</Domain>

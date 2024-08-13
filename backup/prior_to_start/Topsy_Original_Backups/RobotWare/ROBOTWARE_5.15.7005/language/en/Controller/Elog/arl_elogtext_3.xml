@@ -1,0 +1,524 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="ARL" domainNo="4" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="258" max="572">
+  <Message number="258" eDefine="SYS_ERR_ARL_ILLSWTDIM">
+    <Title>Parameter error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: 'switch' <p />parameter <arg format="%.16s" ordinal="2" /> can not be <p />dimensioned <p /></Description>
+    <Actions>Remove the array dimension <p />specification, or change the data type <p />of the parameter. </Actions>
+  </Message>
+  <Message number="259" eDefine="SYS_ERR_ARL_ILLSWTMOD">
+    <Title>Parameter error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: 'switch' <p />parameter <arg format="%.16s" ordinal="2" /> must have <p />transfer mode IN (specified value <p /><arg format="%i" ordinal="3" />) <p /></Description>
+    <Actions>Remove the parameter transfer mode <p />specifier. If IN transfer mode is not <p />sufficient, change the data type of the <p />parameter. </Actions>
+  </Message>
+  <Message number="260" eDefine="SYS_ERR_ARL_ILLSWTTYP">
+    <Title>Symbol definition error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: 'switch' only <p />allowed for optional parameter <p />(not for <arg format="%.16s" ordinal="2" />) <p /></Description>
+    <Actions>Change the parameter into an optional <p />parameter, or change the data type of <p />the parameter. If the object is not a <p />parameter, change the data type. </Actions>
+  </Message>
+  <Message number="261" eDefine="SYS_ERR_ARL_ILLVALCAT">
+    <Title>Type definition error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Value type class <p />for <arg format="%.16s" ordinal="2" /> must be one of <p />REAL_SYMVALTYP_VAL, _SEMIVAL, _NONVAL or <p />_NONE (specified value <arg format="%i" ordinal="3" />) <p /></Description>
+    <Actions>Change the value type class.</Actions>
+  </Message>
+  <Message number="262" eDefine="SYS_ERR_ARL_MAXDIMS">
+    <Title>Data declaration error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Too many array <p />dimensions for <arg format="%.16s" ordinal="2" /><p />(specified value <arg format="%i" ordinal="3" />) <p /></Description>
+    <Actions>An array may have at most 3 dimensions.</Actions>
+  </Message>
+  <Message number="263" eDefine="SYS_ERR_ARL_NAMNOTARLID">
+    <Title>Name error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Symbol name <p /><arg format="%.40s" ordinal="2" /><p />is not a RAPID identifier excluding <p />reserved words <p /></Description>
+    <Actions>The names of installed objects, <p />including parameters and components, <p />must be legal RAPID identifiers not <p />equal to any of the reserved words of <p />the RAPID language. Change the name.</Actions>
+  </Message>
+  <Message number="264" eDefine="SYS_ERR_ARL_NOCFUN">
+    <Title>Symbol definition error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Missing C <p />function for <arg format="%.16s" ordinal="2" /><p /></Description>
+    <Actions>A C-function that executes the ReaL <p />function being defined, must be <p />specified. </Actions>
+  </Message>
+  <Message number="265" eDefine="SYS_ERR_ARL_NOINITFUN">
+    <Title>Symbol definition error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Missing value <p />initialization function for <p /><arg format="%.16s" ordinal="2" /><p /></Description>
+    <Actions>A value initialization function must be <p />specified. </Actions>
+  </Message>
+  <Message number="266" eDefine="SYS_ERR_ARL_NOTDATTYP">
+    <Title>Reference error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: <arg format="%.16s" ordinal="2" /><p />is not a data type name (object <p /><arg format="%.16s" ordinal="3" />) <p />The specified name identifies an object <p />other than a type. <p /></Description>
+    <Actions />
+  </Message>
+  <Message number="267" eDefine="SYS_ERR_ARL_NOTVALTYP">
+    <Title>Reference error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: <arg format="%.16s" ordinal="2" /><p />is not a value data type (object <p /><arg format="%.16s" ordinal="3" />) <p />Only record components, alias types, <p />variables and 'VAR' mode parameters may <p />be of semi-value or non-value type. <p /></Description>
+    <Actions />
+  </Message>
+  <Message number="268" eDefine="SYS_ERR_ARL_NOVALFUN">
+    <Title>Symbol definition error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Missing value <p />conversion function for <arg format="%.16s" ordinal="2" /><p /></Description>
+    <Actions>A value conversion function must be <p />specified for a semi-value type. </Actions>
+  </Message>
+  <Message number="269" eDefine="SYS_ERR_ARL_NOVALMEM">
+    <Title>Symbol definition error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Not enough <p />memory for value of data <p /><arg format="%.16s" ordinal="2" /><p /></Description>
+    <Actions>More memory required.</Actions>
+  </Message>
+  <Message number="270" eDefine="SYS_ERR_ARL_PRVILLCAT">
+    <Title>Type definition error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Private type <p /><arg format="%.16s" ordinal="2" /> can only be semi-value <p />or non-value type (specified value <p /><arg format="%i" ordinal="3" />) <p /></Description>
+    <Actions>Change the value type class.</Actions>
+  </Message>
+  <Message number="271" eDefine="SYS_ERR_ARL_PRVILLSIZ">
+    <Title>Type definition error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Private type <p /><arg format="%.16s" ordinal="2" /> size must be multiple <p />of 4 (specified value <arg format="%i" ordinal="3" />) <p /></Description>
+    <Actions>All RAPID types must have a size that is <p /> a multiple of four. Change the specified <p />type size.</Actions>
+  </Message>
+  <Message number="272" eDefine="SYS_ERR_ARL_TMMPERSDB">
+    <Title>Type error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Persistent type <p />mismatch for <arg format="%.16s" ordinal="2" /><p /></Description>
+    <Actions>There is already a persistent data with <p />the same name but with another data <p />type. Rename the persistent, or change <p />its data type. </Actions>
+  </Message>
+  <Message number="273" eDefine="SYS_ERR_ARL_UNKDATTYP">
+    <Title>Reference error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Unknown data type <p />name <arg format="%.16s" ordinal="2" /> for <p /><arg format="%.16s" ordinal="3" /><p /></Description>
+    <Actions>There is no data type (or other object) <p />with the specified name. </Actions>
+  </Message>
+  <Message number="274" eDefine="SYS_ERR_ARL_UNKPARMOD">
+    <Title>Parameter error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Unknown parameter <p />transfer mode <arg format="%i" ordinal="2" /> for <p /><arg format="%.16s" ordinal="3" /><p /></Description>
+    <Actions>The specified parameter transfer mode is <p />not one of IN, 'VAR', 'PERS', 'INOUT' or <p />REF. Use corresponding REAL_SYMPARMOD_x. </Actions>
+  </Message>
+  <Message number="275" eDefine="SYS_ERR_ARL_UNKSYMDEF">
+    <Title>Symbol definition error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Unknown symbol <p />definition type <arg format="%i" ordinal="2" /><p />The symbol definition type tag does not <p />specify one of the allowed symbol <p />types (REAL_SYMDEF_x).<p /></Description>
+    <Actions />
+  </Message>
+  <Message number="277" eDefine="SYS_ERR_ARL_UNDO_ABORTED_STOP">
+    <Title>Undo Aborted</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" /><p /> The program execution was stopped while processing the UNDO statements. <p />UNDO was not fully executed. <p />The routine <arg format="%s" ordinal="2" /> was executing when UNDO was stopped.</Description>
+    <Actions>If the processing of UNDO takes too long, try to remove time-consuming <p />instructions such as TPWrite from the UNDO-clause. <p />If the undo processing never seems to finish, make sure any loops in the undo-statements are correct.<p /></Actions>
+  </Message>
+  <Message number="278" eDefine="SYS_ERR_ARL_UNDO_ABORTED_EXIT">
+    <Title>Undo Aborted</Title>
+    <Description> Task <arg format="%.16s" ordinal="1" /><p /> The processing of UNDO was aborted due to an EXIT-statement in the routine <arg format="%s" ordinal="2" />. <p />UNDO was not fully executed. <p /></Description>
+    <Actions />
+  </Message>
+  <Message number="279" eDefine="SYS_ERR_ARL_UNDO_ABORTED_ERROR">
+    <Title>Undo Aborted</Title>
+    <Description> Task <arg format="%.16s" ordinal="1" /><p /> The processing of UNDO was aborted due to a run-time error in routine <arg format="%s" ordinal="2" />. <p />UNDO was not fully executed. <p /></Description>
+    <Actions>Investigate the cause of the error.</Actions>
+  </Message>
+  <Message number="280" eDefine="SYS_ERR_ARL_UNDO_ILL_INSTR">
+    <Title>Undo Aborted</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" /><p />The instructions BREAK, RAISE, RETURN and STOP are not allowed to use in an <p />undo-clause  or any routine that is called from an undo-clause. <p /><p />The instruction <arg format="%s" ordinal="2" /> was found in UNDO context when <p />executing the routine <arg format="%s" ordinal="3" />.</Description>
+    <Actions>Avoid executing the instruction when in undo-context.</Actions>
+  </Message>
+  <Message number="281" eDefine="SYS_ERR_ARL_UNDO_ABORTED_EDIT">
+    <Title>Undo Aborted</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" /><p />The program execution of UNDO statements was aborted due to edit operation. </Description>
+  </Message>
+  <Message number="301" eDefine="SYS_ERR_ARL_IOEACCES">
+    <Title>File access error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" /> is trying to access file <arg format="%.39s" ordinal="2" />, but failing. </Description>
+    <Consequences>No data in the file may be accessed.</Consequences>
+    <Causes>File may be write protected.</Causes>
+    <Actions>1) Check if the file is write protected, and in such case change the setting.</Actions>
+  </Message>
+  <Message number="302" eDefine="SYS_ERR_ARL_IOENOENT">
+    <Title>File access error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" /> is trying to access file <arg format="%.39s" ordinal="2" />, but does not find file or directory.</Description>
+    <Consequences>If the missing file is a module, no automatic loading to a task is possible.</Consequences>
+    <Causes>-File may not have been correctly copied to the target directory. <p />-File or directory may have incorrect name.</Causes>
+    <Actions>1) Make sure the file and directory names are correct.</Actions>
+  </Message>
+  <Message number="303" eDefine="SYS_ERR_ARL_IOENOSPC">
+    <Title>File access error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" /> is trying to access file <arg format="%.39s" ordinal="2" />, but failing. </Description>
+    <Consequences>No data in the file may be accessed.</Consequences>
+    <Causes>No storage space available on device.</Causes>
+    <Actions>1) Make sure there is enough storage space available.</Actions>
+  </Message>
+  <Message number="304" eDefine="SYS_ERR_ARL_IOERRNO">
+    <Title>File access error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" /> is trying to access file <arg format="%.39s" ordinal="3" />, but failing. </Description>
+    <Consequences>No data in the file may be accessed.</Consequences>
+    <Causes>-File may be write protected. <p />-File or directory may have incorrect name. <p />-No storage space available on device.</Causes>
+    <Actions>1) Check if the file is write protected, and in such case change the setting. <p />2) Make sure the file and directory names are correct. <p />3) Make sure there is enough storage space available.</Actions>
+  </Message>
+  <Message number="322" eDefine="SYS_ERR_ARL_ARLSYNTAX">
+    <Title>Load error</Title>
+    <Description> Task <arg format="%.16s" ordinal="1" />: RAPID syntax <p /> error(s) in file <p /><arg format="%.40s" ordinal="2" /><p /></Description>
+    <Actions> The source file to be loaded contains <p /> RAPID syntax errors. Correct the source <p /> file.</Actions>
+  </Message>
+  <Message number="323" eDefine="SYS_ERR_ARL_HDRSYNTAX">
+    <Title>Load error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Syntax error(s) <p />in header in file <p /><arg format="%.40s" ordinal="2" /><p /></Description>
+    <Actions>The source file to be loaded contains <p />syntax error in the file header. Correct <p />the source file. The syntax errors are <p />logged in a separate file.</Actions>
+  </Message>
+  <Message number="324" eDefine="SYS_ERR_ARL_KEYSNOTDEF">
+    <Title>Load error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Keywords not <p />defined in specified language (file <p /><arg format="%.39s" ordinal="2" />) <p /></Description>
+    <Actions>Cannot load RAPID source code in the <p />national language specified in the file <p />header.</Actions>
+  </Message>
+  <Message number="325" eDefine="SYS_ERR_ARL_MEMFULL">
+    <Title>Load error</Title>
+    <Description> Task <arg format="%.16s" ordinal="1" />:<p />A big enough free program memory block is not available. The ordered operation could not be completed.</Description>
+    <Causes>The program memory is full or fragmentated.</Causes>
+    <Actions>Check if large data structures could be split into smaller blocks.<p />Use of installed modules can save program memory.</Actions>
+  </Message>
+  <Message number="326" eDefine="SYS_ERR_ARL_PASTFULL">
+    <Title>Load error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Parser stack <p />full (file <p /><arg format="%.39s" ordinal="2" />) <p /></Description>
+    <Actions>The program is too complex to load.</Actions>
+  </Message>
+  <Message number="327" eDefine="SYS_ERR_ARL_NOTCURVERS">
+    <Title>Load error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Not current RAPID <p />version (file <p /><arg format="%.39s" ordinal="2" />) <p /></Description>
+    <Actions>Cannot load RAPID source code of the <p />version specified in the file header.</Actions>
+  </Message>
+  <Message number="328" eDefine="SYS_ERR_ARL_PRGMEMFULL">
+    <Title>Load error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Program memory is full.<p /><arg format="%s" ordinal="2" /></Description>
+    <Actions>The module <arg format="%s" ordinal="3" /> could not be loaded because the program memory is full.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="329" eDefine="SYS_ERR_ARL_INSTALLATION_PROBLEM">
+    <Title>Module installation failure</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /> It is not possible to install a module from file <arg format="%s" ordinal="2" />. </Description>
+    <Consequences>The module will not be installed.</Consequences>
+    <Causes>The RAPID module may have RAPID errors.</Causes>
+    <Actions>1) Check the event messages in the Elog domain RAPID<p />2) Correct the RAPID errors and make a P-start.</Actions>
+  </Message>
+  <Message number="330" eDefine="SYS_ERR_ARL_INSTALLATION_ERROR">
+    <Title>RAPID errors in installed module</Title>
+    <Description>Task: <arg format="%s" ordinal="1" />. Module (line/column): <arg format="%s" ordinal="2" /><p />There is an error with symbol: <arg format="%s" ordinal="3" />. </Description>
+    <Consequences>The module will not be installed.</Consequences>
+  </Message>
+  <Message number="331" eDefine="SYS_ERR_ARL_NETDIVOPS">
+    <Title>Type error</Title>
+    <Description>
+      Operand types <arg format="%.18s" ordinal="1" />  and <arg format="%.18s" ordinal="2" /> for the '/', 'DIV' or 'MOD' operator not equal
+    </Description>
+    <Actions>The two operands of the '/', 'DIV' or 'MOD' operators must have equal type. Check the operand types.</Actions>
+  </Message>
+  <Message number="332" eDefine="SYS_ERR_ARL_NETLTOPS">
+    <Title>Type error</Title>
+    <Description>
+      Operand types <arg format="%.18s" ordinal="1" />  and <arg format="%.18s" ordinal="2" /> for the '&lt;', '&lt;=', '&gt;' or '&gt;=' operator not equal
+    </Description>
+    <Actions>The two operands of the '&lt;', '&lt;=', '&gt;' or '&gt;=' operators must have equal type. Check the operand types.</Actions>
+  </Message>
+  <Message number="351" eDefine="SYS_ERR_ARL_NOHASHTAB">
+    <Title>Memory allocation error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Failed to <p />allocate hash table, use linear list <p /></Description>
+    <Actions />
+  </Message>
+  <Message number="352" eDefine="SYS_ERR_ARL_PERNOTUPD">
+    <Title>Memory allocation error</Title>
+    <Description>Task <arg format="%.16s" ordinal="1" />: Failed to <p />update persistent expression, keep old <p />one <p /></Description>
+    <Actions />
+  </Message>
+  <Message number="353" eDefine="SYS_ERR_ARL_MECH_NOT_FOUND">
+    <Title>Mechanical Unit <arg format="%s" ordinal="1" /> Missing!</Title>
+    <Description>The mechanical unit component of the workobject <arg format="%s" ordinal="2" /> is faulty.</Description>
+    <Causes>- No mechanical unit is defined. <p />- The mechanical unit defined can not be found. <p />- The robot can not move the workobject by itself. </Causes>
+    <Actions>Check the mechanical unit component of the workobject. </Actions>
+  </Message>
+  <Message number="354" eDefine="SYS_ERR_ARL_DYN_LOAD_MOD_SAVED">
+    <Title>A copy of a dynamic loaded module has been saved.</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /> A dynamic loaded module <arg format="%s" ordinal="2" /> has been changed. <p />The module is lost when PP is set to main. <p />A copy of the changed module is saved on <arg format="%s" ordinal="3" /></Description>
+    <Causes>- A dynamic loaded module has been changed. <p />- PP is set to main. <p />- The dynamic loaded module is removed. <p />- A copy of the changed module is saved.</Causes>
+    <Actions>If the changes shall be saved, replace the original file with the copy. </Actions>
+  </Message>
+  <Message number="355" eDefine="SYS_ERR_STOP_EVNTRTN_ABORTED">
+    <Title>A Stop/QStop event routine has been stopped.</Title>
+    <Description> Task: <arg format="%s" ordinal="1" /><p /> A <arg format="%s" ordinal="2" /> event routine has been stopped by an external stop command. Any running Stop/QStop event routines will be stopped after <arg format="%d" ordinal="3" /> ms when controller receives second stop command.</Description>
+    <Actions> Keep all event routines short and free from RAPID instructions of type WaitTime, WaitDI, etc. </Actions>
+  </Message>
+  <Message number="357" eDefine="SYS_ERR_ARL_NOERRHANDLER">
+    <Title>Missing Error Handler</Title>
+    <Description>There is no error handler that deals with the process error for task <arg format="%s" ordinal="1" />.</Description>
+    <Consequences>The program will not be able to execute past the next move instruction.</Consequences>
+    <Causes>The error handler is missing.</Causes>
+    <Actions>Add an error handler. The error handler should include the StartMove (StartMoveRetry) instruction.</Actions>
+  </Message>
+  <Message number="358" eDefine="SYS_ERR_RMQ_MSG_DISCARDED">
+    <Title>RMQ message discarded</Title>
+    <Description>A RMQ message was discarded in task <arg format="%s" ordinal="1" />. <arg format="%s" ordinal="2" /> received a RMQ message that couldn't be handled.</Description>
+    <Consequences>The RMQ message was discarded without any notification to the sender.</Consequences>
+    <Causes>There can be several different reasons.<p />1. No interrupt is connected to the type of the received message.<p />2. No interrupt could be created because the interrupt queue was full.<p />3. The received message was corrupt.</Causes>
+    <Actions>Make sure that the task has connected an interrupt to all types of messages that is possible to receive. Read about IRMQMessage in the RAPID reference maunal.</Actions>
+  </Message>
+  <Message number="502" eDefine="SYS_ERR_ARL_DIBREAK">
+    <Title>Digital Input Break</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />A digital input interrupted the execution.<p />Program Ref. <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="504" eDefine="SYS_ERR_ARL_INPAR">
+    <Title>Parameter error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /><p /><arg format="%s" ordinal="3" /><p /><arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="506" eDefine="SYS_ERR_ARL_SYSTEM">
+    <Title>System Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /><p /><arg format="%s" ordinal="3" /><p /><arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="507" eDefine="SYS_ERR_ARL_OVERFLOW">
+    <Title>Limit Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Can not step further back on path <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="508" eDefine="SYS_ERR_ARL_QUAT">
+    <Title>Orientation Value Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Wrong orientation value in <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>All used orientations must be normalized, i.e. the sum of the quaternion elements squares must equal 1. </Actions>
+  </Message>
+  <Message number="511" eDefine="SYS_ERR_ARL_INPAR_NEG">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The parameter <arg format="%s" ordinal="2" /> in <arg format="%s" ordinal="3" /> is specified with a negative value.<p />Program Ref. <arg format="%s" ordinal="4" /><p /><p /></Description>
+    <Actions>The parameter must be set to a positive value.</Actions>
+  </Message>
+  <Message number="512" eDefine="SYS_ERR_ARL_EXTAX_ACT">
+    <Title>Missing External Axis Value</Title>
+    <Description>Some active external axis have incorrect or no order value. <p /></Description>
+    <Actions>Reprogram the position.</Actions>
+  </Message>
+  <Message number="513" eDefine="SYS_ERR_ARL_ACT_UNIT">
+    <Title>Mechanical Unit Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Not possible to activate or deactivate mechanical unit. Previous message may contain more information.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="514" eDefine="SYS_ERR_ARL_REG_ERR">
+    <Title>Execution Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The robot is too far from path to perform StartMove of the interrupted movement. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Position the robot to the interrupted position in the program.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="515" eDefine="SYS_ERR_ARL_ILLARGTYP">
+    <Title>Type Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Illegal data type of argument for parameter <arg format="%s" ordinal="2" />.<p /></Description>
+    <Actions>Change the parameter to a legal type. Make sure the value type is value or semivalue.</Actions>
+  </Message>
+  <Message number="518" eDefine="SYS_ERR_ARL_TYPEERR">
+    <Title>Type Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Expected type differs from read type in <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check the type in the argument.</Actions>
+  </Message>
+  <Message number="519" eDefine="SYS_ERR_ARL_EOF">
+    <Title>End Of File</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />End of file was found before all bytes were read in <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="522" eDefine="SYS_ERR_ARL_LIMIT">
+    <Title>Limit Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Stop watch overflow. <p />Program Ref. <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="523" eDefine="SYS_ERR_ARL_DEACT_UNIT">
+    <Title>Mechanical Unit Conflict</Title>
+    <Description>Not possible to deactivate mechanical unit <arg format="%s" ordinal="1" /> due to the configuration. <p /></Description>
+    <Actions>Check the configuration.</Actions>
+  </Message>
+  <Message number="524" eDefine="SYS_ERR_ARL_CNVNOTACT">
+    <Title>Conveyor Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The conveyor is not activated.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="525" eDefine="SYS_ERR_ARL_SINGNOTDEF">
+    <Title>Conveyor Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />No single number defined.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="526" eDefine="SYS_ERR_ARL_MUNOTSING">
+    <Title>Conveyor Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The mechanical unit <arg format="%s" ordinal="2" /> is not a single.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+  </Message>
+  <Message number="527" eDefine="SYS_ERR_ARL_FILE_OPEN">
+    <Title>File Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unable to open <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Causes>- The I/O device reference is already in use.</Causes>
+    <Actions>- If the I/O device reference is already in use, close it or use another.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="528" eDefine="SYS_ERR_ARL_FILE_CLOSED">
+    <Title>File Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />File or serial channel is not open.<p />ProgramRef. <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Causes>- The I/O device reference is not open, or has already been closed</Causes>
+    <Actions>- Check that device is open<p /> Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="529" eDefine="SYS_ERR_ARL_FILE_NOACC">
+    <Title>File Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Could not access the file <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Causes>- The path or filename is wrong.<p />- The I/O device reference is already in use.<p />- The maximum number of simultaneously opened files is exceeded.<p />- The disk is full.</Causes>
+    <Actions>- Check the path or filename.<p />- If the I/O device reference is already in use, close it or use another.<p />- Check the disk space.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="530" eDefine="SYS_ERR_ARL_OUT_ARR_NCH">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The number of characters, parameter <arg format="%s" ordinal="2" /> in WriteBin, you want to write to the serial channel is greater than the size of the array containing the characters to be written.<p />Program Ref. <arg format="%40s" ordinal="3" /><p /></Description>
+    <Actions>Make the array bigger or decrease the parameter.</Actions>
+  </Message>
+  <Message number="531" eDefine="SYS_ERR_ARL_OUT_ARR_BUF">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The array <arg format="%i" ordinal="2" /> in WriteBin is smaller than 0 or greater than 255.<p />Program Ref. <arg format="%40s" ordinal="3" /><p /><p /></Description>
+    <Actions>Change the size of the array to be 0 - 255.</Actions>
+  </Message>
+  <Message number="534" eDefine="SYS_ERR_ARL_TOUT_READ">
+    <Title>Timeout</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />A timeout interrupted the execution.<p />Program Ref. <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="535" eDefine="SYS_ERR_ARL_TYPENOTNUM">
+    <Title>Type Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The data you was trying to read in the file was not a numeric type.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="536" eDefine="SYS_ERR_ARL_SYS_PRDREQ">
+    <Title>System Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Too many pending read requests.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="537" eDefine="SYS_ERR_ARL_FILEACC_CBUF">
+    <Title>File Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The serial channel is not open, or you are trying to use the instruction on a file.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>- Open the serial channel.<p />- Check that the instruction is used on a serial channel.<p /> Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="538" eDefine="SYS_ERR_ARL_SYS_TOUT">
+    <Title>Max Time Expired</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The programmed waiting time has expired.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="539" eDefine="SYS_ERR_ARL_SYS_TASK">
+    <Title>System Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Not allowed option in this task. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="540" eDefine="SYS_ERR_ARL_FILEACC_NODIR">
+    <Title>File Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> is not a directory. <p />Program Ref. <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>Check that the path is the correct path to the directory you want to open.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="541" eDefine="SYS_ERR_ARL_FILEACC_DIR">
+    <Title>File Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Directory <arg format="%s" ordinal="2" /> is not accessible.<p />Program Ref. <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>Check the directory you are trying to open.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="542" eDefine="SYS_ERR_ARL_FILEACC_FS">
+    <Title>File Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Could not access the file system <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>- Check the path and filename.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="543" eDefine="SYS_ERR_ARL_FILEACC_DIROPN">
+    <Title>File Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />You cannot open <arg format="%s" ordinal="2" />. <p />Program Ref. <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Causes>There are too many directories already open.</Causes>
+    <Actions>Close one of the already open directories.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="544" eDefine="SYS_ERR_ARL_FILEACC_DIRCRE">
+    <Title>File Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Could not create the directory <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>- Check the path.<p />- Check write and execute permission for the directory under which the new directory should be created.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="545" eDefine="SYS_ERR_ARL_FILEACC_DIRREM">
+    <Title>File Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Could not remove the directory <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>- Check the path.<p />- Check write and execute permission for the directory under which the directory you want to remove is located.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="546" eDefine="SYS_ERR_ARL_FILEACC_FILREM">
+    <Title>File Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Could not remove the file <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>- Check the path.<p />- Check if you have write permission for the file.<p />- Check write and execute permission for the directory under which the file you want to remove is located.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="547" eDefine="SYS_ERR_ARL_FILEACC_FILREN">
+    <Title>File Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Could not rename the file <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>- Check the path.<p />- Check write permission for the file you want to rename.<p />- Check write and execute permission for the directory under which the file you want to rename is located.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="548" eDefine="SYS_ERR_ARL_FILEACC_FILCPY">
+    <Title>File Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Could not copy the file <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>- Check the path.<p />- Check write permision for the directory that you want to copy the file to.<p />- Check the available space.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="549" eDefine="SYS_ERR_ARL_SYS_UNIT">
+    <Title>System Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unknown mechanical unit <arg format="%s" ordinal="2" />.<p />The data of type mecunit is unknown for the system.<p />Program Ref. <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Causes>Data of type mecunit has been declared in the program.</Causes>
+    <Actions>Remove the declaration of mecunit data in the program and use one of the predefined data of type mecunit (automatic defined by the system).</Actions>
+  </Message>
+  <Message number="555" eDefine="SYS_ERR_ARL_IOSIG_READ">
+    <Title>I/O Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unable to read I/O signal.<p />Program Ref. <arg format="%s" ordinal="2" /><p /><p /><p /></Description>
+  </Message>
+  <Message number="556" eDefine="SYS_ERR_ARL_IOSIG_WRITE">
+    <Title>I/O Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unable to write I/O signal.<p />Program Ref. <arg format="%s" ordinal="2" /><p /><p /></Description>
+  </Message>
+  <Message number="557" eDefine="SYS_ERR_ARL_IOSIG_CONF">
+    <Title>I/O Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Configuration error for I/O signal. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check the IO signal configuration or alias definition. <p /></Actions>
+  </Message>
+  <Message number="558" eDefine="SYS_ERR_ARL_IOSIG_RD_ATTR">
+    <Title>I/O Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unable to read the I/O signal <arg format="%s" ordinal="2" /> in unit <arg format="%s" ordinal="3" />. <p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+  </Message>
+  <Message number="559" eDefine="SYS_ERR_ARL_IOSIG_WR_ATTR">
+    <Title>I/O Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unable to write to the I/O signal <arg format="%s" ordinal="2" /> in unit <arg format="%s" ordinal="3" />. <p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+  </Message>
+  <Message number="560" eDefine="SYS_ERR_ARL_SYS_SAVE">
+    <Title>System Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Can't save program module <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /><p /></Description>
+  </Message>
+  <Message number="561" eDefine="SYS_ERR_ARL_SYS_MODULE">
+    <Title>System Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> is not a module name. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>You cannot unload, save or erase this module.</Consequences>
+    <Actions>Check the name of the module.</Actions>
+  </Message>
+  <Message number="562" eDefine="SYS_ERR_ARL_INPAR_AXNO">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unknown axis number for the mechanical unit <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>Check the value for argument AxisNo.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="563" eDefine="SYS_ERR_ARL_SYS_MUACT">
+    <Title>System Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Mechanical unit <arg format="%s" ordinal="2" /> is not active.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Activate the mechanical unit.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="564" eDefine="SYS_ERR_ARL_ORIENT_ERR">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Orientation definition error. <p />GripLoads attach frame in tool or work object (user + object) is unnormalized. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check the orientation. All used orientations must be normalized i.e. the sum of the quaternion elements squares must equal 1. </Actions>
+  </Message>
+  <Message number="565" eDefine="SYS_ERR_ARL_INPAR_VEL">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Both arguments must be &gt; 0.<p />Program Ref. <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Actions>Check the value of the arguments.</Actions>
+  </Message>
+  <Message number="566" eDefine="SYS_ERR_ARL_INPAR_ACC">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Both arguments must be &gt; 0 and &lt;= 100.<p />Program Ref. <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Actions>Check the value of the arguments.</Actions>
+  </Message>
+  <Message number="567" eDefine="SYS_ERR_ARL_INPAR_QUAT">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Quaternion error.<p />Program Ref. <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Actions>Check the aom component of loaddata.</Actions>
+  </Message>
+  <Message number="568" eDefine="SYS_ERR_ARL_INPAR_AXNEG">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Axis may not have a value less than 0.<p />Program Ref. <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Actions>Change to a positive value.</Actions>
+  </Message>
+  <Message number="569" eDefine="SYS_ERR_ARL_ARG_ACCMAX">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The argument AccMax must be set if the argument AccLim is set to TRUE.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Set a value to argument AccMax.</Actions>
+  </Message>
+  <Message number="570" eDefine="SYS_ERR_ARL_ARG_DECMAX">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The argument DecelMax must be set if argument DecelLim is set to TRUE.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Set a value to argument DecelMax.</Actions>
+  </Message>
+  <Message number="571" eDefine="SYS_ERR_ARL_ARG_ACCMLOW">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The value of parameter AccMax is too low.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Increase the value of parameter AccMax.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="572" eDefine="SYS_ERR_ARL_ARG_DECMLOW">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The value of parameter DecelMax is too low. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Increase the value of parameter DecelMax.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+</Domain>

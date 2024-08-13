@@ -1,0 +1,28 @@
+$
+$ 	EDS File for the ABB DeviceNet DSQC 697 card
+$
+
+[File]
+	DescText    = "Woodhead SST-DN4 Scanner EDS File";
+	CreateDate  = 09-24-2004;
+	CreateTime  = 12:09:05;
+	ModDate     = 03-14-2011;
+	ModTime     = 12:09:05;
+	Revision    = 3.11;
+
+[Device]
+	VendCode    = 8;
+	ProdType    = 12;
+	ProdCode    = 12;
+	MajRev      = 4;
+	MinRev      = 2;
+	VendName    = "Woodhead Software & Electronics (SST)";
+	ProdTypeStr = "Communication Adapter";
+	ProdName    = "Woodhead SST-DN4 Scanner";
+	Catalog     = "0";
+
+[IO_Info]
+	Default     = 0x0001;
+	PollInfo    = 0x0001,1,1;
+	Input1      = 8,0,0x0001,"",6,"20 04 24 64 30 03","";
+	Output1     = 8,0,0x0001,"",6,"20 04 24 65 30 03","";

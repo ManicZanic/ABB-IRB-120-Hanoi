@@ -1,0 +1,292 @@
+MODULE Utility(SYSMODULE,NOVIEW)
+    !*****************************************************
+    !Module Name: Utility
+    !Version:     2.0
+    !Description: The program utility tool
+    !Date:        2014/5/10
+    !Author:      Gavin Zhang
+    !*****************************************************
+    VAR socketdev client_socket;
+    VAR string received_string;
+    PERS string CCD_string;
+    VAR bool keep_listening := TRUE;
+    VAR socketdev socket1;
+    VAR string sPartx;
+    VAR string sParty;
+    VAR bool Ok;
+    VAR string sPartangle;
+    PERS num offsX:=0;
+    PERS num offsY:=0;
+    PERS num nAngle:=0;
+    CONST num WZR:=10;
+    CONST num WZH:=20;
+    PERS pos poshome;
+    PERS wzstationary wzrobota1:=[1];
+    PERS pos PosHome1;
+    PERS pos PosHome2;
+    
+   PROC PowerUp()
+     VAR shapedata shrobot1;
+     phome:=pPick;
+     phome.trans.z:=pPick.trans.z+80;
+     PosHome1:=phome.trans; 
+     PosHome2:=phome.trans;
+     PosHome1.X:=PosHome1.X-15;
+     PosHome2.X:=PosHome2.X+15;
+     PosHome1.Y:=PosHome1.y-15;
+     PosHome2.Y:=PosHome2.Y+15;
+     PosHome1.Z:=PosHome1.z-15;
+     PosHome2.z:=PosHome2.z+15;
+     SetSysData tGripper;
+     SetSysData wobj0;
+     WZBoxDef\Inside,shrobot1,PosHome1,PosHome2;
+     WZDOSet\Stat,wzrobota1\Inside,shrobot1,doHomePos,1;
+     TPWrite "The power on is ran";
+     TPWrite Revision;
+   ENDPROC
+    
+  FUNC bool bCurPos(
+    robtarget ComparePos,
+    INOUT tooldata TCP,
+    num nPosX,
+     num nPosY,
+     num nPosZ,
+     inout wobjdata wobj)
+
+    ! Function to compare current manipulator position with a given position
+    VAR num Counter:=0;
+    VAR robtarget ActualPos;
+    ActualPos:=CRobT(\Tool:=TCP\WObj:=wobj);
+    IF ActualPos.trans.x>ComparePos.trans.x-nPosX AND ActualPos.trans.x<ComparePos.trans.x+nPosX Counter:=Counter+1;
+    IF ActualPos.trans.y>ComparePos.trans.y-nPosY AND ActualPos.trans.y<ComparePos.trans.y+nPosY Counter:=Counter+1;
+    IF ActualPos.trans.z>ComparePos.trans.z-nPosZ AND ActualPos.trans.z<ComparePos.trans.z+nPosZ Counter:=Counter+1;
+    IF ActualPos.rot.q1>ComparePos.rot.q1-0.1 AND ActualPos.rot.q1<ComparePos.rot.q1+0.1 Counter:=Counter+1;
+    IF ActualPos.rot.q2>ComparePos.rot.q2-0.1 AND ActualPos.rot.q2<ComparePos.rot.q2+0.1 Counter:=Counter+1;
+    IF ActualPos.rot.q3>ComparePos.rot.q3-0.1 AND ActualPos.rot.q3<ComparePos.rot.q3+0.1 Counter:=Counter+1;
+    IF ActualPos.rot.q4>ComparePos.rot.q4-0.1 AND ActualPos.rot.q4<ComparePos.rot.q4+0.1 Counter:=Counter+1;
+    RETURN Counter=7;
+  ENDFUNC
+  FUNC bool bCurrentPos(
+    robtarget ComparePos,
+    INOUT tooldata TCP)
+
+    ! Function to compare current manipulator position with a given position
+    VAR num Counter:=0;
+    VAR robtarget ActualPos;
+    ActualPos:=CRobT(\Tool:=TCP\WObj:=wobj0);
+    IF ActualPos.trans.x>ComparePos.trans.x-150 AND ActualPos.trans.x<ComparePos.trans.x+150 Counter:=Counter+1;
+    IF ActualPos.trans.y>ComparePos.trans.y-150 AND ActualPos.trans.y<ComparePos.trans.y+150 Counter:=Counter+1;
+    IF ActualPos.trans.z>ComparePos.trans.z-150 AND ActualPos.trans.z<ComparePos.trans.z+150 Counter:=Counter+1;
+    IF ActualPos.rot.q1>ComparePos.rot.q1-0.1 AND ActualPos.rot.q1<ComparePos.rot.q1+0.1 Counter:=Counter+1;
+    IF ActualPos.rot.q2>ComparePos.rot.q2-0.1 AND ActualPos.rot.q2<ComparePos.rot.q2+0.1 Counter:=Counter+1;
+    IF ActualPos.rot.q3>ComparePos.rot.q3-0.1 AND ActualPos.rot.q3<ComparePos.rot.q3+0.1 Counter:=Counter+1;
+    IF ActualPos.rot.q4>ComparePos.rot.q4-0.1 AND ActualPos.rot.q4<ComparePos.rot.q4+0.1 Counter:=Counter+1;
+    RETURN Counter=7;
+  ENDFUNC
+  !the rCalibtool is Updata the tool of the robot
+ PROC rCalibTool()
+    VAR pose poseCCD1;
+    VAR pose poseTool;
+    VAR num anglex;
+    VAR num angley;
+    VAR num anglez;
+    !MoveJ pCCD1, v500, fine, tGripper;
+    !SocketGet sCCD1;
+    !data from camera 1
+    !CCD1_X: the X value of the feature point in the world coordinate
+    posRel.trans.x := X1;
+    posRel.trans.y := Y1;
+    !posRel.trans.z := 108;
+    posRel.trans.z := pCCD1.trans.z;
+    posRel.rot:=pCCD1.rot;
+    anglez := EulerZYX(\Z, pCCD1.rot);
+    reg1 := anglez;
+    !
+    !nAngle:=anglez; ! delete for real test
+    !posRel.rot := posRel.rot*OrientZYX(nAngle1-anglez,0,0);
+    posRel.rot := posRel.rot*OrientZYX(-nAngle1-noffsangle+anglez,0,0);
+    !poseCCD1: pose where to take picture
+    poseCCD1.trans:=pCCD1.trans;
+    poseCCD1.rot:=pCCD1.rot;
+    tCurTool := tGripper;
+    !calculate the actual tool data
+    poseTool:=PoseMult(PoseInv(poseCCD1),posRel);
+    poseTool:=PoseMult(tGripper.tframe,poseTool);
+    tCurtool.tframe.trans:=poseTool.trans;
+    tCurtool.tframe.rot:=poseTool.rot;
+  ENDPROC
+  PROC rDefAssFrame()
+    AssFrame := wobj0;
+    ! the data from CCD2
+   AssFrame.uframe.trans.x:=X2;
+   AssFrame.uframe.trans.y:=Y2;
+   !the Z value is Input by Munal
+   AssFrame.uframe.trans.z:=DframTransZ;
+   AssFrame.uframe.rot:=wobj0.uframe.rot * OrientZYX(nAngle2-90,0,0);
+ENDPROC
+!the function DataRiecive is used to get the value from the socketstr 
+ FUNC NUM DataGet(num j,num i,string str)
+   FOR i FROM 1 TO 20 DO
+     n1{i}:=0;
+   ENDFOR
+   nStrlength := StrLen(str);
+   nFind:=0;
+   FOR i FROM 1 TO i DO
+     nfind := StrFind(SocketStr,nFind+1,",");  
+     nArray{i}:=nFind;
+   ENDFOR
+     sCCD := StrPart(SocketStr,1,nArray{1}-1);
+     IF i=1 THEN
+       ok := StrToVal(StrPart(SocketStr,nArray{1}+1,nStrLength-nArray{1}),n1{1});
+       GOTO A;
+     ELSE
+       ok := StrToVal(StrPart(SocketStr,nArray{1}+1,nArray{2}-nArray{1}-1),n1{1}); 
+     ENDIF
+     IF i=2 THEN
+       ok := StrToVal(StrPart(SocketStr,nArray{2}+1,nStrLength-nArray{2}),n1{2});
+       GOTO A;  
+     ELSE
+       ok := StrToVal(StrPart(SocketStr,nArray{2}+1,nArray{3}-nArray{2}-1),n1{2});
+     ENDIF
+     IF i=3 THEN
+       ok := StrToVal(StrPart(SocketStr,nArray{3}+1,nStrLength-nArray{3}),n1{3});
+       GOTO A;  
+     ELSE
+       ok := StrToVal(StrPart(SocketStr,nArray{3}+1,nArray{4}-nArray{3}-1),n1{3});
+     ENDIF
+     IF i=4 THEN
+       ok := StrToVal(StrPart(SocketStr,nArray{4}+1,nStrLength-nArray{4}),n1{4});
+       GOTO A;  
+     ELSE
+       ok := StrToVal(StrPart(SocketStr,nArray{4}+1,nArray{5}-nArray{4}-1),n1{4});
+     ENDIF
+     IF i=5 THEN
+       ok := StrToVal(StrPart(SocketStr,nArray{5}+1,nStrLength-nArray{5}),n1{5});
+       GOTO A;  
+     ELSE
+       ok := StrToVal(StrPart(SocketStr,nArray{5}+1,nArray{6}-nArray{5}-1),n1{5});
+     ENDIF
+     IF i=6 THEN
+       ok := StrToVal(StrPart(SocketStr,nArray{6}+1,nStrLength-nArray{6}),n1{6});
+       GOTO A;  
+     ELSE
+       ok := StrToVal(StrPart(SocketStr,nArray{6}+1,nArray{7}-nArray{6}-1),n1{6});
+     ENDIF
+     IF i=7 THEN
+       ok := StrToVal(StrPart(SocketStr,nArray{7}+1,nStrLength-nArray{7}),n1{7});
+       GOTO A;  
+     ELSE
+       ok := StrToVal(StrPart(SocketStr,nArray{7}+1,nArray{8}-nArray{7}-1),n1{7});
+     ENDIF
+     IF i=8 THEN
+       ok := StrToVal(StrPart(SocketStr,nArray{8}+1,nStrLength-nArray{8}),n1{8});
+       GOTO A;  
+     ELSE
+       ok := StrToVal(StrPart(SocketStr,nArray{8}+1,nArray{9}-nArray{8}-1),n1{8});
+     ENDIF
+     IF i=9 THEN
+       ok := StrToVal(StrPart(SocketStr,nArray{9}+1,nStrLength-nArray{9}),n1{9});
+       GOTO A;  
+     ELSE
+       ok := StrToVal(StrPart(SocketStr,nArray{9}+1,nArray{10}-nArray{9}-1),n1{9});
+     ENDIF
+     IF i=10 THEN
+       ok := StrToVal(StrPart(SocketStr,nArray{10}+1,nStrLength-nArray{10}),n1{10});
+       GOTO A;  
+     ELSE
+       ok := StrToVal(StrPart(SocketStr,nArray{10}+1,nArray{11}-nArray{10}-1),n1{10});
+     ENDIF
+     IF i=11 THEN
+       ok := StrToVal(StrPart(SocketStr,nArray{11}+1,nStrLength-nArray{11}),n1{11});
+       GOTO A;  
+     ELSE
+       ok := StrToVal(StrPart(SocketStr,nArray{11}+1,nArray{12}-nArray{11}-1),n1{11});
+     ENDIF
+     IF i=12 THEN
+       ok := StrToVal(StrPart(SocketStr,nArray{12}+1,nStrLength-nArray{12}),n1{12});
+       GOTO A;  
+     ELSE
+       ok := StrToVal(StrPart(SocketStr,nArray{12}+1,nArray{13}-nArray{12}-1),n1{12});
+     ENDIF
+     IF i=13 THEN
+       ok := StrToVal(StrPart(SocketStr,nArray{13}+1,nStrLength-nArray{13}),n1{13});
+       GOTO A;  
+     ELSE
+       ok := StrToVal(StrPart(SocketStr,nArray{13}+1,nArray{14}-nArray{13}-1),n1{13});
+     ENDIF
+     IF i=14 THEN
+       ok := StrToVal(StrPart(SocketStr,nArray{14}+1,nStrLength-nArray{14}),n1{14});
+       GOTO A;  
+     ELSE
+       ok := StrToVal(StrPart(SocketStr,nArray{14}+1,nArray{15}-nArray{14}-1),n1{14});
+     ENDIF
+     IF i=15 THEN
+       ok := StrToVal(StrPart(SocketStr,nArray{15}+1,nStrLength-nArray{15}),n1{15});
+       GOTO A;  
+     ELSE
+       ok := StrToVal(StrPart(SocketStr,nArray{15}+1,nArray{16}-nArray{15}-1),n1{15});
+     ENDIF
+     IF i=16 THEN
+       ok := StrToVal(StrPart(SocketStr,nArray{16}+1,nStrLength-nArray{16}),n1{16});
+       GOTO A;  
+     ELSE
+       ok := StrToVal(StrPart(SocketStr,nArray{16}+1,nArray{17}-nArray{16}-1),n1{16});
+     ENDIF
+     IF i=17 THEN
+       ok := StrToVal(StrPart(SocketStr,nArray{17}+1,nStrLength-nArray{17}),n1{17});
+       GOTO A;  
+     ELSE
+       ok := StrToVal(StrPart(SocketStr,nArray{17}+1,nArray{18}-nArray{17}-1),n1{17});
+     ENDIF
+     IF i=18 THEN
+       ok := StrToVal(StrPart(SocketStr,nArray{18}+1,nStrLength-nArray{18}),n1{18});
+       GOTO A;  
+     ELSE
+       ok := StrToVal(StrPart(SocketStr,nArray{18}+1,nArray{19}-nArray{18}-1),n1{18});
+     ENDIF
+     IF i=19 THEN
+       ok := StrToVal(StrPart(SocketStr,nArray{19}+1,nStrLength-nArray{19}),n1{19});
+       GOTO A;  
+     ELSE
+       ok := StrToVal(StrPart(SocketStr,nArray{19}+1,nArray{20}-nArray{19}-1),n1{19});
+     ENDIF
+     IF i=20 THEN
+       ok := StrToVal(StrPart(SocketStr,nArray{20}+1,nStrLength-nArray{20}),n1{20});
+       GOTO A;  
+     ELSE
+       ok := StrToVal(StrPart(SocketStr,nArray{20}+1,nArray{21}-nArray{20}-1),n1{20});
+     ENDIF
+   A:
+   WaitTime 0.1;
+   IF j=1 RETURN n1{1};
+   IF j=2 RETURN n1{2};
+   IF j=3 RETURN n1{3};
+   IF j=4 RETURN n1{4};
+   IF j=5 RETURN n1{5};
+   IF j=6 RETURN n1{6};
+   IF j=7 RETURN n1{7};
+   IF j=8 RETURN n1{8};
+   IF j=9 RETURN n1{9};
+   IF j=10 RETURN n1{10};
+   IF j=11 RETURN n1{11};
+   IF j=12 RETURN n1{12};
+   IF j=13 RETURN n1{13};
+   IF j=14 RETURN n1{14};
+   IF j=15 RETURN n1{15};
+   IF j=16 RETURN n1{16};
+   IF j=17 RETURN n1{17};
+   IF j=18 RETURN n1{18};
+   IF j=19 RETURN n1{19};
+   IF j=20 RETURN n1{20};
+ENDFUNC     
+FUNC String StringGet(num i,string str)
+   nStrlength := StrLen(str);
+   nFind:=0;
+   FOR i FROM 1 TO i DO
+     nfind := StrFind(SocketStr,nFind+1,",");  
+     nArray{i}:=nFind;
+   ENDFOR
+     sCCD := StrPart(SocketStr,1,nArray{1}-1);
+   RETURN sCCD;
+ENDFUNC     
+ENDMODULE

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<Resource Name="CALPEND" Language="pl">
+  <Text Name="100">
+    <Value>Blad odczytu z urzadzenia</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="101">
+    <Value>Czujnik A podlaczony nieprawidlowo</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="102">
+    <Value>Nieprawidlowy adres dla czujnika A</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="103">
+    <Value>Czujnik B podlaczony nieprawidlowo</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="104">
+    <Value>Nieprawidlowy adres dla czujnika B</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="105">
+    <Value>Brak lacznosci z urzadzeniem</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="106">
+    <Value>Nieoczekiwany blad!</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="107">
+    <Value>Nieprawidlowa konfiguracja COM2.</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="108">
+    <Value>Przekroczenie czasu! Nie zeskanowano zadnego kodu paskowego.</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="109">
+    <Value>Blad podczas odczytu kodu paskowego, przerywanie.</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="110">
+    <Value>Blad zwrócony przez funkcje</Value>
+    <Comment>
+    </Comment>
+  </Text>
+</Resource>

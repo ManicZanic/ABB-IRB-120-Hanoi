@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Resource Name="CALPEND" Language="eng">
+  <Text Name="100">
+    <Value>Hiba az eszköz olvasásakor</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="101">
+    <Value>Az A érzékelõ helytelenül van csatlakoztatva</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="102">
+    <Value>Nem megfelelõ cím az A érzékelõ esetében</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="103">
+    <Value>A B érzékelõ helytelenül van csatlakoztatva</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="104">
+    <Value>Nem megfelelõ cím a B érzékelõ esetében</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="105">
+    <Value>Nincs kapcsolat az egységgel</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="106">
+    <Value>Váratlan hiba!</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="107">
+    <Value>Helytelen COM2 beállítás.</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="108">
+    <Value>Idõtúllépés! Nem lett leolvasva vonalkód.</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="109">
+    <Value>Hiba a vonalkód leolvasásakor; megszakítás.</Value>
+    <Comment>
+    </Comment>
+  </Text>
+  <Text Name="110">
+    <Value>A funkció hibát jelzett</Value>
+    <Comment>
+    </Comment>
+  </Text>
+</Resource>

@@ -1,0 +1,437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="SYS" domainNo="2" lang="zh" elogTextVersion="1.0" min="493" max="636">
+  <Message number="493" eDefine="SYS_ERR_SYS_PSC_43">
+    <Title> SC <arg format="%d" ordinal="1" /> SBR 已触发 </Title>
+    <Description> 安全控制器 (SC) 上的安全制动斜坡 (SBR) 因为机械单元 <arg format="%s" ordinal="2" /> 上的低减速而被 0 类停止中断。这属于正常现象，在 stop1 过低的情况下会发生。检查是否有其他安全控制器 elog。 </Description>
+    <Actions> - 更改动作配置中的 SBR 的参数值<p /> - 触发新的停止，以测试制动斜坡。<p />- 如果此问题经常发生，请查找应用手册了解机械单元配置的内容。 </Actions>
+  </Message>
+  <Message number="494" eDefine="SYS_ERR_SYS_PSC_44">
+    <Title>
+SC <arg format="%d" ordinal="1" /> 工具更换错误
+    </Title>
+    <Description>
+机械单元 <arg format="%s" ordinal="2" /> 上的 <arg format="%d" ordinal="3" /> 工具更换有误</Description>
+    <Actions>
+- 检查工具是否正确。<p />- 根据需要降低速度。<p />- 执行新的工具更换。 <p /></Actions>
+  </Message>
+  <Message number="501" eDefine="SYS_ERR_SYS_OPEN_ES_PANL">
+    <Title>ES 电路板开启</Title>
+    <Description>紧急停止配电板在之前已断开，然而在断开时试图操作机器人。</Description>
+    <Consequences>系统保留在“紧急停止”状态。</Consequences>
+    <Causes>已试图操纵控制，如启用设备。</Causes>
+    <Actions>1) 要恢复操作，请首先重置“紧急停止配电板”按钮。<p />2) 然后按“控制模块”上的“电机开启”按钮，将系统切换回“电机开启”状态。</Actions>
+  </Message>
+  <Message number="502" eDefine="SYS_ERR_SYS_OPEN_ES_PEND">
+    <Title>ES 悬挂装置开启</Title>
+    <Description>紧急停止悬挂装置在之前已断开，然而在断开时试图操作机器人。</Description>
+    <Consequences>系统保留在“紧急停止”状态。</Consequences>
+    <Causes>已试图操纵控制，如启用设备。</Causes>
+    <Actions>1) 要恢复操作，请首先重置“紧急停止悬挂装置”按钮。<p />2) 然后按“控制模块”上的“电机开启”按钮，将系统切换回“电机开启”状态。</Actions>
+  </Message>
+  <Message number="503" eDefine="SYS_ERR_SYS_OPEN_ES_EXT">
+    <Title>ES 外部类别 0 开启</Title>
+    <Description>紧急停止外部在之前已断开，然而在断开时试图操作机器人。</Description>
+    <Consequences>系统保留在“紧急停止”状态。</Consequences>
+    <Causes>已试图操纵控制，如启用设备。</Causes>
+    <Actions>1) 要恢复操作，请首先重置“紧急停止外部”按钮。<p />2) 然后按“控制模块”上的“电机开启”按钮，将系统切换回“电机开启”状态。</Actions>
+  </Message>
+  <Message number="505" eDefine="SYS_ERR_SYS_OPEN_DEL_STP">
+    <Title>延时停止开启</Title>
+    <Description>延时停止开启。</Description>
+    <Consequences>系统转入“系统中断”状态。</Consequences>
+    <Actions>1) 要恢复操作，首先请重置“延迟停止”按钮。<p />2) 然后按控制模块上的“电机开启”按钮，以将系统切换回“电机开启”状态。</Actions>
+  </Message>
+  <Message number="506" eDefine="SYS_ERR_SYS_OPEN_TS">
+    <Title>测试停止开启</Title>
+    <Description>测试模式安全保护停止电路已断开。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Causes>与测试模式安全保护停止电路串联的一个或多个开关已打开，这可能是由很多故障造成的。只有在手动操作模式下才可能出现这种情况。</Causes>
+    <Actions>1) 定位开关，重置后重新启动系统。<p />2) 检查电缆及其连接。</Actions>
+  </Message>
+  <Message number="507" eDefine="SYS_ERR_SYS_OPEN_HW">
+    <Title>硬件链打开</Title>
+    <Description>安全接口电路板 (SIB) 上的中继（AK16 和 KA17）未启动。</Description>
+    <Consequences>启动电机命令被拒绝。</Consequences>
+    <Actions>按“电机开启”按钮关闭该链。</Actions>
+  </Message>
+  <Message number="521" eDefine="SYS_ERR_SYS_CONFLICT_TS">
+    <Title>检测停止冲突</Title>
+    <Description>测试停止链状态冲突。<p /></Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>请检查引起状态冲突的双信道安全保护装置。</Actions>
+  </Message>
+  <Message number="525" eDefine="SYS_ERR_SYS_CONFLICT_ES_PANL">
+    <Title>ES 电路板冲突</Title>
+    <Description>“紧急停止配电板”链状态冲突。<p /></Description>
+    <Consequences>系统进入紧急停止状态。</Consequences>
+    <Actions>请检查引起状态冲突的双信道安全保护装置。</Actions>
+  </Message>
+  <Message number="526" eDefine="SYS_ERR_SYS_CONFLICT_ES_PEND">
+    <Title>ES 悬挂装置冲突</Title>
+    <Description>紧急停止悬挂装置链状态冲突。<p /></Description>
+    <Consequences>系统进入紧急停止状态。</Consequences>
+    <Actions>请检查引起状态冲突的双信道安全保护装置。</Actions>
+  </Message>
+  <Message number="527" eDefine="SYS_ERR_SYS_CONFLICT_ES_EXT">
+    <Title>ES 外部类别 0 冲突</Title>
+    <Description>紧急停止外部类别链状态冲突。<p /></Description>
+    <Consequences>系统进入紧急停止状态。</Consequences>
+    <Actions>请检查引起状态冲突的双信道安全保护装置。</Actions>
+  </Message>
+  <Message number="528" eDefine="SYS_ERR_SYS_CONFLICT_PNT_SW_HV">
+    <Title>HV 互联输入冲突</Title>
+    <Description>仅开启了高压链中两个输入信号的一个。</Description>
+    <Consequences>油漆启用链打开。</Consequences>
+    <Actions>请检查引起状态冲突的双信道安全保护装置。</Actions>
+  </Message>
+  <Message number="529" eDefine="SYS_ERR_SYS_CONFLICT_PNT_INT">
+    <Title>机柜互联输入冲突</Title>
+    <Description>仅开启了机柜互联链中两个输入信号的一个。</Description>
+    <Consequences>油漆启用链打开。</Consequences>
+    <Actions>检查电缆及其连接。</Actions>
+  </Message>
+  <Message number="531" eDefine="SYS_ERR_SYS_CONFLICT_DEL_STP">
+    <Title>延时停止冲突</Title>
+    <Description>延时停止电路状态冲突。<p /></Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>检查电缆及其连接。</Actions>
+  </Message>
+  <Message number="534" eDefine="SYS_ERR_SYS_CONFLICT_MODE_SEL">
+    <Title>模式选择器冲突</Title>
+    <Description>模式选择器的任何连接都出现故障。<p /></Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>检查电缆及其连接。</Actions>
+  </Message>
+  <Message number="535" eDefine="SYS_ERR_SYS_CONFLICT_AUX_RUN_CH">
+    <Title>AUX 互联冲突</Title>
+    <Description>仅开启了两个 AUX 互联链中的一个。通常在 CBS 门互联上使用。</Description>
+    <Consequences>油漆启用链打开。</Consequences>
+    <Actions>检查电缆及其连接。</Actions>
+  </Message>
+  <Message number="536" eDefine="SYS_ERR_SYS_CONFLICT_MON">
+    <Title>“电机开启”链冲突</Title>
+    <Description>运行链中链信号上的两个电机只开启了一个。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>检查电缆及其连接。</Actions>
+  </Message>
+  <Message number="550" eDefine="SYS_ERR_SYS_ACTIVE_GLITCH_TEST">
+    <Title>故障测试故障</Title>
+    <Description>过程接口电路板 (PIB) 上的固件未在 30 秒内检测到任何故障测试脉冲。</Description>
+    <Consequences>系统转入“系统暂停”状态。</Consequences>
+    <Actions>1. 检查其他错误消息，以了解主要故障原因。<p />2. 检查 PIB 与主机 (MC) 之间的通信问题。</Actions>
+  </Message>
+  <Message number="556" eDefine="SYS_ERR_SYS_ACTIVE_AXC1_ENABLE2">
+    <Title>Enable 2 AXC 1 开启</Title>
+    <Description>当轴计算机 1 打开启用时，处于活动状态。<p /></Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查错误消息了解主要故障原因。<p />2. 如果没有其他错误消息，请检查线路电压看是否缺失相位。</Actions>
+  </Message>
+  <Message number="557" eDefine="SYS_ERR_SYS_ACTIVE_AXC2_ENABLE2">
+    <Title>Enable 2 AXC 2 开启</Title>
+    <Description>当轴计算机 2 打开启用时，处于活动状态。<p /></Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查错误消息了解主要故障原因。<p />2. 如果没有其他错误消息，请检查线路电压看是否缺失相位。</Actions>
+  </Message>
+  <Message number="558" eDefine="SYS_ERR_SYS_ACTIVE_MAN_ENA">
+    <Title>机械臂故障</Title>
+    <Description>与机械臂接口电路板 (MIB) <arg format="%i" ordinal="2" /> 连接的机械臂 <arg format="%i" ordinal="1" /> 的电源丢失，或机械臂的使能链条件不正常。<p /></Description>
+    <Consequences>系统转入“系统暂停”状态。</Consequences>
+    <Actions>1. 检查机械臂的电源。<p />2. 检查机械臂接口电路板 (MCOB/MCB) 上的使能链是否正常。<p />3. 检查机械臂电机的温度是否过高。<p />4. 通过配电板 (PDB) 检查机械臂信号。请参见电路图。<p /></Actions>
+  </Message>
+  <Message number="559" eDefine="SYS_ERR_SYS_ACTIVE_MCOB_COLL_OK">
+    <Title>碰撞传感器激活</Title>
+    <Description>机械臂控制电路板 (MCOB) <arg format="%i" ordinal="1" /> 上的数字碰撞传感器被激活。</Description>
+    <Consequences>系统转入“系统暂停”状态。</Consequences>
+    <Actions>检查碰撞传感器是否已连接到 MCOB。</Actions>
+  </Message>
+  <Message number="560" eDefine="SYS_ERR_SYS_ACTIVE_MCOB_LIMITS">
+    <Title>MCOB 上存在轴限制</Title>
+    <Description>机械臂控制电路板 (MCOB) <arg format="%i" ordinal="1" /> 上的限制传感器被激活。</Description>
+    <Consequences>系统转入“系统暂停”状态。</Consequences>
+    <Actions>检查限制传感器是否已连接到 MCOB。</Actions>
+  </Message>
+  <Message number="561" eDefine="SYS_ERR_SYS_ACTIVE_AMA_SW_OK">
+    <Title>机械臂软件已打开使能链</Title>
+    <Description>机械臂控制电路板 (MCOB/MCB) <arg format="%i" ordinal="1" /> 软件打开了使能链。</Description>
+    <Consequences>系统转入“系统暂停”状态。</Consequences>
+    <Actions>1. 检查其他错误消息，以了解主要故障原因。<p />2. 检查制动闸故障。</Actions>
+  </Message>
+  <Message number="562" eDefine="SYS_ERR_SYS_ACTIVE_ES_RES_FLT">
+    <Title>重置 ES 故障</Title>
+    <Description>当重置紧急停止输入启动超过 3 秒时，处于活动状态。<p /></Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查紧急停止外部重置的连接。<p />2. 检查“电机开启”按钮。</Actions>
+  </Message>
+  <Message number="563" eDefine="SYS_ERR_SYS_ACTIVE_SVO_DISC_FB">
+    <Title>开启伺服断开</Title>
+    <Description>当系统 <arg format="%i" ordinal="1" /> 上的伺服断开开关关闭时，处于活动状态。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>如果没有安装伺服断开开关，则检查在操纵器接口电路板 (MIB) 上的停用链。</Actions>
+  </Message>
+  <Message number="564" eDefine="SYS_ERR_SYS_ACTIVE_BRK_REL_1_7">
+    <Title>轴 1 和 7 上的制动闸释放</Title>
+    <Description>当轴 1 和 7 上的手动制动闸释放功能启用时，处于活动状态。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>检查轴 1 和 7 的手动制动闸释放开关。</Actions>
+  </Message>
+  <Message number="565" eDefine="SYS_ERR_SYS_ACTIVE_EXT1_OK">
+    <Title>外部使能 1 打开</Title>
+    <Description>机械臂控制电路板 (MCOB) <arg format="%i" ordinal="1" /> 上的外部使能 1 被启用</Description>
+    <Consequences>系统转入“系统暂停”状态。</Consequences>
+    <Actions>检查 MCCB X25 上的连接。</Actions>
+  </Message>
+  <Message number="566" eDefine="SYS_ERR_SYS_ACTIVE_EXT2_OK">
+    <Title>外部使能 2 打开</Title>
+    <Description>机械臂控制电路板 (MCOB) <arg format="%i" ordinal="1" /> 上的外部使能 2 被启用<p /></Description>
+    <Consequences>系统转入“系统暂停”状态。</Consequences>
+    <Actions>检查 MCCB X43 上的连接。</Actions>
+  </Message>
+  <Message number="567" eDefine="SYS_ERR_SYS_ACTIVE_PWR_OK">
+    <Title>MCOB 上的供电低</Title>
+    <Description>机械臂控制电路板 (MCOB) <arg format="%i" ordinal="1" /> 上的供电低于 16V</Description>
+    <Consequences>系统转入“系统暂停”状态。</Consequences>
+    <Actions>检查 MCOB 上的电源供电。</Actions>
+  </Message>
+  <Message number="568" eDefine="SYS_ERR_SYS_ACTIVE_HW_OK">
+    <Title>MCOB/MCB 上开启硬件使能</Title>
+    <Description>机械臂控制电路板 (MCOB/MCB) <arg format="%i" ordinal="1" /> 上的固件打开了使能链。</Description>
+    <Consequences>系统转入“系统暂停”状态。</Consequences>
+  </Message>
+  <Message number="569" eDefine="SYS_ERR_SYS_ACTIVE_WD_OK">
+    <Title>MCOB/MCB 上发生看门狗故障</Title>
+    <Description>机械臂控制电路板 (MCOB/MCB) <arg format="%i" ordinal="1" /> 上的看门狗发生故障。</Description>
+    <Consequences>系统转入“系统暂停”状态。</Consequences>
+  </Message>
+  <Message number="570" eDefine="SYS_ERR_SYS_ACTIVE_TPU_ERROR">
+    <Title>TPU 线路错误</Title>
+    <Description>当过程接口电路板 (PIB) 检测到紧急停止悬挂装置上存在故障和使动装置信号（错误测试）时，处于活动状态。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查到教导器单元 (TPU) 的电缆和连接。<p />2. 检查 Pendant 接口电路板 (TIB) 和操纵器接口电路板 (MIB)。</Actions>
+  </Message>
+  <Message number="571" eDefine="SYS_ERR_SYS_OPEN_SAF_SW_HV">
+    <Title>HV 互联开启</Title>
+    <Description>油漆系统高压 (HV) 互联被外部互联连接开启。<p /></Description>
+    <Consequences>油漆启用链开启。</Consequences>
+    <Actions>检查断开 HV 系统的手动开关。</Actions>
+  </Message>
+  <Message number="572" eDefine="SYS_ERR_SYS_OPEN_CAB_ILCK">
+    <Title>机柜互联开启</Title>
+    <Description>机柜互联被外部互联连接开启。</Description>
+    <Consequences>油漆启用链打开。</Consequences>
+    <Actions>检查机柜通风和其它机柜安全功能。</Actions>
+  </Message>
+  <Message number="573" eDefine="SYS_ERR_SYS_CTRLID_MISSING_WARNING">
+    <Title>控制柜 ID 丢失</Title>
+    <Description>控制柜 ID 是控制柜唯一的身份识别。默认值为控制柜上的序列号。控制柜的软件配置未含该身份识别信息。</Description>
+    <Causes>更改或重新格式化控制柜存储介质时，可能会发生类似情形。</Causes>
+    <Actions>阅读控制器机柜上的控制柜序列号，找出控制柜的 ID。使用 RobotStudio 工具，为控制柜设置该值。</Actions>
+  </Message>
+  <Message number="574" eDefine="SYS_ERR_SYS_OPEN_PROCESS">
+    <Title>过程互联开启</Title>
+    <Description>过程互联被外部互联连接开启。</Description>
+    <Consequences>油漆启用链开启。</Consequences>
+    <Actions>检查断开过程系统的手动开关。</Actions>
+  </Message>
+  <Message number="575" eDefine="SYS_ERR_SYS_OPEN_AUX">
+    <Title>AUX 互联开启</Title>
+    <Description>AUX 互联被外部互联连接开启。通常用于盒式门铃系统 (CBS)。</Description>
+    <Consequences>油漆启用链开启。</Consequences>
+    <Actions>检查连接到 AUX 输入的电缆和装置。 </Actions>
+  </Message>
+  <Message number="576" eDefine="SYS_ERR_SYS_OPEN_SYS2">
+    <Title>系统 2 互联开启</Title>
+    <Description>系统 2 互联已开启。通常用于盒式门铃系统 (CBS) 或油漆泵。</Description>
+    <Consequences>油漆启用链开启。</Consequences>
+    <Actions>检查连接到系统 2 的电缆和装置。</Actions>
+  </Message>
+  <Message number="577" eDefine="SYS_ERR_SYS_OPEN_HV_ON">
+    <Title>HV ON 开启</Title>
+    <Description>操作面板上的高压 (HV) 开关打开。</Description>
+    <Consequences>油漆启用链开启。</Consequences>
+    <Actions>确认电机开启并打开 HV 键以关闭 HV 互联链。</Actions>
+  </Message>
+  <Message number="581" eDefine="SYS_ERR_SYS_ACTIVE_SIB_COM">
+    <Title>SPI 至 SIB 的通信已停止</Title>
+    <Description>当安全接口电路板 (SIB) 的循环 Enable 1 测试失败时，处于活动状态。<p /><p /></Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查串行外设接口 (SPI) 状态。<p /> 2. 检查过程接口电路板 (PIB) 和 SIB 之间的电缆。</Actions>
+  </Message>
+  <Message number="582" eDefine="SYS_ERR_SYS_ACTIVE_MIB_COM">
+    <Title>SPI 至 MIB 的通信已停止</Title>
+    <Description>当操纵器接口电路板 (MIB) <arg format="%i" ordinal="1" /> 的循环 Enable 1 测试失败时，处于活动状态。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>检查电缆和串行外设接口 (SPI) 状态。<p /> 2. 检查 SIB 和操纵器接口电路板 (MIB) 之间的电缆。</Actions>
+  </Message>
+  <Message number="583" eDefine="SYS_ERR_SYS_ACTIVE_SCMC_SW_WD">
+    <Title>PIB 软件的监控器失败</Title>
+    <Description>当过程接口电路板 (PIB) 发现 PIB 固件和 PIB 软件之间的监控器故障时，处于活动状态。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Causes>PIB 软件上处理器负载过高。</Causes>
+  </Message>
+  <Message number="584" eDefine="SYS_ERR_SYS_ACTIVE_PIB_SIB_WD">
+    <Title>内部 SPI 故障</Title>
+    <Description>当过程接口电路板 (PIB) 上的固件发现安全接口电路板 (SIB) 和操纵器接口电路板 (MIB) 的监控器故障时，处于活动状态。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Causes>SPI 1 上的串行外设接口 (SPI) 通信断开。</Causes>
+    <Actions>检查 PIB、SIB 和 MIB 之间的电缆。</Actions>
+  </Message>
+  <Message number="585" eDefine="SYS_ERR_SYS_ACTIVE_PIB_SW_ENA_EXT">
+    <Title>启用链与 IPS 断开</Title>
+    <Description>当启用链与信号 Safety/PibSw/Enable 断开时，处于活动状态。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>检查连接信号 Safety/PibSw/Enable 的启动器。</Actions>
+  </Message>
+  <Message number="586" eDefine="SYS_ERR_SYS_ACTIVE_PIB_SW_FPGA_WD">
+    <Title>PIB 固件监控器故障</Title>
+    <Description>当过程接口电路板 (PIB) 上的软件发现 PIB 固件的监控器因 FPGA 故障而造成故障时，处于活动状态。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+  </Message>
+  <Message number="587" eDefine="SYS_ERR_SYS_ACTIVE_PIB_SW_SCMC_WD">
+    <Title>PIB 固件监控器故障</Title>
+    <Description>当过程接口电路板 (PIB) 上的软件发现 PIB 固件的监控器因系统内微控制器故障而造成故障时，处于活动状态。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Causes>固件未运行。</Causes>
+  </Message>
+  <Message number="588" eDefine="SYS_ERR_SYS_ACTIVE_PIB_EIO_SOCKET">
+    <Title>PIB 和 MC 之间的看门狗发生故障</Title>
+    <Description>过程接口电路板 (PIB) 检测到主机 (MC) 的看门狗发生故障。</Description>
+    <Consequences>系统转入“系统暂停”状态。</Consequences>
+    <Causes>1. PIB 与 MC 之间的以太网电缆损坏。<p />2. 网络载荷太高。</Causes>
+    <Actions>如果问题继续存在:<p />1. 检查 MC。<p />2. 检查 PIB 和 MC 之间的以太网电缆。<p />3. 重新启动控制器。</Actions>
+  </Message>
+  <Message number="589" eDefine="SYS_ERR_SYS_ACTIVE_PIB_MCOB_AGENT">
+    <Title>PIB 和 MCOB 间的监控器故障</Title>
+    <Description>当过程接口电路板 (PIB) 与操纵器控制电路板 (MCOB) 之间的 CAN 代理连接断开时，处于活动状态。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Actions>1. 检查 CAN 电缆。<p />2. 检查 MCOB 状态。</Actions>
+  </Message>
+  <Message number="590" eDefine="SYS_ERR_SYS_OPEN_CIR_MASK">
+    <Title>未设置开路掩码</Title>
+    <Description>未设置机械臂控制电路板 (MCOB/MCB) <arg format="%i" ordinal="1" /> 上的制动闸开路掩码。应在启动期间从过程接口电路板 (PIB) 设置该掩码。</Description>
+    <Consequences>每次释放制动器时将出现该消息，直到设置了 MCOB/MCB 上的开路掩码为止。</Consequences>
+    <Causes>未加载 PIB 上的 IPS 配置，或者制动闸设置的配置文件缺失。</Causes>
+    <Actions>1. 检查在启动期间是否加载了 IPS 配置。<p />2. 检查 PIB 上是否安装了制动闸设置的 IPS 配置文件。</Actions>
+  </Message>
+  <Message number="591" eDefine="SYS_ERR_SYS_ACTIVE_TPU_HOT_PLUG">
+    <Title>TPU hot plug 超时</Title>
+    <Description>按下 TPU hot plug 按钮的时间太长。</Description>
+    <Consequences>系统进入“系统暂停”状态。</Consequences>
+    <Actions>按“电机开启”按钮关闭该链。</Actions>
+  </Message>
+  <Message number="592" eDefine="SYS_ERR_SYS_ACTIVE_EXT_OK">
+    <Title>外部过程使能开启</Title>
+    <Description>机械臂控制电路板 (MCB) <arg format="%i" ordinal="1" /> 上的外部过程使能连接开启。</Description>
+    <Consequences>系统转入“系统暂停”状态。</Consequences>
+    <Actions>检查 MCB X2 上的连接。</Actions>
+  </Message>
+  <Message number="593" eDefine="SYS_ERR_SYS_ACTIVE_IO_PWR_OK">
+    <Title>MCB 上的 I/O 供电低</Title>
+    <Description>机械臂控制电路板 (MCB) <arg format="%i" ordinal="1" /> 上的 I/O 供电低于 16V。</Description>
+    <Consequences>系统转入“系统暂停”状态。</Consequences>
+    <Actions>检查 MCB 上的电源供电。</Actions>
+  </Message>
+  <Message number="594" eDefine="SYS_ERR_SYS_ACTIVE_PIB_EIO_COMM_FAULT">
+    <Title>PIB 和 MC 之间的通信发生故障</Title>
+    <Description>过程接口电路板 (PIB) 检测到与主机 (MC) 的通信发生故障。</Description>
+    <Consequences>系统将进入 SYS FAIL 状态。</Consequences>
+    <Causes>1. PIB 与 MC 之间的以太网电缆损坏。<p />2. 网络载荷太高。</Causes>
+    <Actions>1. 检查 PIB 与 MC 之间的以太网电缆。<p />2. 检查 MC。<p />3. 重新启动控制器。</Actions>
+  </Message>
+  <Message number="600" eDefine="SYS_ERR_SYS_UNOFFICIAL_RW_RELEASE">
+    <Title>非正式的 RobotWare 版本</Title>
+    <Description>当前的 RobotWare 不是正式支持的版本。<p />非正式 RobotWare 版本仅用于特定时间内的测试和验证目的。</Description>
+    <Consequences>ABB 不会为非正式版本提供长期支持。</Consequences>
+    <Actions>如果这是一个生产系统，请尽快安装正式的 RobotWare 版本。</Actions>
+  </Message>
+  <Message number="601" eDefine="SYS_ERR_SYS_INBOX_ERROR_NAMES_TOO_LONG">
+    <Title>解压 RobotWare 文件时的路径太长</Title>
+    <Description>RobotWare 安装软件包在控制器上的解压方式不正确。软件包中有些文件路径太长，无法用控制器软件处理。<p />安装过程中已对控制器软件进行升级以处理较长的路径，因此重新安装系统应该可以解决问题。</Description>
+    <Consequences>一些 RobotWare 文件在控制器上丢失，系统无法正常运行。</Consequences>
+    <Actions>使用 SystemBuilder 重新安装系统。如果重新安装后仍有错误，请联系客户支持部门。 </Actions>
+  </Message>
+  <Message number="602" eDefine="SYS_ERR_SYS_UNOFFICIAL_RW_IMAGE">
+    <Title>非正式的 RobotWare 映像</Title>
+    <Description>当前的 RobotWare 主计算机映像不是原始的，因此无法获得正式支持。</Description>
+    <Consequences>ABB 不会为非正式 RobotWare 版本提供长期支持。</Consequences>
+    <Causes>正式发布的主计算机映像被替换，比如为了收集针对特定问题的诊断数据。</Causes>
+    <Actions>如果这是一个生产系统，请尽快安装正式的 RobotWare 版本。</Actions>
+  </Message>
+  <Message number="610" eDefine="SYS_ERR_SYS_INV_SHORT_CIRCUIT_ERROR">
+    <Title>电机相短路</Title>
+    <Description>         接点 <arg format="%s" ordinal="2" /> 的驱动单元报告短路。接点与带单元位置 <arg format="%d" ordinal="3" /> 和节点 <arg format="%d" ordinal="4" /> 的驱动模块 <arg format="%d" ordinal="1" /> 连接。
+    </Description>
+    <Consequences>纠正该错误之前无法进行任何操作。系统进入零转矩的“电机关闭”状态。</Consequences>
+    <Causes>         1) 电缆短路或相之间的连接器短路或与地短路。<p />2) 电机相间短路或与地短路。
+    </Causes>
+    <Actions>         1) 检查/更换电缆和连接器。<p />2) 检查/更换电机。
+    </Actions>
+  </Message>
+  <Message number="620" eDefine="SYS_ERR_SYS_INTERNAL_TEST_MODE_ENABLED">
+    <Title>The system has entered an internal test mode</Title>
+    <Description>
+         A feature to perform ABB Robotics internal tests has been enabled in <arg format="%s" ordinal="1" />.
+   </Description>
+    <Consequences>The system may not behave as expected.</Consequences>
+    <Actions>
+         Restart the system when the test has been performed. If this was an unexpected message, please contact your contact your local ABB representative for assistance.
+      </Actions>
+  </Message>
+  <Message number="630" eDefine="SYS_ERR_SYS_IV_NO_VALID_JOB_LOADED">
+    <Title>摄像头作业无效</Title>
+    <Description> 摄像头 <arg format="%s" ordinal="1" /> 正处于运行模式中，但加载到其中的作业不是有效的 ABB 作业。 </Description>
+    <Consequences>所有摄像头结果都将丢失。</Consequences>
+    <Actions> 1) 将摄像头设置为待机。<p />2) 将有效的 ABB 作业加载到摄像头或使用 Robot Studio 创建一个有效作业。 </Actions>
+  </Message>
+  <Message number="631" eDefine="SYS_ERR_SYS_IV_COMMUNICATION_ERROR">
+    <Title>与摄像头的通信失败。</Title>
+    <Description> 机器人控制器在与摄像头通信时失败<arg format="%s" ordinal="1" />。 </Description>
+    <Consequences>摄像头的结果可能已丢失。</Consequences>
+    <Actions> 1) 检查摄像头状态。<p />2) 检查机器人控制器与摄像头之间的电缆连接。 </Actions>
+  </Message>
+  <Message number="632" eDefine="SYS_ERR_SYS_IV_RESTART_CONTROLLER">
+    <Title>IP address of the camera has changed</Title>
+    <Description>The IP address of the camera has changed. It is necessary to warm start the controller to use the Integrated Vision functionality.</Description>
+    <Actions>Warm start the controller</Actions>
+  </Message>
+  <Message number="633" eDefine="SYS_ERR_SYS_IV_OPTION_NOT_INSTALLED">
+    <Title>Integrated Vision not installed</Title>
+    <Description>The option Integrated Vision is not installed on this system.</Description>
+    <Consequences>No communication with the camera is possible.</Consequences>
+    <Causes>The Integrated Vision functionality have been used or configured without the Integrated Vision option installed.</Causes>
+    <Actions>
+      1) If the Integrated Vision option is needed: configure a new system with this option, and install the system.<p />2)  If the Integrated Vision option is not needed: remove the use of Integrated Vision functionality, i.e. RAPID or configuration data.
+    </Actions>
+  </Message>
+  <Message number="634" eDefine="SYS_ERR_SYS_IV_NO_RESULT">
+    <Title>No result for current camera job</Title>
+    <Description>
+      The robot controller did not receive any result for camera <arg format="%s" ordinal="1" />.
+    </Description>
+    <Consequences>The robot controller will not recognize any positional data in the image.</Consequences>
+    <Causes>
+      No part tools have been defined for the current job loaded in camera <arg format="%s" ordinal="1" />.
+    </Causes>
+    <Actions>
+      Use RobotStudio to add a Part Location Tool or a Part Inspection Tool to the job. Follow the instruction in the RobotStudio
+      context menu and save the job.
+    </Actions>
+  </Message>
+  <Message number="635" eDefine="SYS_ERR_SYS_IV_TOO_MANY_CAMERAS">
+    <Title>Too many cameras connected</Title>
+    <Description>
+      Number of cameras connected to the robot controller is <arg format="%d" ordinal="1" />. Max number of cameras for a robot controller is <arg format="%d" ordinal="1" />.
+    </Description>
+    <Consequences>The robot controller will not communicate with all the cameras.</Consequences>
+    <Causes>Maximum number of cameras for a robot controller have been exceeded.</Causes>
+    <Actions>Reduce the number of cameras connected to the robot controller.</Actions>
+  </Message>
+  <Message number="636" eDefine="SYS_ERR_SYS_IV_CAMERA_ALREADY_EXISTS">
+    <Title>Duplicated camera name</Title>
+    <Description>
+      The camera configuration is invalid. The camera name <arg format="%s" ordinal="1" /> have been used for more than one camera.
+    </Description>
+    <Consequences>The robot controller will not communicate with cameras with the same name.</Consequences>
+    <Causes>Two or more cameras with the same name have been configured.</Causes>
+    <Actions>Rename the cameras so that they have unique names and warm start the controller.</Actions>
+  </Message>
+</Domain>

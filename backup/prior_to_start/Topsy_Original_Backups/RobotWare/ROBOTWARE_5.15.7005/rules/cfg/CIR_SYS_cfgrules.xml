@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- File: cirsys_cfgrules.xml -->
+<!--  -->
+<!-- Purpose:  This is the CFG rules for cir related SYS types -->
+<!--  -->
+<!-- Reference:  "Configuration Rules Writer's Guide.doc" -->
+<Domain xmlns="urn:abb-robotics-cfg-rules" cfgName="SYS" resourceID="SYS001" cfgRulesVersion="1.3" helpID="HLP_CIRSYS_001">
+	<!-- ********************* -->
+	<!-- RUNCHN_BOOL -->
+	<!-- ********************* -->
+	<Type cfgName="RUNCHN_BOOL" resourceID="SYS002" addRemoveInstances="true" instanceVisibility="showAll" helpID="HLP_CIRSYS_002">
+		<Parameter cfgName="Name" userInput="cfgDefaultNotOk" resourceID="SYS003" parameterType="typeStringNormal" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_003">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="SYS004">SoftAS</CfgValue>
+				<CfgValue resourceID="SYS005">SoftGS</CfgValue>
+				<CfgValue resourceID="SYS006">SoftES</CfgValue>
+				<CfgValue resourceID="SYS007">SoftSS</CfgValue>
+			</ListValue>
+		</Parameter>
+		<Parameter cfgName="Select" userInput="cfgDefaultOk" resourceID="SYS008" parameterType="typeBoolean" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_004">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="SYS009">TRUE</CfgValue>
+				<CfgValue resourceID="SYS010">FALSE</CfgValue>
+			</ListValue>
+		</Parameter>
+	</Type>
+
+  <!-- ********************* -->
+  <!-- MASTER_BOOL -->
+  <!-- ********************* -->
+  <Type cfgName="MASTER_BOOL" resourceID="SYS011" addRemoveInstances="true" instanceVisibility="showWriteEnabled" helpID="HLP_CIRSYS_005">
+    <Parameter cfgName="Name" userInput="cfgDefaultNotOk" resourceID="SYS003" parameterType="typeStringNormal" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_006">
+      <ListValue userEdit="false">
+        <CfgValue resourceID="SYS012">HoldToRun</CfgValue>
+      </ListValue>
+    </Parameter>
+    <Parameter cfgName="Select" userInput="cfgDefaultOk" resourceID="SYS008" parameterType="typeBoolean" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_007">
+      <ListValue userEdit="false">
+        <CfgValue resourceID="SYS009">TRUE</CfgValue>
+        <CfgValue resourceID="SYS010">FALSE</CfgValue>
+      </ListValue>
+    </Parameter>
+  </Type>
+
+  <!-- ********************** -->
+	<!-- CAB_EXEC_HOOKS -->
+	<!-- ********************** -->
+	<Type cfgName="CAB_EXEC_HOOKS" resourceID="SYS020" addRemoveInstances="true" instanceVisibility="showAll" helpID="HLP_CIRSYS_008">
+		<Parameter cfgName="Shelf" userInput="cfgDefaultOk" resourceID="SYS021" parameterType="typeStringNormal" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_009">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="SYS022">POWER_ON</CfgValue>
+				<CfgValue resourceID="SYS023">START</CfgValue>
+				<CfgValue resourceID="SYS024">STOP</CfgValue>
+				<CfgValue resourceID="SYS025">QSTOP</CfgValue>
+				<CfgValue resourceID="SYS026">RESTART</CfgValue>
+				<CfgValue resourceID="SYS027">RESET</CfgValue>
+				<CfgValue resourceID="SYS028">STEP</CfgValue>
+			</ListValue>
+		</Parameter>
+		<Parameter cfgName="Routine" userInput="cfgDefaultOk" resourceID="SYS029" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_010" />
+		<Parameter cfgName="Task" userInput="cfgDefaultOk" resourceID="SYS030" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_011">			
+			<LookupParameterValue domainCfgName="SYS" typeCfgName="CAB_TASKS" parameterCfgName="Name" userEdit="true" />
+			<DisplayFilterGroup condition= "valAnd">
+				<ConditionFilter parameterCfgName="AllTask" operandCfgValue="-1" operand="valNotEqual" />
+				<ConditionFilter parameterCfgName="AllMotionTask" operandCfgValue="-1" operand="valNotEqual" />
+			</DisplayFilterGroup>
+		</Parameter>
+		<Parameter cfgName="AllTask" userInput="cfgDefaultOk" resourceID="SYS060" parameterType="typeBoolean" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_012">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="SYS058">TRUE</CfgValue>
+				<CfgValue resourceID="SYS059">FALSE</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition= "valAnd">
+				<ConditionFilter parameterCfgName="AllMotionTask" operandCfgValue="-1" operand="valNotEqual" />
+			</DisplayFilterGroup>
+		</Parameter>
+		<Parameter cfgName="AllMotionTask" userInput="cfgDefaultOk" resourceID="SYS063" parameterType="typeBoolean" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_047">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="SYS058">TRUE</CfgValue>
+				<CfgValue resourceID="SYS059">FALSE</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition= "valAnd">
+				<ConditionFilter parameterCfgName="AllTask" operandCfgValue="-1" operand="valNotEqual" />
+			</DisplayFilterGroup>
+		</Parameter>
+		<Parameter cfgName="SeqNo" userInput="cfgDefaultOk" resourceID="SYS061" parameterType="typeInteger" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_039"></Parameter>
+	</Type>
+	
+	<!-- ********************* -->
+	<!-- CAB_REGAIN_DIST -->
+	<!-- ********************* -->
+	<Type cfgName="CAB_REGAIN_DIST" resourceID="SYS031" addRemoveInstances="false" instanceVisibility="showAll" helpID="HLP_CIRSYS_013">
+		<Parameter cfgName="Name" userInput="cfgDefaultOk" resourceID="SYS032" parameterType="typeStringNormal" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_014">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="SYS033">MAN</CfgValue>
+				<CfgValue resourceID="SYS034">AUTO</CfgValue>
+			</ListValue>
+		</Parameter>
+		<Parameter cfgName="Tcp_dist" userInput="cfgDefaultOk" resourceID="SYS035" parameterType="typeFloat" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_015">
+			<QuantityData>
+				<length unit="meter" />
+			</QuantityData>
+		</Parameter>
+		<Parameter cfgName="Tcp_rot" userInput="cfgDefaultOk" resourceID="SYS036" parameterType="typeFloat" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_016">
+			<QuantityData>
+				<planeAngle unit="radian" />
+			</QuantityData>
+		</Parameter>
+		<Parameter cfgName="Ext_dist" userInput="cfgDefaultOk" resourceID="SYS037" parameterType="typeFloat" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_017">
+			<QuantityData>
+				<planeAngle unit="radian" />
+			</QuantityData>
+		</Parameter>
+		<Parameter cfgName="Ext_rot" userInput="cfgDefaultOk" resourceID="SYS038" parameterType="typeFloat" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_018">
+			<QuantityData>
+				<planeAngle unit="radian" />
+			</QuantityData>
+		</Parameter>
+	</Type>
+	
+	<!-- ********************** -->
+	<!-- SYS_MISC -->
+	<!-- ********************** -->
+	<Type cfgName="SYS_MISC" resourceID="SYS040" addRemoveInstances="false" instanceVisibility="showAll" helpID="HLP_CIRSYS_019">
+		<Parameter cfgName="Name" userInput="cfgDefaultOk" resourceID="SYS041" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_028"></Parameter>	    
+		<Parameter cfgName="Value" userInput="cfgDefaultOk" resourceID="SYS042" parameterType="typeInteger" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_020"></Parameter>		
+<!-- 		<Parameter cfgName="NoOfRetry" userInput="cfgDefaultOk" resourceID="SYS044" parameterType="typeInteger" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_020"></Parameter>-->
+		<!-- <Parameter cfgName="SimulateMenu" userInput="cfgDefaultOk" resourceID="SYS045" parameterType="typeInteger" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_021"></Parameter>-->
+		<!-- <Parameter cfgName="MultiStop" userInput="cfgDefaultOk" resourceID="SYS048" parameterType="typeInteger" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_022"></Parameter> -->
+	</Type>
+	
+	<!-- ************************** -->
+	<!-- CAB_TASK_MODULES -->
+	<!-- ************************** -->
+	<Type cfgName="CAB_TASK_MODULES" resourceID="SYS050" addRemoveInstances="true" instanceVisibility="showAll" helpID="HLP_CIRSYS_023">
+		<Parameter cfgName="File" userInput="cfgDefaultOk" resourceID="SYS052" parameterType="typeStringFile" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_025"></Parameter>
+		<Parameter cfgName="Task" userInput="cfgDefaultOk" resourceID="SYS051" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_024">		
+			<LookupParameterValue domainCfgName="SYS" typeCfgName="CAB_TASKS" parameterCfgName="Name" userEdit="true" />
+			<DisplayFilterGroup condition= "valAnd">
+				<ConditionFilter parameterCfgName="AllTask" operandCfgValue="-1" operand="valNotEqual" />
+				<ConditionFilter parameterCfgName="Shared" operandCfgValue="-1" operand="valNotEqual" />
+				<ConditionFilter parameterCfgName="AllMotionTask" operandCfgValue="-1" operand="valNotEqual" />
+			</DisplayFilterGroup> 			
+		</Parameter>
+		<Parameter cfgName="Install" userInput="cfgDefaultOk" resourceID="SYS053" parameterType="typeBoolean" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_026">			
+			<ListValue userEdit="false">
+				<CfgValue resourceID="SYS058">TRUE</CfgValue>
+				<CfgValue resourceID="SYS059">FALSE</CfgValue>
+			</ListValue>
+			   <DisplayFilter parameterCfgName="Shared" operandCfgValue="-1" operand="valNotEqual" />
+		</Parameter>
+		<!--<Parameter cfgName="Txres" userInput="cfgDefaultOk" resourceID="SYS056" parameterType="typeStringNormal" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_027"></Parameter>-->
+		<Parameter cfgName="Shared" userInput="cfgDefaultOk" resourceID="SYS057" parameterType="typeBoolean" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_028">				
+			<ListValue userEdit="false">
+				<CfgValue resourceID="SYS058">TRUE</CfgValue>
+				<CfgValue resourceID="SYS059">FALSE</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition= "valAnd">
+				<ConditionFilter parameterCfgName="Install" operandCfgValue="-1" operand="valNotEqual" />
+				<ConditionFilter parameterCfgName="AllTask" operandCfgValue="-1" operand="valNotEqual" />
+				<ConditionFilter parameterCfgName="AllMotionTask" operandCfgValue="-1" operand="valNotEqual" />
+			</DisplayFilterGroup> 
+		</Parameter>
+		<Parameter cfgName="AllTask" userInput="cfgDefaultOk" resourceID="SYS060" parameterType="typeBoolean" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_029">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="SYS058">TRUE</CfgValue>
+				<CfgValue resourceID="SYS059">FALSE</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition= "valAnd">
+				<ConditionFilter parameterCfgName="Shared" operandCfgValue="-1" operand="valNotEqual" />
+				<ConditionFilter parameterCfgName="AllMotionTask" operandCfgValue="-1" operand="valNotEqual" />
+			</DisplayFilterGroup>
+		</Parameter>
+		<Parameter cfgName="AllMotionTask" userInput="cfgDefaultOk" resourceID="SYS063" parameterType="typeBoolean" modifyOptions="modRestartWarm" helpID="HLP_CIRSYS_046">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="SYS058">TRUE</CfgValue>
+				<CfgValue resourceID="SYS059">FALSE</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition= "valAnd">
+				<ConditionFilter parameterCfgName="Shared" operandCfgValue="-1" operand="valNotEqual" />
+				<ConditionFilter parameterCfgName="AllTask" operandCfgValue="-1" operand="valNotEqual" />
+			</DisplayFilterGroup>
+		</Parameter>
+		<Parameter cfgName="Hidden" userInput="cfgDefaultOk" resourceID="SYS062" parameterType="typeBoolean" modifyOptions="modRestartProgram" helpID="HLP_CIRSYS_040">
+			<ListValue userEdit="false">
+				<CfgValue resourceID="SYS058">TRUE</CfgValue>
+				<CfgValue resourceID="SYS059">FALSE</CfgValue>
+			</ListValue>
+		</Parameter>
+	</Type>
+	
+	<!-- ********************** -->
+	<!-- HOTEDIT_MODPOS -->
+	<!-- ********************** -->
+	<Type cfgName="HOTEDIT_MODPOS" resourceID="SYS070" addRemoveInstances="false" instanceVisibility="showAll" helpID="HLP_CIRSYS_030">
+		<Parameter cfgName="name" userInput="cfgDefaultNotOk" resourceID="SYS071" parameterType="typeStringNormal" modifyOptions="modReadOnly" helpID="HLP_CIRSYS_031"></Parameter>		
+		<Parameter cfgName="type" userInput="cfgDefaultOk" resourceID="SYS072" parameterType="typeBoolean" modifyOptions="modWriteEnabled" helpID="HLP_CIRSYS_032">
+			<ListValue userEdit="true">
+				<CfgValue resourceID="SYS009">0</CfgValue>
+				<CfgValue resourceID="SYS010">-1</CfgValue>
+			</ListValue>
+		</Parameter>
+		<Parameter cfgName="mode" userInput="cfgDefaultOk" resourceID="SYS075" parameterType="typeBoolean" modifyOptions="modWriteEnabled" helpID="HLP_CIRSYS_033">
+			<ListValue userEdit="true">
+				<CfgValue resourceID="SYS076">-1</CfgValue>
+				<CfgValue resourceID="SYS077">0</CfgValue>
+			</ListValue>
+			<DisplayFilter parameterCfgName="type" operandCfgValue="0" operand="valEqual" />
+		</Parameter>
+		<Parameter cfgName="limittrans"    userInput="cfgDefaultOk" resourceID="SYS081" parameterType="typeInteger" modifyOptions="modWriteEnabled" helpID="HLP_CIRSYS_034">
+		</Parameter>
+		<Parameter cfgName="limitrot" 	   userInput="cfgDefaultOk" resourceID="SYS082" parameterType="typeInteger" modifyOptions="modWriteEnabled" helpID="HLP_CIRSYS_035">
+		</Parameter>
+		<Parameter cfgName="limitexttrans" userInput="cfgDefaultOk" resourceID="SYS083" parameterType="typeInteger" modifyOptions="modWriteEnabled" helpID="HLP_CIRSYS_036">
+		</Parameter>
+		<Parameter cfgName="limitextrot"   userInput="cfgDefaultOk" resourceID="SYS084" parameterType="typeInteger" modifyOptions="modWriteEnabled" helpID="HLP_CIRSYS_037">
+		</Parameter>
+  </Type>
+
+  <!-- ********************** -->
+  <!-- AUTO_COND_RESET 	-->
+  <!-- ********************** -->
+  <Type cfgName="AUTO_COND_RESET" addRemoveInstances="true" instanceVisibility="showAll" resourceID="SYS088" helpID="HLP_CIRSYS_041">
+    <Parameter cfgName="name" userInput="cfgDefaultNotOk" resourceID="SYS041" parameterType="typeStringNormal" modifyOptions="modWriteEnabled" helpID="HLP_CIRSYS_044">
+      <ListValue userEdit="false">
+        <CfgValue resourceID="SYS097">AllDebugSettings</CfgValue>
+      </ListValue>
+    </Parameter>
+    <Parameter cfgName="reset" userInput="cfgDefaultOk" resourceID="SYS089" parameterType="typeStringNormal" modifyOptions="modWriteEnabled" helpID="HLP_CIRSYS_045">
+      <ListValue userEdit="false">
+        <CfgValue resourceID="SYS087">No</CfgValue>
+        <CfgValue resourceID="SYS086">Yes</CfgValue>
+      </ListValue>
+    </Parameter>
+  </Type>
+
+  <!-- ********************** -->
+  <!-- RUN_MODE_SETTINGS -->
+  <!-- ********************** -->
+  <Type cfgName="RUN_MODE_SETTINGS" resourceID="SYS090" addRemoveInstances="true" instanceVisibility="showAll" helpID="HLP_CIRSYS_041">
+    <Parameter cfgName="name" userInput="cfgDefaultNotOk" resourceID="SYS071" parameterType="typeStringNormal" modifyOptions="modWriteEnabled" helpID="HLP_CIRSYS_042">
+      <ListValue userEdit="false">
+        <CfgValue resourceID="SYS094">ManualToAuto</CfgValue>
+        <CfgValue resourceID="SYS095">AutoToManual</CfgValue>
+      </ListValue>
+    </Parameter>
+    <Parameter cfgName="SwitchTo" userInput="cfgDefaultOk" resourceID="SYS096" parameterType="typeStringNormal" modifyOptions="modWriteEnabled" helpID="HLP_CIRSYS_043">
+      <ListValue userEdit="false">
+        <CfgValue resourceID="SYS091">Keep</CfgValue>
+        <CfgValue resourceID="SYS092">Single</CfgValue>
+        <CfgValue resourceID="SYS093">Continuous</CfgValue>
+      </ListValue>
+    </Parameter>
+  </Type>
+
+  <!-- ********************** -->
+  <!-- PRESENT_OPTIONS -->
+  <!-- ********************** -->
+  <Type cfgName="PRESENT_OPTIONS" resourceID="SYS098" addRemoveInstances="false" instanceVisibility="showAll">
+    <Parameter cfgName="name" userInput="cfgDefaultNotOk" resourceID="SYS099" parameterType="typeStringNormal" modifyOptions="modReadOnly"/>
+    <Parameter cfgName="desc" userInput="cfgDefaultNotOk" resourceID="SYS100" parameterType="typeStringNormal" modifyOptions="modReadOnly"/>
+  </Type>
+
+</Domain>

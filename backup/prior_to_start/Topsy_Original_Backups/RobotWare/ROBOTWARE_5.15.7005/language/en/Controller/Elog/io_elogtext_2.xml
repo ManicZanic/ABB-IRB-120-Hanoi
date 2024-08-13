@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain elogDomain="EIO" domainNo="7" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="1232" max="1356">
+  <Message number="1232" eDefine="SYS_EIO_PBUS_TOO_MANY_SLAVES">
+    <Title>Too many internal Profibus slaves</Title>
+    <Description>There are too many internal Profibus slaves defined in the system.</Description>
+    <Consequences>Profibus I/O unit &lt;<arg format="%s" ordinal="1" />&gt; will not be configured. No communication with this unit<p />will be possible.</Consequences>
+    <Causes>Profibus I/O unit &lt;<arg format="%s" ordinal="1" />&gt; is defined as an internal slave while another <p />internal slave has already been configured.<p />The maximum number of internal slaves is 1.</Causes>
+    <Actions>1. Make sure the system parameters are correct. <p />2. Make sure the Profibus binary file is correct.</Actions>
+  </Message>
+  <Message number="1241" eDefine="SYS_EIO_UNT_TOO_MANY_UNITS_ON_BUS">
+    <Title>Too many I/O units on I/O bus</Title>
+    <Description>The I/O configuration for I/O unit &lt;<arg format="%s" ordinal="1" />&gt; is invalid.<p />The number of I/O units on I/O bus &lt;<arg format="%s" ordinal="2" />&gt; must not exceed <arg format="%d" ordinal="3" />.<p /><p />This I/O unit has been rejected.</Description>
+    <Actions>Reduce the number of defined I/O units and reboot the system.</Actions>
+  </Message>
+  <Message number="1244" eDefine="SYS_EIO_IBS_UNIT_WRONG_TYPE">
+    <Title>Incorrect Interbus unit type</Title>
+    <Description>I/O unit &lt;<arg format="%s" ordinal="1" />&gt; at address &lt;<arg format="%s" ordinal="2" />&gt; has a unit type not supported by the system.</Description>
+    <Consequences>The I/O unit has not been configured, and cannot be used by the system.</Consequences>
+    <Causes>One or more of the units connected to the network is of a hardware version not supported by the system.</Causes>
+    <Actions>1. Replace the unsupported I/O unit with one of the correct version. <p />2. Make sure the system parameters are correct.<p />3. Reconfigure the Interbus network.</Actions>
+  </Message>
+  <Message number="1245" eDefine="SYS_EIO_IBS_UNIT_NOT_IN_MPM">
+    <Title>I/O unit not defined in Interbus configuration</Title>
+    <Description>I/O unit &lt;<arg format="%d" ordinal="1" />.<arg format="%d" ordinal="2" />&gt; is not assigned to any address in the Interbus configuration.</Description>
+    <Consequences>The I/O unit has not been configured, and cannot be used by the system.</Consequences>
+    <Causes>Data for defining the I/O unit is missing in the Interbus configuration.</Causes>
+    <Actions>Change the Interbus configuration using the CMD tool under the Process Data menu. Add an address for the I/O unit. The CMD tool is available from your local ABB representative.</Actions>
+  </Message>
+  <Message number="1246" eDefine="SYS_EIO_IBS_RW_DATA_ERROR">
+    <Title>No access to Interbus data</Title>
+    <Description>Access to the Interbus board data interface is denied. <arg format="%s" ordinal="1" /> not performed, error code <arg format="%d" ordinal="2" />.</Description>
+    <Actions>1. The Interbus board may be faulty. Replace any faulty boards if required. <p />2. Check the Interbus internal configuration.</Actions>
+  </Message>
+  <Message number="1248" eDefine="SYS_EIO_IBS_UNKNOWN_UNIT">
+    <Title>Interbus I/O unit configuration mismatch</Title>
+    <Description>The Interbus I/O unit with address &lt;<arg format="%s" ordinal="1" />&gt; is configured in the system parameters, but not in the Interbus configuration.</Description>
+    <Consequences>The I/O unit has not been configured, and cannot be used by the system.</Consequences>
+    <Causes>The Interbus unit address in the Interbus configuration differs from that in the system parameters, or the I/O unit may not have been configured at all in the Interbus configuration.</Causes>
+    <Actions>1. Make sure system parameters are correct.<p />2. Reconfigure the Interbus network.</Actions>
+  </Message>
+  <Message number="1249" eDefine="SYS_EIO_IBS_UNDEF_UNIT">
+    <Title>Interbus I/O unit configuration mismatch</Title>
+    <Description>The Interbus I/O unit with address &lt;<arg format="%d" ordinal="1" />.<arg format="%d" ordinal="2" />&gt; is configured in the Interbus configuration, but not in the system parameters.</Description>
+    <Consequences>The I/O unit has not been configured, and cannot be used by the system.</Consequences>
+    <Causes>The Interbus unit address in the Interbus configuration differs from that in the system parameters, or the I/O unit may not have been configured at all in the system parameters.</Causes>
+    <Actions>1. Make sure system parameters are correct.<p />2. Reconfigure the Interbus network.</Actions>
+  </Message>
+  <Message number="1250" eDefine="SYS_EIO_IBS_ERROR_CFG_BOARD">
+    <Title>Cannot configure Interbus board</Title>
+    <Description>An error has occurred when downloading Interbus configuration file to the Interbus board. Interbus specific error code: <arg format="%d" ordinal="1" />.</Description>
+    <Consequences>The I/O bus has not been configured, and cannot be used by the system.</Consequences>
+    <Causes>The path specifying the Interbus configuration files points out the wrong files or that configuration file is incorrect.</Causes>
+    <Actions>1. Use RobotStudio to check the path to the configuration files. <p />2. Make sure the configuration files are correct. <p />3. Check the Interbus specific error code as specified in the Interbus Manuals: Firmware Service and Error Messages.</Actions>
+  </Message>
+  <Message number="1258" eDefine="SYS_EIO_IBS_NO_CFG_FILE_FOUND">
+    <Title>Interbus configuration file not found</Title>
+    <Description>The Interbus configuration file &lt;<arg format="%s" ordinal="1" />&gt;, configured in the system parameters, was not found.</Description>
+    <Consequences>The I/O bus has not been configured, and cannot be used by the system.</Consequences>
+    <Causes>The Interbus configuration file does not exist or the path specified in the system parameters was incorrect.</Causes>
+    <Actions>1. Make sure the Interbus configuration files are correctly located. <p />2. Use RobotStudio to check the path to the configuration files.</Actions>
+  </Message>
+  <Message number="1259" eDefine="SYS_EIO_IBS_CFG_READ_ERROR">
+    <Title>Cannot read the Interbus configuration file</Title>
+    <Description>An error occurred when attempting to read the Interbus board configuration file &lt;<arg format="%s" ordinal="1" />&gt;.</Description>
+    <Consequences>The I/O bus has not been configured, and cannot be used by the system.</Consequences>
+    <Actions>1. Reload the Interbus configuration file to the robot controller. <p />2. Restart the system.</Actions>
+  </Message>
+  <Message number="1260" eDefine="SYS_EIO_IBS_BUS_ERR_NO_DEV">
+    <Title>Interbus bus failure</Title>
+    <Description>The control system has lost communication with the Interbus network. Interbus specific error code: <arg format="%d" ordinal="1" />.</Description>
+    <Consequences>Parts of the Interbus network will not be accessible, depending on the network topology and the nature of the fault.</Consequences>
+    <Causes>A number of errors may cause this. Further information may be found in the standard Interbus documentation.</Causes>
+    <Actions>1. Make sure all communication cables and connectors are working correctly and of the recommended type <p />2. Check the Interbus specific error code as specified in the Interbus Manuals: Firmware Service and Error Messages.</Actions>
+  </Message>
+  <Message number="1261" eDefine="SYS_EIO_WRONG_PHY_CHANNEL">
+    <Title>Transport layer failure</Title>
+    <Description>The physical channel for transport layer <arg format="%s" ordinal="1" /> is invalid.</Description>
+    <Actions>Verify that the physical channel is valid, see manual.</Actions>
+  </Message>
+  <Message number="1262" eDefine="SYS_EIO_FIELDBUS_COMM_ERR">
+    <Title>Fieldbus comm. failure</Title>
+    <Description>Communication with '<arg format="%s" ordinal="1" />' master failed on unit with mac id <arg format="%d" ordinal="2" />.<p /></Description>
+    <Actions>1. Check the connection to the gateway.</Actions>
+  </Message>
+  <Message number="1263" eDefine="SYS_EIO_CAN_COMM_ERR">
+    <Title>CAN comm. failure</Title>
+    <Description>CAN communication failed due to <arg format="%s" ordinal="1" />.<p />Code: <arg format="%d" ordinal="2" /></Description>
+  </Message>
+  <Message number="1273" eDefine="SYS_EIO_UNT_UNKNOWN">
+    <Title>I/O unit configuration mismatch</Title>
+    <Description>I/O unit &lt;<arg format="%s" ordinal="1" />&gt; with address <arg format="%s" ordinal="2" /> is configured in the system parameters, but it cannot be found in the I/O bus specific configuration.</Description>
+    <Causes>1. The address of the I/O unit in the system parameters are not the same as in the I/O bus specific configuration.<p />2. The I/O unit has not been configured at all in the I/O bus specific configuration.</Causes>
+    <Actions>1. Check I/O unit configuration in system parameters<p />2. Check I/O bus specific configuration</Actions>
+  </Message>
+  <Message number="1274" eDefine="SYS_EIO_IBS_UNDEF_OPMODE">
+    <Title>Interbus bus failure</Title>
+    <Description>The control system was unable to determine the bus operating mode of the Interbus board.</Description>
+    <Actions>Restart the system.</Actions>
+  </Message>
+  <Message number="1276" eDefine="SYS_EIO_UNT_CONTACT_RESTORED">
+    <Title>Communication established with I/O unit</Title>
+    <Description>Communication established with I/O unit &lt;<arg format="%s" ordinal="1" />&gt;.</Description>
+  </Message>
+  <Message number="1278" eDefine="SYS_EIO_FTP_PERMISSION_DENIED">
+    <Title>Mount permission denied</Title>
+    <Description>Permission was denied to mount the directory &lt;<arg format="%s" ordinal="1" />&gt; on the server &lt;<arg format="%s" ordinal="2" />&gt;.</Description>
+    <Actions>Check the username and password.</Actions>
+  </Message>
+  <Message number="1288" eDefine="SYS_EIO_FTP_MOUNT_PATH_TOO_LARGE">
+    <Title>Mount path is too large</Title>
+    <Description>Mount path is too large. Mount path consists of FTP server mount point and server path.<p />- Max length: &lt;<arg format="%d" ordinal="1" />&gt;<p />- Protocol used: &lt;<arg format="%s" ordinal="2" />&gt;</Description>
+    <Actions>Change FTP server mount point or server path.</Actions>
+  </Message>
+  <Message number="1289" eDefine="SYS_EIO_COMM_PARTITION_TOO_BIG">
+    <Title>Memory partition is too big</Title>
+    <Description>The memory partition for communication purposes cannot be allocated. The requested partition <arg format="%8d" ordinal="1" /> kB. System partition will be used.</Description>
+    <Actions>Decrease commPartSize.</Actions>
+  </Message>
+  <Message number="1290" eDefine="SYS_EIO_FTP_DEVICE_ADD_ERROR">
+    <Title>Could not add FTP device</Title>
+    <Description>Adding the FTP device &lt;<arg format="%s" ordinal="1" />&gt; to the operating system failed.<p />Application protocol &lt;<arg format="%s" ordinal="2" />&gt;.</Description>
+    <Actions>Change the local path of the configuration of the FTP device.</Actions>
+  </Message>
+  <Message number="1291" eDefine="SYS_EIO_FTP_DEVICE_INVALID_LOCAL_PATH">
+    <Title>Invalid local path</Title>
+    <Description>Local path of the FTP device &lt;<arg format="%s" ordinal="1" />&gt; is invalid.</Description>
+    <Actions>Local path must end with :</Actions>
+  </Message>
+  <Message number="1293" eDefine="SYS_EIO_DN_C1_INPUT_SIZE_ERR">
+    <Title>Invalid input size</Title>
+    <Description>On DeviceNet I/O unit &lt;<arg format="%s" ordinal="1" />&gt; the connection 1 input size does not match the I/O unit.</Description>
+    <Actions>1. Change size in configuration.<p />2. Check module.<p />3. Use DN_GENERIC unit type</Actions>
+  </Message>
+  <Message number="1294" eDefine="SYS_EIO_DN_C1_OUTPUT_SIZE_ERR">
+    <Title>Invalid output size</Title>
+    <Description>On DeviceNet I/O unit &lt;<arg format="%s" ordinal="1" />&gt; the connection 1 output size does not match the I/O unit.</Description>
+    <Actions>1. Change size in configuration.<p />2. Check module.<p />3. Use DN_GENERIC unit type</Actions>
+  </Message>
+  <Message number="1295" eDefine="SYS_EIO_DN_C2_INPUT_SIZE_ERR">
+    <Title>Invalid input size</Title>
+    <Description>On DeviceNet I/O unit &lt;<arg format="%s" ordinal="1" />&gt; the connection 2 input size does not match the I/O unit.<p /></Description>
+    <Actions>1. Change size in configuration.<p />2. Check module.<p /></Actions>
+  </Message>
+  <Message number="1296" eDefine="SYS_EIO_DN_C2_OUTPUT_SIZE_ERR">
+    <Title>Invalid output size</Title>
+    <Description>On DeviceNet I/O unit &lt;<arg format="%s" ordinal="1" />&gt; the connection 2 output size does not match the I/O unit.<p /></Description>
+    <Actions>1. Change size in configuration.<p />2. Check module.<p /></Actions>
+  </Message>
+  <Message number="1297" eDefine="SYS_EIO_DN_CONNECTION_SUPPORT_ERR">
+    <Title>Invalid connection type</Title>
+    <Description>The DeviceNet I/O unit &lt;<arg format="%s" ordinal="1" />&gt; does not support <arg format="%s" ordinal="2" /> connection.</Description>
+    <Actions>1. Change connection 1 type and/or connection 2 type in configuration.<p />2. Use DN_GENERIC unit type.</Actions>
+  </Message>
+  <Message number="1298" eDefine="SYS_EIO_DN_MASTER_DUP_MAC_ERR">
+    <Title>Duplicated address</Title>
+    <Description>The address &lt;<arg format="%d" ordinal="2" />&gt; for the DeviceNet master on I/O bus &lt;<arg format="%s" ordinal="1" />&gt; is occupied by another I/O unit on the network.</Description>
+    <Actions>1. Change master address in configuration.<p />2. Disconnect I/O unit occupying the address from the network.<p />3. Restart the system.</Actions>
+  </Message>
+  <Message number="1299" eDefine="SYS_EIO_DN_BUS_POWER_ERR">
+    <Title>No power on DeviceNet bus</Title>
+    <Description>The 24 V power supply from the DeviceNet power supply is missing.</Description>
+    <Consequences>No communication on the DeviceNet bus &lt;<arg format="%s" ordinal="1" />&gt; is possible.</Consequences>
+    <Causes>The power supply unit, cabling, input voltage to the power supply or the output load may cause the power loss. See the Trouble Shooting Manual and Circuit Diagram!</Causes>
+    <Actions>1. Check all cabling to the power supply unit. <p />2. Measure the output and input voltage levels. <p />3. Replace the faulty I/O unit if required.</Actions>
+  </Message>
+  <Message number="1300" eDefine="SYS_EIO_DN_BUSERROR_WARNING_ERR">
+    <Title>DeviceNet bus communication warning</Title>
+    <Description>A minor number of communication errors occurred on DeviceNet bus &lt;<arg format="%s" ordinal="1" />&gt;.</Description>
+    <Consequences>Normal operation will be maintained, even on the DeviceNet.</Consequences>
+    <Causes>The fault may be caused by interference, power supply units and cables, or communication cables.</Causes>
+    <Actions>1. Make sure any terminating resistors are correctly connected. <p />2. Make sure all communication cables and connectors are working correctly and of the recommended type. <p />3. Check network topology and cable length. <p />4. Make sure the DeviceNet Power Supply unit is working correctly. Replace any faulty unit.<p /></Actions>
+  </Message>
+  <Message number="1301" eDefine="SYS_EIO_DN_BUSOFF_ERR">
+    <Title>Bus off, DeviceNet bus communication failure</Title>
+    <Description>A major number of communication errors occurred on DeviceNet bus &lt;<arg format="%s" ordinal="1" />&gt;.</Description>
+    <Consequences>All communication on the DeviceNet Bus has stopped.</Consequences>
+    <Causes>The fault may be caused by interference, power supply units and cables, or communication cables.</Causes>
+    <Actions>
+      1. Make sure the DeviceNet Power Supply unit is working correctly. Replace any faulty I/O unit. <p />2. Make sure any terminating resistors are correctly connected. <p />3. Make sure all communication cables and connectors are working correctly and of the recommended type. <p />4. Check network topology and cable length. <p />5. Restart the system.</Actions>
+  </Message>
+  <Message number="1302" eDefine="SYS_EIO_DN_NO_OPT">
+    <Title>No DeviceNet option has been installed</Title>
+    <Description>A DeviceNet master/slave board has been fitted, but no DeviceNet option has been installed.</Description>
+    <Consequences>No communication on the DeviceNet is possible. There may be consequential errors from configuring DeviceNet when no such option has been installed.</Consequences>
+    <Causes>An attempt may have been made to add the DeviceNet functionality, without installing the option correctly.</Causes>
+    <Actions>1. If the DeviceNet option is required: configure a new system with this option, and install the system. <p />2. If the DeviceNet option is not required: configure a new system without this option, and install the system.</Actions>
+  </Message>
+  <Message number="1303" eDefine="SYS_EIO_DN_VENDOR_ID_ERR">
+    <Title>Invalid DeviceNet vendor id</Title>
+    <Description>The vendor id read from DeviceNet I/O unit &lt;<arg format="%s" ordinal="1" />&gt; doesn't match value in unit type configuration.<p />- Configuration: &lt;<arg format="%d" ordinal="2" />&gt;<p />- Actual: &lt;<arg format="%d" ordinal="3" />&gt;</Description>
+    <Actions>1. Change vendor id in configuration.<p />2. Check that the type of I/O unit is correct.</Actions>
+  </Message>
+  <Message number="1304" eDefine="SYS_EIO_DN_DEVICE_TYPE_ERR">
+    <Title>Invalid DeviceNet device type</Title>
+    <Description>The device type read from DeviceNet I/O unit &lt;<arg format="%s" ordinal="1" />&gt; doesn't match value in unit type configuration. <p />- Configuration: &lt;<arg format="%d" ordinal="2" />&gt;<p />- Actual: &lt;<arg format="%d" ordinal="3" />&gt;</Description>
+    <Actions>1. Change device type in configuration.<p />2. Check that the type of I/O unit is correct.</Actions>
+  </Message>
+  <Message number="1305" eDefine="SYS_EIO_DN_PRODUCT_CODE_ERR">
+    <Title>Invalid DeviceNet product code</Title>
+    <Description>The product code read from DeviceNet I/O unit &lt;<arg format="%s" ordinal="1" />&gt; doesn't match value in unit type configuration.<p />- Configuration: &lt;<arg format="%d" ordinal="2" />&gt;<p />- Actual: &lt;<arg format="%d" ordinal="3" />&gt;</Description>
+    <Actions>1. Change product code in configuration.<p />2. Check that the type of I/O unit is correct.</Actions>
+  </Message>
+  <Message number="1306" eDefine="SYS_EIO_DN_UNKNOWN_ERR">
+    <Title>DeviceNet unknown error</Title>
+    <Description>An unknown error is reported from I/O unit &lt;<arg format="%s" ordinal="1" />&gt; error code <arg format="%d" ordinal="2" />.</Description>
+    <Actions>1. Restart the system.<p />2. Report problem to ABB.</Actions>
+  </Message>
+  <Message number="1307" eDefine="SYS_EIO_DN_GENERIC_C1">
+    <Title>DeviceNet generic connection 1</Title>
+    <Description>On DeviceNet I/O unit &lt;<arg format="%s" ordinal="1" />&gt; connection 1 configuration are generic.<p />Real values:<p />- Connection 1 type: &lt;<arg format="%s" ordinal="2" />&gt;<p />- Connection 1 input size: &lt;<arg format="%d" ordinal="3" />&gt;<p />- Connection 1 output size: &lt;<arg format="%d" ordinal="4" />&gt;</Description>
+    <Actions>1. Create a new unit type with correct values.<p />2. Update your current unit type configuration.</Actions>
+  </Message>
+  <Message number="1308" eDefine="SYS_EIO_DN_GENERIC_C2">
+    <Title>DeviceNet generic connection 2</Title>
+    <Description>On DeviceNet I/O unit &lt;<arg format="%s" ordinal="1" />&gt; connection 2 configuration are generic.<p />Real values:<p />- Connection 2 type: &lt;<arg format="%s" ordinal="2" />&gt;<p />- Connection 2 input size: &lt;<arg format="%d" ordinal="3" />&gt;<p />- Connection 2 output size: &lt;<arg format="%d" ordinal="4" />&gt;
+  </Description>
+    <Actions>
+    1. Create a new unit type with correct values.<p />2. Update your current unit type configuration.
+  </Actions>
+  </Message>
+  <Message number="1309" eDefine="SYS_EIO_DN_GENERIC_IDENT">
+    <Title>DeviceNet generic unit identification</Title>
+    <Description>
+    On DeviceNet I/O unit &lt;<arg format="%s" ordinal="1" />&gt; identity configuration are generic.<p />Real values:<p />- Vendor Id: &lt;<arg format="%d" ordinal="2" />&gt;<p />- Product code: &lt;<arg format="%d" ordinal="3" />&gt;<p />- Device type: &lt;<arg format="%d" ordinal="4" />&gt;</Description>
+    <Actions>1. Create a new unit type with correct values.<p />2. Update your current unit type configuration.</Actions>
+  </Message>
+  <Message number="1310" eDefine="SYS_EIO_DN_ALLOC_BY_OTHER_MASTER">
+    <Title>DeviceNet I/O unit connection error</Title>
+    <Description>DeviceNet I/O unit &lt;<arg format="%s" ordinal="1" />&gt; is occupied by another master.</Description>
+    <Actions>1. Check configuration.<p />2. Cycle power on I/O unit.</Actions>
+  </Message>
+  <Message number="1311" eDefine="SYS_EIO_DN_NOTHING_CONNECTED">
+    <Title>Unable to established communication on DeviceNet bus</Title>
+    <Description>Unable to established communication on DeviceNet bus &lt;<arg format="%s" ordinal="1" />&gt; because no I/O units are physically connected.</Description>
+    <Actions>1. Check cables and connectors.<p />2. Connect I/O units to I/O bus.<p />3. Restart the system.<p />4. Remove I/O units on the I/O bus &lt;<arg format="%s" ordinal="1" />&gt; from the configuration.</Actions>
+  </Message>
+  <Message number="1312" eDefine="SYS_EIO_DN_EXPL_CONN_NOT_CONFIGURED">
+    <Title>DeviceNet I/O unit explicit connection not enabled</Title>
+    <Description>DeviceNet I/O unit &lt;<arg format="%s" ordinal="1" />&gt; does not have the explicit message connection enabled.</Description>
+    <Actions>Change configuration.</Actions>
+  </Message>
+  <Message number="1313" eDefine="SYS_EIO_CMD_TYPE_ORDER_INVALID">
+    <Title>Fieldbus command type order number not unique.</Title>
+    <Description>The I/O configuration is invalid.<p />Fieldbus command &lt;<arg format="%s" ordinal="1" />&gt; and &lt;<arg format="%s" ordinal="2" />&gt; are connected to the same unit type &lt;<arg format="%s" ordinal="3" />&gt; and have the same order number &lt;<arg format="%d" ordinal="4" />&gt;.<p />The order number of commands connected to the same I/O unit must be unique.<p /><p />This command has been rejected.</Description>
+    <Actions>Correct the configuration.</Actions>
+  </Message>
+  <Message number="1314" eDefine="SYS_EIO_CMD_COMMANDTYPE_INVALID">
+    <Title>Invalid fieldbus command type</Title>
+    <Description>The I/O configuration is invalid.<p />One of the fieldbus commands has a reference to an invalid/unknown command type &lt; <arg format="%s" ordinal="1" />&gt;.<p />All fieldbus commands must refer to an existing command type.<p /><p />This fieldbus command has been rejected.</Description>
+    <Actions>Correct the fieldbus command type for the command.</Actions>
+  </Message>
+  <Message number="1315" eDefine="SYS_EIO_CMD_TABLE_ERR">
+    <Title>Max number of fieldbus commands exceeded</Title>
+    <Description>The I/O configuration is invalid.<p />The maximum number, <arg format="%d" ordinal="1" />, of fieldbus commands in the I/O system has been exceeded.<p /></Description>
+    <Actions>Modify the configuration of the I/O system (by reducing the number of fieldbus commands) so that the maximum limit is not exceeded.</Actions>
+  </Message>
+  <Message number="1316" eDefine="SYS_EIO_CMD_TYPE_TABLE_ERR">
+    <Title>Max number of fieldbus command types exceeded</Title>
+    <Description>The I/O configuration is invalid.<p />The maximum number <arg format="%d" ordinal="1" />, of fieldbus command types in the I/O system has been exceeded.</Description>
+    <Actions>Modify the configuration of the I/O system (by reducing the number of fieldbus command types) so that the maximum limit is not exceeded. </Actions>
+  </Message>
+  <Message number="1317" eDefine="SYS_EIO_FCI_UNIT_RESET">
+    <Title>I/O unit reset</Title>
+    <Description>The I/O unit &lt;<arg format="%s" ordinal="1" />&gt; on the I/O bus &lt;<arg format="%s" ordinal="2" />&gt; has been reset through the fieldbus command &lt;<arg format="%s" ordinal="3" />&gt;, to make sure that the fieldbus command values are activated.<p />This causes the I/O unit to loose contact while it is restarted but it will regain contact.</Description>
+    <Causes>A fieldbus command for reset has been defined for the I/O unit in the configuration of the I/O system.</Causes>
+  </Message>
+  <Message number="1320" eDefine="SYS_EIO_ACC_TABLE_ERR">
+    <Title>Max number of I/O access levels exceeded </Title>
+    <Description>The I/O configuration is invalid.<p />The maximum number, <arg format="%d" ordinal="1" />, of I/O access levels in the I/O system has been exceeded.</Description>
+    <Actions>Modify the configuration of the I/O system (by reducing the number of I/O access levels) so that the maximum limit is not exceeded.</Actions>
+  </Message>
+  <Message number="1321" eDefine="SYS_EIO_SIG_ACC_INVALID">
+    <Title>Invalid I/O access level</Title>
+    <Description>The I/O configuration is invalid.<p />The I/O signal &lt;<arg format="%s" ordinal="1" />&gt; has a reference to an invalid/undefined I/O access level &lt;<arg format="%s" ordinal="2" />&gt;.<p />All I/O signals must either omit the access level or refer to an existing access level.<p /><p />This I/O signal has been rejected.
+    </Description>
+    <Actions>Change I/O access level to one that exist or define a new I/O access level.</Actions>
+  </Message>
+  <Message number="1323" eDefine="SYS_EIO_SIG_BIT_MAXMIN">
+    <Title>Invalid bit values</Title>
+    <Description>
+      The I/O configuration for I/O signal &lt;<arg format="%s" ordinal="1" />&gt; is invalid.<p />The minimum bit value &lt;<arg format="%s" ordinal="3" />&gt; must not be less than &lt;<arg format="%s" ordinal="2" />&gt;.<p />The maximum bit value &lt;<arg format="%s" ordinal="4" />&gt; must not exceed &lt;<arg format="%s" ordinal="5" />&gt;.<p />The minimum bit value must be less than the maximum bit value.<p /><p />This I/O signal has been rejected.</Description>
+    <Actions>
+      1. Check that the I/O signal is configured with the correct encoding type.<p />2. Check that the min and max bit values are correct.</Actions>
+  </Message>
+  <Message number="1324" eDefine="SYS_EIO_SIG_PHYLIM_MAXMIN">
+    <Title>Physical limitation values out of range</Title>
+    <Description>
+      The I/O configuration for I/O signal &lt;<arg format="%s" ordinal="1" />&gt; is invalid.<p />The physical limitation minimum value must be less than the physical limitation maximum value.<p /><p />This I/O signal has been rejected.</Description>
+    <Actions>Correct the physical limitation values for the I/O signal so that the minimum value becomes less than the maximum value.</Actions>
+  </Message>
+  <Message number="1325" eDefine="SYS_EIO_BUS_PROTECTED">
+    <Title>Invalid I/O bus configuration</Title>
+    <Description>The I/O configuration for I/O bus &lt;<arg format="%s" ordinal="1" />&gt; is invalid.<p />User-defined (externally loaded) I/O buses must no be specified as local.<p /><p />This I/O bus has been rejected.</Description>
+    <Actions>Change the bus type of the I/O bus.</Actions>
+  </Message>
+  <Message number="1326" eDefine="SYS_EIO_DRV_PROTECTED">
+    <Title>Invalid unit type configuration</Title>
+    <Description>The I/O configuration for unit type &lt; <arg format="%s" ordinal="1" />&gt; is invalid.<p />User-defined (externally loaded) unit types must no be specified as local.<p /><p />This I/O bus has been rejected.</Description>
+    <Actions>Change the bus type of the I/O unit type.</Actions>
+  </Message>
+  <Message number="1328" eDefine="SYS_EIO_INVALID_RAPID_IDENT">
+    <Title>Invalid name</Title>
+    <Description>The I/O configuration is invalid.<p />The configuration instance &lt;<arg format="%s" ordinal="1" />&gt; does not comply with the rules of RAPID identifiers.<p /><p />This configuration instance has been rejected.</Description>
+    <Actions>Correct the name of the configuration instance so that it complies with the following rules:<p /><p />Rules of RAPID identifiers:<p />1, The length must not exceed 16 characters.<p />2, The first character must be a letter (a-z or A-Z).<p />3, Subsequent characters must be letters (a-z or A-Z), digits (0-9) or underscores (_).</Actions>
+  </Message>
+  <Message number="1329" eDefine="SYS_EIO_BUS_CONNECTOR_ID_INVALID">
+    <Title>Invalid Connector ID</Title>
+    <Description>The I/O configuration for I/O bus &lt;<arg format="%s" ordinal="1" />&gt; is invalid.<p />No or invalid connector ID is selected for the &lt;<arg format="%s" ordinal="2" />&gt; bus type.<p /><p />This I/O bus has been rejected.</Description>
+    <Actions>Select a valid connector ID for the I/O bus.</Actions>
+  </Message>
+  <Message number="1330" eDefine="SYS_EIO_BUS_CONNECTOR_ID_DUPLICATED">
+    <Title>Conflicting bus types</Title>
+    <Description>The I/O configuration for I/O bus &lt;<arg format="%s" ordinal="1" />&gt; is invalid.<p />There are duplicated &lt;<arg format="%s" ordinal="2" />&gt; I/O buses with same connector ID &lt;<arg format="%s" ordinal="3" />&gt;.<p />I/O buses of the same type must have unique connector ID:s.<p /><p />This I/O bus has been rejected.</Description>
+    <Actions>Correct the connector ID for the I/O bus.</Actions>
+  </Message>
+  <Message number="1331" eDefine="SYS_EIO_BUS_BUSTYPE_INVALID">
+    <Title>Invalid bus type</Title>
+    <Description>The I/O configuration for I/O bus &lt;<arg format="%s" ordinal="1" />&gt; is invalid.<p />The bus type &lt;<arg format="%s" ordinal="2" />&gt; is invalid or unknown<p /><p />Installed valid bus types are:<arg format="%s" ordinal="3" /><arg format="%s" ordinal="4" /><arg format="%s" ordinal="5" /><p /><p /></Description>
+    <Consequences>This I/O bus has been rejected, and no functions depending on it will work.</Consequences>
+    <Actions>Correct the bus type for the I/O bus.</Actions>
+  </Message>
+  <Message number="1332" eDefine="SYS_EIO_BUS_RECOVERY_TIME">
+    <Title>Invalid recovery time</Title>
+    <Description>The I/O configuration for I/O bus &lt;<arg format="%s" ordinal="1" />&gt; is invalid.<p />The value of the recovery time parameter &lt;<arg format="%d" ordinal="2" />&gt; is incorrect.<p /><p />The recovery time (how often to try regaining contact with lost I/O units) must not be less than 5 seconds.<p /><p />This I/O bus has been rejected.</Description>
+    <Actions>Correct the recovery time for the I/O bus.</Actions>
+  </Message>
+  <Message number="1333" eDefine="SYS_EIO_BUS_BAUDRATE_INVALID">
+    <Title>Invalid DeviceNet baud rate</Title>
+    <Description>The I/O configuration for I/O bus &lt;<arg format="%s" ordinal="1" />&gt; is invalid.<p />The value of the DeviceNet baud rate parameter &lt;<arg format="%d" ordinal="2" />&gt; is incorrect.<p /><p />Valid DeviceNet baud rates are:<p />- 125<p />- 250<p />- 500<p /><p />This I/O bus has been rejected.</Description>
+    <Actions>Correct the DeviceNet baud rate for the I/O bus.</Actions>
+  </Message>
+  <Message number="1334" eDefine="SYS_EIO_CMD_TYPE_DRV_UNDEF">
+    <Title>Command type without reference to unit type</Title>
+    <Description>The I/O configuration is invalid.<p />No reference to a unit type is defined for the command type &lt;<arg format="%s" ordinal="1" />&gt;.<p />All command types must have a reference to an existing unit type.<p /><p />This command type has been rejected.</Description>
+    <Actions>Define a unit type reference for the command type.</Actions>
+  </Message>
+  <Message number="1335" eDefine="SYS_EIO_CMD_TYPE_DRV_INVALID">
+    <Title>Invalid unit type</Title>
+    <Description>The I/O configuration for command type &lt; <arg format="%s" ordinal="1" />&gt; is invalid.<p />The unit type &lt;<arg format="%s" ordinal="2" />&gt; is invalid/unknown.<p /><p />All command types must refer to an existing/defined unit type.<p /><p />This command type has been rejected.</Description>
+    <Actions>Correct the unit type for the command type.</Actions>
+  </Message>
+  <Message number="1336" eDefine="SYS_EIO_CMD_TYPE_PATH_UNDEF">
+    <Title>Command type without path</Title>
+    <Description>The I/O configuration is invalid.<p />No path is defined for the command type &lt;<arg format="%s" ordinal="1" />&gt;.<p /><p />This command type has been rejected.</Description>
+    <Actions>Define a path &lt;<arg format="%s" ordinal="2" />&gt; for the command type.</Actions>
+  </Message>
+  <Message number="1337" eDefine="SYS_EIO_CMD_TYPE_SERVICE_UNDEF">
+    <Title>Command type without service identifier</Title>
+    <Description>The I/O configuration is invalid.<p />No service identifier is defined for the command type &lt;<arg format="%s" ordinal="1" />&gt;.<p /><p />This command type has been rejected.</Description>
+    <Actions>Define a service identifier &lt;<arg format="%s" ordinal="2" />&gt; for the command type.</Actions>
+  </Message>
+  <Message number="1338" eDefine="SYS_EIO_CMD_TYPE_SERVICE_INVALID">
+    <Title>Invalid service identifier</Title>
+    <Description>The I/O configuration is invalid.<p /> service identifier &lt;<arg format="%ld" ordinal="2" />&gt; is not valid for command type &lt;<arg format="%s" ordinal="1" />&gt;.<p /><p />Valid service identifiers are:<p />&lt;<arg format="%s" ordinal="3" />&gt;<p /><p />This command type has been rejected.</Description>
+    <Actions>Correct the service identifier for the command type.</Actions>
+  </Message>
+  <Message number="1339" eDefine="SYS_EIO_CMD_UNIT_UNDEF">
+    <Title>Fieldbus command without reference to I/O unit</Title>
+    <Description>The I/O configuration is invalid.<p />One of the fieldbus commands has no reference to a I/O unit.<p /><p />All fieldbus commands must have a reference to an existing I/O unit.<p /><p />This fieldbus command has been rejected.</Description>
+    <Actions>Define a I/O unit reference for the fieldbus command.</Actions>
+  </Message>
+  <Message number="1340" eDefine="SYS_EIO_CMD_UNIT_INVALID">
+    <Title>Invalid I/O unit</Title>
+    <Description>The I/O configuration is invalid.<p />One of the fieldbus commands has a reference to an invalid/unknown I/O unit &lt;<arg format="%s" ordinal="1" />&gt;.<p /><p />All fieldbus commands must have a reference to an existing I/O unit.<p /><p />This fieldbus command has been rejected.</Description>
+    <Actions>Correct the I/O unit for the fieldbus command.</Actions>
+  </Message>
+  <Message number="1341" eDefine="SYS_EIO_CMD_COMMANDTYPE_UNDEF">
+    <Title>Fieldbus command, no reference to command type</Title>
+    <Description>The I/O configuration is invalid.<p />One of the fieldbus commands has no reference to a command type.<p /><p />All fieldbus commands must have a reference to an existing command type.<p /><p />This fieldbus command has been rejected.</Description>
+    <Actions>Define a command type reference for the fieldbus command.</Actions>
+  </Message>
+  <Message number="1342" eDefine="SYS_EIO_CMD_UNITTYPE_MISMATCH">
+    <Title>Unit type mismatch</Title>
+    <Description>The I/O configuration is invalid.<p />One of the fieldbus commands refers to a I/O unit &lt;<arg format="%s" ordinal="1" />&gt; and a command type &lt;<arg format="%s" ordinal="2" />&gt; that refer to different unit types.<p /><p />The I/O unit and command type referred to by a fieldbus command must refer to the same unit type.<p /><p />This fieldbus command has been rejected.</Description>
+    <Actions>Correct the configuration.</Actions>
+  </Message>
+  <Message number="1344" eDefine="SYS_EIO_SIG_UNITMAP_UNDEF">
+    <Title>Unit map undefined</Title>
+    <Description>The I/O configuration for I/O signal &lt;<arg format="%s" ordinal="1" />&gt; is invalid.<p />Unit map is undefined or empty.<p />A unit map must be specified for all physical I/O signals (i.e. signals connected to an unit).<p /><p />This I/O signal has been rejected.</Description>
+    <Actions>Define a unit map for the I/O signal.</Actions>
+  </Message>
+  <Message number="1346" eDefine="SYS_EIO_SIG_UNITMAP_OUT_OF_RANGE">
+    <Title>Unit map out of range</Title>
+    <Description>
+      The I/O configuration for I/O signal &lt;<arg format="%s" ordinal="1" />&gt; is invalid.<p />The unit map &lt;<arg format="%s" ordinal="2" />&gt; is invalid since bit &lt;<arg format="%d" ordinal="3" />&gt; is out of range.<p />All bits in the unit map must be in the range [0, <arg format="%d" ordinal="4" />].<p /><p />This I/O signal has been rejected.</Description>
+    <Actions>Correct the unit map.</Actions>
+  </Message>
+  <Message number="1347" eDefine="SYS_EIO_SIG_UNITMAP_OVERLAPPING">
+    <Title>Unit map with overlapping segments</Title>
+    <Description>
+      The I/O configuration for I/O signal &lt;<arg format="%s" ordinal="1" />&gt; is invalid.<p />The unit map &lt;<arg format="%s" ordinal="2" />&gt; contains segments (e.g bit <arg format="%d" ordinal="3" />) that overlap each other.<p /><p />This I/O signal has been rejected.</Description>
+    <Actions>Correct the unit map.</Actions>
+  </Message>
+  <Message number="1348" eDefine="SYS_EIO_SIG_UNITMAP_UNEXP_CHAR">
+    <Title>Unit map with unexpected character</Title>
+    <Description>
+      The I/O configuration for I/O signal &lt;<arg format="%s" ordinal="1" />&gt; is invalid.<p />Found unexpected end or character at position &lt;<arg format="%d" ordinal="3" />&gt; in the unit map: &lt;<arg format="%s" ordinal="2" />&gt;.<p /><p />This I/O signal has been rejected.</Description>
+    <Actions>Correct the unit map so that is comply with the following syntax:<p /><p />- {bit} = ([0-9]+)<p />- {range} = ([0-9]+[-][0-9]+)<p />- {segment} = ({bit} | {range})<p />- {unit map} = ({segment}[,])*{segment}<p /><p />Examples of valid unit maps:<p />- "1"<p />- "0-7, 15-8"<p />- "1,4-3,7"</Actions>
+  </Message>
+  <Message number="1349" eDefine="SYS_EIO_SIG_SIZE_INVALID">
+    <Title>Invalid signal size</Title>
+    <Description>
+      The I/O configuration for I/O signal &lt;<arg format="%s" ordinal="1" />&gt; is invalid.<p />There is a mismatch between the signal type and the size of the signal.<p />The signal size &lt;<arg format="%d" ordinal="3" />&gt; is given by the unit map: &lt;<arg format="%s" ordinal="2" />&gt;.<p /><p />This I/O signal has been rejected.</Description>
+    <Actions>Correct either the signal type or the unit map so that the following rules are fulfilled:<p /><p />- The size of digital I/O signals must be exactly one bit.<p />- The size of analog and group I/O signals must be between 2 and 32 bits.
+    </Actions>
+  </Message>
+  <Message number="1350" eDefine="SYS_EIO_DRV_BUSTYPE_INVALID">
+    <Title>Invalid bus type</Title>
+    <Description>The I/O configuration is invalid.<p />The unit type &lt;<arg format="%s" ordinal="1" />&gt; has an invalid/unknown bus type &lt;<arg format="%s" ordinal="2" />&gt;.<p /><p />Installed valid bus types are:<arg format="%s" ordinal="3" /><arg format="%s" ordinal="4" /><arg format="%s" ordinal="5" /><p /><p /></Description>
+    <Consequences>This unit type has been rejected, and no functions depending on it will work.</Consequences>
+    <Actions>Correct the bus type for the unit type.</Actions>
+  </Message>
+  <Message number="1351" eDefine="SYS_EIO_DRV_C1_TYPE_INVALID">
+    <Title>Invalid connection 1 type</Title>
+    <Description>The I/O configuration is invalid.<p />The unit type &lt;<arg format="%s" ordinal="1" />&gt; has an invalid/unknown type for connection 1 &lt;<arg format="%s" ordinal="2" />&gt;.<p /><p />The type for connection 1 must be one of the following:<p />- POLLED<p />- STROBE<p />- COS<p />- CYCLIC<p />- COS_ACKSUP<p />- CYCLIC_ACKSUP<p /><p />This unit type has been rejected.</Description>
+    <Actions>Correct the connection 1 type of the unit type.<p /><p /></Actions>
+  </Message>
+  <Message number="1352" eDefine="SYS_EIO_DRV_C2_TYPE_INVALID">
+    <Title>Invalid connection 2 type</Title>
+    <Description>The I/O configuration is invalid.<p />The unit type &lt;<arg format="%s" ordinal="1" />&gt; has an invalid/unknown type for connection 2 &lt;<arg format="%s" ordinal="2" />&gt;.<p /><p />The type for connection 2 must either be omitted or one of the following:<p />- POLLED<p />- STROBE<p />- COS<p />- CYCLIC<p />- COS_ACKSUP<p />- CYCLIC_ACKSUP<p /><p />This unit type has been rejected.</Description>
+    <Actions>Correct the connection 2 type of the unit type.</Actions>
+  </Message>
+  <Message number="1353" eDefine="SYS_EIO_UNT_DRV_UNDEF">
+    <Title>Unit without reference to unit type</Title>
+    <Description>The I/O configuration is invalid.<p />No reference to a unit type is defined for the I/O unit &lt;<arg format="%s" ordinal="1" />&gt;.<p /><p />This I/O signal has been rejected.</Description>
+    <Actions>Define a unit type reference for the I/O unit.</Actions>
+  </Message>
+  <Message number="1354" eDefine="SYS_EIO_UNT_BUS_UNDEF">
+    <Title>I/O unit without reference to I/O bus</Title>
+    <Description>The I/O configuration is invalid.<p />No reference to a I/O bus is defined for the I/O unit &lt;<arg format="%s" ordinal="1" />&gt;.<p /><p />This I/O unit has been rejected.</Description>
+    <Actions>Define a I/O bus reference for the I/O unit.</Actions>
+  </Message>
+  <Message number="1355" eDefine="SYS_EIO_UNT_TRUSTLEVEL_INVALID">
+    <Title>Invalid trustlevel</Title>
+    <Description>The I/O configuration is invalid.<p />Unit type &lt;<arg format="%s" ordinal="1" />&gt; has an invalid/unknown trustlevel &lt;<arg format="%s" ordinal="2" />&gt;.<p /><p />Valid trustlevel values are:<p />- 0 (Required)<p />- 1 (Error when lost)<p />- 2 (Loss accepted)<p />- 3 (Stop when lost)<p /><p />This command type has been rejected.</Description>
+    <Actions>Correct the trustlevel for the unit type.</Actions>
+  </Message>
+  <Message number="1356" eDefine="SYS_EIO_UNT_BUSTYPE_MISMATCH">
+    <Title>Bus type mismatch</Title>
+    <Description>The I/O configuration is invalid.<p />Unit &lt;<arg format="%s" ordinal="1" />&gt; refers to a I/O bus and a unit type with different bus types.<p /><p />This I/O unit has been rejected.</Description>
+    <Actions>1. Check that the I/O unit is connected to the correct I/O bus and that the bus type of that I/O bus is correct.<p />2. Check that the I/O unit refers to the correct unit type and that the bus type of that unit type is correct.</Actions>
+  </Message>
+</Domain>

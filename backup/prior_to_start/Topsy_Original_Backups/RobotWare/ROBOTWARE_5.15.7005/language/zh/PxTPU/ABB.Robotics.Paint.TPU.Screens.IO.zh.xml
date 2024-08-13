@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="en" Text="Chinese">
+  <Forms>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.IO.IOScreenWindow" Text="输入输出" Width="320" Height="192">
+      <Menu ref="menuIOScreenWindow" />
+      <Controls>
+        <Control ID="IoScreenFilterViewer" Text="IoScreenFilterViewer" Name="ABB.Robotics.Paint.TPU.Screens.IO.IoScreenFilterViewer" Left="270" Top="0" Width="50" Height="50" />
+        <Control ID="IoScreenViewer" Text="IoScreenViewer" Name="ABB.Robotics.Paint.TPU.Screens.IO.IoScreenViewer" Left="0" Top="0" Width="320" Height="192" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.IO.TpuWndIOTopology" Text="" Width="320" Height="192">
+      <Controls />
+    </Form>
+  </Forms>
+  <Strings>
+    <String ID="IOBuses" Text="I/O 刷子" />
+    <String ID="IOUnits" Text="I/O 单元" />
+    <String ID="AllSignals" Text="所有信号" />
+    <String ID="DigitalInputs" Text="数字输入" />
+    <String ID="DigitalOutputs" Text="数字输出" />
+    <String ID="AnalogInputs" Text="模拟输入" />
+    <String ID="AnalogOutputs" Text="模拟输出" />
+    <String ID="GroupsInput" Text="组输入" />
+    <String ID="GroupsOutput" Text="组输出" />
+    <String ID="MostCommon" Text="最常用" />
+    <String ID="SafetySignals" Text="安全信号" />
+    <String ID="SimulatedSignals" Text="仿真信号" />
+    <String ID="ViewHasNoIoSignals" Text="{0}视图无信号" />
+    <String ID="HeaderName" Text="名称" />
+    <String ID="HeaderValue" Text="值" />
+    <String ID="HeaderType" Text="类型" />
+    <String ID="SimulateText" Text="S" />
+    <String ID="InvalidSignalText" Text="X" />
+  </Strings>
+  <Menus>
+    <Menu ID="menuIOScreenWindow">
+      <MenuItem ID="Set0" Text="0" Grant="UAS_IO_WRITE" />
+      <MenuItem ID="SetValue" Text="1" Grant="UAS_IO_WRITE" />
+      <MenuItem ID="Simulate" Text="仿真" Grant="UAS_IO_WRITE" />
+      <MenuItem ID="Empty" Text="" />
+      <MenuItem ID="View" Text="视图" />
+    </Menu>
+  </Menus>
+</Resources>

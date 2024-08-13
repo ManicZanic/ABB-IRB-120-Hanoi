@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+******************************************************************************
+*
+* MMC_cfgrules.xml - MMC Rules XML Definition File
+*
+* DESCRIPTION:
+*   This file contains the XML rules definition for Man-machine communication.
+*
+* Revision: 1.0
+*
+* History: 22/6-04 Created. ATMA/RO/AIRD/Daniel Wadenhof
+*	   11/8-04 Some parameters must now be edited by the user. ATMA/RO/
+*	   	   AIRD/Daniel Wadenhof
+*
+* Copyright (c) ABB Automation Technologies AB 2004 All rights reserved
+*
+******************************************************************************
+-->
+<Domain xmlns="urn:abb-robotics-cfg-rules" cfgName="MMC" resourceID="MMC_MMC" cfgRulesVersion="1.3" helpID="HLP_MMC_MMC">
+  <Type cfgName="IO_MOST_COMMON" resourceID="MMC_MostCommonIO" addRemoveInstances="true" instanceVisibility="showAll" helpID="HLP_MMC_MostCommonIO">
+    <Parameter cfgName="signal_name" userInput="cfgDefaultNotOk" resourceID="MMC_SignalName" parameterType="typeStringRAPID" modifyOptions="modWriteEnabled" helpID="HLP_MMC_SignalName">
+      <LookupParameterValue domainCfgName="EIO" typeCfgName="EIO_SIGNAL" parameterCfgName="Name" userEdit="false"/>
+    </Parameter>
+    <Parameter cfgName="signal_type" userInput="cfgDefaultNotOk" resourceID="MMC_SignalType" parameterType="typeStringRAPID" modifyOptions="modWriteEnabled" helpID="HLP_MMC_SignalType">
+      <!-- Not supported in the client application yet
+			<ListValue userEdit="false">
+			<CfgValue resourceID="MMC_DI">DI</CfgValue>
+			<ListValueFilterLookup domainCfgName="EIO" typeCfgName="EIO_SIGNAL" parameterCfgName="Name" operandParameterCfgName="signal_name" operand="valEqual">
+			<ConditionFiler parameterCfgName="SignalType" operand="valEqual" operandCfgValue="DI"/>
+			</ListValueFilterLookup>
+			</ListValue>
+			<ListValue userEdit="false">
+			<CfgValue resourceID="MMC_DO">DO</CfgValue>
+			<ListValueFilterLookup domainCfgName="EIO" typeCfgName="EIO_SIGNAL" parameterCfgName="Name" operandParameterCfgName="signal_name" operand="valEqual">
+			<ConditionFiler parameterCfgName="SignalType" operand="valEqual" operandCfgValue="DO"/>
+			</ListValueFilterLookup>
+			</ListValue>
+			<ListValue userEdit="false">
+			<CfgValue resourceID="MMC_AI">AI</CfgValue>
+			<ListValueFilterLookup domainCfgName="EIO" typeCfgName="EIO_SIGNAL" parameterCfgName="Name" operandParameterCfgName="signal_name" operand="valEqual">
+			<ConditionFiler parameterCfgName="SignalType" operand="valEqual" operandCfgValue="AI"/>
+			</ListValueFilterLookup>
+			</ListValue>
+			<ListValue userEdit="false">
+			<CfgValue resourceID="MMC_AO">AO</CfgValue>
+			<ListValueFilterLookup domainCfgName="EIO" typeCfgName="EIO_SIGNAL" parameterCfgName="Name" operandParameterCfgName="signal_name" operand="valEqual">
+			<ConditionFiler parameterCfgName="SignalType" operand="valEqual" operandCfgValue="AO"/>
+			</ListValueFilterLookup>
+			</ListValue>
+			<ListValue userEdit="false">
+			<CfgValue resourceID="MMC_GI">GI</CfgValue>
+			<ListValueFilterLookup domainCfgName="EIO" typeCfgName="EIO_SIGNAL" parameterCfgName="Name" operandParameterCfgName="signal_name" operand="valEqual">
+			<ConditionFiler parameterCfgName="SignalType" operand="valEqual" operandCfgValue="GI"/>
+			</ListValueFilterLookup>
+			</ListValue>
+			<ListValue userEdit="false">
+			<CfgValue resourceID="MMC_GO">GO</CfgValue>
+			<ListValueFilterLookup domainCfgName="EIO" typeCfgName="EIO_SIGNAL" parameterCfgName="Name" operandParameterCfgName="signal_name" operand="valEqual">
+			<ConditionFiler parameterCfgName="SignalType" operand="valEqual" operandCfgValue="GO"/>
+			</ListValueFilterLookup>
+			</ListValue>
+			-->
+      <ListValue userEdit="false">
+        <CfgValue resourceID="MMC_DI">DI</CfgValue>
+        <CfgValue resourceID="MMC_DO">DO</CfgValue>
+        <CfgValue resourceID="MMC_AI">AI</CfgValue>
+        <CfgValue resourceID="MMC_AO">AO</CfgValue>
+        <CfgValue resourceID="MMC_GI">GI</CfgValue>
+        <CfgValue resourceID="MMC_GO">GO</CfgValue>
+      </ListValue>
+    </Parameter>
+  </Type>
+  <Type cfgName="MMC_MC1" resourceID="MMC_MC1" addRemoveInstances="true" instanceVisibility="showAll" helpID="HLP_MMC_MC1">
+    <Parameter cfgName="name" userInput="cfgDefaultNotOk" resourceID="MMC_Name" parameterType="typeStringNormal" modifyOptions="modWriteEnabled" helpID="HLP_MMC_Name"/>
+    <Parameter cfgName="param_nr" userInput="cfgDefaultOk" resourceID="MMC_ParamNo" parameterType="typeInteger" modifyOptions="modWriteEnabled" helpID="HLP_MMC_ParamNo"/>
+    <Parameter cfgName="alt_nr" userInput="cfgDefaultOk" resourceID="MMC_AltNo" parameterType="typeInteger" modifyOptions="modWriteEnabled" helpID="HLP_MMC_AltNo"/>
+    <Parameter cfgName="instr_name" userInput="cfgDefaultOk" resourceID="MMC_InstrName" parameterType="typeStringRAPID" modifyOptions="modWriteEnabled" helpID="HLP_MMC_InstrName"/>
+    <Parameter cfgName="only_mec_task" userInput="cfgDefaultOk" resourceID="MMC_OnlyMecTask" parameterType="typeBoolean" modifyOptions="modWriteEnabled" helpID="HLP_MMC_OnlyMecTask">
+      <ListValue userEdit="false">
+        <CfgValue resourceID="MMC_No">FALSE</CfgValue>
+        <CfgValue resourceID="MMC_Yes">TRUE</CfgValue>
+      </ListValue>
+    </Parameter>
+  </Type>
+  <Type cfgName="MMC_MC2" resourceID="MMC_MC2" addRemoveInstances="true" instanceVisibility="showAll" helpID="HLP_MMC_MC2">
+    <Parameter cfgName="name" userInput="cfgDefaultNotOk" resourceID="MMC_Name" parameterType="typeStringNormal" modifyOptions="modWriteEnabled" helpID="HLP_MMC_Name"/>
+    <Parameter cfgName="param_nr" userInput="cfgDefaultOk" resourceID="MMC_ParamNo" parameterType="typeInteger" modifyOptions="modWriteEnabled" helpID="HLP_MMC_ParamNo"/>
+    <Parameter cfgName="alt_nr" userInput="cfgDefaultOk" resourceID="MMC_AltNo" parameterType="typeInteger" modifyOptions="modWriteEnabled" helpID="HLP_MMC_AltNo"/>
+    <Parameter cfgName="instr_name" userInput="cfgDefaultOk" resourceID="MMC_InstrName" parameterType="typeStringRAPID" modifyOptions="modWriteEnabled" helpID="HLP_MMC_InstrName"/>
+    <Parameter cfgName="only_mec_task" userInput="cfgDefaultOk" resourceID="MMC_OnlyMecTask" parameterType="typeBoolean" modifyOptions="modWriteEnabled" helpID="HLP_MMC_OnlyMecTask">
+      <ListValue userEdit="false">
+        <CfgValue resourceID="MMC_No">FALSE</CfgValue>
+        <CfgValue resourceID="MMC_Yes">TRUE</CfgValue>
+      </ListValue>
+    </Parameter>
+  </Type>
+  <Type cfgName="MMC_MC3" resourceID="MMC_MC3" addRemoveInstances="true" instanceVisibility="showAll" helpID="HLP_MMC_MC3">
+    <Parameter cfgName="name" userInput="cfgDefaultNotOk" resourceID="MMC_Name" parameterType="typeStringNormal" modifyOptions="modWriteEnabled" helpID="HLP_MMC_Name"/>
+    <Parameter cfgName="param_nr" userInput="cfgDefaultOk" resourceID="MMC_ParamNo" parameterType="typeInteger" modifyOptions="modWriteEnabled" helpID="HLP_MMC_ParamNo"/>
+    <Parameter cfgName="alt_nr" userInput="cfgDefaultOk" resourceID="MMC_AltNo" parameterType="typeInteger" modifyOptions="modWriteEnabled" helpID="HLP_MMC_AltNo"/>
+    <Parameter cfgName="instr_name" userInput="cfgDefaultOk" resourceID="MMC_InstrName" parameterType="typeStringRAPID" modifyOptions="modWriteEnabled" helpID="HLP_MMC_InstrName"/>
+    <Parameter cfgName="only_mec_task" userInput="cfgDefaultOk" resourceID="MMC_OnlyMecTask" parameterType="typeBoolean" modifyOptions="modWriteEnabled" helpID="HLP_MMC_OnlyMecTask">
+      <ListValue userEdit="false">
+        <CfgValue resourceID="MMC_No">FALSE</CfgValue>
+        <CfgValue resourceID="MMC_Yes">TRUE</CfgValue>
+      </ListValue>
+    </Parameter>
+  </Type>
+  <Type cfgName="PROD_PERMISSION" resourceID="MMC_PROD_PERM" addRemoveInstances="true" instanceVisibility="showAll" helpID="HLP_MMC_Prod_Perm">
+    <Parameter cfgName="name" userInput="cfgDefaultOk" resourceID="MMC_Name" parameterType="typeStringNormal" modifyOptions="modWriteEnabled" helpID="HLP_MMC_Name">
+      <ListValue userEdit="false">
+        <CfgValue resourceID="MMC_EXEC_MODE">EXECMODE</CfgValue>
+      </ListValue>
+    </Parameter>
+    <Parameter cfgName="permission" userInput="cfgDefaultNotOk" resourceID="MMC_Permission" parameterType="typeStringNormal" modifyOptions="modWriteEnabled" helpID="HLP_MMC_Perm">
+      <ListValue userEdit="false">
+        <CfgValue resourceID="MMC_EXEC_PERM_RW">RW</CfgValue>
+        <CfgValue resourceID="MMC_EXEC_PERM_R">R</CfgValue>
+      </ListValue>
+    </Parameter>
+  </Type>
+  <Type cfgName="WARN_AT_START" resourceID="MMC_WARN_AT_START" addRemoveInstances="false" instanceVisibility="showAll" helpID="HLP_MMC_Warn_at_Start">
+    <Parameter cfgName="cursor_pp_diff_warning" userInput="cfgDefaultOk" resourceID="MMC_WARN" parameterType="typeInteger" modifyOptions="modReadOnly" helpID="HLP_MMC_Button_Cursor"/>
+    <Parameter cfgName="show_pp_to_cursor_button" userInput="cfgDefaultOk" resourceID="MMC_BUTTON_CURSOR" parameterType="typeInteger" modifyOptions="modReadOnly" helpID="HLP_MMC_Button_Cursor"/>
+  </Type>
+  <Type cfgName="AUTO_SWITCH_OF_JOG_UNIT" resourceID="MMC_AUTO_SWITCH_OF_JOG_UNIT" addRemoveInstances="false" instanceVisibility="showAll" helpID="HLP_MMC_Auto_Switch_of_Jog_Unit">
+    <Parameter cfgName="enabled" userInput="cfgDefaultOk" resourceID="MMC_ENABLED" parameterType="typeBoolean" modifyOptions="modRestartWarm" helpID="HLP_MMC_Enabled">
+      <ListValue userEdit="false">
+        <CfgValue resourceID="MMC_No">FALSE</CfgValue>
+        <CfgValue resourceID="MMC_Yes">TRUE</CfgValue>
+      </ListValue>
+    </Parameter>
+  </Type>
+  <Type cfgName="BACKUP_DEFAULT" resourceID="MMC_BACKUP_DEFAULT" addRemoveInstances="false" instanceVisibility="showAll" helpID="HLP_MMC_backup_default">
+    <Parameter cfgName="backup_name" userInput="cfgDefaultNotOk" resourceID="MMC_BACKUP_NAME" parameterType="typeStringNormal" modifyOptions="modWriteEnabled" helpID="HLP_MMC_Backup_name"></Parameter>
+    <Parameter cfgName="backup_path" userInput="cfgDefaultNotOk" resourceID="MMC_BACKUP_PATH" parameterType="typeStringNormal" modifyOptions="modWriteEnabled" helpID="HLP_MMC_Backup_path"></Parameter>
+    <Parameter cfgName="unique_name" userInput="cfgDefaultOk" resourceID="MMC_UNIQUE_NAME" parameterType="typeInteger" modifyOptions="modWriteEnabled" helpID="HLP_MMC_Unique_name">
+      <ListValue userEdit="false">
+        <CfgValue resourceID="MMC_Yes">1</CfgValue>
+        <CfgValue resourceID="MMC_No">0</CfgValue>
+      </ListValue>
+    </Parameter>
+    <Parameter cfgName="disable_name_change" userInput="cfgDefaultOk" resourceID="MMC_DISABLE_NAME_CHANGE" parameterType="typeInteger" modifyOptions="modWriteEnabled" helpID="HLP_MMC_Disable_name_change">
+      <ListValue userEdit="false">
+        <CfgValue resourceID="MMC_Yes">1</CfgValue>
+        <CfgValue resourceID="MMC_No">0</CfgValue>
+      </ListValue>
+    </Parameter>
+  </Type>
+</Domain>

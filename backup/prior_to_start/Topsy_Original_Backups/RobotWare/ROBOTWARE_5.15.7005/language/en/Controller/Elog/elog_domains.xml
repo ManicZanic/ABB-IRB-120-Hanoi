@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- ****************************************************
+* 
+*  elog_domains.xml - Event Log Domain Names in XML
+* 
+*  The text description file for the Elog domains       
+*  This file contains the relation from elog domain    
+*  number to a text string that can be displayed on a 
+*  client to the controller.                           
+*
+* $Revision: 1.4 $	                                        
+*                                                       
+*   Copyright 2002 ABB                                   
+*-->
+<elog_domains language="en" elogDomainsVersion="1.0" xmlns="urn:abb-robotics-elog-domains">
+	<domain domain_no="0">Common</domain>
+	<domain domain_no="1">Operational</domain>
+	<domain domain_no="2">System</domain>
+	<domain domain_no="3">Hardware</domain>
+	<domain domain_no="4">Program</domain>
+	<domain domain_no="5">Motion</domain>
+	<domain domain_no="7">IO &amp; Communication</domain>
+	<domain domain_no="8">User</domain>
+	<domain domain_no="10">Internal</domain>
+	<domain domain_no="11">Process</domain>
+	<domain domain_no="12">Configuration</domain>
+  <domain domain_no="15">RAPID</domain>
+</elog_domains>

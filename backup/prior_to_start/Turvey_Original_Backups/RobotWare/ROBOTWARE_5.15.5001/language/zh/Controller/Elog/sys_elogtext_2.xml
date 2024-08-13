@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="SYS" domainNo="2" lang="zh" elogTextVersion="1.0" min="153" max="248">
+  <Message number="153" eDefine="SYS_ERR_SYS_REJ_MOTONSTART">
+    <Title>电机上电并启动被拒绝</Title>
+    <Description>通过系统 I/O 执行电机上电并启动程序被拒绝。</Description>
+    <Consequences>程序将无法启动。</Consequences>
+    <Causes>- 原因可能是机器人不在恢复距离范围内。<p />- 程序已在执行。<p />- 正在进行备份操作。</Causes>
+    <Actions>- 将机器人点动至恢复区域或移动程序指针。<p />- 在激活“系统输入电机上电并启动”之前停止程序。</Actions>
+  </Message>
+  <Message number="154" eDefine="SYS_ERR_SYS_REJ_STOP_INSTR">
+    <Title>停止指令被拒绝</Title>
+    <Description>通过系统 IO 的程序停止指令被拒绝。<p /></Description>
+  </Message>
+  <Message number="156" eDefine="SYS_ERR_SYS_NO_ARG_ROUTINE_NAME">
+    <Title>未定义的自变量</Title>
+    <Description>系统 IO 的中断例行程序名称 <p />未定义手动中断。<p /></Description>
+    <Actions>配置中断例行程序名称。<p /></Actions>
+  </Message>
+  <Message number="157" eDefine="SYS_ERR_SYS_NO_ARG_PROGRAM_NAME">
+    <Title>未定义的自变量</Title>
+    <Description>系统 IO 的程序名称<p />未定义 LoadStart<p /></Description>
+    <Actions>配置程序名称。<p /></Actions>
+  </Message>
+  <Message number="158" eDefine="SYS_ERR_SYS_NO_ACTION_SIGNAL">
+    <Title>无“系统输入”信号</Title>
+    <Description>已将“系统输入”配置到<p />不存在的 I/O 信号。<p />“系统输入”： <arg format="%s" ordinal="1" /><p />信号名称： <arg format="%s" ordinal="2" /></Description>
+    <Consequences>系统进入“系统故障”状态。</Consequences>
+    <Actions>添加信号 <arg format="%s" ordinal="2" /> 至 eio.cfg 或从 eio.cfg 删除“系统输入 <arg format="%s" ordinal="1" /> ”。<p /><p />每个“系统输入”均必须配置信号。</Actions>
+  </Message>
+  <Message number="159" eDefine="SYS_ERR_SYS_NO_STATUS_SIGNAL">
+    <Title>无“系统输出”信号</Title>
+    <Description>已将一项“系统输出”配置到<p />不存在的 I/O 信号。<p />“系统输出”： <arg format="%s" ordinal="1" /><p /> 信号名称： <arg format="%s" ordinal="2" /></Description>
+    <Consequences>系统进入“系统故障”状态。</Consequences>
+    <Actions>添加信号 <arg format="%s" ordinal="2" /> 至 eio.cfg 或从 eio.cfg 删除“系统输出” <arg format="%s" ordinal="1" /> 。<p /><p />每个“系统输出”均必须配置信号。</Actions>
+  </Message>
+  <Message number="161" eDefine="SYS_ERR_SYS_SYSMOD_NOT_FIND">
+    <Title>未找到路径</Title>
+    <Description>任务<p /><arg format="%s" ordinal="3" /> 中的系统模块 <arg format="%s" ordinal="2" /> 在配置中有针对“任务模块”<p />有相应的规格，<p />该模块指出一个不正在的<p />文件路径<p /></Description>
+    <Actions>查看“系统<p />参数”菜单中的“任务模块”并更改此系统模块的项目<p />中的路径</Actions>
+  </Message>
+  <Message number="162" eDefine="SYS_ERR_SYS_SYSMOD_WRITE">
+    <Title>写入错误</Title>
+    <Description>系统尝试保存任务 <arg format="%.16s" ordinal="4" />，位置 <arg format="%.37s" ordinal="3" /> 上的<p />系统模块 <arg format="%.14s" ordinal="2" /> 时<p />出现<p />错误。或者文件<p />系统已满<p /></Description>
+    <Actions>查看"系统参数"菜单<p />中的"任务模块"，并更改<p />该系统模块项目中的路径</Actions>
+  </Message>
+  <Message number="164" eDefine="SYS_ERR_SYS_SYSMOD">
+    <Title>重新配置失败</Title>
+    <Description>还有一些未保存的系统<p />模块。<p /></Description>
+    <Actions>读取以前消息中的<p />错误描述。<p />重试系统启动</Actions>
+  </Message>
+  <Message number="165" eDefine="SYS_ERR_SYS_FORCED_READY">
+    <Title>程序指针丢失。</Title>
+    <Description>无法再次从当前位置<p />重新启动。<p /></Description>
+    <Actions>必须从起始位置<p />启动程序。</Actions>
+  </Message>
+  <Message number="166" eDefine="SYS_ERR_SYS_SYSMOD_OLDER">
+    <Title>拒绝保存模块</Title>
+    <Description>模块 <arg format="%.14s" ordinal="2" /><arg format="%.14s" ordinal="2" /><p />版本早于任务 <arg format="%.16s" ordinal="4" /><p />位于 <arg format="%.37s" ordinal="3" /><p />的源版本。 <p /></Description>
+  </Message>
+  <Message number="167" eDefine="SYS_ERR_SYS_USRMOD_NSAVED">
+    <Title>未保存的模块</Title>
+    <Description>模块 <arg format="%.14s" ordinal="2" /><arg format="%.14s" ordinal="2" /><p />已更改，但未保存至<p />任务 <arg format="%.16s" ordinal="3" />。 <p /></Description>
+  </Message>
+  <Message number="170" eDefine="SYS_ERR_SYS_STOP">
+    <Title>系统已停止</Title>
+    <Description>检测到使系统停止的错误。</Description>
+    <Consequences>系统进入 SYS STOP 状态，机器人在路径上停止。有关该状态的详细含义请参阅《故障排除手册》IRC5 的说明。</Consequences>
+    <Causes>多次出现错误会转换到此状态。</Causes>
+    <Actions>1) 检查同一时间出现的其它事件日志信息，以确定实际原因。<p />2) 解决故障的起因。</Actions>
+  </Message>
+  <Message number="171" eDefine="SYS_ERR_SYS_HALT">
+    <Title>系统已中断</Title>
+    <Description>检测到使系统中断的错误。</Description>
+    <Consequences>系统进入 SYS HALT 状态，程序与机器人动作停止，电机已关闭。有关该状态的详细含义请参阅《故障排除手册》IRC5 的说明。</Consequences>
+    <Causes>多次出现错误会转换到此状态。</Causes>
+    <Actions>1) 检查同一时间出现的其它事件日志信息，以确定实际原因。<p />2) 解决故障的起因。<p />3) 重新启动程序。</Actions>
+  </Message>
+  <Message number="172" eDefine="SYS_ERR_SYS_FAIL">
+    <Title>系统故障</Title>
+    <Description>检测到使系统发生故障的错误。</Description>
+    <Consequences>系统进入 SYS FAIL 状态。程序与机器人动作停止，电机已关闭。有关该状态的详细含义请参阅《故障排除手册》IRC5 的说明。</Consequences>
+    <Causes>多次出现错误会转换到此状态。</Causes>
+    <Actions>1) 检查同一时间出现的其它事件日志信息，以确定实际原因。<p />2) 解决故障的起因。<p />3) 按《操作员手册》IRC5 的详细叙述重新启动系统。</Actions>
+  </Message>
+  <Message number="176" eDefine="SYS_ERR_SYS_AO_OUTSIDE_LIMITS">
+    <Title>模拟系统输出超出限制</Title>
+    <Description>
+      <arg format="%f" ordinal="1" /> “系统输出 <arg format="%s" ordinal="2" />”的值、信号 <arg format="%s" ordinal="3" /> 超出限制（最小逻辑值： <arg format="%f" ordinal="4" /> m/s，最大逻辑值： <arg format="%f" ordinal="5" /> m/s）。</Description>
+    <Consequences>未设置新值；保留模拟信号原有值。</Consequences>
+    <Causes>最高和/或最低信号逻辑值可能定义错误。</Causes>
+    <Actions>调整最高和/或信号逻辑值并重启控制器。</Actions>
+  </Message>
+  <Message number="177" eDefine="SYS_ERR_DM_SHC_ERROR">
+    <Title>电机相电路短路</Title>
+    <Description>
+      <arg format="%s" ordinal="2" /> 在驱动模块 <arg format="%d" ordinal="1" />的驱动单元编号 <arg format="%d" ordinal="3" />中，接点上的电机或电机电缆出现短路。
+    </Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>可能是因为电机或电机电缆受损。原因还包括电缆接触器受到污染或电机绕组故障。</Causes>
+    <Actions>       1)确保电机电缆与驱动单元正确连接。<p />2) 测量电缆和电机的电阻，检查其是否完好。测量前应断开连接。<p />3) 更换所有故障组件。
+    </Actions>
+  </Message>
+  <Message number="178" eDefine="SYS_ERR_SYS_WRONG_TASK_NAME">
+    <Title> 任务名称配置错误</Title>
+    <Description>为系统输入 <arg format="%s" ordinal="2" /> 配置了错误的任务名称 <arg format="%s" ordinal="1" /> 。</Description>
+    <Consequences>数字输入信号将无法连接至指定的事件。</Consequences>
+    <Actions>更改配置后重新启动系统。</Actions>
+  </Message>
+  <Message number="179" eDefine="SYS_ERR_SYS_MEMORY_USAGE_ERROR">
+    <Title>磁盘存储空间严重偏低</Title>
+    <Description>磁盘上的自由存储容量达到极限。现在小于 10 MB。RAPID 程序执行已停止。</Description>
+    <Consequences>磁盘存储空间几乎全满。出现此情况时系统将无法工作。</Consequences>
+    <Causes>磁盘存储了过多的数据</Causes>
+    <Actions>1) 将文件保存到与网络连接的其它磁盘。<p />2) 从磁盘删除数据。<p />3) 从驱动器上删除文件后，重新启动系统。</Actions>
+  </Message>
+  <Message number="181" eDefine="SYS_ERR_SYS_REJ_SYS_RESET">
+    <Title>系统重置被拒绝。</Title>
+    <Description>不允许通过系统 IO<p />重置系统。<p /></Description>
+  </Message>
+  <Message number="184" eDefine="SYS_ERR_SYS_ERR_ARG_MODE">
+    <Title>系统输入的自变量不正确</Title>
+    <Description>已经为系统 IO 声明了未定义的<p />启动模式。<p /></Description>
+  </Message>
+  <Message number="185" eDefine="SYS_ERR_SYS_ERR_CONF_NAME">
+    <Title>名称不正确</Title>
+    <Description>当前 runchn_bool 配置中已经<p />声明了未定义的名称。<p /></Description>
+  </Message>
+  <Message number="187" eDefine="SYS_ERR_SYS_DUMP_CREATED">
+    <Title>已创建了诊断记录文件</Title>
+    <Description>由于出现故障（无论多少个），在 <arg format="%s" ordinal="1" /> 位置创建了系统诊断文件。该文件包含了内部调试信息，用于故障排除和调试。</Description>
+    <Consequences>系统将根据会导致停止的错误作出反应，该错误在自身的事件日志文本中有说明。</Consequences>
+    <Causes>多次出现错误会导致此情况。使系统进入 SYS FAIL 状态的故障一般还会生成一个诊断记录文件。</Causes>
+    <Actions>如果需要，可将此文件追加到错误报告，一起发送至当地 ABB 代表。</Actions>
+  </Message>
+  <Message number="188" eDefine="SYS_ERR_SYS_IMAGE_FILE_CORRUPT">
+    <Title>系统数据无效</Title>
+    <Description>包含系统保持数据的文件内容 <arg format="%s" ordinal="1" /> 无效。内部错误代码： <arg format="%d" ordinal="2" />。已经使用以前在 <arg format="%s" ordinal="3" /> 保存的正常系统数据启动了系统。<p /></Description>
+    <Consequences>重新启动后，自 <arg format="%s" ordinal="4" /> 以来对系统配置或 RAPID 程序所做的任何更改都不可用。必须重新执行所有的更改。</Consequences>
+    <Actions>1) 检查同一时间出现的其它事件日志信息，以确定实际原因。<p />2) 如果可行，请使用加载的正常系统数据执行 B-restart，以接受启动。<p />3) 重新安装系统。<p />4) 检查可用的磁盘存储空间。如果有必要，请删除数据以增加自由存储空间。</Actions>
+  </Message>
+  <Message number="189" eDefine="SYS_ERR_SYS_CTRL_FILE_CORRUPT">
+    <Title>机器人数据无效</Title>
+    <Description>无法从文件 <arg format="%s" ordinal="1" /> 中加载<p />系统独立机器人数据。<p />文件存在，但内容<p />无效。内部代码： <arg format="%d" ordinal="2" /><p /></Description>
+    <Actions>检查所需动作的其它日志<p />信息。<p />确保设备存在可用的<p />存储空间。</Actions>
+  </Message>
+  <Message number="192" eDefine="SYS_ERR_SYS_MEMORY_USAGE_WARNING">
+    <Title>磁盘存储空间偏低</Title>
+    <Description>磁盘上的自由存储容量小于 25 MB。达到 10 MB 时，RAPID 程序的执行将会停止。</Description>
+    <Consequences>磁盘存储空间几乎全满。出现此情况时系统将无法工作。</Consequences>
+    <Causes>磁盘存储了过多的数据</Causes>
+    <Actions>1) 将文件保存到与网络连接的其它磁盘。<p />2) 从磁盘删除数据。</Actions>
+  </Message>
+  <Message number="193" eDefine="SYS_ERR_SYS_CTRL_FILE_NOT_SAVED">
+    <Title>机器人数据更新警告</Title>
+    <Description>已从备份恢复了轴同步值<p />和检修信息数据 (SIS)。<p />系统关机时未保存系统<p />独立机器人数据。已从<p />最新的备份恢复了数据。<p /></Description>
+    <Actions>确保设备存在可用的<p />存储空间。<p />后备电池可能放完电。请检查<p />硬件日志。</Actions>
+  </Message>
+  <Message number="194" eDefine="SYS_ERR_SYS_SYSTEM_DATA_BACKUP_WARNING">
+    <Title>系统数据未备份</Title>
+    <Description>系统已成功恢复<p />但是无法创建当前<p />系统数据的备份。<p /></Description>
+    <Actions>确保设备 <arg format="%s" ordinal="1" /> 存在可用的<p />存储空间。 </Actions>
+  </Message>
+  <Message number="195" eDefine="SYS_ERR_SYS_IMAGE_FILE_NOT_SAVED">
+    <Title>上次关闭该系统时，系统数据丢失</Title>
+    <Description>正常情况下，关机时所有系统数据都会保存。上次关机时保存数据失败。已经使用以前在 <arg format="%s" ordinal="1" /> 保存的正常系统数据启动了系统。</Description>
+    <Consequences>
+      <arg format="%s" ordinal="2" /> 重新启动后，自 <arg format="%s" ordinal="2" /> 以来对系统配置或 RAPID 程序所做的任何更改都不可用。必须重新执行所有的更改。</Consequences>
+    <Causes>可能是关机时后备电池放完电。可能是存储磁盘已满。</Causes>
+    <Actions>1) 检查同一时间出现的其它事件日志消息，以确定实际原因。<p />2) 如果可行，请使用加载的系统数据执行 B-restart，以接受启动。<p />3) 重新安装系统。<p />4) 检查可用的磁盘存储空间。如果有必要，请删除数据以增加自由存储空间。</Actions>
+  </Message>
+  <Message number="196" eDefine="SYS_ERR_SYS_MOD_SAVED_TO_RECOVERY">
+    <Title>已保存模块</Title>
+    <Description>在重新配置系统时发现一个已更改且未保存的模块。<p />模块已保存至<p /><arg format="%s" ordinal="2" />. <p /></Description>
+  </Message>
+  <Message number="197" eDefine="SYS_ERR_SYS_IMAGE_FILE_REMOVED">
+    <Title>无法找到上次运行时的系统数据</Title>
+    <Description>正常情况下，关机时所有系统数据都会保存。无法找到包含系统持久数据的文件。已经使用以前在 <arg format="%s" ordinal="1" /> 保存的正常系统数据启动了系统。</Description>
+    <Consequences>
+      <arg format="%s" ordinal="2" /> 重新启动后，自 <arg format="%s" ordinal="2" /> 以来对系统配置或 RAPID 程序所做的任何更改都不可用。必须重新执行所有的更改。</Consequences>
+    <Causes>包含保存系统数据的文件可能被手动移动或删除。</Causes>
+    <Actions>1) 检查保存系统数据文件的位置和可用性。<p />2) 如果可行，请使用加载的正常系统数据执行 B-restart，以接受启动。<p />3) 重新安装系统。</Actions>
+  </Message>
+  <Message number="199" eDefine="SYS_ERR_SYS_REJ_SOFTSTOP">
+    <Title>系统 SoftStop 被拒绝</Title>
+    <Description>不允许系统输入 SoftStop </Description>
+  </Message>
+  <Message number="200" eDefine="SYS_ERR_SYS_OPEN_LIM_PSC">
+    <Title> 限位开关被 SC 打开</Title>
+    <Description>机器人上的限位开关已被安全控制器 (SC) 打开</Description>
+    <Consequences>系统转入“保护停止”状态。</Consequences>
+    <Causes>因为安全违规，安全控制器打开了限位开关。</Causes>
+    <Actions>1) 检查其他事件日志，以查找原因。<p />2) 检查接触器板和安全控制器之间的电缆<p />3) 通过按“电机开启”按钮或者激活相应的系统输入，执行“确认停止”。
+</Actions>
+  </Message>
+  <Message number="201" eDefine="SYS_ERR_SYS_OPEN_LIM">
+    <Title>限位开关已打开</Title>
+    <Description>机器人上面的限位开关已打开。</Description>
+    <Consequences>系统进入电机关闭状态。</Consequences>
+    <Causes>机器人已经超出安装在机器人上限位开关所定义的工作范围之外。</Causes>
+    <Actions>1) 按下最后存在的外部“Override Limit”按钮，并手动<p />将机器人移回到正常工作范围。<p />2) 恢复操作。</Actions>
+  </Message>
+  <Message number="202" eDefine="SYS_ERR_SYS_OPEN_ES">
+    <Title>“紧急停止”已打开 </Title>
+    <Description>紧急停止电路在之前已断开，然而在断开时试图操作机器人。</Description>
+    <Consequences>系统保留在“紧急停止”状态。</Consequences>
+    <Causes>已试图操纵控制，如启用设备。</Causes>
+    <Actions>1) 要恢复操作，请首先重置触发停止的紧急停止按钮。<p />2) 然后按“控制模块”上的“电机开启”按钮，将系统切换回“电机开启”状态。</Actions>
+  </Message>
+  <Message number="203" eDefine="SYS_ERR_SYS_OPEN_EN">
+    <Title>使动装置已打开</Title>
+    <Description>仅打开了两个使动装置链中的一个。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Causes>教导器使动装置可能出现故障，或未正确连接。有关教导器及其使动装置的详细说明，请参阅《故障排除手册》-IRC5。</Causes>
+    <Actions>1) 检查教导器电缆及其连接。<p />2) 必要时更换故障的教导器或其电缆。</Actions>
+  </Message>
+  <Message number="204" eDefine="SYS_ERR_SYS_OPEN_OPKEY">
+    <Title>“操作键”失衡</Title>
+    <Description>系统检测到两个并联的“手动”/“自动”操作键电路中存在失衡。 </Description>
+    <Causes>连接到“操作键”电路的任一电缆的接触对均未正常工作。 </Causes>
+    <Actions>1) 隔离造成冲突的电缆连接<p />2) 以正确的方式连接电缆</Actions>
+  </Message>
+  <Message number="205" eDefine="SYS_ERR_SYS_OPEN_AS">
+    <Title>自动停止已打开</Title>
+    <Description>自动模式安全保护停止电路已断开。</Description>
+    <Consequences>系统进入自动停止状态。</Consequences>
+    <Causes>与自动模式安全保护停止电路串联的一个或多个开关已打开，这可能是由很多故障造成的。只有在自动操作模式下才可能出现这种情况。有关自动模式安全保护停止电路的说明请参阅《故障排除手册》。</Causes>
+    <Actions>1) 定位开关，重置后重新启动系统。<p />2) 检查电缆及其连接。</Actions>
+  </Message>
+  <Message number="206" eDefine="SYS_ERR_SYS_OPEN_GS">
+    <Title>常规停止已打开</Title>
+    <Description>常规模式安全保护停止电路已断开。</Description>
+    <Consequences>系统进入常规停止状态。</Consequences>
+    <Causes>与常规模式安全保护停止电路串联的一个或多个开关已打开，这可能是由很多故障造成的。在任何操作模式下都可能发生此情况。有关常规模式安全保护停止电路的说明请参阅《故障排除手册》。</Causes>
+    <Actions>1) 定位开关，重置后重新启动系统。<p />2) 检查电缆及其连接。</Actions>
+  </Message>
+  <Message number="208" eDefine="SYS_ERR_SYS_OPEN_CH">
+    <Title>链式开关已打开 </Title>
+    <Description>安全链（不是自动停止和常规停止）已断开。 </Description>
+    <Consequences>系统进入保护停止状态。</Consequences>
+    <Causes>与运行链起点电路串联的一个或多个开关已打开，这可能是由很多故障造成的。有关运行链起点的说明请参阅《故障排除手册》和电路图。</Causes>
+    <Actions>       1) 检查其他错误消息了解主要的故障原因。<p />2) 找到开关，对其进行复位并重新启动系统。<p />3) 检查电缆及其连接。
+    </Actions>
+  </Message>
+  <Message number="209" eDefine="SYS_ERR_SYS_OPEN_EXTCONT">
+    <Title>外部接触器已打开</Title>
+    <Description>一个外部接触器已打开。</Description>
+    <Consequences>试图启动时系统由电机下电状态转入 SYS HALT 状态。</Consequences>
+    <Causes>外部设备的运行链已断开，这可能是由外部接触器的辅助触点造成的，或者受任何使用的 PLC 控制。外部接触器向外部设备的部件供电，与 RUN 接触器向机器人供电的原理一样。仅当试图进入电机上电模式时才会出现此故障。有关运行链的说明请参阅《故障排除手册》和电路图。</Causes>
+    <Actions>1) 定位开关，重置后重新启动系统。<p />2) 检查电缆及其连接。<p />3) 检查外部接触器的辅助触点。<p />4) 检查是否存在任何使用的控制外部接触器的 PLC。</Actions>
+  </Message>
+  <Message number="211" eDefine="SYS_ERR_SYS_FORBID_CLOSE_ENABLE">
+    <Title>两个通道故障，启用链</Title>
+    <Description>两个启用链中，仅有其中一个的开关会暂时受到影响，即将链打开然后重新关闭，但其它链不受影响。<p /></Description>
+    <Consequences>系统转入“系统中断”状态。</Consequences>
+    <Causes>轴计算机或安全系统上的信号连接可能松脱。有关启用链的介绍，请参阅《故障排除手册》和电路图。</Causes>
+    <Actions>1) 检查电缆及其连接。<p />2) 确保轴计算机电路板和安全系统上的所有信号连接器都连接稳固。<p />3) 如果不存在松脱连接，则请更换有故障的电路板。</Actions>
+  </Message>
+  <Message number="212" eDefine="SYS_ERR_SYS_FORBID_CLOSE_CH">
+    <Title>两个通道故障，运行链</Title>
+    <Description>仅关闭了两个运行链中的一个。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Causes>与运行链相连接的任何开关可能出现故障或未正常连接，导致其中一个信道关闭。有关运行链的说明请参阅《故障排除手册》IRC5。</Causes>
+    <Actions>1) 检查电缆及其连接。<p />2) 检查同一时间出现的其它事件日志消息，以判定是哪个开关导致故障。<p />3) 确保所有开关工作正常。<p />4) 为使链返回至定义状态，请先按住然后重置紧急停止按钮。 <p />5) 如果不存在松脱的连接，请更换故障的开关。</Actions>
+  </Message>
+  <Message number="213" eDefine="SYS_ERR_SYS_RUNCHN_NOT_RESET">
+    <Title>两个信道故障</Title>
+    <Description>检测到运行链或 ENABLE 链其中之一出现短暂的状态变更。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Causes>这可能是由于许多故障造成的。有关 ENABLE 链和运行链的说明请参阅《故障排除手册》IRC5。</Causes>
+    <Actions>1) 检查电缆及其连接。<p />2) 检查同一时间出现的其它事件日志消息，以判定故障的起因。<p />3) 为使链返回至定义状态，请先按住然后重置紧急停止按钮，这样可能会解决问题。 </Actions>
+  </Message>
+  <Message number="214" eDefine="SYS_ERR_SYS_OPEN_DRV1LIM">
+    <Title>限位开关已打开， DRV1</Title>
+    <Description>机器人上面的限位开关已打开。</Description>
+    <Consequences>系统进入电机关闭状态。</Consequences>
+    <Causes>机器人已经超出安装在机器人上限位开关所定义的工作范围之外。<p /></Causes>
+    <Actions>1) 按下最后存在的外部“Override Limit”按钮，并手动<p />将机器人移回到正常工作范围。<p />2) 恢复操作。</Actions>
+  </Message>
+  <Message number="215" eDefine="SYS_ERR_SYS_OPEN_SS">
+    <Title>上级停止已打开</Title>
+    <Description>上级模式安全保护停止电路已断开。</Description>
+    <Consequences>系统进入上级停止状态。</Consequences>
+    <Causes>与上级模式安全保护停止电路串联的一个或多个开关已打开，这可能是由很多故障造成的。在任何操作模式下都可能发生此情况。有关上级模式安全保护停止电路的说明请参阅《故障排除手册》。</Causes>
+    <Actions>1) 定位开关，重置后重新启动系统。</Actions>
+  </Message>
+  <Message number="216" eDefine="SYS_ERR_SYS_CLOSE_EN_AUTO">
+    <Title>使能器在自动模式下处激活状态</Title>
+    <Description>系统检测到使能器在自动操作模式下被按住超过 3 秒。</Description>
+    <Consequences>系统进入保护停止状态。</Consequences>
+    <Actions>1. 松开使能器<p />2. 切换至手动模式</Actions>
+  </Message>
+  <Message number="217" eDefine="SYS_ERR_SYS_OPEN_DRV2LIM">
+    <Title>限位开关已打开， DRV2</Title>
+    <Description>机器人上面的限位开关已打开。</Description>
+    <Consequences>系统进入电机关闭状态。</Consequences>
+    <Causes>机器人已经超出安装在机器人上限位开关所定义的工作范围之外。</Causes>
+    <Actions>1) 按下最后存在的外部“Override Limit”按钮，并手动<p />将机器人移回到正常工作范围。<p />2) 恢复操作。</Actions>
+  </Message>
+  <Message number="218" eDefine="SYS_ERR_SYS_OPEN_DRV3LIM">
+    <Title>限位开关已打开， DRV3</Title>
+    <Description>机器人上面的限位开关已打开。</Description>
+    <Consequences>系统进入电机关闭状态。</Consequences>
+    <Causes>机器人已经超出安装在机器人上限位开关所定义的工作范围之外。</Causes>
+    <Actions>1) 按下最后存在的外部“Override Limit”按钮，并手动<p />将机器人移回到正常工作范围。<p />2) 恢复操作。</Actions>
+  </Message>
+  <Message number="219" eDefine="SYS_ERR_SYS_OPEN_DRV4LIM">
+    <Title>限位开关已打开， DRV4</Title>
+    <Description>机器人上面的限位开关已打开。</Description>
+    <Consequences>系统进入电机关闭状态。</Consequences>
+    <Causes>机器人已经超出安装在机器人上限位开关所定义的工作范围之外。</Causes>
+    <Actions>1) 按下最后存在的外部“Override Limit”按钮，并手动<p />将机器人移回到正常工作范围。<p />2) 恢复操作。</Actions>
+  </Message>
+  <Message number="220" eDefine="SYS_ERR_SYS_CONFLICT_SS">
+    <Title>上级停止冲突</Title>
+    <Description>仅打开了两个上级模式安全保护停止链中的一个。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Causes>与上级停止链连接的任何开关可能出现故障或未正常连接，导致其中一个信道关闭。有关上级停止链的说明请参阅《故障排除手册》IRC5。</Causes>
+    <Actions>1) 检查电缆及其连接。<p />2) 检查同一时间出现的其它事件日志信息，以判定是哪个开关导致故障。<p />3) 确保所有开关工作正常。<p />4) 如果不存在松脱的连接，请更换故障的开关。</Actions>
+  </Message>
+  <Message number="221" eDefine="SYS_ERR_SYS_CONFLICT_CH">
+    <Title>运行链冲突</Title>
+    <Description>运行链<p />状态冲突。<p /></Description>
+    <Actions>请检查运行链的电缆。</Actions>
+  </Message>
+  <Message number="222" eDefine="SYS_ERR_SYS_CONFLICT_LIM">
+    <Title>限位开关冲突</Title>
+    <Description>仅打开了两个限位开关链中的一个。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Causes>与限位开关链连接的任何开关可能出现故障或未正常连接，导致其中一个信道关闭。有关限位开关链的说明请参阅《故障排除手册》IRC5。</Causes>
+    <Actions>1) 检查电缆及其连接。<p />2) 检查同一时间出现的其它事件日志信息，以判定是哪个开关导致故障。<p />3) 确保所有开关工作正常。<p />4) 如果不存在松脱的连接，请更换故障的开关。</Actions>
+  </Message>
+  <Message number="223" eDefine="SYS_ERR_SYS_CONFLICT_ES">
+    <Title>紧急停止冲突</Title>
+    <Description>仅打开了两个紧急停止链中的一个。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Causes>与紧急停止链连接的任何开关可能出现故障或未正常连接，导致其中一个信道关闭。有关紧急停止链的说明请参阅《故障排除手册》IRC5。</Causes>
+    <Actions>1) 检查电缆及连接。<p />2) 检查同一时间出现的其它事件日志信息，以判定是哪个开关导致的故障。<p />3) 确保所有开关工作正常。<p />4) 如果无松脱的连接，请更换有故障的开关。</Actions>
+  </Message>
+  <Message number="224" eDefine="SYS_ERR_SYS_CONFLICT_EN">
+    <Title>使动装置冲突 </Title>
+    <Description>仅打开了两个使动装置链中的一个。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Causes>教导器使动装置可能出现故障，或未正确连接。有关教导器及其使动装置的详细说明，请参阅《故障排除手册》-IRC5。</Causes>
+    <Actions>1) 检查教导器电缆及其连接。<p />2) 必要时更换故障的教导器或其电缆。</Actions>
+  </Message>
+  <Message number="225" eDefine="SYS_ERR_SYS_CONFLICT_AS">
+    <Title>自动停止冲突</Title>
+    <Description>仅打开了两个自动模式安全保护停止链中的一个。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Causes>与自动停止链连接的任何开关可能出现故障或未正常连接，导致其中一个信道关闭。有关自动停止链的说明请参阅《故障排除手册》IRC5。</Causes>
+    <Actions>1) 检查电缆及其连接。<p />2) 检查同一时间出现的其它事件日志信息，以判定是哪个开关导致故障。<p />3) 确保所有开关工作正常。<p />4) 如果不存在松脱的连接，请更换故障的开关。</Actions>
+  </Message>
+  <Message number="226" eDefine="SYS_ERR_SYS_CONFLICT_GS">
+    <Title>常规停止冲突</Title>
+    <Description>仅打开了两个常规模式安全保护停止链中的一个。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Causes>与常规停止链连接的任何开关可能出现故障或未正常连接，导致其中一个信道关闭。有关常规停止链的说明请参阅《故障排除手册》IRC5。</Causes>
+    <Actions>1) 检查电缆及其连接。<p />2) 检查同一时间出现的其它事件日志信息，以判定是哪个开关导致故障。<p />3) 确保所有开关工作正常。<p />4) 如果不存在松脱的连接，请更换故障的开关。</Actions>
+  </Message>
+  <Message number="227" eDefine="SYS_ERR_SYS_CONFLICT_DRV1K">
+    <Title>电机接触器，DRV1</Title>
+    <Description>驱动系统 1 的两个电机接触器中，只有一个确认了启动指令。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Causes>电机接触器辅助触点或其耗材出现故障。</Causes>
+    <Actions>1) 检查电缆及其连接。<p />2) 检查辅助触点的功能。</Actions>
+  </Message>
+  <Message number="231" eDefine="SYS_ERR_SYS_CONFLICT_SOFTES_CH_DEL">
+    <Title>由于电路失衡，紧急停止延迟</Title>
+    <Description>系统检测到两个平行紧急停止电路存在失衡。</Description>
+    <Consequences>大约 1 秒后系统将进入紧急停止状态。</Consequences>
+    <Causes>每个紧急停止按钮的接触对均未正常工作。</Causes>
+    <Actions>1. 隔离导致冲突的紧急停止按钮。<p />2. 检查接触对。<p />3. 确保所有连接都牢固。<p />4. 必要时更换按钮。</Actions>
+  </Message>
+  <Message number="232" eDefine="SYS_ERR_SYS_CONFLICT_SOFTAS_CH_DEL">
+    <Title>由于电路失衡，自动停止延迟</Title>
+    <Description>系统检测到两个平行自动停止电路存在失衡。</Description>
+    <Consequences>大约 1 秒后系统将进入保护停止状态。</Consequences>
+    <Causes>与自动停止电路连接的每个安全装置上的接触对均未正常工作。</Causes>
+    <Actions>1. 隔离导致冲突的安全装置。<p />2. 确保使用的装置为双信道装置。<p />3. 检查接触对。<p />4. 确保所有连接都牢固。<p />5. 必要时更换装置。</Actions>
+  </Message>
+  <Message number="233" eDefine="SYS_ERR_SYS_CONFLICT_SOFTGS_CH_DEL">
+    <Title>由于电路失衡，常规停止延迟</Title>
+    <Description>系统检测到两个平行常规停止电路存在失衡。</Description>
+    <Consequences>大约 1 秒后系统将进入保护停止状态。</Consequences>
+    <Causes>与常规停止电路连接的每个安全装置上的接触对均未正常工作。</Causes>
+    <Actions>1. 隔离导致冲突的安全装置。<p />2. 确保使用的装置为双信道装置。<p />3. 检查接触对。<p />4. 确保所有连接都牢固。<p />5. 必要时更换装置。</Actions>
+  </Message>
+  <Message number="234" eDefine="SYS_ERR_SYS_CONFLICT_ES_CH_IMM">
+    <Title>立即紧急停止</Title>
+    <Description>紧急停止电路已损坏。</Description>
+    <Consequences>系统直接进入紧急停止状态。</Consequences>
+    <Causes>已启动一个或多个红色紧急停止按钮。</Causes>
+    <Actions>1) 隔离已断开的紧急停止按钮。<p />2) 重置按钮。</Actions>
+  </Message>
+  <Message number="235" eDefine="SYS_ERR_SYS_CONFLICT_AS_CH_IMM">
+    <Title>立即自动停止</Title>
+    <Description>自动停止电路已损坏。</Description>
+    <Consequences>系统直接进入保护停止状态。</Consequences>
+    <Causes>自动停止电路中的一个或多个安全设备开关已断开。</Causes>
+    <Actions>1) 隔离已断开的安全设备。<p />2) 重置设备开关。</Actions>
+  </Message>
+  <Message number="236" eDefine="SYS_ERR_SYS_CONFLICT_GS_CH_IMM">
+    <Title>立即常规停止</Title>
+    <Description>常规停止电路已损坏。</Description>
+    <Consequences>系统直接进入保护停止状态。</Consequences>
+    <Causes>常规停止电路中的一个或多个安全设备开关已断开。</Causes>
+    <Actions>1) 隔离已断开的安全设备。<p />2) 重置设备开关。</Actions>
+  </Message>
+  <Message number="237" eDefine="SYS_ERR_SYS_CONFLICT_SS_CH_IMM">
+    <Title>立即上级停止</Title>
+    <Description>上级停止电路已损坏。</Description>
+    <Consequences>系统直接进入保护停止状态。</Consequences>
+    <Causes>上级停止电路中的一个或多个安全设备开关已断开。</Causes>
+    <Actions>1) 隔离已断开的安全设备。<p />2) 重置设备开关。</Actions>
+  </Message>
+  <Message number="238" eDefine="SYS_ERR_SYS_CONFLICT_SOFTSS_CH_DEL">
+    <Title>由于电路失衡，上级停止延迟</Title>
+    <Description>系统检测到两个平行上级停止电路存在失衡。<p /></Description>
+    <Consequences>大约 1 秒后系统将进入保护停止状态。</Consequences>
+    <Causes>与上级停止电路连接的每个安全装置上的接触对均未正常工作。</Causes>
+    <Actions>1. 隔离导致冲突的安全装置。<p />2. 确保使用的装置为双信道装置。<p />3. 检查接触对。<p />4. 确保所有连接都牢固。<p />5. 必要时更换装置。</Actions>
+  </Message>
+  <Message number="240" eDefine="SYS_ERR_SYS_CONFLICT_ENABLE">
+    <Title>ENABLE 信号冲突</Title>
+    <Description>两个启用链中，仅有其中一个的开关受到影响，但其它链不受影响。</Description>
+    <Consequences>系统转入“系统中断”状态。</Consequences>
+    <Causes>安全系统上的信号连接可能松脱。有关启用链的介绍，请参阅《故障排除手册》和电路图。</Causes>
+    <Actions>1) 检查电缆及其连接。<p />2) 确保安全系统上的所有信号连接器都连接稳固。<p />3) 如果不存在松脱连接，则请更换有故障的电路板。</Actions>
+  </Message>
+  <Message number="241" eDefine="SYS_ERR_SYS_CONFLICT_SPEED">
+    <Title>操作模式冲突</Title>
+    <Description>通过控制柜前端的操作模式选择器选择的操作模式与轴计算机检测到的实际操作模式存在冲突。 </Description>
+    <Consequences>系统转入“系统中断”状态。</Consequences>
+    <Causes>操作模式选择器中或者它同安全系统的连接线路中可能存在硬件故障。</Causes>
+    <Actions>检查操作模式选择器以及它同安全系统之间的连接电缆。</Actions>
+  </Message>
+  <Message number="245" eDefine="SYS_ERR_SYS_CONFLICT_DRV2RUN">
+    <Title>Run Control 状态冲突，DRV2</Title>
+    <Description>驱动系统 2 的 Run Control 和“电机接触器”之间的状态冲突。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Causes>电机接触器或其耗材出现故障。</Causes>
+    <Actions>1) 检查电缆及其连接。<p />2) 执行热启动。</Actions>
+  </Message>
+  <Message number="246" eDefine="SYS_ERR_SYS_CONFLICT_DRV3RUN">
+    <Title>Run Control 状态冲突，DRV3</Title>
+    <Description>驱动系统 3 的 Run Control 和“电机接触器”之间的状态冲突。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Causes>电机接触器或其耗材出现故障。</Causes>
+    <Actions>1) 检查电缆及其连接。<p />2) 执行热启动。</Actions>
+  </Message>
+  <Message number="247" eDefine="SYS_ERR_SYS_CONFLICT_DRV4RUN">
+    <Title>Run Control 状态冲突，DRV4</Title>
+    <Description>驱动系统 4 的 Run Control 和“电机接触器”之间的状态冲突。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Causes>电机接触器或其耗材出现故障。</Causes>
+    <Actions>1) 检查电缆及其连接。<p />2) 执行热启动。</Actions>
+  </Message>
+  <Message number="248" eDefine="SYS_ERR_SYS_CONFLICT_DRV2K">
+    <Title>电机接触器冲突，DRV2</Title>
+    <Description>驱动系统 2 的两个电机接触器中，只有一个确认了启动指令。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Causes>电机接触器辅助触点或其耗材出现故障。</Causes>
+    <Actions>1) 检查电缆及连接。<p />2) 检查辅助触点的功能。</Actions>
+  </Message>
+</Domain>

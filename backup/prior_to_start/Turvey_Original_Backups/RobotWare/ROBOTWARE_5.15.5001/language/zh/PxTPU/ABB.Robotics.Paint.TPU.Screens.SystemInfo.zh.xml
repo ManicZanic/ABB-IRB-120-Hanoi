@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.TPU.Screens.SystemInfo">
+  <Forms>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.SystemInfo.TpuWndSystemInfo" Text="系统信息" Width="320" Height="192">
+      <Menu ref="menuSystemInfo" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.SystemInfo.TpuPopupDevices" Text="" Width="320" Height="192">
+      <Controls />
+    </Form>
+  </Forms>
+  <Menus>
+    <Menu ID="menuSystemInfo">
+      <MenuItem ID="Reset" Text="重置TPU" />
+      <MenuItem ID="Devices" Text="设备" />
+    </Menu>
+  </Menus>
+  <Strings>
+    <String ID="Framework" Text="TPU架构" />
+    <String ID="Version" Text="版本" />
+    <String ID=".NetRuntime" Text=".NET 版本" />
+    <String ID="Platform" Text="平台" />
+    <String ID="ID" Text="ID" />
+    <String ID="Memory" Text="存储" />
+    <String ID="Disk" Text="磁盘" />
+    <String ID="Total" Text="总计" />
+    <String ID="Free" Text="空余" />
+    <String ID="FreePercent" Text="{0}空余" />
+    <String ID="Network" Text="网络" />
+    <String ID="IP" Text="IP" />
+    <String ID="ResetTpu" Text="重置不会影响机器人控制器操作或状态，但会强制重启TPU，继续吗？" />
+  </Strings>
+</Resources>

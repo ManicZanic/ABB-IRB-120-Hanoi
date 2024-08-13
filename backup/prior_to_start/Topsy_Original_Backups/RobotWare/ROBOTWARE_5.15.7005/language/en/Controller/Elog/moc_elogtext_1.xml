@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="MOC" domainNo="5" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="21" max="183">
+  <Message number="21" eDefine="SYS_ERR_MOC_POS_SUPERVISION">
+    <Title>Joint position error</Title>
+    <Description>Actual position of joint <arg format="%s" ordinal="1" /> is too far away from the ordered position.<p /></Description>
+    <Actions>Check tuning parameters, external forces or hardware.</Actions>
+  </Message>
+  <Message number="22" eDefine="SYS_ERR_MOC_RECTIFIED_MAINS_MISSING">
+    <Title>Too low DC-link voltage</Title>
+    <Description>The drive units cannot detect the dc link voltage, or the voltage is too low.<p /><p />This can occur if the DC link bus bar is not correctly inserted or if the mains contactors do not close properly.</Description>
+    <Actions>Check the DC bus bar is correctly inserted between the drive unit and the rectifier.  <p /><p />Check that the motors on contactors are closed and that there is voltage on the side connected to the rectifier.</Actions>
+  </Message>
+  <Message number="24" eDefine="SYS_ERR_MOC_SEGMENT_EXPECTED">
+    <Title>Corner path failure</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Corner path executed as stop point due to some of the following reasons:<p />- Time delay.<p />- Closely programmed points.<p />- System requires high CPU-load. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>- Reduce the number of instructions between consecutive move instructions.<p />- Reduce speed, use wider spaced points, use /CONC option.<p />- Increase ipol_prefetch_time.</Actions>
+  </Message>
+  <Message number="25" eDefine="SYS_ERR_MOC_ROBOT_MOVED">
+    <Title>Restart interrupted</Title>
+    <Description>Current position is too far from path.<p /></Description>
+    <Actions>Make a new restart with regain.</Actions>
+  </Message>
+  <Message number="26" eDefine="SYS_ERR_MOC_SINGULARITY">
+    <Title>Close to singularity</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Robot too close to singularity.<p />Program Ref. <arg format="%s" ordinal="2" /><p />(Internal code: <arg format="%d" ordinal="3" />)<p /></Description>
+    <Actions>Modify path away from the singularity or change to joint interpolation.</Actions>
+  </Message>
+  <Message number="27" eDefine="SYS_ERR_MOC_WORK_AREA_AXIS">
+    <Title>Joint Out of Range</Title>
+    <Description>Position for <arg format="%s" ordinal="2" /> joint <arg format="%s" ordinal="1" /> is out of working range.<p /></Description>
+    <Actions>Use the joystick to move the joint into its working range.</Actions>
+  </Message>
+  <Message number="28" eDefine="SYS_ERR_MOC_JOG_DIRECTION_AXIS">
+    <Title>Jog in wrong direction</Title>
+    <Description>Position for <arg format="%s" ordinal="2" /> joint <arg format="%s" ordinal="1" /> is out of working range.<p /></Description>
+    <Actions>Use the joystick to move the joint in opposite direction.</Actions>
+  </Message>
+  <Message number="31" eDefine="SYS_ERR_MOC_CONFIG_STATE_ERROR">
+    <Title>Command not allowed</Title>
+    <Description>System parameters cannot be changed in MOTORS ON state.<p /></Description>
+    <Actions>Change to MOTORS OFF.</Actions>
+  </Message>
+  <Message number="32" eDefine="SYS_ERR_MOC_CALIBRATE_STATE_ERROR">
+    <Title>Command not allowed</Title>
+    <Description>An attempt was made to calibrate while in MOTORS ON state.<p /></Description>
+    <Actions>Change to MOTORS OFF.</Actions>
+  </Message>
+  <Message number="33" eDefine="SYS_ERR_MOC_COMMUTATE_STATE_ERROR">
+    <Title>Command not allowed</Title>
+    <Description>An attempt was made to commutate the motors in MOTORS ON state.<p /></Description>
+    <Actions>Change to MOTORS OFF.</Actions>
+  </Message>
+  <Message number="35" eDefine="SYS_ERR_MOC_SYNCHRONIZE_STATE_ERROR">
+    <Title>Command not allowed</Title>
+    <Description>An attempt was made to synchronize in MOTORS ON state.<p /></Description>
+    <Actions>Change to MOTORS OFF.</Actions>
+  </Message>
+  <Message number="36" eDefine="SYS_ERR_MOC_NO_RECOVER">
+    <Title>Correct regain impossible</Title>
+    <Description>A stop occurred with too many close points with corner zones. At restart the robot will move to a point farther forward in the program.<p /></Description>
+    <Actions>Reduce the number of close points, increase the distance between them or reduce the speed.</Actions>
+  </Message>
+  <Message number="37" eDefine="SYS_ERR_MOC_RUN_ON_IGNORED">
+    <Title>MOTORS ON order ignored</Title>
+    <Description>MOTORS ON order ignored since the previous stop was not yet acknowledged.<p /></Description>
+    <Actions>Order MOTORS ON again.</Actions>
+  </Message>
+  <Message number="41" eDefine="SYS_ERR_MOC_DECBUF_INTERPOLATE">
+    <Title>Robot in a singularity</Title>
+    <Description>The robot is too close to a singularity.<p /></Description>
+    <Actions>During program execution, use SingArea instruction or joint interpolation.<p />During jogging, use axis by axis.</Actions>
+  </Message>
+  <Message number="42" eDefine="SYS_ERR_MOC_DECBUF_RECOMPUTE">
+    <Title>Could not create path</Title>
+    <Description>The path could not be created.</Description>
+    <Actions>- Increase the distance between close points.<p />- Decrease speed.<p />- Change acceleration.</Actions>
+  </Message>
+  <Message number="50" eDefine="SYS_ERR_MOC_POSE_OUTSIDE_REACH">
+    <Title>Position outside reach</Title>
+    <Description>Position for <arg format="%s" ordinal="2" /> joint <arg format="%s" ordinal="1" /> is outside working area. <p /><p />Joint 1-6 : Number of the axis which causes the error.<p />Joint 23: Combination of axis 2 and 3 causes the error.</Description>
+    <Causes>The reason may be that ConfL_Off is used and a movement is too large, more than 90 degrees for an axis.</Causes>
+    <Actions>- Check work object or working range.<p />- Move the joint in joint coordinates.<p />- Check Motion configuration parameters.<p />- Insert intermediate points on large movements.</Actions>
+  </Message>
+  <Message number="52" eDefine="SYS_ERR_MOC_SPEED_SUPERVISION">
+    <Title>Joint speed error</Title>
+    <Description>The speed of joint <arg format="%s" ordinal="1" /> is wrong relative the ordered speed due to error in system or collision.<p /></Description>
+    <Actions>- Check the tune parameters, external forces on the joint and hardware.<p />- Reduce programmed speed.</Actions>
+  </Message>
+  <Message number="53" eDefine="SYS_ERR_MOC_COUNTER_SUPERVISION">
+    <Title>Too large revolution counter difference</Title>
+    <Description>Too large revolution counter difference for joint <arg format="%s" ordinal="1" />.  The system has detected too large a difference between the actual revolution counter value on the serial measurement board and the value anticipated by the system.</Description>
+    <Consequences>The robot is not calibrated and may be jogged manually, but no automatic operation is possible.</Consequences>
+    <Causes>The position of the robot arm may have been changed manually while the power supply was switched off. The serial measurement board, resolver or cables may also be faulty.</Causes>
+    <Actions>1) Update the revolution counter. <p />2) Check resolver and cables. <p />3) Check the serial measurement board to determine whether it is faulty. Replace the unit if faulty.</Actions>
+  </Message>
+  <Message number="55" eDefine="SYS_ERR_MOC_LOAD_SUPERVISION">
+    <Title>Joint load too high</Title>
+    <Description>Actual torque on joint <arg format="%s" ordinal="1" /> too high. Might be caused by incorrect load data, too high acceleration, high external process forces, low temperature or hardware error.<p /></Description>
+    <Actions>-Check load data.<p />-Reduce acceleration or speed.<p />-Check hardware.</Actions>
+  </Message>
+  <Message number="56" eDefine="SYS_ERR_MOC_JAM_SUPERVISION">
+    <Title>Joint collision</Title>
+    <Description>Actual torque on joint <arg format="%s" ordinal="1" /> is higher than ordered while at low or zero speed. Might be caused by jam error (the arm has got stuck) or hardware error.<p /></Description>
+    <Actions>Check that arm is not stuck.<p />Check hardware.<p />Check for other hardware event logs.</Actions>
+  </Message>
+  <Message number="57" eDefine="SYS_ERR_MOC_POWER_UP_POSITION_ERROR">
+    <Title>Joint not synchronized</Title>
+    <Description>The position of joint <arg format="%s" ordinal="1" /> after power down/failure is too far away from the position before the power down/failure.<p /></Description>
+    <Actions>Make a new update of the revolution counter.</Actions>
+  </Message>
+  <Message number="58" eDefine="SYS_ERR_MOC_WEAVE_POSE_DEFINITION">
+    <Title>Tool coord. system error</Title>
+    <Description>The z-direction of the tool coordinate system is almost parallel with the path direction.<p /></Description>
+    <Actions>Change the tool coordinate system to achieve at least 3 degrees deviation between z-direction and path direction.</Actions>
+  </Message>
+  <Message number="60" eDefine="SYS_ERR_MOC_TARGET_OBJ_TO_MI">
+    <Title>Incorrect tool</Title>
+    <Description>The definition of stationary tool is not valid.<p /></Description>
+    <Actions>Check the tool and object data.</Actions>
+  </Message>
+  <Message number="63" eDefine="SYS_ERR_MOC_CIRCLE_COLLAPSED">
+    <Title>Circle uncertain</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The points are misplaced, reason <arg format="%d" ordinal="3" />:<p />1 End point too close to start point.<p />2 Circle point too close to start point.<p />3 Circle point too close to end point.<p />4 Uncertain reorientation.<p />5 Circle too large &gt; 240 degrees.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check the points of the circle and the end point of the move instruction before. The points of the circle can be verified by stepping trough the circle in manual mode.</Actions>
+  </Message>
+  <Message number="65" eDefine="SYS_ERR_MOC_TRANSFORM_ERROR">
+    <Title>Kinematics error</Title>
+    <Description>The destination of the movement is outside the reach of the robot or too close to a singularity. Robot <arg format="%s" ordinal="1" />.<p /></Description>
+    <Actions>Change the destination position.</Actions>
+  </Message>
+  <Message number="66" eDefine="SYS_ERR_MOC_ROBOT_NOT_ACTIVE">
+    <Title>Robot not active</Title>
+    <Description>Attempt to coordinate motion or calculate position of deactivated robot <arg format="%s" ordinal="1" />.<p /></Description>
+    <Actions>Activate robot via the Motion Unit key, then Jogging window, or program. Check work object and program.</Actions>
+  </Message>
+  <Message number="67" eDefine="SYS_ERR_MOC_SINGLE_NOT_ACTIVE">
+    <Title>Unit not active</Title>
+    <Description>Attempt to coordinate motion or calculate position of deactivated single unit <arg format="%s" ordinal="1" />.<p /></Description>
+    <Actions>Activate unit via Motion Unit key, then Jogging window, or program. Check work object and program.</Actions>
+  </Message>
+  <Message number="76" eDefine="SYS_ERR_MOC_QUATERNION_UNNORMALIZED">
+    <Title>Orientation not correct</Title>
+    <Description>Orientation is incorrectly defined.<p /></Description>
+    <Actions>Make an accurate normalization of the quaternion elements.</Actions>
+  </Message>
+  <Message number="78" eDefine="SYS_ERR_MOC_NO_EVENT_OBJECT">
+    <Title>Too many close positions</Title>
+    <Description>Too many consecutive closely spaced positions.<p /></Description>
+    <Actions>Increase the distance between consecutive close positions.</Actions>
+  </Message>
+  <Message number="79" eDefine="SYS_ERR_MOC_WRIST_WEAVE_DEFINITION">
+    <Title>Cannot use wrist weaving</Title>
+    <Description>Wrist weaving not possible.<p /></Description>
+    <Actions>Use smaller weaving amplitude or a larger TCP.</Actions>
+  </Message>
+  <Message number="80" eDefine="SYS_ERR_MOC_CONFIG_POSE_INCOMPATIBLE">
+    <Title>Position not compatible</Title>
+    <Description>The desired position cannot be reached with the given robot configuration. Robot <arg format="%s" ordinal="1" />.<p /></Description>
+    <Actions>Modify the robot position in the program.</Actions>
+  </Message>
+  <Message number="82" eDefine="SYS_ERR_MOC_SERVO_TASK_UNDERRUN">
+    <Title>Deceleration limit</Title>
+    <Description>The path calculation for mechanical units running in Motion Planner <arg format="%s" ordinal="1" /> exceeds internal limit. The Motion task did not execute within its time limit.</Description>
+    <Causes>The cpu load is to high. Could for example be generated by to frequent EIO communication.</Causes>
+    <Actions>1. Set system parameter High Interpolation Priority for the affected Motion Planner.<p />2. Try to reduce the cpu load by one or more of the following actions: <p />- Reduce speed<p />- Change AccSet<p />- Avoid singularity (SingArea\Wrist). <p />- Increase Path Resolution for the affected Motion Planner using system parameter or by using the RAPID instruction PathResol for critical movements.</Actions>
+  </Message>
+  <Message number="83" eDefine="SYS_ERR_MOC_DECBUF_SPEED_REDUCTION">
+    <Title>Speed lowered by system.</Title>
+    <Description>The speed has been lowered by the system due to dynamic limitations.<p /></Description>
+    <Actions>Decrease speed and/or do not use close positions at high speed and/or increase acceleration (if below 100%).</Actions>
+  </Message>
+  <Message number="85" eDefine="SYS_ERR_MOC_USER_FRAME_ERROR">
+    <Title>Too many user frames.</Title>
+    <Description>For mechanical unit <arg format="%s" ordinal="1" /> more than one user frame has been defined.<p /></Description>
+    <Actions>Take away one user frame or define one more mechanical unit.</Actions>
+  </Message>
+  <Message number="86" eDefine="SYS_ERR_MOC_JOINT_4_UNCERTAIN">
+    <Title>Singularity problem</Title>
+    <Description>Too close to wrist singularity with respect to numerical resolution for joint 4 of <arg format="%s" ordinal="1" />.<p /></Description>
+    <Actions>Change destination position a few increments.</Actions>
+  </Message>
+  <Message number="87" eDefine="SYS_ERR_MOC_JOINT_6_UNCERTAIN">
+    <Title>Singularity problem</Title>
+    <Description>Too close to wrist singularity with respect to numerical resolution for joint 6 of <arg format="%s" ordinal="1" />.<p /></Description>
+    <Actions>Change destination position a few increments.</Actions>
+  </Message>
+  <Message number="88" eDefine="SYS_ERR_MOC_NO_PATH">
+    <Title>Restart not possible</Title>
+    <Description>It is not possible to restart the path due to a previous error.<p /></Description>
+    <Actions>Move the program pointer to clear the path and start a new movement.</Actions>
+  </Message>
+  <Message number="89" eDefine="SYS_ERR_MOC_WEAVE_WARNING">
+    <Title>Weaving changed</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The ordered weaving is not achieved due to:<p />- high weaving frequency<p />- not allowed shift of weave method or<p />- that SingArea/Wrist is used with wrist weave.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Increase weave length or period time.<p />Don't shift between arm and wrist weave.<p />Use SingArea/Off with wrist weave.</Actions>
+  </Message>
+  <Message number="91" eDefine="SYS_ERR_MOC_ACTIVATION">
+    <Title>Restart not possible.</Title>
+    <Description>Restart no longer possible. Change of unit state made restart of program impossible.<p /></Description>
+    <Actions>Move the program pointer and start a new movement.</Actions>
+  </Message>
+  <Message number="92" eDefine="SYS_ERR_MOC_DSP_REPLY_MESSAGE">
+    <Title>Axis computer response</Title>
+    <Description>Incorrect response from axis computer.<p /></Description>
+    <Actions>Check Motion configuration parameters.<p />Check axis computer hardware.</Actions>
+  </Message>
+  <Message number="94" eDefine="SYS_ERR_MOC_SERVO_TUNE_CTRLMA">
+    <Title>TuneServo not possible</Title>
+    <Description>Tuning is not implemented for the specified joint.<p /></Description>
+    <Actions>Verify that a parameter and/or joint that can be used with TuneServo is chosen.</Actions>
+  </Message>
+  <Message number="96" eDefine="SYS_ERR_MOC_SERVO_TUNE_NOT_ALLOWED">
+    <Title>TuneServo not allowed</Title>
+    <Description>Tuning is not allowed for the specified joint.<p /></Description>
+    <Actions>Verify that a parameter and/or joint that can be used with TuneServo is chosen.</Actions>
+  </Message>
+  <Message number="132" eDefine="SYS_ERR_MOC_COMMUTATION_ERROR">
+    <Title>Commutation failed</Title>
+    <Description>Commutation failed for joint <arg format="%s" ordinal="1" />.<p /></Description>
+    <Actions>- Make a new commutation.<p />- Restart the system.</Actions>
+  </Message>
+  <Message number="133" eDefine="SYS_ERR_MOC_TEST_SIGNAL_ERROR">
+    <Title>Test signal error.</Title>
+    <Description>No test signals are available for robot <arg format="%s" ordinal="1" />.<p /></Description>
+    <Actions>Verify that correct test signals are defined.</Actions>
+  </Message>
+  <Message number="134" eDefine="SYS_ERR_MOC_SENSOR_CORRECTION_VECTOR_YZ">
+    <Title>Corr. vector warning</Title>
+    <Description>Sensor correction vector calculations failed due to previous error.<p /></Description>
+    <Actions />
+  </Message>
+  <Message number="135" eDefine="SYS_ERR_MOC_SOFT_SERVO_CTRLMA">
+    <Title>SoftAct not possible.</Title>
+    <Description>Soft servo is not possible to activate.<p /></Description>
+    <Actions>Verify that a joint that can be used with SoftAct is chosen.</Actions>
+  </Message>
+  <Message number="138" eDefine="SYS_ERR_MOC_WORK_AREA_CP">
+    <Title>Arm check point limit</Title>
+    <Description>The robot <arg format="%s" ordinal="1" /> has reached the limit for arm check point.<p /></Description>
+    <Actions>Use the joystick to move the involved joint into the working range again.</Actions>
+  </Message>
+  <Message number="139" eDefine="SYS_ERR_MOC_JOG_DIRECTION_CP">
+    <Title>Arm check point limit</Title>
+    <Description>Jogging was made in wrong direction when arm check point was out of working range for robot <arg format="%s" ordinal="1" />.<p /></Description>
+    <Actions>Use the joystick to move the joint in opposite direction.</Actions>
+  </Message>
+  <Message number="140" eDefine="SYS_ERR_MOC_DYNIRB_STAT_TORQUE_EXCEEDED">
+    <Title>Payload too large</Title>
+    <Description>Heavy payload caused static torque limit to be exceeded on joint <arg format="%s" ordinal="1" />.<p /></Description>
+    <Actions>Check and reduce payload for arm and/or wrist. Reduce joint working range to decrease static torque due to gravity.</Actions>
+  </Message>
+  <Message number="141" eDefine="SYS_ERR_MOC_DECBUF_STEP_TIME">
+    <Title>Jog or Speed error</Title>
+    <Description>One of the following problems occurred:<p />-Jogging error<p />-High speed error<p />-Robot too close to singularity<p /></Description>
+    <Actions>-Jog with incremental movement<p />-Reduce the programmed speed</Actions>
+  </Message>
+  <Message number="142" eDefine="SYS_ERR_MOC_CONFIG_FAILED">
+    <Title>Motion configuration</Title>
+    <Description>Configuration of the manipulator failed.<p /><arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check the parameter values under System parameters: Motion. If mismatch between INT/EXT parameters i.e. wrong MOC.cfg loaded. <p /> I-start the system with correct parameters.</Actions>
+  </Message>
+  <Message number="143" eDefine="SYS_ERR_MOC_TARGET_BAD_MASTER_CNF">
+    <Title>Robot axes configuration</Title>
+    <Description>Actual configuration is not the same as ordered and/or movement of any robot axis is larger than 90 degrees. Robot <arg format="%s" ordinal="2" />, axis <arg format="%s" ordinal="1" />.<p /></Description>
+    <Actions>Use SingArea_Wrist, ConfL_Off, modify position or insert intermediary point.<p /><p />Proceeding in Auto mode will not be possible without correcting the configuration. To be able to move to the position anyway change to Manual mode and repeat start.</Actions>
+  </Message>
+  <Message number="144" eDefine="SYS_ERR_MOC_CALIB_BAD_DISPL_RESULT">
+    <Title>Displ frame uncertain</Title>
+    <Description>Calibration of displacement frame uncertain for robot <arg format="%s" ordinal="1" />, due to one or several of:<p />- Wrong TCP.<p />- Reference points inaccurate.<p />- Reference points badly spaced.<p /></Description>
+    <Actions>If estimated error is unacceptable:<p />- Verify that correct TCP is used.<p />- Try more than 3 reference points.<p />- Be careful when positioning robot to reference points.</Actions>
+  </Message>
+  <Message number="145" eDefine="SYS_ERR_MOC_VALID_ROB_JOINTS_NOT_FOUND">
+    <Title>Kinematic limitation</Title>
+    <Description>Kinematic limitation for robot <arg format="%s" ordinal="1" />, no solution found.<p />- Long segment.<p />- Position close to singularity.<p />- Joint 1, 2 or 3 out of range.<p />- Position outside reach.<p /></Description>
+    <Actions>- Insert an intermediary point to reduce the length of the segment.<p />- Use MoveAbsJ.<p />- Check working range.</Actions>
+  </Message>
+  <Message number="147" eDefine="SYS_ERR_MOC_RE_CREATE_ERROR">
+    <Title>Power fail restart failed</Title>
+    <Description>Re-creation of the path failed.<p /></Description>
+    <Actions>Move the program pointer and start a new movement.</Actions>
+  </Message>
+  <Message number="153" eDefine="SYS_ERR_MOC_COMMAND_NOT_ALLOWED_IF_HOLD">
+    <Title>Command not allowed</Title>
+    <Description>Task: <arg format="%s" ordinal="3" /><p />The given instruction, or command, was not allowed since the robot program was executing in a hold state.<p />(Internal code: <arg format="%d" ordinal="2" /><arg format="%s" ordinal="1" />)<p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Modify program or stop program execution before issuing command.</Actions>
+  </Message>
+  <Message number="156" eDefine="SYS_ERR_MOC_INDEPENDENT_ERROR">
+    <Title>Not an independent joint</Title>
+    <Description>Joint <arg format="%s" ordinal="1" /> is not configured as an independent joint.<p /></Description>
+    <Actions>Modify the program or configure the joint as an independent joint.</Actions>
+  </Message>
+  <Message number="157" eDefine="SYS_ERR_MOC_SENSOR_CORRECTION_VECTOR_X">
+    <Title>Corr. vector warning</Title>
+    <Description>Sensor correction vector X calculations failed due to previous error.<p /></Description>
+    <Actions />
+  </Message>
+  <Message number="158" eDefine="SYS_ERR_MOC_MISSING_EXTPOS_IPM_PROCESS">
+    <Title>Sensor process missing</Title>
+    <Description>Sensor process missing during initialization. Named sensor process <arg format="%s" ordinal="1" /> could not be found or initialized.<p /></Description>
+    <Actions>Check process name in Motion and Process configuration files.<p /></Actions>
+  </Message>
+  <Message number="159" eDefine="SYS_ERR_MOC_SINGLE_HAS_NO_IPM_PROCESS">
+    <Title>No external process</Title>
+    <Description>Attempt to coordinate motion or calculate position of single <arg format="%s" ordinal="1" /> without an external process.<p /></Description>
+    <Actions>Check process name in Motion and Process configuration files.</Actions>
+  </Message>
+  <Message number="160" eDefine="SYS_ERR_MOC_WORK_AREA_INDEPENDENT_AXIS">
+    <Title>Cannot reach position</Title>
+    <Description>Programmed position of independent joint <arg format="%s" ordinal="1" /> is outside working range and thus cannot be reached.<p /></Description>
+    <Actions>- Change the position.<p />- Check the joint working area limits.<p />- Check the used work object.</Actions>
+  </Message>
+  <Message number="162" eDefine="SYS_ERR_MOC_DECBUF_DYN_STEP_POS_ERROR">
+    <Title>Internal position error</Title>
+    <Description>Error caused by internal numerical limitation.<p /></Description>
+    <Actions>- Reset independent joint.<p />- Reduce work area if extended.<p />- Remove or separate close points.</Actions>
+  </Message>
+  <Message number="163" eDefine="SYS_ERR_MOC_EXTPOS_MAX_ADJUST_DELTA_OFFSET">
+    <Title>Position adjustment</Title>
+    <Description>External position adjustment too large. TCP speed, orientation speed, or external position speed exceed allowed robot performance.<p /></Description>
+    <Actions>- Reduce programmed TCP- and orientation speeds.<p />- Modify the path.<p />- WaitWObj closer to sync.<p />- Run in AUTO.</Actions>
+  </Message>
+  <Message number="164" eDefine="SYS_ERR_MOC_INDEPENDENT_DEACTIVATION_ERROR">
+    <Title>Deactivation not possible</Title>
+    <Description>Deactivation of mechanical unit may not be done while in independent mode.<p /></Description>
+    <Actions>Make sure that independent mode is not used and try to deactivate again.</Actions>
+  </Message>
+  <Message number="167" eDefine="SYS_ERR_MOC_CONVEY_NEW_SYNC_SIGNAL">
+    <Title>Warning: new sync</Title>
+    <Description>Warning: a new object sync signal has arrived while conveyor is active and program is running.<p /></Description>
+    <Actions />
+  </Message>
+  <Message number="168" eDefine="SYS_ERR_MOC_CONVEY_NEW_SYNC_WHILE_TRACKING">
+    <Title>New sync on <arg format="%s" ordinal="1" /></Title>
+    <Description>New object sync arrived while conveyor was tracking the previous object. Cannot track two objects simultaneously.<p /></Description>
+    <Actions>Reduce speed of conveyor. Increase programmed speed.</Actions>
+  </Message>
+  <Message number="171" eDefine="SYS_ERR_MOC_NO_RECOMPUTE_VERY_SMALL_STEP">
+    <Title>Speed too low</Title>
+    <Description>Numerical problem when interpolation of long segments with low speed and heavy additional axes or when interpolation close to singularity.<p /></Description>
+    <Actions>Split segments with long interpolation time (path_resolution * 4 minutes) or change to joint interpolation or move position away from singularity.</Actions>
+  </Message>
+  <Message number="172" eDefine="SYS_ERR_MOC_MOVJ_NOT_ALLOWED_WITH_PRXPOS">
+    <Title>MoveJ not allowed</Title>
+    <Description>MoveJ not allowed with work object coordinated with external position mechanical unit.<p /></Description>
+    <Actions>Change interpolation mode or work object.</Actions>
+  </Message>
+  <Message number="173" eDefine="SYS_ERR_MOC_USE_FINEP_WITH_TOOL_CHANGE">
+    <Title>Fine point necessary</Title>
+    <Description>Use fine point when changing tool or work object coordination when work object is coordinated with external position mechanical unit.<p /></Description>
+    <Actions>Create a fine point and then change the tool.</Actions>
+  </Message>
+  <Message number="174" eDefine="SYS_ERR_MOC_CONVEY_WOBJECT_NOT_CONNECTED">
+    <Title>WObj not connected</Title>
+    <Description>The WObj is not connected to the conveyor <arg format="%s" ordinal="1" />. Robot TCP cannot be coordinated to work object. Object can be dropped because of time synchronization fault on conveyor node.<p /></Description>
+    <Actions>Check for missing WaitWObj.<p />Check for DropWObj occurring before end of coordination.<p />Check for time synchronization fault, see status on conveyor node.</Actions>
+  </Message>
+  <Message number="175" eDefine="SYS_ERR_MOC_CONVEY_CONVEYOR_MOVES">
+    <Title>Conveyor moving</Title>
+    <Description>Conveyor <arg format="%s" ordinal="1" /> moving while attempt to coordinate robot TCP to conveyor work object while in prohibited mode.<p /></Description>
+    <Actions>It is not possible to coordinate to conveyor while in Manual Reduced Speed, or stepping in Auto, and the conveyor is moving.</Actions>
+  </Message>
+  <Message number="176" eDefine="SYS_ERR_MOC_CONVEY_NOT_ACTIVATED">
+    <Title>Conveyor not active</Title>
+    <Description>Conveyor <arg format="%s" ordinal="1" /> was not active when attempt to coordinate robot TCP to conveyor work object.<p /></Description>
+    <Actions>Make sure conveyor mechanical unit is active. Check for fine point for last coordinated motion before DeactUnit.</Actions>
+  </Message>
+  <Message number="177" eDefine="SYS_ERR_MOC_CONVEY_RESTART_CONVEYOR_MOVES">
+    <Title>Unable to restart</Title>
+    <Description>Conveyor <arg format="%s" ordinal="1" /> moving while attempting to restart or before pressing Stop or stepping through program.<p /></Description>
+    <Actions>Make sure conveyor is standing still. Move the program pointer and start a new movement.</Actions>
+  </Message>
+  <Message number="178" eDefine="SYS_ERR_MOC_MICRO_SAMPLE_TORQUE_HIGH">
+    <Title>Non optimal movement</Title>
+    <Description>Required torque too high. Manual adjustment of acceleration or speed is needed.<p /></Description>
+    <Actions>Reduce acceleration (AccSet 50 100) in this movement, restore it afterwards (AccSet 100 100). Optimize performance by search for max acceleration 50-99. Alternatively, reduce speed.</Actions>
+  </Message>
+  <Message number="181" eDefine="SYS_ERR_MOC_WORK_AREA_COUPLED_AXES">
+    <Title>Out of coupled range</Title>
+    <Description>Joint <arg format="%s" ordinal="1" /> and <arg format="%s" ordinal="2" /> are out of coupled working range.<p /></Description>
+    <Actions>Use the joystick to move joints into their coupled working range.</Actions>
+  </Message>
+  <Message number="182" eDefine="SYS_ERR_MOC_JOG_DIRECTION_COUPLED_AXES">
+    <Title>Jog in wrong direction</Title>
+    <Description>Joint <arg format="%s" ordinal="1" /> and <arg format="%s" ordinal="2" /> are out of coupled working range.<p /></Description>
+    <Actions>Use the joystick to move joints into their coupled working range.</Actions>
+  </Message>
+  <Message number="183" eDefine="SYS_ERR_MOC_WORK_AREA_WZONE">
+    <Title>Robot outside work area.</Title>
+    <Description>The robot has reached the World Zone <arg format="%s" ordinal="1" />, <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check the reason of the World Zone. Use the joystick to move the robot out of the World Zone if needed.</Actions>
+  </Message>
+</Domain>

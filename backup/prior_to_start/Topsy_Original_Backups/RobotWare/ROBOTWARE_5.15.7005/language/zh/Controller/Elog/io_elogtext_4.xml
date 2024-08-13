@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="EIO" domainNo="7" lang="zh" elogTextVersion="1.0" min="1451" max="1535">
+  <Message number="1451" eDefine="SYS_EIO_EN_ETH_OPTION_NOT_INSTALLED">
+    <Title>未安装以太网额外端口选项</Title>
+    <Description>以太网/IP I/O 总线已配置为使用额外以太网端口，但未安装以太网额外选项。</Description>
+    <Consequences>无法在以太网/IP 上进行通信。如果未安装上述选项，配置以太网/IP 时可能发生继发性错误。</Consequences>
+    <Causes>可能已尝试在未正确安装选项的情况下添加以太网/IP 功能。</Causes>
+    <Actions>1. 如果需要以太网额外端口选项：使用该选项配置新系统，并安装此系统。<p />2. 如果不需要以太网额外端口选项：配置一个不包含此选项的新系统，并安装系统。</Actions>
+  </Message>
+  <Message number="1452" eDefine="SYS_EIO_EN_TOO_MANY_BUSES_CONFIGURED">
+    <Title>配置的以太网/IP I/O 总线过多</Title>
+    <Description>配置的以太网/IP I/O 总线过多。只能有一个以太网/IP 主控/从控 I/O 总线。</Description>
+    <Actions>1. 从配置删除以太网/IP 总线。<p />2. 重新启动系统。</Actions>
+  </Message>
+  <Message number="1453" eDefine="SYS_EIO_EN_IDENTITY_MISMATCH">
+    <Title>以太网/IP I/O 单元的标识错误</Title>
+    <Description>配置中的 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 的标识错误。<p /><p />正确的标识为：<p />供应商 ID &lt;<arg format="%d" ordinal="2" />&gt;<p />设备类型 &lt;<arg format="%d" ordinal="3" />&gt;<p />产品编号 &lt;<arg format="%d" ordinal="4" />&gt;</Description>
+    <Consequences>将不会与此 I/O 单元建立联络。</Consequences>
+    <Actions>使用上面的标识信息更正该 I/O 单元类型的配置。</Actions>
+  </Message>
+  <Message number="1454" eDefine="SYS_EIO_EN_NO_IP_ADDRESS_SPECIFIED">
+    <Title>
+      <arg format="%s" ordinal="1" /> 地址缺失。</Title>
+    <Description>未指定 <arg format="%s" ordinal="1" /> I/O 总线的 IP 地址。</Description>
+    <Consequences>无法在 <arg format="%s" ordinal="1" /> I/O 总线上进行通信。</Consequences>
+    <Actions>1. 在 I/O 总线配置中指定有效的 IP 地址。<p />2. 重新启动系统。</Actions>
+  </Message>
+  <Message number="1455" eDefine="SYS_EIO_EN_CNX_TYPE_INVALID">
+    <Title>未知的以太网/IP 连接类型</Title>
+    <Description>I/O 配置无效。<p />单元类型 &lt;<arg format="%s" ordinal="1" />&gt; 拥有无效/未知的连接类型 &lt;<arg format="%s" ordinal="2" />&gt;。<p /><p />连接类型必须为以下类型之一：<p />- MULTICAST<p />- POINT2POINT</Description>
+    <Consequences>此单元类型已被拒绝。</Consequences>
+    <Actions>纠正单元类型的连接类型。</Actions>
+  </Message>
+  <Message number="1456" eDefine="SYS_EIO_EN_HARDWARE_MISSING">
+    <Title>以太网/IP 硬件缺失</Title>
+    <Description>运行以太网/IP 所需的 DSQC 612 硬件缺失。</Description>
+    <Consequences>无法在以太网/IP 总线上进行通信。</Consequences>
+    <Causes>可能已尝试在未正确安装硬件的情况下在“第一个以太网端口”上添加以太网/IP 功能。<p />注意：如果要运行 MultiMove，需要两块 DSQC 612 电路板，否则只需要一块。</Causes>
+    <Actions>1. 在控制器中安装 DSQC 612 电路板。<p />2. 重新启动系统。</Actions>
+  </Message>
+  <Message number="1457" eDefine="SYS_EIO_EN_INVALID_GATEWAY">
+    <Title>EtherNet/IP 网关地址无效</Title>
+    <Description>网关地址不能与 IP 地址相同。<p /><p />或者网关地址不能与默认目标地址 &lt;0.0.0.0&gt; 相同。</Description>
+    <Consequences>将使用默认的 控制器网关地址 &lt;<arg format="%s" ordinal="1" />&gt;，而不是指定的网关地址 &lt;<arg format="%s" ordinal="2" />&gt;。</Consequences>
+    <Actions>1. 如果未使用物理网关，请勿在配置中指定任何网关地址。<p />2. 重新启动系统。</Actions>
+  </Message>
+  <Message number="1458" eDefine="SYS_EIO_EN_COULD_NOT_SET_GATEWAY">
+    <Title>无法更改默认网关地址</Title>
+    <Description>
+			如果在 Ethernet/IP 配置中未指定目标地址，默认控制器网关地址将被更改。目标地址未给定，指定的网关地址 &lt;<arg format="%s" ordinal="1" />&gt; 无效，无法使用。
+		</Description>
+    <Consequences>无法在 EtherNet/IP 总线上进行通信。</Consequences>
+    <Actions>
+			1. 在 EtherNet/IP I/O 总线配置中纠正网关。<p />2. 重新启动系统。
+		</Actions>
+  </Message>
+  <Message number="1459" eDefine="SYS_EIO_EN_ILLEGAL_BUS_ADDRESS">
+    <Title>非法 EtherNet/IP 地址</Title>
+    <Description>
+			EtherNet/IP 总线的地址 &lt;<arg format="%s" ordinal="1" />&gt; 是非法的。
+		</Description>
+    <Consequences>无法在 EtherNet/IP 总线上进行通信。</Consequences>
+    <Actions>
+			1. 在 EtherNet/IP 总线配置中纠正地址。<p />2. 重新启动系统。
+		</Actions>
+  </Message>
+  <Message number="1460" eDefine="SYS_EIO_EN_CAN_NOT_CONNECT_TO_UNIT">
+    <Title>无法连接到 EtherNet/IP I/O 单元</Title>
+    <Description> 所配置的地址为 &lt;<arg format="%s" ordinal="2" />&gt; 的 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 在 EtherNet/IP 总线上并不实际存在。 </Description>
+    <Consequences>无法访问该 I/O 单元或该 I/O 单元上的 I/O 信号，因为该单元当前未与控制器通信。如果 I/O 单元已经在配置中指定了“必需的单元信任级别 (0) / Unit Trust level Required (0) ”，系统将进入 SYS FAIL 状态。</Consequences>
+    <Causes> I/O 单元不实际存在。<p />I/O 单元地址错误。<p />I/O 单元故障。 </Causes>
+    <Actions> 1. 检查该 I/O 单元是否实际存在于 EtherNet/IP 总线上，或者地址是否正确。<p />2. 如果地址被更改，请重新启动系统。 </Actions>
+  </Message>
+  <Message number="1461" eDefine="SYS_EIO_EN_UNIT_ADDR_SAME_AS_MASTER">
+    <Title>EtherNet/IP 总线上有重复地址</Title>
+    <Description>
+			I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 和主 EtherNet/IP 在控制器中被配置为相同的地址。
+		</Description>
+    <Consequences>无法访问该 I/O 单元或该 I/O 单元上的 I/O 信号，因为该单元当前未与控制器通信。</Consequences>
+    <Actions>
+			1. 在配置中更改 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 的地址或主 EtherNet/IP 的地址。如果更改 I/O 单元的地址且其实际具有该地址，则还必须在 I/O 单元中进行更改。<p />2. 重新启动系统。
+		</Actions>
+  </Message>
+  <Message number="1462" eDefine="SYS_EIO_EN_ILLEGAL_BUS_SUBNET_MASK">
+    <Title>非法 EtherNet/IP 子网掩码</Title>
+    <Description>
+			EtherNet/IP 总线的子网掩码 &lt;<arg format="%s" ordinal="1" />&gt; 是非法的。
+		</Description>
+    <Consequences>无法在 EtherNet/IP 总线上进行通信。</Consequences>
+    <Actions>
+			1. 在 EtherNet/IP 总线配置中纠正子网掩码。<p />2. 重新启动系统。
+		</Actions>
+  </Message>
+  <Message number="1463" eDefine="SYS_EIO_EN_RESERVED_ADDRESS">
+    <Title>非法的 EtherNet/IP 总线地址</Title>
+    <Description>EtherNet/IP 地址 &lt;<arg format="%s" ordinal="1" />&gt; 为保留地址。</Description>
+    <Consequences>无法在 EtherNet/IP 总线上进行通信。</Consequences>
+    <Causes>指定地址位于另一 Ethernet 端口所保留的子网上。IRC5 控制器上的两个 Ethernet 端口不能位于同一子网上。<p /><p />示例：<p />EtherNet/IP 端口：192.168.125.x<p />服务端口：192.168.125.x<p /><p />注意：<p />介于 192.168.125.xxx - 192.168.130.xxx 范围的子网已预定义，无法使用。</Causes>
+    <Actions>1. 将地址改成另一子网。<p />2. 重新启动系统。</Actions>
+  </Message>
+  <Message number="1464" eDefine="SYS_EIO_EN_COULD_NOT_ADD_GATEWAY">
+    <Title>无法为 EtherNet/IP 添加新网关</Title>
+    <Description>无法为 EtherNet/IP 添加网关地址 &lt;<arg format="%s" ordinal="1" />&gt; 和目标地址 &lt;<arg format="%s" ordinal="2" />&gt;。</Description>
+    <Consequences>无法在 EtherNet/IP 总线上进行通信。</Consequences>
+    <Causes>1. 网关地址或目标地址无效。<p />2. 未指定任何目标地址。</Causes>
+    <Actions>1. 更正 EtherNet/IP 总线配置的网关地址或目标地址。<p />2. 重新启动系统。</Actions>
+  </Message>
+  <Message number="1465" eDefine="SYS_EIO_DNLE_ERROR_RSP">
+    <Title>DeviceNet Lean 错误响应</Title>
+    <Description>I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 报告了错误响应。<p /><p />通用错误代码为 <arg format="%ld" ordinal="2" />。<p />附加码为 <arg format="%ld" ordinal="3" /></Description>
+    <Actions>1. 在 DeviceNet Lean 应用手册或 DeviceNet 规范的附录 H 中了解有关通用错误代码的信息。<p />2. I/O 单元可能被另一个主控占用。<p />3. 断开并重新接通 I/O 单元的电源。</Actions>
+  </Message>
+  <Message number="1466" eDefine="SYS_EIO_PNET_CONFIG_FAILED">
+    <Title>Profinet 配置失败</Title>
+    <Description>DSQC 678 未接受配置文件 &lt;<arg format="%s" ordinal="1" />&gt;。<p /><p />返回错误代码 <arg format="%ld" ordinal="2" />。</Description>
+    <Consequences>在 DSQC 678 中不会存储任何新配置。</Consequences>
+    <Actions>确保所使用的文件类型是正确的。</Actions>
+  </Message>
+  <Message number="1467" eDefine="SYS_EIO_PNET_CONFIG_MISSING">
+    <Title>Profinet 配置文件缺失</Title>
+    <Description>未找到配置文件 &lt;<arg format="%s" ordinal="1" />&gt;。</Description>
+    <Consequences>在 DSQC 678 中不会存储任何新配置。</Consequences>
+    <Actions>1. 确保文件存在。<p />2. 确保配置文件放置在当前系统的 HOME 目录中。</Actions>
+  </Message>
+  <Message number="1468" eDefine="SYS_EIO_PNET_FIRMWARE_UPGRADE">
+    <Title>Profinet 板 DSQC 678 已升级</Title>
+    <Description>Profinet 板 DSQC 678 已被升级到版本为 &lt;<arg format="%s" ordinal="1" />&gt; 的新固件</Description>
+    <Consequences>新固件可能影响某些配置参数或其他通信行为。</Consequences>
+    <Actions>1. 确保不会为了连接控制器而需要更改任何配置。<p />2. 确保 DSQC 678 中当前的第 7 步配置兼容新固件。</Actions>
+  </Message>
+  <Message number="1469" eDefine="SYS_EIO_INTERNAL_SIG_TABLE_ERR">
+    <Title>超过最大的内部 I/O 信号数量</Title>
+    <Description>I/O 配置无效。<p />超过 I/O 系统中最大的内部 I/O 信号数量 <arg format="%d" ordinal="1" />。</Description>
+    <Actions>修改 I/O 系统的配置（减少在其他选项配置中指定的 I/O 信号数量），以使其不超过最大限值。 </Actions>
+  </Message>
+  <Message number="1470" eDefine="SYS_EIO_DNLE_CONFIG_ERR_ID">
+    <Title>错误的单元类型</Title>
+    <Description>连接到 DeviceNet Lean 总线的 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 与配置的类型不同。<p />报告的供应商 ID 是 <arg format="%d" ordinal="2" />，预期的是 <arg format="%d" ordinal="3" />。</Description>
+    <Consequences>无法与 I/O 单元通信。</Consequences>
+    <Actions>更改 I/O 单元配置。</Actions>
+  </Message>
+  <Message number="1471" eDefine="SYS_EIO_DNLE_MASTER_UNIT_ADDRESS_ERR">
+    <Title>DeviceNet Lean 总线上的重复地址</Title>
+    <Description>为 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 和 DeviceNet Lean 主站配置了相同的地址。</Description>
+    <Consequences>I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 被拒绝。 </Consequences>
+    <Actions>1. 更改 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 或 DeviceNet Lean 主站的地址。<p /></Actions>
+  </Message>
+  <Message number="1473" eDefine="SYS_EIO_DNLE_BUS_SCAN">
+    <Title>DeviceNet Lean 总线扫描结果 </Title>
+    <Description>地址：产品：供应商 ID：产品代码：<p /><p /><arg format="%s" ordinal="1" /></Description>
+  </Message>
+  <Message number="1474" eDefine="SYS_EIO_CMD_GET_DISPLAY">
+    <Title>总线命令响应消息</Title>
+    <Description>收到了来自 I/O 单元 &lt;<arg format="%s" ordinal="2" />&gt; 的“获得数据响应”消息 &lt;<arg format="%s" ordinal="1" />&gt;。<p /><p />原始数据形式的响应消息:<p /><arg format="%s" ordinal="4" /><p /><p />字符串形式的响应消息:<p /><arg format="%s" ordinal="3" /></Description>
+  </Message>
+  <Message number="1475" eDefine="SYS_EIO_FCI_ERROR_DISPLAY">
+    <Title>总线命令错误响应</Title>
+    <Description>发送给 I/O 单元 &lt;<arg format="%s" ordinal="2" />&gt; 的总线命令 &lt;<arg format="%s" ordinal="1" />&gt; 返回了错误响应。<p />错误代码: &lt;<arg format="%s" ordinal="3" />&gt;</Description>
+    <Consequences>I/O 单元未接受该总线命令。</Consequences>
+    <Actions>在 DeviceNet Lean 应用手册或 DeviceNet 规范的附录 H 中了解有关通用错误代码的信息。</Actions>
+  </Message>
+  <Message number="1476" eDefine="SYS_EIO_DN_NO_FWFILE_FOUND">
+    <Title>未找到 DeviceNet 固件文件</Title>
+    <Description>未找到或无法读取 DeviceNet &lt;<arg format="%s" ordinal="1" />&gt; 固件文件。<p />电路板固件可能已过时。</Description>
+    <Actions>重新安装系统<p /></Actions>
+  </Message>
+  <Message number="1477" eDefine="SYS_EIO_EN_INVALID_CONNECTION_SIZE">
+    <Title>以太网/IP I/O 单元的连接大小无效</Title>
+    <Description>I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 配置了无效的输入和/或输出大小。</Description>
+    <Consequences>无法与 I/O 单元通信。</Consequences>
+    <Actions>在单元类型配置中更正 I/O 单元的大小。</Actions>
+  </Message>
+  <Message number="1478" eDefine="SYS_EIO_EN_INVALID_INPUT_OUTPUT_ASSEMBLY">
+    <Title>以太网/IP I/O 单元的输入或输出组件无效</Title>
+    <Description>I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 包含无效的输入和/或输出组件。</Description>
+    <Consequences>无法与 I/O 单元通信。</Consequences>
+    <Actions>在单元类型配置中更正 I/O 单元的输入/输出组件。</Actions>
+  </Message>
+  <Message number="1479" eDefine="SYS_EIO_EN_INVALID_CONFIGURATION_ASSEMBLY">
+    <Title>以太网/IP I/O 单元的配置组件无效</Title>
+    <Description>I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 包含无效的配置组件。</Description>
+    <Consequences>无法与 I/O 单元通信。</Consequences>
+    <Actions>在单元类型配置中更正 I/O 单元的配置组件。</Actions>
+  </Message>
+  <Message number="1480" eDefine="SYS_EIO_EN_OWNERSHIP_CONFLICT">
+    <Title>I/O 单元被另一主控占用。</Title>
+    <Description>无法连接到 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt;，因为该单元已经建立了活动连接。</Description>
+    <Consequences>在 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 被另一主控占用期间，无法与该 I/O 单元通信。 </Consequences>
+    <Actions>释放从另一主控到 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 的连接，或更改地址。</Actions>
+  </Message>
+  <Message number="1481" eDefine="SYS_EIO_PNSW_NO_CFG_PATH_FOUND">
+    <Title>Profinet 配置文件错误</Title>
+    <Description>无法找到或打开 Profinet 配置文件 &lt;<arg format="%s" ordinal="1" />&gt;。</Description>
+    <Consequences>要使用 &lt;<arg format="%s" ordinal="2" />&gt; I/O 总线上定义的 I/O 单元，需要该配置文件。</Consequences>
+    <Actions>1. 确保文件存在。<p />2. 如果使用无路径的文件名，请确保配置文件放置在当前系统的 HOME 目录中。</Actions>
+  </Message>
+  <Message number="1482" eDefine="SYS_EIO_PNSW_CFG_CHANGED_ON_BUS">
+    <Title>Profinet 总线配置已更改</Title>
+    <Description>I/O 总线 &lt;<arg format="%s" ordinal="4" />&gt; 上的系统参数已被外部配置工具或连接主控更改。<p />下列值已更改：<p /><p />IP 地址：&lt;<arg format="%s" ordinal="1" />&gt;<p />子网掩码：&lt;<arg format="%s" ordinal="2" />&gt;<p />网关地址： &lt;<arg format="%s" ordinal="3" />&gt;</Description>
+    <Consequences>执行控制器热启动之前，更改的参数值无效。</Consequences>
+    <Actions>执行热启动。</Actions>
+  </Message>
+  <Message number="1483" eDefine="SYS_EIO_PNSW_LED_FLASH">
+    <Title>收到 Profinet 识别请求</Title>
+    <Description>收到外部配置工具的 Profinet 识别请求。<p /><p />&lt;<arg format="%s" ordinal="2" />&gt; I/O 总线上的 MAC 地址为 &lt;<arg format="%s" ordinal="1" />&gt;。</Description>
+  </Message>
+  <Message number="1484" eDefine="SYS_EIO_PNSW_HARDWARE_MISSING">
+    <Title>缺少 Profinet 硬件</Title>
+    <Description>缺少在选定的连接器 ID 上运行 &lt;<arg format="%s" ordinal="1" />&gt; I/O 总线所需的 DSQC 612 电路板。</Description>
+    <Consequences>无法在 &lt;<arg format="%s" ordinal="1" />&gt; I/O 总线上进行通信。<p /></Consequences>
+    <Actions>在控制器中安装 DSQC 612 电路板或换用 LAN 连接器 ID。</Actions>
+  </Message>
+  <Message number="1485" eDefine="SYS_EIO_PNSW_ILLEGAL_BUS_SUBNET_MASK">
+    <Title>子网掩码非法</Title>
+    <Description>&lt;<arg format="%s" ordinal="2" />&gt; I/O 总线的子网掩码 &lt;<arg format="%s" ordinal="1" />&gt; 是非法的。允许的子网掩码范围是 &lt;255.255.255.xxx&gt;。</Description>
+    <Consequences>&lt;<arg format="%s" ordinal="2" />&gt; I/O 总线上的子网掩码未更改。</Consequences>
+    <Actions>1. 更正 &lt;<arg format="%s" ordinal="2" />&gt; I/O 总线的子网掩码。</Actions>
+  </Message>
+  <Message number="1486" eDefine="SYS_EIO_PNSW_ILLEGAL_BUS_ADDRESS">
+    <Title>&lt;<arg format="%s" ordinal="2" />&gt; I/O 总线的地址非法</Title>
+    <Description>&lt;<arg format="%s" ordinal="2" />&gt; I/O 总线的 IP 地址 &lt;<arg format="%s" ordinal="1" />&gt; 是非法的。</Description>
+    <Consequences>无法使用 &lt;<arg format="%s" ordinal="2" />&gt; I/O 总线。</Consequences>
+    <Actions>更正 &lt;<arg format="%s" ordinal="2" />&gt; I/O 总线的地址。</Actions>
+  </Message>
+  <Message number="1487" eDefine="SYS_EIO_PNSW_RESERVED_ADDRESS">
+    <Title>&lt;<arg format="%s" ordinal="2" />&gt; I/O 总线的 IP 地址非法</Title>
+    <Description>&lt;<arg format="%s" ordinal="2" />&gt; I/O 总线的地址 &lt;<arg format="%s" ordinal="1" />&gt; 是保留地址。</Description>
+    <Consequences>无法在 &lt;<arg format="%s" ordinal="2" />&gt; I/O 总线上进行通信。</Consequences>
+    <Causes>指定地址位于另一 Ethernet 端口所保留的子网上。控制器上的两个 Ethernet 端口不能位于同一子网。<p /><p />例如：<p />&lt;<arg format="%s" ordinal="2" />&gt;端口：192.168.125.xxx<p />服务端口：192.168.125.xxx<p /><p />注意：<p />介于 192.168.125.xxx - 192.168.130.xxx 范围内的子网是预定义的，无法使用。</Causes>
+    <Actions>将地址改成另一子网。</Actions>
+  </Message>
+  <Message number="1488" eDefine="SYS_EIO_PNSW_COULD_NOT_SET_GATEWAY">
+    <Title>&lt;<arg format="%s" ordinal="3" />&gt; I/O 总线的网关地址非法</Title>
+    <Description>指定的网关地址 &lt;<arg format="%s" ordinal="2" />&gt; 无效，不能使用。</Description>
+    <Consequences>网关地址未更改。</Consequences>
+    <Causes>指定的网关地址可能不在 &lt;<arg format="%s" ordinal="3" />&gt; I/O 总线子网掩码 &lt;<arg format="%s" ordinal="1" />&gt; 的范围之内。</Causes>
+    <Actions>在 &lt;<arg format="%s" ordinal="3" />&gt; I/O 总线配置中更正网关地址。</Actions>
+  </Message>
+  <Message number="1489" eDefine="SYS_EIO_PNSW_CONFIG_MISSMATCH">
+    <Title>Profinet 内部从控配置警告 </Title>
+    <Description>Profinet 主控已经与 Profinet 内部从控在 &lt;<arg format="%s" ordinal="3" />&gt; I/O 总线上建立了连接。Profinet 连接主控和 Profinet 内部从控的槽位配置不同。<p />Profinet 内部从控当前配置了以下模块：<p /><p />槽位 1：DI <arg format="%ld" ordinal="1" /> 字节<p />槽位 2：DO <arg format="%ld" ordinal="2" /> 字节<p /></Description>
+    <Consequences>并非所有 I/O 信号都可以使用。</Consequences>
+    <Actions>1. 重新配置 Profinet 连接主控以匹配 Profinet 内部从控。<p />2. 在机器人控制器中重新配置 Profinet 内部从控以匹配 Profinet 连接主控。</Actions>
+  </Message>
+  <Message number="1490" eDefine="SYS_EIO_PNSW_NO_CFG_UNIT_FOUND">
+    <Title>Profinet I/O 单元配置警告</Title>
+    <Description>&lt;<arg format="%s" ordinal="3" />&gt; I/O 总线上的 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 已在 Profinet 配置文件 &lt;<arg format="%s" ordinal="2" />&gt; 中配置，但未在系统参数中配置。</Description>
+    <Actions>将 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 添加到系统参数，或将 I/O 单元从 Profinet 配置文件中删除。</Actions>
+  </Message>
+  <Message number="1491" eDefine="SYS_EIO_PNSW_NO_STACK_CONFIG_FOR_UNIT">
+    <Title>缺少 Profinet I/O 单元配置</Title>
+    <Description>&lt;<arg format="%s" ordinal="3" />&gt; I/O 总线上的 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 已在系统参数中配置，但未在 Profinet 配置文件 &lt;<arg format="%s" ordinal="2" />&gt; 中配置。</Description>
+    <Consequences>无法与 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 通信。</Consequences>
+    <Actions>将 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 添加到 Profinet 配置文件，或将 I/O 单元从系统参数中删除。</Actions>
+  </Message>
+  <Message number="1492" eDefine="SYS_EIO_PNSW_UNIT_ALARM_WARNING">
+    <Title>Profinet I/O 单元报警</Title>
+    <Description>I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 报告了槽位 &lt;<arg format="%ld" ordinal="2" />&gt; 的警报：<p /><p /><arg format="%s" ordinal="3" /></Description>
+  </Message>
+  <Message number="1493" eDefine="SYS_EIO_PNSW_NEW_UNIT_ADDED_IN_CFG">
+    <Title>已自动配置 Profinet I/O 单元</Title>
+    <Description>在 Profinet 配置文件中找到了一个新的 I/O 单元。此 I/O 单元已经在控制器中自动配置了如下参数：<p /><p />单元名称：<arg format="%s" ordinal="1" /><p />输入字节：<arg format="%d" ordinal="2" /><p />输出字节： <arg format="%s" ordinal="3" /></Description>
+    <Actions>1. 编辑或删除配置。<p />2. 重新启动控制器以激活该 I/O 单元的配置。</Actions>
+  </Message>
+  <Message number="1494" eDefine="SYS_EIO_PNSW_OPTION_ERR">
+    <Title>Profinet 选项键缺失</Title>
+    <Description>未检测到在控制器上运行 &lt;<arg format="%s" ordinal="1" />&gt; I/O 总线所需的选项键。</Description>
+    <Consequences>无法在 &lt;<arg format="%s" ordinal="1" />&gt; I/O 总线上进行通信。</Consequences>
+    <Causes>可能尝试过在未正确安装选项的情况下添加 Profinet 功能。</Causes>
+    <Actions>1. 配置一个带有 Profinet SW 选项的新系统并安装该系统。<p />2. 如果不需要 Profinet SW，则配置一个不带此选项的新系统，然后安装该系统。</Actions>
+  </Message>
+  <Message number="1495" eDefine="SYS_EIO_PNSW_ONLY_SLAVE_OPTION_ERROR">
+    <Title>Profinet 主控选项键缺失</Title>
+    <Description>未检测到在控制器上作为 Profinet 主控运行 &lt;<arg format="%s" ordinal="2" />&gt; I/O 总线所需的选项键。I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 未定义为 Profinet 内部从控。</Description>
+    <Consequences>无法与 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 通信。</Consequences>
+    <Causes>已安装的 &lt;<arg format="%s" ordinal="2" />&gt; I/O 总线选项键仅支持一个 Profinet 内部从控 I/O 单元。</Causes>
+    <Actions>配置一个带有 Profinet SW 主控/从控选项的新系统，或将 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 从系统参数中删除。</Actions>
+  </Message>
+  <Message number="1496" eDefine="SYS_EIO_UNT_REQUIRED_CONTACT_LOST">
+    <Title>与所需单元的通信中断</Title>
+    <Description>先前与 I/O 总线 <arg format="%s" ordinal="2" /> 上地址为 <arg format="%s" ordinal="3" /> 的 I/O 单元 <arg format="%s" ordinal="1" /> 的工作通信已经中断。</Description>
+    <Consequences>I/O 单元已经在配置中指定了“必需的单元信任级别 (0)”。系统将转到“系统故障”状态。</Consequences>
+    <Causes>I/O 单元可能已经断开与系统的连接。</Causes>
+    <Actions>1. 确保总线电缆连接到控制器。<p />2. 确保 I/O 单元供电正常。<p />3. 确保至 I/O 单元的接线正确连接。</Actions>
+  </Message>
+  <Message number="1497" eDefine="SYS_EIO_UNT_REQUIRED_NO_CONTACT">
+    <Title>与 I/O 单元之间没有通信</Title>
+    <Description>在启动过程中，未与 I/O 总线 <arg format="%s" ordinal="2" /> 上地址为 <arg format="%s" ordinal="3" /> 的 I/O 单元 <arg format="%s" ordinal="1" /> 建立通信。</Description>
+    <Consequences>I/O 单元已经在配置中指定了“必需的单元信任级别 (0)”。系统将转到“系统故障”状态。</Consequences>
+    <Causes>I/O 单元未连接至系统，或已连接，但分配了错误的地址。</Causes>
+    <Actions>1. 确保所有 I/O 单元地址都与配置一致。<p />2. 确保所有地址都是唯一的，且未被多个 I/O 单元使用。<p />3. 更改地址和/或连接缺失的 I/O 单元。<p />4. 如果更改地址，I/O 单元的电源必须重新接通（“关闭”，然后“开启”），以确保地址已更改。<p />5. 确保现场总线工作正常。 <p /></Actions>
+  </Message>
+  <Message number="1498" eDefine="SYS_EIO_PNSW_CFG_NAME_CHANGED_ON_BUS">
+    <Title>Profinet 总线配置已更改</Title>
+    <Description>I/O 总线 &lt;<arg format="%s" ordinal="2" />&gt; 上的总线类型系统参数已被外部配置工具或连接主控更改。<p />下列值已更改：<p /><p />工作站名称： &lt;<arg format="%s" ordinal="1" />&gt;</Description>
+    <Consequences>执行控制器热启动之前，更改的参数值无效。</Consequences>
+    <Actions>执行热启动。</Actions>
+  </Message>
+  <Message number="1499" eDefine="SYS_EIO_CRS_SIGNAL_UNITMAP_OVERLAP">
+    <Title>交叉连接中的 I/O 信号包含迭加的单元映射</Title>
+    <Description>合成 I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 包含与倒置的 actor I/O 信号 &lt;<arg format="%s" ordinal="2" />&gt; 迭加的单元映射。</Description>
+    <Consequences>在交叉连接中使用带有迭加单元映射的 I/O 信号可能造成信号设置死循环。</Consequences>
+    <Actions>更正单元映射或将其中一个 I/O 信号定义为虚拟信号。</Actions>
+  </Message>
+  <Message number="1500" eDefine="SYS_EIO_EN_GEN_UCMM_RSP_CON_FAILURE_ERROR">
+    <Title>EtherNet/IP 连接失败</Title>
+    <Description>
+无法连接到 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt;。<p /><p /><arg format="%s" ordinal="2" /></Description>
+    <Consequences>无法与 I/O 单元通信。</Consequences>
+  </Message>
+  <Message number="1501" eDefine="SYS_EIO_PNSW_CONFIG_FILE_ERROR">
+    <Title>Profinet 配置文件错误</Title>
+    <Description>Profinet 配置文件 &lt;<arg format="%s" ordinal="1" />&gt; 无效。内部错误代码 &lt;<arg format="%ld" ordinal="2" />&gt;。</Description>
+    <Consequences>无法在 &lt;<arg format="%s" ordinal="3" />&gt; I/O 总线上进行通信。</Consequences>
+    <Causes>Profinet 配置文件可能损坏，或创建时使用了不兼容的文件格式。</Causes>
+    <Actions>生成新的 Profinet 配置文件。</Actions>
+  </Message>
+  <Message number="1502" eDefine="SYS_EIO_PNSW_CONFIG_MISMATCH_MASTER">
+    <Title>Profinet 配置不匹配</Title>
+    <Description>I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 报告了一个与 Profinet 配置文件 &lt;<arg format="%s" ordinal="2" />&gt; 中的此 I/O 单元的配置不相同的槽位配置。<p /><p />报告的第一槽位不匹配位于槽位 &lt;<arg format="%ld" ordinal="3" />&gt;<p />发现了 &lt;<arg format="%ld" ordinal="4" />&gt; 槽位不匹配。</Description>
+    <Consequences>某些 I/O 信号可能无法使用。</Consequences>
+    <Causes>槽位 &lt;<arg format="%ld" ordinal="3" />&gt; 中使用的模块类型可能错误，或其版本与 I/O 单元上的实际硬件的不同。</Causes>
+    <Actions>1. 更新 Profinet 配置文件 &lt;<arg format="%s" ordinal="2" />&gt;<p />2. 检查 I/O 单元硬件。</Actions>
+  </Message>
+  <Message number="1503" eDefine="SYS_EIO_PNSW_STATION_NAME_ERROR">
+    <Title>Profinet 工作站名称错误</Title>
+    <Description>&lt;<arg format="%s" ordinal="2" />&gt; I/O 总线上的 I/O 总线系统参数 &lt;Station Name&gt; 包含一个或多个非法字符。不允许使用位于 &lt;<arg format="%ld" ordinal="1" />&gt; 位置的字符。</Description>
+    <Consequences>&lt;<arg format="%s" ordinal="2" />&gt; I/O 总线无法使用。</Consequences>
+    <Actions>将 &lt;Station Name&gt; 系统参数更改为允许的字符串。</Actions>
+  </Message>
+  <Message number="1504" eDefine="SYS_EIO_FTP_FILE_TOO_LARGE">
+    <Title>文件大小超出最大文件大小</Title>
+    <Description>无法将文件数据复制到控制器。文件 <arg format="%s" ordinal="1" /> 太大。<p />文件大小:<arg format="%d" ordinal="2" /><p />最大文件大小: <arg format="%d" ordinal="3" /></Description>
+    <Causes>文件大小大于允许的文件大小。</Causes>
+    <Actions>检查 FTP 客户端配置，并增加系统参数 MaxFileSize 以便能够将文件传输到控制器。</Actions>
+  </Message>
+  <Message number="1505" eDefine="SYS_EIO_FCI_PATH_ERROR_MISSING_COMMA">
+    <Title>总线命令语法错误</Title>
+    <Description>无法将总线命令发送到 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt;，因为命令路径字符串中存在语法错误。<p /><p />总线命令类型名称 &lt;<arg format="%s" ordinal="2" />&gt;。<p />语法错误:缺少逗号。</Description>
+    <Consequences>总线命令未发送。</Consequences>
+    <Actions>更正总线命令路径字符串。</Actions>
+  </Message>
+  <Message number="1506" eDefine="SYS_EIO_FCI_PATH_ERROR_BAD_PATH_SIZE">
+    <Title>总线命令语法错误</Title>
+    <Description>无法将总线命令发送到 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt;，因为命令路径字符串中存在语法错误。<p /><p />总线命令类型名称 &lt;<arg format="%s" ordinal="2" />&gt;。<p />语法错误:指定的路径大小不正确。</Description>
+    <Consequences>总线命令未发送。</Consequences>
+    <Actions>更正总线命令路径字符串。</Actions>
+  </Message>
+  <Message number="1507" eDefine="SYS_EIO_FCI_PATH_ERROR_INCORRECT_PATH_SIZE">
+    <Title>总线命令语法错误</Title>
+    <Description>无法将总线命令发送到 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt;，因为命令路径字符串中存在语法错误。<p /><p />总线命令类型名称 &lt;<arg format="%s" ordinal="2" />&gt;。<p />语法错误:路径大小不正确。</Description>
+    <Consequences>总线命令未发送。</Consequences>
+    <Actions>更正总线命令路径字符串。</Actions>
+  </Message>
+  <Message number="1508" eDefine="SYS_EIO_FCI_PATH_ERROR_BAD_DATA_TYPE">
+    <Title>总线命令语法错误</Title>
+    <Description>无法将总线命令发送到 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt;，因为命令路径字符串中存在语法错误。<p /><p />总线命令类型名称 &lt;<arg format="%s" ordinal="2" />&gt;。<p />语法错误:数据类型不正确。</Description>
+    <Consequences>总线命令未发送。</Consequences>
+    <Actions>更正总线命令路径字符串。</Actions>
+  </Message>
+  <Message number="1509" eDefine="SYS_EIO_FCI_PATH_ERROR_MISSING_SPACE">
+    <Title>总线命令语法错误</Title>
+    <Description>无法将总线命令发送到 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt;，因为命令路径字符串中存在语法错误。<p /><p />总线命令类型名称 &lt;<arg format="%s" ordinal="2" />&gt;。<p />语法错误:缺少空格。</Description>
+    <Consequences>总线命令未发送。</Consequences>
+    <Actions>更正总线命令路径字符串。</Actions>
+  </Message>
+  <Message number="1510" eDefine="SYS_EIO_FCI_PATH_ERROR_INCORRECT_BYTE_SIZE">
+    <Title>总线命令语法错误</Title>
+    <Description>无法将总线命令发送到 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt;，因为命令路径字符串中存在语法错误。<p /><p />Fieldbus 命令类型名称 &lt;<arg format="%s" ordinal="2" />&gt;。<p />语法错误:字节大小不正确。</Description>
+    <Consequences>总线命令未发送。</Consequences>
+    <Actions>更正总线命令路径字符串。</Actions>
+  </Message>
+  <Message number="1511" eDefine="SYS_EIO_FCI_PATH_ERROR_INCORRECT_DATA_SIZE">
+    <Title>总线命令语法错误</Title>
+    <Description>无法将总线命令发送到 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt;，因为命令路径字符串中存在语法错误。<p /><p />总线命令类型名称 &lt;<arg format="%s" ordinal="2" />&gt;。<p />语法错误:数据大小不正确。</Description>
+    <Consequences>总线命令未发送。</Consequences>
+    <Actions>更正总线命令路径字符串。</Actions>
+  </Message>
+  <Message number="1512" eDefine="SYS_EIO_FCI_SERVICE_INVALID">
+    <Title>总线命令中的服务标识符无效</Title>
+    <Description>因为服务标识符 &lt;<arg format="%ld" ordinal="2" />&gt; 无效，无法将总线命令发送到 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt;。<p />有效的服务标识符为:<p />&lt;<arg format="%s" ordinal="3" />&gt;<p /></Description>
+    <Actions>更正服务标识符。</Actions>
+  </Message>
+  <Message number="1513" eDefine="SYS_EIO_FCI_RESPONSE_TIMEOUT">
+    <Title>总线命令响应超时</Title>
+    <Description>在将总线命令 &lt;<arg format="%s" ordinal="1" />&gt; 发送到 I/O 单元 &lt;<arg format="%s" ordinal="2" />&gt; 时发生超时</Description>
+    <Consequences>总线命令未发送。</Consequences>
+    <Actions>1. 检查总线命令语法。<p />2. 确保总线电缆连接到控制器。<p />2. 确保 I/O 单元供电正常。<p />3. 确保至 I/O 单元的接线正确连接。</Actions>
+  </Message>
+  <Message number="1514" eDefine="SYS_EIO_FCI_NO_ACTIVE_CONNECTION">
+    <Title>总线命令连接错误</Title>
+    <Description>因为不存在活动连接，无法将总线命令 &lt;<arg format="%s" ordinal="1" />&gt; 发送到 I/O 单元 &lt;<arg format="%s" ordinal="2" />&gt;。</Description>
+    <Consequences>总线命令未发送。</Consequences>
+    <Actions>1. 检查总线命令语法。<p />2. 确保总线电缆连接到控制器。<p />2. 确保 I/O 单元供电正常。<p />3. 确保至 I/O 单元的接线正确连接。</Actions>
+  </Message>
+  <Message number="1515" eDefine="SYS_EIO_FCI_SEND_ERROR">
+    <Title>Fieldbus 命令发送错误</Title>
+    <Description>无法将 fieldbus 命令 &lt;<arg format="%s" ordinal="1" />&gt; 发送到 I/O 单元 &lt;<arg format="%s" ordinal="2" />&gt;。<p /><p /><arg format="%s" ordinal="3" /></Description>
+    <Consequences>fieldbus 命令未发送。</Consequences>
+    <Actions>1. 检查 fieldbus 命令语法。<p />2. 确保总线电缆连接到控制器。<p />2. 确保 I/O 单元供电正常。<p />3. 确保至 I/O 单元的接线正确连接。</Actions>
+  </Message>
+  <Message number="1516" eDefine="SYS_EIO_EN_NO_QUICK_CONNECT_SUPPORT">
+    <Title>EtherNet/IP I/O 单元不支持“快速连接”</Title>
+    <Description>I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 不支持“快速连接”。</Description>
+    <Actions>1. 在 I/O 配置中将此 I/O 单元的单元类型参数“快速连接”设置为“不使用”。<p />2. 重新启动系统。</Actions>
+  </Message>
+  <Message number="1517" eDefine="SYS_EIO_EN_ATTR_CHANGED">
+    <Title>EtherNet/IP I/O 单元的一个属性发生了更改</Title>
+    <Description>I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 的属性 <arg format="%s" ordinal="2" /> 已更改为 "<arg format="%s" ordinal="3" />"。</Description>
+  </Message>
+  <Message number="1518" eDefine="SYS_EIO_PNET_CONFIG_MISMATCH_MASTER">
+    <Title>Profinet 配置不匹配</Title>
+    <Description>I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 所报告的槽位配置与为此 I/O 单元加载的配置不同。<p /><p />报告的第一个槽位不匹配位于槽位 &lt;<arg format="%ld" ordinal="2" />&gt;<p />&lt;<arg format="%ld" ordinal="3" />&gt; 槽位不匹配。</Description>
+    <Consequences>某些 I/O 信号可能无法使用。</Consequences>
+    <Causes>槽位 &lt;<arg format="%ld" ordinal="2" />&gt; 中使用的模块类型可能错误，或其版本与 I/O 单元上的实际硬件的不同。</Causes>
+    <Actions>1. 更新 Profinet 配置<p />2. 检查 I/O 单元硬件。</Actions>
+  </Message>
+  <Message number="1519" eDefine="SYS_EIO_PNSW_TOO_MANY_BUSES_CONFIGURED">
+    <Title>配置的 Profinet 主/从 SW 总线太多</Title>
+    <Description>配置的 Profinet 主/从 SW I/O 总线太多。Profinet 主/从 SW 只能有一个 I/O 总线。</Description>
+    <Actions>1. 保留配置中的一个 Profinet 主/从 SW 总线并删除其他所有总线。<p />2. 重新启动系统。</Actions>
+  </Message>
+  <Message number="1520" eDefine="SYS_EIO_PNET_IOPS_BAD">
+    <Title>输入数据无效</Title>
+    <Description>单元 &lt;<arg format="%s" ordinal="1" />&gt; 指示来自槽位 &lt;<arg format="%d" ordinal="2" />&gt; 的输入数据无效。</Description>
+    <Consequences>输入数据已被丢弃。</Consequences>
+    <Causes>单元存在内部错误。</Causes>
+  </Message>
+  <Message number="1521" eDefine="SYS_EIO_PNET_IOCS_BAD">
+    <Title>输出数据未处理</Title>
+    <Description>单元 &lt;<arg format="%s" ordinal="1" />&gt; 指示无法处理槽位 &lt;<arg format="%d" ordinal="2" />&gt; 的输出数据。</Description>
+    <Consequences>单元已丢弃输出数据。</Consequences>
+    <Causes>单元存在内部错误。</Causes>
+  </Message>
+  <Message number="1522" eDefine="SYS_EIO_EN_ETH_PORT_OCCUPIED">
+    <Title>Ethernet 端口被其他客户端占用</Title>
+    <Description>为 EtherNet/IP 总线指定的 Ethernet 端口被另一客户端占用。 </Description>
+    <Consequences>无法在 EtherNet/IP 总线上进行通信。</Consequences>
+    <Causes>MultiMove 系统已安装并占用指定 Ethernet 端口。</Causes>
+    <Actions>更改 EtherNet/IP 总线的连接器 ID 以选择另一 Ethernet 端口。</Actions>
+  </Message>
+  <Message number="1524" eDefine="SYS_EIO_PNET_ALARM_UNKNOWN">
+    <Title>Profinet I/O 单元未知报警</Title>
+    <Description>I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 报告了槽位 &lt;<arg format="%ld" ordinal="2" />&gt; 的一个未知报警。<p />阅读 I/O 单元的具体文件了解报警代码的更详细解释。<p /><p />报警代码： <arg format="%s" ordinal="3" /></Description>
+  </Message>
+  <Message number="1525" eDefine="SYS_EIO_PNSW_UNIT_ALARM_DIAG">
+    <Title>Profinet I/O 单元诊断</Title>
+    <Description>I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 报告了槽位 &lt;<arg format="%ld" ordinal="2" />&gt; 的诊断数据。<p />阅读 I/O 单元的具体文件了解诊断数据的更详细解释。<p /><p /><arg format="%s" ordinal="3" /></Description>
+  </Message>
+  <Message number="1526" eDefine="SYS_EIO_PNSW_UNIT_ALARM_UNKNOWN">
+    <Title>Profinet I/O 单元未知报警</Title>
+    <Description>I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 报告了槽位 &lt;<arg format="%ld" ordinal="2" />&gt; 的一个未知报警。<p />阅读 I/O 单元的具体文件了解报警代码的更详细解释。<p /><p />报警代码： <arg format="%s" ordinal="3" /></Description>
+  </Message>
+  <Message number="1527" eDefine="SYS_EIO_EN_DEVICE_STATE_CONFLICT">
+    <Title>EtherNet/IP 设备状态冲突</Title>
+    <Description>I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 的当前状态阻止通信的建立或特定服务的执行。这是供应商文件中给出的设备特定行为。 </Description>
+    <Consequences>在 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 处于该状态期间，无法与该 I/O 单元通信。 </Consequences>
+    <Actions>1. 核实 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 的当前状态。<p />2. 如果状态为出错，检查 I/O 单元的 I/O 配置或硬件设置，并参阅供应商提供的文件。如果状态为运行，I/O 单元在尝试通信期间先为临时占用，但现已恢复，无需采取进一步行动。</Actions>
+  </Message>
+  <Message number="1528" eDefine="SYS_EIO_EN_GENERAL_UCMM_RESPONSE_ERROR">
+    <Title>EtherNet/IP 请求失败</Title>
+    <Description> 无法执行对 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 的请求 <arg format="%s" ordinal="3" />。<p /><p /><arg format="%s" ordinal="2" /></Description>
+    <Consequences>请求未执行。</Consequences>
+  </Message>
+  <Message number="1533" eDefine="SYS_EIO_EN_INVALID_CONFIGURATION_SIZE">
+    <Title>Invalid configuration size for EtherNet/IP I/O unit</Title>
+    <Description> The I/O unit &lt;<arg format="%s" ordinal="1" />&gt; has an invalid configuration size. Maximum configuration size supported are &lt;<arg format="%s" ordinal="2" />&gt; bytes.</Description>
+    <Consequences>No communication with the I/O unit is possible.</Consequences>
+    <Actions>Correct the configuration size for the I/O unit in the unit type configuration.</Actions>
+  </Message>
+  <Message number="1534" eDefine="SYS_EIO_EN_INVALID_OUTPUT_SIZE">
+    <Title>Invalid output size for EtherNet/IP I/O unit</Title>
+    <Description>The I/O unit &lt;<arg format="%s" ordinal="1" />&gt; has an invalid output size. Maximum output size supported are &lt;<arg format="%s" ordinal="2" />&gt; bytes.</Description>
+    <Consequences>No communication with the I/O unit is possible.</Consequences>
+    <Actions>Correct the output size for the I/O unit in the unit type configuration.</Actions>
+  </Message>
+  <Message number="1535" eDefine="SYS_EIO_EN_INVALID_INPUT_SIZE">
+    <Title>Invalid input size for EtherNet/IP I/O unit</Title>
+    <Description>The I/O unit &lt;<arg format="%s" ordinal="1" />&gt; has an invalid input size. Maximum input size supported are &lt;<arg format="%s" ordinal="2" />&gt; bytes.</Description>
+    <Consequences>No communication with the I/O unit is possible.</Consequences>
+    <Actions>Correct the input size for the I/O unit in the unit type configuration.</Actions>
+  </Message>
+</Domain>

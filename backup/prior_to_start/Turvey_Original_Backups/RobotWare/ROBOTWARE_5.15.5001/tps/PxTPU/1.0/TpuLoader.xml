@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TpuLoader FullScreen="true">
+	<!-- VNC Server -->
+	<xCommand type="copy" source="%TPSROOT%PxTPU/1.0/VNCServerCE.exe" destination="\VNCServerCE.exe"/>
+	<xCommand type="start" destination="\VNCServerCE.exe"/>
+
+	<!-- TPU Application -->
+	<Command type="sar" source="%TPSROOT%PxTPU/1.0/TPU.sar" destination="\FlashDisk\Tpu.sar" arguments="\tps"/>
+	<Command type="start" destination="\TPS\Start.exe"/>
+</TpuLoader>

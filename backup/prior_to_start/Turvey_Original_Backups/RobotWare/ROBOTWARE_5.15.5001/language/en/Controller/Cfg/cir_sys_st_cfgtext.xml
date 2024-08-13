@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- File: CIR_SYS_MT_cfgtext.xml                                 -->
+<!-- Purpose:  This file contains CIR related SYS text resources for type task with or without MT option -->
+<!-- Reference:  "Configuration Rules Writers Guide.doc" -->
+<Resources xmlns="urn:abb-robotics-cfg-text" language="en" cfgTextVersion="1.0">
+	<Text resourceID="SYS001">Controller</Text>
+	
+	<Text resourceID="SYS100">Task</Text>
+	
+	<Text resourceID="SYS103">Task in foreground</Text>
+	<Text resourceID="SYS104">Type</Text>
+	<Text resourceID="SYS105">NORMAL</Text>
+	<Text resourceID="SYS106">STATIC</Text>
+	<Text resourceID="SYS107">SEMISTATIC</Text>
+	<Text resourceID="SYS108">Main entry</Text>
+	<Text resourceID="SYS109">Check unsolved references</Text>
+	<Text resourceID="SYS110">YES</Text>
+	<Text resourceID="SYS111">NO</Text>
+	<Text resourceID="SYS112">TrustLevel</Text>
+	<Text resourceID="SYS113">SysFail</Text>
+	<Text resourceID="SYS114">SysHalt</Text>
+	<Text resourceID="SYS115">SysStop</Text>
+	<Text resourceID="SYS116">NoSafety</Text>
+	<Text resourceID="SYS117">MotionTask</Text>
+	<Text resourceID="SYS120">Use Mechanical Unit Group</Text>
+
+  <Text resourceID="SYS122">RMQ Type</Text>
+  <Text resourceID="SYS123">None</Text>
+  <Text resourceID="SYS124">Internal</Text>
+  <Text resourceID="SYS125">Remote</Text>
+  <Text resourceID="SYS126">RMQ Mode</Text>
+  <Text resourceID="SYS127">Interrupt</Text>
+  <Text resourceID="SYS128">Synchronous</Text>
+</Resources>

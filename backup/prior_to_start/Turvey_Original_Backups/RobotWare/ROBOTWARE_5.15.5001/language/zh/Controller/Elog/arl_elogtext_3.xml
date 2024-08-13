@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="ARL" domainNo="4" lang="zh" elogTextVersion="1.0" min="258" max="572">
+  <Message number="258" eDefine="SYS_ERR_ARL_ILLSWTDIM">
+    <Title>参数错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：不能设定 <p /> "switch" 参数 <arg format="%.16s" ordinal="2" /> 的<p /> 维数 <p /></Description>
+    <Actions> 删除数组维<p /> 规范，或更参数的<p /> 数据类型。 </Actions>
+  </Message>
+  <Message number="259" eDefine="SYS_ERR_ARL_ILLSWTMOD">
+    <Title>参数错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />："switch" <p /> 参数 <arg format="%.16s" ordinal="2" /> 必须具有<p /> 传送模式 IN（指定值<p /><arg format="%i" ordinal="3" /> ) <p /></Description>
+    <Actions> 删除参数传送模式<p /> 分类符。如果 IN 传送模式不<p /> 足以解决问题，请更改参数的<p /> 数据类型。 </Actions>
+  </Message>
+  <Message number="260" eDefine="SYS_ERR_ARL_ILLSWTTYP">
+    <Title>符号定义错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />： "switch" 仅 <p /> 适用于可选参数<p /> （而不是 <arg format="%.16s" ordinal="2" />）<p /></Description>
+    <Actions> 将参数更改为可选 <p /> 参数，或更改参数的<p /> 数据类型。如果对象不是<p /> 参数，请更改数据类型。 </Actions>
+  </Message>
+  <Message number="261" eDefine="SYS_ERR_ARL_ILLVALCAT">
+    <Title>类型定义错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />： <arg format="%.16s" ordinal="2" /> 的值类型类<p /> 必须是 REAL_SYMVALTYP_VAL,<p /> _SEMIVAL, _NONVAL 或 _NONE 的<p /> 其中之一（指定值 <arg format="%i" ordinal="3" /> ） <p /></Description>
+    <Actions>请更改值类型类。</Actions>
+  </Message>
+  <Message number="262" eDefine="SYS_ERR_ARL_MAXDIMS">
+    <Title>数据声明错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />： <arg format="%.16s" ordinal="2" />（指定值 <arg format="%i" ordinal="3" />）<p /> 的数组维数<p /> 过多<p /></Description>
+    <Actions>数组最多可具有 3 维。</Actions>
+  </Message>
+  <Message number="263" eDefine="SYS_ERR_ARL_NAMNOTARLID">
+    <Title>名称错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：符号名称 <p /><arg format="%.40s" ordinal="2" /><p /> 不是排斥保留字的<p /> RAPID 标识符。<p /></Description>
+    <Actions> 安装对象的名称， <p /> 包括参数和组件，<p /> 必须是不等于任何 RAPID 语言<p /> 保留字的合法<p /> RAPID 标识符。请更改名称。 </Actions>
+  </Message>
+  <Message number="264" eDefine="SYS_ERR_ARL_NOCFUN">
+    <Title>符号定义错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />： <arg format="%.16s" ordinal="2" /><p /> 缺少 C 函数<p /></Description>
+    <Actions> 必须指定 C 函数，<p /> C 函数可执行正在定义的 ReaL <p /> 函数。 </Actions>
+  </Message>
+  <Message number="265" eDefine="SYS_ERR_ARL_NOINITFUN">
+    <Title>符号定义错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：<arg format="%.16s" ordinal="2" /> 缺少<p /> 值初始化函数<p /><arg format="%.16s" ordinal="2" /><p /></Description>
+    <Actions> 必须指定值初始化 <p /> 函数。 </Actions>
+  </Message>
+  <Message number="266" eDefine="SYS_ERR_ARL_NOTDATTYP">
+    <Title>引用错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />： <arg format="%.16s" ordinal="2" /><p /> 不是数据类型名称（对象 <arg format="%.16s" ordinal="3" />）<p /><arg format="%.16s" ordinal="3" /> ) <p /> 指定的名称确认了一个<p /> 非类型对象。 <p /></Description>
+  </Message>
+  <Message number="267" eDefine="SYS_ERR_ARL_NOTVALTYP">
+    <Title>引用错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />： <arg format="%.16s" ordinal="2" /><p /> 不是值数据类型（对象 <arg format="%.16s" ordinal="3" />）<p /><arg format="%.16s" ordinal="3" /> ) <p /> 只有记录组件、别名类型、变量<p /> 和 "VAR" 模式参数可以是<p /> 半值或非值类型。 <p /></Description>
+  </Message>
+  <Message number="268" eDefine="SYS_ERR_ARL_NOVALFUN">
+    <Title>符号定义错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />： <arg format="%.16s" ordinal="2" /> 缺少<p /> 值转换函数<p /></Description>
+    <Actions> 必须为半值类型指定 <p /> 值转换函数。 </Actions>
+  </Message>
+  <Message number="269" eDefine="SYS_ERR_ARL_NOVALMEM">
+    <Title>符号定义错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：数据值无<p /> 足够的内存<p /><arg format="%.16s" ordinal="2" /><p /></Description>
+    <Actions>需要更多内存。</Actions>
+  </Message>
+  <Message number="270" eDefine="SYS_ERR_ARL_PRVILLCAT">
+    <Title>类型定义错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：专用类型<p /><arg format="%.16s" ordinal="2" /> 只能是半值<p /> 或非值类型（指定值 <arg format="%i" ordinal="3" />）<p /><arg format="%i" ordinal="3" /> ) <p /></Description>
+    <Actions>请更改值类型类。</Actions>
+  </Message>
+  <Message number="271" eDefine="SYS_ERR_ARL_PRVILLSIZ">
+    <Title>类型定义错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：专用类型<p /><arg format="%.16s" ordinal="2" /> 的大小必须是<p /> 4 的倍数（指定值 <arg format="%i" ordinal="3" />）<p /></Description>
+    <Actions> 所有 RAPID 类型的大小必须<p /> 为 4 的倍数。请更改指定<p /> 类型的大小。 </Actions>
+  </Message>
+  <Message number="272" eDefine="SYS_ERR_ARL_TMMPERSDB">
+    <Title>类型错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />： <arg format="%.16s" ordinal="2" /> 的持续变量类型<p /> 不匹配<p /></Description>
+    <Actions> 已存在一个名称相同<p /> 但数据类型不同的持续变量数据<p /> 。重命名持续变量数据或更改<p /> 其数据类型。 </Actions>
+  </Message>
+  <Message number="273" eDefine="SYS_ERR_ARL_UNKDATTYP">
+    <Title>引用错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：<arg format="%.16s" ordinal="3" /> 存在未知<p /> 数据类型名称 <arg format="%.16s" ordinal="2" /><p /><arg format="%.16s" ordinal="3" /><p /></Description>
+    <Actions> 不存在任何具有指定名称的 <p /> 数据类型（或其它对象）。 </Actions>
+  </Message>
+  <Message number="274" eDefine="SYS_ERR_ARL_UNKPARMOD">
+    <Title>参数错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：<arg format="%.16s" ordinal="3" /> 处于<p /> 未知参数传送模式 <arg format="%i" ordinal="2" /><p /><arg format="%.16s" ordinal="3" /><p /></Description>
+    <Actions> 指定参数传送模式不是<p /> IN, "VAR"、 "PERS"、 "INOUT" 或 REF<p /> 模式。请使用相应的 REAL_SYMPARMOD_x。</Actions>
+  </Message>
+  <Message number="275" eDefine="SYS_ERR_ARL_UNKSYMDEF">
+    <Title>符号定义错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：存在未知符号<p /> 定义类型 <arg format="%i" ordinal="2" /><p /> 符号定义类型标志未<p /> 指定一个允许符号<p /> 类型 (REAL_SYMDEF_x)。 <p /></Description>
+  </Message>
+  <Message number="277" eDefine="SYS_ERR_ARL_UNDO_ABORTED_STOP">
+    <Title>撤消异常中止</Title>
+    <Description>任务 <arg format="%.16s" ordinal="1" /><p />处理撤销语句时程序执行停止。<p />撤销未完全执行。<p />例行程序 <arg format="%s" ordinal="2" /> 正在执行时撤销停止。</Description>
+    <Actions>如果撤销处理时间过长，请删除一些较耗时的<p />指令，如撤销子句的 TPWrite。<p />如果撤消处理似乎无法结束，请确保撤消语句中的所有循环均无错误。<p /></Actions>
+  </Message>
+  <Message number="278" eDefine="SYS_ERR_ARL_UNDO_ABORTED_EXIT">
+    <Title>撤消意常中止</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" /><p /> UNDO 处理被例行程序 <arg format="%s" ordinal="2" /> 中的 EXIT 语句中止。<p />UNDO 未完全执行。<p /></Description>
+  </Message>
+  <Message number="279" eDefine="SYS_ERR_ARL_UNDO_ABORTED_ERROR">
+    <Title>撤消意常中止</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" /><p /> UNDO 处理被例行程序 <arg format="%s" ordinal="2" /> 中的运行时错误中止。<p />UNDO 未完全执行。<p /></Description>
+    <Actions>请检查错误原因。</Actions>
+  </Message>
+  <Message number="280" eDefine="SYS_ERR_ARL_UNDO_ILL_INSTR">
+    <Title>撤消异常中止</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" /><p /> 不允许将指令 BREAK、 RAISE、 RETURN 和 STOP 用于<p /> 撤消子句或从撤消子句调用的任何例行程序。<p /><p /> 执行例行程序 <arg format="%s" ordinal="3" /> 时，在 UNDO 上下文中找到<p /> 指令 <arg format="%s" ordinal="2" /> 。</Description>
+    <Actions>避免在撤消上下文中执行该指令。</Actions>
+  </Message>
+  <Message number="281" eDefine="SYS_ERR_ARL_UNDO_ABORTED_EDIT">
+    <Title>撤消异常中止</Title>
+    <Description>任务 <arg format="%.16s" ordinal="1" /><p />UNDO 语句的程序执行被编辑操作中止。</Description>
+  </Message>
+  <Message number="301" eDefine="SYS_ERR_ARL_IOEACCES">
+    <Title>文件访问错误</Title>
+    <Description>任务 <arg format="%.16s" ordinal="1" /> 试图访问文件 <arg format="%.39s" ordinal="2" /> 失败。</Description>
+    <Consequences>文件中没有可访问数据。</Consequences>
+    <Causes>文件可能设置为写保护。</Causes>
+    <Actions>1) 检查文件是否设置为写保护，如果是，则更改设置。</Actions>
+  </Message>
+  <Message number="302" eDefine="SYS_ERR_ARL_IOENOENT">
+    <Title>文件访问错误</Title>
+    <Description>任务 <arg format="%.16s" ordinal="1" /> 试图访问文件 <arg format="%.39s" ordinal="2" />，但找不到文件或目录。</Description>
+    <Consequences>如果缺失文件为模块，则不可能自动加载至任务。</Consequences>
+    <Causes>- 文件可能未正确复制到目标目录。<p />- 文件或目录名可能不正确。</Causes>
+    <Actions>1) 确保文件和目录名正确。</Actions>
+  </Message>
+  <Message number="303" eDefine="SYS_ERR_ARL_IOENOSPC">
+    <Title>文件访问错误
+</Title>
+    <Description>任务 <arg format="%.16s" ordinal="1" /> 试图访问文件 <arg format="%.39s" ordinal="2" />失败。
+</Description>
+    <Consequences>文件中没有可访问数据。
+</Consequences>
+    <Causes>设备上无可用存储空间。
+</Causes>
+    <Actions>) 确保有足够的可用存储空间。
+</Actions>
+  </Message>
+  <Message number="304" eDefine="SYS_ERR_ARL_IOERRNO">
+    <Title>文件访问错误</Title>
+    <Description>任务 <arg format="%.16s" ordinal="1" /> 试图访问文件 <arg format="%.39s" ordinal="3" /> 失败。</Description>
+    <Consequences>文件中没有可访问数据。</Consequences>
+    <Causes>- 文件可能设置为写保护。<p />- 文件或目录名称可能不正确。<p />- 设备无存储空间。</Causes>
+    <Actions>1) 检查文件是否设置为写保护，如果是，则更改设置。<p />2) 确保文件和目录名称正确。<p />3) 确保有足够的存储空间。</Actions>
+  </Message>
+  <Message number="322" eDefine="SYS_ERR_ARL_ARLSYNTAX">
+    <Title>加载错误 </Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：文件 <arg format="%.40s" ordinal="2" /> 中<p /> 存在 RAPID 语法错误<p /><arg format="%.40s" ordinal="2" /><p /></Description>
+    <Actions> 待加载源文件包含<p /> RAPID 语法错误。纠正源<p /> 文件。语法错误记录在<p /> 单独的文件中。 </Actions>
+  </Message>
+  <Message number="323" eDefine="SYS_ERR_ARL_HDRSYNTAX">
+    <Title>加载错误 </Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：文件 <arg format="%.40s" ordinal="2" /> 的标题中<p /> 存在语法错误<p /><arg format="%.40s" ordinal="2" /><p /></Description>
+    <Actions> 待加载源文件的文件标题中包含<p /> 语法错误。请更正<p /> 源文件。语法错误记录<p /> 在单独的文件中。 </Actions>
+  </Message>
+  <Message number="324" eDefine="SYS_ERR_ARL_KEYSNOTDEF">
+    <Title>加载错误 </Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：关键字未<p /> 以指定的语言（文件 <arg format="%.39s" ordinal="2" />）定义<p /><arg format="%.39s" ordinal="2" /> ) <p /></Description>
+    <Actions> 无法加载用文件标题中指定的<p /> 国家语言编写的 RAPID <p /> 源代码。 </Actions>
+  </Message>
+  <Message number="325" eDefine="SYS_ERR_ARL_MEMFULL">
+    <Title>加载错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：<p />可用的程序内存块不足。已排序的操作无法完成。</Description>
+    <Causes>程序内存饱和或已粉碎。</Causes>
+    <Actions>检查可否将大型数据结构拆分成小块。<p />使用已安装的模块可以节省程序内存。</Actions>
+  </Message>
+  <Message number="326" eDefine="SYS_ERR_ARL_PASTFULL">
+    <Title>加载错误 </Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" /> ：分析程序堆栈<p /> 已满（文件 <arg format="%.39s" ordinal="2" />）<p /><arg format="%.39s" ordinal="2" /> ) <p /></Description>
+    <Actions>程序因过于复杂而无法加载。</Actions>
+  </Message>
+  <Message number="327" eDefine="SYS_ERR_ARL_NOTCURVERS">
+    <Title>加载错误 </Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：不是最新的 RAPID<p /> 版本（文件 <arg format="%.39s" ordinal="2" />）<p /><arg format="%.39s" ordinal="2" /> ) <p /></Description>
+    <Actions> 无法加载文件标题中指定<p /> 版本的 RAPID 源代码。 </Actions>
+  </Message>
+  <Message number="328" eDefine="SYS_ERR_ARL_PRGMEMFULL">
+    <Title>加载错误 </Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />程序存储器已满<p /><arg format="%s" ordinal="2" /></Description>
+    <Actions>由于程序存储器已满，不能加载模块 <arg format="%s" ordinal="3" /> 。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="329" eDefine="SYS_ERR_ARL_INSTALLATION_PROBLEM">
+    <Title>模块安装失败 </Title>
+    <Description>任务： <arg format="%s" ordinal="1" /> 不能从文件安装模块 <arg format="%s" ordinal="2" />。 </Description>
+    <Consequences>该模块不会安装。 </Consequences>
+    <Causes>RAPID 模块可能出现 RAPID 错误。 </Causes>
+    <Actions>) 纠正 RAPID 错误并执行 P-start。 </Actions>
+  </Message>
+  <Message number="330" eDefine="SYS_ERR_ARL_INSTALLATION_ERROR">
+    <Title>已安装模块内的 RAPID 错误
+</Title>
+    <Description>任务 <arg format="%s" ordinal="1" />：模块（行/列） <arg format="%s" ordinal="2" /><p />符号存在错误： <arg format="%s" ordinal="3" />。
+</Description>
+    <Consequences>该模块不会安装。
+</Consequences>
+  </Message>
+  <Message number="331" eDefine="SYS_ERR_ARL_NETDIVOPS">
+    <Title>类型错误</Title>
+    <Description>       '/'、'DIV' 或 'MOD' 操作符的操作数的类型 <arg format="%.18s" ordinal="1" /> 和 <arg format="%.18s" ordinal="2" /> 不相同
+    </Description>
+    <Actions>'/'、'DIV' 或 'MOD' 操作符的两个操作数的类型必须相同。请检查操作数的类型。</Actions>
+  </Message>
+  <Message number="332" eDefine="SYS_ERR_ARL_NETLTOPS">
+    <Title>类型错误</Title>
+    <Description>'&lt;'、'&lt;='、'&gt;' 或 '&gt;=' 操作符的操作数类型 &lt;arg format="%.18s" ordinal="1"/&gt; 和 &lt;arg format="%.18s" ordinal="2"/&gt; 不相同
+    </Description>
+    <Actions>'&lt;'、'&lt;='、'&gt;' 或 '&gt;=' 操作符的两个操作数的类型必须相同。请检查操作数的类型。</Actions>
+  </Message>
+  <Message number="351" eDefine="SYS_ERR_ARL_NOHASHTAB">
+    <Title>存储器分配错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：无法<p /> 分配散列表，请使用线性列表<p /></Description>
+  </Message>
+  <Message number="352" eDefine="SYS_ERR_ARL_PERNOTUPD">
+    <Title>存储器分配错误</Title>
+    <Description> 任务 <arg format="%.16s" ordinal="1" />：无法<p /> 更新持续变量表达式，保留旧持续变量<p /> 表达式<p /></Description>
+  </Message>
+  <Message number="353" eDefine="SYS_ERR_ARL_MECH_NOT_FOUND">
+    <Title>机械单元 <arg format="%s" ordinal="1" /> 缺失！</Title>
+    <Description> 工件 <arg format="%s" ordinal="2" /> 的机械单元组件出现故障。</Description>
+    <Causes> －未定义任何机械单元<p /> －无法找到已定义的机械单元。<p /> －机器人无法自己移动工件。</Causes>
+    <Actions> 检查工件的机械单元组件。 </Actions>
+  </Message>
+  <Message number="354" eDefine="SYS_ERR_ARL_DYN_LOAD_MOD_SAVED">
+    <Title>已保存动态加载模块副本。
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />动态加载模块 <arg format="%s" ordinal="2" /> 已更改。<p /> PP 设置为 main 时模块丢失。<p />已更改模块的副本保存在 <arg format="%s" ordinal="3" /></Description>
+    <Causes>- 动态加载模块已更改。<p /> - PP 设置为 main。<p /> - 动态加载模块已删除<p /> - 已更改模块副本已保存。
+</Causes>
+    <Actions>如需保存更改，请用副本替换原文件。
+</Actions>
+  </Message>
+  <Message number="355" eDefine="SYS_ERR_STOP_EVNTRTN_ABORTED">
+    <Title>已停止 Stop/QStop 事件例行程序。
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />某一 <arg format="%s" ordinal="2" /> 事件例行程序已被外部停止命令停止。任何 Stop/QStop 事件例行程序将在 <arg format="%d" ordinal="3" /> 毫秒之后控制器接收第二个停止命令时停止。
+</Description>
+    <Actions>尽量缩短事件例行程序，使其无 WaitTime、WatiDI 等类型的 RAPID 指令。
+</Actions>
+  </Message>
+  <Message number="357" eDefine="SYS_ERR_ARL_NOERRHANDLER">
+    <Title>错误处理程序丢失</Title>
+    <Description>无错误处理程序可处理任务 <arg format="%s" ordinal="1" />的进程错误。 </Description>
+    <Consequences>程序将无法通过下一个移动指令。</Consequences>
+    <Causes>错误处理程序丢失。</Causes>
+    <Actions>增加错误处理程序。错误处理程序应该包括 StartMove (StartMoveRetry) 指令。</Actions>
+  </Message>
+  <Message number="358" eDefine="SYS_ERR_RMQ_MSG_DISCARDED">
+    <Title>丢弃 RMQ 消息</Title>
+    <Description>在任务 <arg format="%s" ordinal="1" />中丢弃 RMQ 消息。 <arg format="%s" ordinal="2" /> 接收到无法处理的消息 RMQ 消息。</Description>
+    <Consequences>在不通知发送者的情况下丢弃 RMQ 消息。</Consequences>
+    <Causes>有如下几个原因。<p />1. 没有中断与接收到的消息类型相联。<p />2. 因为中断队列已满，未能创建中断。<p />3. 接收到的消息是中断。</Causes>
+    <Actions>确认任务将中断和可能接收的所有类型消息连接。在 RAPID 参考手册中阅读关于 IRMQMessage 的内容。</Actions>
+  </Message>
+  <Message number="502" eDefine="SYS_ERR_ARL_DIBREAK">
+    <Title>数字输入中断</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />数字输入中断了执行。<p />程序引用 <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Actions>恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="504" eDefine="SYS_ERR_ARL_INPAR">
+    <Title>参数错误</Title>
+    <Description> 任务 <arg format="%s" ordinal="1" />：<arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /><p /><arg format="%s" ordinal="3" /><p /><arg format="%s" ordinal="4" /><p /></Description>
+    <Actions> 恢复： <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="506" eDefine="SYS_ERR_ARL_SYSTEM">
+    <Title>系统访问错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /><p /><arg format="%s" ordinal="3" /><p /><arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>恢复： <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="507" eDefine="SYS_ERR_ARL_OVERFLOW">
+    <Title>限制错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />无法在路径 <arg format="%s" ordinal="2" /> 中继续回退。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="508" eDefine="SYS_ERR_ARL_QUAT">
+    <Title>姿态值错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> 中存在错误的姿态值。<p />程序引用 <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>必须标准化所有已采用的姿态值，即四元数元素的平方和必须等于 1。</Actions>
+  </Message>
+  <Message number="511" eDefine="SYS_ERR_ARL_INPAR_NEG">
+    <Title>参数错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />用负值指定了 <arg format="%s" ordinal="3" /> 中的参数 <arg format="%s" ordinal="2" /> 。<p />程序引用 <arg format="%s" ordinal="4" /><p /><p /></Description>
+    <Actions>必须将参数设定为正值。</Actions>
+  </Message>
+  <Message number="512" eDefine="SYS_ERR_ARL_EXTAX_ACT">
+    <Title>缺少外轴值</Title>
+    <Description>某些活动外轴包含错误值或无序值。<p /></Description>
+    <Actions>重新为该位置编程。</Actions>
+  </Message>
+  <Message number="513" eDefine="SYS_ERR_ARL_ACT_UNIT">
+    <Title>机械单元错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />无法开启或关闭机械单元。上一条消息可能包含更多信息。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="514" eDefine="SYS_ERR_ARL_REG_ERR">
+    <Title>执行错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />机器人离路径过远，无法对中断的运动执行 StartMove 指令。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>在程序中将机器人定位至中断的位置。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="515" eDefine="SYS_ERR_ARL_ILLARGTYP">
+    <Title>类型错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />参数 <arg format="%s" ordinal="2" />中存在非法的自变量数据类型。<p /></Description>
+    <Actions> 将参数更改为合法类型。确保值类型是值或半值。</Actions>
+  </Message>
+  <Message number="518" eDefine="SYS_ERR_ARL_TYPEERR">
+    <Title>类型错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />预期类型不同于 <arg format="%s" ordinal="2" /> 中读取的类型。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>检查自变量中的类型。</Actions>
+  </Message>
+  <Message number="519" eDefine="SYS_ERR_ARL_EOF">
+    <Title>文件结束</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />读取 <arg format="%s" ordinal="2" /> 中的所有字节前出现文件结束标志。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="522" eDefine="SYS_ERR_ARL_LIMIT">
+    <Title>限制错误
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />秒表溢出。<p />程序引用 <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Actions>恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="523" eDefine="SYS_ERR_ARL_DEACT_UNIT">
+    <Title>机械单元冲突</Title>
+    <Description>因配置问题而无法停止机械单元 <arg format="%s" ordinal="1" /> 。 <p /></Description>
+    <Actions>检查配置。</Actions>
+  </Message>
+  <Message number="524" eDefine="SYS_ERR_ARL_CNVNOTACT">
+    <Title>传送带访问错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />传送带未激活。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="525" eDefine="SYS_ERR_ARL_SINGNOTDEF">
+    <Title>传送带访问错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />未定义任何单数。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="526" eDefine="SYS_ERR_ARL_MUNOTSING">
+    <Title>传送带访问错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />机械单元 <arg format="%s" ordinal="2" /> 不是单一单元。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+  </Message>
+  <Message number="527" eDefine="SYS_ERR_ARL_FILE_OPEN">
+    <Title>文件访问错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />无法打开 <arg format="%s" ordinal="2" />.<p />程序引用 <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Causes>- I/O 设备引用已在使用中。</Causes>
+    <Actions>- 如果 I/O 设备引用已经在使用中，请关闭它或使用其它 I/O 设备引用。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="528" eDefine="SYS_ERR_ARL_FILE_CLOSED">
+    <Title>文件访问错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />文件或串行信道未打开。<p />程序引用 <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Causes>- I/O 设备引用没有打开，或已关闭</Causes>
+    <Actions>- 检查该设备是否已打开<p /> 恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="529" eDefine="SYS_ERR_ARL_FILE_NOACC">
+    <Title>文件访问错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />无法访问文件 <arg format="%s" ordinal="2" />。<p />程序引用 <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Causes>- 路径或者文件名错误。<p />-I/O 设备引用已经使用。<p />-已超出可同时打开的文件数的最大值。<p />-存储磁盘已满。</Causes>
+    <Actions>- 检查路径或文件名。<p />-如果 I/O 设备引用已经使用，请关闭或使用其他引用。<p />-检查磁盘空间。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="530" eDefine="SYS_ERR_ARL_OUT_ARR_NCH">
+    <Title>参数错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />将 WriteBin 中的参数 <arg format="%s" ordinal="2" /> 写入串行信道时，参数的字符数超过容纳待写入字符的数组大小。<p />程序引用 <arg format="%40s" ordinal="3" /><p /></Description>
+    <Actions>增大数组或减小参数。</Actions>
+  </Message>
+  <Message number="531" eDefine="SYS_ERR_ARL_OUT_ARR_BUF">
+    <Title>参数错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />WriteBin 中的数组 <arg format="%i" ordinal="2" /> 小于 0 或大于225。<p />程序引用 <arg format="%40s" ordinal="3" /><p /><p /></Description>
+    <Actions>将数组大小更改为 0 - 225。</Actions>
+  </Message>
+  <Message number="534" eDefine="SYS_ERR_ARL_TOUT_READ">
+    <Title>超时</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />因超时而中断了执行。<p />程序引用 <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Actions>恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="535" eDefine="SYS_ERR_ARL_TYPENOTNUM">
+    <Title>类型错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />您试图在文件中读取的数据不属于数字类型。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="536" eDefine="SYS_ERR_ARL_SYS_PRDREQ">
+    <Title>系统访问错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />过多待读取请求。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="537" eDefine="SYS_ERR_ARL_FILEACC_CBUF">
+    <Title>文件访问错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />串行信道未打开，或试图将指令用于某个文件。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>- 打开串行信道。<p />－检查是否将指令用于串行信道。<p /> 恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="538" eDefine="SYS_ERR_ARL_SYS_TOUT">
+    <Title>时限已超过</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />已超过程序中设定的等待时间<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="539" eDefine="SYS_ERR_ARL_SYS_TASK">
+    <Title>系统访问错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />不是该任务中允许的选项。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="540" eDefine="SYS_ERR_ARL_FILEACC_NODIR">
+    <Title>文件访问错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> 不是目录。<p />程序引用 <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>请检查确保此路径是要打开目录的正确路径。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="541" eDefine="SYS_ERR_ARL_FILEACC_DIR">
+    <Title>文件访问错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />不能访问目录 <arg format="%s" ordinal="2" /> 。<p />程序引用 <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>检查您试图打开的目录。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="542" eDefine="SYS_ERR_ARL_FILEACC_FS">
+    <Title>文件访问错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />无法访问文件系统 <arg format="%s" ordinal="2" />。<p />程序引用 <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>－检查路径和文件名。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="543" eDefine="SYS_ERR_ARL_FILEACC_DIROPN">
+    <Title>文件访问错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />不能打开 <arg format="%s" ordinal="2" />。<p />程序引用 <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Causes>已打开的目录太多。</Causes>
+    <Actions>请关闭一个已打开的目录。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="544" eDefine="SYS_ERR_ARL_FILEACC_DIRCRE">
+    <Title>文件访问错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />无法创建目录 <arg format="%s" ordinal="2" />。<p />程序引用 <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>- 检查路径。<p />－检查创建新目录的上一级目录的写权限和执行权限。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="545" eDefine="SYS_ERR_ARL_FILEACC_DIRREM">
+    <Title>文件访问错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />无法删除目录 <arg format="%s" ordinal="2" />。<p />程序引用 <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>- 检查路径。<p />－检查是否定位了待删除目录的上一级目录的写权限和执行权限。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="546" eDefine="SYS_ERR_ARL_FILEACC_FILREM">
+    <Title>文件访问错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />无法删除文件 <arg format="%s" ordinal="2" />。<p />程序引用 <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>- 检查路径。<p />－检查您是否拥有文件的写权限。<p />－检查是否定位了待删除文件所在目录的写权限和执行权限。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="547" eDefine="SYS_ERR_ARL_FILEACC_FILREN">
+    <Title>文件访问错误</Title>
+    <Description>任务：<arg format="%s" ordinal="1" /><p />无法重命名文件 <arg format="%s" ordinal="2" />。<p />程序引用 <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>- 检查路径。<p />- 检查对要重命名的文件的写权限。<p />- 检查对要重命名的文件所在的目录的写权限和执行权限。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="548" eDefine="SYS_ERR_ARL_FILEACC_FILCPY">
+    <Title>文件访问错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />无法复制文件 <arg format="%s" ordinal="2" />.<p />程序引用 <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>- 检查路径。<p />- 检查文件待复制到所在目录的写入许可。<p />- 检查可用空间。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="549" eDefine="SYS_ERR_ARL_SYS_UNIT">
+    <Title>系统访问错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />未知机械单元 <arg format="%s" ordinal="2" />。<p />系统无法识别机械单元类型的数据。<p />程序引用 <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Causes>机械单元类型的数据已经在程序中说明。</Causes>
+    <Actions>删除程序中机械单元数据的说明，并使用预定义的机械单元类型数据之一（由系统自动定义）。</Actions>
+  </Message>
+  <Message number="555" eDefine="SYS_ERR_ARL_IOSIG_READ">
+    <Title>I/O 错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />无法读取 I/O 信号<p />程序引用 <arg format="%s" ordinal="2" /><p /><p /><p /></Description>
+  </Message>
+  <Message number="556" eDefine="SYS_ERR_ARL_IOSIG_WRITE">
+    <Title>I/O 错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />无法写 I/O 信号。<p />程序引用 <arg format="%s" ordinal="2" /><p /><p /></Description>
+  </Message>
+  <Message number="557" eDefine="SYS_ERR_ARL_IOSIG_CONF">
+    <Title>I/O 错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />I/O 信号配置错误。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>检查 IO 信号配置或别名定义。<p /></Actions>
+  </Message>
+  <Message number="558" eDefine="SYS_ERR_ARL_IOSIG_RD_ATTR">
+    <Title>I/O 错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />无法读取I/O板 <arg format="%s" ordinal="3" /> 上的 I/O 信号 <arg format="%s" ordinal="2" /> 。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+  </Message>
+  <Message number="559" eDefine="SYS_ERR_ARL_IOSIG_WR_ATTR">
+    <Title>I/O 错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />无法在 I/O 板 <arg format="%s" ordinal="3" /> 上写 I/O 信号 <arg format="%s" ordinal="2" /> 。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>
+      <p />
+    </Actions>
+  </Message>
+  <Message number="560" eDefine="SYS_ERR_ARL_SYS_SAVE">
+    <Title>系统访问错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />无法保存程序模块 <arg format="%s" ordinal="2" />。<p />程序引用 <arg format="%s" ordinal="3" /><p /><p /></Description>
+  </Message>
+  <Message number="561" eDefine="SYS_ERR_ARL_SYS_MODULE">
+    <Title>系统访问错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> 不是模块名称。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>不能卸载、保存或删除该模块。</Consequences>
+    <Actions>检查模块名称。</Actions>
+  </Message>
+  <Message number="562" eDefine="SYS_ERR_ARL_INPAR_AXNO">
+    <Title>参数错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />机械单元 <arg format="%s" ordinal="2" /> 存在未知轴编号。<p />程序引用 <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>检查自变量 AxisNo 的值。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="563" eDefine="SYS_ERR_ARL_SYS_MUACT">
+    <Title>系统访问错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />机械单元 <arg format="%s" ordinal="2" /> 处于非激活状态<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>启动机械单元。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="564" eDefine="SYS_ERR_ARL_ORIENT_ERR">
+    <Title>自变量错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />姿态定义错误。<p />工具或工件（用户 + 对象）中的 GripLoads 附着框不标准。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>- 检查姿态。必须标准化所有已采用的姿态值，即四元数元素的平方和必须等于 1。</Actions>
+  </Message>
+  <Message number="565" eDefine="SYS_ERR_ARL_INPAR_VEL">
+    <Title>参数错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /> 两个变元都必须大于 0。<p />程序引用 <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Actions>检查变元的值。</Actions>
+  </Message>
+  <Message number="566" eDefine="SYS_ERR_ARL_INPAR_ACC">
+    <Title>参数错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />两个自变量必须 &gt; 0 并 &lt;= 100。<p />程序引用 <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Actions>检查自变量的值。</Actions>
+  </Message>
+  <Message number="567" eDefine="SYS_ERR_ARL_INPAR_QUAT">
+    <Title>参数错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />四元数错误。 <p />程序引用 <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Actions>检查加载数据的 aom 组件。</Actions>
+  </Message>
+  <Message number="568" eDefine="SYS_ERR_ARL_INPAR_AXNEG">
+    <Title>参数错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />轴可能没有小于 0 的值。<p />程序引用 <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Actions>更改为正值。</Actions>
+  </Message>
+  <Message number="569" eDefine="SYS_ERR_ARL_ARG_ACCMAX">
+    <Title>自变量错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />如果对 TRUE 设置了自变量 AccLim，则必须设置自变量 AccMax。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>为自变量 AccMax 设置一个值。</Actions>
+  </Message>
+  <Message number="570" eDefine="SYS_ERR_ARL_ARG_DECMAX">
+    <Title>自变量错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />如果对 TRUE 设置了自变量 DecelLim，则必须设置自变量 DecelMax。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>为自变量 DecelMax 设置一个值。</Actions>
+  </Message>
+  <Message number="571" eDefine="SYS_ERR_ARL_ARG_ACCMLOW">
+    <Title>自变量错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />参数 AccMax 的值过小。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>增大参数 AccMax 的值。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="572" eDefine="SYS_ERR_ARL_ARG_DECMLOW">
+    <Title>自变量错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />参数 DecelMax 的值过小。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>增大参数 DecelMax 的值。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+</Domain>

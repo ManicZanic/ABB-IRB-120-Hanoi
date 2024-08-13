@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.TPU.Indicators.Paint">
+  <Forms />
+  <Menus />
+  <Strings>
+    <String ID="TPU" Text="TPU" />
+    <String ID="PLC" Text="PLC" />
+    <String ID="MIS" Text="MIS" />
+    <String ID="PC" Text="PC" />
+    <String ID="MasterIsHeldBy" Text="主控权属于" />
+    <String ID="Error" Text="错误！" />
+    <String ID="MasterRequestFailed" Text="&lt;h1&gt;喷涂主控权请求失败！&lt;/h1&gt;&lt;p&gt;TPU不能从控制器当中得到主控权.&lt;/p&gt;&lt;p&gt;{0}&lt;/p&gt;" />
+  </Strings>
+</Resources>

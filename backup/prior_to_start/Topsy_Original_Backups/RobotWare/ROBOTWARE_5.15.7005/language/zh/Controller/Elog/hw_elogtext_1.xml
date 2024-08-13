@@ -1,0 +1,401 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="HW" domainNo="3" lang="zh" elogTextVersion="1.0" min="1810" max="4200">
+  <Message number="1810" eDefine="SYS_ERR_HW_D603_BOARD_NOT_FOUND">
+    <Title>DeviceNet 主控/从控电路板缺失</Title>
+    <Description>DeviceNet 主控/从控电路板不工作。</Description>
+    <Consequences>无法进行 DeviceNet 通信。</Consequences>
+    <Causes>DeviceNet 主控/从控电路板出现故障或无此设备。</Causes>
+    <Actions>1. 确保 DeviceNet 主控/从控电路板已安装。<p />2. 更换有故障的电路板。</Actions>
+  </Message>
+  <Message number="1811" eDefine="SYS_ERR_HW_D603_SECOND_BOARD_NOT_FOUND">
+    <Title>第二块 DeviceNet 主控/从控电路板缺失</Title>
+    <Description>已配置双选件，但仅安装了一块 DeviceNet 主控/从控电路板。</Description>
+    <Consequences>仅一块 DeviceNet 总线可用。</Consequences>
+    <Causes>第二块DeviceNet 主控/从控电路板出现故障或无此设备。</Causes>
+    <Actions>1. 确保第二块 DeviceNet 主控/从控电路板已安装。<p />2. 更换有故障的第二块电路板。</Actions>
+  </Message>
+  <Message number="1812" eDefine="SYS_ERR_HW_D603_INCOMPATIBLE_BOARDS">
+    <Title>不兼容的 DeviceNet 电路板
+</Title>
+    <Description>系统检测出不兼容的 DeviceNet 电路板类型。
+</Description>
+    <Consequences>无法在 DeviceNet 上进行通信。
+</Consequences>
+    <Causes>系统中已安装了不兼容的 DeviceNet 电路板类型。
+</Causes>
+    <Actions>请确保安装了兼容的电路板类型。
+</Actions>
+  </Message>
+  <Message number="1910" eDefine="SYS_ERR_HW_D510_BOARD_NOT_FOUND">
+    <Title>Profibus-DP 主控/从控电路板缺失</Title>
+    <Description>Profibus-DP 主控/从控电路板不工作。</Description>
+    <Consequences>无法进行 Profibus 通信。</Consequences>
+    <Causes>Profibus-DP 主控/从控电路板出现故障或无此设备。</Causes>
+    <Actions>1. 确保 Profibus-DP 主控/从控电路板已安装。<p />2. 更换有故障的电路板。</Actions>
+  </Message>
+  <Message number="1911" eDefine="SYS_ERR_HW_D510_PROGRAM_ERR">
+    <Title>Profibus 电路板更新错误</Title>
+    <Description>RobotWare 软件无法将新的驱动程序下载到 Profibus-DP 主控/从控电路板。无法对 Profibus 电路板的 <arg format="%s" ordinal="1" /> 信道 (ch <arg format="%i" ordinal="2" />) 编程。内部错误代码：<arg format="%i" ordinal="3" />。</Description>
+    <Consequences>无法进行 Profibus 通信。</Consequences>
+    <Causes>RobotWare 软件损坏或电路板硬件故障。</Causes>
+    <Actions>1. 重新启动系统，然后重新下载软件。<p />2. 重新安装现有系统文件。<p />3. 创建并运行新的系统，然后下载驱动程序。<p />4. 更换有故障的电路板。</Actions>
+  </Message>
+  <Message number="1912" eDefine="SYS_ERR_HW_D510_STARTUP_ERR">
+    <Title>Profibus-DP 主控/从控电路板故障</Title>
+    <Description>Profibus-DP 主控/从控电路板未正确启动。</Description>
+    <Consequences>无法进行 Profibus 通信。</Consequences>
+    <Causes>Profibus-DP 主控/从控电路板硬件故障。</Causes>
+    <Actions>1. 重新启动系统。<p />2. 更换有故障的 Profibus-DP 主控/从控电路板。</Actions>
+  </Message>
+  <Message number="1913" eDefine="SYS_ERR_HW_D510_BOARD_ERR">
+    <Title>Profibus-DP 主控/从控电路板内部错误</Title>
+    <Description>Profibus-DP 主控/从控电路板报告内部错误 <arg format="%i" ordinal="1" />。</Description>
+    <Consequences>无法进行 Profibus 通信。</Consequences>
+    <Causes>Profibus-DP 主控/从控电路板硬件故障。</Causes>
+    <Actions>1. 重新启动系统。<p />2. 更换有故障的 Profibus-DP 主控/从控电路板。</Actions>
+  </Message>
+  <Message number="1914" eDefine="SYS_ERR_HW_D510_BUS_ERROR">
+    <Title>Profibus 启动错误</Title>
+    <Description>－Profibus 主控总线错误，错误代码 <arg format="%i" ordinal="1" />。检查接线、终端和模块，然后重启。</Description>
+  </Message>
+  <Message number="1915" eDefine="SYS_ERR_HW_D510_TO_MANY_ERRORS">
+    <Title>Profibus 总线错误</Title>
+    <Description>Profibus 主控总线错误。<p /><p />内部错误<p />错误代码 <arg format="%i" ordinal="1" />.</Description>
+    <Consequences>某些预期的关联错误可能会延迟。</Consequences>
+    <Causes>损坏的 profibus 布线、端子和/或模块。<p />重复的 profibus 地址。</Causes>
+    <Actions>检查布线、端子和模块。</Actions>
+  </Message>
+  <Message number="1916" eDefine="SYS_ERR_HW_D510_BUS_OK">
+    <Title>Profibus 总线正常</Title>
+    <Description>- Profibus 与主控总线的联系恢复正常。</Description>
+  </Message>
+  <Message number="1917" eDefine="SYS_ERR_HW_D510_EXCEPTION">
+    <Title>Profibus-DP 主控/从控电路板异常</Title>
+    <Description>Profibus-DP 主控/从控电路板出现致命错误。任务 <arg format="%i" ordinal="2" /> 中的信道 <arg format="%s" ordinal="1" /> 。参数 <arg format="%s" ordinal="3" /></Description>
+    <Consequences>无法进行 Profibus 通信。</Consequences>
+    <Causes>Profibus-DP 主控/从控电路板硬件故障。</Causes>
+    <Actions>1. 重新启动系统。<p />2. 更换有故障的 Profibus-DP 主控/从控电路板。</Actions>
+  </Message>
+  <Message number="2500" eDefine="SYS_ERR_HW_RCC_NOT_FOUND">
+    <Title>机器人通信卡缺失</Title>
+    <Description>系统无法与机器人通信卡取得联系。 </Description>
+    <Consequences>无法与安全系统通信。系统转入“系统故障”状态。</Consequences>
+    <Causes>机器人通信卡发生故障或缺失。</Causes>
+    <Actions>1. 确保机器人通信卡已安装。<p />2. 如果该单元发生故障，请更换。</Actions>
+  </Message>
+  <Message number="2501" eDefine="SYS_ERR_HW_RCC_WRONG_REVISION">
+    <Title>错误的 RCC 固件</Title>
+    <Description>RCC (DSQC602) 上的 FPGAR11-Firmware 版本不兼容。当前版本： <arg format="%s" ordinal="1" />。<arg format="%s" ordinal="2" /> 请求版本： <arg format="%s" ordinal="3" />。<arg format="%s" ordinal="4" /></Description>
+    <Actions>1. 更换 DSQC602 电路板<p />2. 重新启动系统</Actions>
+  </Message>
+  <Message number="2502" eDefine="SYS_ERR_HW_RCC_XML_FILE_NOT_FOUND">
+    <Title>无法找到文件</Title>
+    <Description>系统无法找到文件：[ <arg format="%s" ordinal="1" />] </Description>
+    <Actions>重新安装系统</Actions>
+  </Message>
+  <Message number="2503" eDefine="SYS_ERR_HW_RCC_HW_NOT_IN_XML_FILE">
+    <Title>文件中无请求消息</Title>
+    <Description>系统在文件 [<arg format="%s" ordinal="4" />] 中找不到关于下载什么软件至硬件 ID="<arg format="%s" ordinal="1" />"，版本="<arg format="%s" ordinal="2" />"，修订版="<arg format="%s" ordinal="3" />" 的信息。</Description>
+    <Causes>文件已损坏，或单元的实际硬件版本不受支持。</Causes>
+    <Actions>1. 重新安装系统 <p />2. 将单元更换为该软件版本支持的硬件版本。</Actions>
+  </Message>
+  <Message number="2530" eDefine="SYS_ERR_HW_PU_FATAL_ERROR">
+    <Title>与安全系统无通信</Title>
+    <Description>安全系统和机器人通信卡之间无串行通信。 </Description>
+    <Consequences>系统转入“系统故障”状态。</Consequences>
+    <Causes>安全系统和机器人通信卡之间的电缆可能存在硬件损坏。也可能是安全系统或其电源发生故障。</Causes>
+    <Actions>1) 重新启动系统，以恢复工作。<p />2) 确保机器人通信卡和安全系统之间的电缆正常工作并正确连接。<p />3) 检查安全系统的电源。<p />4) 如果该单元发生故障，请更换。</Actions>
+  </Message>
+  <Message number="2540" eDefine="SYS_ERR_HW_FW_UPGRADE_DU_STARTED">
+    <Title>驱动单元固件更新已启动</Title>
+    <Description>在驱动模块 <arg format="%d" ordinal="1" /> 中，位于单元位置 <arg format="%d" ordinal="2" /> 的驱动单元中的固件的所需升级已启动。旧的固件版本 <arg format="%d" ordinal="3" /> 已被修订版 <arg format="%d" ordinal="4" /> 替代。</Description>
+    <Actions>请等待固件升级进程完成。不要关闭系统电源！</Actions>
+  </Message>
+  <Message number="2541" eDefine="SYS_ERR_HW_FW_UPGRADE_DU_COMPLETE">
+    <Title>驱动单元固件更新完成</Title>
+    <Description>在驱动模块 <arg format="%d" ordinal="1" /> 中，位于单元位置 <arg format="%d" ordinal="2" /> 的驱动单元中的固件的升级已完成。新修订版为 <arg format="%d" ordinal="3" />。</Description>
+  </Message>
+  <Message number="2542" eDefine="SYS_ERR_HW_FW_UPGRADE_DU_NOT_SUPPORTED">
+    <Title>驱动单元硬件不受支持</Title>
+    <Description>在驱动模块 <arg format="%d" ordinal="1" /> 中，系统无法使用带有硬件标识 <arg format="%s" ordinal="2" /> 的驱动单元，因为硬件修订版 <arg format="%d" ordinal="3" /> 不受支持。</Description>
+    <Consequences>系统无法使用驱动单元。系统进入“系统故障”状态。</Consequences>
+    <Causes>RobotWare 的版本太旧而无法支持驱动单元。</Causes>
+    <Actions>1) 将系统升级至支持驱动单元修订版的 RobotWare 版本。<p />2) 将驱动单元替换为带有兼容修订版的驱动单元。</Actions>
+  </Message>
+  <Message number="2543" eDefine="SYS_ERR_HW_FW_UPGRADE_DU_FAILED">
+    <Title>驱动单元固件更新已失败</Title>
+    <Description>在驱动模块 <arg format="%d" ordinal="1" /> 中，位于单元位置 <arg format="%d" ordinal="2" /> 的驱动单元中的固件的升级已失败。</Description>
+    <Consequences>驱动单元固件的所需升级未执行。 </Consequences>
+    <Actions>1) 检查其他硬件事件日志消息以获得错误情况的详细说明。<p />2) 通过使用主电源开关重新启动系统来重新尝试。</Actions>
+  </Message>
+  <Message number="2544" eDefine="SYS_ERR_HW_FW_UPGRADE_DU_FILE_NOT_FOUND">
+    <Title>找不到驱动单元固件文件</Title>
+    <Description>找不到升级驱动单元的固件所需的文件 <arg format="%s" ordinal="1" />。</Description>
+    <Consequences>驱动单元固件的所需升级未执行。</Consequences>
+    <Causes>RobotWare 安装不包含固件文件。</Causes>
+    <Actions>重新安装系统</Actions>
+  </Message>
+  <Message number="2545" eDefine="SYS_ERR_HW_FW_UPGRADE_DU_FILE_TYPE_ERROR">
+    <Title>驱动单元固件文件类型错误</Title>
+    <Description>升级驱动单元的固件所需的文件 <arg format="%s" ordinal="1" /> 为错误的类型。</Description>
+    <Consequences>驱动单元固件的所需升级未执行。</Consequences>
+    <Causes>RobotWare 安装发生错误。</Causes>
+    <Actions>重新安装系统</Actions>
+  </Message>
+  <Message number="2546" eDefine="SYS_ERR_HW_FW_UPGRADE_DU_FILE_CORRUPT">
+    <Title>驱动单元固件文件错误</Title>
+    <Description>升级驱动单元的固件所需的文件 <arg format="%s" ordinal="1" />不可用，因为完整性检查已失败。 </Description>
+    <Consequences>驱动单元固件的所需升级未执行。</Consequences>
+    <Causes>RobotWare 安装发生错误。</Causes>
+    <Actions>重新安装系统</Actions>
+  </Message>
+  <Message number="2550" eDefine="SYS_ERR_HW_FW_REFLASH_STARTED">
+    <Title>固件更新已启动</Title>
+    <Description>已开始对 <arg format="%s" ordinal="1" /> 固件进行必要的更新。使用的文件：<arg format="%s" ordinal="2" />]。</Description>
+    <Actions>等待更新完成</Actions>
+  </Message>
+  <Message number="2551" eDefine="SYS_ERR_HW_FW_REFLASH_COMPLETE">
+    <Title>固件更新结束</Title>
+    <Description>
+      <arg format="%s" ordinal="1" /> 固件的更新已成功完成。</Description>
+  </Message>
+  <Message number="2552" eDefine="SYS_ERR_HW_FW_REFLASH_FAILED">
+    <Title>固件更新失败</Title>
+    <Description>
+      <arg format="%s" ordinal="1" /> 固件的更新已失败。<p />内部错误代码：<arg format="%d" ordinal="2" /></Description>
+    <Actions>1. 检查其他错误消息以获得详细的说明<p /> 2. 重新启动系统<p /> 3. 重新安装系统<p /> 4. 替换 <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="2553" eDefine="SYS_ERR_HW_FW_FILE_CORRUPT">
+    <Title>固件文件损坏</Title>
+    <Description>固件文件 [<arg format="%s" ordinal="1" />] 损坏。内部错误代码：<arg format="%d" ordinal="2" /></Description>
+    <Actions>重新安装系统</Actions>
+  </Message>
+  <Message number="2554" eDefine="SYS_ERR_HW_FW_FILE_NOT_FOUND">
+    <Title>未找到固件文件</Title>
+    <Description>未找到固件文件 [<arg format="%s" ordinal="1" />]。</Description>
+    <Actions>重新安装系统</Actions>
+  </Message>
+  <Message number="2555" eDefine="SYS_ERR_HW_FW_PU_UNUSABLE">
+    <Title>不支持的安全系统单元</Title>
+    <Description>系统无法使用安全系统单元 <arg format="%s" ordinal="1" />，修订版 <arg format="%d" ordinal="2" />。 </Description>
+    <Consequences>系统无法使用受影响的硬件。</Consequences>
+    <Actions>1. 将受影响的硬件更换为兼容的版本。</Actions>
+  </Message>
+  <Message number="2560" eDefine="SYS_ERR_HW_FW_SC_REFLASH_STARTED">
+    <Title>轴计算机固件更新已启动</Title>
+    <Description>在驱动模块 <arg format="%d" ordinal="1" /> 中，轴计算机 <arg format="%s" ordinal="2" /> 中带有硬件标识 <arg format="%s" ordinal="3" /> 的固件的所需升级已启动。旧的固件版本 <arg format="%d" ordinal="4" /> 已被修订版 <arg format="%d" ordinal="5" /> 替代。</Description>
+    <Actions>请等待固件升级进程完成。不要关闭系统电源！</Actions>
+  </Message>
+  <Message number="2561" eDefine="SYS_ERR_HW_FW_SC_REFLASH_COMPLETE">
+    <Title>轴计算机固件更新完成</Title>
+    <Description>在驱动模块 <arg format="%d" ordinal="1" /> 中，轴计算机 <arg format="%s" ordinal="2" /> 中带有硬件标识 <arg format="%s" ordinal="3" /> 的固件的升级已完成。新修订版为 <arg format="%d" ordinal="4" />。</Description>
+  </Message>
+  <Message number="2562" eDefine="SYS_ERR_HW_FW_AXC_COMMUNICATION">
+    <Title>轴计算机通信错误</Title>
+    <Description>尝试读取固件信息时，系统与驱动模块 <arg format="%d" ordinal="1" /> 中的轴计算机通信失败。</Description>
+    <Consequences>系统无法确定受影响的驱动模块中的固件是否需要升级。系统进入“系统故障”状态。</Consequences>
+    <Causes>这可能是因为主计算机和轴计算机之间的电缆存在电缆断裂，连接器接线不良，或电缆中的干扰过大。</Causes>
+    <Actions>1) 确保主计算机和轴计算机之间的电缆完好无损，且两个连接器正确连接。<p />2) 确保机器人接线附近无极度电磁干扰辐射。</Actions>
+  </Message>
+  <Message number="2563" eDefine="SYS_ERR_HW_FW_AXC_NOT_SUPPORTED">
+    <Title>轴计算机硬件不受支持</Title>
+    <Description>在驱动模块 <arg format="%d" ordinal="2" /> 中，系统无法使用带有硬件标识 <arg format="%s" ordinal="1" /> 的轴计算机，因为硬件修订版 <arg format="%d" ordinal="3" /> 不受支持。</Description>
+    <Consequences>系统无法使用轴计算机。系统进入“系统故障”状态。</Consequences>
+    <Causes>RobotWare 的版本太旧从而不支持轴计算机单元。</Causes>
+    <Actions>1) 将轴计算机替换成带有兼容修订版的轴计算机。<p />2) 将系统升级为支持轴计算机修订版的 RobotWare 版本。</Actions>
+  </Message>
+  <Message number="2564" eDefine="SYS_ERR_HW_FW_SC_REFLASH_FAILED">
+    <Title>轴计算机固件更新已失败</Title>
+    <Description>在驱动模块 <arg format="%d" ordinal="1" /> 中，轴计算机 <arg format="%s" ordinal="2" /> 中带有硬件标识 <arg format="%s" ordinal="3" /> 的固件的升级已失败。</Description>
+    <Consequences>轴计算机固件的所需升级未执行。</Consequences>
+    <Actions>1) 检查其他硬件事件日志消息以获得错误情况的详细说明。<p />2) 使用主电源开关重新启动系统来重新尝试。</Actions>
+  </Message>
+  <Message number="2565" eDefine="SYS_ERR_HW_FW_SC_REFLASH_FILE_NOT_FOUND">
+    <Title>找不到轴计算机固件文件</Title>
+    <Description>找不到升级轴计算机的固件所需的文件 <arg format="%s" ordinal="1" />。</Description>
+    <Consequences>轴计算机固件的所需升级未执行。</Consequences>
+    <Causes>RobotWare 安装不包含固件文件。</Causes>
+    <Actions>重新安装系统</Actions>
+  </Message>
+  <Message number="2567" eDefine="SYS_ERR_HW_FW_SC_REFLASH_FILE_TYPE_ERROR">
+    <Title>轴计算机固件文件类型错误</Title>
+    <Description>升级轴计算机固件所需的文件 <arg format="%s" ordinal="1" /> 为错误的类型。</Description>
+    <Consequences>轴计算机固件的所需升级未执行。 </Consequences>
+    <Causes>固件文件已损坏。 </Causes>
+    <Actions>重新安装系统</Actions>
+  </Message>
+  <Message number="2568" eDefine="SYS_ERR_HW_FW_SC_REFLASH_FILE_CORRUPT">
+    <Title>轴计算机固件文件错误</Title>
+    <Description>升级轴计算机的固件所需的文件 <arg format="%s" ordinal="1" /> 不可用，因为完整性检查已失败。</Description>
+    <Consequences>轴计算机固件的所需升级未执行。</Consequences>
+    <Causes>固件文件已损坏。</Causes>
+    <Actions>重新安装系统</Actions>
+  </Message>
+  <Message number="2569" eDefine="SYS_ERR_HW_FW_SC_CORRUPT_FLASH">
+    <Title>受到破坏的轴计算机硬件</Title>
+    <Description>
+在驱动模块 <arg format="%d" ordinal="1" /> 中，轴计算机闪存中有受到破坏的内容。
+      </Description>
+    <Actions>
+1. 使用主电源开关重启系统来进行重试。<p />2. 如果问题依然存在，则更换轴计算机。
+      </Actions>
+  </Message>
+  <Message number="2570" eDefine="SYS_ERR_HW_FW_AXC_REFLASH_STARTED">
+    <Title>开始固件更新</Title>
+    <Description>已开始对 <arg format="%s" ordinal="1" /> 固件进行必要的更新。更换旧版固件：<arg format="%d" ordinal="2" />]。 </Description>
+    <Actions>等待更新完成。</Actions>
+  </Message>
+  <Message number="2571" eDefine="SYS_ERR_HW_FW_AXC_REFLASH_COMPLETE">
+    <Title>固件更新结束</Title>
+    <Description>
+      <arg format="%s" ordinal="1" /> 固件的更新已成功完成。新版本：[<arg format="%d" ordinal="2" />]。内部代码：[<arg format="%d" ordinal="3" />]</Description>
+  </Message>
+  <Message number="2572" eDefine="SYS_ERR_HW_FW_AXC_REFLASH_FAILED">
+    <Title>固件更新失败</Title>
+    <Description>
+      <arg format="%s" ordinal="1" /> 固件的升级已失败。<p />当前版本：<arg format="%d" ordinal="2" />。内部错误代码：<arg format="%d" ordinal="3" />。</Description>
+    <Actions>1. 检查其他硬件事件日志消息以获得错误情况的详细说明。<p />2. 重新安装系统。<p /></Actions>
+  </Message>
+  <Message number="2573" eDefine="SYS_ERR_HW_FW_AXC_FILE_ERROR">
+    <Title>无法下载固件文件</Title>
+    <Description>找不到固件文件 <arg format="%s" ordinal="1" /> 。内部错误代码：<arg format="%d" ordinal="2" />。</Description>
+    <Actions>重新安装系统</Actions>
+  </Message>
+  <Message number="2574" eDefine="SYS_ERR_HW_FW_AXC_CORRUPT_FLASH">
+    <Title>轴计算机硬件损坏</Title>
+    <Description>
+      <arg format="%s" ordinal="1" /> 闪存中有损坏的内容。内部错误代码：<arg format="%d" ordinal="2" />。</Description>
+    <Actions>1. 检查其他硬件事件日志消息以获得错误情况的详细说明。<p />2. 重新启动系统。<p />3. 如果仍然发生故障，更换轴计算机。</Actions>
+  </Message>
+  <Message number="2575" eDefine="SYS_ERR_HW_FW_AXC_NO_BOARD_PRESENT">
+    <Title>未找到任何轴计算机电路板</Title>
+    <Description>系统未检测到任何已连接的轴计算机。</Description>
+    <Actions>1. 检查系统中的轴计算机电路板。<p />2. 检查主计算机和轴计算机之间的以太网电缆。<p />3. 重新启动系统。</Actions>
+  </Message>
+  <Message number="2576" eDefine="SYS_ERR_HW_FW_AXC_NO_CONTACT">
+    <Title>轴固件：无通信</Title>
+    <Description>当尝试检查固件版本时，系统和轴电路板 <arg format="%d" ordinal="1" /> 通信失败。</Description>
+    <Consequences>系统无法检查；如有必要在受影响的轴计算机上升级固件。</Consequences>
+    <Actions>1. 检查系统中的轴计算机电路板。<p />2. 检查主计算机和轴计算机之间的以太网电缆。<p />3. 重启系统。<p /></Actions>
+  </Message>
+  <Message number="2577" eDefine="SYS_ERR_HW_FW_AXC_HW_EEPROM_ERROR">
+    <Title>轴计算机硬件数据错误</Title>
+    <Description>
+在驱动模块 <arg format="%d" ordinal="1" /> 中，轴计算机将受到破坏的内容存储到了装置上。
+      </Description>
+    <Consequences>系统将转到“系统故障”状态。 </Consequences>
+    <Causes>对存储在装置上的轴计算机信息的完整性检查已失败。</Causes>
+    <Actions>
+1) 使用主电源开关重启系统来进行重试。<p />2) 更换有故障的轴计算机。
+      </Actions>
+  </Message>
+  <Message number="2580" eDefine="SYS_ERR_HW_FW_CB_REFLASH_STARTED">
+    <Title>开始固件更新</Title>
+    <Description>已开始对 <arg format="%s" ordinal="1" /> 固件进行必要的更新。内部代码：<arg format="%d" ordinal="2" />]. <p />文件：[ <arg format="%s" ordinal="3" />]. <p /></Description>
+    <Actions>等待更新完成</Actions>
+  </Message>
+  <Message number="2581" eDefine="SYS_ERR_HW_FW_CB_REFLASH_COMPLETE">
+    <Title>固件更新结束</Title>
+    <Description>
+      <arg format="%s" ordinal="1" /> 固件的更新已成功完成。内部代码：[<arg format="%d" ordinal="2" />]</Description>
+    <Actions>无需采取任何措施</Actions>
+  </Message>
+  <Message number="2582" eDefine="SYS_ERR_HW_FW_CB_REFLASH_FAILED">
+    <Title>固件更新失败</Title>
+    <Description>
+      <arg format="%s" ordinal="1" /> 固件的更新已失败。<p />内部错误代码：<arg format="%d" ordinal="2" /><p /></Description>
+    <Actions>1. 检查其他错误消息以获得详细说明。<p />2. 重新安装系统。<p /></Actions>
+  </Message>
+  <Message number="2583" eDefine="SYS_ERR_HW_FW_CB_FILE_CORRUPT">
+    <Title>固件文件损坏</Title>
+    <Description>更新 <arg format="%s" ordinal="1" /> 固件失败。<p />固件文件 [ <arg format="%s" ordinal="3" />] 已损坏。<p />内部错误代码：<arg format="%d" ordinal="2" />。<p /></Description>
+    <Actions>重新安装系统</Actions>
+  </Message>
+  <Message number="2584" eDefine="SYS_ERR_HW_FW_CB_FILE_NOT_FOUND">
+    <Title>未找到固件文件</Title>
+    <Description>更新 <arg format="%s" ordinal="1" /> 固件失败。<p />未找到固件文件 [ <arg format="%s" ordinal="3" />]。<p />内部错误代码：<arg format="%d" ordinal="2" />。<p /></Description>
+    <Actions>重新安装系统</Actions>
+  </Message>
+  <Message number="2585" eDefine="SYS_ERR_HW_FW_NO_CB_BOARD_PRESENT">
+    <Title>轴计算机未找到安全系统</Title>
+    <Description>轴计算机无法检测到安全系统。</Description>
+    <Actions>1. 检查轴计算机和安全系统之间的通信电缆。<p />2. 检查安全系统的电源。<p />3. 重新启动系统<p /></Actions>
+  </Message>
+  <Message number="2590" eDefine="SYS_ERR_HW_FW_DU_REFLASH_STARTED">
+    <Title>开始固件更新</Title>
+    <Description>已开始对驱动模块 <arg format="%d" ordinal="2" /> 中的 <arg format="%s" ordinal="1" /> 固件进行必要的更新。<p />文件：[ <arg format="%s" ordinal="3" />]. <p /></Description>
+    <Actions>等待更新完成，这一过程将持续约 3.5 分钟。</Actions>
+  </Message>
+  <Message number="2591" eDefine="SYS_ERR_HW_FW_DU_REFLASH_COMPLETE">
+    <Title>固件更新结束</Title>
+    <Description>成功更新驱动模块 <arg format="%d" ordinal="2" /> 中的 <arg format="%s" ordinal="1" /> 固件。</Description>
+    <Actions>无需采取任何措施</Actions>
+  </Message>
+  <Message number="2592" eDefine="SYS_ERR_HW_FW_DU_REFLASH_FAILED">
+    <Title>固件更新失败</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="2" /> 中的 <arg format="%s" ordinal="1" /> 固件的更新已失败。</Description>
+    <Actions>1. 检查其他错误消息以获得详细说明。<p />2. 重新安装系统。<p /></Actions>
+  </Message>
+  <Message number="2593" eDefine="SYS_ERR_HW_FW_DU_FILE_CORRUPT">
+    <Title>固件文件损坏</Title>
+    <Description>更新驱动模块 <arg format="%d" ordinal="2" /> 中的 <arg format="%s" ordinal="1" /> 固件失败。<p />固件文件 [ <arg format="%s" ordinal="3" />] 已损坏。<p /></Description>
+    <Actions>重新安装系统</Actions>
+  </Message>
+  <Message number="2594" eDefine="SYS_ERR_HW_FW_DU_FILE_NOT_FOUND">
+    <Title>未找到固件文件</Title>
+    <Description>更新驱动模块 <arg format="%d" ordinal="2" /> 中的 <arg format="%s" ordinal="1" /> 固件失败。<p />未找到固件文件 [ <arg format="%s" ordinal="3" />]。<p /></Description>
+    <Actions>重新安装系统</Actions>
+  </Message>
+  <Message number="2601" eDefine="SYS_ERR_HW_IBS_BOARD_NOT_FOUND">
+    <Title>Interbus 主控/从控电路板缺失</Title>
+    <Description>Interbus 主控/从控电路板不工作。</Description>
+    <Consequences>无法进行 Interbus 通信。</Consequences>
+    <Causes>Interbus 主控/从控电路板出现故障或无此设备。</Causes>
+    <Actions>1) 确保 Interbus 主控/从控电路板已安装。<p />2) 更换有故障的电路板。</Actions>
+  </Message>
+  <Message number="2651" eDefine="SYS_ERR_HW_SERIAL_BOARD_NOT_FOUND">
+    <Title>不能访问串行端口硬件</Title>
+    <Description>系统试图为串行端口 <arg format="%s" ordinal="1" /> 定址，但未成功。</Description>
+    <Consequences>不能访问可选串行端口硬件。连接器及使用连接器的物理信道不可用。</Consequences>
+    <Causes>串行端口硬件缺失或出现故障。</Causes>
+    <Actions>1) Make sure the required serial port hardware has been correctly installed and is not faulty.<p />2) Replace the serial port hardware.</Actions>
+  </Message>
+  <Message number="3503" eDefine="SYS_ERR_HW_MOC_IO_SYNCH_FAILED">
+    <Title>转数计数器更新失败</Title>
+    <Description>接点 <arg format="%s" ordinal="1" /> 转数计数器的更新已失败。</Description>
+    <Consequences>接点未同步</Consequences>
+    <Causes>1. 接点缺失或处于非活动状态 <p />2. 测量系统发生错误</Causes>
+    <Actions>1. 检查接点是否处于活动状态 <p />2. 检查配置文件 <p />3. 检查测量系统</Actions>
+  </Message>
+  <Message number="3601" eDefine="SYS_ERR_HW_AB_MODULE_NOT_FOUND">
+    <Title>Fieldbus Adapter 丢失</Title>
+    <Description>Fieldbus Adapter 丢失。</Description>
+    <Consequences>无法与 Fieldbus Adapter 通信。</Consequences>
+    <Causes>Fieldbus Adapter 出现故障或已丢失。</Causes>
+    <Actions>
+      1. 请确认是否已安装 Fieldbus Adapter。<p />2. 更换有故障的模块。    </Actions>
+  </Message>
+  <Message number="4100" eDefine="SYS_ERR_HW_FOX_NOT_SUPPORTED">
+    <Title>驱动系统不受支持</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 中配置的驱动系统不是“驱动系统 '04”类型。</Description>
+    <Consequences>系统进入系统故障摂状态。</Consequences>
+    <Causes>1. 使用的驱动模块键错误，即配置与硬件不匹配。<p />2. 系统中使用的硬件错误。</Causes>
+    <Actions>1. 重新安装驱动模块键与硬件匹配的系统。<p />2. 将驱动模块替换为支持“驱动系统 '04”的驱动模块。</Actions>
+  </Message>
+  <Message number="4101" eDefine="SYS_ERR_HW_ROBODRIVE_NOT_SUPPORTED">
+    <Title>驱动系统不受支持</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 中配置的驱动系统不是“驱动系统 '09”类型。</Description>
+    <Consequences>系统进入“系统故障”状态。</Consequences>
+    <Causes>1. 使用的驱动模块键错误，即配置与硬件不匹配。<p />2. 系统中使用的硬件错误。</Causes>
+    <Actions>1. 重新安装驱动模块键与硬件匹配的系统。<p />2. 将驱动模块替换为支持“驱动系统 '09”的驱动模块。</Actions>
+  </Message>
+  <Message number="4200" eDefine="SYS_ERR_HW_DRIVES_COMMUNICATION_ERROR">
+    <Title>与所有驱动单元的通信中断</Title>
+    <Description>       在驱动模块 <arg format="%d" ordinal="1" /> 中，轴计算机与所有驱动单元的通信已中断。
+    </Description>
+    <Consequences>纠正该错误之前无法进行任何操作。系统进入零转矩的“电机关闭”状态。</Consequences>
+    <Causes>驱动单元和轴计算机之间存在通信问题。</Causes>
+    <Actions>       1) 检查所有电缆是否已正确连接。<p />2) 检查驱动单元是否拥有逻辑电源。<p />3) 检查/更换以太网电缆。<p />4) 检查其他硬件事件日志消息。<p />5) 检查事件日志中的电源单元错误消息。<p />6) 检查电源单元与驱动单元之间的接线。<p />7) 检查电源单元的 24V 输出。 
+  </Actions>
+  </Message>
+</Domain>

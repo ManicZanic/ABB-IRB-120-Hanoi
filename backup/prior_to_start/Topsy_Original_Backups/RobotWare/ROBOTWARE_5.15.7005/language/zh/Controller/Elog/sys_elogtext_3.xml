@@ -1,0 +1,438 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="SYS" domainNo="2" lang="zh" elogTextVersion="1.0" min="249" max="366">
+  <Message number="249" eDefine="SYS_ERR_SYS_CONFLICT_DRV3K">
+    <Title>电机接触器冲突，DRV3</Title>
+    <Description>驱动系统 3 的两个电机接触器中，只有一个确认了启动指令。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Causes>电机接触器辅助触点或其耗材出现故障。</Causes>
+    <Actions>1) 检查电缆及其连接。<p />2) 检查辅助触点的功能。</Actions>
+  </Message>
+  <Message number="250" eDefine="SYS_ERR_SYS_CONFLICT_DRV4K">
+    <Title>电机接触器冲突，DRV4</Title>
+    <Description>驱动系统 4 的两个电机接触器中，只有一个确认了启动指令。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Causes>电机接触器辅助触点或其耗材出现故障。</Causes>
+    <Actions>1) 检查电缆及其连接。<p />2) 检查辅助触点的功能。</Actions>
+  </Message>
+  <Message number="252" eDefine="SYS_ERR_SYS_ACTIVE_DRV1PTCINT">
+    <Title>电机温度高，DRV1</Title>
+    <Description>操纵器电机中温度过高。 确保重新发出“电机开启”命令之前电机充分散热。<p /></Description>
+    <Actions>1)重新发出“电机开启”命令之前，等待过热电机充分散热。 <p />2)如果使用了空气过滤器选件，请检查是否被堵塞，是否需要进行更换</Actions>
+  </Message>
+  <Message number="253" eDefine="SYS_ERR_SYS_ACTIVE_DRV1PTCEXT">
+    <Title>外部设备温度高， DRV1</Title>
+    <Description>外部设备温度过高。确保重新发出“电机上电”命令之前外部设备充分散热。<p /></Description>
+    <Actions>重新发出“电机上电”命令之前，等待过热电机充分散热。</Actions>
+  </Message>
+  <Message number="254" eDefine="SYS_ERR_SYS_ACTIVE_DRV2PTCINT">
+    <Title>电机温度高，DRV2</Title>
+    <Description>操纵器电机中温度过高。 确保重新发出“电机开启”命令之前电机充分散热。<p /></Description>
+    <Actions>1)重新发出“电机开启”命令之前，等待过热电机充分散热。 <p />2)如果使用了空气过滤器选件，请检查是否被堵塞，是否需要进行更换</Actions>
+  </Message>
+  <Message number="255" eDefine="SYS_ERR_SYS_ACTIVE_DRV2PTCEXT">
+    <Title>外部设备温度高， DRV2</Title>
+    <Description>外部设备温度过高。确保重新发出“电机上电”命令之前外部设备充分散热。<p /></Description>
+    <Actions>重新发出“电机上电”命令之前，等待过热电机充分散热。</Actions>
+  </Message>
+  <Message number="256" eDefine="SYS_ERR_SYS_ACTIVE_DRV3PTCINT">
+    <Title>电机温度高，DRV3</Title>
+    <Description>操纵器电机中温度过高。 确保重新发出“电机开启”命令之前电机充分散热。<p /></Description>
+    <Actions>1)重新发出“电机开启”命令之前，等待过热电机充分散热。 <p />2)如果使用了空气过滤器选件，请检查是否被堵塞，是否需要进行更换</Actions>
+  </Message>
+  <Message number="257" eDefine="SYS_ERR_SYS_ACTIVE_DRV3PTCEXT">
+    <Title>外部设备温度高， DRV3</Title>
+    <Description>外部设备温度过高。确保重新发出“电机上电”命令之前外部设备充分散热。<p /></Description>
+    <Actions>重新发出“电机上电”命令之前，等待过热电机充分散热。</Actions>
+  </Message>
+  <Message number="258" eDefine="SYS_ERR_SYS_ACTIVE_DRV4PTCINT">
+    <Title>电机温度高，DRV4</Title>
+    <Description>操纵器电机中温度过高。 确保重新发出“电机开启”命令之前电机充分散热。<p /></Description>
+    <Actions>1)重新发出“电机开启”命令之前，等待过热电机充分散热。 <p />2)如果使用了空气过滤器选件，请检查是否被堵塞，是否需要进行更换</Actions>
+  </Message>
+  <Message number="259" eDefine="SYS_ERR_SYS_ACTIVE_DRV4PTCEXT">
+    <Title>外部设备温度高， DRV4</Title>
+    <Description>外部设备温度过高。确保重新发出“电机上电”命令之前外部设备充分散热。<p /></Description>
+    <Actions>重新发出“电机上电”命令之前，等待过热电机充分散热。</Actions>
+  </Message>
+  <Message number="260" eDefine="SYS_ERR_SYS_CONFLICT_DRV1RUN">
+    <Title>Run Control 状态冲突，DRV1</Title>
+    <Description>驱动系统 1 的 Run Control 和“电机接触器”之间的状态冲突。</Description>
+    <Consequences>系统进入 SYS HALT 状态。</Consequences>
+    <Causes>电机接触器或其耗材出现故障。</Causes>
+    <Actions>1) 检查电缆及其连接。<p />2) 执行热启动。</Actions>
+  </Message>
+  <Message number="262" eDefine="SYS_ERR_SYS_PSC_NOT_FOUND">
+    <Title>       SC <arg format="%d" ordinal="1" /> 找不到
+    </Title>
+    <Description>       系统的驱动模块 <arg format="%d" ordinal="2" /> 上具有 <arg format="%s" ordinal="1" />安全控制器 (SC) 选项，但未找到安全控制器。
+    </Description>
+    <Actions>       - 检查安全控制器电缆。<p />- 检查安全控制器健康情况。<p /><p />在执行建议的操作之后热启动控制器。
+    </Actions>
+  </Message>
+  <Message number="263" eDefine="SYS_ERR_SYS_PSC_NO_COM_ESTABLISHED">
+    <Title>       SC <arg format="%d" ordinal="1" /> 通信故障
+    </Title>
+    <Description>       安全控制器 (SC) <arg format="%d" ordinal="1" />发生通信错误</Description>
+    <Actions>       - 检查安全控制器电缆。<p />- 检查安全控制器健康情况。<p /><p />在执行建议的操作之后热启动控制器。
+    </Actions>
+  </Message>
+  <Message number="264" eDefine="SYS_ERR_SYS_PSC_OPTION_NOT_PRESENT">
+    <Title>       SC <arg format="%d" ordinal="1" /> 未提供选项
+    </Title>
+    <Description>       在驱动模块 <arg format="%d" ordinal="1" /> 上找到 <arg format="%s" ordinal="2" /> 安全控制器 (SC)。本系统在该驱动模块上没有安全控制器选项。
+    </Description>
+    <Actions>       - 检查驱动模块软件选项。<p />- 安装带有安全控制器选项的系统。
+    </Actions>
+  </Message>
+  <Message number="265" eDefine="SYS_ERR_SYS_PSC_SOFT_STOP_ERROR">
+    <Title>SC 软停止错误</Title>
+    <Description>安全控制器 (SC) 软停止未在计划时间内打开电机接触器。</Description>
+    <Actions>如果出现 SafeMove，则检查 Lim 开关连接</Actions>
+  </Message>
+  <Message number="266" eDefine="SYS_ERR_SYS_PSC_INPUT_PINCODE">
+    <Title>       SC <arg format="%d" ordinal="1" /> PIN 代码请求
+    </Title>
+    <Description>       安全控制器 (SC) <arg format="%d" ordinal="1" /> 使用新的安全配置并需要激活新的 PIN 代码。
+    </Description>
+    <Actions>       1. 以具有安全配置权限的用户登录。<p />2. 在控制面板中输入安全控制器的新 PIN 代码。
+    </Actions>
+  </Message>
+  <Message number="267" eDefine="SYS_ERR_SYS_PSC_STARTUP_ERROR">
+    <Title>       SC <arg format="%d" ordinal="1" /> 初始化失败
+    </Title>
+    <Description>       安全控制器 (SC) <arg format="%d" ordinal="1" /> 无法正确初始化，或者在启动期间无法响应。
+    </Description>
+    <Actions>       1. 检查以前的错误日志以了解可能的原因。<p />2. 重新启动系统。
+    </Actions>
+  </Message>
+  <Message number="268" eDefine="SYS_ERR_SYS_PSC_WRONG_TYPE">
+    <Title>       SC <arg format="%d" ordinal="1" /> 错误的类型
+    </Title>
+    <Description>       在驱动模块 <arg format="%d" ordinal="1" />（预期为 <arg format="%s" ordinal="3" />）上找到 <arg format="%s" ordinal="2" /> 安全控制器 (SC)。
+    </Description>
+    <Actions>       - 检查驱动模块软件选项。<p />- 用正确的安全控制器选项安装系统。<p />- 安装正确类型的安全控制器。
+    </Actions>
+  </Message>
+  <Message number="269" eDefine="SYS_ERR_SYS_PSC_CALIB_ERROR">
+    <Title>
+SC <arg format="%d" ordinal="1" /> 电机校准数据错误
+	</Title>
+    <Description>
+	  尚未将任何校准数据下载到驱动模块 <arg format="%d" ordinal="1" /> 上的安全控制器 (SC) 中，或者数据错误。
+	</Description>
+    <Actions>
+	  将电机校准数据下载到安全控制器 (SC)。
+	</Actions>
+  </Message>
+  <Message number="270" eDefine="SYS_ERR_SYS_PAN_MOD_ACCESS_ERR">
+    <Title>访问错误</Title>
+    <Description>面板模式访问错误。<p /></Description>
+    <Actions>检查 I/O 配置文件。</Actions>
+  </Message>
+  <Message number="280" eDefine="SYS_ERR_SYS_CONFLICT_SIGNAL">
+    <Title>符号冲突</Title>
+    <Description>IO 配置中定义的信号 <arg format="%s" ordinal="1" /><p />与带有相同名称的另一<p />程序符号冲突。<p />由于此状况，信号将无法映射到<p />程序变量。<p /></Description>
+    <Actions>重新命名 IO 配置<p />中的信号。</Actions>
+  </Message>
+  <Message number="281" eDefine="SYS_ERR_SYS_IO_CFG_ERR">
+    <Title>IO 配置错误</Title>
+    <Description>
+      <arg format="%s" ordinal="1" /> 信号名称为 <arg format="%s" ordinal="3" /> 的 <arg format="%s" ordinal="2" /><p />其信号类型<p />错误。发现 <arg format="%s" ordinal="4" /> 预期 <arg format="%s" ordinal="5" />。<p /></Description>
+    <Actions>更改配置后<p />重新启动系统。</Actions>
+  </Message>
+  <Message number="282" eDefine="SYS_ERR_SYS_TX_INDEX_EXIST">
+    <Title>资源与索引已存在</Title>
+    <Description>资源 <arg format="%s" ordinal="1" /><p />索引 <arg format="%d" ordinal="2" />。 <p /></Description>
+  </Message>
+  <Message number="283" eDefine="SYS_ERR_SYS_TX_NO_MEM">
+    <Title>文本数据库已满。</Title>
+    <Description>资源 <arg format="%s" ordinal="1" /><p />索引 <arg format="%d" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="284" eDefine="SYS_ERR_SYS_IO_CFG_SYSIN_ERR">
+    <Title>系统输入的信号类型错误</Title>
+    <Description>系统输入 <arg format="%s" ordinal="1" /> 配置的 I/O 信号<p />类型错误。<p />I/O 信号 <arg format="%s" ordinal="2" /> 的类型为 <arg format="%s" ordinal="3" /> ，但该系统输入要求<p />的 I/O 信号类型为 <arg format="%s" ordinal="4" />。</Description>
+    <Actions>更改指定系统输入的配置。<p /></Actions>
+  </Message>
+  <Message number="285" eDefine="SYS_ERR_SYS_IO_CFG_SYSOUT_ERR">
+    <Title>系统输出的信号类型错误</Title>
+    <Description>系统输出 <arg format="%s" ordinal="1" /> 配置的 I/O 信号<p />类型错误。<p />I/O 信号 <arg format="%s" ordinal="2" /> 的类型为 <arg format="%s" ordinal="3" /> ，但该系统输出要求<p />的 I/O 信号类型为 <arg format="%s" ordinal="4" />。<p /></Description>
+    <Actions>更改指定系统输出的配置。</Actions>
+  </Message>
+  <Message number="286" eDefine="SYS_ERR_SYS_IO_CONFLICT_SYSOUT_ERR">
+    <Title>系统输出的 I/O 信号不唯一</Title>
+    <Description>每个系统输出必须配置一个唯一的 I/O 信号。<p />不可以向多个系统输出配置同一 I/O 信号。<p /><p />系统输出： <arg format="%s" ordinal="1" /><p />信号名称： <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>
+      <p />
+    </Actions>
+  </Message>
+  <Message number="287" eDefine="SYS_ERR_SYS_IO_CONFLICT_SYSIN_ERR">
+    <Title>系统输入的 I/O 信号不唯一</Title>
+    <Description>每个“系统输入”必须配置唯一的 I/O 信号。<p />不可以向多个“系统输入”配置同一 I/O 信号。<p /><p />“系统输入”： <arg format="%s" ordinal="1" /><p /> 信号名称： <arg format="%s" ordinal="2" /></Description>
+  </Message>
+  <Message number="288" eDefine="SYS_ERR_SYS_IO_UNKNOWN_SYSOUT_ERR">
+    <Title>未知系统输出类型</Title>
+    <Description>系统未知配置的系统输出类型。<p />未知系统输出： <arg format="%s" ordinal="1" /></Description>
+    <Actions>检验系统输出名称拼写是否正确。</Actions>
+  </Message>
+  <Message number="289" eDefine="SYS_ERR_SYS_IO_UNKNOWN_SYSIN_ERR">
+    <Title>未知系统输入类型</Title>
+    <Description>系统未知配置的系统输入类型。<p />未知系统输入： <arg format="%s" ordinal="1" /></Description>
+    <Actions>检验系统输入名称拼写是否正确。</Actions>
+  </Message>
+  <Message number="290" eDefine="SYS_ERR_SYS_IO_ARG_TASK_SYSOUT_ERR">
+    <Title>未知的系统输出机械单元名称</Title>
+    <Description>系统输出配置了一个系统未知的机械单元名称。<p />系统输出： <arg format="%s" ordinal="1" /><p />机械单元名称： <arg format="%s" ordinal="2" /></Description>
+    <Actions>必须配置指定的机械单元，以供系统输出使用<p />检验机械单元名称拼写是否正确。<p /></Actions>
+  </Message>
+  <Message number="291" eDefine="SYS_ERR_SYS_IO_UNKNOWN_RESTR_TYPE_ERR">
+    <Title>未知系统输入限制类型</Title>
+    <Description>系统未知配置的系统输入限制类型。<p />未知系统输入限制： <arg format="%s" ordinal="1" /></Description>
+    <Actions>检验系统输入限制名称拼写是否正确。</Actions>
+  </Message>
+  <Message number="292" eDefine="SYS_ERR_SYS_IO_UNKNOWN_RESTR_ERR">
+    <Title>未知系统输入限制</Title>
+    <Description>系统未知配置的系统输入限制。<p />系统输入限制类型： <arg format="%s" ordinal="1" /><p />未知系统输入限制： <arg format="%s" ordinal="2" /></Description>
+    <Actions>检验系统输入限制名称拼写是否正确。</Actions>
+  </Message>
+  <Message number="293" eDefine="SYS_ERR_SYS_IO_SYSIN_RESTRICTED_ERR">
+    <Title>系统输入受限</Title>
+    <Description>请求的 <arg format="%s" ordinal="1" /> 受 I/O 信号 <arg format="%s" ordinal="3" /> 所设置的系统输入 <arg format="%s" ordinal="2" /> 限制。</Description>
+    <Consequences>系统输入 <arg format="%s" ordinal="4" /> 调用的操作将不会发生，操作也不会受到影响。</Consequences>
+    <Causes>由于许多原因，系统输入 <arg format="%s" ordinal="5" /> 可能是由外部设备（如 PLC）设定的。</Causes>
+    <Actions>1) 调查系统输入的设置原因，如果需要，更正此原因。</Actions>
+  </Message>
+  <Message number="294" eDefine="SYS_ERR_SYS_IO_FAILURE_READ_IO">
+    <Title>无法完成 <arg format="%s" ordinal="1" /> 动作。</Title>
+    <Description>由于 IO 单元无响应，无法完成请求的动作。</Description>
+    <Consequences>无法判定该动作是否存在任何限制设置。</Consequences>
+    <Causes>如果不再次启用 I/O 单元，则无法完成请求的动作。</Causes>
+    <Actions>切勿通过系统输入/输出禁用单元。<p /></Actions>
+  </Message>
+  <Message number="295" eDefine="SYS_ERR_SYS_IO_CFG_SYSOUT_ERR_SAF">
+    <Title>信号无法用作系统输出。</Title>
+    <Description>系统输出 <arg format="%s" ordinal="1" /> 配置的 I/O 信号类别错误。I/O 信号 <arg format="%s" ordinal="2" /> 带有类别安全，无法用作系统输出。</Description>
+    <Actions>请选择另一信号，或者将它设置到另一个类别。</Actions>
+  </Message>
+  <Message number="296" eDefine="SYS_ERR_SYS_IO_ARG_TASK_SYSIN_ERR">
+    <Title>配置了错误的任务名称</Title>
+    <Description>为 <arg format="%s" ordinal="1" /> 系统输出 <arg format="%s" ordinal="2" />配置了错误的任务名称。</Description>
+    <Consequences>数字输出信号将无法连接至指定的事件。</Consequences>
+    <Actions>更改配置后重新启动系统。</Actions>
+  </Message>
+  <Message number="297" eDefine="SYS_ERR_SYS_IO_SYSHALT">
+    <Title>系统输出通信失败</Title>
+    <Description>无法设置连接到系统输出 <arg format="%s" ordinal="2" /> 的 I/O 信号 <arg format="%s" ordinal="1" /> 的值。</Description>
+    <Consequences>系统进入“系统暂停”状态。</Consequences>
+    <Causes>- 与 I/O 单元的连接可能已经丢失。</Causes>
+  </Message>
+  <Message number="307" eDefine="SYS_ERR_SYS_ACTIVE_MOTOR_FAN1">
+    <Title>电机散热风扇故障，轴 1</Title>
+    <Description>连接到驱动模块 <arg format="%d" ordinal="1" /> 的机器人的轴 1 电机散热风扇运行不正确。</Description>
+    <Consequences>有关该状态的详细含义，请参阅《故障排除手册》IRC5 的说明。</Consequences>
+    <Causes>- 风扇电源接线可能损坏，或未正确连接到电机或接触器单元。<p />- 风扇或驱动模块电源可能发生故障。</Causes>
+    <Actions>1) 确保风扇电缆正确连接<p />2) 确保风扇可以自由转动，并且气流未受阻。<p />3) 确保驱动模块电源的输出和输入电压位于《故障排除手册》规定的范围内。更换有故障的单元。<p /><p /></Actions>
+  </Message>
+  <Message number="308" eDefine="SYS_ERR_SYS_ACTIVE_MOTOR_FAN2">
+    <Title>电机散热风扇故障，轴 2</Title>
+    <Description>连接到驱动模块 <arg format="%d" ordinal="1" /> 的机器人的轴 2 电机散热风扇运行不正确。</Description>
+    <Consequences>有关该状态的详细含义，请参阅《故障排除手册》IRC5 的说明。</Consequences>
+    <Causes>- 风扇电源接线可能损坏，或未正确连接到电机或接触器单元。<p />- 风扇或驱动模块电源可能发生故障。</Causes>
+    <Actions>1) 确保风扇电缆正确连接 <p />2) 确保风扇可以自由转动，并且气流未受阻。<p />3) 确保驱动模块电源的输出和输入电压位于《故障排除手册》规定的范围内。更换有故障的单元。<p /><p /></Actions>
+  </Message>
+  <Message number="309" eDefine="SYS_ERR_SYS_ACTIVE_MOTOR_FAN3">
+    <Title>电机散热风扇故障，轴 3</Title>
+    <Description>连接到驱动模块 <arg format="%d" ordinal="1" /> 的机器人的轴 3 电机散热风扇运行不正确。</Description>
+    <Consequences>有关该状态的详细含义，请参阅《故障排除手册》IRC5 的说明。</Consequences>
+    <Causes>- 风扇电源接线可能损坏，或未正确连接到电机或接触器单元。<p />- 风扇或驱动模块电源可能发生故障。</Causes>
+    <Actions>1) 确保风扇电缆正确连接 <p />2) 确保风扇可以自由转动，并且气流未受阻。<p />3) 确保驱动模块电源的输出和输入电压位于《故障排除手册》规定的范围内。更换有故障的单元。<p /><p /></Actions>
+  </Message>
+  <Message number="310" eDefine="SYS_ERR_SYS_PSC_COMM_ERR">
+    <Title>       SC <arg format="%d" ordinal="1" /> 通信故障
+    </Title>
+    <Description>       在尝试与安全控制器 (SC) <arg format="%d" ordinal="1" /> 通信时发生错误</Description>
+    <Actions>       - 检查安全控制器电缆。<p />- 检查安全控制器健康情况。<p /><p />在执行建议的操作之后热启动控制器。
+    </Actions>
+  </Message>
+  <Message number="311" eDefine="SYS_ERR_SYS_OPEN_ENABLE1">
+    <Title>Enable 1 开启 </Title>
+    <Description>监测安全系统的 ENABLE 1 电路被打开。</Description>
+    <Consequences>系统转入“系统中断”状态。</Consequences>
+    <Causes>安全系统可能存在内部故障，或内部监控功能检测到故障。</Causes>
+    <Actions>1) 检查同安全系统之间的所有连接。<p />2) 如果存在故障，请更换有故障的电路板。</Actions>
+  </Message>
+  <Message number="312" eDefine="SYS_ERR_SYS_OPEN_ENABLE2">
+    <Title>Enable 2 开启 </Title>
+    <Description>监测轴计算机的 Enable 2 电路被打开。</Description>
+    <Consequences>系统转入“系统中断”状态。</Consequences>
+    <Causes>主计算机和轴计算机之间可能存在连接问题。</Causes>
+    <Actions>
+		1) 检查同轴计算机之间的所有连接。<p />2) 检查连接到安全系统的电缆。<p /></Actions>
+  </Message>
+  <Message number="313" eDefine="SYS_ERR_SYS_ENABLE1_SUPERV">
+    <Title>Enable1 监测故障 </Title>
+    <Description>ENABLE1 电路断开。该电路监测安全系统和主计算机的功能。</Description>
+    <Consequences>系统转入“系统中断”状态。</Consequences>
+    <Causes>被 ENABLE1 电路监测的任何单元检测到故障（很可能是软件故障）。</Causes>
+    <Actions>1) 按下“电机开启”按钮，尝试重新启动。如果无法重新启动，则表明安全系统或轴计算机中存在硬件故障。如果可以重新启动，则表明是软件故障。对于该种情况，请联系您当地的 ABB 代表。<p />2) 通过检查 LED 指示灯，确定发生故障的单元。《故障排除手册》对 LED 作了介绍。更换有故障的单元。</Actions>
+  </Message>
+  <Message number="314" eDefine="SYS_ERR_SYS_ENABLE2_DRV1_SUPERV">
+    <Title>Enable2 监测故障 </Title>
+    <Description>ENABLE2 和驱动模块 1 之间的电路断开。这个电路起监测作用，比如监测安全系统和轴计算机的功能。</Description>
+    <Consequences>系统转入“系统中断”状态。</Consequences>
+    <Causes>被 ENABLE2 电路监测的任何单元检测到故障（很可能是软件故障）。</Causes>
+    <Actions>1) 按下“电机开启”按钮，尝试重新启动。如果无法重新启动，则表明安全系统或轴计算机中存在硬件故障。如果可以重新启动，则表明是软件故障。对于该种情况，请联系您当地的 ABB 代表。<p />2) 通过检查 LED 指示灯，确定发生故障的单元。《故障排除手册》对 LED 作了介绍。更换有故障的单元。</Actions>
+  </Message>
+  <Message number="315" eDefine="SYS_ERR_SYS_ENABLE2_DRV2_SUPERV">
+    <Title>Enable2 监测故障</Title>
+    <Description>ENABLE2 和驱动模块 2 之间的电路断开。这个电路起监测作用，比如监测安全系统和轴计算机的功能。<p /></Description>
+    <Consequences>系统转入“系统中断”状态。</Consequences>
+    <Causes>被 ENABLE2 电路监测的任何单元检测到故障（很可能是软件故障）。</Causes>
+    <Actions>1) 按下“电机开启”按钮，尝试重新启动。如果无法重新启动，则表明安全电路板或轴计算机中存在硬件故障。如果可以重新启动，则表明是软件故障。对于该种情况，请联系您当地的 ABB 代表。<p />2) 通过检查 LED 指示灯，确定发生故障的单元。《故障排除手册》对 LED 作了介绍。更换有故障的单元。</Actions>
+  </Message>
+  <Message number="316" eDefine="SYS_ERR_SYS_ENABLE2_DRV3_SUPERV">
+    <Title>Enable2 监测故障</Title>
+    <Description>ENABLE2 和驱动模块 3 之间的电路断开。这个电路起监测作用，比如监测安全系统和轴计算机的功能。<p /></Description>
+    <Consequences>系统转入“系统中断”状态。</Consequences>
+    <Causes>被 ENABLE2 电路监测的任何单元检测到故障（很可能是软件故障）。</Causes>
+    <Actions>1) 按下“电机开启”按钮，尝试重新启动。如果无法重新启动，则表明安全系统或轴计算机中存在硬件故障。如果可以重新启动，则表明是软件故障。对于该种情况，请联系您当地的 ABB 代表。<p />2) 通过检查 LED 指示灯，确定发生故障的单元。《故障排除手册》对 LED 作了介绍。更换有故障的单元。</Actions>
+  </Message>
+  <Message number="317" eDefine="SYS_ERR_SYS_ENABLE2_DRV4_SUPERV">
+    <Title>Enable2 监测故障</Title>
+    <Description>ENABLE2 和驱动模块 4 之间的电路断开。这个电路起监测作用，比如监测安全系统和轴计算机的功能。</Description>
+    <Consequences>系统转入“系统中断”状态。</Consequences>
+    <Causes>被 ENABLE2 电路监测的任何单元检测到故障（很可能是软件故障）。</Causes>
+    <Actions>1) 按下“电机开启”按钮，尝试重新启动。如果无法重新启动，则表明安全系统或轴计算机中存在硬件故障。如果可以重新启动，则表明是软件故障。对于该种情况，请联系您当地的 ABB 代表。<p />2) 通过检查 LED 指示灯，确定发生故障的单元。《故障排除手册》对 LED 作了介绍。更换有故障的单元。</Actions>
+  </Message>
+  <Message number="321" eDefine="SYS_ERR_SYS_NOT_A_NUMBER">
+    <Title>非编号</Title>
+    <Description>任务 <arg format="%s" ordinal="1" /> 中发现非编号。<p />发现一个类型为 "<arg format="%s" ordinal="2" />" 的符号带有未定义的编号。</Description>
+    <Consequences>未定义的编号替换为 "<arg format="%s" ordinal="3" />"。</Consequences>
+  </Message>
+  <Message number="322" eDefine="SYS_ERR_SYS_POSITIVE_INFINITY">
+    <Title>正无穷</Title>
+    <Description>任务 <arg format="%s" ordinal="1" /> 中发现正无穷。<p />发现一个类型为 "<arg format="%s" ordinal="2" />" 的符号带有正无穷。</Description>
+    <Consequences>正无穷替换为 "<arg format="%s" ordinal="3" />"。</Consequences>
+  </Message>
+  <Message number="323" eDefine="SYS_ERR_SYS_NEGATIVE_INFINITY">
+    <Title>负无穷</Title>
+    <Description>任务 <arg format="%s" ordinal="1" /> 中发现负无穷。<p />发现一个类型为 "<arg format="%s" ordinal="2" />" 的符号带有负无穷。</Description>
+    <Consequences>负无穷替换为 "<arg format="%s" ordinal="3" />"。</Consequences>
+  </Message>
+  <Message number="324" eDefine="SYS_ERR_SYS_IO_ERR_ARG_MODE">
+    <Title>系统 I/O 信号的参变量不正确</Title>
+    <Description> 设置为信号 <arg format="%s" ordinal="2" /> 的 <arg format="%s" ordinal="1" /> 具有不正确的参变量。</Description>
+    <Consequences>将无法使用 <arg format="%s" ordinal="1" />。</Consequences>
+    <Causes>配置可能不是在正确的配置编辑器中编辑的。</Causes>
+    <Actions>必须重新配置系统 I/O 信号，最好使用 RobotStudio 或 Flex Pendant 上的配置编辑器。</Actions>
+  </Message>
+  <Message number="325" eDefine="SYS_ERR_SYS_SAFEMOVE_DEACT">
+    <Title>SafeMove 安全监控未激活</Title>
+    <Description>SafeMove 中没有任何用户配置，即安全监控处于禁用状态。</Description>
+    <Consequences>SafeMove 无法停止机器人运动。</Consequences>
+    <Causes>SafeMove 中没有任何用户配置。</Causes>
+    <Actions>将新用户配置下载到 SafeMove。通过执行热启动并输入 pin 码激活此配置。</Actions>
+  </Message>
+  <Message number="326" eDefine="SYS_ERR_SYS_IO_ERR_NEG_ARG">
+    <Title>系统 IO 信号的变元不正确</Title>
+    <Description>
+设置为信号 <arg format="%s" ordinal="2" /> 的 <arg format="%s" ordinal="1" /> 具有不正确的变元。延时不能为负值。</Description>
+    <Consequences>将无法使用 <arg format="%s" ordinal="1" />。</Consequences>
+    <Actions>必须重新配置系统 IO 信号。 </Actions>
+  </Message>
+  <Message number="350" eDefine="SYS_ERR_SYS_TASK_NAME_NOT_VALID">
+    <Title>不是有效的任务名称</Title>
+    <Description>无法将该任务名称 <arg format="%s" ordinal="1" /> 用作某个任务的名称。该名称可能已用作安装符号、系统中的保留词，或者长度过大（最多 16 个字符）。</Description>
+    <Consequences>无法在该系统中安装该任务。</Consequences>
+    <Actions>更改任务名称配置后重新启动控制器。</Actions>
+  </Message>
+  <Message number="351" eDefine="SYS_ERR_SYS_MAX_NO_OF_TASK_EXCEEDED">
+    <Title>超过最大任务数目</Title>
+    <Description>超过配置类型 <arg format="%s" ordinal="2" /> 任务的最大数目 <arg format="%s" ordinal="1" />。</Description>
+    <Consequences>将无法安装所有已配置的任务。</Consequences>
+    <Actions>更改配置后重新启动系统。</Actions>
+  </Message>
+  <Message number="352" eDefine="SYS_ERR_SYS_MOTION_PLANER_NAME">
+    <Title>不是有效的动作路径文件名称</Title>
+    <Description>
+      <arg format="%s" ordinal="2" /> 中的机械单元组 <arg format="%s" ordinal="1" /> 的动作路径文件名称不正确。<p />可能由于以下原因之一：<p />1. 名称为空<p />2. 名称在动作配置中不存在<p />3. 名称已被其他机械单元组使用</Description>
+    <Consequences>系统将无法使用。</Consequences>
+    <Actions>更改配置后重新启动控制器。</Actions>
+  </Message>
+  <Message number="353" eDefine="SYS_ERR_SYS_MECHANICAL_UNIT_NAME">
+    <Title>未找到机械单元。</Title>
+    <Description>在已配置的机械单元列表中无法找到 <arg format="%s" ordinal="2" /> 中的机械单元 <arg format="%s" ordinal="1" />。</Description>
+    <Consequences>无法执行任何使用已配置机械单元的 RAPID 指令。</Consequences>
+    <Causes>动作配置中可能不存在该单元。</Causes>
+    <Actions>更改配置后重新启动控制器。</Actions>
+  </Message>
+  <Message number="354" eDefine="SYS_ERR_SYS_UNDEFINED_ARG_NAME">
+    <Title>自变量未定义。</Title>
+    <Description>任务的 <arg format="%s" ordinal="2" /> 已配置自变量 <arg format="%s" ordinal="1" /> 为无效类型。</Description>
+    <Consequences>将不定义任务的行为。</Consequences>
+    <Actions>更改配置后重新启动控制柜。</Actions>
+  </Message>
+  <Message number="355" eDefine="SYS_ERR_SYS_MEC_UNIT_GROUP_NAME">
+    <Title>机械单元组的名称不正确</Title>
+    <Description>任务 <arg format="%s" ordinal="2" /> 中配置的名称 <arg format="%s" ordinal="1" /> 不正确。<p />原因可能是：<p />1. 配置中未使用自变量<p />2. 机械单元组成员不含该配置名称。<p />3. 其它任务已使用该配置名称。</Description>
+    <Consequences>无法安装该任务，或无法执行 RAPID 动作指令。</Consequences>
+    <Actions>更改配置后重新启动控制器。</Actions>
+  </Message>
+  <Message number="356" eDefine="SYS_ERR_SYS_MAX_NO_OF_MOTION_TASK">
+    <Title>超过最大动作任务数目</Title>
+    <Description>只有 <arg format="%s" ordinal="1" /> 任务允许控制机械单元（即执行 RAPID 动作指令）。</Description>
+    <Actions>更改配置后重新启动控制器。</Actions>
+  </Message>
+  <Message number="357" eDefine="SYS_ERR_SYS_NO_CONFIG_MOTION_TASK">
+    <Title>没有已配置的动作任务</Title>
+    <Description>未配置任何任务以控制机械单元（即执行 RAPID 动作指令）。</Description>
+    <Consequences>无法执行任何 RAPID 动作指令。</Consequences>
+    <Actions>更改配置，以包括控制机械单元的任务。<p />重新启动控制器。</Actions>
+  </Message>
+  <Message number="358" eDefine="SYS_ERR_SYS_NO_MEC_UNIT_GROUP">
+    <Title>未配置 <arg format="%s" ordinal="1" /> 的成员</Title>
+    <Description>多机器人系统需要该配置类型。</Description>
+    <Consequences>无法执行任何 RAPID 动作指令。</Consequences>
+    <Actions>更改配置后重新启动控制柜。</Actions>
+  </Message>
+  <Message number="359" eDefine="SYS_ERR_SYS_MEC_UNIT_GROUP">
+    <Title>已配置 Cfg 类型 <arg format="%s" ordinal="1" /></Title>
+    <Description>已找到该类型，但不应在当前选项的系统中。</Description>
+    <Actions>检查是否已加载正确的配置文件或是否已删除该类型的所有实例。<p />重新启动控制柜。</Actions>
+  </Message>
+  <Message number="360" eDefine="SYS_ERR_SYS_UNDEFINED_SHELF_NAME">
+    <Title>cfg 类型 <arg format="%s" ordinal="1" />的未知事件</Title>
+    <Description>该事件 <arg format="%s" ordinal="2" /> 非系统事件。</Description>
+    <Actions>更改配置后重新启动系统。</Actions>
+  </Message>
+  <Message number="361" eDefine="SYS_ERR_SYS_ONLY_SHARED_MOD">
+    <Title>共享任务中只含共享模块</Title>
+    <Description>该模块 <arg format="%s" ordinal="1" /> 未配置为共享，无法加载至共享任务。</Description>
+    <Actions>更改配置后重新启动系统。</Actions>
+  </Message>
+  <Message number="362" eDefine="SYS_ERR_SYS_NOT_DEFINED_TASK_NMAE">
+    <Title>不存在已定义的任务名称</Title>
+    <Description>cfg 类型 <arg format="%s" ordinal="2" /> 的任务 <arg format="%s" ordinal="1" /> 未在该系统中配置。</Description>
+    <Actions>更改配置后重新启动系统。</Actions>
+  </Message>
+  <Message number="363" eDefine="SYS_ERR_SYS_SYSMOD_NO_SYSMOD">
+    <Title>模块非系统模块</Title>
+    <Description>从文件 <arg format="%s" ordinal="2" /> 加载的模块 <arg format="%s" ordinal="1" /> 非系统模块。</Description>
+    <Actions>更改文件后缀或将模块属性添加至模块。<p />重新加载模块或重新启动系统。</Actions>
+  </Message>
+  <Message number="364" eDefine="SYS_ERR_SYS_MAX_NO_OF_GROUP_EXCEEDED">
+    <Title>超过最大机械单元组数目</Title>
+    <Description>配置类型为 <arg format="%s" ordinal="2" /> 的机械单元组 <arg format="%s" ordinal="1" /> 超过最大数目。</Description>
+    <Consequences>忽略超过的实例。</Consequences>
+    <Actions>更改配置后重新启动控制器。</Actions>
+  </Message>
+  <Message number="365" eDefine="SYS_ERR_SYS_CFG_UPDATED_PP_TO_MAIN">
+    <Title>已完成配置更新</Title>
+    <Description>由于更改配置，所有任务重置到其主例行程序。</Description>
+  </Message>
+  <Message number="366" eDefine="SYS_ERR_SYS_MOTION_TASK_WRONG_TYPE">
+    <Title>任务配置中的类型错误</Title>
+    <Description>以错误的类型配置任务 <arg format="%s" ordinal="1" /> 。旨在控制机械单元（如执行 RAPID 动作指令）所配置的任务必须为类型 <arg format="%s" ordinal="2" />。</Description>
+    <Consequences>将不安装该任务。</Consequences>
+    <Actions>更改配置后重新启动控制柜。</Actions>
+  </Message>
+</Domain>

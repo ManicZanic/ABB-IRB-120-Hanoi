@@ -1,0 +1,518 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="ARL" domainNo="4" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="1011" max="1476">
+  <Message number="1011" eDefine="SYS_ERR_ARL_ITMSRC_CNV_LIMITS">
+    <Title>Conveyor limits error</Title>
+    <Description>Error for item source <arg format="%s" ordinal="1" />, conveyor <arg format="%s" ordinal="2" />. The limits are incorrectly specified. <p /></Description>
+  </Message>
+  <Message number="1012" eDefine="SYS_ERR_ARL_ITMSRC_CNV_DEFINED_TOO_LATE">
+    <Title>Conveyor data are defined late</Title>
+    <Description>Error for item source <arg format="%s" ordinal="1" />, conveyor <arg format="%s" ordinal="2" />. The ItmSrcCnvDat instruction must be called before the ItmSrcFlush instruction. <p /></Description>
+  </Message>
+  <Message number="1050" eDefine="SYS_ERR_ARL_CNV_ACTIV_PROF_ERROR">
+    <Title>Profile not activated</Title>
+    <Description>Profile record not ready</Description>
+    <Consequences>Profile data not activated</Consequences>
+    <Causes>Try to activate recorded profile too early</Causes>
+    <Actions>Instruction RecordProfile must be called before ActivateProfile</Actions>
+  </Message>
+  <Message number="1051" eDefine="SYS_ERR_ARL_CNV_STORE_PROF_ERROR">
+    <Title>Recorded profile not stored</Title>
+    <Description>No valid profile data to store </Description>
+    <Consequences>Nothing stored</Consequences>
+    <Causes>Try to store a recorded profile not existing or not activated . </Causes>
+    <Actions>Instruction ActivateProfile must be called before StoreProfile</Actions>
+  </Message>
+  <Message number="1052" eDefine="SYS_ERR_ARL_CNV_USE_PROF_FILE_ERROR">
+    <Title>Can't use this profile data file</Title>
+    <Description>File not found or data not valid</Description>
+    <Consequences>Profile not used</Consequences>
+    <Causes>File not found or data not valid .</Causes>
+    <Actions>Check file directory and name and profile data.</Actions>
+  </Message>
+  <Message number="1100" eDefine="SYS_ERR_ARL_CORR_NOFREE">
+    <Title>Too Many Corrections</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Max 5 correction descriptors are allowed to be connected. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check number of connected descriptors.<p />Recovery: <arg format="%s" ordinal="3" /><p /></Actions>
+  </Message>
+  <Message number="1101" eDefine="SYS_ERR_ARL_CORR_NOTCONN">
+    <Title>Correction Not Connected</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Cannot write to correction descriptor.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check that the current correction descriptor is connected.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1102" eDefine="SYS_ERR_ARL_CORR_NOOBJECT">
+    <Title>No Corrections Connected.</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Correction unable to be read.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>No correction descriptor connected. </Causes>
+    <Actions>Check if any correction generator is connected.<p />Recovery: <arg format="%s" ordinal="3" /><p /></Actions>
+  </Message>
+  <Message number="1200" eDefine="SYS_ERR_ARL_OPEN_SGUN">
+    <Title>Servo Tool Open Error. </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Not possible to open servo gun in motors off state. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Retry after setting motors on. <p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1201" eDefine="SYS_ERR_ARL_CLOSE_SGUN">
+    <Title>Servo Tool Close Error. </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Not possible to close servo gun in motors off state. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Retry after setting motors on. <p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1202" eDefine="SYS_ERR_ARL_CALIB_SGUN">
+    <Title>Servo Tool Calibration Error. </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Not possible to calibrate servo gun in motors off state. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Retry after setting motors on. <p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1203" eDefine="SYS_ERR_ARL_NO_SGUN">
+    <Title>Servo Tool Error. </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Servo tool <arg format="%s" ordinal="2" /> does not exist. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check mechanical unit name. <p />Recovery:<arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1204" eDefine="SYS_ERR_ARL_SGUN_ESTOP_BGTASK">
+    <Title>Servo Tool error. </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Emergency stop when executing instruction in background task. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Retry after emergency stop reset. <p />Recovery:<arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1205" eDefine="SYS_ERR_ARL_SGUN_NOT_OPEN">
+    <Title>Servo Tool Error. </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Not possible to close servo gun. The gun is not open. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Retry after opening the gun. <p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1206" eDefine="SYS_ERR_ARL_SGUN_NEG_VAL">
+    <Title>Servo Tool Parameter Error. </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The parameter PrePos must be a positive value. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Change the parameter value. <p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1207" eDefine="SYS_ERR_ARL_SGUN_NOT_INIT">
+    <Title>Servo Tool Init Error. </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The position for servo tool <arg format="%s" ordinal="2" /> is not initialized. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Change the parameter value or perform a tip change calib. <p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1208" eDefine="SYS_ERR_ARL_SGUN_NOT_SYNCH">
+    <Title>Servo Tool Synchronization Error. </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The tips for servo tool <arg format="%s" ordinal="2" /> are not synchronized. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Synchronize via ManServiceCalib or perform a tool change calibration.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1209" eDefine="SYS_ERR_ARL_SGUN_NOT_ACTIVE">
+    <Title>Servo Tool Activation Error. </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Servo tool <arg format="%s" ordinal="2" /> is not activated. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Use ActUnit to activate. <p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1210" eDefine="SYS_ERR_ARL_SGUN_MOTORS_OFF">
+    <Title>Servo Tool Error. </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Not possible to execute instruction in motors off state for servo tool <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Retry after setting motors on. <p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1211" eDefine="SYS_ERR_ARL_RECAL_SGUN">
+    <Title>Servo Tool Error. </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Not possible to perform a recalibration of the gun <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Retry after checking values. <p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1212" eDefine="SYS_ERR_ARL_SGUN_NOT_CLOSED">
+    <Title>Servo Tool Error. </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Not possible to change force. The gun is not closed. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Retry after closing the gun. <p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1300" eDefine="SYS_ERR_ARL_JOINT_NO_OOR">
+    <Title>Argument Error</Title>
+    <Description>The argument Joint must be between 1 and <arg format="%s" ordinal="1" />.<p /></Description>
+    <Actions>Check and change the value.</Actions>
+  </Message>
+  <Message number="1301" eDefine="SYS_ERR_ARL_TYPE_GET_OOR">
+    <Title>Argument Error</Title>
+    <Description>The argument Type doesn't correspond to a service value.<p /></Description>
+  </Message>
+  <Message number="1302" eDefine="SYS_ERR_ARL_TYPE_ZERO_OOR">
+    <Title>Argument Error</Title>
+    <Description>The argument Type does not correspond to a service value.<p /></Description>
+  </Message>
+  <Message number="1303" eDefine="SYS_ERR_ARL_ROBOT_NO_OOR">
+    <Title>Argument Error</Title>
+    <Description>The argument Robot must be between 1 and <arg format="%s" ordinal="1" />.<p /></Description>
+    <Actions>Check and change the value.</Actions>
+  </Message>
+  <Message number="1304" eDefine="SYS_ERR_ARL_TYPE_LEVEL_OOR">
+    <Title>Argument Error</Title>
+    <Description>The argument Level doesn't correspond to a service level.<p /></Description>
+  </Message>
+  <Message number="1400" eDefine="SYS_ERR_ARL_INPAR_AXNOVAL">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Faulty AxisNo.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check and change the value.<p />Press Start to continue.<p /></Actions>
+  </Message>
+  <Message number="1401" eDefine="SYS_ERR_ARL_IO_CON_LOST_NTRG_UNKN">
+    <Title>I/O Error</Title>
+    <Description>Unable to access the I/O signal.<p />Signal and unit unknown. </Description>
+    <Causes>The connection with the I/O module is broken.<p /></Causes>
+    <Actions>Re-establish the connection with the I/O unit. </Actions>
+  </Message>
+  <Message number="1402" eDefine="SYS_ERR_ARL_ILLARGVAL_SP_AXSTR">
+    <Title>Value Error</Title>
+    <Description>Task: <arg format="%16s" ordinal="1" /><p />Illegal value of argument for parameter Axis or Strength. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check and change the value.</Actions>
+  </Message>
+  <Message number="1403" eDefine="SYS_ERR_ARL_ILLARGVAL_SP_TYPE">
+    <Title>Value Error</Title>
+    <Description>Task: <arg format="%16s" ordinal="1" /><p />Illegal value of argument for parameter Speed Priority Type.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="1404" eDefine="SYS_ERR_ARL_INPAR_MSUP_ONOFF">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument On or Off missing.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check the RAPID program. One of the switch On or Off must be given.</Actions>
+  </Message>
+  <Message number="1405" eDefine="SYS_ERR_ARL_INPAR_MSUP_ILLTV">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument TuneValue not allowed together with argument Off.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check and change the RAPID program.</Actions>
+  </Message>
+  <Message number="1406" eDefine="SYS_ERR_ARL_INPAR_TS_ADST">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />This TuneType is only valid for option Advanced Shape Tuning.<p />Program Ref.<arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Change TuneType or install option.</Actions>
+  </Message>
+  <Message number="1407" eDefine="SYS_ERR_ARL_INPAR_RDONLY">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Symbol <arg format="%s" ordinal="2" /> is read-only.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1408" eDefine="SYS_ERR_ARL_INPAR_SYMNOTFND">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The symbol <arg format="%s" ordinal="2" /> was not found.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1409" eDefine="SYS_ERR_ARL_INPAR_AMBSYM">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Ambiguous symbol <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check and change the RAPID program.</Actions>
+  </Message>
+  <Message number="1410" eDefine="SYS_ERR_ARL_INPAR_SYMSRC">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Search error for symbol <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1411" eDefine="SYS_ERR_ARL_INPAR_UNKMOD">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unknown module name <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>The module does not exist.</Causes>
+    <Actions>Check and change the RAPID program.</Actions>
+  </Message>
+  <Message number="1412" eDefine="SYS_ERR_ARL_INPAR_AMBMOD">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Ambiguous module <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check and change the RAPID program.</Actions>
+  </Message>
+  <Message number="1413" eDefine="SYS_ERR_ARL_INPAR_AMBRTN">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Ambiguous routine name <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check and change the RAPID program.</Actions>
+  </Message>
+  <Message number="1414" eDefine="SYS_ERR_ARL_INPAR_UNKRTN">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unknown routine name <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>The routine does not exist.</Causes>
+    <Actions>Check and change the RAPID program.</Actions>
+  </Message>
+  <Message number="1415" eDefine="SYS_ERR_ARL_INPAR_MODEXIST">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The module name <arg format="%s" ordinal="2" /> does not exist.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check and change the RAPID program.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1416" eDefine="SYS_ERR_ARL_INPAR_NOMOD">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The symbol <arg format="%s" ordinal="2" /> is not a module. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check and change the RAPID program.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1417" eDefine="SYS_ERR_ARL_SYS_CDATE">
+    <Title>System Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Cannot convert date.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Warm start and retry.</Actions>
+  </Message>
+  <Message number="1419" eDefine="SYS_ERR_ARL_INPAR_CFGDATA">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> must be num, bool or string.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check and change the RAPID program.</Actions>
+  </Message>
+  <Message number="1420" eDefine="SYS_ERR_ARL_INPAR_ILLTYP">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The argument type of <arg format="%s" ordinal="2" /> is not compatible with cfg type. Expected <arg format="%s" ordinal="3" />.<p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="1421" eDefine="SYS_ERR_ARL_INPAR_UNKDOM">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unknown cfg domain in argument <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check and change the RAPID program. <p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1422" eDefine="SYS_ERR_ARL_INPAR_UNKTYPE">
+    <Title>Parameter error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unknown cfg type in argument <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check and change the RAPID program. <p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1423" eDefine="SYS_ERR_ARL_INPAR_UNKINST">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unknown cfg instance in argument <arg format="%s" ordinal="2" />. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check and change the RAPID program. <p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1424" eDefine="SYS_ERR_ARL_INPAR_UNKATTR">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unknown cfg attribute in argument <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check and change the RAPID program.<p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1425" eDefine="SYS_ERR_ARL_INPAR_PATH">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The path '<arg format="%s" ordinal="5" />' in argument <arg format="%s" ordinal="2" /> is incorrect.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check and change the path. <p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1426" eDefine="SYS_ERR_ARL_IO_CON_LOST_UNKNAME">
+    <Title>I/O Error</Title>
+    <Description>Unable to access the I/O signal. Signal and unit unknown.<p /><p /><p /></Description>
+    <Consequences>Impossible to restart. </Consequences>
+    <Causes>The connection with the I/O module is broken.<p /></Causes>
+    <Actions>Re-establish the connection with the I/O unit. To make it possible to restart the program move PP to a safe restart position. </Actions>
+  </Message>
+  <Message number="1427" eDefine="SYS_ERR_ARL_ARG_NEGDELAY">
+    <Title>Argument Error</Title>
+    <Description>Task <arg format="%s" ordinal="1" />: <p />The delaytime has to be positive.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Change the value of delaytime.</Actions>
+  </Message>
+  <Message number="1428" eDefine="SYS_ERR_ARL_AXIS_INI_SENS">
+    <Title>Axis Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The single axis is not init correctly. The sensor is not activated.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="1429" eDefine="SYS_ERR_ARL_AXIS_INI_SENSPRC">
+    <Title>Axis Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The single axis is not init correctly.<p />The sensor process is not init correctly. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="1430" eDefine="SYS_ERR_ARL_ORI_UNNORMAL">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Orientation definition error in <arg format="%s" ordinal="2" /> . <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check orientation.<p />All used orientations must be normalized i.e. the sum of the quaternion elements squares must equal 1. </Actions>
+  </Message>
+  <Message number="1431" eDefine="SYS_ERR_ARL_SYS_LOGSRVINS">
+    <Title>System Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unknown LOGSRV instance.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Warm start and retry.</Actions>
+  </Message>
+  <Message number="1432" eDefine="SYS_ERR_ARL_SYS_SETTSIG">
+    <Title>System Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Cannot set test signals.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Warm start and retry.</Actions>
+  </Message>
+  <Message number="1433" eDefine="SYS_ERR_ARL_INPAR_UNKMU">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unknown mechanical unit.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check if the mechanical unit exists in the system.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1434" eDefine="SYS_ERR_ARL_INPAR_AXVAL">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument Axis is out of range.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check and change the value of the argument axis.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1435" eDefine="SYS_ERR_ARL_INPAR_CHVAL">
+    <Title>Parameter Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument Channel is out of range. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check and change the value of argument Channel.</Actions>
+  </Message>
+  <Message number="1437" eDefine="SYS_ERR_ARL_SYS_RESETTSIG">
+    <Title>System Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Cannot reset all test signals.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Warm start and retry.</Actions>
+  </Message>
+  <Message number="1438" eDefine="SYS_ERR_ARL_MASS_UNDEF_ZERO">
+    <Title>Undefined Load</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />WARNING!<p />Argument <arg format="%s" ordinal="2" /> has undefined load (mass=0). <p />Program Ref. <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Consequences>IMPORTANT TO DEFINE CORRECT LOAD to avoid mechanical damages of the robot. </Consequences>
+    <Actions>Define the actual load for the tool or the grip load before program movement or jogging. A good motion performance requires a correctly defined load. </Actions>
+  </Message>
+  <Message number="1439" eDefine="SYS_ERR_ARL_COG_UNDEF_ZERO">
+    <Title>Undefined Load</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />WARNING!<p />Argument <arg format="%s" ordinal="2" /> has undefined load center of gravity. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>IMPORTANT TO DEFINE CORRECT LOAD to avoid mechanical damage of the robot.</Consequences>
+    <Actions>Define the actual center of gravity for the tool load or the grip load before program movement or jogging (cog.x, cog.y and cog.z cannot be 0 mm at the same time). Load identification can be done with the service routine<p />LoadIdentify.</Actions>
+  </Message>
+  <Message number="1440" eDefine="SYS_ERR_ARL_SWITCH_DEF">
+    <Title>Argument Is Missing</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />One of the switch parameter <arg format="%s" ordinal="2" /> or <arg format="%s" ordinal="3" /> has to be defined.<p />Program Ref. <arg format="%s" ordinal="4" /></Description>
+    <Consequences>The called RAPID routine could not be executed.</Consequences>
+    <Actions>An argument of the data type switch must be specified.</Actions>
+  </Message>
+  <Message number="1441" eDefine="SYS_ERR_ARL_MODACTIVE">
+    <Title>UnLoad Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Module loaded with path <arg format="%s" ordinal="2" /> is active and therefore cannot be erased.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>Instruction UnLoad or WaitLoad is executed in the same module as the module that should be removed.<p /><p />Instruction UnLoad or WaitLoad is in a trap that is executed earlier then expected.<p /><p />If there is a CONNECT to a trap routine in the module, an IDelete on the trap has to be done before the module can be unloaded.</Causes>
+    <Actions>Check that the module does not contain routines or data that are still active, for example CONNECT.<p /><p />Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1442" eDefine="SYS_ERR_ARL_ARGREF_NOTPERS">
+    <Title>Reference Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The reference in argument <arg format="%s" ordinal="2" /> is not an entire persistent variable. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>It is not possible to use record component or array element in arg. <arg format="%s" ordinal="4" /> . <p />It is only possible to use entire persistent variables for Tool, WObj or Load <p />in any motion instruction. </Actions>
+  </Message>
+  <Message number="1443" eDefine="SYS_ERR_ARL_TOOL_MASS_NEG">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument Tool has negative load of the tool. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Define the correct load of the tool before use of the tool for jogging or program movement. Load identification of the tool can be done with the service<p />routine LoadIdentify.</Actions>
+  </Message>
+  <Message number="1444" eDefine="SYS_ERR_ARL_TOOL_INERT_NEG">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument Tool has at least one inertia data component with negative value. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Define all inertia data components (ix, iy or iz) to actual positive values. </Actions>
+  </Message>
+  <Message number="1445" eDefine="SYS_ERR_ARL_MISS_WOBJ_STATTCP">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />No \WObj specified for movement with stationary TCP. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Add argument \WObj for actual work object. <p />If not movement with stationary TCP, change the component "robhold"  in argument Tool to TRUE (robot holds the tool). </Actions>
+  </Message>
+  <Message number="1446" eDefine="SYS_ERR_ARL_ROBHOLD_ERR">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />It is undefined if the robot holds the tool or the work object. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>The program execution is immediately stopped.</Consequences>
+    <Causes>Mismatch of component robhold in the tool and the work object.</Causes>
+    <Actions>Check if mismatch between argument Tool and argument \WObj for data component robhold. </Actions>
+  </Message>
+  <Message number="1447" eDefine="SYS_ERR_ARL_DATACOMP_NEG">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> has at least one data component with negative value. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Set all data components in argument <arg format="%s" ordinal="4" /> to positive values. </Actions>
+  </Message>
+  <Message number="1448" eDefine="SYS_ERR_ARL_ARG_NEGVAL">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> may not have a negative value. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Set argument <arg format="%s" ordinal="4" /> to a positive value. </Actions>
+  </Message>
+  <Message number="1449" eDefine="SYS_ERR_ARL_ILLEGVAL">
+    <Title>Value Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Illegal value in argument <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check the RAPID program.</Actions>
+  </Message>
+  <Message number="1450" eDefine="SYS_ERR_ARL_MUNOTFND">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument \WObj specifies a mechanical unit name, which is not activated <p />or is unknown in the system. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>The mechanical unit name defined in \WObj must correspond to the name earlier defined in the system parameters and must be activated. </Actions>
+  </Message>
+  <Message number="1451" eDefine="SYS_ERR_ARL_ARG_INTNO_ILL">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> contains an illegal interrupt number. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>Input interrupt number is illegal because it has not been allocated by the instruction CONNECT. <p /></Causes>
+    <Actions>Use the instruction CONNECT to allocate and connect an interrupt number to a trap routine. </Actions>
+  </Message>
+  <Message number="1452" eDefine="SYS_ERR_ARL_ARG_INTNO_INUSE">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> contains an interrupt number, which is already in use for other purposes. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Before reuse of an interrupt variable in the program, it must have been cancelled with the instruction IDelete. </Actions>
+  </Message>
+  <Message number="1453" eDefine="SYS_ERR_ARL_ILLEGTYP">
+    <Title>Type Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Illegal data type of argument <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check the RAPID program.</Actions>
+  </Message>
+  <Message number="1454" eDefine="SYS_ERR_ARL_REF_TRIGG_UNDEF">
+    <Title>Reference Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Trigg parameter number <arg format="%s" ordinal="2" />, reference to undefined trigg data. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Define trigg data by executing instruction TriggIO, TriggInt, TriggEquip, TriggSpeed or TriggCheckIO before execution of instruction TriggL, TriggC, TriggJ, CapL or CapC. </Actions>
+  </Message>
+  <Message number="1455" eDefine="SYS_ERR_ARL_SYS_OS_TIME">
+    <Title>System Access Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Operative system get time failed.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Warm start and retry.</Actions>
+  </Message>
+  <Message number="1456" eDefine="SYS_ERR_ARL_ARG_OUTOFRANGE">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> not within range. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>The argument must be in range <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1457" eDefine="SYS_ERR_ARL_ARG_OPTARGMISS">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Missing optional argument. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Add one of the optional arguments <arg format="%s" ordinal="3" /> or <arg format="%s" ordinal="4" />. </Actions>
+  </Message>
+  <Message number="1458" eDefine="SYS_ERR_ARL_LIM_AXORTV">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> or <arg format="%s" ordinal="3" /> not within range. <p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Check and change the value of the argument.</Actions>
+  </Message>
+  <Message number="1459" eDefine="SYS_ERR_ARL_LIM_TUNEDATA">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> not within range. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check and change the value of the argument.</Actions>
+  </Message>
+  <Message number="1460" eDefine="SYS_ERR_ARL_LIM_AXSOFTRMP">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> or <arg format="%s" ordinal="3" /> or <arg format="%s" ordinal="4" /> not within range. <p />Program Ref. <arg format="%s" ordinal="5" /><p /></Description>
+    <Actions>Check and change the argument.</Actions>
+  </Message>
+  <Message number="1461" eDefine="SYS_ERR_ARL_ILL_INDEX">
+    <Title>Value Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Illegal value of argument <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>The index must be an integer and in range 1 to 1024. </Actions>
+  </Message>
+  <Message number="1462" eDefine="SYS_ERR_ARL_ILL_INTX">
+    <Title>Value Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Illegal value of argument for parameter <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>The value must be an integer and in the correct range. </Actions>
+  </Message>
+  <Message number="1463" eDefine="SYS_ERR_ARL_SWITCH_MISSED">
+    <Title>Argument Switch Is Missing.</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />There is an argument missing.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>One of the switch parameters \Hex1, \Long4, \Float4 or \ASCII has to be defined. </Actions>
+  </Message>
+  <Message number="1464" eDefine="SYS_ERR_ARL_INDEX_TO_HIGH">
+    <Title>Index To High.</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Illegal value in argument <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check the RAPID program.</Actions>
+  </Message>
+  <Message number="1465" eDefine="SYS_ERR_ARL_EMPTY_STRING">
+    <Title>The String Is Empty.</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Illegal value in argument <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check the argument, and use a non-empty string.</Actions>
+  </Message>
+  <Message number="1466" eDefine="SYS_ERR_ARL_EQ_VAR">
+    <Title>The Variables Are Equal.</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The argument FromRawData and ToRawData are equal. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check and change the RAPID program.</Actions>
+  </Message>
+  <Message number="1467" eDefine="SYS_ERR_ARL_ILL_BYTE">
+    <Title>Value Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Illegal value in argument <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check and change the value. It must be an integer and in range 0 to 255. </Actions>
+  </Message>
+  <Message number="1468" eDefine="SYS_ERR_ARL_ILL_NOOFBYTES">
+    <Title>Value Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Illegal value in argument <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check and change the value. NoOfBytes must be an integer and in range 1 to 1024, and not higher than RawData length. </Actions>
+  </Message>
+  <Message number="1469" eDefine="SYS_ERR_ARL_ILL_LENGTH">
+    <Title>Value Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Illegal value in argument <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check the value. NoOfBytes must not be higher than RawData length. </Actions>
+  </Message>
+  <Message number="1470" eDefine="SYS_ERR_ARL_LIM_AXORLEV">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> or <arg format="%s" ordinal="3" /> not within range. <p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Check and change the value of the argument.</Actions>
+  </Message>
+  <Message number="1471" eDefine="SYS_ERR_ARL_TRUSTLEVEL">
+    <Title>Instruction Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />You are not allowed to disable unit <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1472" eDefine="SYS_ERR_ARL_NOSUB">
+    <Title>Instruction Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />There is no client e.g. a teach pendant taking care of instruction. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="3" /><p /></Actions>
+  </Message>
+  <Message number="1473" eDefine="SYS_ERR_ARL_NOCLIENT">
+    <Title>System Access Error</Title>
+    <Description>It was not possible to send data using SCWrite to external computer.<p />Failed to send variable <arg format="%s" ordinal="1" /><p /></Description>
+  </Message>
+  <Message number="1474" eDefine="SYS_ERR_ARL_ILL_VALUE">
+    <Title>Value Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Illegal value in argument <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check the value: <arg format="%s" ordinal="5" /><p /><arg format="%s" ordinal="4" /> must be a positive integer. </Actions>
+  </Message>
+  <Message number="1475" eDefine="SYS_ERR_ARL_ILL_TASKLIST">
+    <Title>Wrong size of tasklist</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The tasklist has wrong number of elements. It must not have less than 1 or more than <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check and change the number of arguments in the tasklist.</Actions>
+  </Message>
+  <Message number="1476" eDefine="SYS_ERR_ARL_ILL_TASK">
+    <Title>Non-consistent task list</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> in the tasklist is not one of the tasks that are configured in the system (max <arg format="%s" ordinal="3" /> tasks can be configured).<p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Add the task to the system (in Controller configuration) or remove it from the tasklist.</Actions>
+  </Message>
+</Domain>

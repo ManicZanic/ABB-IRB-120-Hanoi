@@ -1,0 +1,620 @@
+FPSystem.xml	-1.-1.-1.-1	10/23/2007 9:32:02 AM	
+gtpuSDK.dll	5.11.8.0	
+514c36bf-c13e-4091-a3a7-1e566227b20d	-1.-1.-1.-1	10/23/2007 9:32:00 AM	
+ABB.Robotics.Tps.SDK.exe	5.11.8.0	
+default.mky	-1.-1.-1.-1	1/1/2001 11:59:52 PM	
+nk.exe	-1.-1.-1.-1	7/5/2007 6:00:06 AM	
+coredll.dll	-1.-1.-1.-1	10/22/2007 11:13:05 PM	
+filesys.exe	-1.-1.-1.-1	10/8/2007 1:59:30 PM	
+gwes.exe	-1.-1.-1.-1	7/5/2007 6:00:48 AM	
+device.exe	-1.-1.-1.-1	10/8/2007 1:59:16 PM	
+devmgr.dll	-1.-1.-1.-1	10/8/2007 1:59:15 PM	
+regenum.dll	-1.-1.-1.-1	10/8/2007 1:59:16 PM	
+busenum.dll	-1.-1.-1.-1	10/8/2007 1:59:16 PM	
+pm.dll	-1.-1.-1.-1	10/8/2007 1:59:15 PM	
+notify.dll	-1.-1.-1.-1	10/8/2007 1:58:56 PM	
+relfsd.dll	-1.-1.-1.-1	10/8/2007 1:58:51 PM	
+shell.exe	-1.-1.-1.-1	10/8/2007 1:58:50 PM	
+shellcelog.dll	-1.-1.-1.-1	10/8/2007 1:58:49 PM	
+toolhelp.dll	-1.-1.-1.-1	10/8/2007 1:58:49 PM	
+zlib.dll	-1.-1.-1.-1	10/8/2007 1:59:29 PM	
+console.dll	-1.-1.-1.-1	10/8/2007 1:58:47 PM	
+cmd.exe	-1.-1.-1.-1	10/8/2007 1:58:48 PM	
+net.exe	-1.-1.-1.-1	10/8/2007 1:58:52 PM	
+commctrl.dll	-1.-1.-1.-1	10/22/2007 11:13:09 PM	
+commdlg.dll	-1.-1.-1.-1	10/8/2007 1:58:49 PM	
+connmc.exe	-1.-1.-1.-1	10/22/2007 11:11:08 PM	
+rnaapp.exe	-1.-1.-1.-1	10/8/2007 1:58:56 PM	
+fsdmgr.dll	-1.-1.-1.-1	10/8/2007 1:58:50 PM	
+ceddk.dll	-1.-1.-1.-1	10/8/2007 1:58:58 PM	
+netui.dll	-1.-1.-1.-1	10/8/2007 1:58:58 PM	
+ethman.dll	-1.-1.-1.-1	10/8/2007 1:59:05 PM	
+ppp.dll	5.0.0.0	
+asyncmac.dll	-1.-1.-1.-1	10/8/2007 1:59:00 PM	
+cxport.dll	-1.-1.-1.-1	10/8/2007 1:58:59 PM	
+iphlpapi.dll	-1.-1.-1.-1	10/8/2007 1:58:57 PM	
+winsock.dll	-1.-1.-1.-1	10/8/2007 1:59:01 PM	
+ws2.dll	-1.-1.-1.-1	10/8/2007 1:58:56 PM	
+ws2instl.dll	-1.-1.-1.-1	10/8/2007 1:59:02 PM	
+wspm.dll	-1.-1.-1.-1	10/8/2007 1:59:02 PM	
+nspm.dll	-1.-1.-1.-1	10/8/2007 1:59:03 PM	
+ssllsp.dll	-1.-1.-1.-1	10/8/2007 1:59:03 PM	
+secur32.dll	-1.-1.-1.-1	10/8/2007 1:58:52 PM	
+schannel.dll	-1.-1.-1.-1	10/8/2007 1:58:54 PM	
+ntlmssp.dll	-1.-1.-1.-1	10/8/2007 1:58:52 PM	
+credsvc.dll	-1.-1.-1.-1	10/8/2007 1:58:55 PM	
+credprov.dll	-1.-1.-1.-1	10/8/2007 1:58:55 PM	
+spnego.dll	-1.-1.-1.-1	10/8/2007 1:58:53 PM	
+afd.dll	-1.-1.-1.-1	10/8/2007 1:59:02 PM	
+ndis.dll	-1.-1.-1.-1	10/8/2007 1:58:59 PM	
+ndisuio.dll	-1.-1.-1.-1	10/8/2007 1:59:05 PM	
+ndispwr.dll	-1.-1.-1.-1	10/8/2007 1:58:57 PM	
+autoras.dll	-1.-1.-1.-1	10/8/2007 1:59:05 PM	
+dhcp.dll	-1.-1.-1.-1	10/8/2007 1:59:05 PM	
+VMini.dll	-1.-1.-1.-1	10/8/2007 1:59:30 PM	
+tcpstk.dll	-1.-1.-1.-1	10/8/2007 1:59:00 PM	
+tapi.dll	-1.-1.-1.-1	10/8/2007 1:59:06 PM	
+unimodem.dll	-1.-1.-1.-1	10/8/2007 1:59:00 PM	
+redir.dll	-1.-1.-1.-1	10/8/2007 1:59:07 PM	
+netbios.dll	-1.-1.-1.-1	10/8/2007 1:59:07 PM	
+lpcd.dll	-1.-1.-1.-1	10/8/2007 1:58:51 PM	
+lpcrt.dll	-1.-1.-1.-1	10/8/2007 1:58:51 PM	
+ping.exe	-1.-1.-1.-1	10/8/2007 1:59:07 PM	
+ipconfig.exe	-1.-1.-1.-1	10/8/2007 1:59:07 PM	
+ndisconfig.exe	-1.-1.-1.-1	10/8/2007 9:47:44 PM	
+route.exe	-1.-1.-1.-1	10/8/2007 1:59:08 PM	
+netstat.exe	-1.-1.-1.-1	10/8/2007 1:59:08 PM	
+tracert.exe	-1.-1.-1.-1	10/8/2007 1:59:08 PM	
+crypt32.dll	-1.-1.-1.-1	10/8/2007 1:58:54 PM	
+msasn1.dll	-1.-1.-1.-1	10/8/2007 1:58:53 PM	
+serial.dll	-1.-1.-1.-1	10/8/2007 1:59:18 PM	
+mmtimer.dll	-1.-1.-1.-1	10/8/2007 1:59:17 PM	
+ole32.dll	-1.-1.-1.-1	10/8/2007 1:59:53 PM	
+oleaut32.dll	-1.-1.-1.-1	10/8/2007 1:59:54 PM	
+dcomssd.dll	-1.-1.-1.-1	10/8/2007 1:59:53 PM	
+dllhost.exe	-1.-1.-1.-1	10/8/2007 1:59:53 PM	
+rpcrt4.dll	-1.-1.-1.-1	10/8/2007 1:59:51 PM	
+rpcltscm.dll	-1.-1.-1.-1	10/8/2007 1:59:54 PM	
+rpcltccm.dll	-1.-1.-1.-1	10/8/2007 1:59:54 PM	
+atlce400.dll	6.0.0.1538	
+imaging.dll	-1.-1.-1.-1	10/22/2007 11:11:49 PM	
+shlwapi.dll	-1.-1.-1.-1	10/22/2007 11:12:00 PM	
+msxml3.dll	-1.-1.-1.-1	10/22/2007 11:12:04 PM	
+wininet.dll	-1.-1.-1.-1	10/22/2007 11:12:02 PM	
+services.exe	-1.-1.-1.-1	10/8/2007 2:01:40 PM	
+smbserver.dll	-1.-1.-1.-1	10/8/2007 2:01:39 PM	
+smbconfig.dll	-1.-1.-1.-1	10/8/2007 2:01:40 PM	
+ceshell.dll	-1.-1.-1.-1	10/22/2007 11:12:25 PM	
+shcore.dll	-1.-1.-1.-1	10/22/2007 11:12:24 PM	
+control.exe	-1.-1.-1.-1	10/22/2007 11:12:40 PM	
+ctlpnl.exe	-1.-1.-1.-1	10/8/2007 2:04:47 PM	
+cplmain.cpl	-1.-1.-1.-1	10/22/2007 11:12:41 PM	
+intll.cpl	-1.-1.-1.-1	10/22/2007 11:12:42 PM	
+connpnl.cpl	-1.-1.-1.-1	10/22/2007 11:12:41 PM	
+repllog.exe	-1.-1.-1.-1	10/22/2007 11:12:55 PM	
+udp2tcp.exe	-1.-1.-1.-1	10/8/2007 2:07:22 PM	
+rapisrv.exe	-1.-1.-1.-1	10/8/2007 2:07:21 PM	
+wceload.exe	-1.-1.-1.-1	10/22/2007 11:12:56 PM	
+unload.exe	-1.-1.-1.-1	10/22/2007 11:12:57 PM	
+rra_stm.dll	-1.-1.-1.-1	10/22/2007 11:12:56 PM	
+eventrst.exe	-1.-1.-1.-1	10/8/2007 2:07:21 PM	
+system.cpl	-1.-1.-1.-1	10/22/2007 11:12:56 PM	
+mscoree.dll	2.0.0.0	
+mscoree2_0.dll	2.0.0.0	
+netcfagl2_0.dll	2.0.0.0	
+netcfd3dm2_0.dll	2.0.0.0	
+cgacutil.exe	2.0.0.0	
+ddi.dll	1.2.1689.0	
+keybddr.dll	2.1.0.0	
+dm9000.dll	2.53.4312.0	
+ser_pxa2x0.dll	2.2.0.0	
+touch.dll	2.2.0.0	
+Analog.dll	2.1.861.0	
+pregedit.exe	-1.-1.-1.-1	9/8/2003 8:25:52 AM	
+RegFlush.exe	-1.-1.-1.-1	9/8/2003 8:26:44 AM	
+ceconfig.h	-1.-1.-1.-1	10/8/2007 1:58:29 PM	
+wince.nls	-1.-1.-1.-1	10/22/2007 11:14:55 PM	
+initobj.dat	-1.-1.-1.-1	10/22/2007 11:14:55 PM	
+default.fdf	-1.-1.-1.-1	10/22/2007 11:14:55 PM	
+initdb.ini	-1.-1.-1.-1	10/22/2007 11:14:55 PM	
+close.2bp	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+ok.2bp	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+stdsm.2bp	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+viewsm.2bp	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+stdsm.bmp	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+viewsm.bmp	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+rsaenh.dll	-1.-1.-1.-1	9/5/2006 4:31:38 PM	
+sysroots.p7b	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+cour.ttf	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+tahoma.ttf	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+netmui.dll	-1.-1.-1.-1	10/8/2007 1:58:59 PM	
+copyrts.txt	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+asterisk.wav	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+close.wav	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+critical.wav	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+default.wav	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+empty.wav	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+exclam.wav	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+infbeg.wav	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+infend.wav	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+infintr.wav	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+menupop.wav	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+menusel.wav	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+openprog.wav	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+question.wav	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+startup.wav	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+windmax.wav	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+windmin.wav	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+recstart.wav	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+recend.wav	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+eventrst.lnk	-1.-1.-1.-1	7/1/2004 10:00:00 AM	
+GAC_CustomMarshalers_v2_0_0_0_cneutral_1.dll	2.0.0.0	
+GAC_Microsoft.VisualBasic_v8_0_0_0_cneutral_1.dll	2.0.0.0	
+GAC_Microsoft.WindowsCE.Forms_v2_0_0_0_cneutral_1.dll	2.0.0.0	
+GAC_Microsoft.WindowsMobile.DirectX_v2_0_0_0_cneutral_1.dll	2.0.0.0	
+GAC_mscorlib_v2_0_0_0_cneutral_1.dll	2.0.0.0	
+GAC_System.Data_v2_0_0_0_cneutral_1.dll	2.0.0.0	
+GAC_System_v2_0_0_0_cneutral_1.dll	2.0.0.0	
+GAC_System.Drawing_v2_0_0_0_cneutral_1.dll	2.0.0.0	
+GAC_System.Messaging_v2_0_0_0_cneutral_1.dll	2.0.0.0	
+GAC_System.Net.IrDA_v2_0_0_0_cneutral_1.dll	2.0.0.0	
+GAC_System.Web.Services_v2_0_0_0_cneutral_1.dll	2.0.0.0	
+GAC_System.Windows.Forms_v2_0_0_0_cneutral_1.dll	2.0.0.0	
+GAC_System.Windows.Forms.DataGrid_v2_0_0_0_cneutral_1.dll	2.0.0.0	
+GAC_System.Xml_v2_0_0_0_cneutral_1.dll	2.0.0.0	
+clientshutdown.exe	8.0.-14809.42	
+CMAccept.exe	8.0.-14809.42	
+ConmanClient2.exe	8.0.-14809.42	
+ConmanClient2.sp1.exe	8.0.-14809.762	
+DeviceDMA.dll	8.0.-14809.42	
+eDbgTL.dll	8.0.-14809.42	
+TcpConnectionA.dll	8.0.-14809.42	
+registryFiles.txt	-1.-1.-1.-1	10/22/2007 11:14:48 PM	
+RobComCtrlServer.exe	5.11.8.0	
+TpsStart.exe	-1.-1.-1.-1	10/22/2007 10:28:58 PM	
+FtpClient.dll	5.11.8.0	
+FtpClientps.dll	-1.-1.-1.-1	10/22/2007 10:22:57 PM	
+RobCommon.dll	5.11.8.0	
+RobCommonps.dll	-1.-1.-1.-1	10/22/2007 10:26:02 PM	
+RobInternal.dll	5.11.8.0	
+RobInternalps.dll	-1.-1.-1.-1	10/22/2007 10:26:05 PM	
+RobNetScan.dll	5.11.8.0	
+RobNetScanps.dll	-1.-1.-1.-1	10/22/2007 10:26:09 PM	
+RobClientDB.dll	5.11.8.0	
+RobFCom.dll	5.11.8.0	
+RobFComps.dll	-1.-1.-1.-1	10/22/2007 10:26:15 PM	
+RobCCom.dll	5.11.8.0	
+RobWait.dll	5.11.8.0	
+RobWaitps.dll	-1.-1.-1.-1	10/22/2007 10:26:21 PM	
+RobComCtrlServerps.dll	-1.-1.-1.-1	10/22/2007 10:26:25 PM	
+RobComCtrl_RC.dll	5.11.8.0	
+RobComCtrl_RCps.dll	-1.-1.-1.-1	10/22/2007 10:26:28 PM	
+RobComCtrlFactory.dll	5.11.8.0	
+RobComCtrlFactoryps.dll	-1.-1.-1.-1	10/22/2007 10:26:30 PM	
+RobCtrlInfo.dll	5.11.8.0	
+RobCtrlInfops.dll	-1.-1.-1.-1	10/22/2007 10:26:33 PM	
+RobClient.dll	5.11.8.0	
+RobClientps.dll	-1.-1.-1.-1	10/22/2007 10:26:35 PM	
+RobUser.dll	5.11.8.0	
+RobUserps.dll	-1.-1.-1.-1	10/22/2007 10:26:41 PM	
+RobController.dll	5.11.8.0	
+RobControllerps.dll	-1.-1.-1.-1	10/22/2007 10:26:47 PM	
+RobJogging.dll	5.11.8.0	
+RobJoggingps.dll	-1.-1.-1.-1	10/22/2007 10:27:01 PM	
+RobMechUnit.dll	5.11.8.0	
+RobMechUnitps.dll	-1.-1.-1.-1	10/22/2007 10:26:58 PM	
+RobMotionSystem.dll	5.11.8.0	
+RobMotionSystemps.dll	-1.-1.-1.-1	10/22/2007 10:27:04 PM	
+RobEventLog.dll	5.11.8.0	
+RobRapid.dll	5.11.8.0	
+RobRapidps.dll	-1.-1.-1.-1	10/22/2007 10:27:23 PM	
+RobRapidTask.dll	5.11.8.0	
+RobRapidTaskps.dll	-1.-1.-1.-1	10/22/2007 10:27:19 PM	
+RobRapidModule.dll	5.11.8.0	
+RobRapidModuleps.dll	-1.-1.-1.-1	10/22/2007 10:27:12 PM	
+RobObjectBrowser.dll	5.11.8.0	
+RobObjectBrowserps.dll	-1.-1.-1.-1	10/22/2007 10:26:49 PM	
+RobFileBrowser.dll	5.11.8.0	
+RobFileBrowserps.dll	-1.-1.-1.-1	10/22/2007 10:26:38 PM	
+RobIOSystem.dll	5.11.8.0	
+RobIOSystemPS.dll	-1.-1.-1.-1	10/22/2007 10:27:34 PM	
+RobStream.dll	5.11.8.0	
+RobStreamps.dll	-1.-1.-1.-1	10/22/2007 10:26:52 PM	
+RobReturnCodes.dll	-1.-1.-1.-1	10/22/2007 10:22:52 PM	
+Sys_ret_codes.dll	-1.-1.-1.-1	10/22/2007 10:22:52 PM	
+ABB.Robotics.dll	5.11.8.0	
+ABB.Robotics.Controllers.dll	5.11.8.0	
+ABB.Robotics.DataBinding.dll	5.11.8.0	
+ABB.Robotics.GTPU.dll	5.11.8.0	
+ABB.Robotics.GTPU.Windows.Forms.dll	5.11.8.0	
+ABB.Robotics.Tps.ProxyStub.dll	5.11.8.0	
+ABB.Robotics.Tps.Resources.dll	5.11.8.0	
+ABB.Robotics.Tps.SDK.Base.dll	5.11.8.0	
+ABB.Robotics.Tps.Taf.dll	5.11.8.0	
+ABB.Robotics.Tps.Windows.Forms.dll	5.11.8.0	
+ABB.Robotics.Taf.Base.dll	5.11.8.0	
+wcetrace.dll	-1.-1.-1.-1	10/22/2007 10:28:53 PM	
+GTPUServicesClient.dll	-1.-1.-1.-1	10/22/2007 10:28:59 PM	
+GTPUServices.exe	-1.-1.-1.-1	10/22/2007 10:29:02 PM	
+AdaptBase.dll	-1.-1.-1.-1	10/22/2007 10:29:07 PM	
+AdaptCmd.dll	-1.-1.-1.-1	10/22/2007 10:29:10 PM	
+AdaptController.dll	-1.-1.-1.-1	10/22/2007 10:29:21 PM	
+AdaptDevice.dll	-1.-1.-1.-1	10/22/2007 10:29:12 PM	
+AdaptEvent.dll	-1.-1.-1.-1	10/22/2007 10:29:16 PM	
+AdaptEventLog.dll	-1.-1.-1.-1	10/22/2007 10:29:18 PM	
+AdaptFileSystem.dll	-1.-1.-1.-1	10/22/2007 10:29:23 PM	
+AdaptIO.dll	-1.-1.-1.-1	10/22/2007 10:29:24 PM	
+AdaptObjectBrowser.dll	-1.-1.-1.-1	10/22/2007 10:29:13 PM	
+AdaptMechUnit.dll	-1.-1.-1.-1	10/22/2007 10:29:26 PM	
+AdaptRapid.dll	-1.-1.-1.-1	10/22/2007 10:29:28 PM	
+AdaptRapidModule.dll	-1.-1.-1.-1	10/22/2007 10:29:30 PM	
+AdaptRapidTask.dll	-1.-1.-1.-1	10/22/2007 10:29:33 PM	
+AdaptStream.dll	-1.-1.-1.-1	10/22/2007 10:29:34 PM	
+AdaptTPU.dll	-1.-1.-1.-1	10/22/2007 10:29:08 PM	
+Dcl.Base.dll	5.11.8.0	
+Dcl.Cfg.dll	5.11.8.0	
+Dcl.CmdServer.dll	5.11.8.0	
+Dcl.Controller.dll	5.11.8.0	
+Dcl.Messaging.dll	5.11.8.0	
+Dcl.Data.dll	5.11.8.0	
+Dcl.DataCalibration.dll	5.11.8.0	
+Dcl.DeviceServer.dll	5.11.8.0	
+Dcl.EventLog.dll	5.11.8.0	
+Dcl.EventServer.dll	5.11.8.0	
+Dcl.FileSystem.dll	5.11.8.0	
+Dcl.IOSystem.dll	5.11.8.0	
+Dcl.Jogging.dll	5.11.8.0	
+Dcl.Motion.dll	5.11.8.0	
+Dcl.ObjectBrowser.dll	5.11.8.0	
+Dcl.Rapid.dll	5.11.8.0	
+Dcl.Stream.dll	5.11.8.0	
+Dcl.SystemInfo.dll	5.11.8.0	
+Dcl.TPU.dll	5.11.8.0	
+Dcl.Tpx.dll	5.11.8.0	
+deployappl.exe	-1.-1.-1.-1	10/22/2007 10:29:36 PM	
+ScreenTest.exe	-1.-1.-1.-1	10/22/2007 10:29:37 PM	
+Taf.BaseInternal.dll	5.11.8.0	
+Taf.ComponentManager.dll	5.11.8.0	
+Taf.Master.dll	5.11.8.0	
+Taf.Reflector.dll	5.11.8.0	
+Tps.SystemSettings.dll	5.11.8.0	
+ABB.Robotics.Tps.Internal.dll	5.11.8.0	
+TpsABBPanel.dll	5.11.8.0	
+TpsCtrlAddModule.dll	5.11.8.0	
+TpsCtrlAddRoutine.dll	5.11.8.0	
+TpsCtrlFilterPanel.dll	5.11.8.0	
+TpsCtrlTreeView.dll	5.11.8.0	
+TpsAppRootCtrl.dll	5.11.8.0	
+TpsControlPanelAppearance.dll	5.11.8.0	
+TpsControlPanelExeSettings.dll	5.11.8.0	
+TpsControlPanelIO.dll	5.11.8.0	
+TpsControlPanelLanguage.dll	5.11.8.0	
+TpsControlPanelProgKeys.dll	5.11.8.0	
+TpsControlPanelRegionalSettings.dll	5.11.8.0	
+TpsControlPanelTouchScreen.dll	5.11.8.0	
+TpsControlPanelFPSystem.dll	5.11.8.0	
+TpsControlPanelSysParam.dll	5.11.8.0	
+TpsControlPanelSysDiag.dll	5.11.8.0	
+TpsControlPanelPosSafeCtrl.dll	5.11.8.0	
+TpsCtrlCalibrationMasters.dll	5.11.8.0	
+TpsCtrlChangeInstruction.dll	5.11.8.0	
+TpsCtrlGroupBox.dll	5.11.8.0	
+TpsCtrlHotEdit.dll	5.11.8.0	
+TpsCtrlInfo.dll	5.11.8.0	
+Tps.Controls.TpsCtrlIO.dll	5.11.8.0	
+TpsCtrlJoggingPropertyBrowser.dll	5.11.8.0	
+TpsCtrlMechUnitCalib.dll	5.11.8.0	
+TpsCtrlModPos.dll	5.11.8.0	
+TpsCtrlNumPadWrapper.dll	5.11.8.0	
+TpsCtrlOpenSaveDialog.dll	5.11.8.0	
+TpsCtrlPicButtonEx.dll	5.11.8.0	
+TpsCtrlQuickSet.dll	5.11.8.0	
+TpsCtrlRapidData.dll	5.11.8.0	
+TpsCtrlRapidDataCalib.dll	5.11.8.0	
+TpsCtrlStatusBar.dll	5.11.8.0	
+TpsCtrlToolBar.dll	5.11.8.0	
+ABB.Robotics.Tps.RapidTextBox.dll	5.11.8.0	
+TpsExecute.dll	5.11.8.0	
+TpsProgrammableKeys.dll	5.11.8.0	
+TpsTexts.dll	5.11.8.0	
+TpsViewBackupAndRestore.dll	5.11.8.0	
+TpsViewCalibration.dll	5.11.8.0	
+TpsViewControlPanelBrowser.dll	5.11.8.0	
+TpsViewHotEdit.dll	5.11.8.0	
+TpsViewIO.dll	5.11.8.0	
+TpsViewJogging.dll	5.11.8.0	
+TpsViewRapid.dll	5.11.8.0	
+TpsViewRapidData.dll	5.11.8.0	
+TpsViewRestart.dll	5.11.8.0	
+TpsViewTouchScreenCleaner.dll	5.11.8.0	
+TpsViewInfo.dll	5.11.8.0	
+TpsViewEventLog.dll	5.11.8.0	
+TpsViewFileExplorer.dll	5.11.8.0	
+TpsViewUAS.dll	5.11.8.0	
+TpsViewProductionWnd.dll	5.11.8.0	
+TAF.exe	5.11.8.0	
+TpsCtrlRapidTextbox.dll	5.11.8.0	
+TpsCtrlProgressWnd.dll	5.11.8.0	
+TafFormLauncher.dll	5.11.8.0	
+BackSpace.bmp	-1.-1.-1.-1	10/22/2007 5:46:40 PM	
+backup16x16.gif	-1.-1.-1.-1	10/22/2007 5:46:40 PM	
+backup32x32.gif	-1.-1.-1.-1	10/22/2007 5:46:40 PM	
+BreakPointActive.bmp	-1.-1.-1.-1	10/22/2007 5:46:40 PM	
+BreakPointDeactive.bmp	-1.-1.-1.-1	10/22/2007 5:46:40 PM	
+CalibOffsetValues.bmp	-1.-1.-1.-1	10/22/2007 5:46:40 PM	
+calibration16x16.gif	-1.-1.-1.-1	10/22/2007 5:46:40 PM	
+calibration32x32.gif	-1.-1.-1.-1	10/22/2007 5:46:40 PM	
+cd1.gif	-1.-1.-1.-1	10/22/2007 5:46:40 PM	
+cd1_disabled.gif	-1.-1.-1.-1	10/22/2007 5:46:40 PM	
+checkmark.bmp	-1.-1.-1.-1	10/22/2007 5:46:40 PM	
+DownArrow.bmp	-1.-1.-1.-1	10/22/2007 5:46:40 PM	
+floppy1.gif	-1.-1.-1.-1	10/22/2007 5:46:40 PM	
+floppy1_disabled.gif	-1.-1.-1.-1	10/22/2007 5:46:40 PM	
+Filter32.gif	-1.-1.-1.-1	10/22/2007 5:46:40 PM	
+framedefinition.bmp	-1.-1.-1.-1	10/22/2007 5:46:40 PM	
+GTPU_background.gif	-1.-1.-1.-1	10/22/2007 5:46:40 PM	
+HotEdit32.gif	-1.-1.-1.-1	10/22/2007 5:46:40 PM	
+InstantRun.gif	-1.-1.-1.-1	10/22/2007 5:46:40 PM	
+InstantStop.gif	-1.-1.-1.-1	10/22/2007 5:46:40 PM	
+IRB140.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+keba16.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+LeftArrow.bmp	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+local.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+local_disabled.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+login_16.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+login_32.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+mounted.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+mounted_disabled.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+restore16x16.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+Return.bmp	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+RevCountersOffsets.bmp	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+RightArrow.bmp	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+selectbutton48down.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+selectbutton48up.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+stepIn62.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+stepInDown62.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+stepNextMove62.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+stepNextMoveDown62.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+stepOut62.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+stepOutDown62.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+stepOver62.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+stepOverDown62.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+Tool_small.bmp	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsAbbButton.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsAbbButtonSel.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsABBMenuLeftLower.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsABBMenuLeftMid.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsABBMenuLeftUpper.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsABBMenuLeftUpperRounded.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsABBMenuMidUpperRounded.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsABBMenuMidLower.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsABBMenuMidUpper.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsABBMenuRightLower.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsABBMenuRightMid.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsABBMenuRightUpper.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsBackup.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsBackupPressed.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsCheckBoxChecked.bmp	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsCheckBoxUnChecked.bmp	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsCloseButton.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsCloseButtonDisabled.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsCloseButtonSel.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsHotEditArrowRight.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsHotEditBlankOut.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsHotEditTrashBin.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsJoystickButton.jpg	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsJoystickButtonSel.jpg	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsJoystickLockUnlocked.jpg	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsJoystickLockUnlockedSel.jpg	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsJoystickLockXaxis.jpg	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsJoystickLockXaxisSel.jpg	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsJoystickLockYaxis.jpg	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsJoystickLockYaxisSel.jpg	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsJoystickLockZaxis.jpg	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsJoystickLockZaxisSel.jpg	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsLanguage16.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsLanguage32.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsLVHLeft.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsLVHLeftPressed.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsLVHMid.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsLVHMidPressed.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsLVHRight.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsLVHRightPressed.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsLVHSortDown.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsLVHSortDownPressed.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsLVHSortUp.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsLVHSortUpPressed.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsOpenSaveClosedFolder.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsOpenSaveDetails.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsOpenSaveDetailsSel.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsOpenSaveList.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsOpenSaveListSel.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsOpenSaveNew.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsOpenSaveNew-gray.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsOpenSaveOpenFolder.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsOpenSaveOpenFolder24x24.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsOpenSaveUp.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsQuickSet.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsQuickSetCoordBase.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetCoordBaseSel.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetCoordTool.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetCoordToolSel.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetCoordWobj.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetCoordWobjSel.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetCoordWorld.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetCoordWorldSel.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetIncrNo.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetIncrNoSel.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetIncrSmallUp.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetIncrSmallDown.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetIncrMediumUp.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetIncrMediumDown.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetIncrLargeUp.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetIncrLargeDown.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetIncrUserUp.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetIncrUserDown.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetMechUnitExternal.jpg	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetMechUnitExternalSel.jpg	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetMechUnitRobot.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetMechUnitRobotSel.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetMotionAxis13.jpg	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetMotionAxis13Sel.jpg	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetMotionAxis46.jpg	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetMotionAxis46Sel.jpg	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetMotionLinear.jpg	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetMotionLinearSel.jpg	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetMotionReorient.jpg	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetMotionReorientSel.jpg	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetSel.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetSpeed.jpg	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetSpeed100.jpg	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetSpeed100Sel.jpg	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetSpeed25.jpg	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetSpeed25Sel.jpg	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetSpeed50.jpg	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetSpeed50Sel.jpg	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetSpeedDecr.jpg	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetSpeedDecrSel.jpg	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetSpeedIncr.jpg	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetSpeedIncrSel.jpg	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetSpeedSel.jpg	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetStartContinous.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetStartContinousSel.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetStartCycle.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetStartCycleSel.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetTaskPanelDown.GIF	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsQuickSetTaskPanelUp.GIF	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsRapidEditorPageDown.bmp	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsRapidEditorPageUp.bmp	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsRapidEditorScrollDown.bmp	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsRapidEditorScrollDownSel.bmp	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsRapidEditorScrollLeft.bmp	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsRapidEditorScrollLeftSel.bmp	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsRapidEditorScrollRight.bmp	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsRapidEditorScrollRightSel.bmp	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsRapidEditorScrollUp.bmp	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsRapidEditorScrollUpSel.bmp	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsRapidEditorZoomIn.bmp	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsRapidEditorZoomOut.bmp	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsRestore.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsRestorePressed.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsSmallScrollLeftWaterMark.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsSmallScrollRightWaterMark.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsStatusBar.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsStatusBarSel.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsStatusBar_Blink.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsStatusBarOpWnd.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsStatusBarOpWndBlink.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsStatusBarOpWndSel.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsTapAndHold.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsTaskBarButton.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsTaskBarButtonSel.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsTMRButton.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+TpsTMRButtonSel.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tps-radioempty.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tps-radioselected.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-blueminus32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-blueplus32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-controlPanel16.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-controlPanel32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-cpAppearance32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-cpAppearance16.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-diagnostic16.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-diagnostic32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-cpDateTime32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-cpDateTime16.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-cpTouchscreen16.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-cpTouchscreen32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-cpPosSafeCtrl16.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-cpPosSafeCtrl32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-doccfg.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-docmod.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-docother.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-docpgf.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-docprg.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-docsys.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-error16.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-error32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-EventLog32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-executionSettings32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-executionSettings16.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-hourglass32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-info16.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-info32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-information16.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-information32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-IOConfig16.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-IOConfig32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-IRB16.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-Jogging32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-JoyXNeg32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-JoyXPos32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-JoyYNeg32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-JoyYPos32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-JoyZNeg32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-JoyZPos32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-LockX32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-LockY32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-LockZ32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-Operator16.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-Operator32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-Production16.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-Production32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-progKey132.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-progKey232.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-progKey332.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-progKey432.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-progKeys32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-progKeys16.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-programPointerG16.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-programPointerR16.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-programPointerY16.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-rapidData16.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-rapidData32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-rapidEditor16.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-rapidEditor16White.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-rapidEditor32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-restart16.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-restart32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-routine-PROC.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-routine-TRAP.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-SysPar32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-SysPar16.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-touchscreenClean16.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-touchscreenClean32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-waringSign16.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-waringSign32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tree-dot.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tree-minus.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tree-plus.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+UpArrow.bmp	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+WorkObject_small.bmp	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+MrsLabelButton.jpg	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+MrsLabelButtonSel.jpg	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+tpu-grayplus32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-grayminus32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-FPSystem16.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-FPSystem32.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-RobotActive.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-RobotInactive.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-ExtAxisActive.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-ExtAxisInactive.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-UpdateSMBDataManipulator.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-UpdateSMBDataCabinet.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-ClearSMBDataCab.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-SMBClearManip.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+tpu-SMBData.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+Tpu-ExternalAxes.gif	-1.-1.-1.-1	10/22/2007 5:46:42 PM	
+SupervisionOnUp.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+SupervisionOnDown.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+SupervisionOffUp.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+SupervisionOffDown.gif	-1.-1.-1.-1	10/22/2007 5:46:41 PM	
+TpsConfiguration.xml	-1.-1.-1.-1	10/22/2007 5:46:12 PM	
+FPSystemDefault.xml	-1.-1.-1.-1	10/22/2007 5:46:11 PM	
+KeTopAPI.dll	1.2.5886.0	
+ConfigTool.exe	1.43.0.0	
+Update.dll	2.5.0.0	
+ImgUpdate.exe	1.22.0.0	
+Version.html	-1.-1.-1.-1	7/5/2007 6:03:40 AM	
+FirstConfig.exe	1.12.0.0	
+JoystickCalib.exe	2.0.1357.0	

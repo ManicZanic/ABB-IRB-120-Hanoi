@@ -1,0 +1,537 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="ARL" domainNo="4" lang="zh" elogTextVersion="1.0" min="573" max="712">
+  <Message number="573" eDefine="SYS_ERR_ARL_ARG_ACCONLOW">
+    <Title>自变量错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />自变量 On 的值过小。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>增大自变量 On 的值。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="574" eDefine="SYS_ERR_ARL_CONTSEARCH">
+    <Title>搜索报警</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />搜索命中数为 <arg format="%s" ordinal="2" />。<p />执行下次搜索前，确保 TCP 退回到搜索路径的起始位置。<p />程序引用 <arg format="%s" ordinal="3" /></Description>
+    <Consequences>如果未进行重新定位，就有可能在重新开始循环搜索前出现破坏性运动。</Consequences>
+    <Actions>恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="576" eDefine="SYS_ERR_ARL_PARID_ARR">
+    <Title>ParId 错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />自变量 AxValid 的数组大小与轴编号不相等。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>检查数组大小。</Actions>
+  </Message>
+  <Message number="577" eDefine="SYS_ERR_ARL_PARID_ROB">
+    <Title>ParId 错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />函数 ParIdRobValid 需在函数 ParIdPosValid 之前执行。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>函数 ParIdRobValid 需在函数 ParIdPosValid 之前执行。</Causes>
+    <Actions>检查确保在 ParIdPosValid 之前执行了函数 ParIdRobValid。</Actions>
+  </Message>
+  <Message number="578" eDefine="SYS_ERR_ARL_PARID_PAYLD">
+    <Title>ParId 错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />可选自变量 PayLoad 缺失。要进行有效荷载测定就必须提供该自变量。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>为自变量 PayLoad 赋值。</Actions>
+  </Message>
+  <Message number="579" eDefine="SYS_ERR_ARL_PARID_NOPAYLD">
+    <Title>ParId 错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />可选自变量 PayLoad 只能用于有效荷载测定。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>删除自变量 PayLoad。</Actions>
+  </Message>
+  <Message number="580" eDefine="SYS_ERR_ARL_PARID_LDIINI">
+    <Title>ParId 错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />LoadIdInit 处于故障状态<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>检查整个 Parld 序列。</Actions>
+  </Message>
+  <Message number="581" eDefine="SYS_ERR_ARL_PARID_MOVSEQ">
+    <Title>ParId 错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />ParIdMoveSeq 处于故障状态<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>检查整个 Parld 序列。</Actions>
+  </Message>
+  <Message number="582" eDefine="SYS_ERR_ARL_PARID_LDIRES">
+    <Title>ParId 错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />LoadIdInit 处于故障状态<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>检查整个 Parld 序列。</Actions>
+  </Message>
+  <Message number="583" eDefine="SYS_ERR_ARL_PARID_BWD">
+    <Title>ParId 错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />不允许逆向执行。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="584" eDefine="SYS_ERR_ARL_PARID_NXTMOV">
+    <Title>ParId 错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />ParIdMoveSeq / 参数 NextMove：<p />数组大小错误。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>检查数组大小。</Actions>
+  </Message>
+  <Message number="585" eDefine="SYS_ERR_ARL_PARID_WOBFTCP">
+    <Title>ParId 错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />在包含 roomfix TCP 的 PayLoad 中，Loadld 缺少自变量 WObj。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>添加自变量 WObj。</Actions>
+  </Message>
+  <Message number="586" eDefine="SYS_ERR_ARL_PARID_NOWOBFTCP">
+    <Title>ParId 错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />存在不允许的自变量 WObj。该自变量只能用于包含 roomfix TCP 的 PayLoad。<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>删除自变量 WObj。</Actions>
+  </Message>
+  <Message number="587" eDefine="SYS_ERR_ARL_PARID_MOVDAT">
+    <Title>ParId 错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />ParIdMoveSeq / 参数 MoveData：<p />数组大小错误。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>检查数组大小。</Actions>
+  </Message>
+  <Message number="588" eDefine="SYS_ERR_ARL_PARID_SINDFLT">
+    <Title>ParId 错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />ParIdMove / 参数 StartIndex：<p />StartIndex 错误。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>检查 StartIndex。</Actions>
+  </Message>
+  <Message number="589" eDefine="SYS_ERR_ARL_PARID_SINDNEG">
+    <Title>ParId 错误</Title>
+    <Description>任务：<arg format="%s" ordinal="1" /><p />ParIdMove/参数 StartIndex：<p />指向负值移动类型。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="590" eDefine="SYS_ERR_ARL_PARID">
+    <Title>ParId 错误</Title>
+    <Description>
+      <arg format="%s" ordinal="1" />
+      <p />
+      <arg format="%s" ordinal="2" />
+      <p />
+    </Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="591" eDefine="SYS_ERR_ARL_PARIDTYPE">
+    <Title>自变量错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />未知参数识别类型。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>检查自变量 ParldType。</Actions>
+  </Message>
+  <Message number="592" eDefine="SYS_ERR_ARL_PARIDSTOP">
+    <Title>Load Identification过程中程序停止 </Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />Load Identification过程中不允许任何类型的程序停止。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>重新启动Load Identification测定过程。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="593" eDefine="SYS_ERR_ARL_PARIDPF">
+    <Title>荷载测定过程中停电</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />荷载测定过程中因停电而导致错误的荷载结果。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>以同一荷载测定运行模式（无 PCP 移动）重新开始程序执行。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="594" eDefine="SYS_ERR_ARL_PARID_RAISEPP">
+    <Title>在载荷测定期间发生的用户错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />错误将会导致PP移动到载荷测定服务例行程序的起始处。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>重新启动载荷测定服务例行程序。<p />恢复: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="595" eDefine="SYS_ERR_ARL_PARID_LOADTYPE">
+    <Title>自变量错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />未知荷载测定类型。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>检查自变量 LoadIdType。</Actions>
+  </Message>
+  <Message number="596" eDefine="SYS_ERR_ARL_PARID_UNDO">
+    <Title>荷载测定过程中程序停止</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />荷载测定过程中不允许任何类型的程序停止。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>重新执行荷载测定程序。</Actions>
+  </Message>
+  <Message number="597" eDefine="SYS_ERR_ARL_PARID_SPEEDERR">
+    <Title>Speed Override</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />Speed override 未达 100%。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>- 将 speed override 更改为 100。<p />-重新执行荷载测定程序。</Actions>
+  </Message>
+  <Message number="598" eDefine="SYS_ERR_ARL_PARID_PROC_STOP">
+    <Title>载荷测定过程中程序停止</Title>
+    <Description>载荷测定移动过程中不允许任何类型的程序停止。</Description>
+    <Consequences>不可能完成载荷测定序列。<p />注意实际机械单元的一些轴现在处于独立模式。</Consequences>
+    <Causes>通过程序停止或释放启用设备实现的载荷测定序列中断。</Causes>
+    <Actions>1) 重新启动程序。然后载荷测定服务例行程序开始启动。<p />2) 也可能取消服务例行程序完全跳过载荷测定。</Actions>
+  </Message>
+  <Message number="599" eDefine="SYS_ERR_ARL_PARID_DATA_LOGGER_ERROR">
+    <Title>Program Stop during Load Identification</Title>
+    <Description>No type of Program Stop is allowed during the Load Identification movements.</Description>
+    <Consequences>It is not possible to complete the Load Identification sequence.<p />Note that some axes for the actual mechanical unit are now in independent mode. </Consequences>
+    <Causes>A program stop caused errors in the measurements, and this was detected when restarting the Load Identification movements.</Causes>
+    <Actions>1) Restart the program. It will then be possible to return to the Load Identification<p />start position. Then the movement sequence can be started again. <p />2) Also possible to cancel the Service Routine to completly skip the Load Identification. </Actions>
+  </Message>
+  <Message number="603" eDefine="SYS_ERR_ARL_ARG_NEG">
+    <Title>自变量错误</Title>
+    <Description>自变量 <arg format="%s" ordinal="1" /> 不能包含负值。<p /></Description>
+    <Actions>将自变量 <arg format="%s" ordinal="2" /> 设为正值。</Actions>
+  </Message>
+  <Message number="607" eDefine="SYS_ERR_ARL_CIRC_NEWMOD">
+    <Title>执行错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />运行旋转运动时，不允许将运行模式从向前更改为向后，<p />反之亦然。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>如有可能，请选择原始运行模式，然后按开始键继续<p />已停止的旋转运动。如无法执行该操作，请移动机器人和程序指针重新启动。</Actions>
+  </Message>
+  <Message number="608" eDefine="SYS_ERR_ARL_ORI_ERR">
+    <Title>自变量错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> 中姿态定义错误。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>必须标准化所有已采用的姿态值，即四元数元素的平方和必须等于 1。</Actions>
+  </Message>
+  <Message number="609" eDefine="SYS_ERR_ARL_MEC_LONG">
+    <Title>自变量错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />自变量 \WObj 指定的机械单元名称过长。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>请用最多 16 个字符指定机械协调单元的名称。</Actions>
+  </Message>
+  <Message number="611" eDefine="SYS_ERR_ARL_BWD_TOOLWOBJ">
+    <Title>执行错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />不允许用该移动指令后退。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>如果后退到为另一工具或工件定义的位置，就会导致路径错误。<p /></Consequences>
+    <Actions>检查工具和工件。</Actions>
+  </Message>
+  <Message number="612" eDefine="SYS_ERR_ARL_NO_IOARG">
+    <Title>自变量错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />没有为输出信号名称设置自变量。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>可在机器人运动时设置一个位置修正 IO，如数字、数字群或模拟输出信号。</Actions>
+  </Message>
+  <Message number="613" eDefine="SYS_ERR_ARL_IOARG_COMB">
+    <Title>自变量错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />可选自变量 <arg format="%s" ordinal="2" /> 只能与输出信号自变量 <arg format="%s" ordinal="3" /> 结合。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>检查并更改自变量。</Actions>
+  </Message>
+  <Message number="614" eDefine="SYS_ERR_ARL_DO_LIM">
+    <Title>自变量错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />自变量 <arg format="%s" ordinal="2" /> 不是 0 或 1。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>数字信号只能设置或限制为 0 或 1。</Actions>
+  </Message>
+  <Message number="615" eDefine="SYS_ERR_ARL_GO_NOTINT">
+    <Title>自变量错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />自变量 <arg format="%s" ordinal="2" /> 不是整数值。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>输入/输出信号数字群、进程标识或进程选择器只能拥有一个整数值。</Actions>
+  </Message>
+  <Message number="616" eDefine="SYS_ERR_ARL_GO_LIM">
+    <Title>变元错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />变元 <arg format="%s" ordinal="2" /> 超出允许的范围。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>根据系统参数配置，使用的数字输入/输出信号群只能设置或限制在 0 到 <arg format="%s" ordinal="4" /> 之内。<p />恢复： <arg format="%s" ordinal="5" /><p /></Actions>
+  </Message>
+  <Message number="617" eDefine="SYS_ERR_ARL_AO_LIM">
+    <Title>变元错误</Title>
+    <Description>任务 <arg format="%s" ordinal="1" />：<p />变元 SetValue、SetDvalue、ScaleValue、CheckValue 或 CheckDvalue 中的任一个超出了允许的限制范围。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>只能在 <arg format="%s" ordinal="3" /> 和 <arg format="%s" ordinal="4" /> 内根据 I/O 系统参数配置设置/检查模拟信号。 </Causes>
+    <Actions>检查 RAPID 程序或 I/O 配置。<p />恢复： <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="620" eDefine="SYS_ERR_ARL_ARG_TOLNEG">
+    <Title>变元错误
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />变元 <arg format="%s" ordinal="2" /> 负值过大。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>将变元 <arg format="%s" ordinal="4" /> 设为 <arg format="%s" ordinal="4" />或更大值。
+</Actions>
+  </Message>
+  <Message number="622" eDefine="SYS_ERR_ARL_LOW_CYC">
+    <Title>变元错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />循环中断的变元 Time 值过低。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>将 Time 的值更改为大于或等于 0.1 s。</Actions>
+  </Message>
+  <Message number="623" eDefine="SYS_ERR_ARL_LOW_SING">
+    <Title>变元错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />单个中断的变元 Time 的值过小。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>将 Time 的值更改为大于或等于 0.01 s。</Actions>
+  </Message>
+  <Message number="624" eDefine="SYS_ERR_ARL_DO_LIM2">
+    <Title>自变量错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />自变量 <arg format="%s" ordinal="2" /> 不在 0 或 2 之间。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>指定 flank 以产生中断。<p />0 = 负值 flank（高 -&gt; 低）。<p />1 = 正值 flank（低 -&gt; 高）。<p />2 = 正值和负值 flank。</Actions>
+  </Message>
+  <Message number="625" eDefine="SYS_ERR_ARL_ROB_LIMIT">
+    <Title>限制错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />机器人超出限制范围。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>-轴超出作业区域。<p />-至少一个耦合关节超出限制范围。</Causes>
+    <Actions>恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="631" eDefine="SYS_ERR_ARL_CONC_BASE">
+    <Title>指令错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />在并行 RAPID 程序执行中，连续的移动指令太多。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>在程序的基本执行级别将程序编辑为最多连续 5 MoveX \Conc。<p />恢复： <arg format="%s" ordinal="3" /><p /></Actions>
+  </Message>
+  <Message number="632" eDefine="SYS_ERR_ARL_CONC_TRAP">
+    <Title>指令错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />执行当前 RAPID 程序时，程序的 StorePath-RestoPath 部分内不允许存在移动指令。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>编辑该程序，使程序的 StorePath-RestoPath 部分内不包含任何 MoveX \Conc 指令。</Actions>
+  </Message>
+  <Message number="634" eDefine="SYS_ERR_ARL_SIG_UNDEF">
+    <Title>引用错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />信号 <arg format="%s" ordinal="2" /> 在系统中为未知。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>如果信号是在 RAPID 程序中定义的，必须用指令 AliasIO 将其连接到所配置的信号。<p /></Causes>
+    <Actions>所有信号（AliasIO 信号除外）必须在系统参数中定义，不能在 RAPID 程序中定义。 </Actions>
+  </Message>
+  <Message number="636" eDefine="SYS_ERR_ARL_SEN_NO_MEAS">
+    <Title>传感器错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />传感器无测量值发出。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>请求的数据不可用。<p />恢复： <arg format="%s" ordinal="3" /><p /></Actions>
+  </Message>
+  <Message number="637" eDefine="SYS_ERR_ARL_SEN_NOREADY">
+    <Title>传感器错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />尚未就绪。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>请求的函数未就绪。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="638" eDefine="SYS_ERR_ARL_SEN_GENERRO">
+    <Title>传感器错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />一般错误。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>出现一般性错误，这种错误不会专门连接到请求的动作。如果函数可用，请读取数据块 "Error log" 。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="639" eDefine="SYS_ERR_ARL_SEN_BUSY">
+    <Title>传感器错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />传感器忙，请稍后重试。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>传感器正在处理另一函数。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="640" eDefine="SYS_ERR_ARL_SEN_UNKNOWN">
+    <Title>传感器错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />未知指令。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>从传感器请求的函数是未知函数。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="641" eDefine="SYS_ERR_ARL_SEN_ILLEGAL">
+    <Title>传感器错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />非法变量或数据块编号。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>请求的变量或数据块在传感器中未定义。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="642" eDefine="SYS_ERR_ARL_SEN_EXALARM">
+    <Title>传感器错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />外部报警。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>外部设备报警。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="643" eDefine="SYS_ERR_ARL_SEN_CAALARM">
+    <Title>传感器错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />照相机报警。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>在照相机中检测到某一错误。如果照相机情况正常，请运行<p /> Camcheck。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="644" eDefine="SYS_ERR_ARL_SEN_TEMP">
+    <Title>传感器错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />温度报警。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>照相机过热，请加强散热或供水。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="645" eDefine="SYS_ERR_ARL_SEN_VALUE">
+    <Title>传感器错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />值超出范围。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>发送给传感器的数据值超出范围。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="646" eDefine="SYS_ERR_ARL_SEN_CAMCHECK">
+    <Title>传感器错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />照相机检验失败。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>CAMCHECK 函数出错。照相机损坏。请送修。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="647" eDefine="SYS_ERR_ARL_SEN_TIMEOUT">
+    <Title>传感器错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />通信超时。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>增加超时时间并检查传感器连接。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="648" eDefine="SYS_ERR_ARL_TRAP_SEARCH">
+    <Title>搜索错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />在基本路径层上搜索时，不允许执行 StorePath。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>程序已停止。</Consequences>
+    <Causes>搜索时执行指令 StorePath。</Causes>
+    <Actions>搜索运动基本路径层时，无法在 TRAP、事件或服务例行程序中使用 StorePath。<p />如果为执行 TRAP 而在程序中使用中断，在搜索时必须停用这类中断。<p />例如 ISleep - SearchL - IWatch </Actions>
+  </Message>
+  <Message number="649" eDefine="SYS_ERR_ARL_PATH_LIMIT">
+    <Title>路径限制</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> 已执行。执行新的 <arg format="%s" ordinal="5" /> 前必须先执行指令 <arg format="%s" ordinal="4" /> 。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>检查 RAPID 程序。</Actions>
+  </Message>
+  <Message number="650" eDefine="SYS_ERR_ARL_PAR_COMB">
+    <Title>错误的参数组合</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />可选参数和开关未用于正确的组合。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>－可选参数和开关均未保留旧的坐标系。<p />－开关 Old 拥有相同的函数。<p />－必须将 RefPos 或 RefNum 定义为 Short、Fwd 或 Bwd。</Actions>
+  </Message>
+  <Message number="651" eDefine="SYS_ERR_ARL_NUM_INPUT">
+    <Title>使用数字输入</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />使用数字输入来定义位置，不能使用 robtarget。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>该位置不能用 robtarget 定义。<p /> 请使用数字输入来确定该位置的可选参数。 </Actions>
+  </Message>
+  <Message number="652" eDefine="SYS_ERR_ARL_AXIS_MOVING">
+    <Title>轴处于运动状态</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />机器人轴、外轴或独立轴处于运动状态。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>所有机器人轴、外轴和独立轴必须处于静止状态。<p />对于机器人和外轴请使用包含 Fine 自变量的 MoveL。<p />独立轴请使用 IndRMove。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="654" eDefine="SYS_ERR_ARL_AXIS_ACT">
+    <Title>轴处于非活动状态</Title>
+    <Description>任务：<arg format="%s" ordinal="1" /><p />轴的移动终点位置未定义 (9E9) 或者<p />要移动的轴当前处于非活动状态。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>1) 要移动到的位置已经预设了非活动机械单元。<p />2) 要移动到的位置已被修改，机械单元已停用。<p />3) 机械单元当前处于非活动状态。</Causes>
+    <Actions>机械单元必须先启动，然后才能修改或移动到目标位置。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="655" eDefine="SYS_ERR_ARL_AXIS_IND">
+    <Title>轴不处于独立状态</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />轴不处于独立模式。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>只有处于独立模式的轴才能获得这一状态。</Consequences>
+    <Actions>将轴设置为独立模式。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="658" eDefine="SYS_ERR_ARL_TRIGG_DIPLAG">
+    <Title>参数错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />如果参数 <arg format="%s" ordinal="3" /> 大于零，就只能使用参数 <arg format="%s" ordinal="2" /> 。 <p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>参数 <arg format="%s" ordinal="5" /> 仅在 TriggX 指令序列（由若干 TriggX 指令组成）的第一个 TriggX 指令中有效，该指令负责控制速度比例 AO 信号。</Actions>
+  </Message>
+  <Message number="661" eDefine="SYS_ERR_ARL_SIGSUP_SEARCH">
+    <Title>搜索错误</Title>
+    <Description>任务:<arg format="%s" ordinal="1" /><p />用于SearchX 指令的信号 <arg format="%s" ordinal="2" />已在搜索开始时设置为指定值（高或低），或该信号对应的I/O单元暂时并未启动和运行。<p />在执行下一次搜索之前，确保将TCP移回到搜索路径的起始位置。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>如果在重新启动循环搜索之前，未进行重定位，则可能会发生损害性的移动。</Consequences>
+    <Actions>恢复: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="662" eDefine="SYS_ERR_ARL_BADWZONE">
+    <Title>无效 Worldzone 类型</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />开关 \<arg format="%s" ordinal="2" /> 必须与一个 <arg format="%s" ordinal="3" /> worldzone 关联。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>如果使用开关 \Temp，数据类型必须是 WorldZone 中的 wztemporary。<p />如果使用开关 \Stat，数据类型必须是 WorldZone 中的 wztemporary。</Actions>
+  </Message>
+  <Message number="663" eDefine="SYS_ERR_ARL_WZONE_UNUSED">
+    <Title>World Zone 未使用</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />指令 <arg format="%s" ordinal="3" /> 的参数 <arg format="%s" ordinal="2" /> 引用了未使用的 worldzone。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>worldzone 必须由 WZLimSup 或 WZDOSet 指令定义和启动。</Actions>
+  </Message>
+  <Message number="664" eDefine="SYS_ERR_ARL_WZONE_IN_USE">
+    <Title>World Zone 已使用</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />已定义和启动 "<arg format="%s" ordinal="2" />" worldzone。<p />world zone 只能定义一次。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>请使不同名称的 worldzone。</Actions>
+  </Message>
+  <Message number="665" eDefine="SYS_ERR_ARL_WZONE_FULL">
+    <Title>World Zone 过多</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />不能添加 world zone <arg format="%s" ordinal="2" /> 。world zone 表已满。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>请检查 RAPID 程序，看是否能删除任何 word zone。</Actions>
+  </Message>
+  <Message number="666" eDefine="SYS_ERR_ARL_LOCAL_WZONE">
+    <Title>非法 World Zone</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />Worldzone "<arg format="%s" ordinal="2" />" 在当前例行程序中被定义为局域。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>在模块中将 world zone 定义为全局或局域。</Actions>
+  </Message>
+  <Message number="667" eDefine="SYS_ERR_ARL_WZ_NOTENTIRE">
+    <Title>非法 World Zone</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />WorldZone <arg format="%s" ordinal="2" /> 不是完整的数据引用。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>检查自变量 WorldZone 的值。</Actions>
+  </Message>
+  <Message number="668" eDefine="SYS_ERR_ARL_SHAPE_UNUSED">
+    <Title>Shapedata 未使用</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />指令 <arg format="%s" ordinal="3" /> 的 "<arg format="%s" ordinal="2" />" 自变量必须引用已定义的 shapedata。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>shapedata 用于存储卷定义。在被 WZLimSup 或 WZDOSet<p /> 使用前，它必须已经由 WZBoxDef、WZSphDef 或 WZCylDef 定义。</Actions>
+  </Message>
+  <Message number="669" eDefine="SYS_ERR_ARL_INVALID_SHAPE">
+    <Title>World Zone 过小</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />至少有一边或一条半径小于指令 <arg format="%s" ordinal="2" /> 中允许的最小值。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>检查上一条卷定义指令。</Actions>
+  </Message>
+  <Message number="670" eDefine="SYS_ERR_ARL_INVALID_WZONE">
+    <Title>无效 World Zone</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="3" /> 中的 world zone 自变量 <arg format="%s" ordinal="2" /> 索引不是由 WZLimSup 或 WZDOSet 定义的有效索引。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>检查 RAPID 程序。</Actions>
+  </Message>
+  <Message number="671" eDefine="SYS_ERR_ARL_STAT_WZONE">
+    <Title>非法使用 World Zone</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="3" /> 的自变量 "<arg format="%s" ordinal="2" />" 必须是一个临时 world zone。<p />程序引用 <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>检查自变量。</Actions>
+  </Message>
+  <Message number="672" eDefine="SYS_ERR_ARL_WZONE_EQNAME">
+    <Title>World Zone 已使用</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />不能添加 world zone <arg format="%s" ordinal="2" /> 。系统中已定义了另一同名 world zone。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>检查 world zone 的名称。</Actions>
+  </Message>
+  <Message number="673" eDefine="SYS_ERR_ARL_IO_ACCESS">
+    <Title>I/O 访问错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />参数 <arg format="%s" ordinal="2" /> 中给定的信号设置了 RAPID 访问写保护。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>请选择其它用户信号或更改该信号的访问模式。</Actions>
+  </Message>
+  <Message number="674" eDefine="SYS_ERR_ARL_NOTWRITEPROT">
+    <Title>I/O 访问错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />参数 <arg format="%s" ordinal="2" /> 中给定的信号未设置对用户通过教导器或 RAPID 访问的写保护。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>在 I/O 配置中将信号的访问模式更改为系统类型。 </Actions>
+  </Message>
+  <Message number="675" eDefine="SYS_ERR_ARL_TRAP_NOTBWD">
+    <Title>执行错误</Title>
+    <Description>运行不可见中断例行程序时，不允许将运行模式从向前更改为向后，反之亦然。<p /></Description>
+    <Actions>可选择初始运行模式，然后按开始键继续。</Actions>
+  </Message>
+  <Message number="676" eDefine="SYS_ERR_ARL_HOMEJOINT_ROB">
+    <Title>参数错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />机器人轴的 DeltaJointVal <arg format="%s" ordinal="2" /> &lt;= 0.<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>检查 DeltaJointVal 的值。所有轴的 DeltaJointVal 监控值必须 &gt; 0 mm 或 0 度。</Actions>
+  </Message>
+  <Message number="677" eDefine="SYS_ERR_ARL_HOMEJOINT_EXT">
+    <Title>参数错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />外轴的 DeltaJointVal <arg format="%s" ordinal="2" /> &lt;= 0。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>检查 DeltaJointVal 的值。所有轴的 DeltaJointVal 监控值必须 &gt; 0 mm 或 0 度。</Actions>
+  </Message>
+  <Message number="678" eDefine="SYS_ERR_ARL_LIMJOINT_ROB">
+    <Title>参数错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />LowJointVal 高于或等于机器人轴 <arg format="%s" ordinal="2" /> 的 HighJointVal。<p />程序引用 <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>检查 HighJointVal 和 LowJointVal 的值。定义最高和/或最低限制后，HighJointVal 必须高于所有轴的 LowJointVal。</Actions>
+  </Message>
+  <Message number="679" eDefine="SYS_ERR_ARL_LIMJOINT_EXT">
+    <Title>参数错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />LowJointVal 高于或等于外轴 <arg format="%s" ordinal="2" /> 的 HighJointVal。<p />程序引用 <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>检查 HighJointVal 和 LowJointVal 的值。定义最高和/或最低限制后，HighJointVal 必须高于所有轴的 LowJointVal。</Actions>
+  </Message>
+  <Message number="680" eDefine="SYS_ERR_ARL_HOMEJOINT_NOTACT">
+    <Title>参数错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />使用的 WZHomeJointDef 存在错误。不允许指定非激活轴 <arg format="%s" ordinal="2" /> 的监控值<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>将实际轴的自变量 MiddleJointVal 设置为 9E9。</Actions>
+  </Message>
+  <Message number="681" eDefine="SYS_ERR_ARL_LIMJOINT_NOTACT">
+    <Title>参数错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />使用的 WZLimJointDef 存在错误。不允许指定非激活轴 <arg format="%s" ordinal="2" /> 限值。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>将实际轴的自变量 LowJointVal 和 HighJointVal 设置为 9E9。</Actions>
+  </Message>
+  <Message number="698" eDefine="SYS_ERR_ARL_FILREADERR">
+    <Title>读取错误</Title>
+    <Description>任务 <arg format="%s" ordinal="1" /> 正在试图读取文件 <arg format="%s" ordinal="2" />，但读取失败。</Description>
+    <Consequences>无法读取/加载 <arg format="%s" ordinal="2" />。</Consequences>
+    <Causes>如要尝试访问 FTP 安装盘上的文件，请确保 <arg format="%s" ordinal="2" /> 的大小小于 FTP 协议设置中配置的最大文件大小。</Causes>
+  </Message>
+  <Message number="699" eDefine="SYS_ERR_ARL_LOAD_MEMFULL">
+    <Title>程序存储器已满</Title>
+    <Description>该任务 <arg format="%s" ordinal="1" />的程序内存只有 <arg format="%s" ordinal="2" /> 个字节。</Description>
+    <Consequences>无法加载模块 <arg format="%s" ordinal="3" />。 </Consequences>
+    <Actions>1. 删除其它模块并重试。<p />2.检查可否将大型数据结构拆分成小块<p />3.使用已安装的模块可以节省程序内存。<p /></Actions>
+  </Message>
+  <Message number="700" eDefine="SYS_ERR_ARL_SYNTAX">
+    <Title>语法错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />语法错误<p /><arg format="%s" ordinal="2" /><p /></Description>
+  </Message>
+  <Message number="701" eDefine="SYS_ERR_ARL_MAN_MEMFULL">
+    <Title>程序存储器已满</Title>
+    <Description>任务 <arg format="%s" ordinal="1" /> 的用户空间只有 <arg format="%i" ordinal="2" /> 个可用字节。</Description>
+    <Consequences>已排序的操作无法完成。</Consequences>
+    <Actions>1. 删除一些模块并重试。<p />2.检查可否将大型数据结构拆分成小块<p />3.使用已安装的模块可以节省程序内存。</Actions>
+  </Message>
+  <Message number="702" eDefine="SYS_ERR_ARL_FILNOTFND">
+    <Title>文件未找到</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />文件 <arg format="%s" ordinal="2" /> 未找到。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>－检查文件路径和文件名。<p />－检查文件是否存在。<p /> 恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="703" eDefine="SYS_ERR_ARL_NOTSAVED">
+    <Title>卸载错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />无法卸载程序模块。<p />原因是模块更改后未保存。<p />程序引用 <arg format="%s" ordinal="2" /><p /><p /><p /><p /></Description>
+    <Actions>指令 UnLoad：<p />如果未从该状态恢复，请在错误处理程序中使用可选开关 ErrIfChanged。<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="704" eDefine="SYS_ERR_ARL_UNLOAD">
+    <Title>卸载错误
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /><p />无法卸载程序模块。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>- 未用 Load 指令加载模块<p />- 与 Load 指令使用的文件路径不同<p /></Causes>
+    <Actions>- 检查是否已用指令 Load 加载程序模块<p />- 检查文件路径和文件名是否与 Unload 和 Load 指令中的相同。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="705" eDefine="SYS_ERR_ARL_SYNTAX_CONT">
+    <Title>语法错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />语法错误<p /><arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>语法错误会继续发生。</Actions>
+  </Message>
+  <Message number="706" eDefine="SYS_ERR_ARL_LOADED">
+    <Title>加载错误 </Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />程序模块已加载。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>文件 <arg format="%s" ordinal="3" /> 的标题中的模块名称已存在于程序存储器。</Causes>
+    <Actions>恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="707" eDefine="SYS_ERR_ARL_NAME_INVALID">
+    <Title>I/O 单元名称无效</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />单元名称 <arg format="%s" ordinal="2" /> 不存在。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>－检查单元名称是否存在拼写错误。<p />－检查单元是否已定义。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="708" eDefine="SYS_ERR_ARL_IOENABLE">
+    <Title>I/O 单元未启用</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p /> I/O 单元 <arg format="%s" ordinal="2" /> 未启用。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>等待时限过短。</Causes>
+    <Actions>增加等待时间或重试。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="709" eDefine="SYS_ERR_ARL_IODISABLE">
+    <Title>I/O 单元未禁用</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />I/O 单元 <arg format="%s" ordinal="2" /> 未禁用。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>等待时限过短。</Causes>
+    <Actions>增加等待时间或重试。<p />恢复： <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="710" eDefine="SYS_ERR_ARL_ARGNAME">
+    <Title>自变量错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />自变量 <arg format="%s" ordinal="2" /> 是表达式值，当前不存在，或属于类型开关。<p />程序引用 <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>将参数 <arg format="%s" ordinal="4" /> 更改为有效参数。<p />恢复： <arg format="%s" ordinal="5" /></Actions>
+  </Message>
+  <Message number="711" eDefine="SYS_ERR_ARL_ALIAS_TYPE">
+    <Title>别名类型错误</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /> 变元 FromSignal 和 ToSignal 的数据类型必须相同且属于 signalxx 类型。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>将类型更改为有效类型 (signalai/ao, signaldi/do, signalgi/go).<p />恢复： <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="712" eDefine="SYS_ERR_ARL_NOSHELF">
+    <Title>事件例行程序错误</Title>
+    <Description>任务: <arg format="%s" ordinal="1" /><p />事件例行程序过多，不会执行例行程序 <arg format="%s" ordinal="2" /> 。<p /></Description>
+    <Actions>将例行程序封装在为同一事件指定的另一例行程序中。</Actions>
+  </Message>
+</Domain>

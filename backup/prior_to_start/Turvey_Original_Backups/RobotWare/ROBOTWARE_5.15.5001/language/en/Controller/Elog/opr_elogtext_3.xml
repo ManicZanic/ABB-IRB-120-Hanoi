@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="OPR" domainNo="1" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="1230" max="2514">
+  <Message number="1230" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_30">
+    <Title>Backup error</Title>
+    <Description>Error during the backup of Task. No more objects.</Description>
+    <Actions />
+  </Message>
+  <Message number="1231" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_31">
+    <Title>Backup error</Title>
+    <Description>Error during the backup of Task. The directory lacks at least one neccessary item.</Description>
+    <Actions />
+  </Message>
+  <Message number="1232" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_32">
+    <Title>Backup error</Title>
+    <Description>Error during the backup of Task. The system version doesn't match the backup.</Description>
+    <Actions />
+  </Message>
+  <Message number="1233" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_33">
+    <Title>Backup error</Title>
+    <Description>Error during the backup of Task. Error restoring configuration parameters.</Description>
+    <Actions />
+  </Message>
+  <Message number="1234" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_34">
+    <Title>Backup error</Title>
+    <Description>Error during the backup of Task. Error restoring configuration parameters.</Description>
+    <Actions />
+  </Message>
+  <Message number="1235" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_35">
+    <Title>Backup error</Title>
+    <Description>Error during the backup of Task. Mismatch between current system and the backup.</Description>
+    <Actions />
+  </Message>
+  <Message number="1236" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_36">
+    <Title>Backup error</Title>
+    <Description>Error during the backup of Task. Write error.</Description>
+    <Actions>Check: No space left on device. Corrupt device.</Actions>
+  </Message>
+  <Message number="1237" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_37">
+    <Title>Backup error</Title>
+    <Description>Error during the backup of Task. At least one modname is too long.</Description>
+    <Actions />
+  </Message>
+  <Message number="1238" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_38">
+    <Title>Backup error</Title>
+    <Description>Error during the backup of Task. Unknown task.</Description>
+    <Actions />
+  </Message>
+  <Message number="1239" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_39">
+    <Title>Backup error</Title>
+    <Description>Error during the backup of Task. Storage media full.</Description>
+    <Actions />
+  </Message>
+  <Message number="1240" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_40">
+    <Title>Backup error</Title>
+    <Description>Error during the backup of Task. Item not possible to delete. </Description>
+    <Actions />
+  </Message>
+  <Message number="1260" eDefine="SYS_ERR_OPR_BACKUP_ERR_BACKUP_FILE">
+    <Title>Backup error</Title>
+    <Description>Error while copying <arg format="%s" ordinal="1" /> to <arg format="%s" ordinal="2" />. </Description>
+    <Consequences>The file is not part of the created backup.</Consequences>
+  </Message>
+  <Message number="2020" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_DEF">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Prepare. Unknown error.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2021" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_21">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Prepare. General error.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2022" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_22">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Prepare. The directory contains items that are to be created.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2023" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_23">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Prepare. The directory lacks at least one neccessary item.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2024" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_24">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Prepare. The directory does not exist.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2025" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_25">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Prepare. Directory cannot be created.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2026" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_26">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Prepare. Error whilst writing the backup.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2027" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_27">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Prepare. Error reading configuration parameters.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2028" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_28">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Prepare. Error writing configuration parameters.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2029" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_29">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Prepare. The structure is too deep.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2030" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_30">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Prepare. No more objects.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2031" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_31">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Prepare. The directory lacks at least one neccessary item.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2032" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_32">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Prepare. The system version doesn't match the backup.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2033" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_33">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Prepare. Error restoring configuration parameters.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2034" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_34">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Prepare. Error restoring configuration parameters.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2035" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_35">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Prepare. Mismatch between current system and the backup.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2036" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_36">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Prepare. Write error.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2037" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_37">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Prepare. At least one modname is too long.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2038" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_38">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Prepare. Unknown task.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2039" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_39">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Prepare. Storage media full.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2040" eDefine="SYS_ERR_OPR_RESTORE_ERR_PREP_40">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Prepare. Item not possible to delete.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="2120" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_DEF">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Configuration. Unknown error.</Description>
+    <Actions />
+  </Message>
+  <Message number="2121" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_21">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Configuration. General error.</Description>
+    <Actions />
+  </Message>
+  <Message number="2122" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_22">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Configuration. The directory contains items that are to be created.</Description>
+    <Actions />
+  </Message>
+  <Message number="2123" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_23">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Configuration. The directory lacks at least one neccessary item.</Description>
+    <Actions />
+  </Message>
+  <Message number="2124" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_24">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Configuration. The directory does not exist.</Description>
+    <Actions />
+  </Message>
+  <Message number="2125" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_25">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Configuration. Directory cannot be created.</Description>
+    <Actions />
+  </Message>
+  <Message number="2126" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_26">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Configuration. Error whilst writing the backup.</Description>
+    <Actions />
+  </Message>
+  <Message number="2127" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_27">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Configuration. Error reading configuration parameters.</Description>
+    <Actions />
+  </Message>
+  <Message number="2128" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_28">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Configuration. Error writing configuration parameters.</Description>
+    <Actions />
+  </Message>
+  <Message number="2129" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_29">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Configuration. The structure is too deep.</Description>
+    <Actions />
+  </Message>
+  <Message number="2130" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_30">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Configuration. No more objects.</Description>
+    <Actions />
+  </Message>
+  <Message number="2131" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_31">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Configuration. The directory lacks at least one neccessary item.</Description>
+    <Actions />
+  </Message>
+  <Message number="2132" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_32">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Configuration. The system version doesn't match the backup.</Description>
+    <Actions />
+  </Message>
+  <Message number="2133" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_33">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Configuration. Error restoring configuration parameters.</Description>
+    <Actions />
+  </Message>
+  <Message number="2134" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_34">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Configuration. Error restoring configuration parameters.</Description>
+    <Actions />
+  </Message>
+  <Message number="2135" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_35">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Configuration. Mismatch between current system and the backup.</Description>
+    <Actions />
+  </Message>
+  <Message number="2136" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_36">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Configuration. Write error.</Description>
+    <Actions />
+  </Message>
+  <Message number="2137" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_37">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Configuration. At least one modname is too long. </Description>
+    <Actions />
+  </Message>
+  <Message number="2138" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_38">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Configuration. Unknown task. </Description>
+    <Actions />
+  </Message>
+  <Message number="2139" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_39">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Configuration. Storage media full </Description>
+    <Actions />
+  </Message>
+  <Message number="2140" eDefine="SYS_ERR_OPR_RESTORE_ERR_CFG_40">
+    <Title>Restore error</Title>
+    <Description>Error during the restore step Configuration. Item not possible to delete. </Description>
+    <Actions />
+  </Message>
+  <Message number="2220" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_DEF">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of Task. Unknown error. </Description>
+    <Actions />
+  </Message>
+  <Message number="2221" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_21">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of Task. General error.</Description>
+    <Actions />
+  </Message>
+  <Message number="2222" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_22">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of Task. The directory contains items that are to be created.</Description>
+    <Actions />
+  </Message>
+  <Message number="2223" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_23">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of Task. The directory lacks at least one neccessary item.</Description>
+    <Actions />
+  </Message>
+  <Message number="2224" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_24">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of Task. The directory does not exist </Description>
+    <Actions />
+  </Message>
+  <Message number="2225" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_25">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of Task. Directory cannot be created </Description>
+    <Actions />
+  </Message>
+  <Message number="2226" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_26">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of Task. Error whilst writing the backup </Description>
+    <Actions />
+  </Message>
+  <Message number="2227" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_27">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of Task. Error reading configuration parameters </Description>
+    <Actions />
+  </Message>
+  <Message number="2228" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_28">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of Task. Error writing configuration parameters </Description>
+    <Actions />
+  </Message>
+  <Message number="2229" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_29">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of Task. The structure is too deep </Description>
+    <Actions />
+  </Message>
+  <Message number="2230" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_30">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of Task. No more objects </Description>
+    <Actions />
+  </Message>
+  <Message number="2231" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_31">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of Task. The directory lacks at least one neccessary item.</Description>
+    <Actions />
+  </Message>
+  <Message number="2232" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_32">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of Task. The system version doesn't match the backup.</Description>
+    <Actions />
+  </Message>
+  <Message number="2233" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_33">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of Task. Error restoring configuration parameters.</Description>
+    <Actions />
+  </Message>
+  <Message number="2234" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_34">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of Task. Error restoring configuration parameters.</Description>
+    <Actions />
+  </Message>
+  <Message number="2235" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_35">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of Task. Mismatch between current system and the backup.</Description>
+    <Actions />
+  </Message>
+  <Message number="2236" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_36">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of Task. Write error.</Description>
+    <Actions />
+  </Message>
+  <Message number="2237" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_37">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of Task. At least one modname is too long. </Description>
+    <Actions />
+  </Message>
+  <Message number="2238" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_38">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of Task. Unknown task. </Description>
+    <Actions />
+  </Message>
+  <Message number="2239" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_39">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of Task. Storage media full. </Description>
+    <Actions />
+  </Message>
+  <Message number="2240" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_40">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of Task. Item not possible to delete. </Description>
+    <Actions />
+  </Message>
+  <Message number="2320" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_DEF">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of User Task. Unknown error. </Description>
+    <Actions />
+  </Message>
+  <Message number="2321" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_21">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of User Task. General error.</Description>
+    <Actions />
+  </Message>
+  <Message number="2322" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_22">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of User Task. The directory contains items that are to be created.</Description>
+    <Actions />
+  </Message>
+  <Message number="2323" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_23">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of User Task. The directory lacks at least one neccessary item.</Description>
+    <Actions />
+  </Message>
+  <Message number="2324" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_24">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of User Task. The directory does not exist </Description>
+    <Actions />
+  </Message>
+  <Message number="2325" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_25">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of User Task. Directory cannot be created </Description>
+    <Actions />
+  </Message>
+  <Message number="2326" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_26">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of User Task. Error whilst writing the backup </Description>
+    <Actions />
+  </Message>
+  <Message number="2327" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_27">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of User Task. Error reading configuration parameters </Description>
+    <Actions />
+  </Message>
+  <Message number="2328" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_28">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of User Task. Error writing configuration parameters </Description>
+    <Actions />
+  </Message>
+  <Message number="2329" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_29">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of User Task. The structure is too deep </Description>
+    <Actions />
+  </Message>
+  <Message number="2330" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_30">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of User Task. No more objects </Description>
+    <Actions />
+  </Message>
+  <Message number="2331" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_31">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of User Task. The directory lacks at least one neccessary item.</Description>
+    <Actions />
+  </Message>
+  <Message number="2332" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_32">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of User Task. The system version doesn't match the backup.</Description>
+    <Actions />
+  </Message>
+  <Message number="2333" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_33">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of User Task. Error restoring configuration parameters.</Description>
+    <Actions />
+  </Message>
+  <Message number="2334" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_34">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of User Task. Error restoring configuration parameters.</Description>
+    <Actions />
+  </Message>
+  <Message number="2335" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_35">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of User Task. Mismatch between current system and the backup.</Description>
+    <Actions />
+  </Message>
+  <Message number="2336" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_36">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of User Task. Write error.</Description>
+    <Actions />
+  </Message>
+  <Message number="2337" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_37">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of User Task. At least one modname is too long. </Description>
+    <Actions />
+  </Message>
+  <Message number="2338" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_38">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of User Task. Unknown task. </Description>
+    <Actions />
+  </Message>
+  <Message number="2339" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_39">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of User Task. Storage media full. </Description>
+    <Actions />
+  </Message>
+  <Message number="2340" eDefine="SYS_ERR_OPR_RESTORE_ERR_USER_TASK_40">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of User Task. Item not possible to delete. </Description>
+    <Actions />
+  </Message>
+  <Message number="2510" eDefine="SYS_ERR_OPR_NET_SUBNET_MASK_ERR">
+    <Title>Network subnet mask illegal</Title>
+    <Description>The subnet mask <arg format="%s" ordinal="1" /> for network interface <arg format="%s" ordinal="2" /> is illegal.</Description>
+    <Consequences>The network interface will not be configured, and may not be used.</Consequences>
+    <Causes>The network subnet mask may be mistyped.</Causes>
+    <Actions>1) Make sure the network subnet mask is correct. </Actions>
+  </Message>
+  <Message number="2511" eDefine="SYS_ERR_OPR_NET_IP_ERR">
+    <Title>Network interface IP address illegal</Title>
+    <Description>The network IP address <arg format="%s" ordinal="1" /> for interface <arg format="%s" ordinal="2" /> is illegal/missing.</Description>
+    <Consequences>The interface will not be configured, and may not be used.</Consequences>
+    <Causes>The network IP address may be mistyped or it already exists on the network.</Causes>
+    <Actions>1) Make sure the interface IP address is correct and not a duplicate.</Actions>
+  </Message>
+  <Message number="2512" eDefine="SYS_ERR_OPR_NET_GATEWAY_ERR">
+    <Title>Network gateway IP address illegal</Title>
+    <Description>The default gateway IP address <arg format="%s" ordinal="1" /> is illegal/missing or the LAN IP address <arg format="%s" ordinal="2" /> is illegal.</Description>
+    <Consequences>The network will not be reached, and may not be used.</Consequences>
+    <Causes>The gateway IP and/or LAN IP addresses may be mistyped. <p /></Causes>
+    <Actions>1) Make sure the gateway IP and LAN IP addresses are correct.<p /></Actions>
+  </Message>
+  <Message number="2513" eDefine="SYS_ERR_OPR_NET_DHCP_ERR">
+    <Title>No parameters from the DHCP server</Title>
+    <Description>The network interface <arg format="%s" ordinal="1" /> has not received any parameters from the DHCP server. </Description>
+    <Consequences>The interface will not be configured, and may not be used.</Consequences>
+    <Causes>The LAN connection  is not working -The DHCP server is not activated.</Causes>
+    <Actions>1) Make sure the LAN cable is working and correctly connected.<p />2) Make sure the DHCP server is activated.<p />3) Set the LAN IP address manually.</Actions>
+  </Message>
+  <Message number="2514" eDefine="SYS_ERR_OPR_NET_DEVICE_ERR">
+    <Title>Network interface initialization error</Title>
+    <Description>The network interface <arg format="%s" ordinal="1" /> could not be initialized.</Description>
+    <Consequences>The interface will not be configured, and may not be used.</Consequences>
+    <Causes>The network parameters may be wrong. <p />-Although unlikely, the hardware may be faulty, requiring replacement. </Causes>
+    <Actions>1) Make sure the network parameters for the interface at hand are correct.<p />2) Isolate the cause, by replacing the suspected hardware.</Actions>
+  </Message>
+</Domain>

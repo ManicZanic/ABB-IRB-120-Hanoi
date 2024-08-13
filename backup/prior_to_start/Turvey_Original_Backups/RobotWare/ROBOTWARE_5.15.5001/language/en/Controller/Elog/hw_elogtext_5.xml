@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="HW" domainNo="3" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="9422" max="9531">
+  <Message number="9422" eDefine="SYS_ERR_HW_DM_DRV_WATCHDOG">
+    <Title>Drive Unit watchdog timeout</Title>
+    <Description>The time limit for watchdog timer for drive unit number <arg format="%d" ordinal="3" /> in drive module <arg format="%d" ordinal="1" /> has expired.</Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The connection to the drive unit may be bad or incorrect hardware may have been fitted. It may also be caused by an internal error in the drive unit.</Causes>
+    <Actions>1) Perform a shutdown and then restart the system. <p />2) If the problem persists, isolate the faulty drive unit and replace it.</Actions>
+  </Message>
+  <Message number="9423" eDefine="SYS_ERR_HW_DM_DRV_INT_WARNING">
+    <Title>Drive Unit Internal Warning</Title>
+    <Description>Internal measurement warning for drive unit number <arg format="%d" ordinal="3" /> in drive module <arg format="%d" ordinal="1" />.<p /><p />supervision code = <arg format="%f" ordinal="5" /></Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>There may be problems with the control cable, the DC link connection (bus bar or cable) or internal hardware.</Causes>
+    <Actions>1) Check the control cables and DC link connection (bus bar or cable) are correctly inserted for this unit. <p />2) Restart the system.</Actions>
+  </Message>
+  <Message number="9424" eDefine="SYS_ERR_HW_DM_DRV_INT_ERROR">
+    <Title>Drive Unit internal error</Title>
+    <Description>Internal measurement warning for drive unit number <arg format="%d" ordinal="3" /> in drive module <arg format="%d" ordinal="1" />.<p /><p />Supervision Code = <arg format="%f" ordinal="5" /></Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The connection to the drive unit may be bad or incorrect hardware may have been fitted. It may also be caused by faulty control cable, DC link connection (bus bar or cable) or internal hardware. </Causes>
+    <Actions>1) Make sure the control cables and DC link connection (bus bar or cable) are correctly connected for this unit. <p />2) Perform a shutdown and then restart the system. <p />3) If the problem persists, isolate the faulty unit and replace it.</Actions>
+  </Message>
+  <Message number="9425" eDefine="SYS_ERR_HW_DM_DRV_MEAS_ERR">
+    <Title>Drive Unit measurement failure</Title>
+    <Description>A current measurement circuit in drive unit number <arg format="%d" ordinal="3" />, drive module <arg format="%d" ordinal="1" />, attached to joint <arg format="%s" ordinal="2" /> has failed.</Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>This may be caused by a faulty or lacking DC link connection between the rectifier and drive units.</Causes>
+    <Actions>1) Make sure the DC link connection (bus bar or cable) is correctly connected between the rectifier and drive unit. <p />2) Check the indication LEDs on the rectifier and drive units. The significance of the LEDs is described in the Trouble Shooting Manual.</Actions>
+  </Message>
+  <Message number="9426" eDefine="SYS_ERR_HW_DM_RECT_INT_ERROR">
+    <Title>Rectifier internal failure</Title>
+    <Description>The rectifier on communication link <arg format="%d" ordinal="4" /> attached to drive module <arg format="%d " ordinal="1" />has detected an internal failure.</Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>This may be caused by a faulty or lacking signal connection between the rectifier and drive units.</Causes>
+    <Actions>1) Make sure the signal cable is correctly connected between the rectifier and drive unit. <p />2) Check the indication LEDs on the rectifier and drive units. The significance of the LEDs is described in the Trouble Shooting Manual.</Actions>
+  </Message>
+  <Message number="9427" eDefine="SYS_ERR_HW_DM_RECT_COMMS_MISSING">
+    <Title>Rectifier communication missing</Title>
+    <Description>The communication with the rectifier on drive comm link <arg format="%d" ordinal="4" />, drive module <arg format="%d" ordinal="1" /> has been lost.</Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>This may be caused by a faulty or lacking signal connection between the rectifier and drive units.</Causes>
+    <Actions>1) Make sure the signal cable is correctly connected between the rectifier and drive unit. <p />2) Perform a shutdown and then restart the system. <p />3) If the problem persists, isolate the faulty unit and replace it.</Actions>
+  </Message>
+  <Message number="9428" eDefine="SYS_ERR_HW_DM_RECT_GLOB_ERR">
+    <Title>Rectifier startup error</Title>
+    <Description>The rectifier on drive comm link <arg format="%d" ordinal="4" />, drive module <arg format="%d" ordinal="1" /> has detected a startup error.</Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>This may be caused by an internal error in the rectifier unit.</Causes>
+    <Actions>1) Make sure the signal cable is correctly connected between the rectifier and drive unit. <p />2) Perform a shutdown and then restart the system. <p />3) If the problem persists, isolate the faulty rectifier unit and replace it.</Actions>
+  </Message>
+  <Message number="9431" eDefine="SYS_ERR_HW_DM_DRV_IMAGE_UPDATE">
+    <Title>Update of Drive Unit Software in Progress</Title>
+    <Description>The drive unit software in drive module <arg format="%d" ordinal="1" /> is being updated.<p /><p />Please wait for the upgrade to be completed.  This will take approximately 3.5 minutes.<p /><p />NOTE:  Please do not turn off the power or restart the controller until the download is complete.<p /><p /></Description>
+    <Actions>Please wait...</Actions>
+  </Message>
+  <Message number="9432" eDefine="SYS_ERR_HW_DM_WRONG_BOOT_VERSION">
+    <Title>Incompatible boot version in drive unit</Title>
+    <Description>The boot version in drive module <arg format="%d" ordinal="1" /> is version <arg format="%d" ordinal="3" />, which is not allowed. The latest allowed boot version is <arg format="%d" ordinal="2" />. </Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The boot version is not compatible with the hardware version.</Causes>
+    <Actions>1) Replace the drive unit with one using a boot version equal to or greater than the latest allowed one. </Actions>
+  </Message>
+  <Message number="9434" eDefine="SYS_ERR_HW_DM_DRIVE_START_FAILURE">
+    <Title>Drive Unit Start Failure</Title>
+    <Description>The drive unit in drive module <arg format="%d" ordinal="1" /> failed to start. drive boot status = <arg format="%d" ordinal="2" />. drive dsp1 status = <arg format="%d" ordinal="3" /><p /></Description>
+    <Consequences>The robot can not be operated.</Consequences>
+    <Causes>A number of errors may cause this. </Causes>
+    <Actions>1) Switch the main power off to the module and then switch it back on. Note that a normal restart will NOT suffice! <p />2) If the problem persists, replace the drive unit.</Actions>
+  </Message>
+  <Message number="9435" eDefine="SYS_ERR_HW_DM_EXT_DRIVE_NOT_FOUND">
+    <Title>Cannot find additional axis drive unit</Title>
+    <Description>The system cannot detect an additional axis drive for joint <arg format="%s" ordinal="1" /> in drive module <arg format="%d" ordinal="2" />.</Description>
+    <Consequences>System goes to SYS_FAIL.</Consequences>
+    <Causes>This can be due to:<p />1) Having an additional axis configured but not having a drive unit in the drive module.<p />2) Having an external drive unit but not connecting the cable to the X<arg format="%d" ordinal="3" /> connector position on the main drive unit.<p />3) Damaged cable between the additional axis drive and the main drive unit.<p /><p /><p /></Causes>
+    <Actions>1) Check the drive module contains enough additional axis drives.<p />2) Check that the configuration key does not define more external drive units then are connected in the drive module<p />3) Check the cable between the additional axis drive unit and to the main drive unit is correctly inserted in the right connector position.<p />4) If the cable exists and is correctly inserted, then it may be damaged and should be replaced.</Actions>
+  </Message>
+  <Message number="9440" eDefine="SYS_ERR_HW_DM_BLDR_OPEN">
+    <Title>Open circuit in bleeder resistor circuit</Title>
+    <Description>The bleeder resistor connected to the rectifier on drive link <arg format="%d" ordinal="4" />, drive module <arg format="%d" ordinal="1" />, is an open circuit. </Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>This may be caused by a faulty bleeder resistor cable or bleeder resistor.</Causes>
+    <Actions>1) Make sure the bleeder resistor cable is correctly connected to the rectifier unit. <p />2) Make sure the cable and resistor is working correctly by measuring their resistance respectively. Disconnect before measuring. <p />3) Replace any faulty component.</Actions>
+  </Message>
+  <Message number="9441" eDefine="SYS_ERR_HW_DM_BLDR_SHORT">
+    <Title>Short circuit in bleeder resistor circuit</Title>
+    <Description>The bleeder resistor connected to the rectifier on drive link <arg format="%d" ordinal="4" />, drive module <arg format="%d" ordinal="1" />, is a short circuit. </Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>This may be caused by a faulty bleeder resistor cable or bleeder resistor.</Causes>
+    <Actions>1) Make sure the bleeder resistor cable is correctly connected to the rectifier unit. <p />2) Make sure the cable and resistor is working correctly by measuring their resistance respectively. Disconnect before measuring. <p />3) Replace any faulty component.</Actions>
+  </Message>
+  <Message number="9442" eDefine="SYS_ERR_HW_DM_BLDR_LOW_RESISTANCE">
+    <Title>Bleeder Resistance Too Low</Title>
+    <Description>The bleeder resistance is too low for the rectifier on drive comm link <arg format="%d" ordinal="4" />, drive module <arg format="%d" ordinal="1" />.</Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The bleeders may have the wrong resistance value or one of the bleeders may have failed, causing a short circuit. </Causes>
+    <Actions>1) Check the bleeder resistors to see that they are the correct resistance value for this drive module configuration. <p />2) Check that none of the resistors have failed. How to check the configuration file is detailed in the Trouble Shooting Manual.</Actions>
+  </Message>
+  <Message number="9443" eDefine="SYS_ERR_HW_DM_BLDR_WARNING">
+    <Title>Bleeder Resistor Overload Warning</Title>
+    <Description>The power consumed by the bleeder resistors is approaching overload for the rectifier on drive communication link <arg format="%d" ordinal="4" />, drive module <arg format="%d" ordinal="1" />.</Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The user program may contain too much hard braking of the manipulators, which is more likely if the system contains additional axes.</Causes>
+    <Actions>1) Rewrite the user program to reduce the amount of hard braking.</Actions>
+  </Message>
+  <Message number="9444" eDefine="SYS_ERR_HW_DM_BLDR_OVERLOAD">
+    <Title>Bleeder resistor overload error</Title>
+    <Description>The bleeder resistors have been overloaded for the rectifier on drive communication link <arg format="%d" ordinal="4" />, drive module <arg format="%d" ordinal="1" />.</Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The user program may contain too much hard braking or too high a payload of the manipulators. This is more likely if the system contains additional axes.</Causes>
+    <Actions>1) Rewrite the user program to reduce the amount of hard braking.</Actions>
+  </Message>
+  <Message number="9450" eDefine="SYS_ERR_HW_DM_COOLING_FAN_POWER">
+    <Title>Faulty Fan Unit Power Supply</Title>
+    <Description>The power supply for the fan unit in drive module <arg format="%d" ordinal="1" /> is not within its allowed voltage limits.</Description>
+    <Consequences>-</Consequences>
+    <Causes>The main fan power supply unit may be faulty or the supply to this power supply unit may not be within its allowed voltage limits.</Causes>
+    <Actions>1) Check the fan cable is correctly inserted. <p />2) Check that all fans are working. 3) Check the input voltage to the main fan power supply unit. Replace any faulty unit.<p /></Actions>
+  </Message>
+  <Message number="9451" eDefine="SYS_ERR_HW_DM_COOLING_FAN_SPEED">
+    <Title>Fan Unit Malfunction</Title>
+    <Description>The fan unit in drive module <arg format="%d" ordinal="1" /> has malfunctioned. </Description>
+    <Consequences>-</Consequences>
+    <Causes>The fan unit may be faulty, a loss of power supply or the fan power cable may not be connected correctly.</Causes>
+    <Actions>1) Make sure the fan cable is correctly connected. <p />2) Make sure all fans are working and that air flow is not obstructed. <p />3) Measure the output voltage from the drive unit supplying the fan. Replace any faulty unit.<p /><p /></Actions>
+  </Message>
+  <Message number="9452" eDefine="SYS_ERR_HW_DM_CBFAN1_ERROR">
+    <Title>Axis Computer Cooling Fan Malfunction</Title>
+    <Description>The cooling fan for the axis computer in drive module <arg format="%d" ordinal="1" /> has malfunctioned.</Description>
+    <Actions>1)Check that the fan cable is correctly inserted. <p />2) Replace the faulty fan unit.</Actions>
+  </Message>
+  <Message number="9453" eDefine="SYS_ERR_HW_DM_CBFAN2_ERROR">
+    <Title>Transformer Cooling Fan Malfunction</Title>
+    <Description>The cooling fan for the transformer supplying drive module <arg format="%d" ordinal="1" /> has malfunctioned.<p /><p /></Description>
+    <Actions>Check if fan cable is correctly inserted. <p />2) Replace the faulty fan unit.</Actions>
+  </Message>
+  <Message number="9460" eDefine="SYS_ERR_HW_DM_DC_LOW">
+    <Title>DC Link Voltage Too Low</Title>
+    <Description>The DC link voltage is too low for the rectifier on drive communication link <arg format="%d" ordinal="4" />, drive module <arg format="%d" ordinal="1" />. </Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The DC link bus bar may be incorrectly connected or the three-phase mains power may be interrupted while the robot is in the Motors ON state. The mains contactor may also have been opened whilst the robot is in Motors ON state (breaking the safety chain). The incoming main power supply may also be too low.</Causes>
+    <Actions>1) Make sure the DC link bus bar is correctly connected. <p />2) Make sure the mains supply has not been interrupted. <p />3) Make sure the safety chain has not been broken. <p />4) Make sure the Drive Module Power Supply output voltage is within acceptable limits as specified in the Product Manual.</Actions>
+  </Message>
+  <Message number="9461" eDefine="SYS_ERR_HW_DM_DC_HIGH">
+    <Title>DC Link Voltage Too High</Title>
+    <Description>The DC link voltage is too high for the rectifier on drive communication link <arg format="%d" ordinal="4" />, drive module <arg format="%d" ordinal="1" />. </Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The user program may contain too much hard braking of the manipulators, which is more likely if the system contains additional axes. The brake resistors may also be faulty.</Causes>
+    <Actions>1) Check the bleeder resistors to see that they are the correct resistance value for this drive module configuration. <p />2) Check that none of the resistors have failed. <p />3) If possible, rewrite the user program to reduce the amount of hard braking.</Actions>
+  </Message>
+  <Message number="9462" eDefine="SYS_ERR_HW_DM_DC_CRITICALY_HIGH">
+    <Title>DC Link Voltage at Critical</Title>
+    <Description>The DC link voltage is critically high for the rectifier on drive communication link <arg format="%d" ordinal="4" />, drive module <arg format="%d" ordinal="1" />.</Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The user program may contain too much hard braking of the manipulators, which is more likely if the system contains additional axes. The brake resistors may also be faulty.</Causes>
+    <Actions>1) Check the bleeder resistors to see that they are the correct resistance value for this drive module configuration. <p />2) Check that none of the resistors have failed. <p />3) Rewrite the user program to reduce the amount of hard braking.</Actions>
+  </Message>
+  <Message number="9463" eDefine="SYS_ERR_HW_DM_SHC_GLITCH">
+    <Title>Motor Phase Short Circuit Warning</Title>
+    <Description>A brief short circuit was detected in the motor/motor cable for the motor attached to joint <arg format="%s" ordinal="2" /> in drive module <arg format="%d" ordinal="1" />. </Description>
+    <Consequences>-</Consequences>
+    <Causes>This may be due to dust or metal fragments contaminating the contacts or motor windings.</Causes>
+    <Actions>No action is required if the problem does not persist. </Actions>
+  </Message>
+  <Message number="9464" eDefine="SYS_ERR_HW_DM_SHC_ERROR">
+    <Title>Short circuit in Motor phase circuit</Title>
+    <Description>The motor or motor cable for joint <arg format="%s" ordinal="2" /> in drive module <arg format="%d" ordinal="1" />, drive unit number <arg format="%d" ordinal="3" />,  is a short circuit. </Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>This may be caused by a faulty motor or motor cable. It may also be caused by contamination in the contactors for the cables or a failure of the motor windings.</Causes>
+    <Actions>1) Make sure the motor cable is correctly connected to the drive unit. <p />2) Check the cable and motor by measuring their resistance respectively. Disconnect before measuring. <p />3) Replace any faulty component.</Actions>
+  </Message>
+  <Message number="9465" eDefine="SYS_ERR_HW_DM_MAX_MEAS_CURR_GLITCH">
+    <Title>Motor current warning</Title>
+    <Description>The motor current is higher than the allowed for joint <arg format="%s" ordinal="2" /> in drive module <arg format="%s" ordinal="1" />, drive unit number <arg format="%d" ordinal="3" />.</Description>
+    <Consequences>-</Consequences>
+    <Causes>The motor load may be too high or the motor may have stalled (maybe due to a collision). </Causes>
+    <Actions>1) Check that the robot has not collided with anything. <p />2) If possible, reduce the speed of the user program. <p />3) If the axis is an additional axis, check that the motor load is not too high for the drive unit.</Actions>
+  </Message>
+  <Message number="9466" eDefine="SYS_ERR_HW_DM_MAX_MEAS_CURR">
+    <Title>Motor Current Overload</Title>
+    <Description>The motor current is too high for joint <arg format="%s" ordinal="2" /> in drive module <arg format="%d" ordinal="1" />, drive unit number <arg format="%d" ordinal="3" />.</Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The motor load may be too high or the motor may have stalled (maybe due to a collision). </Causes>
+    <Actions>1) Check that the robot has not collided. <p />2) If possible, reduce the speed of the user program. <p />3) If the axis is an additional axis, check that the motor load is not too high for the drive unit.</Actions>
+  </Message>
+  <Message number="9467" eDefine="SYS_ERR_HW_DM_TEMP_WARN">
+    <Title>Drive Unit Temperature Warning</Title>
+    <Description>The temperature has risen above the warning level in drive unit number <arg format="%d" ordinal="3" />, drive module <arg format="%d" ordinal="1" />, which is the lowest abnormal level of three.</Description>
+    <Consequences>-</Consequences>
+    <Causes>The ambient temperature may be too high, the cooling fans may have failed or the user program may consume more current than the drive system can supply.</Causes>
+    <Actions>1) Check that the fans are running and that the air flow is not obstructed. <p />2) Check that the ambient temperature does not exceed the cabinet rating. <p />3) If the system contains additional axes then check that motors are not too large for the drive units. <p />4) If possible, rewrite the user program to reduce the amount of hard acceleration.</Actions>
+  </Message>
+  <Message number="9468" eDefine="SYS_ERR_HW_DM_TEMP_ALARM">
+    <Title>Drive Unit Temperature Alarm</Title>
+    <Description>The temperature has risen above the alarm level in drive unit number <arg format="%d" ordinal="3" />, drive module <arg format="%d" ordinal="1" />, which is the second abnormal level of three.</Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The ambient temperature may be too high, the cooling fans may have failed or the user program may consume more current than the drive system can supply.</Causes>
+    <Actions>1) Check that the fans are running and that the air flow is not obstructed. <p />2) Check that the ambient temperature does not exceed the cabinet rating. <p />3) If the system contains additional axes then check that motors are not too large for the drive units. <p />4) If possible, rewrite the user program to reduce the amount of hard acceleration.</Actions>
+  </Message>
+  <Message number="9469" eDefine="SYS_ERR_HW_DM_TEMP_ERROR">
+    <Title>Drive Unit Temperature Critical</Title>
+    <Description>The temperature has risen above the critical level in drive unit number <arg format="%d" ordinal="3" />, drive module <arg format="%d" ordinal="1" />, which is the top abnormal level of three.</Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The ambient temperature may be too high, the cooling fans may have failed or the user program may consume more current than the drive system can supply.</Causes>
+    <Actions>1) Check that the fans are running and that the air flow is not obstructed. <p />2) Check that the ambient temperature does not exceed the cabinet rating. <p />3) If the system contains additional axes then check that motors are not too large for the drive units. <p />4) If possible, rewrite the user program to reduce the amount of hard acceleration.</Actions>
+  </Message>
+  <Message number="9470" eDefine="SYS_ERR_HW_DM_PDEV_WARN">
+    <Title>Power Semiconductor Warning</Title>
+    <Description>The power semiconductor is approaching overload for joint <arg format="%s" ordinal="2" />, in drive unit number <arg format="%d" ordinal="3" />, drive module <arg format="%d" ordinal="1" /> .</Description>
+    <Consequences>-</Consequences>
+    <Causes>The motor load may be too high, the motor may have stalled (maybe due to a collision), the motor load may be too high or there may not be enough cooling.</Causes>
+    <Actions>1) Check that the robot has not collided. <p />2) Check that the fans are running and that the air flow is not obstructed. <p />3) Check that the ambient temperature does not exceed the cabinet rating. <p />4) If the system contains additional axes then check that motors are not too large for the drive units. <p />5) If possible, rewrite the user program to reduce the amount of hard acceleration.</Actions>
+  </Message>
+  <Message number="9471" eDefine="SYS_ERR_HW_DM_PDEV_ERROR">
+    <Title>Power Semiconductor Overload Error</Title>
+    <Description>The power semiconductor has been overloaded for joint <arg format="%s" ordinal="2" />, in drive unit number <arg format="%d" ordinal="3" />, drive module <arg format="%d" ordinal="1" /> .</Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The motor load may be too high, the motor may have stalled (maybe due to a collision), the motor load may be too high or there may not be enough cooling.</Causes>
+    <Actions>1) Check that the robot has not collided. <p />2) Check that the fans are running and that the air flow is not obstructed. <p />3) Check that the ambient temperature does not exceed the cabinet rating. <p />4) If the system contains additional axes then check that motors are not too large for the drive units. <p />5) If possible, rewrite the user program to reduce the amount of hard acceleration.</Actions>
+  </Message>
+  <Message number="9472" eDefine="SYS_ERR_HW_DM_INCOMING_PHASE_MISSING">
+    <Title>Incoming Mains Phase Missing</Title>
+    <Description>The rectifier connected to communication link <arg format="%d" ordinal="4" /> in drive module <arg format="%d" ordinal="1" /> detects a power loss in one phase.</Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>This may be caused by an actual mains power loss, some malfunction in the Motors ON contactors or its cabling or in another part of the three phase chain inside the cabinet. On rare occasions, this fault may occur in combination with other faults, in which case this may be found in the error log.</Causes>
+    <Actions>1) Make sure the mains switch is closed and that there is mains voltage present. No volts means the problem is in mains cable connector or the factory power supply.<p />2) If the voltage is OK, disconnect the input mains cable and measure the resistance of all three phases across all the components in the 3 phase supply chain. Start from the contactor closest to the rectifier and work backwards towards the mains switch. The contactors can be closed manually to perform the test. Refer to the electrical drawings for the cabinet.<p />3) Check the indication LEDs on the rectifier unit. The significance of these is described in the Trouble Shooting Manual. <p />4) If the voltage is OK, check any other error log messages coinciding in time with this one for clues.</Actions>
+  </Message>
+  <Message number="9473" eDefine="SYS_ERR_HW_DM_MAINS_MISISNG">
+    <Title>All Incoming Mains Phases Missing</Title>
+    <Description>The rectifier connected to communication link <arg format="%d" ordinal="4" /> in drive module <arg format="%d" ordinal="1" /> detects a power loss in one or more phases.</Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>This may be caused by an actual mains power loss, some malfunction in the Motors ON contactors or its cabling or in another part of the three phase chain inside the cabinet. On rare occasions, this fault may occur in combination with other faults, in which case this may be found in the error log.</Causes>
+    <Actions>1) Make sure the mains switch is closed and that there is mains voltage present. No volts means the problem is in mains cable connector or the factory power supply.<p />2) If the voltage is OK, disconnect the input mains cable and measure the resistance of all three phases across all the components in the 3 phase supply chain. Start from the contactor closest to the rectifier and work backwards towards the mains switch. The contactors can be closed manually to perform the test. Refer to the electrical drawings for the cabinet.<p />3) Check the indication LEDs on the rectifier unit. The significance of these is described in the Trouble Shooting Manual. <p />4) If the voltage is OK, check any other error log messages coinciding in time with this one for clues.<p /></Actions>
+  </Message>
+  <Message number="9474" eDefine="SYS_ERR_HW_DM_MAINS_CURR_WARN">
+    <Title>Rectifier Current Warning</Title>
+    <Description>The rectifier connected to drive communication link <arg format="%d" ordinal="4" /> in drive module <arg format="%d" ordinal="1" /> is approaching overload.</Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The total motor current may be greater than that which the rectifier can supply.</Causes>
+    <Actions>1) If possible, rewrite the user program to reduce the amount of hard acceleration. </Actions>
+  </Message>
+  <Message number="9475" eDefine="SYS_ERR_HW_DM_MAINS_OVERLOAD">
+    <Title>Rectifier Current Error</Title>
+    <Description>The rectifier connected to drive communication link <arg format="%d" ordinal="4" /> in drive module <arg format="%d" ordinal="1" /> has reached overload.</Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The total motor current may be greater than that which the rectifier can supply.</Causes>
+    <Actions>1) If possible, rewrite the user program to reduce the amount of hard acceleration.</Actions>
+  </Message>
+  <Message number="9476" eDefine="SYS_ERR_HW_DM_RECTIFIER_TEMP_WARN">
+    <Title>Rectifier Temperature Warning</Title>
+    <Description>The temperature in the rectifier unit connected to drive communication link <arg format="%d" ordinal="4" /> in drive module <arg format="%d" ordinal="1" /> is approaching a too high a level. </Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The cooling fans may be faulty or the air flow may be obstructed.  The ambient temperature may be too high or the system may be running with a too high load for extended periods.</Causes>
+    <Actions>1) Check that the fans are running and that the air flow is not obstructed. <p />2) Check that the ambient temperature does not exceed the cabinet rating. <p />3) If the system contains additional axes then check that motors are not too large for the drive units. <p />4) If possible, rewrite the user program to reduce the amount of hard acceleration.</Actions>
+  </Message>
+  <Message number="9477" eDefine="SYS_ERR_HW_DM_RECTIFIER_TEMP_ERROR">
+    <Title>Rectifier Temperature Error</Title>
+    <Description>The temperature in the rectifier unit connected to drive communication link <arg format="%d" ordinal="4" /> in drive module <arg format="%d" ordinal="1" /> has reached a too high a level. </Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The cooling fans may be faulty or the air flow may be obstructed.  The ambient temperature may be too high or the system may be running with a too high load for extended periods.</Causes>
+    <Actions>1) Check that the fans are running and that the air flow is not obstructed. <p />2) Check that the ambient temperature does not exceed the cabinet rating. <p />3) If the system contains additional axes then check that motors are not too large for the drive units. <p />4) If possible, rewrite the user program to reduce the amount of hard acceleration.</Actions>
+  </Message>
+  <Message number="9478" eDefine="SYS_ERR_HW_DM_PTC_INT_ERROR">
+    <Title>Internal Motor PTC Temperature Error</Title>
+    <Description>The temperature in one or more robot motors connected to drive module <arg format="%d" ordinal="1" /> is has reached a too high a level. </Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The motor may have stalled (possibly due to a collision), the motor may be overloaded or the ambient temperature may be higher than the rated level for the robot. </Causes>
+    <Actions>1) Check that the robot has not collided. <p />2) Check that the ambient temperature does not exceed the robot rating. <p />3) Allow the robot to cool down, and then run the system again. Replace any motors damaged by the excessive heat. <p />4) If possible, rewrite the user program to reduce the amount of hard acceleration.</Actions>
+  </Message>
+  <Message number="9479" eDefine="SYS_ERR_HW_DM_PTC_EXT_ERROR">
+    <Title>External Motor PTC Temperature Error</Title>
+    <Description>One or more additional axis motors connected to drive module <arg format="%d" ordinal="1" /> is has reached a too high a level. </Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The motor may have stalled (possibly due to a collision), the motor may be overloaded or the ambient temperature may be higher than the rated level for the robot. </Causes>
+    <Actions>1) Check that the additional axis has not collided. <p />2) Check that the ambient temperature does not exceed the rating. <p />3) Allow the motor to cool down, and then run the system again. Replace any motors damaged by the excessive heat. <p />4) If possible, rewrite the user program to reduce the amount of hard acceleration.</Actions>
+  </Message>
+  <Message number="9482" eDefine="SYS_ERR_HW_DM_INCOMING_MAINS_TOO_HIGH">
+    <Title>Mains Voltage Too High</Title>
+    <Description>The mains voltage detected in drive module <arg format="%d" ordinal="1" /> is too high.</Description>
+    <Consequences>The robot can not be operated.</Consequences>
+    <Causes>The mains transformer may be incorrectly wired or the external supply voltage may be too high.</Causes>
+    <Actions>1) Measure the incoming mains voltage at the main contactor in the drive module. Make sure it is within the range specified for this module. <p />2) Check the wiring of the mains transformer as detailed in the robot Product Manual. </Actions>
+  </Message>
+  <Message number="9483" eDefine="SYS_ERR_DM_DC_BUS_SHORT_CIRCUIT">
+    <Title>DC Link Short Circuit</Title>
+    <Description>A short circuit has been detected on the DC link of drive module <arg format="%d" ordinal="1" />. </Description>
+    <Consequences>The robot can not be operated.</Consequences>
+    <Causes>The DC bus bar may be badly connected or its contact surfaces may be contaminated causing a short circuit.</Causes>
+    <Actions>1) Check that all DC link bus bars have been correctly connected. <p />2) Check that all contacts are free from contamination.</Actions>
+  </Message>
+  <Message number="9484" eDefine="SYS_ERR_HW_DM_CHAIN_OPEN_ERROR">
+    <Title>Run chain open in motor on state</Title>
+    <Description>Run chain <arg format="%d" ordinal="2" /> is open when system is in motor on state. The problem occurred in drive system <arg format="%d" ordinal="1" />. </Description>
+    <Consequences>System goes to SYS_HALT.</Consequences>
+    <Causes>1) Cables and connections on the Safety System are unplugged or damaged.<p />2) The contactor for this run chain in the drive module may be stuck due to mechanical problem in contactor itself.<p />3) The help contactor on the contactor can suffer from bad galvanic behavior or faulty cable to the Safety System.</Causes>
+    <Actions>1) Check if a motor contactor is stucked. <p />2) Replace faulty motor contactor.</Actions>
+  </Message>
+  <Message number="9485" eDefine="SYS_ERR_HW_DM_CHAIN_CLOSE_ERROR">
+    <Title>Run chain close in motor off state</Title>
+    <Description>Run chain <arg format="%d" ordinal="2" /> is open when system is in motor on state. The problem occurred in drive system <arg format="%d" ordinal="1" />. </Description>
+    <Consequences>System goes to SYS_HALT.</Consequences>
+    <Causes>1) The contactor for this run chain placed in the drive module has been pulled down manually.<p />2) The contactor has been welded in close position. </Causes>
+    <Actions>1) If the contactor is not released and stays in pulled position, shut down the system and replace the contactor.<p />2) If the contactor has been pulled down manually, take this message as a warning only.</Actions>
+  </Message>
+  <Message number="9486" eDefine="SYS_ERR_HW_DM_DC_LINK_MISSING">
+    <Title>DC Link Not Connected</Title>
+    <Description>The DC Link connection to the drive serving joint <arg format="%d" ordinal="2" /> in drive module <arg format="%d" ordinal="1" />, drive unit number <arg format="%d" ordinal="3" /> is missing or is not properly connected.</Description>
+    <Consequences>The system goes to SYS_HALT. </Consequences>
+    <Causes>1) The DC Bussbar is either missing or is not properly connected. <p />2) If the bussbar is correctly connected. The drive unit reporting the error may have a fault.</Causes>
+    <Actions>1) Check the DC Bussbar is properly connected to all the drive units</Actions>
+  </Message>
+  <Message number="9500" eDefine="SYS_ERR_HW_DM_DS_LOGIC_WARN">
+    <Title>Logic Voltage to Drive Unit Warning</Title>
+    <Description>The 24V supply from the Drive Module Power Supply to the main drive unit in drive module <arg format="%d" ordinal="1" /> is out of range. </Description>
+    <Consequences>-</Consequences>
+    <Causes>The 24V supply from the Drive Module Power Supply may be out of range. </Causes>
+    <Actions>1) Make sure the power cable from the Drive Module Power Supply to the main drive unit is connected correctly. <p />2) Check if the power supply unit LED is red. The full meaning of all LED indications are described in the Trouble Shooting Manual, IRC5.</Actions>
+  </Message>
+  <Message number="9501" eDefine="SYS_ERR_HW_DM_DS_LOGIC_ERROR">
+    <Title>Logic Voltage to Drive Unit Error</Title>
+    <Description>The 24V supply to the main drive unit in drive module <arg format="%d" ordinal="1" /> is out of range.</Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The 24V supply from the power supply unit may be out of range. </Causes>
+    <Actions>1) Make sure the power cable from the power supply unit to the main drive unit is connected correctly. <p />2) Check if the power supply unit LED is red. The full meaning of all LED indications are described in the Trouble Shooting Manual, IRC5.</Actions>
+  </Message>
+  <Message number="9502" eDefine="SYS_ERR_HW_DM_RECTIFIER_LOGIC_WARN">
+    <Title>Logic Voltage to Rectifier Error</Title>
+    <Description>The 24V to the rectifier in drive module <arg format="%d" ordinal="1" /> is out of range. </Description>
+    <Consequences>-</Consequences>
+    <Causes>The cable between the drive unit and the rectifier may be badly connected, or the power supply voltage to the drive unit may be out of range.</Causes>
+    <Actions>1) Check that the power cable between the power supply unit and the rectifier unit has been connected correctly. <p />2) Check the 24 V voltage in the power cable to the drive unit..</Actions>
+  </Message>
+  <Message number="9503" eDefine="SYS_ERR_HW_DM_PSU_OVERTEMP">
+    <Title>Power Supply Overtemperature</Title>
+    <Description>The temperature in the Drive Module Power Supply of drive module <arg format="%d" ordinal="1" /> has reached a critical level. </Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The fan unit may be faulty, the cooling air flow may be obstructed or the ambient temperature may be too high.</Causes>
+    <Actions>1) NOTE! Do not try to restart the controller for approx. ten minutes to let it cool down. <p />2) Make sure the fans are running and that the air flow is not obstructed. <p />3) Make sure the ambient temperature does not exceed the drive module rating. <p />4) Make sure the power supply connectors are correctly connected to the axis computer.</Actions>
+  </Message>
+  <Message number="9504" eDefine="SYS_ERR_HW_DM_PSU_BREAK_POWER_LOST">
+    <Title>Power Supply to Brakes Overload</Title>
+    <Description>The brake power circuit in drive module <arg format="%d" ordinal="1" /> draws too much current. </Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS HALT.</Consequences>
+    <Causes>The brake power cable may be faulty (short circuit), or additional axis motors with brakes consuming too much power may be used. The fault may also occur if the cable from the power supply unit is not correctly connected to the drive module.</Causes>
+    <Actions>1) Make sure the power supply cable is correctly connected to the drive module. <p />2) Check the brake supply cable for short circuits. <p />3) Make sure the total current consumed by additional axes' motors does not exceed the specification for the drive module. <p />4) Make sure the power supply connectors are correctly connected to the axis computer. <p />5) Make sure the 24 V BRAKE voltage is within specified limits. See the Circuit Diagram in the Product Manual, IRC5.</Actions>
+  </Message>
+  <Message number="9505" eDefine="SYS_ERR_HW_DM_PSU_INCOMING_MAINS_LOST">
+    <Title>Mains Voltage to Power Supply Lost</Title>
+    <Description>The mains power supply to the power supply unit in Drive Module <arg format="%d" ordinal="1" /> is missing. </Description>
+    <Consequences>No operation will be possible until after correcting the fault. The system goes to status SYS FAIL.</Consequences>
+    <Causes>The main power switch on the Drive Module may be turned off. The incoming mains cable may be faulty (break), or the circuit breaker for the power supply may have tripped. The fault may also occur if the connector from the power supply unit is not correctly connected to the axis computer. </Causes>
+    <Actions>1) Check that the main power switch in turned on for the Drive Module and restart the system.<p />2) Check that the connector from the power supply unit is correctly connected to the axis computer. <p />3) Measure the voltage at the mains contactor to ensure that the mains is present.<p />4) Check that the power supply fuses/circuit breakers in the drive module have not tripped.<p /></Actions>
+  </Message>
+  <Message number="9520" eDefine="SYS_ERR_HW_AXC_COMMS_LOST">
+    <Title>Communication lost with Drive Module</Title>
+    <Description>The main computer has lost contact with drive module <arg format="%d" ordinal="1" />.</Description>
+    <Consequences>The system goes to status SYS HALT No operation will be possible until the fault has been corrected.</Consequences>
+    <Causes>This may be due to a cable break, badly connected connector or high levels of interference in the cable.</Causes>
+    <Actions>1) Make sure the cable between Control Module and Drive Module is not damaged and that both connectors are correctly connected. <p />2) Make sure no extreme levels of electromagnetic interference are emitted close to the robot cabling.</Actions>
+  </Message>
+  <Message number="9521" eDefine="SYS_ERR_HW_AXC_COMMS_WARNING">
+    <Title>Drive Module Communication Warning</Title>
+    <Description>There are a large number of communication errors being detected on the ethernet link to drive module <arg format="%d" ordinal="1" />.<p /><p />This can be due to external noise sources interfering with the cable.</Description>
+    <Actions>Check that there are no electromagnetic interference sources running near the  cable or the drive or computer modules.</Actions>
+  </Message>
+  <Message number="9522" eDefine="SYS_ERR_HW_AXC_BOARD_NOT_FOUND">
+    <Title>Axis computer not found</Title>
+    <Description>The axis computer in drive module <arg format="%d" ordinal="1" /> is not connected to the main computer. </Description>
+    <Consequences>The system goes to status SYS FAIL. No operation will be possible until the fault has been corrected.</Consequences>
+    <Causes>This may be due to a cable break, badly connected connectors or loss of power supply.</Causes>
+    <Actions>1) Make sure the main power switch on Drive Module <arg format="%d" ordinal="1" /> has been switched ON. <p />2) Make sure the cable between Control Module and Drive Module is not damaged and that both connectors are correctly connected. <p />3) Make sure the cable is connected to the correct AXC connector on the Main Computer Unit Robot Communication Card or EtherNet Board (if the MultiMove option has been installed). <p />4) Restart the system. <p />5) Make sure the Power Supply Unit in Drive Module <arg format="%d" ordinal="1" /> is working correctly.<p /></Actions>
+  </Message>
+  <Message number="9523" eDefine="SYS_ERR_HW_AXC_BOARD_NOT_USED">
+    <Title>Unused Axis computer connected</Title>
+    <Description>Axis computer in the drive module <arg format="%d" ordinal="1" /> is connected to the main computer but not in use.</Description>
+    <Causes>This can be due to configuration problem.</Causes>
+    <Actions>1. Disconnect the unused axis computer or setup the system to use the axis computer.<p />2. Restart the system.<p /></Actions>
+  </Message>
+  <Message number="9524" eDefine="SYS_ERR_HW_DM_CMD_TIMEOUT">
+    <Title>Drive Module Command timeout</Title>
+    <Description>Drive Module <arg format="%d" ordinal="1" /> does not respond to command <arg format="%d" ordinal="2" />. The system has stopped the program for safety reasons.<p /><p /></Description>
+    <Actions>1. Check that drive module is powered on. <p />2. Check the cable between the main computer and axis computer. <p />3. Restart the system.  </Actions>
+  </Message>
+  <Message number="9525" eDefine="SYS_ERR_HW_AXC_STARTUP_ERROR">
+    <Title>Drive Module startup error</Title>
+    <Description>
+      The system has failed to complete the initialization phase of drive module <arg format="%d" ordinal="1" /> .
+    </Description>
+    <Consequences>The system goes to System Failure state. </Consequences>
+    <Causes>The system has failed to complete the initialization phase of the drive module.</Causes>
+    <Actions>
+      1) Retry by restarting the system using the main power switch.<p />2) Check for other hardware eventlog messages.
+    </Actions>
+  </Message>
+  <Message number="9530" eDefine="SYS_ERR_HW_AXC_CB_COMMS_LOST">
+    <Title>Axis Computer Lost Communication With Safety System</Title>
+    <Description>Communication has been lost between axis computer and the Safety System in drive module <arg format="%d" ordinal="1" />. </Description>
+    <Consequences>System goes to status SYS FAIL.</Consequences>
+    <Causes>This may be due to a faulty communication cable or connection between the axis computer and the Safety System. It may also be due to severe interference or if the Safety System has lost its power.</Causes>
+    <Actions>1) Check cable between the axis computer and the Safety System is intact and correctly connected. <p />2) Check power supply connected to the Safety System.<p />3) Make sure no extreme levels of electromagnetic interference are emitted close to the robot cabling.</Actions>
+  </Message>
+  <Message number="9531" eDefine="SYS_ERR_HW_CB_GLITCH_TEST_NOT_OK">
+    <Title>Run chain glitch test not running</Title>
+    <Description>The glitch test of the run chain has not been performed. The problem was discovered by the Safety System connected to the axis computer in drive module <arg format="%d" ordinal="1" />. </Description>
+    <Consequences>System goes to status SYS HALT.</Consequences>
+    <Causes>This may be due internal errors.</Causes>
+    <Actions>Contact your local ABB support office.</Actions>
+  </Message>
+</Domain>

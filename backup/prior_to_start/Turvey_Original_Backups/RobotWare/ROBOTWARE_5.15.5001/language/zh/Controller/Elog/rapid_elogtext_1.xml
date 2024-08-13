@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="RAPID" domainNo="15" lang="zh" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="330" max="330">
+  <Message number="330" eDefine="SYS_ERR_RAPID_INSTALLATION_ERROR">
+    <Title>模块中发生 RAPID 错误</Title>
+    <Description>任务：<arg format="%s" ordinal="1" /><p />模块（行/列）：<arg format="%s" ordinal="2" /><p /><p />存在一个符号错误： <arg format="%s" ordinal="3" /></Description>
+  </Message>
+</Domain>

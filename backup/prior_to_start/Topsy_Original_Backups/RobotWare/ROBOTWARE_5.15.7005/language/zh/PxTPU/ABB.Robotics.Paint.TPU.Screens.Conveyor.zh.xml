@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.TPU.Screens.Conveyor">
+  <Forms>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Conveyor.TpuWndConveyor" Text="传输带 " Width="320" Height="192">
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Conveyor.TpuWndConveyorConfigure" Text="传输带 " Width="320" Height="192">
+      <Menu ref="menuWndConveyorConfigure" />
+      <Controls>
+        <Control ID="lblTxtConveyor" Text="传输带：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="6" Top="6" Width="94" Height="18" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Conveyor.TpuWndConveyorWizardPage5" Text="结果" Width="230" Height="192">
+      <Controls>
+        <Control ID="cbTranslation" Text="包含平移(TX,Ty,Tz)" Name="ABB.Robotics.Paint.TPU.Controls.TpuCheckbox" Left="4" Top="110" Width="222" Height="20" />
+        <Control ID="cbRotation" Text="包含旋转(Rx,Ry,Rz)" Name="ABB.Robotics.Paint.TPU.Controls.TpuCheckbox" Left="4" Top="130" Width="222" Height="20" />
+        <Control ID="_rbRobotBase" Text="对机器人应用基准框架" Name="ABB.Robotics.Paint.TPU.Controls.TpuRadioButton" Left="4" Top="150" Width="222" Height="20" />
+        <Control ID="_rbConveyorBase" Text="对传输带应用基准框架" Name="ABB.Robotics.Paint.TPU.Controls.TpuRadioButton" Left="4" Top="170" Width="222" Height="20" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Conveyor.TpuWndConveyorWizardPage4" Text="Point3" Width="230" Height="192">
+      <Controls>
+        <Control ID="btnModPos" Text="ModPos" Name="ABB.Robotics.Paint.TPU.Controls.TpuButton" Left="78" Top="166" Width="75" Height="24" />
+        <Control ID="lblTitle" Text="Point3" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="4" Top="4" Width="223" Height="24" />
+        <Control ID="tbDescription" Text="移动机器人并将TCP定位于Y轴正方向（左）" Name="ABB.Robotics.Paint.TPU.Controls.TpuTextBox" Left="9" Top="30" Width="212" Height="51" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Conveyor.TpuWndConveyorWizardPage3" Text="Point2" Width="230" Height="192">
+      <Controls>
+        <Control ID="btnModPos" Text="ModPos" Name="ABB.Robotics.Paint.TPU.Controls.TpuButton" Left="78" Top="166" Width="75" Height="24" />
+        <Control ID="lblTitle" Text="Point2" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="4" Top="4" Width="223" Height="24" />
+        <Control ID="tbDescription" Text="运行传输带至少1米，并将TCP定位到Point1相同位置" Name="ABB.Robotics.Paint.TPU.Controls.TpuTextBox" Left="9" Top="30" Width="212" Height="51" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Conveyor.TpuWndConveyorWizardPage1" Text="欢迎" Width="230" Height="192">
+      <Controls>
+        <Control ID="lblTitle" Text="欢迎" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="4" Top="4" Width="230" Height="24" />
+        <Control ID="tbDescription" Text="欢迎到传输带向导.                                            本向导将指导你记录传输带上的两个点，并将机器人作为一个测量工具来计算每米" Name="ABB.Robotics.Paint.TPU.Controls.TpuTextBox" Left="9" Top="30" Width="212" Height="162" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Conveyor.TpuWndConveyorWizardPage2" Text="Point1" Width="230" Height="192">
+      <Controls>
+        <Control ID="btnModPos" Text="ModPos" Name="ABB.Robotics.Paint.TPU.Controls.TpuButton" Left="78" Top="166" Width="75" Height="24" />
+        <Control ID="lblTitle" Text="Point1" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="4" Top="4" Width="223" Height="24" />
+        <Control ID="tbDescription" Text="移动机器人并将TCP定位到传输带上指定位置" Name="ABB.Robotics.Paint.TPU.Controls.TpuTextBox" Left="9" Top="30" Width="212" Height="51" />
+      </Controls>
+    </Form>
+  </Forms>
+  <Menus>
+    <Menu ID="menuWndConveyorConfigure">
+      <MenuItem ID="Measure" Text="测量" Grant="UAS_CFG_WRITE" />
+    </Menu>
+  </Menus>
+  <Strings>
+    <String ID="Idle" Text="空闲." />
+    <String ID="Position" Text="{0}m" />
+    <String ID="Waiting" Text="等待" />
+    <String ID="Conveyor" Text="传输带：" />
+    <String ID="State.Idle" Text="空闲" />
+    <String ID="State.Connected" Text="连接的" />
+    <String ID="State.Waiting" Text="等待工件" />
+    <String ID="Parameter" Text="参数" />
+    <String ID="Value" Text="值" />
+    <String ID="CountsPerMeter" Text="每米计数" />
+    <String ID="QueueTrackDistance" Text="队列轨道距离" />
+    <String ID="Unit" Text="单元" />
+    <String ID="Wizard" Text="指导" />
+    <String ID="min_dist" Text="最小距离" />
+    <String ID="max_dist" Text="最大距离" />
+    <String ID="Factor" Text="每米计数" />
+    <String ID="SyncFilter" Text="同步过滤" />
+    <String ID="SyncOffset" Text="同步位移" />
+    <String ID="StWndWidth" Text="开始窗口宽度" />
+    <String ID="TrackerNotFound" Text="传输带跟踪设备：’{0}‘未发现！                        取消向导，修正问题再试" />
+    <String ID="SensorNotFound" Text="传输带跟踪设备传感器：’{0}‘未发现！               取消向导，修正问题再试" />
+    <String ID="EncoderNotFound" Text="传感器设备编码：’{0}‘未发现！                         取消向导，修正问题再试" />
+    <String ID="DivisionByZero" Text="不能计算结果因为测量数不到1！" />
+    <String ID="RobotDistanceTooSmall" Text="不能计算结果因为机器人距离太小" />
+    <String ID="ConveyorDistanceTooSmall" Text="不能计算结果因为传输带距离太小" />
+    <String ID="CountsPerMeterNotUpdated" Text="传输带每米计数没有更新：                              '{0}’缺少参数：'{1}'!" />
+    <String ID="CountsPerMeterUpdated" Text="传输带每米计数已更新：'{0}'" />
+    <String ID="WarmStartRequired" Text="更改不会生效直到控制器热启动！" />
+    <String ID="ErrorActivatingParameters" Text="激活参数时发生错误！" />
+    <String ID="ParameterChangedAndActivated" Text="参数更改并生效" />
+    <String ID="Parameter" Text="参数" />
+    <String ID="Value" Text="值" />
+    <String ID="Unit" Text="单元" />
+    <String ID="FailedToGetCfgMaster" Text="不能得到配置主控权！" />
+    <String ID="TxtPosition" Text="位置" />
+    <String ID="X" Text="X" />
+    <String ID="Y" Text="Y" />
+    <String ID="Z" Text="Z" />
+    <String ID="mm" Text="mm" />
+    <String ID="Rx" Text="Rx" />
+    <String ID="Ry" Text="Ry" />
+    <String ID="Rz" Text="Rz" />
+    <String ID="Result" Text="结果" />
+    <String ID="Robot" Text="机器人" />
+    <String ID="FailedToGetCfgMaster" Text="不能得到配置主控权！" />
+  </Strings>
+</Resources>

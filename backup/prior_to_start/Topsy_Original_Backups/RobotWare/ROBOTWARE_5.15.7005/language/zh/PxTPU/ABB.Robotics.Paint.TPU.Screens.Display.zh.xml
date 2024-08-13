@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.TPU.Screens.Display">
+  <Forms>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Display.TpuWndDisplay" Text="显示" Width="320" Height="192">
+      <Controls />
+    </Form>
+  </Forms>
+</Resources>

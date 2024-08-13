@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources>
+  <Strings>
+    <String ID="Menu.Service" Text="服务" />
+    <String ID="Menu.Process" Text="工艺" />
+    <String ID="Menu.Edit" Text="编辑" />
+    <String ID="Menu.UserScreens" Text="用户界面" />
+    <String ID="ABB.Robotics.Paint.TPU.enumIndicatorText.Initialze" Text="正在初始化......" />
+    <String ID="ABB.Robotics.Paint.TPU.enumIndicatorText.Wait" Text="请等待..." />
+  </Strings>
+</Resources>

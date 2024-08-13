@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!-- File: CIR_SYS_cfgtext.xml                                 -->
+<!-- Purpose:  This file contains CIR related SYS text resources -->
+<!-- Reference:  "Configuration Rules Writers Guide.doc" -->
+<Resources xmlns="urn:abb-robotics-cfg-text" language="en" cfgTextVersion="1.0">
+	<Text resourceID="SYS001">Controller</Text>
+	<Text resourceID="SYS002">Safety Run Chain</Text>
+	<Text resourceID="SYS003">Function</Text>
+	<Text resourceID="SYS004">Soft AS</Text>
+	<Text resourceID="SYS005">Soft GS</Text>
+	<Text resourceID="SYS006">Soft ES</Text>
+	<Text resourceID="SYS007">Soft SS</Text>
+	<Text resourceID="SYS008">Active</Text>
+	<Text resourceID="SYS009">TRUE</Text>
+	<Text resourceID="SYS010">FALSE</Text>
+	
+	<Text resourceID="SYS011">Operator Safety</Text>
+	<Text resourceID="SYS012">HoldToRun</Text>
+	
+	<Text resourceID="SYS020">Event Routine</Text>
+	<Text resourceID="SYS021">Event</Text>
+	<Text resourceID="SYS022">POWER_ON</Text>
+	<Text resourceID="SYS023">START</Text>
+	<Text resourceID="SYS024">STOP</Text>
+	<Text resourceID="SYS025">QSTOP</Text>
+	<Text resourceID="SYS026">RESTART</Text>
+	<Text resourceID="SYS027">RESET</Text>
+	<Text resourceID="SYS028">STEP</Text>
+	<Text resourceID="SYS029">Routine</Text>
+	<Text resourceID="SYS030">Task</Text>
+	
+	<Text resourceID="SYS031">Path Return region</Text>
+	<Text resourceID="SYS032">Mode</Text>
+	<Text resourceID="SYS033">MAN</Text>
+	<Text resourceID="SYS034">AUTO</Text>
+	<Text resourceID="SYS035">Tcp distance</Text>
+	<Text resourceID="SYS036">Tcp rotation</Text>
+	<Text resourceID="SYS037">External distance</Text>
+	<Text resourceID="SYS038">External rotation</Text>
+
+	<Text resourceID="SYS040">System Misc</Text>
+	<Text resourceID="SYS041">Name</Text>
+	<Text resourceID="SYS042">Value</Text>
+	<Text resourceID="SYS044">No Of Retry</Text>
+	<Text resourceID="SYS045">Simulate Menu</Text>	
+	<Text resourceID="SYS048">Multi Stop</Text>
+
+	<Text resourceID="SYS050">Automatic loading of Modules</Text>
+	<Text resourceID="SYS051">Task</Text>
+	<Text resourceID="SYS052">File</Text>
+	<Text resourceID="SYS053">Installed</Text>
+	<Text resourceID="SYS054">TRUE</Text>
+	<Text resourceID="SYS055">FALSE</Text>
+	<Text resourceID="SYS056">TextResource</Text>
+	<Text resourceID="SYS057">Shared</Text>
+	<Text resourceID="SYS058">YES</Text>
+	<Text resourceID="SYS059">NO</Text>
+	<Text resourceID="SYS060">All Tasks</Text>
+	<Text resourceID="SYS061">Sequence Number</Text>
+	<Text resourceID="SYS062">Hidden</Text>
+	<Text resourceID="SYS063">All Motion Tasks</Text>
+
+	<Text resourceID="SYS070">ModPos Settings</Text>
+	<Text resourceID="SYS071">Name</Text>
+	<Text resourceID="SYS072">Limited ModPos</Text>
+	<Text resourceID="SYS075">Mode</Text>
+	<Text resourceID="SYS076">Absolute</Text>
+	<Text resourceID="SYS077">Relative</Text>
+	
+	<Text resourceID="SYS081">Limit trans</Text>
+	<Text resourceID="SYS082">Limit rotation</Text>
+	<Text resourceID="SYS083">Limit external trans</Text>
+	<Text resourceID="SYS084">Limit external rot</Text>
+	<!-- SPR1026899 This functionality is not and shall not be available
+    <Text resourceID="SYS085">Change to Limit ModPos when going to Auto</Text>-->
+	<Text resourceID="SYS086">YES</Text>
+	<Text resourceID="SYS087">NO</Text>
+    <Text resourceID="SYS088">Auto Condition Reset</Text>
+    <Text resourceID="SYS089">Reset</Text>
+  
+    <Text resourceID="SYS090">Run Mode Settings</Text>
+    <Text resourceID="SYS091">Keep</Text>
+    <Text resourceID="SYS092">Single</Text>
+    <Text resourceID="SYS093">Continuous</Text>
+    <Text resourceID="SYS094">ManualToAuto</Text>
+    <Text resourceID="SYS095">AutoToManual</Text>
+    <Text resourceID="SYS096">Switch to</Text>
+    
+    <Text resourceID="SYS097">AllDebugSettings</Text>
+
+    <Text resourceID="SYS098">Options</Text>
+    <Text resourceID="SYS099">Name</Text>
+    <Text resourceID="SYS100">Description</Text>
+
+	<Text resourceID="HLP_CIRSYS_001">The Controller Topic handles System Parameters regarding the system specific parameters</Text>
+	<Text resourceID="HLP_CIRSYS_002">Type Safety Runchain</Text>
+	<Text resourceID="HLP_CIRSYS_003">The parameter is used for activation/deactivation of soft stops</Text>
+	<Text resourceID="HLP_CIRSYS_004">Activate/deactivate</Text>
+	<Text resourceID="HLP_CIRSYS_005">Operator Safety</Text>
+	<Text resourceID="HLP_CIRSYS_006">The function HoldToRun can be available in Manual Reduced Speed</Text>
+	<Text resourceID="HLP_CIRSYS_007">To set HoldToRun active in Manual Reduced Speed</Text>
+	<Text resourceID="HLP_CIRSYS_008">Event Routines</Text>
+	<Text resourceID="HLP_CIRSYS_009">Action that shall start the routine</Text>
+	<Text resourceID="HLP_CIRSYS_010">The routine name</Text>
+	<Text resourceID="HLP_CIRSYS_011">The task</Text>
+	<Text resourceID="HLP_CIRSYS_012">If the routine shall act in all tasks</Text>
+	<Text resourceID="HLP_CIRSYS_013">Path return Region</Text>
+	<Text resourceID="HLP_CIRSYS_014">The instance is for Manual or Automatic mode</Text >
+	<Text resourceID="HLP_CIRSYS_015">Tcp distance</Text>
+	<Text resourceID="HLP_CIRSYS_016">Tcp rotation</Text>
+	<Text resourceID="HLP_CIRSYS_017">External distance</Text>
+	<Text resourceID="HLP_CIRSYS_018">External rotation</Text>
+	<Text resourceID="HLP_CIRSYS_019">Miscellaneous parameters</Text>
+	<Text resourceID="HLP_CIRSYS_020">NoOfRetry</Text>
+	<Text resourceID="HLP_CIRSYS_021">SimulateMenu</Text>
+	<Text resourceID="HLP_CIRSYS_022">MultiStop is manually used in a Multi Move System</Text>
+	<Text resourceID="HLP_CIRSYS_023">Automatic loading of modules</Text>
+	<Text resourceID="HLP_CIRSYS_024">The task</Text>
+	<Text resourceID="HLP_CIRSYS_025">The file name</Text>
+	<Text resourceID="HLP_CIRSYS_026">If the module shall be installed</Text>
+	<!--<Text resourceID="HLP_CIRSYS_027">Txres</Text>	-->
+	<Text resourceID="HLP_CIRSYS_028">Shared</Text>
+	<Text resourceID="HLP_CIRSYS_029">All tasks</Text>
+	<Text resourceID="HLP_CIRSYS_030">Modpos / HotEdit</Text>
+	<Text resourceID="HLP_CIRSYS_031">Hot edit or ModPos</Text>
+	<Text resourceID="HLP_CIRSYS_032">Limited modpos or not</Text>
+	<Text resourceID="HLP_CIRSYS_033">Absolute or relative</Text>
+	<Text resourceID="HLP_CIRSYS_034">limittrans</Text>
+	<Text resourceID="HLP_CIRSYS_035">limitrot</Text>
+	<Text resourceID="HLP_CIRSYS_036">limitexttrans</Text>
+	<Text resourceID="HLP_CIRSYS_037">DisplayFilter</Text>
+	<!--<Text resourceID="HLP_CIRSYS_038">If auto</Text>-->
+	<Text resourceID="HLP_CIRSYS_039">Event routines are executed in this order.</Text>
+	<Text resourceID="HLP_CIRSYS_040">Hide module and contents from browsing.</Text>
+    <Text resourceID="HLP_CIRSYS_041">Auto Condition Reset is used to control the debug settings in Auto mode</Text>
+    <Text resourceID="HLP_CIRSYS_042">Switch from Manual mode to Auto Mode or from Auto mode to Manual mode</Text>
+    <Text resourceID="HLP_CIRSYS_043">Keep the previous run mode or change to Continuous or Single</Text>
+    <Text resourceID="HLP_CIRSYS_044">Reset settings when switching from manual mode to auto mode</Text>
+    <Text resourceID="HLP_CIRSYS_045">Reset</Text>
+	<Text resourceID="HLP_CIRSYS_046">All motion tasks</Text>
+	<Text resourceID="HLP_CIRSYS_047">If the routine shall act in all motion tasks</Text>
+
+</Resources>

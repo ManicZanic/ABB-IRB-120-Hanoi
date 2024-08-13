@@ -1,0 +1,533 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="ARL" domainNo="4" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="1477" max="1583">
+  <Message number="1477" eDefine="SYS_ERR_ARL_WST_TIMEOUT">
+    <Title>TimeOut</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The time set in argument <arg format="%s" ordinal="2" /> in instruction WaitSyncTask has expired.<p />Program Ref. <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1483" eDefine="SYS_ERR_ARL_SYNCID">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The value of the ID is negative or is not an integer. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check the value of the optional argument ID. The value must be a nonnegative integer. </Actions>
+  </Message>
+  <Message number="1484" eDefine="SYS_ERR_ARL_SMON_TIMEOUT">
+    <Title>TimeOut</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The time set in argument <arg format="%s" ordinal="2" /> in instruction SyncMoveOn has expired.<p />Program Ref. <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1486" eDefine="SYS_ERR_ARL_TCPROB_NOTDEF">
+    <Title>Instruction Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The instruction <arg format="%s" ordinal="2" /> is only available if there is a TCP-robot defined in the program task.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>- Check the configuration.<p />- The instruction must be removed, if the task is not supposed to have a TCP-robot. </Actions>
+  </Message>
+  <Message number="1487" eDefine="SYS_ERR_ARL_TCPROB_NOTACT">
+    <Title>Instruction Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The instruction <arg format="%s" ordinal="2" /> only works if the TCP-robot is active.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Activate the TCP-robot in the task.</Actions>
+  </Message>
+  <Message number="1488" eDefine="SYS_ERR_ARL_ROB_AXIS_VAL">
+    <Title>Value Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />There is no TCP-robot defined in the program task. One or several robot axis value input is not equal to 9E9.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Change the robot axis value to 9E9. </Actions>
+  </Message>
+  <Message number="1489" eDefine="SYS_ERR_ARL_MOV_ROB_AXIS_VAL">
+    <Title>Value error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The robot axis <arg format="%s" ordinal="2" /> is not moveable and therefore must not be supervised.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Change the value of axis <arg format="%s" ordinal="4" /> to 9E9. </Actions>
+  </Message>
+  <Message number="1490" eDefine="SYS_ERR_ARL_SMOFF_TIMEOUT">
+    <Title>TimeOut</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The time set in argument <arg format="%s" ordinal="2" /> in instruction SyncMoveOff has expired.<p />Program Ref. <arg format="%s" ordinal="3" /><p /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1491" eDefine="SYS_ERR_ARL_TCPROB_DEF">
+    <Title>Instruction Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The instruction <arg format="%s" ordinal="2" /> is not available if there is a TCP-robot defined in the program task.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>- Check the configuration.<p />- The instruction must be removed, if the task is supposed to have a TCP-robot. </Actions>
+  </Message>
+  <Message number="1492" eDefine="SYS_ERR_ARL_MECUNT_NOTACT">
+    <Title>Instruction Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The instruction <arg format="%s" ordinal="2" /> only works if the mechanical unit is active.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Activate the mechanical unit in the task. </Actions>
+  </Message>
+  <Message number="1493" eDefine="SYS_ERR_ARL_NO_TCPROB">
+    <Title>Execution Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />There is no TCP-robot available in the task.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>To be able to run the instruction a TCP-robot must be available in the task.</Actions>
+  </Message>
+  <Message number="1494" eDefine="SYS_ERR_ARL_TASK_MECUNIT">
+    <Title>Instruction error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The task does not control mechanical unit: <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check the configuration.<p /></Actions>
+  </Message>
+  <Message number="1495" eDefine="SYS_ERR_ARL_MOVE_PP_SYNC_ON">
+    <Title>Move PP Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Not ready with the switch from independent to synchronized mode. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>Restart of current instruction is blocked. <p />The system can either be in synchronized motion mode or still in independent motion mode.<p /></Consequences>
+    <Causes>Stop of program when having an active instruction. Then a PP movement within program has been done.</Causes>
+    <Actions>Move PP to start the program again. PP must be moved in all program tasks. To have a well defined state of the system you should move PP to main.</Actions>
+  </Message>
+  <Message number="1496" eDefine="SYS_ERR_ARL_MOVE_PP_SYNC_OFF">
+    <Title>Move PP Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Not ready with the switch from synchronized to independent mode. <p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>Restart of current instruction is blocked. <p />The system can either be in synchronized motion mode or still in independent motion mode.</Consequences>
+    <Causes>Stop of program when having an active instruction. Then a PP movement within program has been done.</Causes>
+    <Actions>Move PP to start the program again. PP must be moved in all program tasks. To have a well defined state of the system you should move PP to main.</Actions>
+  </Message>
+  <Message number="1497" eDefine="SYS_ERR_ARL_MOVE_PP_WAITSYNC">
+    <Title>Move PP Notification</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruction <arg format="%s" ordinal="2" /> was active in this task. Moving PP within the program can be dangerous in some cases.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>Moving PP in the RAPID program can result in unsynchronized RAPID tasks or/and collision between robots.</Consequences>
+    <Causes>PP movement within RAPID program when having active <arg format="%s" ordinal="4" /> instruction.</Causes>
+    <Actions>Move PP to suitable position in this program task.</Actions>
+  </Message>
+  <Message number="1498" eDefine="SYS_ERR_ARL_MECH_USERFRAME_NOT_FOUND">
+    <Title>No Defined UserFrame In Mechanical Unit <arg format="%s" ordinal="1" />!</Title>
+    <Description>The workobject <arg format="%s" ordinal="2" /> contains a coordinated mechanical unit which has no defined userframe. </Description>
+    <Actions>Check the mechanical unit component of the workobject. </Actions>
+  </Message>
+  <Message number="1499" eDefine="SYS_ERR_ARL_SYNC_MODE">
+    <Title>Synchronized Mode</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />System is in synchronized mode. Instruction must have an ID.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Add switch \ID with an identification number to the instruction.</Actions>
+  </Message>
+  <Message number="1500" eDefine="SYS_ERR_ARL_IND_MODE">
+    <Title>Independent Mode</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />System is in independent mode. Instruction must not have an ID.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Remove switch \ID from the instruction.</Actions>
+  </Message>
+  <Message number="1501" eDefine="SYS_ERR_ARL_ILL_ID">
+    <Title>Illegal Id</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />ErrorId has wrong value. It must be an integer in interval <arg format="%s" ordinal="2" /> - <arg format="%s" ordinal="3" />.<p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Change the value.</Actions>
+  </Message>
+  <Message number="1502" eDefine="SYS_ERR_ARL_ILL_DOM">
+    <Title>Illegal Domain</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Domain <arg format="%s" ordinal="2" /> cannot be used.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Choose another Elog Domain.</Actions>
+  </Message>
+  <Message number="1503" eDefine="SYS_ERR_ARL_ILL_TYPE">
+    <Title>Illegal Error Type</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Error type TYPE_ALL cannot be used.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Use another Error Type.</Actions>
+  </Message>
+  <Message number="1504" eDefine="SYS_ERR_ARL_NO_MECUNIT">
+    <Title>No Mechanical Unit Stated</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />No TCP in the system and no Mechanical Unit added to the instruction.<p />Program Ref. <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Actions>Add a Mechanical Unit, that exists in the task, to the instruction .<p /></Actions>
+  </Message>
+  <Message number="1505" eDefine="SYS_ERR_ARL_MECUNIT_NOT_IN_TASK">
+    <Title>Mechanical Unit Not In Task</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The Mechanical Unit stated does not exist in the task.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Add another Mechanical Unit to the instruction.</Actions>
+  </Message>
+  <Message number="1506" eDefine="SYS_ERR_ARL_READ_NO_TCP">
+    <Title>Task Does Not Read a TCP Robot</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The read task does not read a tcp robot.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Change the configuration or add a Mechanical Unit, that exists in the task, to the instruction.</Actions>
+  </Message>
+  <Message number="1507" eDefine="SYS_ERR_ARL_READ_ILL_MECH">
+    <Title>Task Reads Other Mechanical Unit</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Task reads another Mechanical Unit than the one stated in the instruction.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Change Mechanical Unit in the instruction.</Actions>
+  </Message>
+  <Message number="1508" eDefine="SYS_ERR_ARL_ILL_LOADID">
+    <Title>LoadId Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Load Identification is not available for this robot type.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check next Event Log message, for the next user action to do.</Actions>
+  </Message>
+  <Message number="1509" eDefine="SYS_ERR_ARL_ILL_POS">
+    <Title>LoadId Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Not valid load identification position.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Change the position for the robot.<p />Check next Event Log message, for the next user action to do.<p /></Actions>
+  </Message>
+  <Message number="1510" eDefine="SYS_ERR_ARL_NO_USE_TOOL0">
+    <Title>LoadId Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Not allowed to identify (or use) tool0.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Set the tool that should be identified, active in the jogging window.<p />Check next Event Log message, for the next user action to do.</Actions>
+  </Message>
+  <Message number="1511" eDefine="SYS_ERR_ARL_NO_ID_LOAD0">
+    <Title>LoadId Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Not allowed to identify load0.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Use another load for identification.<p />Check next Event Log message, for the next user action to do.</Actions>
+  </Message>
+  <Message number="1512" eDefine="SYS_ERR_ARL_INT_ERROR">
+    <Title>Internal Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Measurement axes &gt; 2 at the same time.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check next Event Log message, for the next user action to do.</Actions>
+  </Message>
+  <Message number="1513" eDefine="SYS_ERR_ARL_ILL_PAYLOAD">
+    <Title>LoadId Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Selection of PayLoad out of limits.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Select a PayLoad in the system.<p />Press Start to continue.</Actions>
+  </Message>
+  <Message number="1514" eDefine="SYS_ERR_ARL_ILL_WOBJ0">
+    <Title>LoadId Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />wobj0 cannot be active for roomfix TCP.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Select another Work Object.<p />Check next Event Log message, for the next user action to do.</Actions>
+  </Message>
+  <Message number="1515" eDefine="SYS_ERR_ARL_ILL_METHOD">
+    <Title>LoadId Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Selection of method out of limits.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Select one of the identification methods given.<p />Press Start to continue.</Actions>
+  </Message>
+  <Message number="1516" eDefine="SYS_ERR_ARL_SMALL_ANGLE">
+    <Title>LoadId Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The configuration angle is not adequate.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>It is not possible to run the identification.</Consequences>
+    <Causes>The selected value of the configuration angle is less than 30, or has another value that is not possible to use for identification.</Causes>
+    <Actions>Select a configuration angle between +/- 30 and +/- 90 degrees.<p />Press Start to continue.</Actions>
+  </Message>
+  <Message number="1517" eDefine="SYS_ERR_ARL_LOADID_ERR">
+    <Title>LoadId Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />PP has been moved to the beginning of the Load Identification routine<p />and is now ready for a new restart.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>Service routine was stopped during measurement, interrupted with cancel by the user or interrupted because some type of other error.<p />Check former Event Log message for reason.</Causes>
+    <Actions>1) Start service routine again<p />2) Use Debug - Cancel Call Routine to quit execution of service routine.<p />NOTE: Cancel Call Routine will result in a lost Program Pointer.<p />Use Debug - PP to Main to get a new Program Pointer.</Actions>
+  </Message>
+  <Message number="1518" eDefine="SYS_ERR_ARL_MECHUNIT_SEL">
+    <Title>LoadId Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Selection of MechUnit out of limits.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Select one of the Mechanical Units displayed.<p />Press Start to continue.</Actions>
+  </Message>
+  <Message number="1519" eDefine="SYS_ERR_ARL_ILL_MASS">
+    <Title>LoadId Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Mass must be &gt; 0 kg.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Specify the mass to something greater than 0.<p />Press Start to continue.</Actions>
+  </Message>
+  <Message number="1520" eDefine="SYS_ERR_ARL_ERR_NOT_BOOKED">
+    <Title>Error Recovery Constant Not Booked</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Error recovery constant <arg format="%s" ordinal="2" /> is not booked.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Use instruction BookErrNo to book the constant or use an error recovery constant booked by the system (cannot be used with ErrRaise).</Actions>
+  </Message>
+  <Message number="1521" eDefine="SYS_ERR_ARL_ILL_TASKSTATUS">
+    <Title>Task Status Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />None of the tasks in the tasklist is a NORMAL, activated task.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Check in the Task Selection Panel that at least one of the tasks in the tasklist are selected = activated. <p />Check in the .cfg-file that at least one of the tasks selected is NORMAL.</Actions>
+  </Message>
+  <Message number="1522" eDefine="SYS_ERR_ARL_ILL_ERR_CONSTANT">
+    <Title>Wrong Error Recovery Constant Used</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Error recovery constant <arg format="%s" ordinal="2" /> has been booked by the system. The constant cannot be used with instruction ErrRaise.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Book a new error recovery constant with instruction BookErrNo.</Actions>
+  </Message>
+  <Message number="1523" eDefine="SYS_ERR_ARL_NOTINT_OR_NEG">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Argument <arg format="%s" ordinal="2" /> is not an integer or is negative.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Change the value of the argument to a non-negative integer.</Actions>
+  </Message>
+  <Message number="1524" eDefine="SYS_ERR_ARL_IN_UNDO_HANDLER">
+    <Title>Instruction Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The program is executing in an UNDO handler. It is not allowed to execute the instruction <arg format="%s" ordinal="2" /> in an UNDO handler.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Remove the instruction.</Actions>
+  </Message>
+  <Message number="1525" eDefine="SYS_ERR_ARL_IN_EVENT_ROUTINE">
+    <Title>Instruction Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The program is executing in an EVENT routine. It is not allowed to execute the instruction <arg format="%s" ordinal="2" /> in an EVENT routine.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Remove the instruction.</Actions>
+  </Message>
+  <Message number="1526" eDefine="SYS_ERR_ARL_NOT_ERROR_HANDLER">
+    <Title>Instruction Error </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruction <arg format="%s" ordinal="3" /> may only be used in an ERROR handler.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Remove the instruction or move it to an ERROR handler.</Actions>
+  </Message>
+  <Message number="1527" eDefine="SYS_ERR_ARL_NO_SWITCH_ARG">
+    <Title>Argument Switch Is Missing. </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />There is an argument missing.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>One of the switch parameters \Continue or \BreakOff in <arg format="%s" ordinal="3" /> has to be defined.</Actions>
+  </Message>
+  <Message number="1528" eDefine="SYS_ERR_ARL_NOT_NOSTEPIN">
+    <Title>Instruction Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Instruction <arg format="%s" ordinal="2" />  may only be used in a no stepin routine.</Description>
+    <Actions>Remove the instruction or move it to a no stepin routine. </Actions>
+  </Message>
+  <Message number="1529" eDefine="SYS_ERR_ARL_ILL_SWITCH">
+    <Title>Instruction Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The switch \Inpos is only allowed when the task is in control of a mechanical unit.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Remove the switch \Inpos from the instruction</Actions>
+  </Message>
+  <Message number="1530" eDefine="SYS_ERR_ARL_WOBJ_NOT_IN_TASK">
+    <Title>Instruction error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />It is not possible to execute the instruction <arg format="%s" ordinal="2" />, while the coordinated workobject has a reference to the mechanical unit <arg format="%s" ordinal="3" />, located in another task.<p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Change to a workobject with reference to a mechanical unit located in the same task as the TCP robot.<p /><p />Function CalcJointT can be used even when the coordinated workobject is located in another task if:<p />- Switch \UseCurWObjPos is used<p />- The coordinated workobject is standing still</Actions>
+  </Message>
+  <Message number="1531" eDefine="SYS_ERR_ARL_TASK_NOT_IN_LIST">
+    <Title>Task Not In TaskList</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /> is not one of the tasks in the TaskList, or there is a mismatch between the tasklists in the different tasks.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>- Add current task to the TaskList.<p />- Check that the tasklists in the different tasks are similar.<p /><p />When using PERS variables, it might be necessary to unload the modules containing the tasklists, and then reload them again.</Actions>
+  </Message>
+  <Message number="1532" eDefine="SYS_ERR_ARL_MISMATCH_TASKLIST">
+    <Title>Mismatch of task list</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Failed to synchronize because of:<p />1) The task list, <arg format="%s" ordinal="2" />, does not match with the task lists with the same<p />SyncID in the other tasks, or a task name is used multiple times in the<p />task list.<p />2) Not the same active tasks in task selection panel in the first executed<p />instruction as in the following instructions.<p />Program Ref. <arg format="%s" ordinal="3" /></Description>
+    <Consequences>The program execution is immediately halted.</Consequences>
+    <Causes>The reason for this error is one of the following:<p />1) Tasklists do not have the same content for the same SyncID<p />or a taskname is used multiple times.<p />2) One or several tasks has been enabled/disabled in the task selection<p />panel after first instruction was executed. <p /></Causes>
+    <Actions>1) Check and modify tasklists and SyncIDs, or the same error will occur again.<p />2) Start again. The instructions will be executed with the current status of the task selection panel.<p /><p /><p /></Actions>
+  </Message>
+  <Message number="1533" eDefine="SYS_ERR_ARL_MISMATCH_SYNCID">
+    <Title>Mismatch Of SyncID</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />SyncID <arg format="%s" ordinal="2" /> does not match with SyncID in the other task/tasks.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>Use of tasklists that are non global can cause this error.</Causes>
+    <Actions>Change SyncID and check the tasklists.<p />PP must be moved to main in all tasks before you can continue.</Actions>
+  </Message>
+  <Message number="1534" eDefine="SYS_ERR_ARL_INC_SYNCHDATA">
+    <Title>Inconsistent Synch Data</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Inconsistent synchdata in TaskList <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Change content of the TaskList.<p />PP must be moved to main in all tasks before you can continue.<p /></Actions>
+  </Message>
+  <Message number="1535" eDefine="SYS_ERR_ARL_UNEXP_SYNC_ON_IN_ON">
+    <Title>Unexpected SyncMoveOn</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unexpected SyncMoveOn (SyncID <arg format="%s" ordinal="2" />). The system is already in synchronized mode.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>The program task is already in synchronized mode becuase SyncMoveOn has already been executed.<p />Use of tasklists that are non global can cause this error.</Causes>
+    <Actions>PP must be moved to main in all task before you can continue the program execution.<p />Remove the SyncMoveOn instruction. Every SyncMoveOn must be followed by a SyncMoveOff instruction.<p />Check your tasklists.<p /><p /><p /></Actions>
+  </Message>
+  <Message number="1536" eDefine="SYS_ERR_ARL_UNEXP_SYNC_ON_IN_WAIT_OFF">
+    <Title>Unexpected SyncMoveOn</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unexpected SyncMoveOn (SyncID <arg format="%s" ordinal="2" />). The system is waiting for a SyncMoveOff.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Remove the SyncMoveOn instruction. Every SyncMoveOn must be followed by a SyncMoveOff instruction.<p /></Actions>
+  </Message>
+  <Message number="1537" eDefine="SYS_ERR_ARL_UNEXP_SYNC_OFF_IN_WAIT_ON">
+    <Title>Unexpected SyncMoveOff</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unexpected SyncMoveOff (SyncID <arg format="%s" ordinal="2" />). The system is waiting for a SyncMoveOn.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Remove the SyncMoveOff instruction. Every SyncMoveOn must be followed by a SyncMoveOff instruction.<p /><p /></Actions>
+  </Message>
+  <Message number="1538" eDefine="SYS_ERR_ARL_READ_TASK_IN_TASKLIST">
+    <Title>Wrong TaskList</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The task, <arg format="%s" ordinal="2" />, in the TaskList is a read task and cannot be synchronized.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Change the TaskList or the configuration.</Actions>
+  </Message>
+  <Message number="1539" eDefine="SYS_ERR_ARL_STIFF_STOP_ERROR">
+    <Title>Speed Too High</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Speed is over <arg format="%s" ordinal="2" /> mm/s. This is too fast when Stiff Stop (switch \Stop) is used.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Consequences>The program execution is immediately stopped.</Consequences>
+    <Actions>Change the speed, or change type of stop.</Actions>
+  </Message>
+  <Message number="1540" eDefine="SYS_ERR_ARL_TASK_READ_MECUNIT">
+    <Title>Wrong Mechanical Unit</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The task reads the control task, <arg format="%s" ordinal="2" />, which does not control the mechanical unit <arg format="%s" ordinal="3" />.<p />Program Ref. <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>Change \MechUnit or the configuration.</Actions>
+  </Message>
+  <Message number="1541" eDefine="SYS_ERR_ARL_IS_READ_TASK">
+    <Title>Not Allowed From a Read Task</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The instruction is not allowed to execute in a read task.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Remove the instruction.</Actions>
+  </Message>
+  <Message number="1542" eDefine="SYS_ERR_ARL_PROG_STOP">
+    <Title>Program Stop</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Not possible to regain to path because of program stop in the system.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1543" eDefine="SYS_ERR_ARL_UNEXIST_LOAD">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />A loaddata has been defined, but is no longer available in the system.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>The reason for this error is one of the following:<p />1) The instruction GripLoad might have been run in a module that is no longer available in the system.<p />2) A movement instruction with an optional argument Tload might have been run in a module that is no longer available in the system.</Causes>
+    <Actions>Be sure to run GripLoad load0, to reset loaddata.<p />If using Tload optional argument in movement instructions, run SetSysData load0 to reset loaddata.</Actions>
+  </Message>
+  <Message number="1544" eDefine="SYS_ERR_ARL_OBSOLETE_PROC">
+    <Title>Obsolete Instruction</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The procedure <arg format="%s" ordinal="2" /> is obsolete and will not have the expected behavior. <p />PFIOResto will do nothing at all.<p />PFDOVal and PFGOVal will act as the functions DOutput and GOutput respectively.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+  </Message>
+  <Message number="1545" eDefine="SYS_ERR_ARL_LOCAL_PERS">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The argument <arg format="%s" ordinal="2" /> may not be of type LOCAL PERS.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Remove the directive LOCAL from the data declaration.</Actions>
+  </Message>
+  <Message number="1546" eDefine="SYS_ERR_ARL_DATA_OBJ_NOT_USABLE">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The object <arg format="%s" ordinal="2" /> does not exist in the system or is of type LOCAL PERS.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>- Declare the object<p />- Remove the directive LOCAL from the data declaration</Actions>
+  </Message>
+  <Message number="1547" eDefine="SYS_ERR_ARL_MISS_OPTION">
+    <Title>Argument Error</Title>
+    <Description>Task:<arg format="%s" ordinal="1" /><p />The \Corr switch cannot be used without the option Path Offset.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Remove the argument or install the option.</Actions>
+  </Message>
+  <Message number="1548" eDefine="SYS_ERR_ARL_ACTIVEMOD">
+    <Title>Module Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The module you are trying to erase, <arg format="%s" ordinal="2" />, is active and thus cannot be removed.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check that the module you want to erase is not active.</Actions>
+  </Message>
+  <Message number="1549" eDefine="SYS_ERR_ARL_WRONG_PATH">
+    <Title>Unexpected SyncMoveOn or SyncMoveOff </Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Wrong path level. It is not possible to use SyncMoveOn or SyncMoveOff on StorePath level.<p />Used <arg format="%s" ordinal="2" />: <arg format="%s" ordinal="3" /><p />Program Ref. <arg format="%s" ordinal="4" /><p /><p /><p /></Description>
+    <Actions>Check the RAPID program.</Actions>
+  </Message>
+  <Message number="1550" eDefine="SYS_ERR_ARL_PATH_REC_WRONG_STATE">
+    <Title>PathRecorder Start/Stop Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unable to execute <arg format="%s" ordinal="2" /><p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Ensure that a backward motion has not been initiated with PathRecMoveBwd <p />without being terminated with PathRecMoveFwd.</Actions>
+  </Message>
+  <Message number="1551" eDefine="SYS_ERR_ARL_PATH_REC_NOT_REACHABLE">
+    <Title>PathRecorder Move Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unable to execute <arg format="%s" ordinal="2" />. The given identifier cannot be reached. <p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Ensure that the PathRecorder has been started. <p />Ensure that the program pointer not is being moved manually.<p />Ensure that the limit of <arg format="%s" ordinal="4" /> recorded move instructions is not exceeded.</Actions>
+  </Message>
+  <Message number="1552" eDefine="SYS_ERR_ARL_PATH_REC_WRONG_PATH_LEVEL">
+    <Title>PathRecorder Path Level Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Cannot execute <arg format="%s" ordinal="2" /> on current path level.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>- Switch to trap-level. <p />- Execute StorePath to switch path level. <p /></Actions>
+  </Message>
+  <Message number="1553" eDefine="SYS_ERR_ARL_WRONG_SYS_DATA">
+    <Title>Destroyed Data</Title>
+    <Description>System data <arg format="%s" ordinal="1" /> in one of the tasks has been changed. It is NOT allowed to change this data. </Description>
+    <Actions>The system has restored the data when it was started, but the program has to be checked. Remove where <arg format="%s" ordinal="2" /> has been assigned a value.</Actions>
+  </Message>
+  <Message number="1554" eDefine="SYS_ERR_ARL_CONC_IN_SYNC">
+    <Title>Synchronized Mode</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />It is not possible to use the optional parameter \Conc when the system is in synchronized mode.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Remove the optional parameter \Conc from any move instruction used in synchronized mode.</Actions>
+  </Message>
+  <Message number="1555" eDefine="SYS_ERR_ARL_UNIT_NOT_RUN_ATTR">
+    <Title>No Contact With Unit</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />There is no contact with the unit <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Causes>The unit may have been disabled (IODisable "UNIT1", 1;)<p />No power to the unit.</Causes>
+    <Actions>Recovery: <arg format="%s" ordinal="4" /></Actions>
+  </Message>
+  <Message number="1556" eDefine="SYS_ERR_ARL_UNIT_NOT_RUNNING">
+    <Title>No Contact With Unit</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />There is no contact with unit.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Causes>The unit may have been disabled (IODisable "UNIT1", 1;)<p />No power to the unit.<p /></Causes>
+    <Actions>Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1557" eDefine="SYS_ERR_ARL_IPOL_NOTSTOPPED">
+    <Title>Mec. Unit not stopped</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Not allowed to change run mode, if not all Motion tasks are stopped.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Do program stop and try again.</Actions>
+  </Message>
+  <Message number="1558" eDefine="SYS_ERR_ARL_NO_SWITCH">
+    <Title>Argument Switch Missing</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />An argument is missing to instruction <arg format="%s" ordinal="2" />.<p />Program Ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Add switch SyncOrgMoveInst or SyncLastMoveInst to the instruction.</Actions>
+  </Message>
+  <Message number="1559" eDefine="SYS_ERR_ARL_NOT_PERS_TASK">
+    <Title>Not PERS variable</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The task list, <arg format="%s" ordinal="2" />, is either LOCAL or TASK persistent. It is not allowed. It has to be global.<p />Program ref. <arg format="%s" ordinal="3" /></Description>
+    <Actions>Change the task list to PERS.</Actions>
+  </Message>
+  <Message number="1560" eDefine="SYS_ERR_ARL_EMERG_STOP">
+    <Title>No Start of Movement</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />It was not possible to start the movement.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Causes>1. There has been an emergency stop.<p />2. There was another error in the system.</Causes>
+    <Actions>1. Reset the emergency stop, if there has been one.<p />2. Check former error messages for reason.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1561" eDefine="SYS_ERR_ARL_MISSING_TEXT">
+    <Title>No Text in Function Key</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The instruction TPReadFK has no text in either of the function keys.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>When the instruction is executing there will be no button available to press.</Consequences>
+    <Actions>Put a text in at least one of the function keys TPFK1 .. TPFK5</Actions>
+  </Message>
+  <Message number="1562" eDefine="SYS_ERR_ARL_PROC_ERR_NOT_HANDLED">
+    <Title>Risk for faulty circular movement</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Risk for faulty circular movement because of:<p />1) An asynchronous process error has occurred and was not handled in any error handler<p />2) Program Pointer at circular instruction in combination with done MODPOS of any previous move instruction<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Consequences>The Program may not be started from the current position, because there is a risk that the robot might perform an unexpected movement.</Consequences>
+    <Causes>One of following:<p />1) The RAPID program is missing an error handler or the error handler does not handle this specific error<p />2) MODPOS operation done when not running in step or move step mode</Causes>
+    <Actions>One of following:<p />1) Edit the program<p />2) Move the program pointer to be able to start the program.</Actions>
+  </Message>
+  <Message number="1563" eDefine="SYS_ERR_ARL_WOBJ_MOVE_BY_ITSELF">
+    <Title>Argument Error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The Mechanical Unit <arg format="%s" ordinal="2" /> specified in the WObj for this MOVE<p />instruction is the same Mechanical Unit <arg format="%s" ordinal="3" /> as the robot<p />for this program task.<p />Program Ref. <arg format="%s" ordinal="4" /></Description>
+    <Consequences>It is not possible that the robot moves the work object itself.</Consequences>
+    <Actions>Edit the used wobjdata.</Actions>
+  </Message>
+  <Message number="1564" eDefine="SYS_ERR_ARL_ALLMOTIONTASKS">
+    <Title>Not allowed to run from a Motion Task</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The instructions StopMove, StartMove and StopMoveReset with the option parameter \AllMotionTasks are not allowed to run from a Motion task.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Causes>It is only allowed to do stop and restart of all movements in the system from<p />a supervision program task running as a read (or background) program task.</Causes>
+    <Actions>Remove the instruction.</Actions>
+  </Message>
+  <Message number="1565" eDefine="SYS_ERR_ARL_NOT_ALLOW_NUM_VAL">
+    <Title>Not allowed value</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Illegal value in argument <arg format="%s" ordinal="2" />.<p /><p />Program ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Check and change the value. It must be an integer between <arg format="%s" ordinal="4" /> and <arg format="%s" ordinal="5" />.</Actions>
+  </Message>
+  <Message number="1566" eDefine="SYS_ERR_ARL_LIM_SIG_BITS">
+    <Title>Signal exceeds max number of allowed bits</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The signal <arg format="%s" ordinal="2" /> is too big.<p /><p />Program ref. <arg format="%s" ordinal="3" /><p /></Description>
+    <Actions>Group signals consisting of 23 bits or less can be represented by the num data type, and group signals of 32 bits or less can be represented by the dnum data type, if they are used in a RAPID program</Actions>
+  </Message>
+  <Message number="1567" eDefine="SYS_ERR_ARL_DOBREAK">
+    <Title>Digital Output Break</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />A digital output interrupted the execution.<p />Program Ref. <arg format="%s" ordinal="2" /><p /><p /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1568" eDefine="SYS_ERR_ARL_NOT_BUS">
+    <Title>Specified name is not a bus</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The bus name <arg format="%s" ordinal="2" /> doesn't exist.<p />Program Ref.<arg format="%s" ordinal="3" /></Description>
+    <Causes>The unit name is misspelled or not defined.</Causes>
+    <Actions>Recovery: <arg format="%s" ordinal="4" /><p /></Actions>
+  </Message>
+  <Message number="1569" eDefine="SYS_ERR_ARL_SOCK_LISTEN_ISCONN">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The socket is already connected and cannot be used to listen for incoming connections.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Use another socket to listen for incoming connections.</Actions>
+  </Message>
+  <Message number="1570" eDefine="SYS_ERR_ARL_SOCK_ACCPT_NOLISTEN">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The socket cannot accept incoming connection requests since it is not set to listen state.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Causes>SocketAccept is used before SocketListen.</Causes>
+    <Actions>Set socket to listen for incoming connections before trying to accept.<p /></Actions>
+  </Message>
+  <Message number="1571" eDefine="SYS_ERR_ARL_SOCK_ADDR_INUSE">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The address and port is already in use and cannot be used by this socket.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Recovery: <arg format="%s" ordinal="3" /><p /></Actions>
+  </Message>
+  <Message number="1572" eDefine="SYS_ERR_ARL_SOCK_CREATE_UNEXPT">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unexpected error creating socket.<p />Check log for further messages of possible cause.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Move program pointer to main and restart program.</Actions>
+  </Message>
+  <Message number="1573" eDefine="SYS_ERR_ARL_SOCK_CREATE_TOOMANY">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />No more sockets can be created. The maximum number of concurrent sockets is 32.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Close one or more sockets, to allow a new socket to be created.</Actions>
+  </Message>
+  <Message number="1574" eDefine="SYS_ERR_ARL_SOCK_NOTCREATED">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The socket must be created before it can be used in any socket instruction.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Causes>The reason for this error is one of the following:<p />1) Socket not created at all.<p />2) PP movements has been done.<p />3) Start of program after power fail.<p />4) The socket has been closed after SocketCreate.</Causes>
+    <Actions>Insert an SocketCreate instruction at a suitable place in the program before the socket is used.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1575" eDefine="SYS_ERR_ARL_SOCK_ADDR_INVALID">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The specified address is invalid. The only valid addresses are the LAN address of the controller or the service port address, 192.168.125.1.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Specify the LAN address or the service port address.</Actions>
+  </Message>
+  <Message number="1576" eDefine="SYS_ERR_ARL_SOCK_PORT_INVALID">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The specified port is invalid.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>It is recommended that a port number in the range 1025-4999 is used.</Actions>
+  </Message>
+  <Message number="1577" eDefine="SYS_ERR_ARL_SOCK_TIMEOUT_ZERO">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The timeout specified in the instruction is too low. The timeout is specified in seconds and must not be zero.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Use a timeout value greater than zero.</Actions>
+  </Message>
+  <Message number="1578" eDefine="SYS_ERR_ARL_SOCK_CONN_UNEXPT">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Unexpected error when connecting socket.<p />Check event log for other messages for possible cause.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Move program pointer to Main and restart program.</Actions>
+  </Message>
+  <Message number="1579" eDefine="SYS_ERR_ARL_SOCK_CONN_REFUSE">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The connection was refused by the remote host.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+  </Message>
+  <Message number="1580" eDefine="SYS_ERR_ARL_SOCK_CONN_ALREADY">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The socket is already connected and cannot be connected again.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Causes>SocketConnect has already been executed for the specified socket. </Causes>
+    <Actions>Close the socket and recreate before connecting.<p /></Actions>
+  </Message>
+  <Message number="1581" eDefine="SYS_ERR_ARL_SOCK_TIMEOUT">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The instruction was not finished within the timeout period.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Use a higher timeout value or use an error handler to retry the instruction.<p />Recovery: <arg format="%s" ordinal="3" /></Actions>
+  </Message>
+  <Message number="1582" eDefine="SYS_ERR_ARL_SOCK_DATAEMPTY">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Empty data was specified to be sent or as storage in receive.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Use a string, rawbyte or byte array with size greater than zero.</Actions>
+  </Message>
+  <Message number="1583" eDefine="SYS_ERR_ARL_SOCK_DATATOOBIG">
+    <Title>Socket error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The specified data is too big.<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>A socket can handle at most 1024 bytes in one instruction.</Actions>
+  </Message>
+</Domain>

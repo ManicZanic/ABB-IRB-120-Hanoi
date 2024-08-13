@@ -1,0 +1,580 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="OPR" domainNo="1" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="175" max="1229">
+  <Message number="175" eDefine="SYS_ERR_OPR_BGRND_REFSTART_SYNTAX">
+    <Title>Background task <arg format="%s" ordinal="1" /></Title>
+    <Description>refuse to start due to a syntax error.</Description>
+    <Actions />
+  </Message>
+  <Message number="176" eDefine="SYS_ERR_OPR_BGRND_REFSTART_UNDEF">
+    <Title>Background task <arg format="%s" ordinal="1" /></Title>
+    <Description>refuse to start. Can't load module.</Description>
+    <Causes>The module file is missing in the target directory.</Causes>
+    <Actions>1. Copy the module file to the target directory.<p />2. Perform an I-start.</Actions>
+  </Message>
+  <Message number="177" eDefine="SYS_ERR_OPR_BGRND_REFSTART_NOMEM">
+    <Title>Task refuses to start</Title>
+    <Description>Task <arg format="%s" ordinal="1" />:<p />There is not sufficient program memory or the program memory is fragmented. Modules could be missing or data may not have been installed.</Description>
+    <Actions>1. Unload/reload modules and warmstart.<p />2. Split large data structures.<p />3. P-start the system.<p />4. Increase stack size for task. </Actions>
+  </Message>
+  <Message number="178" eDefine="SYS_ERR_OPR_BGRND_STEP_NOT_ALLOWED">
+    <Title>A static/semistatic task can't be stepped</Title>
+    <Description>Task <arg format="%s" ordinal="1" /> can't be started.<p />A static/semistatic task can only run in continuous mode.</Description>
+    <Consequences>No tasks will be started.</Consequences>
+    <Causes>Trying to step (forward or backward) a static/semistatic task.</Causes>
+    <Actions>Start <arg format="%s" ordinal="1" /> in continuous mode.</Actions>
+  </Message>
+  <Message number="185" eDefine="SYS_ERR_OPR_PREP_TASK_NOMEM">
+    <Title>Task could not be prepared for start</Title>
+    <Description>Task <arg format="%s" ordinal="1" />:<p />There is not sufficient program memory or the program memory is fragmented. Modules could be missing or data may not have been installed.</Description>
+    <Actions>1. Unload/reload modules and warm start.<p />2. Split large data structures.<p />3. P-start the system.<p /></Actions>
+  </Message>
+  <Message number="190" eDefine="SYS_ERR_OPR_PROT_AREA_HEAL">
+    <Title>Protected area not done</Title>
+    <Description>A power fail did occur in the middle of a protected area for the task <arg format="%s" ordinal="2" />. The system is trying to selfheal. </Description>
+    <Actions />
+  </Message>
+  <Message number="191" eDefine="SYS_ERR_OPR_PROT_AREA_PEND_ERR">
+    <Title>Protected area not done</Title>
+    <Description>A power fail did occur in the middle of a protected area for the task <arg format="%s" ordinal="2" />. A pending error is removed from the queue.</Description>
+    <Actions />
+  </Message>
+  <Message number="192" eDefine="SYS_ERR_OPR_PROT_AREA_PEND_EXIT">
+    <Title>Protected area not done</Title>
+    <Description>A power fail did occur in the middle of a protected area for the task <arg format="%s" ordinal="2" />. A pending exit is removed from the queue. </Description>
+    <Actions />
+  </Message>
+  <Message number="193" eDefine="SYS_ERR_OPR_PROT_AREA_CYCLE">
+    <Title>Protected area not done</Title>
+    <Description>A power fail did occur in the middle of a protected area for the task <arg format="%s" ordinal="2" />. This may result in an extra program cycle. </Description>
+    <Actions />
+  </Message>
+  <Message number="194" eDefine="SYS_ERR_OPR_PROT_AREA_RESTART">
+    <Title>Protected area not done</Title>
+    <Description>A power fail did occur in the middle of a protected area for the task <arg format="%s" ordinal="2" />. The task will be restarted from the main routine. </Description>
+    <Actions />
+  </Message>
+  <Message number="195" eDefine="SYS_ERR_OPR_PROT_AREA_RESET">
+    <Title>Protected area not done</Title>
+    <Description>A power fail did occur in the middle of a protected area for the task <arg format="%s" ordinal="2" />. All tasks are reset and all user programs are lost. </Description>
+    <Actions>Try to save the user program and do a warm start of the system</Actions>
+  </Message>
+  <Message number="196" eDefine="SYS_ERR_OPR_PROT_AREA_UNDEF">
+    <Title>Protected area not done</Title>
+    <Description>A power fail did occur in the middle of a protected area for the task <arg format="%s" ordinal="2" />.</Description>
+    <Actions />
+  </Message>
+  <Message number="210" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_POW_ON">
+    <Title>Execution cancelled</Title>
+    <Description>The restart will clear the execution in task <arg format="%.16s" ordinal="2" /> of a POWER ON system event routine.</Description>
+    <Actions />
+  </Message>
+  <Message number="211" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_STOP">
+    <Title>Execution cancelled</Title>
+    <Description>The restart will clear the execution in task <arg format="%.16s" ordinal="2" /> of a STOP system event routine.</Description>
+    <Actions />
+  </Message>
+  <Message number="212" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_ESTOP">
+    <Title>Execution cancelled</Title>
+    <Description>The restart will clear the execution in task <arg format="%.16s" ordinal="2" /> of an EMERGENCY STOP system event routine.</Description>
+    <Actions />
+  </Message>
+  <Message number="213" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_START">
+    <Title>Execution cancelled</Title>
+    <Description>The restart will clear the execution in task <arg format="%.16s" ordinal="2" /> of a START system event routine.</Description>
+    <Actions />
+  </Message>
+  <Message number="214" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_RESTART">
+    <Title>Execution cancelled</Title>
+    <Description>The restart will clear the execution in task <arg format="%.16s" ordinal="2" /> of a RESTART system event routine.</Description>
+    <Actions />
+  </Message>
+  <Message number="215" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_RESET">
+    <Title>Execution cancelled</Title>
+    <Description>The restart will clear the execution in task <arg format="%.16s" ordinal="2" /> of a RESET system event routine.</Description>
+    <Actions />
+  </Message>
+  <Message number="216" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_INTERNAL">
+    <Title>Execution cancelled</Title>
+    <Description>The restart will clear the execution in task <arg format="%.16s" ordinal="2" /> of an INTERNAL system event routine.</Description>
+    <Actions />
+  </Message>
+  <Message number="217" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_USER">
+    <Title>Execution cancelled</Title>
+    <Description>The restart will clear the execution in task <arg format="%.16s" ordinal="2" /> of a USER routine.</Description>
+    <Actions />
+  </Message>
+  <Message number="218" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_UNDEF">
+    <Title>Execution cancelled</Title>
+    <Description>The restart will clear the execution in task <arg format="%.16s" ordinal="2" />.</Description>
+    <Actions />
+  </Message>
+  <Message number="219" eDefine="SYS_ERR_OPR_USR_ROUT_BRK_STEP">
+    <Title>Execution cancelled</Title>
+    <Description>	The restart will clear the execution in task <arg format="%.16s" ordinal="2" />of a STEP system event routine.</Description>
+    <Actions />
+  </Message>
+  <Message number="230" eDefine="SYS_ERR_OPR_BACKUP_STEP_PREP">
+    <Title>Backup step ready</Title>
+    <Description>The backup step Prepare is ready.</Description>
+    <Actions />
+  </Message>
+  <Message number="231" eDefine="SYS_ERR_OPR_BACKUP_STEP_CONF">
+    <Title>Backup step ready</Title>
+    <Description>The backup step Configuration is ready.</Description>
+    <Actions />
+  </Message>
+  <Message number="232" eDefine="SYS_ERR_OPR_BACKUP_STEP_TASK">
+    <Title>Backup step ready</Title>
+    <Description>The backup of Task is ready.</Description>
+    <Actions />
+  </Message>
+  <Message number="250" eDefine="SYS_ERR_OPR_RESTORE_STEP_PREP">
+    <Title>Restore step ready</Title>
+    <Description>The restore step Prepare is ready.</Description>
+    <Actions />
+  </Message>
+  <Message number="251" eDefine="SYS_ERR_OPR_RESTORE_STEP_CONF">
+    <Title>Restore step ready</Title>
+    <Description>The restore step Configuration is ready.</Description>
+    <Actions />
+  </Message>
+  <Message number="252" eDefine="SYS_ERR_OPR_RESTORE_STEP_TASK">
+    <Title>Restore step ready</Title>
+    <Description>The restore of Task is ready.</Description>
+    <Actions />
+  </Message>
+  <Message number="253" eDefine="SYS_ERR_OPR_RESTORE_STEP_USER_TASK">
+    <Title>Restore step ready</Title>
+    <Description>The restore of User Task is ready.</Description>
+    <Actions />
+  </Message>
+  <Message number="260" eDefine="SYS_ERR_OPR_PACKAGING_DIAG_INFO_OK">
+    <Title>System diagnostics info generated</Title>
+    <Description>System diagnostics information was successfully generated to file <arg format="%s" ordinal="1" /></Description>
+  </Message>
+  <Message number="261" eDefine="SYS_ERR_OPR_PACKAGING_DIAG_INFO_FAILED">
+    <Title>System diagnostics info unavailable</Title>
+    <Description>User requested to save diagnostics system information to file <arg format="%s" ordinal="1" />. System was unable to fulfill this request.</Description>
+    <Consequences>Diagnostics system information is normally used when reporting a problem with the system to ABB support.</Consequences>
+    <Causes>The system is in such state that it is not possible to generate the requested information.<p />Please check that the device has enough space left.</Causes>
+    <Actions>If you are experiencing a problem with the system contact ABB support.</Actions>
+  </Message>
+  <Message number="270" eDefine="SYS_ERR_OPR_CBC_INFO">
+    <Title>Cyclic Brake Check Done</Title>
+    <Description>The Cyclic Brake Check has been done for all brakes supervised by Safety Controllers.</Description>
+  </Message>
+  <Message number="271" eDefine="SYS_ERR_OPR_CBC_INFO_START">
+    <Title>Cyclic Brake Check Started</Title>
+    <Description>The Cyclic Brake Check has been started.</Description>
+  </Message>
+  <Message number="300" eDefine="SYS_ERR_OPR_PSTART_ORD_SYS">
+    <Title>A P-Start is ordered</Title>
+    <Description>The P-Start has been ordered from the system. </Description>
+    <Actions />
+  </Message>
+  <Message number="301" eDefine="SYS_ERR_OPR_PSTART_ORD_MAN">
+    <Title>A P-Start is ordered</Title>
+    <Description>The P-Start has been ordered manually or automatically during a configuration. </Description>
+    <Actions />
+  </Message>
+  <Message number="304" eDefine="SYS_ERR_OPR_UPDATE_READY">
+    <Title>An update has been ordered</Title>
+    <Description>An update of program configuration is done.</Description>
+    <Actions />
+  </Message>
+  <Message number="350" eDefine="SYS_ERR_OPR_REFRESH_FAILD">
+    <Title>Update of task failed</Title>
+    <Description>The system could not update task <arg format="%s" ordinal="1" /> to the new configuration. </Description>
+    <Actions />
+  </Message>
+  <Message number="351" eDefine="SYS_ERR_OPR_TASK_REMOVED">
+    <Title>A task is removed</Title>
+    <Description>The task <arg format="%s" ordinal="1" /> was removed because of configuration changes. </Description>
+    <Actions />
+  </Message>
+  <Message number="352" eDefine="SYS_ERR_OPR_TASK_ADDED">
+    <Title>A task is added</Title>
+    <Description>The task <arg format="%s" ordinal="1" /> was installed because of configuration changes. </Description>
+    <Actions />
+  </Message>
+  <Message number="353" eDefine="SYS_ERR_OPR_TASK_REINSTALLED">
+    <Title>A task is reinstalled</Title>
+    <Description>The task <arg format="%s" ordinal="1" /> was reinstalled because of configuration changes. </Description>
+    <Actions />
+  </Message>
+  <Message number="354" eDefine="SYS_ERR_OPR_RESTORE_ERR_ABORT_IN_BSTART">
+    <Title>Restore aborted due to lost system data.</Title>
+    <Description>The system is using a backup of the system data, since the system data was not properly saved at last shutdown. Due to this, a previously ordered Restore from directory <arg format="%s" ordinal="1" /> was attempted again, but was aborted.<p /></Description>
+    <Consequences>No RAPID programs or modules will be loaded.</Consequences>
+    <Causes>The system data was not properly saved at last shutdown. </Causes>
+    <Actions>After recovering from the system data loss by a (B)ackup-Restart or system re-installation, please verify that the backup directory <arg format="%s" ordinal="2" /> is OK, and perform the Restore again.</Actions>
+  </Message>
+  <Message number="355" eDefine="SYS_ERR_OPR_RESTORE_ERR_TASK_UNK">
+    <Title>Restore error</Title>
+    <Description>Error during the restore of Task. Trying to load to unknown task, <arg format="%s" ordinal="1" />. </Description>
+    <Consequences>Loading has been aborted for <arg format="%s" ordinal="1" />.</Consequences>
+    <Causes>The current system doesn't have the same options as the one used to create the backup.</Causes>
+  </Message>
+  <Message number="400" eDefine="SYS_ERR_OPR_UAS_LOGON_USER">
+    <Title>User <arg format="%s" ordinal="1" /> logged on</Title>
+    <Description>User <arg format="%s" ordinal="1" /> logged on using <arg format="%s" ordinal="2" />.</Description>
+  </Message>
+  <Message number="401" eDefine="SYS_ERR_OPR_UAS_LOGOFF_USER">
+    <Title>User <arg format="%s" ordinal="1" /> logged off</Title>
+    <Description>User <arg format="%s" ordinal="1" /> using <arg format="%s" ordinal="2" /> logged off.</Description>
+  </Message>
+  <Message number="420" eDefine="SYS_ERR_OPR_UNSAFE_ROBOT_MOVEMENTS">
+    <Title>New unsafe robot path</Title>
+    <Description>The robot path has been cleared after a target has been modified in task <arg format="%s" ordinal="1" />. The robot will for that reason move towards the position pointed out by the move instruction at the program pointer. Move instructions between the modified target and the program pointer will be skipped.</Description>
+    <Consequences>The programmed speed is used for this movement.<p />The new untested path may contain obstacles that might cause a collision.</Consequences>
+    <Actions>Check your program pointer and move it if necessary.<p />Reduce the speed.</Actions>
+  </Message>
+  <Message number="421" eDefine="SYS_ERR_OPR_PLANNED_PATH_NOT_ABORTED">
+    <Title>Planned path not aborted</Title>
+    <Description>A target that may be part of the planned robot path has been modified. The new target position will be used the next time the instruction with the target is executed.</Description>
+    <Consequences>The current planned path is using the old target position.</Consequences>
+    <Actions>If the current planned path is unsafe, move the program pointer to abort it.</Actions>
+  </Message>
+  <Message number="1020" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_DEF">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Prepare. Unknown error.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1021" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_21">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Prepare. General error.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1022" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_22">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Prepare. The directory contains items that are to be created.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1023" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_23">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Prepare. The directory lacks at least one neccessary item.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1024" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_24">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Prepare. The directory does not exist.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1025" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_25">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Prepare. Directory cannot be created.</Description>
+    <Causes>
+        The path might be too long.<p />You may not have write access to the backup drive.<p />The drive might be full.<p />If it is a network drive you might have lost connection.
+    </Causes>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1026" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_26">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Prepare. Error whilst writing the backup.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1027" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_27">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Prepare. Error reading configuration parameters.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1028" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_28">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Prepare. Error writing configuration parameters.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1029" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_29">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Prepare. The structure is too deep.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1030" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_30">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Prepare. No more objects.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1031" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_31">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Prepare. The directory lacks at least one neccessary item.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1032" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_32">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Prepare. The system version doesn't match the backup.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1033" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_33">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Prepare. Error restoring configuration parameters. </Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1034" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_34">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Prepare. Error restoring configuration parameters.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1035" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_35">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Prepare. Mismatch between current system and the backup.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1036" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_36">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Prepare. Write error.</Description>
+    <Consequences>The backup will be incomplete.</Consequences>
+    <Causes>You may not have write access to the backup drive.<p />The drive might be full.<p />If it is a network drive you might have lost connection.</Causes>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1037" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_37">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Prepare. At least one modname is too long.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1038" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_38">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Prepare. Unknown task.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1039" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_39">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Prepare. Storage media full.</Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1040" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_40">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Prepare. Item not possible to delete. </Description>
+    <Actions>
+      <arg format="%s" ordinal="3" />
+    </Actions>
+  </Message>
+  <Message number="1041" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_41">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Prepare. Error while verifying the system.<p />system.xml isn't installed in the system</Description>
+    <Consequences>The backup is aborted.</Consequences>
+    <Causes>system.xml isn't installed in the system</Causes>
+    <Actions>Re-install the system.</Actions>
+  </Message>
+  <Message number="1042" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_42">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Prepare. Error while verifying the system.<p />system.xml isn't present in the SYSTEM directory.</Description>
+    <Consequences>The backup is aborted.</Consequences>
+    <Causes>system.xml isn't present in the SYSTEM directory.</Causes>
+    <Actions>Re-install the system.</Actions>
+  </Message>
+  <Message number="1043" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_43">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Prepare. Error while verifying the system.<p />linked_m.sys isn't present in the HOME directory.</Description>
+    <Consequences>The backup is aborted.</Consequences>
+    <Causes>linked_m.sys isn't present in the HOME directory.</Causes>
+    <Actions>Re-install the system.</Actions>
+  </Message>
+  <Message number="1044" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_44">
+    <Title>Backup error</Title>
+    <Description>Error while verifying the backup path.<p /></Description>
+    <Consequences>The backup is aborted.</Consequences>
+    <Causes>The backup path contains an invalid character.</Causes>
+    <Actions>Verify the backup path.</Actions>
+  </Message>
+  <Message number="1045" eDefine="SYS_ERR_OPR_BACKUP_ERR_PREP_45">
+    <Title>Backup error</Title>
+    <Description>Error while creating the backup directory due to missing access rights.</Description>
+    <Consequences>The backup is aborted.</Consequences>
+    <Causes>Missing access rights in the given backup path.</Causes>
+    <Actions>Verify the access rights.</Actions>
+  </Message>
+  <Message number="1120" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_DEF">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Configuration. Unknown error.</Description>
+    <Actions />
+  </Message>
+  <Message number="1121" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_21">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Configuration. General error.</Description>
+    <Actions />
+  </Message>
+  <Message number="1122" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_22">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Configuration. The directory contains items that are to be created.</Description>
+    <Actions />
+  </Message>
+  <Message number="1123" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_23">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Configuration. The directory lacks at least one neccessary item.</Description>
+    <Actions />
+  </Message>
+  <Message number="1124" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_24">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Configuration. The directory does not exist.</Description>
+    <Actions />
+  </Message>
+  <Message number="1125" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_25">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Configuration. Directory cannot be created.</Description>
+    <Actions />
+  </Message>
+  <Message number="1126" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_26">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Configuration. Error whilst writing the backup.</Description>
+    <Actions />
+  </Message>
+  <Message number="1127" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_27">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Configuration. Error reading configuration parameters.</Description>
+    <Actions />
+  </Message>
+  <Message number="1128" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_28">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Configuration. Error writing configuration parameters.</Description>
+    <Actions />
+  </Message>
+  <Message number="1129" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_29">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Configuration. The structure is too deep.</Description>
+    <Actions />
+  </Message>
+  <Message number="1130" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_30">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Configuration. No more objects.</Description>
+    <Actions />
+  </Message>
+  <Message number="1131" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_31">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Configuration. The directory lacks at least one neccessary item.</Description>
+    <Actions />
+  </Message>
+  <Message number="1132" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_32">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Configuration. The system version doesn't match the backup.</Description>
+    <Actions />
+  </Message>
+  <Message number="1133" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_33">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Configuration. Error restoring configuration parameters.</Description>
+    <Actions />
+  </Message>
+  <Message number="1134" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_34">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Configuration. Error restoring configuration parameters.</Description>
+    <Actions />
+  </Message>
+  <Message number="1135" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_35">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Configuration. Mismatch between current system and the backup.</Description>
+    <Actions />
+  </Message>
+  <Message number="1136" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_36">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Configuration. Write error.</Description>
+    <Actions />
+  </Message>
+  <Message number="1137" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_37">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Configuration. At least one modname is too long. </Description>
+    <Actions />
+  </Message>
+  <Message number="1138" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_38">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Configuration. Unknown task.</Description>
+    <Actions />
+  </Message>
+  <Message number="1139" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_39">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Configuration. Storage media full.</Description>
+    <Actions />
+  </Message>
+  <Message number="1140" eDefine="SYS_ERR_OPR_BACKUP_ERR_CFG_40">
+    <Title>Backup error</Title>
+    <Description>Error during the backup step Configuration. Item not possible to delete.</Description>
+    <Actions />
+  </Message>
+  <Message number="1220" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_DEF">
+    <Title>Backup error</Title>
+    <Description>Error during the backup of Task. Unknown error.</Description>
+    <Actions />
+  </Message>
+  <Message number="1221" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_21">
+    <Title>Backup error</Title>
+    <Description>Error during the backup of Task. General error.</Description>
+    <Actions />
+  </Message>
+  <Message number="1222" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_22">
+    <Title>Backup error</Title>
+    <Description>Error during the backup of Task. The directory contains items that are to be created.</Description>
+    <Actions />
+  </Message>
+  <Message number="1223" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_23">
+    <Title>Backup error</Title>
+    <Description>Error during the backup of Task. The directory lacks at least one neccessary item.</Description>
+    <Actions />
+  </Message>
+  <Message number="1224" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_24">
+    <Title>Backup error</Title>
+    <Description>Error during the backup of Task. The directory does not exist.</Description>
+    <Actions />
+  </Message>
+  <Message number="1225" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_25">
+    <Title>Backup error</Title>
+    <Description>Error during the backup of Task. Directory cannot be created.</Description>
+    <Actions />
+  </Message>
+  <Message number="1226" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_26">
+    <Title>Backup error</Title>
+    <Description>Error during the backup of Task. Error whilst writing the backup.</Description>
+    <Actions />
+  </Message>
+  <Message number="1227" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_27">
+    <Title>Backup error</Title>
+    <Description>Error during the backup of Task. Error reading configuration parameters.</Description>
+    <Actions />
+  </Message>
+  <Message number="1228" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_28">
+    <Title>Backup error</Title>
+    <Description>Error during the backup of Task. Error writing configuration parameters.</Description>
+    <Actions />
+  </Message>
+  <Message number="1229" eDefine="SYS_ERR_OPR_BACKUP_ERR_TASK_29">
+    <Title>Backup error</Title>
+    <Description>Error during the backup of Task. The structure is too deep.</Description>
+    <Actions />
+  </Message>
+</Domain>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="CFG" domainNo="12" lang="zh" elogTextVersion="1.0" min="1" max="12">
+  <Message number="1" eDefine="SYS_ERR_CFG_OUT_OF_MEM">
+    <Title>配置中内存溢出</Title>
+    <Description>配置数据库中没有足够的内存用于此操作。</Description>
+    <Consequences>将无法安装配置文件。</Consequences>
+    <Actions>1) 尝试使用选项: 加载配置文件时，<p />在加载前先删除现有参数。 这将会删除用于该域的所有先前的配置设置。<p />2) 增加配置数据库的大小。</Actions>
+  </Message>
+  <Message number="2" eDefine="SYS_ERR_CFG_WRITE_PROT">
+    <Title>无法保存实例</Title>
+    <Description>不允许改写文件 <arg format="%s" ordinal="2" /> 第 <arg format="%d" ordinal="1" /> 行中的实例。 <p /></Description>
+    <Consequences>实例可能带写保护，无法安装文件中的配置。</Consequences>
+    <Causes>- </Causes>
+    <Actions>不允许更改实例。</Actions>
+  </Message>
+  <Message number="3" eDefine="SYS_ERR_CFG_VERSION">
+    <Title>域版本错误或文件不正确</Title>
+    <Description>文件 <arg format="%s" ordinal="1" /> 的配置域版本错误。该软件针对版本 <arg format="%s" ordinal="2" />。 </Description>
+    <Consequences>将无法安装文件中的配置。</Consequences>
+    <Causes>- </Causes>
+    <Actions>1) 重新编辑配置文件，并更改配置域版本。</Actions>
+  </Message>
+  <Message number="4" eDefine="SYS_ERR_CFG_LINE_ERR">
+    <Title>行过长</Title>
+    <Description>文件 <arg format="%s" ordinal="2" /> 第 <arg format="%d" ordinal="1" /> 包含 <arg format="%s" ordinal="3" /> 个字符，超出允许的 <arg format="%d" ordinal="4" /> 个字符。 <p /></Description>
+    <Consequences>将无法安装文件中的配置。</Consequences>
+    <Causes>- </Causes>
+    <Actions>1) 重新编辑配置文件，并减少字符数，如将实例分割为数行。为此，可在除最后一行之外的每一行结尾处添加一个反斜线 "\"。</Actions>
+  </Message>
+  <Message number="5" eDefine="SYS_ERR_CFG_ATTR_ERR">
+    <Title>属性值超出允许范围</Title>
+    <Description>文件 <arg format="%s" ordinal="2" /> 第 <arg format="%d" ordinal="1" /> 行上的属性 <arg format="%s" ordinal="3" /> 超出允许范围。允许范围为 &lt; <arg format="%s" ordinal="4" />&gt; - &lt; <arg format="%s" ordinal="5" />&gt;。<p /></Description>
+    <Consequences>配置文件将不会安装。</Consequences>
+    <Causes>-</Causes>
+    <Actions>1) 重新编辑配置文件并更改属性值，以使其位于允许的范围内。</Actions>
+  </Message>
+  <Message number="6" eDefine="SYS_ERR_CFG_DUB_NAME">
+    <Title>实例名称已占用</Title>
+    <Description>文件 <arg format="%s" ordinal="2" /> 的第 <arg format="%d" ordinal="1" /> 行的实例已占用。</Description>
+    <Consequences>将无法安装文件中的配置。</Consequences>
+    <Causes>-</Causes>
+    <Actions>1) 重新编辑配置文件并更改实例名称，将其添加至文件，或者<p />2) 使用“替换”模式改写以前使用该名称的实例。可以在使用 RobotStudio 加载配置文件时选择该模式，有关程序在“RobotStudio 手册”中提供了详细叙述。</Actions>
+  </Message>
+  <Message number="7" eDefine="SYS_ERR_CFG_ILLEGAL_ELEMENT">
+    <Title>配置文件中存在未知类型或属性</Title>
+    <Description>文件 <arg format="%s" ordinal="3" /> 第 <arg format="%d" ordinal="2" /> 行位置 <arg format="%d" ordinal="1" /> 上的类型/属性无法识别。</Description>
+    <Consequences>将无法安装文件中的配置。</Consequences>
+    <Causes>配置类型未安装，存在非法/错误输入的属性，或者名称过长。</Causes>
+    <Actions>1) 重新编辑配置文件。</Actions>
+  </Message>
+  <Message number="8" eDefine="SYS_ERR_CFG_MISSING_ATTR">
+    <Title>配置文件中的强制属性丢失</Title>
+    <Description>文件 <arg format="%s" ordinal="3" /> 第 <arg format="%d" ordinal="2" /> 行缺少强制属性 <arg format="%s" ordinal="3" /></Description>
+    <Consequences>将无法安装文件中的配置。</Consequences>
+    <Causes>强制属性丢失/输入错误。</Causes>
+    <Actions>1) 重新编辑配置文件。</Actions>
+  </Message>
+  <Message number="9" eDefine="SYS_ERR_CFG_NO_NAME">
+    <Title>配置文件中实例名称丢失</Title>
+    <Description>文件 <arg format="%s" ordinal="2" /> 第 <arg format="%d" ordinal="1" /> 行缺少实例名称。 </Description>
+    <Consequences>将无法安装文件中的配置。</Consequences>
+    <Causes>- </Causes>
+    <Actions>1) 重新编辑配置文件。</Actions>
+  </Message>
+  <Message number="10" eDefine="SYS_ERR_CFG_STRING_ERR">
+    <Title>配置属性值超出允许范围</Title>
+    <Description>文件 <arg format="%s" ordinal="2" /> 第 <arg format="%d" ordinal="1" /> 行的配置属性 <arg format="%s" ordinal="3" /> 超出允许范围。最大允许长度为 <arg format="%s" ordinal="4" /> 字符。</Description>
+    <Consequences>将无法安装文件中的配置。</Consequences>
+    <Causes>- </Causes>
+    <Actions>1) 重新编辑配置文件并更改属性值，使其在允许范围内。</Actions>
+  </Message>
+  <Message number="11" eDefine="SYS_ERR_CFG_VERSION_STRING">
+    <Title>非法版本字串</Title>
+    <Description>配置文件 <arg format="%s" ordinal="1" /> 中的版本字串含有非法格式。</Description>
+    <Consequences>将无法安装文件中的配置。</Consequences>
+    <Causes>该配置文件针对不同系统版本/修订版建立。<p />配置文件中的版本字串输入错误/丢失。<p />配置文件已损坏。</Causes>
+    <Actions>1) 重新编辑配置文件，并根据以下布局更改版本字串：<p /> "domain":"cfg domain version":"version":"revision"::。</Actions>
+  </Message>
+  <Message number="12" eDefine="SYS_ERR_CFG_DOMAIN_ERR">
+    <Title>非法域名</Title>
+    <Description>配置文件 <arg format="%s" ordinal="1" /> 中的域名是非法的。</Description>
+    <Consequences>将无法安装文件中的配置。</Consequences>
+    <Causes>域名可能输入错误或未在系统中安装域。<p /></Causes>
+    <Actions>1) 重新编辑配置文件并更改域名。</Actions>
+  </Message>
+</Domain>

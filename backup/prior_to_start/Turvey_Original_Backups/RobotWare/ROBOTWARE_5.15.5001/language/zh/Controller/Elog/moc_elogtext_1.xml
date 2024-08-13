@@ -1,0 +1,400 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="MOC" domainNo="5" lang="zh" elogTextVersion="1.0" min="21" max="183">
+  <Message number="21" eDefine="SYS_ERR_MOC_POS_SUPERVISION">
+    <Title>接点位置错误</Title>
+    <Description>接点 <arg format="%s" ordinal="1" /> 的实际位置距离指令位置太远。<p /></Description>
+    <Actions>检查调节参数、外力或硬件。</Actions>
+  </Message>
+  <Message number="22" eDefine="SYS_ERR_MOC_RECTIFIED_MAINS_MISSING">
+    <Title>DC-link 电压太低</Title>
+    <Description>驱动单元无法检测到 DC- link  电压或电压太低。<p /><p />如果 DC -link 短接条未正确插入或主电源接触器未正确合上时可能出现上述情况。</Description>
+    <Actions>检查DC-link 短接条是否正确插入驱动单元和整流器之间。<p /><p />检查接触器上的电机是否关闭，以及连接至整流器的一端是否有电压。</Actions>
+  </Message>
+  <Message number="24" eDefine="SYS_ERR_MOC_SEGMENT_EXPECTED">
+    <Title>转角路径故障
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />由于以下原因，转角路径作为停止点执行：<p />- 延时。<p />- 编程点太近<p />- 系统要求较高的 CPU 负载。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>- 减少连续移动指令之间的指令数量。<p />- 降低速度，使用间距更大的点，使用 /CONC 选项。<p />- 增加 ipol_prefetch_time。
+</Actions>
+  </Message>
+  <Message number="25" eDefine="SYS_ERR_MOC_ROBOT_MOVED">
+    <Title>重新启动已中断</Title>
+    <Description>当前位置距离路径太远。<p /></Description>
+    <Actions>通过返回重新启动。</Actions>
+  </Message>
+  <Message number="26" eDefine="SYS_ERR_MOC_SINGULARITY">
+    <Title>靠近奇点</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /> 机器人离奇点太近。<p /> 程序引用 <arg format="%s" ordinal="2" /><p />（内部代码： <arg format="%d" ordinal="3" />） <p /></Description>
+    <Actions>修改路径，使其远离奇点或更改至接点插补。</Actions>
+  </Message>
+  <Message number="27" eDefine="SYS_ERR_MOC_WORK_AREA_AXIS">
+    <Title>关节超出范围</Title>
+    <Description>
+      <arg format="%s" ordinal="2" /> 关节 <arg format="%s" ordinal="1" /> 的位置超出工作范围。<p /></Description>
+    <Actions>使用操纵杆将关节移动至其工作范围之内。</Actions>
+  </Message>
+  <Message number="28" eDefine="SYS_ERR_MOC_JOG_DIRECTION_AXIS">
+    <Title>微动控制方向错误</Title>
+    <Description>
+      <arg format="%s" ordinal="2" />
+      <arg format="%s" ordinal="1" /> 的位置超出工作范围。<p /></Description>
+    <Actions>使用操纵杆以反方向移动关节。</Actions>
+  </Message>
+  <Message number="31" eDefine="SYS_ERR_MOC_CONFIG_STATE_ERROR">
+    <Title>不允许该命令</Title>
+    <Description>在电机上电（MOTORS ON）状态时，无法更改系统参数。<p /></Description>
+    <Actions>更改为电机下电（MOTORS OFF）状态。</Actions>
+  </Message>
+  <Message number="32" eDefine="SYS_ERR_MOC_CALIBRATE_STATE_ERROR">
+    <Title>不允许该命令</Title>
+    <Description>在电机上电（MOTORS ON）状态尝试校准。<p /></Description>
+    <Actions>更改为电机下电（MOTORS OFF）状态。</Actions>
+  </Message>
+  <Message number="33" eDefine="SYS_ERR_MOC_COMMUTATE_STATE_ERROR">
+    <Title>不允许该命令</Title>
+    <Description>在电机上电（MOTORS ON）状态尝试换向。<p /></Description>
+    <Actions>更改为电机下电（MOTORS OFF）状态。</Actions>
+  </Message>
+  <Message number="35" eDefine="SYS_ERR_MOC_SYNCHRONIZE_STATE_ERROR">
+    <Title>不允许该命令</Title>
+    <Description>在电机上电（MOTORS ON）状态尝试同步。<p /></Description>
+    <Actions>更改为电机下电（MOTORS OFF）状态。</Actions>
+  </Message>
+  <Message number="36" eDefine="SYS_ERR_MOC_NO_RECOVER">
+    <Title>无法更正恢复</Title>
+    <Description>转角区域有太多的密集点而出现停止。重新启动时，机器人将会移至程序中前方较远的点。<p /></Description>
+    <Actions>减少密集点的数量，增加彼此间的距离或减速。</Actions>
+  </Message>
+  <Message number="37" eDefine="SYS_ERR_MOC_RUN_ON_IGNORED">
+    <Title>电机上电 (MOTORS ON) 指令被忽略</Title>
+    <Description>由于前一次停止尚未确认，电机上电 (MOTORS ON) 指令被忽略。<p /></Description>
+    <Actions>再次下达开机上电 (MOTORS ON) 指令。</Actions>
+  </Message>
+  <Message number="41" eDefine="SYS_ERR_MOC_DECBUF_INTERPOLATE">
+    <Title>机器人在奇异点上</Title>
+    <Description>机器人太靠近奇异点。<p /></Description>
+    <Actions>执行程序时使用 SingArea 指令或关节插补。<p />微动控制时，使用单轴运动。</Actions>
+  </Message>
+  <Message number="42" eDefine="SYS_ERR_MOC_DECBUF_RECOMPUTE">
+    <Title>无法创建路径</Title>
+    <Description>无法创建该路径。</Description>
+    <Actions>- 增加两个临近点之间的距离。<p />- 减小速度。<p />- 更改加速度。</Actions>
+  </Message>
+  <Message number="50" eDefine="SYS_ERR_MOC_POSE_OUTSIDE_REACH">
+    <Title>位置超出范围</Title>
+    <Description>
+      <arg format="%s" ordinal="2" /> 关节 <arg format="%s" ordinal="1" /> 的位置位于工作区域以外。<p /><p />关节 1-6：导致错误的轴的编号。<p />关节 23：轴 2 和轴 3 的组合导致该错误。</Description>
+    <Causes>原因可能是 ConfL_Off 正被使用，或者移动幅度过大，超过距离轴的 90 度。</Causes>
+    <Actions>- 检查工件或工作范围。<p />- 在关节坐标系内移动关节。<p />- 检查动作配置参数。<p />- 在远距离移动路径上插入中间点。</Actions>
+  </Message>
+  <Message number="52" eDefine="SYS_ERR_MOC_SPEED_SUPERVISION">
+    <Title>关节速度错误 </Title>
+    <Description>由于系统错误或冲突，关节 <arg format="%s" ordinal="1" /> 的速度相对于指定速度是错误的。<p /></Description>
+    <Actions>- 检查关节和硬件的调节参数和外力。<p />- 降低编程速度。 </Actions>
+  </Message>
+  <Message number="53" eDefine="SYS_ERR_MOC_COUNTER_SUPERVISION">
+    <Title>转数计数器的差异过大</Title>
+    <Description>接点 <arg format="%s" ordinal="1" />的转数计数器差异过大。系统检测到串行测量电路板上的转数计数器实际值与系统预期值相差过大。</Description>
+    <Consequences>机器人未校准，并可以手动微动控制，但无法执行自动操作。</Consequences>
+    <Causes>可能是电源关闭时手动更改了机器人手臂的位置。另外也可能是串行测量电路板、分解器或电缆故障。</Causes>
+    <Actions>1) 更新转数计数器。<p />2) 检查分解器和电缆。<p />3) 检查串行测量电路板，判定其是否存在故障。更换有故障的单元。</Actions>
+  </Message>
+  <Message number="55" eDefine="SYS_ERR_MOC_LOAD_SUPERVISION">
+    <Title>关节负荷过高</Title>
+    <Description>关节 <arg format="%s" ordinal="1" /> 的实际转矩过高。可能原因为负荷数据错误、加速度过高、外部过程力度过大、低温或硬件故障。<p /></Description>
+    <Actions>-检查负荷数据。<p />-降低加速度或速度。<p />-检查硬件。</Actions>
+  </Message>
+  <Message number="56" eDefine="SYS_ERR_MOC_JAM_SUPERVISION">
+    <Title>关节碰撞</Title>
+    <Description>低速或零速时，对关节 <arg format="%s" ordinal="1" /> 施加的实际转矩大于指令要求的值。这可能是由于卡塞错误（臂被卡住）或硬件错误引起的。<p /></Description>
+    <Actions>检查臂是否被卡住。<p />检查硬件。<p />检查是否有其他硬件事件日志。</Actions>
+  </Message>
+  <Message number="57" eDefine="SYS_ERR_MOC_POWER_UP_POSITION_ERROR">
+    <Title>关节未同步</Title>
+    <Description>断电/掉电后关节 <arg format="%s" ordinal="1" /> 的位置距离断电/掉电前的位置太远。<p /></Description>
+    <Actions>重新更新转数计数器。</Actions>
+  </Message>
+  <Message number="58" eDefine="SYS_ERR_MOC_WEAVE_POSE_DEFINITION">
+    <Title>工具坐标系错误</Title>
+    <Description>工具坐标系的 Z 轴几乎与路径方向平行。<p /></Description>
+    <Actions>更改工具坐标系，使 Z 轴与路径方向之间至少保留 3 度的偏差。</Actions>
+  </Message>
+  <Message number="60" eDefine="SYS_ERR_MOC_TARGET_OBJ_TO_MI">
+    <Title>工具不正确</Title>
+    <Description>固定工具的定义无效。<p /></Description>
+    <Actions>检查工具和对象数据。</Actions>
+  </Message>
+  <Message number="63" eDefine="SYS_ERR_MOC_CIRCLE_COLLAPSED">
+    <Title>不确定的圆</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />点放错位置，原因 <arg format="%d" ordinal="3" />:<p />1 终点太靠近起点。<p />2 圆点离起点过近。<p />3 圆点离终点过近。<p />4 不确定的重定向。<p />5 圆过大 &gt; 240 度。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>先检查圆点和运动指令的端点。可通过手动方式将圆分段来验证圆点。</Actions>
+  </Message>
+  <Message number="65" eDefine="SYS_ERR_MOC_TRANSFORM_ERROR">
+    <Title>运动误差</Title>
+    <Description>运动的终点超出机器人的可达范围，或者太靠近奇异点。机器人 <arg format="%s" ordinal="1" />。<p /></Description>
+    <Actions>更改终点位置。</Actions>
+  </Message>
+  <Message number="66" eDefine="SYS_ERR_MOC_ROBOT_NOT_ACTIVE">
+    <Title>机器人未活动</Title>
+    <Description>尝试调整动作，或计算未启动机器人 <arg format="%s" ordinal="1" />的位置。<p /></Description>
+    <Actions>先后通过动作单元键、微动控制窗口或程序启动机器人。检查工件和程序。</Actions>
+  </Message>
+  <Message number="67" eDefine="SYS_ERR_MOC_SINGLE_NOT_ACTIVE">
+    <Title>单元未激活</Title>
+    <Description>尝试调整动作，或计算未启动单一单元 <arg format="%s" ordinal="1" />的位置。<p /></Description>
+    <Actions>先后通过动作单元键、微动控制窗口或程序启动单元。检查工件和程序。</Actions>
+  </Message>
+  <Message number="76" eDefine="SYS_ERR_MOC_QUATERNION_UNNORMALIZED">
+    <Title>姿态不正确</Title>
+    <Description>未正确定义姿态。<p /></Description>
+    <Actions>精确计算姿态的四元元素。</Actions>
+  </Message>
+  <Message number="78" eDefine="SYS_ERR_MOC_NO_EVENT_OBJECT">
+    <Title>密集位置过多</Title>
+    <Description>连续密集位置过多。<p /></Description>
+    <Actions>增加连续密集位置之间的距离。</Actions>
+  </Message>
+  <Message number="79" eDefine="SYS_ERR_MOC_WRIST_WEAVE_DEFINITION">
+    <Title>无法使用手腕摆动</Title>
+    <Description>无法使用手腕摆动。<p /></Description>
+    <Actions>使用较小的摆幅或较大的 TCP。</Actions>
+  </Message>
+  <Message number="80" eDefine="SYS_ERR_MOC_CONFIG_POSE_INCOMPATIBLE">
+    <Title>位置不兼容</Title>
+    <Description>按指定的机器人配置无法到达目标位置。机器人 <arg format="%s" ordinal="1" />。<p /></Description>
+    <Actions>修改程序中的机器人位置。</Actions>
+  </Message>
+  <Message number="82" eDefine="SYS_ERR_MOC_SERVO_TASK_UNDERRUN">
+    <Title>减速限值</Title>
+    <Description>在动作路径文件 <arg format="%s" ordinal="1" /> 中运行的机械单元的路径计算超出了内部限制。动作任务未在其时限内执行。</Description>
+    <Causes>CPU 载荷过高。例如，可能由过于频繁的 EIO 通信造成。</Causes>
+    <Actions>1. 为受影响的动作路径文件设置参数 High Interpolation Priority（高补插优先级）。<p />2. 通过下面一个或多个操作减少 CPU 载荷：<p />- 降低速度<p />- 更改 AccSet<p />- 避免奇点 (SingArea\Wrist)。<p />- 使用系统参数或者通过对关键移动使用 RAPID 指令 PathResol，增加受影响的动作路径文件的路径解析度。</Actions>
+  </Message>
+  <Message number="83" eDefine="SYS_ERR_MOC_DECBUF_SPEED_REDUCTION">
+    <Title>系统减速。</Title>
+    <Description>由于动态限制，系统已减低速度。<p /></Description>
+    <Actions>减低速度，和/或高速时不使用密集位置，和/或提高加速度（如果低于 100%）。</Actions>
+  </Message>
+  <Message number="85" eDefine="SYS_ERR_MOC_USER_FRAME_ERROR">
+    <Title>用户坐标系过多。</Title>
+    <Description>为机械单元 <arg format="%s" ordinal="1" /> 定义了一个以上的用户坐标系。<p /></Description>
+    <Actions>去除一个用户坐标系框或再定义一个机械单元。</Actions>
+  </Message>
+  <Message number="86" eDefine="SYS_ERR_MOC_JOINT_4_UNCERTAIN">
+    <Title>奇异点问题</Title>
+    <Description>相对于 <arg format="%s" ordinal="1" />关节 4 的数字解析度来说太靠近手腕奇异点。<p /></Description>
+    <Actions>更改终点位置，改变增量。</Actions>
+  </Message>
+  <Message number="87" eDefine="SYS_ERR_MOC_JOINT_6_UNCERTAIN">
+    <Title>奇异点问题</Title>
+    <Description>相对于 <arg format="%s" ordinal="1" />关节 6 的数字解析度来说太靠近手腕奇异点。<p /></Description>
+    <Actions>更改终点位置，改变增量。</Actions>
+  </Message>
+  <Message number="88" eDefine="SYS_ERR_MOC_NO_PATH">
+    <Title>无法重新启动</Title>
+    <Description>由于前一个错误，无法重新启动路径。<p /></Description>
+    <Actions>移动程序指针清除路径，然后开始新的移动。</Actions>
+  </Message>
+  <Message number="89" eDefine="SYS_ERR_MOC_WEAVE_WARNING">
+    <Title>摆动已更改
+</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />由于以下问题，未完成指令的摆动：<p />- 摆动频率太高<p />- 摆动方法的切换不允许，或者<p />- SingArea/手腕与手腕摆动被同时使用。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>提高摆动长度或持续时间。<p />请勿在手臂和手腕摆动间切换。<p />手腕摆动时使用 SingArea/关闭。
+</Actions>
+  </Message>
+  <Message number="91" eDefine="SYS_ERR_MOC_ACTIVATION">
+    <Title>无法重新启动。</Title>
+    <Description>无法再次重新启动。更改单元状态后无法重新启动程序。<p /></Description>
+    <Actions>移动程序指针开始新的移动。</Actions>
+  </Message>
+  <Message number="92" eDefine="SYS_ERR_MOC_DSP_REPLY_MESSAGE">
+    <Title>轴计算机响应</Title>
+    <Description>轴计算机的响应错误。<p /></Description>
+    <Actions>检查动作配置参数。<p />检查轴计算机的硬件。</Actions>
+  </Message>
+  <Message number="94" eDefine="SYS_ERR_MOC_SERVO_TUNE_CTRLMA">
+    <Title>无法使用 TuneServo</Title>
+    <Description>未对指定接点执行微调。<p /></Description>
+    <Actions>检验是否已选择能与 TuneServo 一起使用的参数和/或关节。</Actions>
+  </Message>
+  <Message number="96" eDefine="SYS_ERR_MOC_SERVO_TUNE_NOT_ALLOWED">
+    <Title>不允许 TuneServo</Title>
+    <Description>不允许对指定关节执行微调。<p /></Description>
+    <Actions>检验是否已选择能与 TuneServo 一起使用的参数和/或关节。</Actions>
+  </Message>
+  <Message number="132" eDefine="SYS_ERR_MOC_COMMUTATION_ERROR">
+    <Title>换向失败</Title>
+    <Description>关节 <arg format="%s" ordinal="1" />换向失败。<p /></Description>
+    <Actions>- 进行新的换向。<p />- 重新启动系统。</Actions>
+  </Message>
+  <Message number="133" eDefine="SYS_ERR_MOC_TEST_SIGNAL_ERROR">
+    <Title>测试信号错误。</Title>
+    <Description>机器人 <arg format="%s" ordinal="1" />无可用的测试信号。<p /></Description>
+    <Actions>检验是否定义了正确的测试信号。</Actions>
+  </Message>
+  <Message number="134" eDefine="SYS_ERR_MOC_SENSOR_CORRECTION_VECTOR_YZ">
+    <Title>矫正矢量警告</Title>
+    <Description>由于以前的错误，传感器矫正矢量计算失败。<p /></Description>
+  </Message>
+  <Message number="135" eDefine="SYS_ERR_MOC_SOFT_SERVO_CTRLMA">
+    <Title>无法使用 SoftAct。</Title>
+    <Description>无法启用软伺服。<p /></Description>
+    <Actions>检验是否已选择能与 SoftAct 一起使用的关节。</Actions>
+  </Message>
+  <Message number="138" eDefine="SYS_ERR_MOC_WORK_AREA_CP">
+    <Title>手臂检查点限值</Title>
+    <Description>机器人 <arg format="%s" ordinal="1" /> 已达到手臂检查点的限值。<p /></Description>
+    <Actions>使用控操纵将相关关节再次移动至其工作范围之内。</Actions>
+  </Message>
+  <Message number="139" eDefine="SYS_ERR_MOC_JOG_DIRECTION_CP">
+    <Title>手臂检查点限值</Title>
+    <Description>如果手臂检查点超出机器人 <arg format="%s" ordinal="1" />的工作范围时，则操纵的方向错误。<p /></Description>
+    <Actions>使用操纵杆以反方向移动关节。</Actions>
+  </Message>
+  <Message number="140" eDefine="SYS_ERR_MOC_DYNIRB_STAT_TORQUE_EXCEEDED">
+    <Title>有效载荷过大</Title>
+    <Description>有效载荷过重，超过关节 <arg format="%s" ordinal="1" />静态转矩的限值。</Description>
+    <Actions>检查并减少手臂和/或手腕处的有效载荷。减少关节工作范围，以降低重力导致的静态转矩。</Actions>
+  </Message>
+  <Message number="141" eDefine="SYS_ERR_MOC_DECBUF_STEP_TIME">
+    <Title>操纵或速度错误</Title>
+    <Description>出现以下问题之一：<p />-操纵错误<p />-高速错误<p />-机器人距离奇异点太近<p /></Description>
+    <Actions>-使用点动模式进行操纵<p />-降低编程速度</Actions>
+  </Message>
+  <Message number="142" eDefine="SYS_ERR_MOC_CONFIG_FAILED">
+    <Title>运动配置</Title>
+    <Description>机械臂配置失败。<p /><arg format="%s" ordinal="1" /><p /><arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>检查以下系统参数: Motion（运动）。 INT/EXT 参数之间是否存在不匹配，比如：加载的 MOC.cfg 不正确。 <p />使用正确的参数对系统执行 I-启动。</Actions>
+  </Message>
+  <Message number="143" eDefine="SYS_ERR_MOC_TARGET_BAD_MASTER_CNF">
+    <Title>机器人轴配置</Title>
+    <Description>实际配置与指令配置不同，及/或机器人轴的移动大于 90 度。机器人 <arg format="%s" ordinal="2" />，轴 <arg format="%s" ordinal="1" />。<p /></Description>
+    <Actions>使用 SingArea_Wrist、ConfL_Off，修改位置或插入中间点。<p /><p />不更正配置就无法继续以“自动”模式运行。若确实要移至该位置，则更改为“手动”模式并重复启动。</Actions>
+  </Message>
+  <Message number="144" eDefine="SYS_ERR_MOC_CALIB_BAD_DISPL_RESULT">
+    <Title>不确定的位移坐标</Title>
+    <Description>由于以下一个或多个原因，机器人 <arg format="%s" ordinal="1" />的位移坐标校准不确定：<p />- 错误的 TCP。<p />- 参照点不准确。<p />- 参照点分隔不好。<p /></Description>
+    <Actions>如果估计的错误不合理：<p />- 检验是否使用了正确的 TCP。<p />- 尝试 3 个以上的参照点。<p />- 将机器人定位至参照点时小心操作。</Actions>
+  </Message>
+  <Message number="145" eDefine="SYS_ERR_MOC_VALID_ROB_JOINTS_NOT_FOUND">
+    <Title>运动限制</Title>
+    <Description>机器人 <arg format="%s" ordinal="1" />存在运动限制，未发现解决办法。<p />- 区段过长。<p />- 位置靠近奇异点。<p />- 关节 1、2 或 3 超出范围。<p />- 位置超出可达范围。<p /></Description>
+    <Actions>- 插入一个中间点，以减少区段的长度。<p />- 使用 MoveAbsJ。<p />- 检查工作范围。</Actions>
+  </Message>
+  <Message number="147" eDefine="SYS_ERR_MOC_RE_CREATE_ERROR">
+    <Title>断电重新启动失败</Title>
+    <Description>重新创建失败的路径。<p /></Description>
+    <Actions>移动程序指针开始新的移动。</Actions>
+  </Message>
+  <Message number="153" eDefine="SYS_ERR_MOC_COMMAND_NOT_ALLOWED_IF_HOLD">
+    <Title>不允许该命令
+</Title>
+    <Description>任务： <arg format="%s" ordinal="3" /><p />由于机器人程序在挂起状态下执行，不允许使用指定的指令或命令。<p />（内部代码： <arg format="%d" ordinal="2" /><arg format="%s" ordinal="1" />）<p />程序引用： <arg format="%s" ordinal="4" /><p /></Description>
+    <Actions>发送命令前修改程序或停止程序执行。
+</Actions>
+  </Message>
+  <Message number="156" eDefine="SYS_ERR_MOC_INDEPENDENT_ERROR">
+    <Title>不是独立的关节</Title>
+    <Description>关节 <arg format="%s" ordinal="1" /> 未配置为独立关节。<p /></Description>
+    <Actions>修改程序，或者将关节配置为独立关节。</Actions>
+  </Message>
+  <Message number="157" eDefine="SYS_ERR_MOC_SENSOR_CORRECTION_VECTOR_X">
+    <Title>矫正矢量警告</Title>
+    <Description>由于以前的错误，传感器矫正矢量 X 计算失败。<p /></Description>
+  </Message>
+  <Message number="158" eDefine="SYS_ERR_MOC_MISSING_EXTPOS_IPM_PROCESS">
+    <Title>缺少传感器过程</Title>
+    <Description>初始化过程中缺少传感器过程。无法找到或初始化指定的传感器过程 <arg format="%s" ordinal="1" />。<p /></Description>
+    <Actions>检查动作和过程配置文件中的过程名。<p /></Actions>
+  </Message>
+  <Message number="159" eDefine="SYS_ERR_MOC_SINGLE_HAS_NO_IPM_PROCESS">
+    <Title>无外部过程</Title>
+    <Description>尝试调整动作，或计算不带外部过程的单一单元 <arg format="%s" ordinal="1" /> 的位置。<p /></Description>
+    <Actions>检查动作和过程配置文件中的过程名。</Actions>
+  </Message>
+  <Message number="160" eDefine="SYS_ERR_MOC_WORK_AREA_INDEPENDENT_AXIS">
+    <Title>无法到达位置</Title>
+    <Description>由于独立关节 <arg format="%s" ordinal="1" /> 的编程位置超出工作范围而无法到达。</Description>
+    <Actions>- 更改位置。<p />- 检查关节工作区域的限值。<p />- 检查使用的工件。</Actions>
+  </Message>
+  <Message number="162" eDefine="SYS_ERR_MOC_DECBUF_DYN_STEP_POS_ERROR">
+    <Title>内部位置错误</Title>
+    <Description>由内部数值限制导致的错误。<p /></Description>
+    <Actions>- 重置独立关节。<p />- 减少扩展的工作区域。<p />- 移除或分隔密集点。</Actions>
+  </Message>
+  <Message number="163" eDefine="SYS_ERR_MOC_EXTPOS_MAX_ADJUST_DELTA_OFFSET">
+    <Title>位置调整</Title>
+    <Description>外部位置调整幅度太大。TCP 速度、定位速度或外部位置速度超过允许的机器人性能。<p /></Description>
+    <Actions>- 降低编程的 TCP 和定位速度。<p />- 修改路径。<p />- 使 WaitWObj 更靠近同步。<p />以 AUTO（自动）模式运行。</Actions>
+  </Message>
+  <Message number="164" eDefine="SYS_ERR_MOC_INDEPENDENT_DEACTIVATION_ERROR">
+    <Title>无法禁用</Title>
+    <Description>在独立模式下无法禁用机械单元。<p /></Description>
+    <Actions>确保未使用独立模式，再次尝试禁用。</Actions>
+  </Message>
+  <Message number="167" eDefine="SYS_ERR_MOC_CONVEY_NEW_SYNC_SIGNAL">
+    <Title>警告：新同步</Title>
+    <Description>警告：传送带被激活以及程序运行时，接到一个新的目标同步信号。<p /></Description>
+  </Message>
+  <Message number="168" eDefine="SYS_ERR_MOC_CONVEY_NEW_SYNC_WHILE_TRACKING">
+    <Title>
+      <arg format="%s" ordinal="1" />新同步</Title>
+    <Description>传送带跟踪上一个目标时接到一个新的目标同步信号。无法同时跟踪两个目标。<p /></Description>
+    <Actions>降低传送带的速度。降低编程速度。</Actions>
+  </Message>
+  <Message number="171" eDefine="SYS_ERR_MOC_NO_RECOMPUTE_VERY_SMALL_STEP">
+    <Title>速度太慢</Title>
+    <Description>插补低速及较重附加轴的长区段，或者靠近奇点插补时出现数值问题。<p /></Description>
+    <Actions>以长插补时间分割区段 (path_resolution * 4 minutes)，或更改为接点插补，或将位置从奇点处移开。</Actions>
+  </Message>
+  <Message number="172" eDefine="SYS_ERR_MOC_MOVJ_NOT_ALLOWED_WITH_PRXPOS">
+    <Title>不允许 MoveJ</Title>
+    <Description>当工件与外部机械单元协动时，不允许使用 MoveJ。</Description>
+    <Actions>更改插补模式或工件。</Actions>
+  </Message>
+  <Message number="173" eDefine="SYS_ERR_MOC_USE_FINEP_WITH_TOOL_CHANGE">
+    <Title>需要静止点</Title>
+    <Description>如果工件与外部机械单元协动时，在更改工具或工件坐标系时请使用静止点。<p /></Description>
+    <Actions>创建一个静止点，然后更改工具。</Actions>
+  </Message>
+  <Message number="174" eDefine="SYS_ERR_MOC_CONVEY_WOBJECT_NOT_CONNECTED">
+    <Title>WObj 未连接</Title>
+    <Description>WObj 未连接至传送带 <arg format="%s" ordinal="1" />。机器人 TCP无法与工件协动。由于传送带节点出现时间同步故障，目标可能遗失。<p /></Description>
+    <Actions>检查丢失的 WaitWObj。<p />在结束协动之前检查是否发生 DropWObj。<p />检查时间同步故障，观察传送带节点状态。</Actions>
+  </Message>
+  <Message number="175" eDefine="SYS_ERR_MOC_CONVEY_CONVEYOR_MOVES">
+    <Title>传送带移动</Title>
+    <Description>在禁止模式下试图协动机器人 TCP 与传送带工件时，传送带 <arg format="%s" ordinal="1" /> 移动。<p /></Description>
+    <Actions>手动减速或自动模式下单步执行，以及传送带移动时无法与传送带协动。</Actions>
+  </Message>
+  <Message number="176" eDefine="SYS_ERR_MOC_CONVEY_NOT_ACTIVATED">
+    <Title>传送带未激活</Title>
+    <Description>试图协动机器人 TCP 与传送带工件时，传送带 <arg format="%s" ordinal="1" /> 未激活。<p /></Description>
+    <Actions>确保传送带机械单元处激活状态。在 DeactUnit 之前检查最后一个协动动作的静止点。</Actions>
+  </Message>
+  <Message number="177" eDefine="SYS_ERR_MOC_CONVEY_RESTART_CONVEYOR_MOVES">
+    <Title>无法重新启动</Title>
+    <Description>试图重新启动或按停止或单步执行程序之前，传送带 <arg format="%s" ordinal="1" /> 移动。<p /></Description>
+    <Actions>确保传送带保持静止。移动程序指针开始新的移动。</Actions>
+  </Message>
+  <Message number="178" eDefine="SYS_ERR_MOC_MICRO_SAMPLE_TORQUE_HIGH">
+    <Title>非最佳移动</Title>
+    <Description>需求的转矩过高。需要手动调整加速度或速度。<p /></Description>
+    <Actions>降低该移动的加速度 (AccSet 50 100)，然后再恢复 (AccSet 100 100)。通过搜索最大加速度 50-99 并减少速度来优化性能。</Actions>
+  </Message>
+  <Message number="181" eDefine="SYS_ERR_MOC_WORK_AREA_COUPLED_AXES">
+    <Title>超出耦合范围</Title>
+    <Description>关节 <arg format="%s" ordinal="1" /> 和 <arg format="%s" ordinal="2" /> 超出耦合工作范围。<p /></Description>
+    <Actions>使用操纵杆将关节移至耦合工作范围之内。</Actions>
+  </Message>
+  <Message number="182" eDefine="SYS_ERR_MOC_JOG_DIRECTION_COUPLED_AXES">
+    <Title>操纵方向错误</Title>
+    <Description>关节 <arg format="%s" ordinal="1" /> 和 <arg format="%s" ordinal="2" /> 超出耦合工作范围。<p /></Description>
+    <Actions>使用操纵杆将接点移至耦合工作范围之内。</Actions>
+  </Message>
+  <Message number="183" eDefine="SYS_ERR_MOC_WORK_AREA_WZONE">
+    <Title>机器人超出工作区域。</Title>
+    <Description>机器人到达 World Zone <arg format="%s" ordinal="1" />， <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>检查 World Zone 的原因。必要时使用操纵杆将机器人移出 World Zone。</Actions>
+  </Message>
+</Domain>

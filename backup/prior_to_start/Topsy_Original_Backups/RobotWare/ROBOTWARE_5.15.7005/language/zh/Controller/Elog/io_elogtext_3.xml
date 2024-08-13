@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="EIO" domainNo="7" lang="zh" elogTextVersion="1.0" min="1357" max="1450">
+  <Message number="1357" eDefine="SYS_EIO_UNT_DUPLICATE_ON_LOCAL_BUS">
+    <Title>I/O 总线 &lt;本地&gt; 上存在重复的 I/O 单元</Title>
+    <Description>I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />其它用户定义的 I/O 单元已连接至 I/O 总线 &lt;本地&gt;。<p /><p />I/O 总线 &lt;本地&gt; 仅可连接一个用户定义的 I/O 单元。.<p /><p />该 I/O 单元已被拒绝。</Description>
+    <Actions>纠正 I/O 配置。</Actions>
+  </Message>
+  <Message number="1358" eDefine="SYS_EIO_UNT_POOL_ERR">
+    <Title>电源故障恢复已满</Title>
+    <Description>I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 无法设置电源故障恢复。<p />电源故障表已满。</Description>
+    <Actions>从恢复列表中删除部分其它的 I/O 单元。</Actions>
+  </Message>
+  <Message number="1359" eDefine="SYS_EIO_MSP_OPT_NOT_INSTALLED">
+    <Title>未安装 Multiple Serial Ports 选项</Title>
+    <Description>系统试图为串行端口 &lt;<arg format="%s" ordinal="1" />&gt;定址，但未成功。</Description>
+    <Consequences>连接器及使用连接器的物理信道不可用。</Consequences>
+    <Causes>系统中未安装 Multiple Serial Ports 选项。</Causes>
+    <Actions>1. 如果需要选项：配置一个包含此选项的新系统，并安装系统。<p />2. 如果不需要选项：从配置中删除不受支持的通信信道。</Actions>
+  </Message>
+  <Message number="1361" eDefine="SYS_EIO_CRS_RES_NOT_DIG">
+    <Title>使用非数字合成信号交叉连接</Title>
+    <Description>I/O 配置无效。<p /><p />某个交叉连接的参数 &lt;合成 I/O 信号&gt; 引用非数字 I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt;。<p />仅数字 I/O 信号可以交叉连接。<p /><p />该交叉连接已被拒绝。</Description>
+    <Actions>删除交叉连接中的非数字 I/O 信号。</Actions>
+  </Message>
+  <Message number="1362" eDefine="SYS_EIO_SIG_INVALID_MAPPING">
+    <Title>映射到 I/O 单元数据区域之外的 I/O 信号</Title>
+    <Description>无法将 I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 的物理状态更改为 VALID。<p />原因是 I/O 信号已映射到位于其所分配 I/O 单元的数据区域之外的位。<p /><p />已配置至 I/O 单元 &lt;<arg format="%s" ordinal="2" />&gt; 的 I/O 信号。<p />I/O 信号已映射至位：&lt;<arg format="%s" ordinal="3" />&gt; <p />I/O 单元的输出数据区域大小为 <arg format="%d" ordinal="4" /> 位 <p />I/O 单元的输入数据区域大小为 <arg format="%d" ordinal="5" /> 位<p /></Description>
+    <Consequences>此 I/O 信号的物理状态仍然为 NOT VALID。</Consequences>
+    <Actions>1. 检查 I/O 信号的单元映射是否正确。<p />2. 检查 I/O 信号是否已分配至正确的 I/O 单元。<p />3. 检查单元类型上的系统参数“连接输入/输出”大小，在某些单元类型上可以增加这些参数。</Actions>
+  </Message>
+  <Message number="1363" eDefine="SYS_EIO_DN_SLAVE_INVALID">
+    <Title>从控配置无效</Title>
+    <Description>在主地址上配置的 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 不是有效的内部从控。<p /></Description>
+    <Actions>       1. 更改 I/O 单元上的地址。<p />2. 将单元上的单元类型更改为 DN_SLAVE。</Actions>
+  </Message>
+  <Message number="1364" eDefine="SYS_EIO_SIG_QUEUE_FULL">
+    <Title>I/O 队列过载</Title>
+    <Description>处理系统输入和输出 I/O 信号的 I/O 队列过载。</Description>
+    <Consequences>系统将进入“系统停止”状态。</Consequences>
+    <Causes>这是由于信号更改太频繁，或输入 I/O 信号或 I/O 信号间的交叉连接所产生的信号更改脉冲太大所引起的。</Causes>
+    <Actions>检查交叉连接。有关如何检查配置文件的详情请参阅《故障排除手册》。<p />2. 检查连接至系统的任何外部设备的输入 I/O 信号的频率。确保频率正常，并在必要时作出更改。<p />3. 如果 I/O 荷载特别重，但很正常，而且是必需的，尝试 RAPID 应用程序中的编程延迟能否解决问题。</Actions>
+  </Message>
+  <Message number="1365" eDefine="SYS_EIO_SIG_PRIO_QUEUE_FULL">
+    <Title>安全 I/O 队列过载</Title>
+    <Description>处理安全输入和输出 I/O 信号的安全 I/O 队列过载。</Description>
+    <Consequences>系统将进入“系统暂停”状态。</Consequences>
+    <Causes>这是由于安全 I/O 信号的信号更改太频繁。有时可能是由于外部设备的 I/O 信号中的接地连接不稳定。</Causes>
+    <Actions>       1. 重复安全输入 I/O 信号会导致系统停止。查看错误日志，了解是否有其它故障导致此情况。<p />2. 检查影响安全 I/O 信号的外部设备上所有信号的接地连接。<p />3. 检查连接至系统的任何外部设备的输入信号的频率。确保频率正常，并在必要时作出更改。
+    </Actions>
+  </Message>
+  <Message number="1366" eDefine="SYS_EIO_CRS_QUEUE_FULL">
+    <Title>交叉连接 I/O 队列过载</Title>
+    <Description>处理系统输入和输出 I/O 信号的交叉连接 I/O 队列过载。</Description>
+    <Consequences>系统将进入“系统停止”状态。</Consequences>
+    <Causes>这是由于信号更改太频繁，或者交叉连接中作为操作符的输入或输出 I/O 信号所产生的信号更改脉冲太大而引起的。</Causes>
+    <Actions>检查交叉连接。有关如何检查配置文件的详情请参阅《故障排除手册》。p/&gt;2. 检查在交叉连接中作为操作符的输入和输出 I/O 信号的频率。<p />3. 如果 I/O 荷载特别重，但很正常，而且是必需的，尝试 RAPID 应用程序中的编程延迟能否解决问题。</Actions>
+  </Message>
+  <Message number="1367" eDefine="SYS_EIO_UNT_NO_CONTACT">
+    <Title>与 I/O 单元之间没有通信</Title>
+    <Description>在启动过程中，未与 I/O 总线 <arg format="%s" ordinal="2" /> 上地址为 <arg format="%s" ordinal="3" /> 的 I/O 单元 <arg format="%s" ordinal="1" /> 建立通信。</Description>
+    <Consequences>无法访问该 I/O 单元或该 I/O 单元上的 I/O 信号，因为该单元当前未与控制器通信。</Consequences>
+    <Causes>I/O 单元未连接至系统，或已连接，但分配了错误的地址。</Causes>
+    <Actions>1. 确保所有 I/O 单元地址都与配置一致。<p />2. 确保所有地址都是唯一的，且未被多个 I/O 单元使用。<p />3. 更改地址和/或连接缺失的 I/O 单元。<p />4. 如果更改地址，I/O 单元的电源必须重新接通（“关闭”，然后“开启”），以确保地址已更改。 </Actions>
+  </Message>
+  <Message number="1368" eDefine="SYS_EIO_IBS_NO_OPT">
+    <Title>未安装 Interbus 选项</Title>
+    <Description>已安装一个 Interbus 主控/从控电路板，但尚未安装 Interbus 选项。</Description>
+    <Consequences>无法进行 Interbus 通信。如果未安装上述选项，配置 Interbus 时可能发生继发性错误。</Consequences>
+    <Causes>可能已尝试在未正确安装选项的情况下添加 Interbus 功能。</Causes>
+    <Actions>1. 如果需要 Interbus 选项：配置一个包含此选项的新系统，并安装系统。<p />2. 如果不需要 Interbus 选项：配置一个不包含此选项的新系统，并安装系统。</Actions>
+  </Message>
+  <Message number="1377" eDefine="SYS_EIO_DENGENSHA_BOARD_MISSING">
+    <Title>Dengensha 电路板故障</Title>
+    <Description>与 Dengensha PCI 电路板无接触。</Description>
+    <Consequences>Dengensha Spot Welding 将不可用。</Consequences>
+    <Causes>-Dengensha 电路板与 PCI 无接触。</Causes>
+    <Actions>1. 将 PCI 电路板安装到一个主机 PCI 插槽上。 <p />2. 请确认 PCI 卡是否处于运行状态。</Actions>
+  </Message>
+  <Message number="1378" eDefine="SYS_EIO_DENGENSHA_BOARD_NOT_RESPONDING">
+    <Title>访问 Dengensha PCI 电路板失败。</Title>
+    <Description>Dengensha PCI 电路板已停止响应。</Description>
+    <Consequences>Dengensha Spot Welding 将不可用。</Consequences>
+    <Causes>-电路板可能存在内部软件或硬件问题。</Causes>
+    <Actions>关闭电源并重试n</Actions>
+  </Message>
+  <Message number="1379" eDefine="SYS_EIO_SIO_CONNECTOR_UNKNOWN">
+    <Title>未知的通信物理信道连接器</Title>
+    <Description>物理信道的 &lt;<arg format="%s" ordinal="1" />&gt; 连接器 &lt;<arg format="%s" ordinal="2" />&gt; 未知。</Description>
+    <Consequences>物理信道不可用。</Consequences>
+    <Causes>-定义于物理信道配置中的连接器可能存在拼写错误或引用了不可用的连接器。<p />-连接器配置缺失。</Causes>
+    <Actions>1. 确保定义于物理信道配置中的连接器引用了可用的连接器。<p />2. 如果所使用的配置需要安装 Multiple Serial Ports 选项，确保已安装此选项。<p />3. 重新安装系统，确保系统配置文件完好无损。</Actions>
+  </Message>
+  <Message number="1380" eDefine="SYS_EIO_SIO_DRIVER_ALREADY_IN_USE">
+    <Title>通信连接器驱动程序已使用</Title>
+    <Description>连接器 &lt;<arg format="%s" ordinal="1" />&gt; 不能使用此驱动程序 &lt;<arg format="%s" ordinal="2" />&gt;。连接器 <arg format="%s" ordinal="3" /> 已使用此驱动程序。 </Description>
+    <Consequences>连接器及使用连接器的物理信道不可用。</Consequences>
+    <Causes>-出现配置文件可能出错。<p />-可能是加载了物理信道配置不正确的配置文件。</Causes>
+    <Actions>1. 确保物理连接器配置有效。<p />2. 重新安装系统，确保系统配置文件完好无损。</Actions>
+  </Message>
+  <Message number="1381" eDefine="SYS_EIO_SIO_CONNECTOR_ALREADY_IN_USE">
+    <Title>通信连接器已使用</Title>
+    <Description>物理信道 &lt;<arg format="%s" ordinal="1" />&gt; 无法使用连接器 &lt;<arg format="%s" ordinal="2" />&gt;.物理信道已使用此连接器 &lt;<arg format="%s" ordinal="3" />&gt;.</Description>
+    <Consequences>连接器及使用连接器的物理信道不可用。</Consequences>
+    <Causes>可能为配置中的同一连接器分配了若干物理信道。</Causes>
+    <Actions>确保每个连接器仅由一个物理信道使用。</Actions>
+  </Message>
+  <Message number="1382" eDefine="SYS_EIO_DN_WATCHDOG_TIMER">
+    <Title>已超过 DeviceNet 监控时间</Title>
+    <Description>系统还未从 DeviceNet 单元接收到任何反馈，且监控计时器已过期。 </Description>
+    <Consequences>DeviceNet 总线未运行，无法在 DeviceNet 总线 &lt;<arg format="%d" ordinal="1" />&gt; 上进行通信。系统进入“系统故障”状态。 有关该状态的详细含义请参阅《故障排除手册》IRC5 的说明。 <p /></Consequences>
+    <Causes>可能是 DeviceNet 总线的 I/O 负载过高，例如 RAPID 程序试图以超过 DeviceNet 总线可用带宽的速率设置 I/O 信号。</Causes>
+    <Actions>减小 DeviceNet 总线的 I/O 负载。</Actions>
+  </Message>
+  <Message number="1383" eDefine="SYS_EIO_UNT_NO_UNITS_ON_LOCAL_BUS">
+    <Title>用户定义的 I/O 单元无法连接至 I/O 总线 &lt;本地&gt;</Title>
+    <Description>I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />不能将用户定义的单元连接至 I/O 总线 &lt;本地&gt;。<p /><p />该 I/O 单元已被拒绝。</Description>
+    <Actions>纠正 I/O 配置。</Actions>
+  </Message>
+  <Message number="1385" eDefine="SYS_EIO_REQ_EXHAUSTED">
+    <Title>请求消息资源耗尽 </Title>
+    <Description>无法处理更多并发 I/O 请求。<p />超出了使用延时、脉冲或超时变元的并发 I/O 请求。</Description>
+    <Consequences>I/O 请求无法满足。</Consequences>
+    <Causes>含脉冲或延时变元的 I/O 指令过多。<p />含脉冲、延时或超时的过程指令过多。<p /><p /></Causes>
+    <Actions>1. 减少含脉冲或延时变元的并发 I/O 指令。<p />2. 减少使用脉冲、延时或超时变元的并发过程指令的数量。<p /></Actions>
+  </Message>
+  <Message number="1386" eDefine="SYS_EIO_DN_QUICK_CONN_NOT_SUPPORTED">
+    <Title>不支持 DeviceNet Quick Connect</Title>
+    <Description>单元类型 &lt;<arg format="%s" ordinal="1" />&gt; 不能作为 Quick Connect I/O 单元连接至 DeviceNet 总线。</Description>
+    <Consequences>此单元已被拒绝，依赖此单元的功能将无法工作。</Consequences>
+    <Causes>已连接单元的版本可能过新。</Causes>
+    <Actions>1. 用 Quick Connect 配置参数。<p />2. 用较旧版本替换 DeviceNet 主控/从控电路板。</Actions>
+  </Message>
+  <Message number="1389" eDefine="SYS_EIO_CFG_ERR_FOUND">
+    <Title>配置文件错误</Title>
+    <Description>加载配置数据时出错。<p />所有配置错误均记录在 cfg 事件日志中。</Description>
+    <Consequences>将无法安装文件中的配置。</Consequences>
+    <Actions>查看 cfg 事件日志中的错误。</Actions>
+  </Message>
+  <Message number="1390" eDefine="SYS_EIO_DN_BUSOFF_RECOVERED">
+    <Title>DeviceNet 总线已从总线关闭状态恢复</Title>
+    <Description>DeviceNet 总线 &lt;<arg format="%s" ordinal="1" />&gt; 已从总线关闭状态恢复。</Description>
+  </Message>
+  <Message number="1391" eDefine="SYS_EIO_CC_CFG_ERR">
+    <Title>系统信号配置</Title>
+    <Description>配置系统输入/输出信号时出错。<p /><p />系统 I/O 名称： <arg format="%s" ordinal="1" /></Description>
+    <Consequences>系统转入“系统故障”状态。</Consequences>
+    <Causes>配置系统输入/输出信号时发生的所有何错误都是致命错误，因此系统会转入“系统故障”状态。 </Causes>
+    <Actions>1. 检查系统信号连接到的单元的连接情况。<p />2. 检查 I/O 单元的配置。<p /><p /></Actions>
+  </Message>
+  <Message number="1392" eDefine="SYS_EIO_DN_STROBE_BUFFER_SIZE">
+    <Title>输出大小无效</Title>
+    <Description>在 DeviceNet I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 上，连接 1 输出大小 &lt;<arg format="%s" ordinal="2" />&gt; 与 I/O 单元不匹配。使用选通脉冲信号连接时，唯一有效的输出大小为 1 或 -1。</Description>
+    <Actions>1. 更改配置中的大小。<p />2. 检查模块。<p />3. 使用 DN_GENERIC 单元类型。</Actions>
+  </Message>
+  <Message number="1393" eDefine="SYS_EIO_DN_GENERIC_C1_ERR">
+    <Title>配置一般大小时发生错误</Title>
+    <Description>未能在 <arg format="%s" ordinal="2" /> DeviceNet I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 上配置一般 &lt;arg format="%s" ordinal="2"/&gt; 大小 (-1)。</Description>
+    <Causes>DeviceNet I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 无法与单元类型 DN_GENERIC 或一般 <arg format="%s" ordinal="2" /> 大小 (-1) 配置。</Causes>
+    <Actions>1. 以新的 <arg format="%s" ordinal="2" /> 大小更新当前单元类型配置。<p />2. 请勿使用 DN_GENERIC 单元类型。 <p /></Actions>
+  </Message>
+  <Message number="1394" eDefine="SYS_EIO_SIO_INVALID_CHANNEL">
+    <Title>无效物理通信信道</Title>
+    <Description>通信信道 <arg format="%s" ordinal="1" /> 超出范围。</Description>
+    <Consequences>通信信道 <arg format="%s" ordinal="1" /> 不可用。</Consequences>
+    <Causes>选项未安装，或通信信道 &lt;<arg format="%s" ordinal="1" />&gt; 超出范围。<p /></Causes>
+    <Actions>1. 检查连接器的最小和最大允许值<p />2. 检查所需选项。</Actions>
+  </Message>
+  <Message number="1395" eDefine="SYS_EIO_SIO_TRP_TYPE_UNKNOWN">
+    <Title>无传输协议</Title>
+    <Description> &lt;<arg format="%s" ordinal="1" />&gt; 信道 &lt;<arg format="%s" ordinal="2" />&gt; 的传输协议缺失</Description>
+    <Consequences>传输实例 &lt;<arg format="%s" ordinal="2" />&gt; 不可用</Consequences>
+    <Causes>放置传输协议的选项 &lt;<arg format="%s" ordinal="1" />&gt; 未安装，或协议名称错误</Causes>
+    <Actions>1. 安装缺失的选项<p />2. 更改传输协议名称。</Actions>
+  </Message>
+  <Message number="1396" eDefine="SYS_EIO_SIO_TRP_UNKNOWN">
+    <Title>无传输协议</Title>
+    <Description>传输协议 &lt;<arg format="%s" ordinal="2" />&gt; 缺失，或传输协议名称错误 &lt; <arg format="%s" ordinal="1" />&gt; </Description>
+    <Consequences>应用程序协议实例 &lt;<arg format="%s" ordinal="1" />&gt; 不可用</Consequences>
+    <Causes>放置传输协议的选项未安装，或应用程序名称错误</Causes>
+    <Actions>1. 安装选项<p />2. 更改配置的传输名称</Actions>
+  </Message>
+  <Message number="1397" eDefine="SYS_EIO_SIO_APP_TYPE_UNKNOWN">
+    <Title>无应用程序协议</Title>
+    <Description>应用程序协议 &lt;<arg format="%s" ordinal="1" />&gt; 缺失或名称错误</Description>
+    <Consequences>应用程序实例 &lt;<arg format="%s" ordinal="2" />&gt; 不可用</Consequences>
+    <Causes>放置应用程序协议的选项未安装，或协议名称错误</Causes>
+    <Actions>1. 安装选项<p />2. 更改应用程序协议的名称</Actions>
+  </Message>
+  <Message number="1398" eDefine="SYS_EIO_TRPBOSV24_TIMEOUT">
+    <Title>bosv24 处通信错误</Title>
+    <Description>串行线没有响应。</Description>
+    <Actions>检查设备或连接。</Actions>
+  </Message>
+  <Message number="1399" eDefine="SYS_EIO_TRPBOSV24_RX_FULL">
+    <Title>bosv24 处通信错误</Title>
+    <Description>无法传输收到的消息。</Description>
+    <Actions>检查通信流。</Actions>
+  </Message>
+  <Message number="1400" eDefine="SYS_EIO_TRPRTP1_BAD_FRAME">
+    <Title>bosv24 处通信错误</Title>
+    <Description>来自设备的响应包含无效的帧序列。</Description>
+    <Actions>检查串行线上是否有杂讯。</Actions>
+  </Message>
+  <Message number="1401" eDefine="SYS_EIO_AB_NO_FA_OPT">
+    <Title>没有 &lt;<arg format="%s" ordinal="1" />&gt; 现场总线适配器的选项</Title>
+    <Description>找到一个 &lt;<arg format="%s" ordinal="1" />&gt; 现场总线适配器，但是没有安装选项。
+  </Description>
+    <Consequences>     无法在 &lt;<arg format="%s" ordinal="1" />&gt; 现场总线适配器上进行通信。如果未安装上述选项，配置时可能发生继发性错误。</Consequences>
+    <Causes>可能已尝试在未正确安装选项的情况下添加 &lt;<arg format="%s" ordinal="1" />&gt; 现场总线适配器功能。</Causes>
+    <Actions>如果必需 &lt;<arg format="%s" ordinal="1" />&gt; 现场总线适配器：配置一个包含此选项的新系统，并安装系统。</Actions>
+  </Message>
+  <Message number="1402" eDefine="SYS_EIO_EN_DUPLICATED_IP_ADDRESS">
+    <Title>重复的 IP 地址</Title>
+    <Description>I/O 单元 &lt; <arg format="%s" ordinal="2" /> &gt; 的 IP 地址 &lt;<arg format="%s" ordinal="1" />&gt; 在以太网/IP 网络上重复。</Description>
+    <Actions>更改 IP 地址。</Actions>
+  </Message>
+  <Message number="1403" eDefine="SYS_EIO_DN_INTERVAL_ERR">
+    <Title>时间间隔无效</Title>
+    <Description>对于 DeviceNet 单元类型 &lt;<arg format="%s" ordinal="1" />&gt;，连接 <arg format="%d" ordinal="2" /> 时间间隔无效。</Description>
+    <Causes>时间间隔值低于生产限制时间。</Causes>
+    <Actions>在 I/O 配置中将连接 <arg format="%d" ordinal="2" /> 时间间隔更改为大于单元类型 &lt;<arg format="%s" ordinal="1" />&gt; 的生产限制时间。</Actions>
+  </Message>
+  <Message number="1404" eDefine="SYS_EIO_AB_INVALID_MAP_SIZE">
+    <Title>输入/输出大小无效</Title>
+    <Description>I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 拥有无效的输入或输出大小值（零）。</Description>
+    <Actions>将输入/输出大小更改为大于零的值。</Actions>
+  </Message>
+  <Message number="1405" eDefine="SYS_EIO_DUP_UNIT_MAP">
+    <Title>重复的 I/O 单元映射</Title>
+    <Description>I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 与 I/O 信号 &lt;<arg format="%s" ordinal="2" />&gt; 具有相同的单元映射。</Description>
+    <Consequences>在 I/O 单元地图中映射多个 I/O 信号到相同的位，由于无法控制 I/O 信号的评估顺序可能导致这些信号出现不可预知的数值；例如，如果一个倒置群组输出 I/O 信号和一些数字输出 I/O 信号映射到相同的位，这些位的状态取决于 I/O 信号设置的顺序。</Consequences>
+    <Actions>强烈建议避免将多个 I/O 信号映射到相同的位。</Actions>
+  </Message>
+  <Message number="1406" eDefine="SYS_EIO_DN_BUS_IS_RUNNING">
+    <Title>建立于 DeviceNet 总线上的通信</Title>
+    <Description>DeviceNet 总线 &lt;<arg format="%s" ordinal="1" />&gt; 已建立通信。</Description>
+  </Message>
+  <Message number="1407" eDefine="SYS_EIO_RTE_INTERFACE_INVALID">
+    <Title>没有找到路由接口</Title>
+    <Description>在系统中找不到 I/O 总线 &lt;<arg format="%s" ordinal="2" />&gt; 的路由接口 &lt;<arg format="%s" ordinal="1" />&gt;。</Description>
+    <Consequences>路由不可用。未发送至连接 &lt;<arg format="%s" ordinal="2" />&gt; 的设备的信息。
+  </Consequences>
+    <Causes>     I/O 总线 &lt;<arg format="%s" ordinal="2" />&gt; 未定义或拼写错误。</Causes>
+    <Actions>更改 I/O 总线标识符。</Actions>
+  </Message>
+  <Message number="1408" eDefine="SYS_EIO_RTE_PORT_INVALID">
+    <Title>路由端口编号超越范围</Title>
+    <Description>路由 &lt;<arg format="%s" ordinal="1" />&gt; 的指定端口编号 &lt;arg format="%ld" ordinal="3"/&gt; 超出范围。</Description>
+    <Consequences>路由不可用。未发送至连接 &lt;<arg format="%s" ordinal="2" />&gt; 的设备的信息。</Consequences>
+    <Causes>编号 <arg format="%ld" ordinal="3" /> 超出范围。</Causes>
+    <Actions>更改端口编号。</Actions>
+  </Message>
+  <Message number="1409" eDefine="SYS_EIO_RTE_OUT_OF_PORT_RESOURCES">
+    <Title>无法添加端口至 <arg format="%s" ordinal="1" /></Title>
+    <Description>由于缺少资源，无法定义路由 &lt;<arg format="%s" ordinal="2" />&gt; 的端口 &lt;arg format="%ld" ordinal="4"/&gt;。</Description>
+    <Consequences>路由不可用。没有发送到达与端口 <arg format="%ld" ordinal="4" /><arg format="%ld" ordinal="4" /> 连接的设备的信息。</Consequences>
+    <Causes>&lt;<arg format="%s" ordinal="1" />&gt; 不支持这些端口。</Causes>
+    <Actions>尽可能减少端口数量或者向 ABB 报告问题。</Actions>
+  </Message>
+  <Message number="1410" eDefine="SYS_EIO_RTE_CIPRTE_NOT_INSTALLED">
+    <Title>未安装 CIP 路由选项</Title>
+    <Description>由于在系统创建时没有选择，CIP 路由选项没有启用。</Description>
+    <Consequences>将遗漏任何 CIP 路由定义。</Consequences>
+    <Causes>系统中不安装 CIP 路由选项。</Causes>
+    <Actions>使用 CIP 路由选项创建并安装系统。</Actions>
+  </Message>
+  <Message number="1411" eDefine="SYS_EIO_RTE_TABLE_ERR">
+    <Title>路由资源不足</Title>
+    <Description>由于系统路由资源缺乏，无法继续添加路由。</Description>
+    <Consequences>无法将路由 &lt;<arg format="%s" ordinal="2" />&gt; 添加到系统中。</Consequences>
+    <Causes>已经定义太多的路由。系统仅允许 <arg format="%ld" ordinal="1" /> 路由。</Causes>
+    <Actions>减少路由的数量。</Actions>
+  </Message>
+  <Message number="1412" eDefine="SYS_EIO_DN_POWER_REGAINED">
+    <Title>DeviceNet 总线已经重新获得总线电源</Title>
+    <Description>DeviceNet 总线 &lt;<arg format="%s" ordinal="1" />&gt; 已重新获得24V 总线电源。</Description>
+  </Message>
+  <Message number="1413" eDefine="SYS_EIO_DENGENSHA_NO_OPT">
+    <Title>Dengensha 选项未安装</Title>
+    <Description>系统中未正确安装 Dengensha 选项。</Description>
+    <Actions>使用包含 Dengensha 选项的合适密钥重新安装系统。</Actions>
+  </Message>
+  <Message number="1414" eDefine="SYS_EIO_CONCURRENT_SIG_EVENTS ">
+    <Title>信号值并发更改</Title>
+    <Description>       已检测到 I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 的值的并发更改。</Description>
+    <Consequences>       I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 的信号值更改由于同一 I/O 信号的另一个值更改而中止。</Consequences>
+    <Causes>       并发值更改是由于程序中意外的信号更改序列造成的。I/O 信号 <arg format="%s" ordinal="1" /> 的多次更改会在 I/O 信号脉冲时出现，例如，<p /><p />SetDO <arg format="%s" ordinal="1" />, 0;<p />PulseDO /High /PLength = 0.01, <arg format="%s" ordinal="1" />; <p />WaitTime 0.01; <p />SetDO <arg format="%s" ordinal="1" />, 1; <p /><p /> I/O 信号 <arg format="%s" ordinal="1" /> 最后会是 1，但不出现任何可见脉冲的情况很少。应避免这种类型的序列。</Causes>
+    <Actions>       检验并发值更改是否为 I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 所需要的更改，否则修改信号更改序列。</Actions>
+  </Message>
+  <Message number="1415" eDefine="SYS_EIO_DNLE_24_POWER_ERR">
+    <Title>无总线电源</Title>
+    <Description>到 DeviceNet Lean 总线的 24 V 电源缺失。</Description>
+    <Consequences>DeviceNet Lean 总线上不能进行通信。</Consequences>
+    <Causes>电源单元、电源电缆、输入电压或输出负荷可能导致断电。参见手册中的故障排除部分。</Causes>
+    <Actions>1. 确保连接了 DeviceNet Lean 总线接触器。<p />2. 检查到电源单元的全部电缆。<p />3. 测量输出和输入电压。<p />4. 必要时更换出现故障的单元。</Actions>
+  </Message>
+  <Message number="1416" eDefine="SYS_EIO_DNLE_24_POWER_OK">
+    <Title>总线电源已恢复</Title>
+    <Description>到 DeviceNet Lean 总线的 24 V 电源已恢复。</Description>
+  </Message>
+  <Message number="1417" eDefine="SYS_EIO_DNLE_ADAPTER_ERR">
+    <Title>DeviceNet Lean 硬件缺失</Title>
+    <Description>带 DeviceNet Lean 总线接触器的 DSQC 572 硬件适配器缺失。</Description>
+    <Consequences>DeviceNet Lean 总线上不能进行通信。</Consequences>
+    <Causes>DSQC 572 缺失，或者主计算机单元和 DSQC 572 之间的电缆未插入。</Causes>
+    <Actions>1. 检查全部电缆。<p />2. 如有必要，更换有故障的 DSQC 572 硬件适配器。</Actions>
+  </Message>
+  <Message number="1418" eDefine="SYS_EIO_DNLE_WRONG_VENDOR_ERR">
+    <Title>不允许的供应商</Title>
+    <Description>不支持连接 DeviceNet Lean 总线的 I/O 单元&lt;<arg format="%s" ordinal="1" />&gt;。报告的供应商 ID 为 <arg format="%d" ordinal="2" />，期望 ID 为 <arg format="%d" ordinal="3" />。</Description>
+    <Consequences>无法与 I/O 单元进行通信。</Consequences>
+    <Actions>1. 从配置移除该 I/O 单元。<p />2. 将该 I/O 单元更换为受支持的类型。</Actions>
+  </Message>
+  <Message number="1419" eDefine="SYS_EIO_DNLE_NOT_ALLOWED_ERR">
+    <Title>不允许的单元类型</Title>
+    <Description>连接 DeviceNet Lean 总线的 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 不属于受支持的 DeviceNet Lean 模块类型。</Description>
+    <Consequences>无法与 I/O 单元进行通信。</Consequences>
+    <Actions>1. 从配置移除该 I/O 单元。<p />2. 将该 I/O 单元更换为受支持的 I/O 单元类型。</Actions>
+  </Message>
+  <Message number="1420" eDefine="SYS_EIO_DNLE_CONFIG_ERR">
+    <Title>错误的单元类型</Title>
+    <Description>连接到 DeviceNet Lean 总线的 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 与配置的类型不同。<p />报告的产品代码为 <arg format="%d" ordinal="2" />，预期的代码为 <arg format="%d" ordinal="3" />。</Description>
+    <Consequences>无法与 I/O 单元通信。</Consequences>
+    <Actions>更改 I/O 单元配置。 </Actions>
+  </Message>
+  <Message number="1421" eDefine="SYS_EIO_DNLE_DUPMAC_ERR">
+    <Title>DeviceNet Lean 总线上的重复地址</Title>
+    <Description>为 DeviceNet Lean 主控保留的地址 <arg format="%d" ordinal="1" /> 已被网络上另一个 I/O 单元占用。</Description>
+    <Actions>1. 更改冲突的 I/O 单元的地址。<p />2. 从网络断开占用主控地址的 I/O 单元。<p /></Actions>
+  </Message>
+  <Message number="1422" eDefine="SYS_EIO_DNLE_OVERRUN_INFO">
+    <Title>DeviceNet Lean 总线上的载荷过高</Title>
+    <Description>DeviceNet Lean 总线上的通信量过高，或者系统太忙无法处理 DeviceNet Lean 总线上的全部消息。</Description>
+    <Consequences>I/O 数据可能丢失或延迟。</Consequences>
+    <Actions>1. 更改所有配置 I/O 单元的生产限制参数。<p />2. 降低系统负载。<p /></Actions>
+  </Message>
+  <Message number="1423" eDefine="SYS_EIO_DNLE_MINOR_ERROR_INFO">
+    <Title>DeviceNet Lean 总线上的少量错误</Title>
+    <Description>DeviceNet Lean 总线上发生了少量的通信错误。</Description>
+    <Consequences>I/O 数据可能丢失或延迟。</Consequences>
+    <Actions>检查全部电缆 </Actions>
+  </Message>
+  <Message number="1424" eDefine="SYS_EIO_DNLE_BUS_OFF_ERR">
+    <Title>DeviceNet Lean 总线关闭</Title>
+    <Description>在 DeviceNet Lean 总线上发生了大量的错误。总线尽可能恢复。</Description>
+    <Consequences>无法与 I/O 单元进行数据交换。</Consequences>
+    <Actions>检查全部电缆 </Actions>
+  </Message>
+  <Message number="1425" eDefine="SYS_EIO_DNLE_MAX_UNITS_ERR">
+    <Title>DeviceNet Lean 的 I/O 单元过多</Title>
+    <Description>DeviceNet Lean 总线上配置了过多的 I/O 单元。最大允许数量是 <arg format="%d" ordinal="1" />。该 I/O 单元 &lt;<arg format="%s" ordinal="2" />&gt; 被拒绝。 </Description>
+    <Consequences>无法与 I/O 单元 &lt;<arg format="%s" ordinal="2" />&gt; 进行数据交换。</Consequences>
+    <Actions>从 I/O 配置移除该 I/O 单元。</Actions>
+  </Message>
+  <Message number="1426" eDefine="SYS_EIO_DNLE_BUS_OFF_OK">
+    <Title>DeviceNet Lean 总线恢复</Title>
+    <Description>DeviceNet Lean 总线的操作模式已经更改为运行状态。</Description>
+    <Consequences>无法与配置的 I/O 单元进行数据交换。</Consequences>
+  </Message>
+  <Message number="1427" eDefine="SYS_EIO_DNLE_OPTION_ERR">
+    <Title>DeviceNet Lean 选项键缺失</Title>
+    <Description>在 控制器上未检测到运行 DeviceNet Lean 所需的选项键。</Description>
+    <Consequences>无法在 I/O 总线 DeviceNet Lean 上进行通信。</Consequences>
+    <Causes>可能已尝试在未正确安装选项的情况下添加 DeviceNet Lean 功能。</Causes>
+    <Actions>1. 使用 DeviceNet Lean 选项配置新的系统，并安装此系统。p/&gt;2. 如果不需要 DeviceNet Lean：配置一个不包含此选项的新系统，并安装系统。</Actions>
+  </Message>
+  <Message number="1428" eDefine="SYS_EIO_DNLE_BUS_AUTO_CONFIG_INFO">
+    <Title>已配置 DeviceNet Lean I/O 单元</Title>
+    <Description>在 DeviceNet Lean 总线上发现并配置了新 I/O 单元。<p /><p />单元名称： <arg format="%s" ordinal="1" /><p />单元地址： <arg format="%d" ordinal="2" /><p />输入字节/输出字节： <arg format="%s" ordinal="3" /><p />供应商 ID： <arg format="%d" ordinal="4" /><p />产品代码： <arg format="%d" ordinal="5" /></Description>
+    <Actions>1. 重新启动 控制器，以激活该 I/O 单元配置。<p />2. 编辑或删除该配置。</Actions>
+  </Message>
+  <Message number="1429" eDefine="SYS_EIO_PNET_NO_BUS_CONFIG">
+    <Title>Profinet PCI 电路板中没有配置</Title>
+    <Description>Profinet PCI 电路板中没有总线配置。<p /></Description>
+    <Actions>使用外部软件工具将配置下载至电路板。</Actions>
+  </Message>
+  <Message number="1430" eDefine="SYS_EIO_PNET_PCI_WRONG_FW">
+    <Title>Profinet 电路板上的固件不兼容</Title>
+    <Description>Profinet PCI 电路板上版本为 &lt;<arg format="%s" ordinal="1" />&gt; 的当前固件与本 RobotWare 版本不兼容。</Description>
+    <Consequences>无法在 Profinet 上进行通信。<p />无法从 IRC5 控制器中进行自动固件升级。</Consequences>
+    <Causes>Profinet PCI 电路板上的当前固件要么太老（比 &lt;<arg format="%s" ordinal="3" />&gt; 老），要么太新（为 (&lt;<arg format="%s" ordinal="4" />&gt; 或更新版本）。</Causes>
+    <Actions>用 Siemens Step7 中的固件加载程序下载 &lt;<arg format="%s" ordinal="2" />&gt; 版的固件到 Profinet PCI 电路板。请参阅应用程序手册：PROFINET 主/从。</Actions>
+  </Message>
+  <Message number="1431" eDefine="SYS_EIO_PNET_UPDATE_PROGRESS_ERROR">
+    <Title>正在进行配置更新</Title>
+    <Description>在 Profinet PCI 电路板中找不到配置，或者外部软件工具已经停止 Profinet 总线。<p />在完全下载 Profinet 配置之前，切勿重新启动 控制器。</Description>
+    <Consequences>无法连接 I/O 单元。</Consequences>
+    <Actions>使用外部软件工具下载配置并启动 Profinet 总线。</Actions>
+  </Message>
+  <Message number="1432" eDefine="SYS_EIO_PNET_EXCEPTION_ERROR">
+    <Title>Profinet 硬件异常</Title>
+    <Description>Profinet PCI 电路板已报告了其固件中出现内部软件异常。在本次重新启动之前发生异常。按照下面的操作步骤从此错误状态恢复。</Description>
+    <Consequences>无法连接 I/O 单元。</Consequences>
+    <Causes>从外部 Profinet 工具进行的配置下载可能在完成之前已经被中断。</Causes>
+    <Actions>1. 使用外部软件工具清除 Profinet PCI 电路板中的全部配置数据。<p />2. 使用外部软件工具重新配置 Profinet PCI 电路板。<p />3. 热启动 控制器。<p /></Actions>
+  </Message>
+  <Message number="1433" eDefine="SYS_EIO_PNET_OPEN_CARD_ERROR">
+    <Title>与 Profinet PCI 电路板无接触</Title>
+    <Description>无法接触 Profinet PCI 电路板。返回的错误代码 <arg format="%d" ordinal="1" />。</Description>
+    <Consequences>无法连接 I/O 单元。</Consequences>
+    <Causes>1. Profinet 电路板缺失或故障。<p />2. 正通过外部软件工具下载新的配置。</Causes>
+    <Actions>确保在 控制器中安装了 Profinet PCI 电路板。</Actions>
+  </Message>
+  <Message number="1434" eDefine="SYS_EIO_PNET_STOP_ERROR">
+    <Title>Profinet 总线停止</Title>
+    <Description>已经使用外部软件配置工具下载了新的 Profinet 配置。因为新的配置有重大更改，IRC5 控制器未能在 控制器中重新使用 I/O 配置。需要重新启动。</Description>
+    <Consequences>无法连接 I/O 单元。</Consequences>
+    <Actions>重新启动 控制器。</Actions>
+  </Message>
+  <Message number="1435" eDefine="SYS_EIO_PNET_MODULES_NOT_CONFIG">
+    <Title>未配置 Profinet I/O 单元</Title>
+    <Description>位于地址 &lt;<arg format="%ld" ordinal="1" />&gt; 的 Profinet I/O 单元产生了一个警报。已在 Profinet PCI 电路板中配置 I/O 单元，但未在 控制器中配置。<p />要处理该警报，需要在 控制器中配置 I/O 单元。</Description>
+    <Consequences>无法连接 I/O 单元。</Consequences>
+    <Actions>1. 向 控制器 I/O 配置添加 I/O 单元。<p />2. 在 Profinet PCI 电路板中删除配置。</Actions>
+  </Message>
+  <Message number="1436" eDefine="SYS_EIO_PNET_NO_CONFIG_IN_CARD">
+    <Title>Profinet 配置缺失</Title>
+    <Description>I/O 单元 &lt;<arg format="%ld" ordinal="1" />&gt; 已在控制器中进行了配置，但在 Profinet PCI 电路板配置中找不到。</Description>
+    <Consequences>无法连接 I/O 单元。</Consequences>
+    <Actions>1. 使用外部配置工具在 Profinet PCI 电路板中为该 I/O 单元添加配置。<p />2. 从系统参数中删除 I/O 单元配置。</Actions>
+  </Message>
+  <Message number="1437" eDefine="SYS_EIO_PNET_INT_SLAVE_CONFIG_WARNING">
+    <Title>Profinet 内部从控配置警告</Title>
+    <Description>已使用以下模块在 控制器中配置 Profinet 内部从控：<p /><p /><arg format="%s" ordinal="1" />。连接的 Profinet 主控拥有不同的模块配置。<p />在槽位 <arg format="%ld" ordinal="2" /> 中检测到不匹配。</Description>
+    <Consequences>试图连接时被拒绝。</Consequences>
+    <Actions>1. 重新配置连接 Profinet 主控。<p />2. 在 控制器中重新配置 Profinet 内部从控。</Actions>
+  </Message>
+  <Message number="1438" eDefine="SYS_EIO_PNET_INT_SLAVE_CONFIG_WARNING_SLOT">
+    <Title>Profinet 内部从控配置警告</Title>
+    <Description>IRC5 控制器中的 Profinet 内部从控已配置为槽位 <arg format="%ld" ordinal="2" /> 中的 <arg format="%ld" ordinal="1" /> 字节输入模块以及槽位 <arg format="%ld" ordinal="3" /> 中的 <arg format="%ld" ordinal="1" /> 字节输出模块，但连接 Profinet 主控在槽位 <arg format="%ld" ordinal="4" /> 中配置了一个模块。</Description>
+    <Consequences>试图连接时被拒绝。</Consequences>
+    <Actions>重新配置连接的 Profinet 主控。<p /></Actions>
+  </Message>
+  <Message number="1439" eDefine="SYS_EIO_PNET_DIAG_ALARM_ERROR">
+    <Title>Profinet I/O 单元诊断</Title>
+    <Description>I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 报告了槽位 &lt;<arg format="%ld" ordinal="2" />&gt; 的诊断数据。<p />阅读 I/O 单元的具体文件了解诊断数据的更详细解释。<p /><p /><arg format="%s" ordinal="3" /></Description>
+  </Message>
+  <Message number="1440" eDefine="SYS_EIO_PNET_INT_SLAVE_MISSING">
+    <Title>Profinet 配置不匹配</Title>
+    <Description>已经使用外部 Profinet 配置工具配置了 Profinet-IO 路由。为了能在 控制器上使用 Profinet-IO 路由，需要在 控制器中配置 Profinet 内部从控。</Description>
+    <Consequences>不允许任何 Profinet-IO 路由。</Consequences>
+    <Actions>1. 向 I/O 配置添加 Profinet 内部从控。<p />2. 从 DSQC 678 移除 Profinet-IO 路由配置。</Actions>
+  </Message>
+  <Message number="1441" eDefine="SYS_EIO_PNET_INT_PLC_WARNING">
+    <Title>Profinet-IO 路由警告</Title>
+    <Description>因为在 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 上配置了 Profinet-IO 路由，某些数据位可能取决于 PLC 连接状态和操作模式。<p />如果 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 将 I/O 信号映射到由 PLC 控制的输出位上，这些 I/O 信号可由 控制器设置，但不会影响 I/O 单元输出值。</Description>
+    <Consequences>IRC5 控制器可能无法处理某些 I/O 信号。</Consequences>
+    <Actions>       1. 在由 控制器映射但被 PLC 控制的数字输出 I/O 信号上配置写保护。<p />2. 命名 I/O 信号以反映它们是由 PLC 控制。</Actions>
+  </Message>
+  <Message number="1442" eDefine="SYS_EIO_PNET_OPTION_KEY_ERROR">
+    <Title>Profinet 选项键缺失</Title>
+    <Description>在 控制器上未检测到运行 Profinet 所需的选项。</Description>
+    <Consequences>无法在 Profibus 总线上进行通信。</Consequences>
+    <Causes>可能已尝试在未正确安装选项的情况下添加 Profinet 功能。</Causes>
+    <Actions>1. 用 Profinet 选项配置一个新系统，并安装该系统。<p />2. 如果不需要 Profinet，则无需此选项就可配置新的系统，并安装该系统。</Actions>
+  </Message>
+  <Message number="1443" eDefine="SYS_EIO_PNET_TOO_MANY_INT_SLAVE">
+    <Title>Profinet 内部从控过多</Title>
+    <Description>IRC5 控制器中定义了过多的 Profibus 内部从控。</Description>
+    <Consequences>无法配置 Profinet I/O 单元&lt;<arg format="%s" ordinal="1" />&gt;。无法与此 I/O 单元进行通信。</Consequences>
+    <Causes>Profinet I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 被定义为 Profinet 内部从控，而且已经配置了另一个 Profinet 内部从控。</Causes>
+    <Actions>从配置移除 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt;。</Actions>
+  </Message>
+  <Message number="1444" eDefine="SYS_EIO_PNET_DIAG_ALARM">
+    <Title>Profinet I/O 单元报警</Title>
+    <Description>I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 报告了槽位 &lt;<arg format="%ld" ordinal="2" />&gt; 的一个报警：<p /><p /><arg format="%s" ordinal="3" /></Description>
+  </Message>
+  <Message number="1445" eDefine="SYS_EIO_PNET_PCI_CARD_ERROR">
+    <Title>Profinet PCI 电路板错误</Title>
+    <Description>无法接触 Profinet PCI 电路板。</Description>
+    <Consequences>无法连接 I/O 单元。</Consequences>
+    <Causes>未安装 Profinet PCI 电路板，或者已执行了“重置为出厂设置”命令。“重置为出厂设置”命令要求重新启动一次 控制器才能完成。</Causes>
+    <Actions>1. 在 控制器中安装 Profinet PCI 电路板。<p />2. 重新启动 控制器以执行“重置为出厂设置”命令。</Actions>
+  </Message>
+  <Message number="1446" eDefine="SYS_EIO_AB_PNET_CFG_MISMATCH">
+    <Title>Profinet 配置不匹配</Title>
+    <Description>Fieldbus 适配器与槽位 <arg format="%d" ordinal="1" /> 中的 Profinet 连接主控之间的配置不匹配。</Description>
+    <Consequences>Fieldbus 适配器将指示诊断错误，并且 Fieldbus 适配器与 Profinet 连接主控之间将无法进行通信。</Consequences>
+    <Causes>Profinet 主控配置的槽位 <arg format="%d" ordinal="1" /> 中的数据类型/大小不匹配。预期的数据类型/大小为 <arg format="%d" ordinal="2" /><arg format="%s" ordinal="3" /> 字节。</Causes>
+    <Actions>在外部配置工具中更正槽位 <arg format="%d" ordinal="1" /> 中的数据类型/大小，或在系统参数中更改数据大小。<p /><p />注意：<p />在 Profinet 主控配置中，输入数据应位于槽位 1 内，输出数据应位于槽位 2 内。</Actions>
+  </Message>
+  <Message number="1449" eDefine="SYS_EIO_AB_TOO_MANY_UNITS">
+    <Title>配置的现场总线适配器过多</Title>
+    <Description>配置的现场总线适配器过多。仅允许配置一个现场总线适配器。 </Description>
+    <Consequences>现场总线适配器 &lt;<arg format="%s" ordinal="1" />&gt; 已被拒绝，所有依赖于其的功能将无法工作。</Consequences>
+    <Actions>删除配置中的现场总线适配器。</Actions>
+  </Message>
+  <Message number="1450" eDefine="SYS_EIO_EN_MS_OPTION_NOT_INSTALLED">
+    <Title>未安装以太网/IP 主控/从控选项</Title>
+    <Description>已配置以太网/IP I/O 总线，但未安装以太网/IP 主控/从控选项。</Description>
+    <Consequences>无法在以太网/IP 上进行通信。如果未安装上述选项，配置以太网/IP 时可能发生继发性错误。</Consequences>
+    <Causes>可能已尝试在未正确安装选项的情况下添加以太网/IP 功能。</Causes>
+    <Actions>1. 如果需要以太网/IP 选项：使用该选项配置新系统，并安装此系统。<p />2. 如果不需要以太网/IP 选项：配置一个不包含此选项的新系统，并安装系统。</Actions>
+  </Message>
+</Domain>

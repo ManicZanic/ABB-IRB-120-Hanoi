@@ -1,0 +1,590 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="HW" domainNo="3" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="4201" max="7078">
+  <Message number="4201" eDefine="SYS_ERR_HW_DRIVE_NOT_CONFIGURED">
+    <Title>Connected drive unit not configured</Title>
+    <Description>
+      The drive unit in drive module <arg format="%d" ordinal="1" /> with drive unit position <arg format="%d" ordinal="2" /> is connected but not used in the configuration.
+    </Description>
+    <Consequences>Operation will be possible, but the extra drive unit will not be used.</Consequences>
+    <Causes>The drive unit is not used in the configuration.</Causes>
+    <Actions>
+      1) Remove extra drive unit if not needed.<p />2) Reinstall the system with a drive module key supporting the extra drive unit.
+    </Actions>
+  </Message>
+  <Message number="4202" eDefine="SYS_ERR_HW_DRIVE_LOST_COMMUNICATION_ERROR">
+    <Title>Lost communication with drive unit</Title>
+    <Description>
+      In drive module <arg format="%d" ordinal="1" />, the axis computer has lost communication with the drive unit at unit position <arg format="%d" ordinal="2" />.
+    </Description>
+    <Consequences>No operation will be possible until the fault is corrected. The system goes to Motors Off state with zero torque.</Consequences>
+    <Causes>Communication problem between the drive unit and the axis computer.</Causes>
+    <Actions>
+      1) Check that all cables are properly connected.<p />2) Check that the drive unit has logic power.<p />3) Check/replace Ethernet cables.<p />4) Check for other hardware eventlog messages.<p />5) Check the event log for power supply unit error messages. <p />6) Check the cabling between the power supply unit and the drive unit.<p />7) Check the 24V output from the power supply unit. 
+    </Actions>
+  </Message>
+  <Message number="4203" eDefine="SYS_ERR_HW_MOTOR_CURRENT_OVERLOAD_ERROR">
+    <Title>Motor current too high</Title>
+    <Description>
+      The motor current is too high for joint <arg format="%s" ordinal="2" />, connected to drive module <arg format="%d" ordinal="1" /> with the drive unit at unit position <arg format="%d" ordinal="3" /> and node <arg format="%d" ordinal="4" />.
+    </Description>
+    <Consequences>No operation will be possible until the fault is corrected. The system goes to Motors Off state.</Consequences>
+    <Causes>1) The motor configuration is incorrect.<p />2) The axis load may be too high or the motor may have stalled (maybe due to a collision).<p />3) The motor is too small for the drive unit.<p />4) Short circuit between motor phases or ground.</Causes>
+    <Actions>1) Check that the motor configuration is correct.<p />2) Check that the robot has not collided. <p />3) If possible, reduce the speed of the user program. <p />4) Check that the axis load is not too high for the motor.<p />5) Verify that the maximum motor current is not too small compared to the maximum current of the drive unit.<p />6) Check the motor cable and motor by measuring their resistance respectively. Disconnect before measuring.</Actions>
+  </Message>
+  <Message number="4251" eDefine="SYS_ERR_HW_REC_MAINS_PHASE_MISSING_WARNING">
+    <Title>Incoming mains phase missing</Title>
+    <Description>
+      In drive module <arg format="%d" ordinal="1" />, the rectifier unit at drive unit position <arg format="%d" ordinal="2" /> has detected a power loss in one phase.
+    </Description>
+    <Consequences>The system may stop with DC link too low voltage.</Consequences>
+    <Causes>1) Incoming mains voltage loss of one phase. <p />2) Some malfunction in cabling or internal 3-phase components. <p />3) The rectifier unit is faulty.</Causes>
+    <Actions>
+      1) Check all incoming mains phases to the cabinet. <p />2) Check all internal 3-phase components (main switch, mains filter, fuse, contactors) and cabling in the drive module.
+    </Actions>
+  </Message>
+  <Message number="4252" eDefine="SYS_ERR_HW_REC_NO_INCOMMING_MAINS_ERROR">
+    <Title>Incoming mains missing</Title>
+    <Description>
+      In drive module <arg format="%d" ordinal="1" />, the rectifier unit at drive unit position <arg format="%d" ordinal="2" /> has detected a mains voltage loss.
+    </Description>
+    <Consequences>No operation will be possible until the fault is corrected. The system goes to Motors Off state.</Consequences>
+    <Causes>1) Incoming mains voltage loss. <p />2) Some malfunction in the cabling or in internal 3-phase components. <p />3) The rectifier unit is faulty.</Causes>
+    <Actions>
+      1) Check the incoming mains voltage. <p />2) Check all the internal 3-phase components (main switch, mains filter, fuse, contactors) and cabling in the drive module. <p /></Actions>
+  </Message>
+  <Message number="4255" eDefine="SYS_ERR_HW_REC_TEMP_ERROR">
+    <Title>Rectifier temperature error</Title>
+    <Description>
+      In drive module <arg format="%d" ordinal="1" />, the rectifier unit at drive unit position <arg format="%d" ordinal="2" /> has reached a too high temperature level.
+    </Description>
+    <Consequences>No operation will be possible until the rectifier has cooled down. The system goes to Motors Off state.</Consequences>
+    <Causes>1) The cooling fans may be faulty or the air flow may be obstructed. <p />2) The ambient temperature may be too high. <p />3) The system may be running with a too high torque for extended periods of time.</Causes>
+    <Actions>
+      1) Verify that the fans are running and that the air flow is not obstructed. <p />2) Verify that the ambient temperature does not exceed the cabinet's temperature rating. <p />3) If possible, rewrite the user program to reduce the amount of hard acceleration and hard deceleration. <p />4) Reduce the static torque due to gravity or external forces.
+    </Actions>
+  </Message>
+  <Message number="4256" eDefine="SYS_ERR_HW_REC_TEMP_WARNING">
+    <Title>Rectifier temperature warning</Title>
+    <Description>
+      In drive module <arg format="%d" ordinal="1" />, the rectifier unit at drive unit position <arg format="%d" ordinal="2" /> is approaching a too high temperature level.
+    </Description>
+    <Consequences>It is possible to continue but the margin to maximum allowed temperature is too low to sustain long term operation.</Consequences>
+    <Causes>1) The cooling fans may be faulty or the air flow may be obstructed. <p />2) The ambient temperature may be too high. <p />3) The system may be running with a too high torque for extended periods of time.</Causes>
+    <Actions>
+      1) Verify that the fans are running and that the air flow is not obstructed. <p />2) Verify that the ambient temperature does not exceed the cabinet's temperature rating. <p />3) If possible, rewrite the user program to reduce the amount of hard acceleration and hard deceleration. <p />4) Reduce the static torque due to gravity or external forces.
+    </Actions>
+  </Message>
+  <Message number="4257" eDefine="SYS_ERR_HW_REC_BLEEDER_OPEN_ERROR">
+    <Title>Open circuit in bleeder resistor circuit</Title>
+    <Description>
+      In drive module <arg format="%d" ordinal="1" />, the bleeder resistor connected to the rectifier unit at drive unit position <arg format="%d" ordinal="2" /> has too high resistance (open circuit).
+    </Description>
+    <Consequences>No operation will be possible until the fault is corrected. The system goes to Motors Off state. <p /><p />WARNING HIGH VOLTAGE: THE DC LINK WILL NOT BE DISCHARGED WHEN THE SYSTEM IS POWERED OFF.<p /></Consequences>
+    <Causes>This may be caused by a faulty bleeder resistor cable or a faulty bleeder resistor.</Causes>
+    <Actions>
+      WARNING HIGH VOLTAGE CAN BE PRESENT.<p />1) Make sure the bleeder resistor cable is properly connected to the rectifier unit. <p />2) Disconnect the bleeder and check the cable and measure the bleeder resistance. The expected resistance should be approximately <arg format="%d" ordinal="3" /> ohms.
+    </Actions>
+  </Message>
+  <Message number="4258" eDefine="SYS_ERR_HW_REC_BLEEDER_SHORT_ERROR">
+    <Title>Short circuit in bleeder resistor circuit</Title>
+    <Description>
+      In drive module <arg format="%d" ordinal="1" />, the bleeder resistor connected to the rectifier unit at drive unit position <arg format="%d" ordinal="2" /> is indicating a short circuit.
+    </Description>
+    <Consequences>No operation will be possible until the fault is corrected. The system goes to Motors Off state.<p /><p />WARNING HIGH VOLTAGE: THE DC LINK WILL NOT BE DISCHARGED WHEN THE SYSTEM IS POWERED OFF.<p /></Consequences>
+    <Causes>This may be caused by a faulty bleeder resistor cable or a faulty bleeder resistor.</Causes>
+    <Actions>
+      WARNING HIGH VOLTAGE CAN BE PRESENT.<p />1) Make sure the bleeder resistor cable is correctly connected to the rectifier unit. <p />2) Disconnect the bleeder and check the cable and measure the bleeder resistance. The expected resistance should be approximately <arg format="%d" ordinal="3" /> ohms. <p />3) Check for bleeder short circuit against ground.
+    </Actions>
+  </Message>
+  <Message number="4261" eDefine="SYS_ERR_HW_REC_INRUSH_RELAY_ERROR">
+    <Title>Rectifier startup error</Title>
+    <Description>
+      In drive module <arg format="%d" ordinal="1" />, the inrush control relay in the rectifier unit at drive unit position <arg format="%d" ordinal="2" /> indicates an error.
+    </Description>
+    <Consequences>No operation will be possible until the fault is corrected. The system goes to Motors Off state.</Consequences>
+    <Causes>This may be caused by a faulty rectifier inrush control relay.</Causes>
+    <Actions>Restart the system and try again. If the problem remains then replace the unit.</Actions>
+  </Message>
+  <Message number="4262" eDefine="SYS_ERR_HW_REC_AC_FREQUENCY_WARNING">
+    <Title>Incoming mains frequency warning</Title>
+    <Description>
+      In drive module <arg format="%d" ordinal="1" />, the incoming mains voltage has wrong frequency. The rectifier unit at drive unit position <arg format="%d" ordinal="2" /> has reported the problem.
+    </Description>
+    <Consequences>The system may stop with DC link voltage too low.</Consequences>
+    <Causes>1) The incoming mains frequency is not within specification. <p />2) Short circuit between motor phases or ground.</Causes>
+    <Actions>1) Check and adjust incoming mains frequency. <p />2) Check the motor cable and motor by measuring their resistance respectively. Disconnect before measuring.</Actions>
+  </Message>
+  <Message number="4263" eDefine="SYS_ERR_HW_REC_INRUSH_RESISTOR_OPEN_ERROR">
+    <Title>Rectifier startup error</Title>
+    <Description>
+      In drive module <arg format="%d" ordinal="1" />, the dc-link in the rectifier unit at drive unit position <arg format="%d" ordinal="2" /> has too low voltage.
+    </Description>
+    <Consequences>No operation will be possible until the fault is corrected. The system goes to Motors Off state.</Consequences>
+    <Causes>1) Low AC-voltage level to rectifier input.  <p />2) This may be caused by a faulty rectifier inrush control resistor.  <p />3) A short circuit is present on the dc-link.</Causes>
+    <Actions>1) Restart the system and try again.   <p />2) Check incoming mains voltage.<p />3) If new installed system with mains transformer - check transformer voltage selection.<p />4) If drive unit has additional axes - check dc-link wiring.<p />5) If the problem remains then replace the unit.</Actions>
+  </Message>
+  <Message number="4264" eDefine="SYS_ERR_HW_REC_INRUSH_ACTIVE_ERROR">
+    <Title>Rectifier inrush limitation active in Motors On</Title>
+    <Description>
+      In drive module <arg format="%d" ordinal="1" />, the inrush control resistor in the rectifier unit at drive unit position <arg format="%d" ordinal="2" /> is wrongly engaged.
+    </Description>
+    <Consequences>The system goes to Motors Off state to protect the hardware.</Consequences>
+    <Causes>This error occur when the DC link voltage becomes too low and all mains phases are missing.</Causes>
+    <Actions>
+      1) Check the hardware eventlog for other errors.<p />2) Check incoming mains voltage.<p />3) Check that the correct voltage is selected with jumpers on the transformer (optional).<p />4) Check all internal 3-phase components (main switch, mains filter, fuse, contactors) and cabling in the drive module.
+    </Actions>
+  </Message>
+  <Message number="4265" eDefine="SYS_ERR_HW_REC_DC_LINK_SHORT_CIRCUIT_ERROR">
+    <Title>DC link short circuit error</Title>
+    <Description>
+      In drive module <arg format="%d" ordinal="1" />, the DC link in the rectifier unit at drive unit position <arg format="%d" ordinal="2" /> is short circuit.
+    </Description>
+    <Consequences>No operation will be possible until the fault is corrected. The system goes to Motors Off state.</Consequences>
+    <Causes>
+      1) DC link cables for an additional drive unit is damaged or wrongly connected. <p />2) Internal error in rectifier unit or drive unit.</Causes>
+    <Actions>Check DC link cables and connectors.</Actions>
+  </Message>
+  <Message number="4266" eDefine="SYS_ERR_HW_REC_INRUSH_AND_BLEEDER_ACTIVE_ERROR">
+    <Title>Rectifier inrush limitation and bleeder active</Title>
+    <Description>
+      In drive module <arg format="%d" ordinal="1" />, with rectifier unit at drive unit position <arg format="%d" ordinal="2" />, the inrush control resistor is active at the same time as the bleeder resistor is active.<p />The inrush control resistor is located in the rectifier unit.<p />The bleeder resistor is connected to the rectifier unit or the drive unit with embedded rectifier.
+    </Description>
+    <Consequences>The system goes to Motors Off state to protect the hardware.</Consequences>
+    <Causes>This problem is most likely to occur when the incoming mains voltage is too high to the rectifier.</Causes>
+    <Actions>1) Check that the incoming mains voltage is according to specification for the drive unit.<p />2) Check that the correct voltage is selected with jumpers on the transformer (optional).</Actions>
+  </Message>
+  <Message number="4267" eDefine="SYS_ERR_HW_REC_TOO_MANY_RECTIFIERS_CONNECTED">
+    <Title>Too many rectifiers connected</Title>
+    <Description>
+			In drive module <arg format="%d" ordinal="1" /> the system has detected more rectifers than the system can handle. The limit was reached when drive unit at unit position <arg format="%d" ordinal="2" /> was detected.
+		</Description>
+    <Consequences>No operation will be possible until the fault is corrected. The system goes to System Failure state.</Consequences>
+    <Causes>
+			1) Too many drive unit that are equippted with rectifiers are connected. <p />2) 
+		</Causes>
+    <Actions>
+			1) Verify that the proper drive units types are connected to the drive unit communication link. <p />2) Disconnect unused drive unit(s).
+		</Actions>
+  </Message>
+  <Message number="4268" eDefine="SYS_ERR_HW_REC_RECTIFIER_CHARGING_ERROR">
+    <Title>Rectifier charging error</Title>
+    <Description>
+      In drive module <arg format="%d" ordinal="1" />, the dc-link in the rectifier unit at drive unit position <arg format="%d" ordinal="2" /> has too low voltage.
+    </Description>
+    <Consequences>No operation will be possible until the fault is corrected. The system goes to Motors Off state.</Consequences>
+    <Causes>1) Low AC-voltage level to rectifier input.  <p />2) This may be caused by a faulty rectifier bleeder.  <p />3) The bleeder resistor or its wiring is faulty.<p />4) A short circuit is present on the dc-link.
+	</Causes>
+    <Actions>1) Restart the system and try again.   <p />2) Check incoming mains voltage.<p />3) If new installed system with mains transformer - check transformer voltage selection.<p />4) Check bleeder resistor and its wiring.<p />5) If the problem remains then replace the unit.</Actions>
+  </Message>
+  <Message number="4300" eDefine="SYS_ERR_HW_INV_UNKNOWN_DSQC_NUMBER">
+    <Title>Unknown drive unit type</Title>
+    <Description>
+      In drive module <arg format="%d" ordinal="1" />, the drive unit at unit position <arg format="%d" ordinal="2" /> has an unknown hardware identity <arg format="%s" ordinal="3" />.
+    </Description>
+    <Consequences>No operation will be possible until the fault is corrected. The system goes to System Failure state.</Consequences>
+    <Causes>The drive unit is either unsupported or faulty.</Causes>
+    <Actions>
+          1) Verify that the drive unit is supported by the RobotWare version. Upgrade RobotWare if needed.<p />2) Replace drive unit.
+      </Actions>
+  </Message>
+  <Message number="4303" eDefine="SYS_ERR_HW_INV_IQ_REGULATION_WARNING">
+    <Title>Motor current warning</Title>
+    <Description>
+      For joint <arg format="%s" ordinal="2" />, the current controller detected a too large torque current deviation for the motor. The joint is connected to drive module <arg format="%d" ordinal="1" /> in the drive unit at unit position <arg format="%d" ordinal="3" /> and node <arg format="%d" ordinal="4" />.
+    </Description>
+    <Consequences>Operation will be possible but system is close to a stopping error.</Consequences>
+    <Causes>1) The motor data in the configuration files may be wrong.<p />2) The motor cables are not correctly connected or damaged. <p />3) Short circuit in motor cable between phase to phase or phase to ground. <p />4) The DC link voltage may be too low.<p />5) The incoming mains voltage is not within specification.</Causes>
+    <Actions>
+      1) Verify that the motor data in the configuration file is correct for this joint. How to check the configuration file is detailed in the Trouble Shooting Manual. <p />2) Verify that the motor cables are not damaged or badly connected. <p />3) Verify that the motor cables has no short circuits internally or to ground. <p />4) Verify that no DC link errors are present in the event log. <p />5) Verify that the incoming mains voltage is within the specification.
+    </Actions>
+  </Message>
+  <Message number="4304" eDefine="SYS_ERR_HW_INV_ID_REGULATION_WARNING">
+    <Title>Motor current warning</Title>
+    <Description>
+      For joint <arg format="%s" ordinal="2" />, the current controller detected a too large current deviation for the motor. The joint is connected to drive module <arg format="%d" ordinal="1" /> in the drive unit at unit position <arg format="%d" ordinal="3" /> and node <arg format="%d" ordinal="4" />.
+    </Description>
+    <Consequences>Operation will be possible but system is close to a stopping error.</Consequences>
+    <Causes>1) The motor data in the configuration files may be wrong.<p />2) The motor cables are not correctly connected or damaged. <p />3) Short circuit in motor cable between phase to phase or phase to ground.<p />4) The DC link voltage may be too low.<p />5) The incoming mains voltage is not within specification.</Causes>
+    <Actions>
+      1) Verify that the motor data in the configuration file is correct for this joint. How to check the configuration file is detailed in the Trouble Shooting Manual. <p />2) Verify that the motor cables are not damaged or badly connected.<p />3) Verify that the motor cables has no short circuits internally or to ground. <p />4) Verify that no DC link errors are present in the event log. <p />5) Verify that the incoming mains voltage is within the specification.
+    </Actions>
+  </Message>
+  <Message number="4306" eDefine="SYS_ERR_HW_INV_OVER_TEMP_ERROR">
+    <Title>Drive unit temperature error</Title>
+    <Description>
+      The drive unit for joint <arg format="%s" ordinal="2" /> has reached a too high temperature level. The joint is connected to drive module <arg format="%d" ordinal="1" /> with the drive unit at unit position <arg format="%d" ordinal="3" /> and node <arg format="%d" ordinal="4" />.
+    </Description>
+    <Consequences>No operation will be possible until the fault is corrected. The system goes to Motors Off state.</Consequences>
+    <Causes>
+      1) The cooling fans may be faulty or the air flow may be obstructed. <p />2) The cooling fins are covered by dust reducing the cooling effect.<p />3) The ambient temperature may be too high. <p />4) The joint may be running with a too high torque for extended periods of time.
+    </Causes>
+    <Actions>
+      1) Verify that the fans are running and that the air flow is not obstructed. <p />2) Clean the cooling fins.<p />3) Verify that the ambient temperature does not exceed the cabinet's temperature rating. <p />4) If possible, rewrite the user program to reduce the amount of hard acceleration and hard deceleration. <p />5) Reduce the static torque due to gravity or external forces. 
+    </Actions>
+  </Message>
+  <Message number="4307" eDefine="SYS_ERR_HW_INV_OVER_TEMP_WARNING">
+    <Title>Drive unit temperature warning</Title>
+    <Description>
+      The drive unit for joint <arg format="%s" ordinal="2" /> is approaching a too high temperature level. The joint is connected to drive module <arg format="%d" ordinal="1" /> with the drive unit at unit position <arg format="%d" ordinal="3" /> and node <arg format="%d" ordinal="4" />.
+    </Description>
+    <Consequences>It is possible to continue but the margin to maximum allowed temperature is too low to sustain long term operation.</Consequences>
+    <Causes>
+      1) The cooling fans may be faulty or the air flow may be obstructed. <p />2) The cooling fins are covered by dust reducing the cooling effect.<p />3) The ambient temperature may be too high. <p />4) The joint may be running with a too high torque for extended periods of time.
+    </Causes>
+    <Actions>
+      1) Verify that the fans are running and that the air flow is not obstructed. <p />2) Clean the cooling fins.<p />3) Verify that the ambient temperature does not exceed the cabinet's temperature rating. <p />4) If possible, rewrite the user program to reduce the amount of hard acceleration and hard deceleration. <p />5) Reduce the static torque due to gravity or external forces. 
+    </Actions>
+  </Message>
+  <Message number="4308" eDefine="SYS_ERR_HW_INV_OVER_TEMP_CRITICAL_ERROR">
+    <Title>Drive unit critical temperature error</Title>
+    <Description>
+      The drive unit for joint <arg format="%s" ordinal="2" /> has reached a critical high temperature level. The joint is connected to drive module <arg format="%d" ordinal="1" /> with the drive unit at unit position <arg format="%d" ordinal="3" /> and node <arg format="%d" ordinal="4" />.
+    </Description>
+    <Consequences>No operation will be possible until the fault is corrected. The system goes to Motors Off state with zero torque.</Consequences>
+    <Causes>
+      1) The cooling fans may be faulty or the air flow may be obstructed. <p />2) The cooling fins are covered by dust reducing the cooling effect.<p />3) The ambient temperature may be too high. <p />4) The joint may be running with a too high torque for extended periods of time.
+    </Causes>
+    <Actions>
+      1) Verify that the fans are running and that the air flow is not obstructed. <p />2) Clean the cooling fins.<p />3) Verify that the ambient temperature does not exceed the cabinet's temperature rating. <p />4) If possible, rewrite the user program to reduce the amount of hard acceleration and hard deceleration. <p />5) Reduce the static torque due to gravity or external forces. 
+    </Actions>
+  </Message>
+  <Message number="4309" eDefine="SYS_ERR_HW_INV_OVER_CURRENT_ERROR">
+    <Title>Drive transistor current too high</Title>
+    <Description>
+      The drive unit transistor current is too high for joint <arg format="%s" ordinal="2" />. The joint is connected to drive module <arg format="%d" ordinal="1" /> with the drive unit at unit position <arg format="%d" ordinal="3" /> and node <arg format="%d" ordinal="4" />.
+    </Description>
+    <Consequences>No operation will be possible until the fault is corrected. The system goes to Motors Off state.</Consequences>
+    <Causes>
+      1) The motor configuration is incorrect.<p />2) The axis load may be too high or the motor may have stalled (maybe due to a collision). <p />3) Short circuit between motor phases or ground. </Causes>
+    <Actions>
+      1) Check that the motor configuration is correct.<p />2) Check that the robot has not collided. <p />3) If possible, reduce the speed of the user program. <p />4) Check that the axis load is not too high for the drive unit. <p />5) Check the motor cable and motor by measuring their resistance respectively. Disconnect before measuring.
+    </Actions>
+  </Message>
+  <Message number="4311" eDefine="SYS_ERR_HW_INV_VOLTAGE_SAT_WARNING">
+    <Title>Drive inverter saturated warning</Title>
+    <Description>
+      The drive unit for joint <arg format="%s" ordinal="2" /> has reached maximum output voltage. The joint is connected to drive module <arg format="%d" ordinal="1" /> with the drive unit at unit position <arg format="%d" ordinal="3" /> and node <arg format="%d" ordinal="4" />.
+    </Description>
+    <Consequences>Operation will be possible but system is close to a stopping error.</Consequences>
+    <Causes>
+      1) The motor is not properly connected to the drive unit.<p />2) The motor data in the configuration is not correct.<p />3) The DC link voltage is too low. <p />4) Short circuit between motor phases or ground.
+    </Causes>
+    <Actions>
+      1) Check motor cables and connectors.<p />2) Check configuration of motor parameters.<p />3) Check for other hardware eventlog messages.<p />4) Check incoming mains voltage to the rectifier unit, adjust the mains tolerance min value. <p />5) Check the motor cable and motor by measuring their resistance respectively. Disconnect before measuring. </Actions>
+  </Message>
+  <Message number="4312" eDefine="SYS_ERR_HW_INV_UNIT_NOT_FOUND">
+    <Title>Missing drive unit</Title>
+    <Description>
+        For joint <arg format="%s" ordinal="1" />, the system cannot find configured drive unit. The joint is configured for drive module <arg format="%d" ordinal="2" />, in the drive unit at unit position <arg format="%d" ordinal="3" />.
+    </Description>
+    <Consequences>The system goes to System Failure state.</Consequences>
+    <Causes>
+        A joint is configured but drive unit is not found.
+    </Causes>
+    <Actions>
+        1) Verify that the drive module contains the drive unit for the configured joint.<p />2) Verify that the configuration for the drive unit position is correct.<p />3) Verify that the cables between drive units are correctly inserted in the correct connector position.<p />4) If the cable is correctly connected, then it may be damaged and should be replaced.<p />5) Check the event log for power supply unit error messages.<p />6) Check the cabling between the power supply unit and the drive unit.<p />7) Check the 24V output from the power supply unit.
+    </Actions>
+  </Message>
+  <Message number="4313" eDefine="SYS_ERR_HW_INV_WRONG_DSQC_NUMBER">
+    <Title>Wrong type of drive unit</Title>
+    <Description>
+      In drive module <arg format="%d" ordinal="1" />, the hardware identity for drive unit at unit position <arg format="%d" ordinal="2" /> is different from the one specified in the configuration. Installed drive unit hardware identity is <arg format="%s" ordinal="3" />, and the configured identity is <arg format="%s" ordinal="4" />.
+    </Description>
+    <Consequences>No operation will be possible until the fault is corrected. The system goes to System Failure state.</Consequences>
+    <Causes>The drive unit type does not match the one specified in the installation key.</Causes>
+    <Actions>
+      1) Verify that the drive unit position is correct, i.e., the Ethernet cables are correctly connected.<p />2) Verify that the drive module key match the installed hardware.<p />3) Replace the drive unit with the one specified in the drive module key.
+    </Actions>
+  </Message>
+  <Message number="4314" eDefine="SYS_ERR_HW_INV_NODE_NOT_FOUND">
+    <Title>Missing drive unit node</Title>
+    <Description>
+        For joint <arg format="%s" ordinal="1" />, the drive unit does not support the node number configured. The joint is configured for drive module <arg format="%d" ordinal="2" />, in the drive unit at unit position <arg format="%d" ordinal="3" /> with node <arg format="%d" ordinal="4" />.
+    </Description>
+    <Consequences>The system goes to System Failure state.</Consequences>
+    <Causes>
+        The configured drive unit node is not supported for the configured type of drive unit.
+    </Causes>
+    <Actions>
+        Check the drive unit node number in the configuration.
+    </Actions>
+  </Message>
+  <Message number="4316" eDefine="SYS_ERR_HW_INV_IQ_REGULATION_ERROR">
+    <Title>Motor current error</Title>
+    <Description>For joint <arg format="%s" ordinal="2" />, the current controller detected a too large torque current deviation for the motor. The joint is connected to drive module <arg format="%d" ordinal="1" /> in the drive unit at unit position <arg format="%d" ordinal="3" /> and node <arg format="%d" ordinal="4" />. </Description>
+    <Consequences>The system goes to Motors Off state.</Consequences>
+    <Causes>1) The motor data in the configuration files may be wrong.<p />2) The motor cables are not correctly connected or damaged.<p />3) Short circuit in motor cable between phase to phase or phase to ground. <p />4) The DC link voltage may be too low.<p />5) The incoming mains voltage is not within specification. </Causes>
+    <Actions>
+    1) Verify that the motor data in the configuration file is correct for this joint. How to check the configuration file is detailed in the Trouble Shooting Manual. <p />2) Verify that the motor cables are not damaged or badly connected.<p />3) Verify that the motor cables has no short circuits internally or to ground. <p />4) Verify that no DC link errors are present in the event log. <p />5) Verify that the incoming mains voltage is within the specification. Change the mains tolerance min so that it reflects the actual mains voltage. 
+  </Actions>
+  </Message>
+  <Message number="4317" eDefine="SYS_ERR_HW_INV_ID_REGULATION_ERROR">
+    <Title>Motor current error</Title>
+    <Description>For joint <arg format="%s" ordinal="2" />, the current controller detected a too large current deviation for the motor. The joint is connected to drive module <arg format="%d" ordinal="1" /> in the drive unit at unit position <arg format="%d" ordinal="3" /> and node <arg format="%d" ordinal="4" />.
+   </Description>
+    <Consequences>The system goes to Motors Off state.</Consequences>
+    <Causes>1) The motor data in the configuration files may be wrong.<p />2) The motor cables are not correctly connected or damaged.<p />3) Short circuit in motor cable between phase to phase or phase to ground. <p />4) The DC link voltage may be too low.<p />5) The incoming mains voltage is not within specification. </Causes>
+    <Actions>1) Verify that the motor data in the configuration file is correct for this joint. How to check the configuration file is detailed in the Trouble Shooting Manual. <p />2) Verify that the motor cables are not damaged or badly connected.<p />3) Verify that the motor cables has no short circuits internally or to ground. <p />4) Verify that no DC link errors are present in the event log. <p />5) Verify that the incoming mains voltage is within the specification. Change the mains tolerance min so that it reflects the actual mains voltage.<p /></Actions>
+  </Message>
+  <Message number="4318" eDefine="SYS_ERR_HW_INV_VOLTAGE_SAT_ERROR">
+    <Title>Drive inverter saturated error</Title>
+    <Description>The drive unit for joint <arg format="%s" ordinal="2" /> has reached maximum output voltage. The joint is connected to drive module <arg format="%d" ordinal="1" /> with the drive unit at unit position <arg format="%d" ordinal="3" /> and node <arg format="%d" ordinal="4" />. </Description>
+    <Consequences>The system goes to Motors Off state </Consequences>
+    <Causes>1) The motor is not properly connected to the drive unit.<p />2) The motor data in the configuration is not correct.<p />3) The DC link voltage is too low. <p />4) Short circuit between motor phases or ground. </Causes>
+    <Actions>1) Check motor cables and connectors.<p />2) Check configuration of motor parameters.<p />3) Check for other hardware eventlog messages.<p />4) Check incoming mains voltage to the rectifier unit. <p />5) Check the motor cable and motor by measuring their resistance respectively. Disconnect before measuring.</Actions>
+  </Message>
+  <Message number="4319" eDefine="SYS_ERR_HW_INV_FAILURE">
+    <Title>Drive unit critical error</Title>
+    <Description>
+         The drive unit for joint <arg format="%s" ordinal="2" /> gives an unspecified error, but is likely due to over temperature or short circuit. The joint is connected to drive module <arg format="%d" ordinal="1" /> with the drive unit at unit position <arg format="%d" ordinal="3" /> and node <arg format="%d" ordinal="4" />.
+      </Description>
+    <Consequences>No operation will be possible until the fault is corrected. The system goes to Motors Off state with zero torque.</Consequences>
+    <Causes>
+         1) The cooling fans may be faulty or the air flow may be obstructed. <p />2) The cooling fins are covered by dust reducing the cooling effect.<p />3) The ambient temperature may be too high. <p />4) The joint may be running with a too high torque for extended periods of time. <p />5) Short circuit in cables or connectors between the phases or to ground.<p />6) Short circuit in motor between the phases or to ground.
+      </Causes>
+    <Actions>
+         1) Verify that the fans are running and that the air flow is not obstructed. <p />2) Clean the cooling fins.<p />3) Verify that the ambient temperature does not exceed the cabinet's temperature rating. <p />4) If possible, rewrite the user program to reduce the amount of hard acceleration and hard deceleration. <p />5) Reduce the static torque due to gravity or external forces. <p />6) Check/replace cables and connectors.<p />7) Check/replace motor.
+      </Actions>
+  </Message>
+  <Message number="4320" eDefine="SYS_ERR_HW_INV_TOO_MANY_DRIVE_NODES_CONNECTED">
+    <Title>Too many drive nodes connected</Title>
+    <Description>In drive module <arg format="%d" ordinal="1" /> the system has detected more drive nodes than the system can handle. The error occured when drive unit at unit position <arg format="%d" ordinal="2" /> was detected.</Description>
+    <Consequences>No operation will be possible until the fault is corrected. The system goes to System Failure state.</Consequences>
+    <Causes>1) Too many drive units is connected to the drive unit communication link. <p />2) The connected drive units can be of wrong types, and may be equipped with too many drive nodes.</Causes>
+    <Actions>1) Verify that the proper drive unit types are connected to the drive unit communication link. <p />2) Disconnect unused drive unit(s).</Actions>
+  </Message>
+  <Message number="4321" eDefine="SYS_ERR_HW_INV_TOO_MANY_USING_SAME_EXCITATION">
+    <Title>Drive unit configuration error</Title>
+    <Description> In drive module <arg format="%d" ordinal="1" /> the drive unit at position <arg format="%d" ordinal="2" /> has a configuration error due to a missmatch between the drive unit and measurement system. The drive unit can only support <arg format="%d" ordinal="4" /> joints having same measurement excitation. The error ocurred when adding joint <arg format="%s" ordinal="3" /> to the system. <p /><p /></Description>
+    <Consequences>No operation will be possible until the fault is corrected. The system goes to System Failure state.</Consequences>
+    <Causes>Too many joints are using same measurement excitation and all are using same drive unit. </Causes>
+    <Actions>
+		1) Move the joint <arg format="%s" ordinal="3" /> or another joint with same node excitation to the other excitation (EXC1 - EXC2), by reroute the joint measurement node connection both in hardware and in configuration.<p />2) Restart the system.
+	</Actions>
+  </Message>
+  <Message number="4322" eDefine="SYS_ERR_HW_INV_WRONG_RECTIFIER_CONFIG_ERROR">
+    <Title>Drive unit configuration error</Title>
+    <Description>
+      In drive module <arg format="%d" ordinal="1" /> the drive unit at position <arg format="%d" ordinal="2" /> is using wrong rectifier. <p /><p /></Description>
+    <Consequences>No operation will be possible until the fault is corrected. The system goes to System Failure state.</Consequences>
+    <Causes>A drive unit must always configure a rectifier with lower or same unit position as the inverter. There must not be any other rectifier with unit position between the configured rectifier and drive unit.</Causes>
+    <Actions>
+		1) Check that configuration file for additional axis is of type drive system 09. <p />2) Change used rectifier (dc_link) in the additional axis configuration. <p />3) Remove unused rectifier mounted between configured rectifier and drive unit.
+	</Actions>
+  </Message>
+  <Message number="4400" eDefine="SYS_ERR_HW_PU_DC_VOLTAGE_TOO_HIGH_ERROR">
+    <Title>DC link voltage too high</Title>
+    <Description>
+      In drive module <arg format="%d" ordinal="1" />, the drive unit at unit position <arg format="%d" ordinal="2" /> has a DC link voltage that is too high. 
+    </Description>
+    <Consequences>No operation will be possible until the fault is corrected. The system goes to Motors Off state.<p /><p />WARNING HIGH VOLTAGE: THE DC LINK MAY BE DISCHARGED VERY SLOWLY (APPROXIMATELY 1 HOUR) WHEN THE SYSTEM IS POWERED OFF.<p /></Consequences>
+    <Causes>1) The bleeder resistor is not connected or faulty.<p />2) The user program may contain too much deceleration of the manipulator's axes. This fault is more likely if the system contains additional axes.</Causes>
+    <Actions>
+      WARNING HIGH VOLTAGE CAN BE PRESENT.<p />1) Make sure the bleeder resistor cable is properly connected to the rectifier unit. <p />2) Disconnect the bleeder and check the cable and measure the bleeder resistance. The expected resistance should be approximately <arg format="%d" ordinal="3" /> ohms. <p />3) Rewrite the user program to reduce the amount of hard decelerations.
+    </Actions>
+  </Message>
+  <Message number="4401" eDefine="SYS_ERR_HW_PU_DC_TOO_LOW_WARNING">
+    <Title>DC link voltage too low warning</Title>
+    <Description>
+			In drive module <arg format="%d" ordinal="1" />, the drive unit at unit position <arg format="%d" ordinal="2" /> has a DC link voltage that is close to minimum limit.
+		</Description>
+    <Consequences>Operation will be possible but the system is close to a stopping error.</Consequences>
+    <Causes>The incoming mains voltage to the rectifier unit is out of specification.</Causes>
+    <Actions>
+			1) Check for other hardware eventlog messages regarding mains voltage problem.<p />2) Check incoming mains voltage. Change the mains tolerance min so that the mains voltage is inside the specified interval.<p />3) Check that the correct voltage is selected with jumpers on the transformer (optional).<p />4) Check all internal 3-phase components (main switch, mains filter, fuse, contactors) and cabling in the drive module.<p /></Actions>
+  </Message>
+  <Message number="4402" eDefine="SYS_ERR_HW_PU_DC_TOO_LOW_ERROR">
+    <Title>DC link voltage too low</Title>
+    <Description>
+      In drive module <arg format="%d" ordinal="1" />, the DC link voltage is too low for the drive unit at unit position <arg format="%d" ordinal="2" />.
+    </Description>
+    <Consequences>No operation will be possible until the fault is corrected. The system goes to Motors Off state.</Consequences>
+    <Causes>The incoming mains voltage to the rectifier unit is out of specification.</Causes>
+    <Actions>
+      1) Check for other hardware eventlog messages regarding mains voltage problem.<p />2) Check incoming mains voltage. Change the mains tolerance min so that the mains voltage is inside the specified interval.<p />3) Check that the correct voltage is selected with jumpers on the transformer (optional).<p />4) Check all internal 3-phase components (main switch, mains filter, fuse, contactors) and cabling in the drive module.<p /></Actions>
+  </Message>
+  <Message number="4404" eDefine="SYS_ERR_HW_PU_DC_VOLTAGE_CRITICAL_TOO_HIGH_ERROR">
+    <Title>DC link voltage is critically high</Title>
+    <Description>
+      In drive module <arg format="%d" ordinal="1" />, the drive unit at unit position <arg format="%d" ordinal="2" /> has a DC link voltage that is critically high.
+    </Description>
+    <Consequences>No operation will be possible until the fault is corrected. The system goes to Motors Off state with zero torque.<p /><p />WARNING HIGH VOLTAGE: THE DC LINK MAY BE DISCHARGED VERY SLOWLY (APPROXIMATELY 1 HOUR) WHEN THE SYSTEM IS POWERED OFF.<p /></Consequences>
+    <Causes>1) The bleeder resistor is not connected or faulty.<p />2) The user program may contain too much deceleration of the manipulator's axes. This fault is more likely if the system contains additional axes.</Causes>
+    <Actions>
+      WARNING HIGH VOLTAGE CAN BE PRESENT.<p />1) Make sure the bleeder resistor cable is properly connected to the rectifier unit. <p />2) Disconnect the bleeder and check the cable and measure the bleeder resistance. The expected resistance should be approximately <arg format="%d" ordinal="3" /> ohms. <p />3) Rewrite the user program to reduce the amount of hard decelerations.
+    </Actions>
+  </Message>
+  <Message number="4405" eDefine="SYS_ERR_HW_PU_DC_VOLTAGE_WARNING">
+    <Title>DC link voltage too high warning</Title>
+    <Description>
+      In drive module <arg format="%d" ordinal="1" />, the drive unit at unit position <arg format="%d" ordinal="2" /> has a DC link voltage that is close to maximum limit.
+    </Description>
+    <Consequences>Operation will be possible but the system is close to a stopping error.<p /><p />WARNING HIGH VOLTAGE: THE DC LINK MAY BE DISCHARGED VERY SLOWLY (APPROXIMATELY 1 HOUR) WHEN THE SYSTEM IS POWERED OFF.<p /></Consequences>
+    <Causes>1) The bleeder resistor is not connected or faulty.<p />2) The user program may contain too much deceleration of the manipulator's axes. This fault is more likely if the system contains additional axes.</Causes>
+    <Actions>
+      WARNING HIGH VOLTAGE CAN BE PRESENT.<p />1) Make sure the bleeder resistor cable is properly connected to the rectifier unit. <p />2) Disconnect the bleeder and check the cable and measure the bleeder resistance. The expected resistance should be approximately <arg format="%d" ordinal="3" /> ohms. <p />3) Rewrite the user program to reduce the amount of hard decelerations.
+    </Actions>
+  </Message>
+  <Message number="4406" eDefine="SYS_ERR_HW_PU_LOGIC_VOLTAGE_ERROR">
+    <Title>Drive unit power supply error</Title>
+    <Description>
+      In drive module <arg format="%d" ordinal="1" />, the drive unit with unit position <arg format="%d" ordinal="2" /> has detected problem with the logic power.
+    </Description>
+    <Consequences>No operation will be possible until the fault is corrected. The system goes to Motors Off state with zero torque.</Consequences>
+    <Causes>
+      The 24V logic supply to the drive is temporary or constantly lost.</Causes>
+    <Actions>
+      1) Check the event log for power supply unit error messages. <p />2) Check the cabling between the power supply unit and the drive unit.<p />3) Check the 24V output from the power supply unit.
+    </Actions>
+  </Message>
+  <Message number="4407" eDefine="SYS_ERR_HW_PU_INTERNAL_ERROR">
+    <Title>Drive unit internal error</Title>
+    <Description>In drive module <arg format="%d" ordinal="1" />, the drive unit at unit position <arg format="%d" ordinal="2" /> has indicated an internal error.</Description>
+    <Consequences>The system goes to System Failure state with zero torque. </Consequences>
+    <Causes>An internal error has occurred in the drive unit firmware.</Causes>
+    <Actions>Restart the system by using the main power switch.</Actions>
+  </Message>
+  <Message number="4408" eDefine="SYS_ERR_HW_PU_EEPROM_ERROR">
+    <Title>Drive unit hardware data error</Title>
+    <Description>In drive module <arg format="%d" ordinal="1" />, the drive unit at unit position <arg format="%d" ordinal="2" /> has corrupt information stored on the unit.</Description>
+    <Consequences>The system goes to System Failure state. </Consequences>
+    <Causes>The integrity check of the drive unit information stored on the drive unit has failed.</Causes>
+    <Actions>1) Retry again by restarting the system using the main power switch.<p />2) Replace the faulty drive unit.</Actions>
+  </Message>
+  <Message number="4409" eDefine="SYS_ERR_HW_PU_STARTUP_ERROR">
+    <Title>Drive unit startup error</Title>
+    <Description>The system has failed to complete the initialization phase of a drive unit. The drive unit is located in drive module <arg format="%d" ordinal="1" /> at unit position <arg format="%d" ordinal="2" />.</Description>
+    <Consequences>The system goes to System Failure state. </Consequences>
+    <Causes>The system has failed to complete the initialization phase of the drive unit.</Causes>
+    <Actions>1) Retry by restarting the system using the main power switch.<p />2) Check for other hardware eventlog messages.</Actions>
+  </Message>
+  <Message number="4410" eDefine="SYS_ERR_HW_PU_TOO_MANY_UNITS_CONNECTED">
+    <Title>Too many drive units connected</Title>
+    <Description> In drive module <arg format="%d" ordinal="1" /> the system has detected more drive units than the system can handle. The maximum number of drive units supported is <arg format="%d" ordinal="2" />, but <arg format="%d" ordinal="3" /> was detected. </Description>
+    <Consequences> No operation will be possible until the fault is corrected. The system goes to System Failure state.</Consequences>
+    <Causes> 1) Too many drive unit that are connected. <p /></Causes>
+    <Actions> 1) Disconnect unused drive unit(s). </Actions>
+  </Message>
+  <Message number="4411" eDefine="SYS_ERR_HW_PU_DC_LINK_ERROR">
+    <Title>DC link error</Title>
+    <Description> The system has detected an unexpected low DC bus voltage in a drive unit that is not used by any joints. The drive unit is located in drive module <arg format="%d" ordinal="1" /> at unit position <arg format="%d" ordinal="2" />.</Description>
+    <Consequences>No operation will be possible until the fault is corrected. The system goes to Motors Off state.</Consequences>
+    <Causes> 1) Incomming mains are missing.<p /> 2) The DC bus cable is faulty connected to the drive unit.<p /> 3) Short circuit on a DC bus. It can be both inside the drive unit and in the cables.<p /></Causes>
+    <Actions> 1) Check incomming mains.<p /> 2) Check DC cabling.<p /> 3) Check if there are any short circuit.<p /> 4) Replace the drive unit(s).</Actions>
+  </Message>
+  <Message number="7001" eDefine="SYS_ERR_HW_AUX_RUN_RELAY">
+    <Title>Motors ON contactor activation error</Title>
+    <Description>Motors ON contactor <arg format="%d" ordinal="1" /> in drive module <arg format="%d" ordinal="2" /> failed to close when ordered.</Description>
+    <Consequences>The mechanical unit can not be run manually or automatically.</Consequences>
+    <Causes>1) The runchain for the contactor is open.<p />2) There are problems in the contactor itself, either mechanical or electrical.<p />3) The teach pendant enabling device may have been toggled too quickly, or the system may not be configured correctly. On rare occasions, this fault may occur in combination with other faults, in which case this may be found in the error log.</Causes>
+    <Actions>1) To resume normal operation, first acknowledge the error, then release the enabling device and press it again after approx. one second. <p />2) Check cables and connections on the Safety System.<p />3) Check any other error log messages coinciding in time with this one for clues. <p />4) Check the system Motion configuration regarding Motors ON relay. How to check the configuration file is detailed in the Trouble Shooting Manual.</Actions>
+  </Message>
+  <Message number="7043" eDefine="SYS_ERR_HW_AUX_PU_DRVOVLD">
+    <Title>Safety signals overloaded</Title>
+    <Description>The AC_ON or SPEED signals draw too much current. </Description>
+    <Consequences>The Safety System shuts down the signals, causing the system to go to either status SYS FAIL (for AC_ON) or status SYS HALT (for SPEED).</Consequences>
+    <Causes>A load connected to the circuit may be too high, or the Safety System may be malfunctioning. See the Circuit Diagram!</Causes>
+    <Actions>1) Check all loads connected to the AC_ON and SPEED circuits <p />2) Check the Safety System cabling and connectors, and replace any faulty unit if required.</Actions>
+  </Message>
+  <Message number="7044" eDefine="SYS_ERR_HW_AUX_PU_USERDOOVLD">
+    <Title>Overload on Panel Board digital output signals</Title>
+    <Description>The Panel Board User Digital outputs draw too much current.</Description>
+    <Consequences>The Panel Board shuts down the signals, causing the system to go to status SYS HALT.</Consequences>
+    <Causes>A load connected to the circuit may be too high, or the Panel Board may be malfunctioning. See the Circuit Diagram!</Causes>
+    <Actions>1) Check all loads connected to the User Digital outputs <p />2) Check the Panel Board cabling and connectors, and replace any faulty unit if required.</Actions>
+  </Message>
+  <Message number="7045" eDefine="SYS_ERR_HW_AUX_PU_PANFAN">
+    <Title>Faulty External Computer fan</Title>
+    <Description>The External Computer fan in the Control Module spins too slowly.</Description>
+    <Consequences>No system consequence. The Control Module temperature will rise.</Consequences>
+    <Causes>Faulty fan, cabling or power supply. See the Circuit Diagram!</Causes>
+    <Actions>1) Check the cabling to the External Computer fan. <p />2) Check the fan, and replace any faulty unit if required.</Actions>
+  </Message>
+  <Message number="7046" eDefine="SYS_ERR_HW_AUX_PU_PANEL24OVLD">
+    <Title>Safety signals overloaded</Title>
+    <Description>The 24 V PANEL supply draws too much current. </Description>
+    <Consequences>The Safety System shuts down the signal, causing the system to go to status SYS HALT.</Consequences>
+    <Causes>A load connected to the circuit may be too high, or the Safety System unit may be malfunctioning. See the Circuit Diagram!</Causes>
+    <Actions>1) Check all loads connected to the 24V PANEL circuit. <p />2) Check cabling on the Safety System.</Actions>
+  </Message>
+  <Message number="7049" eDefine="SYS_ERR_HW_AUX_ACTIVATION_RELAY">
+    <Title>Activation contactor activation error</Title>
+    <Description>The activation relay for mechanical unit <arg format="%s" ordinal="1" /> failed to close.</Description>
+    <Consequences>The mechanical unit can not be run manually or automatically.</Consequences>
+    <Causes>The activation relay configured within the system may be faulty, or the system may not be configured correctly.</Causes>
+    <Actions>1) Check the contactor and make sure its connections are connected correctly. <p />2) Check the system Motion configuration regarding the activation relay. How to check the configuration file is detailed in the Trouble Shooting Manual.</Actions>
+  </Message>
+  <Message number="7050" eDefine="SYS_ERR_HW_AUX_CPU_TEMP">
+    <Title>Overtemperature in main computer</Title>
+    <Description>The temperature in the main computer unit or the main computer processor is too high.</Description>
+    <Consequences>The system might get damaged.</Consequences>
+    <Causes>The unit may be overloaded, its fans may be malfunctioning or the air flow may be restricted.</Causes>
+    <Actions>1) Make sure the fans are operating. <p />2) Check that air flow to the unit fans is not restricted.</Actions>
+  </Message>
+  <Message number="7053" eDefine="SYS_ERR_HW_AUX_CMOS_BATTERY">
+    <Title>Low CMOS battery voltage level</Title>
+    <Description>The CMOS battery on the computer board is empty.</Description>
+    <Consequences>On restart, the system will use an erroneous setup or no restart will be possible.</Consequences>
+    <Causes>Faulty battery.</Causes>
+    <Actions>1. Replace the CMOS battery</Actions>
+  </Message>
+  <Message number="7054" eDefine="SYS_ERR_HW_AUX_MAIN_FAN">
+    <Title>Faulty Computer Unit fan</Title>
+    <Description>The fans in the Computer Unit spin too slowly.</Description>
+    <Consequences>No system consequence. The Computer Unit temperature will rise.</Consequences>
+    <Causes>Faulty fan, cabling or power supply. See the Circuit Diagram!</Causes>
+    <Actions>1) Check the cabling to the Computer Unit fan. <p />2) Check the fan. <p />3) Check the fan power supply. <p />4) Replace the faulty component if required.</Actions>
+  </Message>
+  <Message number="7056" eDefine="SYS_ERR_HW_AUX_LM78_FAN3_ERROR">
+    <Title>Cooling fan error</Title>
+    <Description>Cooling unit fan has stopped or is rotating very slowly (Less than <arg format="%.f" ordinal="1" /> rpm).</Description>
+    <Actions>1. Check the fan cables.<p />2. Replace the fan.</Actions>
+  </Message>
+  <Message number="7062" eDefine="SYS_ERR_HW_AUX_VOLTAGE_ALARM">
+    <Title>Computer Module power supply warning</Title>
+    <Description>The <arg format="%.f" ordinal="1" /> V voltage of the Computer Module power supply is <arg format="%.f" ordinal="2" /> V, which is out of the allowed range.</Description>
+    <Consequences>-</Consequences>
+    <Causes>The power supply unit, cabling, input voltage to the power supply or the output load may cause the faulty voltage level. See the Trouble Shooting Manual and Circuit Diagram!</Causes>
+    <Actions>1) Check all cabling to the power supply unit. <p />2) Measure the output and input voltage levels. <p />3) Replace the faulty unit if required.</Actions>
+  </Message>
+  <Message number="7069" eDefine="SYS_ERR_HW_AUX_PSU_FAIL">
+    <Title>Faulty backup Power Supply</Title>
+    <Description>The backup energy bank in the Control Module supplying the backup voltage is faulty.</Description>
+    <Consequences>After switching the power off, a B type restart must be performed. No system data changes will be saved at power off.</Consequences>
+    <Causes>This may be caused by a faulty backup energy bank, cabling or charger.</Causes>
+    <Actions>Do not turn the main power off until battery has been charged, or the system may perform a cold start! <p />1) Check the backup energy bank cabling and connectors. <p />2) Check the backup energy bank.<p />3) Check the power supply. <p />4) Replace the faulty unit if required.</Actions>
+  </Message>
+  <Message number="7070" eDefine="SYS_ERR_HW_AUX_PSU_TEMP">
+    <Title>Overtemp in Control Module Power Supply</Title>
+    <Description>The temperature in the control module power supply is too high.</Description>
+    <Consequences>The system is shut down immediately.</Consequences>
+    <Causes>This may be caused by poor cooling, too high a load on the power supply or by a faulty power supply.</Causes>
+    <Actions>1) Check the cooling fan. <p />2) Check the output power. <p />3) Replace any faulty unit if required.</Actions>
+  </Message>
+  <Message number="7074" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_TOO_LOW_PRES">
+    <Title>Purge pressure too low</Title>
+    <Description>Purge system number <arg format="%i" ordinal="1" /> assosiated with Manipulator Interface Board (MIB) <arg format="%i" ordinal="2" />.</Description>
+    <Actions>Check the purge air supply and search for leaks in: <p />1. The purge unit. <p />2. The flexible hose conduit. <p />3. The manipulator itself.</Actions>
+  </Message>
+  <Message number="7075" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_TOO_HIGH_PRES">
+    <Title>Purge pressure too high</Title>
+    <Description>Purge system number <arg format="%i" ordinal="1" /> assosiated with Manipulator Interface Board (MIB) <arg format="%i" ordinal="2" />.</Description>
+    <Actions>Check the purge unit and the air supply.</Actions>
+  </Message>
+  <Message number="7076" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_UNEXP_LOW_FLOW">
+    <Title>Unexpected low purge flow</Title>
+    <Description>Purge system number <arg format="%i" ordinal="1" /> assosiated with Manipulator Interface Board (MIB) <arg format="%i" ordinal="2" />.</Description>
+    <Actions>Check the purge unit and the air supply. Search for leaks in the purge system.</Actions>
+  </Message>
+  <Message number="7077" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_UNEXP_HIGH_FLOW">
+    <Title>Unexpected high purge flow</Title>
+    <Description>Purge system number <arg format="%i" ordinal="1" /> assosiated with Manipulator Interface Board (MIB) <arg format="%i" ordinal="2" />.</Description>
+    <Actions>Check the purge unit and the air supply.</Actions>
+  </Message>
+  <Message number="7078" eDefine="SYS_ERR_HW_AUX_PURGE_ERR_UNAC_TIMER_DIV1">
+    <Title>Purge timers differ</Title>
+    <Description>Unacceptable divergence between Process Interface Board (PIB) and Manipulator Interface Board (MIB) <arg format="%i" ordinal="1" /> purge timers. </Description>
+    <Consequences>The purge timer will be restarted. </Consequences>
+    <Actions>1. Check Serial Peripheral Interface (SPI) cables.<p />2. Replace MIB if faulty.<p />3. Replace PIB if faulty.<p /><p /></Actions>
+  </Message>
+</Domain>

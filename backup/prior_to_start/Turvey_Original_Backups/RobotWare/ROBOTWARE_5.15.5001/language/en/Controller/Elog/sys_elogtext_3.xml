@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="SYS" domainNo="2" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="249" max="366">
+  <Message number="249" eDefine="SYS_ERR_SYS_CONFLICT_DRV3K">
+    <Title>Motor Contactor conflict, DRV3</Title>
+    <Description>Only one of the two Motor Contactors for drive system 3 has acknowledged the activation order.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>A failure of the motor contactor auxiliary contacts or the supply to these.</Causes>
+    <Actions>1) Check cables and connections.  <p />2) Check the function of the auxiliary contacts.</Actions>
+  </Message>
+  <Message number="250" eDefine="SYS_ERR_SYS_CONFLICT_DRV4K">
+    <Title>Motor Contactor conflict, DRV4</Title>
+    <Description>Only one of the two Motor Contactors for drive system 4 has acknowledged the activation order.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>A failure of the motor contactor auxiliary contacts or the supply to these.</Causes>
+    <Actions>1) Check cables and connections. <p />2) Check the function of the auxiliary contacts.</Actions>
+  </Message>
+  <Message number="252" eDefine="SYS_ERR_SYS_ACTIVE_DRV1PTCINT">
+    <Title>Motor temperature high, DRV1</Title>
+    <Description>Over temperature in Manipulator Motor. Make sure to let the Motor cool down before ordering Motors On again.<p /></Description>
+    <Actions>1) Wait until the overheated Motor has cooled down before ordering Motors On again. <p />2) If optional air filter is used, check if it is clogged and has to be exchanged</Actions>
+  </Message>
+  <Message number="253" eDefine="SYS_ERR_SYS_ACTIVE_DRV1PTCEXT">
+    <Title>External device temperature high, DRV1</Title>
+    <Description>Over temperature in External Device. Make sure to let the External Device cool down before ordering Motors On again.<p /></Description>
+    <Actions>Wait until the overheated Motor has cooled down before ordering Motors On again.</Actions>
+  </Message>
+  <Message number="254" eDefine="SYS_ERR_SYS_ACTIVE_DRV2PTCINT">
+    <Title>Motor temperature high, DRV2</Title>
+    <Description>Over temperature in Manipulator Motor. Make sure to let the Motor cool down before ordering Motors On again.<p /></Description>
+    <Actions>1) Wait until the overheated Motor has cooled down before ordering Motors On again. <p />2) If optional air filter is used, check if it is clogged and has to be exchanged</Actions>
+  </Message>
+  <Message number="255" eDefine="SYS_ERR_SYS_ACTIVE_DRV2PTCEXT">
+    <Title>External device temperature high, DRV2</Title>
+    <Description>Over temperature in External Device. Make sure to let the External Device cool down before ordering Motors On again.<p /></Description>
+    <Actions>Wait until the overheated Motor has cooled down before ordering Motors On again.</Actions>
+  </Message>
+  <Message number="256" eDefine="SYS_ERR_SYS_ACTIVE_DRV3PTCINT">
+    <Title>Motor temperature high, DRV3</Title>
+    <Description>Over temperature in Manipulator Motor. Make sure to let the Motor cool down before ordering Motors On again.<p /></Description>
+    <Actions>1) Wait until the overheated Motor has cooled down before ordering Motors On again. <p />2) If optional air filter is used, check if it is clogged and has to be exchanged</Actions>
+  </Message>
+  <Message number="257" eDefine="SYS_ERR_SYS_ACTIVE_DRV3PTCEXT">
+    <Title>External device temperature high, DRV3</Title>
+    <Description>Over temperature in External Device. Make sure to let the External Device cool down before ordering Motors On again.<p /></Description>
+    <Actions>Wait until the overheated Motor has cooled down before ordering Motors On again.</Actions>
+  </Message>
+  <Message number="258" eDefine="SYS_ERR_SYS_ACTIVE_DRV4PTCINT">
+    <Title>Motor temperature high, DRV4</Title>
+    <Description>Over temperature in Manipulator Motor. Make sure to let the Motor cool down before ordering Motors On again.<p /></Description>
+    <Actions>1) Wait until the overheated Motor has cooled down before ordering Motors On again. <p />2) If optional air filter is used, check if it is clogged and has to be exchanged</Actions>
+  </Message>
+  <Message number="259" eDefine="SYS_ERR_SYS_ACTIVE_DRV4PTCEXT">
+    <Title>External device temperature high, DRV4</Title>
+    <Description>Over temperature in External Device. Make sure to let the External Device cool down before ordering Motors On again.<p /></Description>
+    <Actions>Wait until the overheated Motor has cooled down before ordering Motors On again.</Actions>
+  </Message>
+  <Message number="260" eDefine="SYS_ERR_SYS_CONFLICT_DRV1RUN">
+    <Title>Run Control status conflict, DRV1</Title>
+    <Description>Status conflict between Run Control and Motor Contactors for drive system 1.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>A failure of the Motor Contactors or the supply to these.</Causes>
+    <Actions>1) Check cables and connections. <p />2) Do a Warm start.</Actions>
+  </Message>
+  <Message number="262" eDefine="SYS_ERR_SYS_PSC_NOT_FOUND">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Not found
+    </Title>
+    <Description>
+      The system has an option for <arg format="%s" ordinal="2" /> Safety Controller (SC) on drive module <arg format="%d" ordinal="1" />, but no Safety Controller was found.
+    </Description>
+    <Actions>
+      - Check Safety Controller cabling.<p />- Check Safety Controller health.<p /><p />Warm start controller, after performing recommended actions.
+    </Actions>
+  </Message>
+  <Message number="263" eDefine="SYS_ERR_SYS_PSC_NO_COM_ESTABLISHED">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Communication Failure
+    </Title>
+    <Description>
+      Communication error with Safety Controller (SC) <arg format="%d" ordinal="1" /></Description>
+    <Actions>
+      - Check Safety Controller cabling.<p />- Check Safety Controller health.<p /><p />Warm start controller, after performing recommended actions.
+    </Actions>
+  </Message>
+  <Message number="264" eDefine="SYS_ERR_SYS_PSC_OPTION_NOT_PRESENT">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Option Not Present
+    </Title>
+    <Description>
+      Found <arg format="%s" ordinal="2" /> Safety Controller (SC) on drive module <arg format="%d" ordinal="1" />.This system does not have the option for a Safety Controller on that drive module.
+    </Description>
+    <Actions>
+      - Check drive module software options.<p />- Install a system with Safety Controller option.
+    </Actions>
+  </Message>
+  <Message number="265" eDefine="SYS_ERR_SYS_PSC_SOFT_STOP_ERROR">
+    <Title>SC Soft Stop Error</Title>
+    <Description>Safety Controller (SC) Soft Stop has not opened the Motor Contactors within the calculated time</Description>
+    <Actions>Check Lim-switch connection if SafeMove is present</Actions>
+  </Message>
+  <Message number="266" eDefine="SYS_ERR_SYS_PSC_INPUT_PINCODE">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> PIN Code Request
+    </Title>
+    <Description>
+      Safety Controller (SC) <arg format="%d" ordinal="1" /> has a new Safety Configuration and needs a new PIN code to be activated.
+    </Description>
+    <Actions>
+      1. Log in as a user with Safety Configuration grants.<p />2. Enter new PIN-Code for the Safety Controller in the Control Panel.
+    </Actions>
+  </Message>
+  <Message number="267" eDefine="SYS_ERR_SYS_PSC_STARTUP_ERROR">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Initialization Failed
+    </Title>
+    <Description>
+      Safety Controller (SC) <arg format="%d" ordinal="1" /> failed to initialize properly, or failed to respond during start up.
+    </Description>
+    <Actions>
+      1. Check previous error logs for possible causes.<p />2. Restart the system.
+    </Actions>
+  </Message>
+  <Message number="268" eDefine="SYS_ERR_SYS_PSC_WRONG_TYPE">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Wrong Type
+    </Title>
+    <Description>
+      Found <arg format="%s" ordinal="2" /> Safety Controller (SC) on drive module <arg format="%d" ordinal="1" />, expected <arg format="%s" ordinal="3" />.
+    </Description>
+    <Actions>
+      - Check drive module software options.<p />- Install a system with correct Safety Controller option.<p />- Install a Safety Controller of the correct type.
+    </Actions>
+  </Message>
+  <Message number="269" eDefine="SYS_ERR_SYS_PSC_CALIB_ERROR">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Motor Calibration Data Error
+	</Title>
+    <Description>
+	  No Calibration data has been downloaded to Safety Controller (SC) on drive module <arg format="%d" ordinal="1" />, or erroneous data.
+	</Description>
+    <Actions>
+	  Download Motor Calibration Data to Safety Controller (SC).
+	</Actions>
+  </Message>
+  <Message number="270" eDefine="SYS_ERR_SYS_PAN_MOD_ACCESS_ERR">
+    <Title>Access error</Title>
+    <Description>Panel Module access error.<p /></Description>
+    <Actions>Examine your I/O configuration files.</Actions>
+  </Message>
+  <Message number="280" eDefine="SYS_ERR_SYS_CONFLICT_SIGNAL">
+    <Title>Symbol conflict</Title>
+    <Description>The signal <arg format="%s" ordinal="1" /> defined in the IO<p />configuration conflict with another<p />program symbol with the same name.<p />Due on that fact the signal will not be<p />mapped to a program variable.<p /></Description>
+    <Actions>Rename the signal in<p />the IO configuration.</Actions>
+  </Message>
+  <Message number="281" eDefine="SYS_ERR_SYS_IO_CFG_ERR">
+    <Title>IO configuration error</Title>
+    <Description>
+      <arg format="%s" ordinal="1" />
+      <arg format="%s" ordinal="2" /> with signal<p />name <arg format="%s" ordinal="3" /> has wrong signal<p />type. Found <arg format="%s" ordinal="4" /> expected <arg format="%s" ordinal="5" />.<p /></Description>
+    <Actions>Change your configuration<p />and restart the system.</Actions>
+  </Message>
+  <Message number="282" eDefine="SYS_ERR_SYS_TX_INDEX_EXIST">
+    <Title>Resource and index exist</Title>
+    <Description>Resource <arg format="%s" ordinal="1" /><p />Index <arg format="%d" ordinal="2" />.<p /></Description>
+    <Actions />
+  </Message>
+  <Message number="283" eDefine="SYS_ERR_SYS_TX_NO_MEM">
+    <Title>Text database is full.</Title>
+    <Description>Resource <arg format="%s" ordinal="1" /><p />Index <arg format="%d" ordinal="2" /><p /></Description>
+    <Actions />
+  </Message>
+  <Message number="284" eDefine="SYS_ERR_SYS_IO_CFG_SYSIN_ERR">
+    <Title>Wrong Signal Type For System Input</Title>
+    <Description>The System Input <arg format="%s" ordinal="1" /> is configured with an I/O-signal of<p />wrong type. <p />The I/O-signal <arg format="%s" ordinal="2" /> is of type <arg format="%s" ordinal="3" /> and this System Input<p />requires an I/O-signal of type <arg format="%s" ordinal="4" />.</Description>
+    <Actions>Change the configuration for the specified System Input.<p /></Actions>
+  </Message>
+  <Message number="285" eDefine="SYS_ERR_SYS_IO_CFG_SYSOUT_ERR">
+    <Title>Wrong Signal Type For System Output</Title>
+    <Description>The System Output <arg format="%s" ordinal="1" /> is configured with an I/O-signal of<p />wrong type. <p />The I/O-signal <arg format="%s" ordinal="2" /> is of type <arg format="%s" ordinal="3" /> and this System Output<p />requires an I/O-signal of type <arg format="%s" ordinal="4" />.<p /></Description>
+    <Actions>Change the configuration for the specified System Output.</Actions>
+  </Message>
+  <Message number="286" eDefine="SYS_ERR_SYS_IO_CONFLICT_SYSOUT_ERR">
+    <Title>Not Unique I/O-Signal For System Output</Title>
+    <Description>Each System Output must have a unique I/O-signal configured.<p />It is not possible to configure same I/O-signal to several System Outputs.<p /><p />System Output: <arg format="%s" ordinal="1" /><p />Signal Name: <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>
+      <p />
+    </Actions>
+  </Message>
+  <Message number="287" eDefine="SYS_ERR_SYS_IO_CONFLICT_SYSIN_ERR">
+    <Title>Not Unique I/O-signal For System Input</Title>
+    <Description>Each System Input must have a unique I/O-signal configured.<p />It is not possible to configure same I/O-signal to several System Inputs. <p /><p />System Input: <arg format="%s" ordinal="1" /><p />Signal Name: <arg format="%s" ordinal="2" /></Description>
+  </Message>
+  <Message number="288" eDefine="SYS_ERR_SYS_IO_UNKNOWN_SYSOUT_ERR">
+    <Title>Unknown System Output Type</Title>
+    <Description>The configured System Output type is unknown by the system. <p />Unknown System Output: <arg format="%s" ordinal="1" /></Description>
+    <Actions>Verify that the System Output name is correctly spelled.</Actions>
+  </Message>
+  <Message number="289" eDefine="SYS_ERR_SYS_IO_UNKNOWN_SYSIN_ERR">
+    <Title>Unknown System Input Type</Title>
+    <Description>The configured System Input type is unknown by the system. <p />Unknown System Input: <arg format="%s" ordinal="1" /></Description>
+    <Actions>Verify that the System Input name is correctly spelled.</Actions>
+  </Message>
+  <Message number="290" eDefine="SYS_ERR_SYS_IO_ARG_TASK_SYSOUT_ERR">
+    <Title>Unknown Mechanical Unit Name For System Output </Title>
+    <Description>A System Output is configured with a mechanical unit name which is unknown by the system.<p />System Output: <arg format="%s" ordinal="1" /><p />Mechanical unit name: <arg format="%s" ordinal="2" /></Description>
+    <Actions>The specified mechanical unit must be configured in order to be used by System Outputs<p />Verify that the mechanical unit name is correctly spelled.<p /></Actions>
+  </Message>
+  <Message number="291" eDefine="SYS_ERR_SYS_IO_UNKNOWN_RESTR_TYPE_ERR">
+    <Title>Unknown System Input Restriction Type</Title>
+    <Description>The configured System Input Restriction Type is unknown by the system.<p />Unknown System Input Restriction: <arg format="%s" ordinal="1" /></Description>
+    <Actions>Verify that the System Input Restriction name is correctly spelled.</Actions>
+  </Message>
+  <Message number="292" eDefine="SYS_ERR_SYS_IO_UNKNOWN_RESTR_ERR">
+    <Title>Unknown System Input Restriction</Title>
+    <Description>The configured System Input Restriction is unknown by the system.<p />System Input Restriction Type: <arg format="%s" ordinal="1" /><p />Unknown System Input Restriction: <arg format="%s" ordinal="2" /></Description>
+    <Actions>Verify that the System Input Restriction name is correctly spelled.</Actions>
+  </Message>
+  <Message number="293" eDefine="SYS_ERR_SYS_IO_SYSIN_RESTRICTED_ERR">
+    <Title>The Requested Action is Restricted</Title>
+    <Description>The requested <arg format="%s" ordinal="1" /> is restricted by the system input <arg format="%s" ordinal="2" /> set by I/O signal <arg format="%s" ordinal="3" />.</Description>
+    <Consequences>The action called for will not take place.</Consequences>
+    <Causes>System input <arg format="%s" ordinal="5" /> may be set by external equipment, such as PLCs, etc, for a number of reasons.</Causes>
+    <Actions>1) Investigate why the system input was set, and, if required, correct the reason.</Actions>
+  </Message>
+  <Message number="294" eDefine="SYS_ERR_SYS_IO_FAILURE_READ_IO">
+    <Title>Action <arg format="%s" ordinal="1" /> can not be fulfilled.</Title>
+    <Description>The requested action cannot be fulfilled since the IO unit is not responding.</Description>
+    <Consequences>It is not possible to decide if there are any restrictions set to the action.</Consequences>
+    <Causes>The requested action will not be fulfilled until the I/O unit is enabled again.</Causes>
+    <Actions>Never disable a unit with System Inputs/Outputs.<p /></Actions>
+  </Message>
+  <Message number="295" eDefine="SYS_ERR_SYS_IO_CFG_SYSOUT_ERR_SAF">
+    <Title>Signal cannot be used as System Output.</Title>
+    <Description>The System Output <arg format="%s" ordinal="1" /> is configured with an I/O-signal with wrong category. The I/O-signal <arg format="%s" ordinal="2" /> has category Safety and can not be used as System Output.</Description>
+    <Actions>Choose another signal or set to another category.</Actions>
+  </Message>
+  <Message number="296" eDefine="SYS_ERR_SYS_IO_ARG_TASK_SYSIN_ERR">
+    <Title>Wrong task name configured</Title>
+    <Description>Wrong task name <arg format="%s" ordinal="1" /> configured for System Output <arg format="%s" ordinal="2" />.</Description>
+    <Consequences>The digital output signal will not be connected to the specified event.</Consequences>
+    <Actions>Change the configuration and restart the system.</Actions>
+  </Message>
+  <Message number="297" eDefine="SYS_ERR_SYS_IO_SYSHALT">
+    <Title>System Output Communication Failure</Title>
+    <Description>Unable to set the value of the I/O signal <arg format="%s" ordinal="1" /> connected to the System Output <arg format="%s" ordinal="2" />.</Description>
+    <Consequences>The system goes to status SYS HALT</Consequences>
+    <Causes>- The connection to the I/O unit may have been lost.</Causes>
+  </Message>
+  <Message number="307" eDefine="SYS_ERR_SYS_ACTIVE_MOTOR_FAN1">
+    <Title>Motor cooling fan malfunction, axis 1</Title>
+    <Description>The axis 1 motor cooling fan on the robot connected to Drive Module <arg format="%d" ordinal="1" /> does not work correctly.</Description>
+    <Consequences>The full meaning of this status is described in the Trouble Shooting Manual, IRC5.</Consequences>
+    <Causes>-The fan power cabling may be damaged or not connected correctly to motor or contactor unit. <p />-The fan or the Drive Module Power Supply may be faulty.</Causes>
+    <Actions>1) Make sure the fan cable is correctly connected  <p />2) Make sure the fan is free to rotate and that the air flow is not obstructed. <p />3) Make sure the Drive Module Power Supply output and input voltages are within specified limits as detailed in the Trouble shooting manual. Replace any faulty unit.<p /><p /></Actions>
+  </Message>
+  <Message number="308" eDefine="SYS_ERR_SYS_ACTIVE_MOTOR_FAN2">
+    <Title>Motor cooling fan malfunction, axis 2</Title>
+    <Description>The axis 2 motor cooling fan on the robot connected to Drive Module <arg format="%d" ordinal="1" /> does not work correctly.</Description>
+    <Consequences>The full meaning of this status is described in the Trouble Shooting Manual, IRC5.</Consequences>
+    <Causes>-The fan power cabling may be damaged or not connected correctly to motor or contactor unit. <p />-The fan or the Drive Module Power Supply may be faulty.</Causes>
+    <Actions>1) Make sure the fan cable is correctly connected  <p />2) Make sure the fan is free to rotate and that the air flow is not obstructed. <p />3) Make sure the Drive Module Power Supply output and input voltages are within specified limits as detailed in the Trouble shooting manual. Replace any faulty unit.<p /><p /></Actions>
+  </Message>
+  <Message number="309" eDefine="SYS_ERR_SYS_ACTIVE_MOTOR_FAN3">
+    <Title>Motor cooling fan malfunction, axis 3</Title>
+    <Description>The axis 3 motor cooling fan on the robot connected to Drive Module <arg format="%d" ordinal="1" /> does not work correctly.</Description>
+    <Consequences>The full meaning of this status is described in the Trouble Shooting Manual, IRC5.</Consequences>
+    <Causes>-The fan power cabling may be damaged or not connected correctly to motor or contactor unit. <p />-The fan or the Drive Module Power Supply may be faulty.</Causes>
+    <Actions>1) Make sure the fan cable is correctly connected  <p />2) Make sure the fan is free to rotate and that the air flow is not obstructed. <p />3) Make sure the Drive Module Power Supply output and input voltages are within specified limits as detailed in the Trouble shooting manual. Replace any faulty unit.<p /><p /></Actions>
+  </Message>
+  <Message number="310" eDefine="SYS_ERR_SYS_PSC_COMM_ERR">
+    <Title>
+      SC <arg format="%d" ordinal="1" /> Communication Failed
+    </Title>
+    <Description>
+      An error occurred while trying to communicate with Safety Controller (SC) <arg format="%d" ordinal="1" /></Description>
+    <Actions>
+      - Check Safety Controller cabling.<p />- Check Safety Controller health.<p /><p />Warm start controller, after performing recommended actions.
+    </Actions>
+  </Message>
+  <Message number="311" eDefine="SYS_ERR_SYS_OPEN_ENABLE1">
+    <Title>Enable 1 open </Title>
+    <Description>The ENABLE 1 circuit monitoring the Safety System has been opened.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>There may be an internal fault in the Safety System or the internal supervision has detected a fault.</Causes>
+    <Actions>1) Check all connections to the Safety System.<p />2) If faulty, replace the faulty board.</Actions>
+  </Message>
+  <Message number="312" eDefine="SYS_ERR_SYS_OPEN_ENABLE2">
+    <Title>Enable 2 open </Title>
+    <Description>The ENABLE 2 circuit monitoring the Axis Computer has been opened.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>There may be a connection problem between Main Computer and Axis Computer.</Causes>
+    <Actions>
+		1) Check all connections to the axis computer.<p />
+		2) Check cables conntected to the Safety System.<p /></Actions>
+  </Message>
+  <Message number="313" eDefine="SYS_ERR_SYS_ENABLE1_SUPERV">
+    <Title>Enable1 supervision fault </Title>
+    <Description>The ENABLE1 circuit has been broken. This circuit monitors the function of the Safety System and the main computer.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>A fault, probably a software fault, has been detected by any of the units supervised by the ENABLE1 circuit.</Causes>
+    <Actions>1) Attempt restarting by pressing the Motors ON button. If restarting is IMPOSSIBLE it indicates a hardware fault in Safety System, axis computer. If restarting is POSSIBLE, it indicates a software fault. In such case, contact your local ABB representative. <p />2) Determine which unit is faulty by checking its indication LEDs. The LEDs are described in the Trouble Shooting Manual. Replace the faulty unit.</Actions>
+  </Message>
+  <Message number="314" eDefine="SYS_ERR_SYS_ENABLE2_DRV1_SUPERV">
+    <Title>Enable2 supervision fault </Title>
+    <Description>The ENABLE2 circuit to drive module 1 has been broken. This circuit monitors e.g. the function of the Safety System and the axis computer.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>A fault, probably a software fault, has been detected by any of the units supervised by the ENABLE2 circuit.</Causes>
+    <Actions>1) Attempt restarting by pressing the Motors ON button. If restarting is IMPOSSIBLE it indicates a hardware fault in Safety System, axis computer. If restarting is POSSIBLE, it indicates a software fault. In such case, contact your local ABB representative. <p />2) Determine which unit is faulty by checking its indication LEDs. The LEDs are described in the Trouble Shooting Manual. Replace the faulty unit.</Actions>
+  </Message>
+  <Message number="315" eDefine="SYS_ERR_SYS_ENABLE2_DRV2_SUPERV">
+    <Title>Enable2 Supervision fault</Title>
+    <Description>The ENABLE2 circuit to drive module 2 has been broken. This circuit monitors e.g. the function of the Safety System and the axis computer.<p /></Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>A fault, probably a software fault, has been detected by any of the units supervised by the ENABLE2 circuit.</Causes>
+    <Actions>1) Attempt restarting by pressing the Motors ON button. If restarting is IMPOSSIBLE it indicates a hardware fault in safety board, axis computer. If restarting is POSSIBLE, it indicates a software fault. In such case, contact your local ABB representative. <p />2) Determine which unit is faulty by checking its indication LEDs. The LEDs are described in the Trouble Shooting Manual. Replace the faulty unit.</Actions>
+  </Message>
+  <Message number="316" eDefine="SYS_ERR_SYS_ENABLE2_DRV3_SUPERV">
+    <Title>Enable2 Supervision fault</Title>
+    <Description>The ENABLE2 circuit to drive module 3 has been broken. This circuit monitors e.g. the function of the Safety System and the axis computer.<p /></Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>A fault, probably a software fault, has been detected by any of the units supervised by the ENABLE2 circuit.</Causes>
+    <Actions>1) Attempt restarting by pressing the Motors ON button. If restarting is IMPOSSIBLE it indicates a hardware fault in Safety System, axis computer. If restarting is POSSIBLE, it indicates a software fault. In such case, contact your local ABB representative. <p />2) Determine which unit is faulty by checking its indication LEDs. The LEDs are described in the Trouble Shooting Manual. Replace the faulty unit.</Actions>
+  </Message>
+  <Message number="317" eDefine="SYS_ERR_SYS_ENABLE2_DRV4_SUPERV">
+    <Title>Enable2 Supervision fault</Title>
+    <Description>The ENABLE2 circuit to drive module 4 has been broken. This circuit monitors e.g. the function of the Safety System and the axis computer.</Description>
+    <Consequences>The system goes to status SYS HALT.</Consequences>
+    <Causes>A fault, probably a software fault, has been detected by any of the units supervised by the ENABLE2 circuit.</Causes>
+    <Actions>1) Attempt restarting by pressing the Motors ON button. If restarting is IMPOSSIBLE it indicates a hardware fault in Safety System, Axis computer. If restarting is POSSIBLE, it indicates a software fault. In such case, contact your local ABB representative. <p />2) Determine which unit is faulty by checking its indication LEDs. The LEDs are described in the Trouble Shooting Manual. Replace the faulty unit.</Actions>
+  </Message>
+  <Message number="321" eDefine="SYS_ERR_SYS_NOT_A_NUMBER">
+    <Title>Not-a-Number</Title>
+    <Description>Not-a-Number was found in task <arg format="%s" ordinal="1" />. <p />A symbol of type '<arg format="%s" ordinal="2" />' was found holding an undefined number.</Description>
+    <Consequences>The undefined number was replaced with '<arg format="%s" ordinal="3" />'.</Consequences>
+  </Message>
+  <Message number="322" eDefine="SYS_ERR_SYS_POSITIVE_INFINITY">
+    <Title>Positive infinity</Title>
+    <Description>Positive infinity was found in task <arg format="%s" ordinal="1" />. <p />A symbol of type '<arg format="%s" ordinal="2" />' was found holding positive infinity.</Description>
+    <Consequences>The positive infinity was replaced with '<arg format="%s" ordinal="3" />'.</Consequences>
+  </Message>
+  <Message number="323" eDefine="SYS_ERR_SYS_NEGATIVE_INFINITY">
+    <Title>Negative infinity</Title>
+    <Description>Negative infinity was found in task <arg format="%s" ordinal="1" />. <p />A symbol of type '<arg format="%s" ordinal="2" />' was found holding negative infinity.</Description>
+    <Consequences>The negative infinity was replaced with '<arg format="%s" ordinal="3" />'.</Consequences>
+  </Message>
+  <Message number="324" eDefine="SYS_ERR_SYS_IO_ERR_ARG_MODE">
+    <Title>Incorrect argument for System IO Signal</Title>
+    <Description>
+      <arg format="%s" ordinal="1" /> set to signal <arg format="%s" ordinal="2" /> has an incorrect argument.</Description>
+    <Consequences>It will not be possible to use <arg format="%s" ordinal="1" />.</Consequences>
+    <Causes>The configuration has probably been edited outside a proper configuraton editor.</Causes>
+    <Actions>The system IO signal must be reconfigured, preferebly with the configuraton editor on RobotStudio or on Flex Pendant.</Actions>
+  </Message>
+  <Message number="325" eDefine="SYS_ERR_SYS_SAFEMOVE_DEACT">
+    <Title>SC <arg format="%d" ordinal="1" /> supervision not activated</Title>
+    <Description>There is no user configuration in Safety Controller (SC), i.e. safety supervision is disabled.</Description>
+    <Consequences>SC cannot stop robot movement.</Consequences>
+    <Causes>
+There is no user configuration in SC or there is no SC connected in the drive module <arg format="%d" ordinal="1" />
+.</Causes>
+    <Actions>Download a new user configuration to SC. Activate the configuration by doing a warm start and enter the pin code.</Actions>
+  </Message>
+  <Message number="326" eDefine="SYS_ERR_SYS_IO_ERR_NEG_ARG">
+    <Title>Incorrect argument for System IO Signal</Title>
+    <Description>
+      <arg format="%s" ordinal="1" /> set to signal <arg format="%s" ordinal="2" /> has an incorrect argument. The delay must not be a negative value.</Description>
+    <Consequences>It will not be possible to use <arg format="%s" ordinal="1" />.</Consequences>
+    <Actions>The system IO signal must be reconfigured. </Actions>
+  </Message>
+  <Message number="350" eDefine="SYS_ERR_SYS_TASK_NAME_NOT_VALID">
+    <Title>Not a valid task name</Title>
+    <Description>The task name <arg format="%s" ordinal="1" /> cannot be used as a name of a task. It is either already used as an installed symbol, a reserved word in the system or too long (max. 16 characters).</Description>
+    <Consequences>The task will not be installed in the system.</Consequences>
+    <Actions>Change the configuration of the task name and restart the controller.</Actions>
+  </Message>
+  <Message number="351" eDefine="SYS_ERR_SYS_MAX_NO_OF_TASK_EXCEEDED">
+    <Title>Max number of tasks exceeded</Title>
+    <Description>The maximum number of tasks, <arg format="%s" ordinal="1" />, of the configuration type <arg format="%s" ordinal="2" /> is exceeded.</Description>
+    <Consequences>All configured tasks will not be installed.</Consequences>
+    <Actions>Change the configuration and restart the system.</Actions>
+  </Message>
+  <Message number="352" eDefine="SYS_ERR_SYS_MOTION_PLANER_NAME">
+    <Title>Not a valid Motion Planner name</Title>
+    <Description>The Motion Planner name for Mechanical Unit Group <arg format="%s" ordinal="1" /> in <arg format="%s" ordinal="2" /> is not correct.<p />The reason can be one of the following:<p />1. empty name<p />2. not present in the Motion configuration<p />3. already in use by another Mechanical Unit Group</Description>
+    <Consequences>The system will not be able to use.</Consequences>
+    <Actions>Change the configuration and restart the controller.</Actions>
+  </Message>
+  <Message number="353" eDefine="SYS_ERR_SYS_MECHANICAL_UNIT_NAME">
+    <Title>Mechanical unit not found</Title>
+    <Description>The mechanical unit <arg format="%s" ordinal="1" /> in <arg format="%s" ordinal="2" /> can not be found in the list of configured mechanical units.</Description>
+    <Consequences>It is not possible to execute any RAPID instructions that use the configured mechanical units.</Consequences>
+    <Causes>The unit is probably not present in the Motion configuration.</Causes>
+    <Actions>Change the configuration and restart the controller.</Actions>
+  </Message>
+  <Message number="354" eDefine="SYS_ERR_SYS_UNDEFINED_ARG_NAME">
+    <Title>The argument is undefined</Title>
+    <Description>The configured argument <arg format="%s" ordinal="1" /> for task <arg format="%s" ordinal="2" /> is not a valid type.</Description>
+    <Consequences>The behaviour of the task will be undefined.</Consequences>
+    <Actions>Change the configuration and restart the controller.</Actions>
+  </Message>
+  <Message number="355" eDefine="SYS_ERR_SYS_MEC_UNIT_GROUP_NAME">
+    <Title>Mechanical Unit Group name not correct</Title>
+    <Description>The configured name of <arg format="%s" ordinal="1" /> in task <arg format="%s" ordinal="2" /> is not correct.<p />The reason could be:<p />1. The argument is not used in the configuration<p />2. The configured name is not a member of the Mechanical Unit Group<p />3. The configured name is already used by another task.</Description>
+    <Consequences>The task will not be installed or it will not be possible to execute RAPID motion instructions.</Consequences>
+    <Actions>Change the configuration and restart the controller.</Actions>
+  </Message>
+  <Message number="356" eDefine="SYS_ERR_SYS_MAX_NO_OF_MOTION_TASK">
+    <Title>Maximum number of Motion tasks exceeded</Title>
+    <Description>Only <arg format="%s" ordinal="1" /> tasks are allowed to control mechanical units i.e. execute RAPID move instructions.</Description>
+    <Actions>Change the configuration and restart the controller.</Actions>
+  </Message>
+  <Message number="357" eDefine="SYS_ERR_SYS_NO_CONFIG_MOTION_TASK">
+    <Title>No configured Motion task</Title>
+    <Description>No task is configured to control mechanical units i.e. execute RAPID move instructions.</Description>
+    <Consequences>It is not possible to execute any RAPID move instructions.</Consequences>
+    <Actions>Change the configuration to include a task controlling mechanical units.<p />Restart the controller.</Actions>
+  </Message>
+  <Message number="358" eDefine="SYS_ERR_SYS_NO_MEC_UNIT_GROUP">
+    <Title>No members of <arg format="%s" ordinal="1" /> configured</Title>
+    <Description>The configuration type is required in a multi robot system.</Description>
+    <Consequences>It is not possible to execute any RAPID move instructions.</Consequences>
+    <Actions>Change the configuration and restart the controller.</Actions>
+  </Message>
+  <Message number="359" eDefine="SYS_ERR_SYS_MEC_UNIT_GROUP">
+    <Title>Cfg type <arg format="%s" ordinal="1" /> is configured</Title>
+    <Description>The type was found but not expected in a system with current options.</Description>
+    <Actions>Check if the right configuration file is loaded or remove all instances of the type.<p />Restart the controller.</Actions>
+  </Message>
+  <Message number="360" eDefine="SYS_ERR_SYS_UNDEFINED_SHELF_NAME">
+    <Title>Unknown event in cfg type <arg format="%s" ordinal="1" /></Title>
+    <Description>The event <arg format="%s" ordinal="2" /> is not a system event.</Description>
+    <Actions>Change the configuration and restart the system.</Actions>
+  </Message>
+  <Message number="361" eDefine="SYS_ERR_SYS_ONLY_SHARED_MOD">
+    <Title>Only shared modules in the shared task</Title>
+    <Description>The module <arg format="%s" ordinal="1" /> is not configured shared and cannot be loaded into the shared task.</Description>
+    <Actions>Change the configuration and restart the system.</Actions>
+  </Message>
+  <Message number="362" eDefine="SYS_ERR_SYS_NOT_DEFINED_TASK_NMAE">
+    <Title>Not defined task name</Title>
+    <Description>The task <arg format="%s" ordinal="1" /> in cfg type <arg format="%s" ordinal="2" /> is not configured in the system.</Description>
+    <Actions>Change the configuration and restart the system.</Actions>
+  </Message>
+  <Message number="363" eDefine="SYS_ERR_SYS_SYSMOD_NO_SYSMOD">
+    <Title>Module not a system module</Title>
+    <Description>The module <arg format="%s" ordinal="1" /> loaded from the file <arg format="%s" ordinal="2" /> is not a system module.</Description>
+    <Actions>Change the file suffix or add a module attribute to the module.<p />Load the module again or restart the system.</Actions>
+  </Message>
+  <Message number="364" eDefine="SYS_ERR_SYS_MAX_NO_OF_GROUP_EXCEEDED">
+    <Title>Max number of Mechanical Unit Groups exceeded</Title>
+    <Description>The maximum number of Mechanical Unit Groups, <arg format="%s" ordinal="1" />, of the configuration type <arg format="%s" ordinal="2" /> is exceeded.</Description>
+    <Consequences>Exceeded instances are ignored.</Consequences>
+    <Actions>Change the configuration and restart the controller.</Actions>
+  </Message>
+  <Message number="365" eDefine="SYS_ERR_SYS_CFG_UPDATED_PP_TO_MAIN">
+    <Title>Update of configuration is done</Title>
+    <Description>All tasks are reset to its main routine due to configuration changes.</Description>
+    <Actions />
+  </Message>
+  <Message number="366" eDefine="SYS_ERR_SYS_MOTION_TASK_WRONG_TYPE">
+    <Title>Type error in task configuration</Title>
+    <Description>The task <arg format="%s" ordinal="1" /> is configured with wrong type. Task configured to control mechanical units i.e. execute RAPID move instructions must be of type <arg format="%s" ordinal="2" />. </Description>
+    <Consequences>The task will not be installed.</Consequences>
+    <Actions>Change the configuration and restart the controller.</Actions>
+  </Message>
+</Domain>

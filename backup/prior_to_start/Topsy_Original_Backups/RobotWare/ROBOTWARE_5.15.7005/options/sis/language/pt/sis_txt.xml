@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Resource Name="sis_texts" Language="pt">
+  <Text Name="1">
+    <Value>OK</Value>
+    <Comment>Used for function keys TPReadFK, no_of_char 5</Comment>
+  </Text>
+  <Text Name="2">
+    <Value>Reset</Value>
+    <Comment>Used for function keys TPReadFK, no_of_char 5</Comment>
+  </Text>
+  <Text Name="3">
+    <Value>Sim</Value>
+    <Comment>Used for function keys TPReadFK, no_of_char 5</Comment>
+  </Text>
+  <Text Name="4">
+    <Value>Não</Value>
+    <Comment>Used for function keys TPReadFK, no_of_char 5</Comment>
+  </Text>
+  <Text Name="5">
+    <Value>OK</Value>
+    <Comment>Status of issue i.e. Gear Oil OK, no_of_char 5</Comment>
+  </Text>
+  <Text Name="6">
+    <Value>NOK</Value>
+    <Comment>Status of issue i.e. Gear Oil NOK, no_of_char 5</Comment>
+  </Text>
+  <Text Name="7">
+    <Value>Sair</Value>
+    <Comment>Exit of service routine, no_of_char 5</Comment>
+  </Text>
+  <Text Name="8">
+    <Value>Cancel.</Value>
+    <Comment>no_of_char 5 </Comment>
+  </Text>
+  <Text Name="10">
+    <Value>Sistema de informações do serviço</Value>
+    <Comment>Title in main window, no_of_char 38</Comment>
+  </Text>
+  <Text Name="11">
+    <Value>Tempo do calendário</Value>
+    <Comment>First item in main window's menu Calendar Time, no_of_char 15</Comment>
+  </Text>
+  <Text Name="12">
+    <Value>Tempo de operação</Value>
+    <Comment>Second item in main window's menu Product Time, no_of_char 15</Comment>
+  </Text>
+  <Text Name="13">
+    <Value>Caixa de engrenagens</Value>
+    <Comment>Third item in main window's menu Gear oil, no_of_char 15</Comment>
+  </Text>
+  <Text Name="20">
+    <Value>Sair?</Value>
+    <Comment>Exit or no, no_of_char 39</Comment>
+  </Text>
+  <Text Name="21">
+    <Value>Reset?</Value>
+    <Comment>Reset or not reset, no_of_char 39</Comment>
+  </Text>
+  <Text Name="22">
+    <Value>Intervalo de serviço excedido!</Value>
+    <Comment>Service level exceeded, no_of_char 39</Comment>
+  </Text>
+  <Text Name="23">
+    <Value>Nenhum dado disponível!</Value>
+    <Comment>Promted when there's no data available, no_of_char 39
+    </Comment>
+  </Text>
+  <Text Name="30">
+    <Value>Serviço Anterior:</Value>
+    <Comment>First item Calendar Time window, no_of_char 15</Comment>
+  </Text>
+  <Text Name="31">
+    <Value>Tempo decorrido:</Value>
+    <Comment>Second item Calendar Time window, Elapsed days since last service, no_of_char 15</Comment>
+  </Text>
+  <Text Name="32">
+    <Value>Próximo Serviço:</Value>
+    <Comment>Third item Calendar Time window Date of next service, no_of_char 15</Comment>
+  </Text>
+  <Text Name="33">
+    <Value>Tempo restante:</Value>
+    <Comment>Fourth item Calendar Time window, Days to next service, no_of_char 15</Comment>
+  </Text>
+  <Text Name="34">
+    <Value>dia(s)</Value>
+    <Comment>Unit of time, no_of_char 16</Comment>
+  </Text>
+  <Text Name="40">
+    <Value>Intervalo do serviço:</Value>
+    <Comment>First item in Production window, Total number of production hours, no_of_char 15</Comment>
+  </Text>
+  <Text Name="41">
+    <Value>Tempo decorrido:</Value>
+    <Comment>Second item Production window, Number of production hours since last service, no_of_char 15</Comment>
+  </Text>
+  <Text Name="42">
+    <Value>Tempo restante:</Value>
+    <Comment>Third item Production window, Number of production hours to last service, no_of_char 15</Comment>
+  </Text>
+  <Text Name="43">
+    <Value>h</Value>
+    <Comment>Unit of time, no_of_char 15</Comment>
+  </Text>
+  <Text Name="44">
+    <Value>min</Value>
+    <Comment>Unit of time, no_of_char 15</Comment>
+  </Text>
+  <Text Name="50">
+    <Value>Eixo</Value>
+    <Comment>Joint, no_of_char 5</Comment>
+  </Text>
+  <Text Name="51">
+    <Value>Tempo consumido:</Value>
+    <Comment>Consumed time of estimated service interval, Perscent, no_of_char 15</Comment>
+  </Text>
+  <Text Name="52">
+    <Value>Tempo decorrido:</Value>
+    <Comment>Time since last service, no_of_char 16</Comment>
+  </Text>
+  <Text Name="53">
+    <Value>Tempo restante:</Value>
+    <Comment>Estimated remaining time, no_of_char 16</Comment>
+  </Text>
+  <Text Name="54">
+    <Value>h</Value>
+    <Comment>Unit of time, no_of_char 16</Comment>
+  </Text>
+  <Text Name="55">
+    <Value>Escolha uma unidade mecânica</Value>
+    <Comment>Second unit, simple instruction, no_of_char 39</Comment>
+  </Text>
+  <Text Name="56">
+    <Value>Não há nenhum dado SIS disponível para</Value>
+    <Comment>no_of_char 39</Comment>
+  </Text>
+</Resource>

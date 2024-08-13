@@ -1,0 +1,733 @@
+$   DeviceNet DeviceLink  Adapter
+$
+$   Description:    The following file is the EDS for the ABB Robotics Products
+$                   DeviceNet DSQC-651 Module
+$
+$   Author:         Thorbjörn Simonsson - Aros Electronics AB
+$   Date:           2006-04-19
+$
+$   
+$
+
+[File]
+    DescText    =   "DQSC-651 EDS File";
+    CreateDate  =   04-19-2006;
+    CreateTime  =   12:00:00;
+    ModDate     =   06-22-2010;
+    ModTime     =   12:00:00;
+    Revision    =   0.2;
+
+[Device]
+    VendCode    =   75;             $ Vendor Code
+    VendName    =   "ABB Robotics Products AB";
+    ProdType    =   100;            $ Product Type
+    ProdTypeStr =   "General Purpose Mixed I/O";
+    ProdCode    =   25;              $ Product Code
+    MajRev      =   1;              $ Major Rev
+    MinRev      =   1;              $ Minor Rev
+    ProdName    =   "Combined I/O Module";
+
+[Device Classification]
+    Class1      =   DeviceNet;
+
+[IO_Info]
+    Default     =   0x0001;         $ Bit 0 = Poll, Bit 1 = Strobe, Bit 2 = CoS
+                                    $ Bit 3 = Cyclic, Bit 4 = Multicast Poll
+    PollInfo    =   0x000D,         $ Poll, CoS / Cyclic
+                    1,              $ Default input = Input 1
+                    1;              $ Default output = Output 1
+    COSInfo     =   0x0005,         $ Poll, CoS / Cyclic
+                    1,              $ Default input = Input 1
+                    1;              $ Default output = Output 1
+    CyclicInfo  =   0x0009,         $ Poll, CoS / Cyclic
+                    1,              $ Default input = Input 1
+                    1;              $ Default output = Output 1
+    $ --- Input connections ---
+    Input1      =   5,              $ Nbr of data byte
+                    0,              $ All bits used
+                    0x000D,         $ Poll, CoS / Cyclic
+                    "Input Connection (2AO + 8DI)",
+                    6,              $ Nbr of bytes used to represent the path
+                    "20 04 24 64 30 03",
+                                    $ Connection path
+                                    $ 0x20 = Class, 0x04 = Class - Assembly Object
+                                    $ 0x24 = Instance, 0x64 = Instance - Vendor Specific
+                                    $ 0x30 = Attribute, 0x03 = Attribute - Data
+                    "";             $ Help string
+
+    $ --- Output connections ---
+    Output1     =   1,              $ Nbr of data byte
+                    0,              $ All bits used
+                    0x000D,         $ Poll, CoS / Cyclic
+                    "Output Connection (8DO)",
+                    6,              $ Nbr of bytes used to represent the path
+                    "20 04 24 68 30 03",    
+                                    $ Connection path
+                                    $ 0x20 = Class, 0x04 = Class - Assembly Object
+                                    $ 0x24 = Instance, 0x64 = Instance - Vendor Specific
+                                    $ 0x30 = Attribute, 0x03 = Attribute - Data
+                    "";             $ Help string
+
+[ParamClass]
+    MaxInst     =   47;             $ Nbr of configuration parameters: [Params]-Param X
+    Descriptor  =   0;              $ ?
+    CfgAssembly =   0;              $ ?
+
+[Params]
+    Param1 =                        $ Discrete Input Point Object - Revision
+        0,                          $ Data Placeholder
+        6, "20 08 24 00 30 01",     $ Path size and Path to Operate Mode Attribute
+        0x10,                       $ Descriptor - Read only
+        0xC7, 2,                    $ Data Type and Size - U16
+        "Revision",                 $ Name
+        "",                         $ Units
+        "Revision for Input Point Object", 
+        0,65535,2,                  $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param2 =                        $ Discrete Input Point Object - Value
+        0,                          $ Data Placeholder
+        6, "20 08 24 01 30 03",     $ Path size and Path to Operate Mode Attribute
+        0x32,                       $ Descriptor - Value is updated in real time, 
+                                    $ Read only, Enumerated strings
+        0xC1, 1,                    $ Data Type and Size - Bool
+        "Value",                    $ Name
+        "",                         $ Units
+        "Input point value - Input 1", 
+        0,1,0,                      $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param3 =                        $ Discrete Input Point Object - Value
+        0,                          $ Data Placeholder
+        6, "20 08 24 02 30 03",     $ Path size and Path to Operate Mode Attribute
+        0x32,                       $ Descriptor - Value is updated in real time, 
+                                    $ Read only, Enumerated strings
+        0xC1, 1,                    $ Data Type and Size - Bool
+        "Value",                    $ Name
+        "",                         $ Units
+        "Input point value - Input 2", 
+        0,1,0,                      $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param4 =                        $ Discrete Input Point Object - Value
+        0,                          $ Data Placeholder
+        6, "20 08 24 03 30 03",     $ Path size and Path to Operate Mode Attribute
+        0x32,                       $ Descriptor - Value is updated in real time, 
+                                    $ Read only, Enumerated strings
+        0xC1, 1,                    $ Data Type and Size - Bool
+        "Value",                    $ Name
+        "",                         $ Units
+        "Input point value - Input 3", 
+        0,1,0,                      $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param5 =                        $ Discrete Input Point Object - Value
+        0,                          $ Data Placeholder
+        6, "20 08 24 04 30 03",     $ Path size and Path to Operate Mode Attribute
+        0x32,                       $ Descriptor - Value is updated in real time, 
+                                    $ Read only, Enumerated strings
+        0xC1, 1,                    $ Data Type and Size - Bool
+        "Value",                    $ Name
+        "",                         $ Units
+        "Input point value - Input 4", 
+        0,1,0,                      $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param6 =                        $ Discrete Input Point Object - Value
+        0,                          $ Data Placeholder
+        6, "20 08 24 05 30 03",     $ Path size and Path to Operate Mode Attribute
+        0x32,                       $ Descriptor - Value is updated in real time, 
+                                    $ Read only, Enumerated strings
+        0xC1, 1,                    $ Data Type and Size - Bool
+        "Value",                    $ Name
+        "",                         $ Units
+        "Input point value - Input 5", 
+        0,1,0,                      $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param7 =                        $ Discrete Input Point Object - Value
+        0,                          $ Data Placeholder
+        6, "20 08 24 06 30 03",     $ Path size and Path to Operate Mode Attribute
+        0x32,                       $ Descriptor - Value is updated in real time, 
+                                    $ Read only, Enumerated strings
+        0xC1, 1,                    $ Data Type and Size - Bool
+        "Value",                    $ Name
+        "",                         $ Units
+        "Input point value - Input 6", 
+        0,1,0,                      $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param8 =                        $ Discrete Input Point Object - Value
+        0,                          $ Data Placeholder
+        6, "20 08 24 07 30 03",     $ Path size and Path to Operate Mode Attribute
+        0x32,                       $ Descriptor - Value is updated in real time, 
+                                    $ Read only, Enumerated strings
+        0xC1, 1,                    $ Data Type and Size - Bool
+        "Value",                    $ Name
+        "",                         $ Units
+        "Input point value - Input 7", 
+        0,1,0,                      $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param9 =                        $ Discrete Input Point Object - Value
+        0,                          $ Data Placeholder
+        6, "20 08 24 08 30 03",     $ Path size and Path to Operate Mode Attribute
+        0x32,                       $ Descriptor - Value is updated in real time, 
+                                    $ Read only, Enumerated strings
+        0xC1, 1,                    $ Data Type and Size - Bool
+        "Value",                    $ Name
+        "",                         $ Units
+        "Input point value - Input 8", 
+        0,1,0,                      $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    
+    Param10 =                       $ Discrete Input Point Object - Off-On delay
+        0,                          $ Data Placeholder
+        6, "20 08 24 01 30 05",     $ Path size and Path to Operate Mode Attribute
+        0x00,                       $ Descriptor - 
+        0xC7, 2,                    $ Data Type and Size - U16
+        "Off_On delay",             $ Name
+        "",                         $ Units
+        "Filter time for Off to On transition (0 - 65,535 us) - Input 1", 
+        0,65535,5000,               $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param11 =                       $ Discrete Input Point Object - Off-On delay
+        0,                          $ Data Placeholder
+        6, "20 08 24 02 30 05",     $ Path size and Path to Operate Mode Attribute
+        0x00,                       $ Descriptor - 
+        0xC7, 2,                    $ Data Type and Size - U16
+        "Off_On delay",             $ Name
+        "",                         $ Units
+        "Filter time for Off to On transition (0 - 65,535 us) - Input 2", 
+        0,65535,5000,               $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param12 =                       $ Discrete Input Point Object - Off-On delay
+        0,                          $ Data Placeholder
+        6, "20 08 24 03 30 05",     $ Path size and Path to Operate Mode Attribute
+        0x00,                       $ Descriptor - 
+        0xC7, 2,                    $ Data Type and Size - U16
+        "Off_On delay",             $ Name
+        "",                         $ Units
+        "Filter time for Off to On transition (0 - 65,535 us) - Input 3", 
+        0,65535,5000,               $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param13 =                       $ Discrete Input Point Object - Off-On delay
+        0,                          $ Data Placeholder
+        6, "20 08 24 04 30 05",     $ Path size and Path to Operate Mode Attribute
+        0x00,                       $ Descriptor - 
+        0xC7, 2,                    $ Data Type and Size - U16
+        "Off_On delay",             $ Name
+        "",                         $ Units
+        "Filter time for Off to On transition (0 - 65,535 us) - Input 4", 
+        0,65535,5000,               $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param14 =                       $ Discrete Input Point Object - Off-On delay
+        0,                          $ Data Placeholder
+        6, "20 08 24 05 30 05",     $ Path size and Path to Operate Mode Attribute
+        0x00,                       $ Descriptor - 
+        0xC7, 2,                    $ Data Type and Size - U16
+        "Off_On delay",             $ Name
+        "",                         $ Units
+        "Filter time for Off to On transition (0 - 65,535 us) - Input 5", 
+        0,65535,5000,               $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param15 =                       $ Discrete Input Point Object - Off-On delay
+        0,                          $ Data Placeholder
+        6, "20 08 24 06 30 05",     $ Path size and Path to Operate Mode Attribute
+        0x00,                       $ Descriptor - 
+        0xC7, 2,                    $ Data Type and Size - U16
+        "Off_On delay",             $ Name
+        "",                         $ Units
+        "Filter time for Off to On transition (0 - 65,535 us) - Input 6", 
+        0,65535,5000,               $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param16 =                       $ Discrete Input Point Object - Off-On delay
+        0,                          $ Data Placeholder
+        6, "20 08 24 07 30 05",     $ Path size and Path to Operate Mode Attribute
+        0x00,                       $ Descriptor - 
+        0xC7, 2,                    $ Data Type and Size - U16
+        "Off_On delay",             $ Name
+        "",                         $ Units
+        "Filter time for Off to On transition (0 - 65,535 us) - Input 7", 
+        0,65535,5000,               $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param17 =                       $ Discrete Input Point Object - Off-On delay
+        0,                          $ Data Placeholder
+        6, "20 08 24 08 30 05",     $ Path size and Path to Operate Mode Attribute
+        0x00,                       $ Descriptor - 
+        0xC7, 2,                    $ Data Type and Size - U16
+        "Off_On delay",             $ Name
+        "",                         $ Units
+        "Filter time for Off to On transition (0 - 65,535 us) - Input 8", 
+        0,65535,5000,               $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+   
+    Param18 =                       $ Discrete Input Point Object - On-Off delay
+        0,                          $ Data Placeholder
+        6, "20 08 24 01 30 06",     $ Path size and Path to Operate Mode Attribute
+        0x00,                       $ Descriptor - 
+        0xC7, 2,                    $ Data Type and Size - U16
+        "On_Off delay",             $ Name
+        "",                         $ Units
+        "Filter time for Off to On transition (0 - 65,535 us) - Input 1", 
+        0,65535,5000,               $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param19 =                       $ Discrete Input Point Object - On-Off delay
+        0,                          $ Data Placeholder
+        6, "20 08 24 02 30 06",     $ Path size and Path to Operate Mode Attribute
+        0x00,                       $ Descriptor - 
+        0xC7, 2,                    $ Data Type and Size - U16
+        "On_Off delay",             $ Name
+        "",                         $ Units
+        "Filter time for Off to On transition (0 - 65,535 us) - Input 2", 
+        0,65535,5000,               $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param20 =                       $ Discrete Input Point Object - On-Off delay
+        0,                          $ Data Placeholder
+        6, "20 08 24 03 30 06",     $ Path size and Path to Operate Mode Attribute
+        0x00,                       $ Descriptor - 
+        0xC7, 2,                    $ Data Type and Size - U16
+        "On_Off delay",             $ Name
+        "",                         $ Units
+        "Filter time for Off to On transition (0 - 65,535 us) - Input 3", 
+        0,65535,5000,               $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param21 =                       $ Discrete Input Point Object - On-Off delay
+        0,                          $ Data Placeholder
+        6, "20 08 24 04 30 06",     $ Path size and Path to Operate Mode Attribute
+        0x00,                       $ Descriptor - 
+        0xC7, 2,                    $ Data Type and Size - U16
+        "On_Off delay",             $ Name
+        "",                         $ Units
+        "Filter time for Off to On transition (0 - 65,535 us) - Input 4", 
+        0,65535,5000,               $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param22 =                       $ Discrete Input Point Object - On-Off delay
+        0,                          $ Data Placeholder
+        6, "20 08 24 05 30 06",     $ Path size and Path to Operate Mode Attribute
+        0x00,                       $ Descriptor - 
+        0xC7, 2,                    $ Data Type and Size - U16
+        "On_Off delay",             $ Name
+        "",                         $ Units
+        "Filter time for Off to On transition (0 - 65,535 us) - Input 5", 
+        0,65535,5000,               $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param23 =                       $ Discrete Input Point Object - On-Off delay
+        0,                          $ Data Placeholder
+        6, "20 08 24 06 30 06",     $ Path size and Path to Operate Mode Attribute
+        0x00,                       $ Descriptor - 
+        0xC7, 2,                    $ Data Type and Size - U16
+        "On_Off delay",             $ Name
+        "",                         $ Units
+        "Filter time for Off to On transition (0 - 65,535 us) - Input 6", 
+        0,65535,5000,               $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param24 =                       $ Discrete Input Point Object - On-Off delay
+        0,                          $ Data Placeholder
+        6, "20 08 24 07 30 06",     $ Path size and Path to Operate Mode Attribute
+        0x00,                       $ Descriptor - 
+        0xC7, 2,                    $ Data Type and Size - U16
+        "On_Off delay",             $ Name
+        "",                         $ Units
+        "Filter time for Off to On transition (0 - 65,535 us) - Input 7", 
+        0,65535,5000,               $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param25 =                       $ Discrete Input Point Object - On-Off delay
+        0,                          $ Data Placeholder
+        6, "20 08 24 08 30 06",     $ Path size and Path to Operate Mode Attribute
+        0x00,                       $ Descriptor - 
+        0xC7, 2,                    $ Data Type and Size - U16
+        "On_Off delay",             $ Name
+        "",                         $ Units
+        "Filter time for Off to On transition (0 - 65,535 us) - Input 8", 
+        0,65535,5000,               $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+   
+    Param26 =                       $ Discrete Input Group Object - Off-On delay
+        0,                          $ Data Placeholder
+        6, "20 1D 24 01 30 64",     $ Path size and Path to Operate Mode Attribute
+        0x00,                       $ Descriptor - 
+        0xC6, 1,                    $ Data Type and Size - U8
+        "Off_On delay",             $ Name
+        "",                         $ Units
+        "Filter time for Off to On transition (0 - 255 ms) - Input 1-8", 
+        0,255,5,                    $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param27 =                       $ Discrete Input Group Object - On-Off delay
+        0,                          $ Data Placeholder
+        6, "20 1D 24 01 30 65",     $ Path size and Path to Operate Mode Attribute
+        0x00,                       $ Descriptor - 
+        0xC6, 1,                    $ Data Type and Size - U8
+        "On_Off delay",             $ Name
+        "",                         $ Units
+        "Filter time for Off to On transition (0 - 255 ms) - Input 1-8", 
+        0,255,5,                    $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param28 =                       $ Discrete Output Point Object - Value
+        0,                          $ Data Placeholder
+        6, "20 09 24 01 30 03",     $ Path size and Path to Operate Mode Attribute
+        0x02,                       $ Descriptor - Enumerated strings 
+        0xC1, 1,                    $ Data Type and Size - Bool
+        "Value",                    $ Name
+        "",                         $ Units
+        "Output Point Value - Output 1", 
+        0,1,0,                      $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param29 =                       $ Discrete Output Point Object - Value
+        0,                          $ Data Placeholder
+        6, "20 09 24 02 30 03",     $ Path size and Path to Operate Mode Attribute
+        0x02,                       $ Descriptor - Enumerated strings 
+        0xC1, 1,                    $ Data Type and Size - Bool
+        "Value",                    $ Name
+        "",                         $ Units
+        "Output Point Value - Output 2", 
+        0,1,0,                      $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param30 =                       $ Discrete Output Point Object - Value
+        0,                          $ Data Placeholder
+        6, "20 09 24 03 30 03",     $ Path size and Path to Operate Mode Attribute
+        0x02,                       $ Descriptor - Enumerated strings 
+        0xC1, 1,                    $ Data Type and Size - Bool
+        "Value",                    $ Name
+        "",                         $ Units
+        "Output Point Value - Output 3", 
+        0,1,0,                      $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param31 =                       $ Discrete Output Point Object - Value
+        0,                          $ Data Placeholder
+        6, "20 09 24 04 30 03",     $ Path size and Path to Operate Mode Attribute
+        0x02,                       $ Descriptor - Enumerated strings 
+        0xC1, 1,                    $ Data Type and Size - Bool
+        "Value",                    $ Name
+        "",                         $ Units
+        "Output Point Value - Output 4", 
+        0,1,0,                      $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param32 =                       $ Discrete Output Point Object - Value
+        0,                          $ Data Placeholder
+        6, "20 09 24 05 30 03",     $ Path size and Path to Operate Mode Attribute
+        0x02,                       $ Descriptor - Enumerated strings 
+        0xC1, 1,                    $ Data Type and Size - Bool
+        "Value",                    $ Name
+        "",                         $ Units
+        "Output Point Value - Output 5", 
+        0,1,0,                      $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param33 =                       $ Discrete Output Point Object - Value
+        0,                          $ Data Placeholder
+        6, "20 09 24 06 30 03",     $ Path size and Path to Operate Mode Attribute
+        0x02,                       $ Descriptor - Enumerated strings 
+        0xC1, 1,                    $ Data Type and Size - Bool
+        "Value",                    $ Name
+        "",                         $ Units
+        "Output Point Value - Output 6", 
+        0,1,0,                      $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param34 =                       $ Discrete Output Point Object - Value
+        0,                          $ Data Placeholder
+        6, "20 09 24 07 30 03",     $ Path size and Path to Operate Mode Attribute
+        0x02,                       $ Descriptor - Enumerated strings 
+        0xC1, 1,                    $ Data Type and Size - Bool
+        "Value",                    $ Name
+        "",                         $ Units
+        "Output Point Value - Output 7", 
+        0,1,0,                      $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param35 =                       $ Discrete Output Point Object - Value
+        0,                          $ Data Placeholder
+        6, "20 09 24 08 30 03",     $ Path size and Path to Operate Mode Attribute
+        0x02,                       $ Descriptor - Enumerated strings 
+        0xC1, 1,                    $ Data Type and Size - Bool
+        "Value",                    $ Name
+        "",                         $ Units
+        "Output Point Value - Output 8", 
+        0,1,0,                      $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    
+    Param36 =                       $ Discrete Output Group Object - Command
+        0,                          $ Data Placeholder
+        6, "20 1E 24 01 30 06",     $ Path size and Path to Operate Mode Attribute
+        0x02,                       $ Descriptor - Enumerated strings 
+        0xC1, 1,                    $ Data Type and Size - Bool
+        "Command",                  $ Name
+        "",                         $ Units
+        "Change state of all DOPs in group to Idle mode or Run Mode\n"
+        " (0 = Idle, 1 = Run)", 
+        0,1,0,                      $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param37 =                       $ Discrete Output Group Object - Fault State
+        0,                          $ Data Placeholder
+        6, "20 1E 24 01 30 07",     $ Path size and Path to Operate Mode Attribute
+        0x02,                       $ Descriptor - Enumerated strings
+        0xC1, 1,                    $ Data Type and Size - Boolean
+        "Fault State",              $ Name
+        "",                         $ Units
+        "State of output after recoverable failure (0 = Off, 1 = Hold last state)",
+        0,1,0,                      $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param38 =                       $ Discrete Output Group Object - Idle State
+        0,                          $ Data Placeholder
+        6, "20 1E 24 01 30 09",     $ Path size and Path to Operate Mode Attribute
+        0x02,                       $ Descriptor - Enumerated strings
+        0xC1, 1,                    $ Data Type and Size - Boolean
+        "Idle State",               $ Name
+        "",                         $ Units
+        "State of output during idle (0 = Off, 1 = Hold last state)", 
+        0,1,0,                      $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param39 =                       $ Analog Output Point Object - Value
+        0,                          $ Data Placeholder
+        6, "20 0B 24 01 30 03",     $ Path size and Path to Operate Mode Attribute
+        0x00,                       $ Descriptor -  
+        0xC7, 2,                    $ Data Type and Size - U16
+        "Value",                    $ Name
+        "",                         $ Units
+        "Analog output value (0 - 65535 = 0 - 10VDC) - Output 1", 
+        0,65535,0,                  $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param40 =                       $ Analog Output Point Object - Value
+        0,                          $ Data Placeholder
+        6, "20 0B 24 02 30 03",     $ Path size and Path to Operate Mode Attribute
+        0x00,                       $ Descriptor -  
+        0xC7, 2,                    $ Data Type and Size - U16
+        "Value",                    $ Name
+        "",                         $ Units
+        "Analog output value (0 - 65535 = 0 - 10VDC) - Output 2", 
+        0,65535,0,                  $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param41 =                       $ Analog Output Point Object - Output Range
+        0,                          $ Data Placeholder
+        6, "20 0B 24 01 30 07",     $ Path size and Path to Operate Mode Attribute
+        0x10,                       $ Descriptor - Read only
+        0xC6, 1,                    $ Data Type and Size - U8
+        "Output Range",             $ Name
+        "",                         $ Units
+        "(0 - 65535 = 0 - 10VDC) - Output 1", 
+        0,255,1,                    $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param42 =                       $ Analog Output Point Object - Output Range
+        0,                          $ Data Placeholder
+        6, "20 0B 24 02 30 07",     $ Path size and Path to Operate Mode Attribute
+        0x10,                       $ Descriptor - Read only
+        0xC6, 1,                    $ Data Type and Size - U8
+        "Output Range",             $ Name
+        "",                         $ Units
+        "(0 - 65535 = 0 - 10VDC) - Output 2", 
+        0,255,1,                    $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param43 =                       $ Analog Output Point Object - Data Type
+        0,                          $ Data Placeholder
+        6, "20 0B 24 01 30 08",     $ Path size and Path to Operate Mode Attribute
+        0x10,                       $ Descriptor - Read only
+        0xC6, 1,                    $ Data Type and Size - U8
+        "Value Data Type",          $ Name
+        "",                         $ Units
+        "UINT (U16) - Output 1",
+        0,255,6,                    $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param44 =                       $ Analog Output Point Object - Data Type
+        0,                          $ Data Placeholder
+        6, "20 0B 24 02 30 08",     $ Path size and Path to Operate Mode Attribute
+        0x10,                       $ Descriptor - Read only
+        0xC6, 1,                    $ Data Type and Size - U8
+        "Value Data Type",          $ Name
+        "",                         $ Units
+        "UINT (U16) - Output 2",
+        0,255,6,                    $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param45 =                       $ Analog Output Group Object - Command
+        0,                          $ Data Placeholder
+        6, "20 21 24 01 30 09",     $ Path size and Path to Operate Mode Attribute
+        0x02,                       $ Descriptor - Enumerated strings 
+        0xC1, 1,                    $ Data Type and Size - Bool
+        "Command",                  $ Name
+        "",                         $ Units
+        "Change state of all AOPs in group to Idle mode or Run Mode\n"
+        " (0 = Idle, 1 = Run)", 
+        0,1,0,                      $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param46 =                       $ Analog Output Group Object - Fault State
+        0,                          $ Data Placeholder
+        6, "20 21 24 01 30 0A",     $ Path size and Path to Operate Mode Attribute
+        0x02,                       $ Descriptor - Enumerated strings
+        0xC1, 1,                    $ Data Type and Size - Boolean
+        "Fault State",              $ Name
+        "",                         $ Units
+        "State of output after recoverable failure (0 = Off, 1 = Hold last state)",
+        0,1,0,                      $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+    Param47 =                       $ Analog Output Group Object - Idle State
+        0,                          $ Data Placeholder
+        6, "20 21 24 01 30 0C",     $ Path size and Path to Operate Mode Attribute
+        0x02,                       $ Descriptor - Enumerated strings
+        0xC1, 1,                    $ Data Type and Size - Boolean
+        "Idle State",               $ Name
+        "",                         $ Units
+        "State of output during idle (0 = Off, 1 = Hold last state)", 
+        0,1,0,                      $ Min, Max, Default value
+        1,1,1,0,                    $ Mult, Div, Base, Offset scaling
+        ,,,,                        $ Mult, Div, Base, Offset links (Not Used)
+        0;                          $ Decimal places
+
+[EnumPar]                           $ One string for each integral value from Min to Max
+    Param2      =   "Off", "On";
+    Param3      =   "Off", "On";
+    Param4      =   "Off", "On";
+    Param5      =   "Off", "On";
+    Param6      =   "Off", "On";
+    Param7      =   "Off", "On";
+    Param8      =   "Off", "On";
+    Param9      =   "Off", "On";
+    Param28     =   "Off", "On";
+    Param29     =   "Off", "On";
+    Param30     =   "Off", "On";
+    Param31     =   "Off", "On";
+    Param32     =   "Off", "On";
+    Param33     =   "Off", "On";
+    Param34     =   "Off", "On";
+    Param35     =   "Off", "On";
+    Param36     =   "Idle", "Run";
+    Param37     =   "Off", "Hold last value";
+    Param38     =   "Off", "Hold last value";
+    Param45     =   "Idle", "Run";
+    Param46     =   "Off", "Hold last value";
+    Param47     =   "Off", "Hold last value";
+
+[Groups]                            $ Group name, Number of members, Members
+    Group1  = "Discrete Input Point Parameters", 25, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25;
+    Group2  = "Discrete Input Group Parameters", 2, 26, 27;
+    Group3  = "Discrete Output Point Parameters", 8, 28, 29, 30, 31, 32, 33, 34, 35;
+    Group4  = "Discrete Output Group Parameters", 3, 36, 37, 38;
+    Group5  = "Analog Output Point Parameters", 6, 39, 40, 41, 42, 43, 44;
+    Group6  = "Analog Output Group Parameters", 3, 45, 46, 47;
+

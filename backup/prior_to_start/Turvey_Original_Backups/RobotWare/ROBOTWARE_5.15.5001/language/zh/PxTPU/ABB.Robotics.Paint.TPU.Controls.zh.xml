@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.TPU.Controls">
+  <Strings>
+    <String ID="Initializing" Text="初始化" />
+    <String ID="ShortcutMenu.Back" Text="返回" />
+    <String ID="UasNotGranted" Text="'{0}'不被许可" />
+  </Strings>
+</Resources>

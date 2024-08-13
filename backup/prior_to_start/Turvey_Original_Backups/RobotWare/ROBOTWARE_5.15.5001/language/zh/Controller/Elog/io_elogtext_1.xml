@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="EIO" domainNo="7" lang="zh" elogTextVersion="1.0" min="1001" max="1231">
+  <Message number="1001" eDefine="SYS_EIO_UNT_ADDR_DUPLICATED">
+    <Title>重复地址</Title>
+    <Description>I/O 配置无效。<p />为 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 和 I/O 单元 &lt;<arg format="%s" ordinal="2" />&gt;提供了相同的地址。<p /><p />连至相同 I/O 总线的 I/O 单元必须有唯一的地址。<p /><p />此 I/O 单元已被拒绝。</Description>
+    <Actions>1. 检查地址是否正确。<p />2. 检查各 I/O 单元是否已连至正确的 I/O 总线。</Actions>
+  </Message>
+  <Message number="1002" eDefine="SYS_EIO_UNT_DRV_INVALID">
+    <Title>单元类型未定义</Title>
+    <Description>I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。 </Description>
+    <Consequences>此单元已被拒绝，依赖此单元的功能将无法工作。</Consequences>
+    <Causes>未知的单元类型 &lt;<arg format="%s" ordinal="2" />&gt;。所有 I/O 单元都必须引用已定义的现有单元类型。 </Causes>
+    <Actions>1. 确保已定义单元类型。<p />2. 确保单元类型的拼写正确。</Actions>
+  </Message>
+  <Message number="1003" eDefine="SYS_EIO_SIG_UNIT_INVALID">
+    <Title>I/O 单元未定义</Title>
+    <Description>I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。</Description>
+    <Consequences>此 I/O 信号已被拒绝，依赖此信号的功能将无法工作。</Consequences>
+    <Causes>未知的 I/O 单元 &lt;<arg format="%s" ordinal="2" />&gt;。所有 I/O 信号都必须引用现有/已定义的 I/O 单元。
+    </Causes>
+    <Actions>1. 确保 I/O 单元已定义。<p />2. 确保 I/O 单元名称的拼写正确。</Actions>
+  </Message>
+  <Message number="1005" eDefine="SYS_EIO_SIG_PAS_FILTER">
+    <Title>过滤器时间无效</Title>
+    <Description>I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />无源过滤器时间应为 0 ms，或处于 [<arg format="%d" ordinal="2" /> 至 <arg format="%d" ordinal="3" />] 毫秒范围内。<p /><p />该 I/O 信号已被拒绝。</Description>
+    <Actions>纠正 I/O 信号的无源过滤器时间。</Actions>
+  </Message>
+  <Message number="1006" eDefine="SYS_EIO_SIG_ACT_FILTER">
+    <Title>过滤器时间无效</Title>
+    <Description>I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />有源过滤器时间应为 0 ms，或处于 [<arg format="%d" ordinal="2" /> 至 <arg format="%d" ordinal="3" />] ms 范围内。<p /><p />该 I/O 信号已被拒绝。</Description>
+    <Actions>纠正 I/O 信号的有源过滤器时间。</Actions>
+  </Message>
+  <Message number="1007" eDefine="SYS_EIO_SIG_LOG_MAXMIN">
+    <Title>逻辑值超出范围</Title>
+    <Description>I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />逻辑最小值必须小于逻辑最大值。<p /><p />该 I/O 信号已被拒绝。</Description>
+    <Actions>纠正 I/O 信号的逻辑值，使最小值小于最大值。</Actions>
+  </Message>
+  <Message number="1008" eDefine="SYS_EIO_SIG_PHY_MAXMIN">
+    <Title>物理值超出范围</Title>
+    <Description>I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />物理最小值必须小于物理最大值。<p /><p />该 I/O 信号已被拒绝。</Description>
+    <Actions>纠正 I/O 信号的物理值，使最小值小于最大值。</Actions>
+  </Message>
+  <Message number="1017" eDefine="SYS_EIO_CRS_ACT_MISSING">
+    <Title>无 actor I/O 信号交叉连接</Title>
+    <Description>I/O 配置无效。<p /><p />某个交叉连接的参数 &lt;Actor <arg format="%d" ordinal="1" />&gt; 已被忽略。<p /><p />规则：<p />1. 所有交叉连接必须指定至少一个 actor 信号，即必须始终指定参数。<p />2. 对于各个指定的操作符，必须后跟一个 actor I/O 信号，即如果已指定参数 &lt;Operator 2&gt;，则也必须指定参数 &lt;Actor 3&gt;。<p /><p />该交叉连接已被拒绝。</Description>
+    <Actions>纠正交叉连接，以指定所需的 actor I/O 信号。</Actions>
+  </Message>
+  <Message number="1019" eDefine="SYS_EIO_CRS_ACT_UNDEF">
+    <Title>I/O 信号未定义</Title>
+    <Description>交叉连接的 I/O 配置无效。</Description>
+    <Consequences>此交叉连接已被拒绝，依赖此交叉连接的功能将无法工作。</Consequences>
+    <Causes>某个交叉连接的参数 &lt;Actor <arg format="%d" ordinal="1" />&gt; 包含到未定义的 I/O 信号 &lt;<arg format="%s" ordinal="2" />&gt; 的引用。</Causes>
+    <Actions>       1. 确保 I/O 信号已定义。<p />2. 确保 I/O 信号名称的拼写正确。</Actions>
+  </Message>
+  <Message number="1020" eDefine="SYS_EIO_CRS_RES_MISSING">
+    <Title>无合成 I/O 信号交叉连接</Title>
+    <Description>I/O 配置无效。<p /><p />某个交叉连接的参数 &lt;合成 I/O 信号&gt; 已被忽略。<p />所有交叉连接必须指定合成 I/O 信号。<p /><p />该交叉连接已被拒绝。</Description>
+    <Actions>纠正交叉连接，使每个交叉连接都有一个合成 I/O 信号。</Actions>
+  </Message>
+  <Message number="1021" eDefine="SYS_EIO_CRS_RES_DUPLICATE">
+    <Title>重复的交叉连接合成信号</Title>
+    <Description>I/O 配置无效。<p /><p />多个交叉连接拥有相同的合成 I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt;。<p />多个交叉连接设定相同信号可能会导致不可预测的行为，因为您无法控制它们的评估顺序。<p /><p />整个交叉连接配置已被拒绝。</Description>
+    <Actions>确保 I/O 信号未被指定为多个交叉连接的合成信号。</Actions>
+  </Message>
+  <Message number="1037" eDefine="SYS_EIO_CRS_FEEDBACK">
+    <Title>交叉连接电路关闭</Title>
+    <Description>I/O 配置无效。<p /><p />I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 为已关闭交叉连接链的一部分（即形成一个无法评估的循环关联）。<p /><p />整个交叉连接配置已被拒绝。</Description>
+    <Actions>纠正包含上述 I/O 信号的交叉连接配置。</Actions>
+  </Message>
+  <Message number="1038" eDefine="SYS_EIO_CRS_INDX">
+    <Title>超过交叉连接最大深度</Title>
+    <Description>I/O 配置无效。<p /><p />I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 是一个深度太大的交叉连接的一部分。<p />交叉连接链的最大深度为 &lt;<arg format="%d" ordinal="2" />&gt;。<p /><p />整个交叉连接配置已被拒绝。</Description>
+    <Actions>确保交叉连接深度更小。</Actions>
+  </Message>
+  <Message number="1045" eDefine="SYS_EIO_SIG_FILTER_ERR">
+    <Title>过滤器规格无效</Title>
+    <Description>       I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />无法为此类 I/O 信号指定过滤器时间。<p /><p />该 I/O 信号已被拒绝。</Description>
+    <Actions>将过滤器时间设置为 0，或删除该语句。</Actions>
+  </Message>
+  <Message number="1049" eDefine="SYS_EIO_SIG_INVERT_ERR">
+    <Title>模拟 I/O 信号倒置</Title>
+    <Description>       I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />模拟 I/O 信号不得倒置。<p /><p />仅数字和 I/O 组信号可以倒置。<p /><p />该 I/O 信号已被拒绝。</Description>
+    <Actions>消除 I/O 信号倒置（或更改信号类型）。</Actions>
+  </Message>
+  <Message number="1050" eDefine="SYS_EIO_CRS_ACT_NOT_DIG">
+    <Title>带非数字 actor I/O 信号的交叉连接</Title>
+    <Description>I/O 配置无效。<p /><p />某个交叉连接的参数 &lt;Actor <arg format="%d" ordinal="1" />&gt; 引用非数字 I/O 信号 &lt;<arg format="%s" ordinal="2" />&gt;。<p />仅数字 I/O 信号可以交叉连接。<p /><p />该交叉连接已被拒绝。</Description>
+    <Actions>删除交叉连接中的非数字 I/O 信号。</Actions>
+  </Message>
+  <Message number="1052" eDefine="SYS_EIO_CRS_TABLE_ERR">
+    <Title>超过最大交叉连接数</Title>
+    <Description>I/O 配置无效。<p />已超过 I/O 系统内的最大交叉连接数 <arg format="%d" ordinal="1" /> 。<p /><p />未接受全部交叉连接。</Description>
+    <Actions>修改 I/O 系统的配置（通过减少交叉连接数目），使其不超过最大限值。</Actions>
+  </Message>
+  <Message number="1054" eDefine="SYS_EIO_SIG_SIGNALTYPE_INVALID">
+    <Title>信号类型无效</Title>
+    <Description>       I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />指定的信号类型 &lt;<arg format="%s" ordinal="2" />&gt; 无效/未知。<p /><p />有效的信号类型为：<p />- DI（数字输入）<p />- DO（数字输出）<p />- AI（模拟输入）<p />- AO（模拟输出）<p />- GI（组输入）<p />- GO（组输出）<p /><p />该 I/O 信号已被拒绝。</Description>
+    <Actions>纠正 I/O 信号的信号类型。</Actions>
+  </Message>
+  <Message number="1058" eDefine="SYS_EIO_UNT_CONTACT_LOST">
+    <Title>与 I/O 单元的通信中断</Title>
+    <Description>先前与 I/O 总线 <arg format="%s" ordinal="2" /> 上地址为 <arg format="%s" ordinal="3" /> 的 I/O 单元 <arg format="%s" ordinal="1" /> 的工作通信已经中断。</Description>
+    <Consequences>无法访问该 I/O 单元本身或该 I/O 单元上的 I/O 信号，因为该单元当前未与控制器通信。</Consequences>
+    <Causes>I/O 单元可能已经断开与系统的连接。</Causes>
+    <Actions>1. 确保总线电缆连接到控制器。<p />2. 确保 I/O 单元供电正常。<p />3. 确保至 I/O 单元的接线正确连接。 </Actions>
+  </Message>
+  <Message number="1072" eDefine="SYS_EIO_NO_SAVE">
+    <Title>无法读取存储的信号值</Title>
+    <Description>       I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 的信号值未存储，所以无法读取。</Description>
+    <Actions>设置存储属性以更改 I/O 信号配置。</Actions>
+  </Message>
+  <Message number="1076" eDefine="SYS_EIO_TRPRTP1_TIMEOUT">
+    <Title>来自 rtp1 的通信错误</Title>
+    <Description>串行线没有响应。</Description>
+    <Actions>检查设备或连接。</Actions>
+  </Message>
+  <Message number="1077" eDefine="SYS_EIO_TRPRTP1_RX_FULL">
+    <Title>来自 rtp1 的通信错误</Title>
+    <Description>无法传输收到的消息。</Description>
+    <Actions>检查通信流。</Actions>
+  </Message>
+  <Message number="1078" eDefine="SYS_EIO_TRPRTP1_BAD_FRAME">
+    <Title>来自 rtp1 的通信错误</Title>
+    <Description>来自设备的响应包含无效的帧序列。</Description>
+    <Actions>检查串行线上是否有干扰。</Actions>
+  </Message>
+  <Message number="1080" eDefine="SYS_EIO_DRV_TABLE_ERR">
+    <Title>超过最大单元类型数量</Title>
+    <Description>I/O 配置无效。<p />已超过 I/O 系统内的最大单元类型数量 <arg format="%d" ordinal="1" />&gt;。</Description>
+    <Actions>修改 I/O 系统的配置（减少单元类型数量），使其不超过最大限值。</Actions>
+  </Message>
+  <Message number="1081" eDefine="SYS_EIO_PHS_TABLE_ERR">
+    <Title>超过最大物理 I/O 信号数量</Title>
+    <Description>I/O 配置无效。<p />已超过 I/O 系统内的最大物理 I/O 信号（位映射）数量 <arg format="%d" ordinal="1" />&gt;。</Description>
+    <Actions>修改 I/O 系统的配置（减少物理 I/O 信号数量），使其不超过最大限值。</Actions>
+  </Message>
+  <Message number="1082" eDefine="SYS_EIO_SIG_TABLE_ERR">
+    <Title>超过最大的用户 I/O 信号数量</Title>
+    <Description>I/O 配置无效。<p />超过 I/O 系统中最大的用户 I/O 信号数量 <arg format="%d" ordinal="1" />。</Description>
+    <Actions>修改 I/O 系统的配置（减少 I/O 信号数量），以使其不超过最大限值。 </Actions>
+  </Message>
+  <Message number="1083" eDefine="SYS_EIO_SYM_TABLE_ERR">
+    <Title>超过最大符号数量</Title>
+    <Description>I/O 配置无效。<p />已超过 I/O 系统内的最大符号数量 <arg format="%d" ordinal="1" />。<p /><p />符号数量为所有已命名的配置实例总数：<p />- I/O 总线<p />- 单元类型<p />- I/O 单元<p />- I/O 信号<p />- 命令类型<p />- 命令<p />- I/O 访问级别<p />- CIP 路由</Description>
+    <Actions>修改 I/O 系统的配置（即减少符号数量），使其不超过最大限值。</Actions>
+  </Message>
+  <Message number="1084" eDefine="SYS_EIO_TRG_TABLE_ERR">
+    <Title>超过最大已订阅 I/O 信号数量</Title>
+    <Description>I/O 配置无效。<p />已超过 I/O 系统内已订阅 I/O 信号的最大数量 <arg format="%d" ordinal="1" />&gt;。</Description>
+    <Actions>修改 I/O 系统的配置（减少订阅数量），使其不超过最大限值。<p /></Actions>
+  </Message>
+  <Message number="1085" eDefine="SYS_EIO_UNT_TABLE_ERR">
+    <Title>超过最大 I/O 单元数量</Title>
+    <Description>I/O 配置无效。<p />已超过 I/O 系统内的最大 I/O 单元数量 <arg format="%d" ordinal="1" />&gt;。</Description>
+    <Actions>修改 I/O 系统的配置（减少 I/O 单元数量），使其不超过最大限值。 </Actions>
+  </Message>
+  <Message number="1097" eDefine="SYS_EIO_SIG_STORE_ERR">
+    <Title>存储输入 I/O 信号</Title>
+    <Description>       I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />不能存储输入 I/O 信号。<p /><p />只能存储输出 I/O 信号。<p /><p />该 I/O 信号已被拒绝。</Description>
+    <Actions>删除 I/O 信号的存储（或更改信号类型）。</Actions>
+  </Message>
+  <Message number="1098" eDefine="SYS_EIO_NFS_DOWN">
+    <Title>找不到 NFS 服务器</Title>
+    <Description>与 NFS 服务器 &lt;<arg format="%s" ordinal="1" />&gt; 的联络中断。</Description>
+    <Actions>1. NFS 服务器。<p />2. 网络连接。<p />3. NFS 客户端。</Actions>
+  </Message>
+  <Message number="1099" eDefine="SYS_EIO_NFS_TRUST_DOWN">
+    <Title>找不到信任的 NFS 服务器</Title>
+    <Description>与信任的 NFS 服务器 &lt;<arg format="%s" ordinal="1" />&gt; 的联络中断。</Description>
+    <Actions>1. NFS 服务器。<p />2. 网络连接。<p />3. NFS 客户端。</Actions>
+  </Message>
+  <Message number="1100" eDefine="SYS_EIO_BUS_TABLE_ERR">
+    <Title>超过最大 I/O 总线数量</Title>
+    <Description>I/O 配置无效。<p />已超过 I/O 系统内的最大 I/O 总线数量 <arg format="%d" ordinal="1" />&gt;。</Description>
+    <Actions>修改 I/O 系统的配置（减少 I/O 总线数量），使其不超过最大限值。</Actions>
+  </Message>
+  <Message number="1101" eDefine="SYS_EIO_UNT_BUS_INVALID">
+    <Title>I/O 总线未定义</Title>
+    <Description>I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />在系统内找不到 I/O 总线 &lt;<arg format="%s" ordinal="2" />&gt;。I/O 单元必须引用已定义的 I/O 总线。<p /><p />已安装的 I/O 总线为：<arg format="%s" ordinal="3" /><arg format="%s" ordinal="4" /><arg format="%s" ordinal="5" /></Description>
+    <Consequences>此 I/O 单元已被拒绝，所有依赖其的功能将无法工作。</Consequences>
+    <Actions>1. 确保 I/O 总线已定义。<p />2. 确保 I/O 总线名称的拼写正确。</Actions>
+  </Message>
+  <Message number="1108" eDefine="SYS_EIO_IBS_PF_ERR">
+    <Title>Interbus I/O 单元故障</Title>
+    <Description>位于地址 &lt;<arg format="%s" ordinal="2" />&gt; 的 I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 报告外设故障。Interbus ÌØ¶¨´íÎó´úÂë£º <arg format="%d" ordinal="3" />.</Description>
+    <Consequences>无法通过控制系统联络 I/O 单元。无法访问部分 Interbus 网络，这取决于网络拓扑和故障性质。</Consequences>
+    <Causes>多次出现错误可能导致此情况。详情请参阅标准 Interbus 说明文件。</Causes>
+    <Actions>1. 确保位于上述地址的 I/O 单元正常工作。<p />2. 检查 Interbus 手册中指定的 Interbus 特定错误代码：固件检修和错误消息。</Actions>
+  </Message>
+  <Message number="1109" eDefine="SYS_EIO_IBS_BUS_ERR_U">
+    <Title>Interbus 总线故障</Title>
+    <Description>控制系统无法与 Interbus 网络进行通信。Interbus 板上没有任何错误消息。</Description>
+    <Consequences>无法访问部分 Interbus 网络，这取决于网络拓扑和故障性质。</Consequences>
+    <Causes>多次出现错误可能导致此情况。详情请参阅标准 Interbus 说明文件。</Causes>
+    <Actions>       1. 确保向 Interbus 网络供电的客户电源单元正常工作。更换故障 I/O 单元。<p />2. 确保正确连接所有保险丝。<p />3. 确保所有通信电缆和连接器正常工作，并使用推荐类型。<p />4. 检查网络拓扑和电缆长度。<p />5. 重新启动系统。</Actions>
+  </Message>
+  <Message number="1110" eDefine="SYS_EIO_IBS_ERR_DESCR">
+    <Title>Interbus 总线故障</Title>
+    <Description>控制系统与位于地址 &lt;<arg format="%d" ordinal="1" /> 的 I/O 单元的通信已中断。<arg format="%d" ordinal="2" />&gt;。Interbus ÌØ¶¨´íÎó´úÂë£º <arg format="%d" ordinal="3" />.</Description>
+    <Consequences>无法访问部分 Interbus 网络，这取决于网络拓扑和故障性质。</Consequences>
+    <Causes>多次出现错误可能导致此情况。详情请参阅标准 Interbus 说明文件。</Causes>
+    <Actions>1. 确保位于上述地址的 I/O 单元正常工作。<p />2. 检查 Interbus 手册中指定的 Interbus 特定错误代码：固件检修和错误消息。</Actions>
+  </Message>
+  <Message number="1111" eDefine="SYS_EIO_IBS_PROD_ID_ERR">
+    <Title>ID 代码不匹配</Title>
+    <Description>从 Interbus I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 读取的 ID 代码&lt;<arg format="%d" ordinal="2" />&gt; 与单元类型配置的预期值 <arg format="%d" ordinal="3" /> 不匹配。</Description>
+    <Consequences>I/O 单元未配置，无法供系统使用。</Consequences>
+    <Causes>可能向系统参数中引入了错误的 ID 代码值。Interbus 网络可能配置使用了带错误 ID 代码的 I/O 单元。</Causes>
+    <Actions>检查系统参数中的 I/O 单元的单元类型的 ID 代码。有关如何检查配置文件的详情请参阅《故障排除手册》。<p />2. 在供应商的说明文件中指定的 Interbus 配置内，使用具有正确 ID 代码的 I/O 单元进行替换。<p />3. 在系统参数内指定一个通用单元类型：ibsGeneric 和 ibsSlave。</Actions>
+  </Message>
+  <Message number="1114" eDefine="SYS_EIO_INVALID_IP">
+    <Title>IP 地址无效</Title>
+    <Description>IP 地址 &lt;<arg format="%s" ordinal="1" />&gt; 无效。</Description>
+    <Actions>检查通信配置。</Actions>
+  </Message>
+  <Message number="1115" eDefine="SYS_EIO_INVALID_SUBMASK">
+    <Title>子网掩码无效</Title>
+    <Description>子网掩码 &lt;<arg format="%s" ordinal="1" />&gt; 无效。</Description>
+    <Actions>检查通信配置。</Actions>
+  </Message>
+  <Message number="1116" eDefine="SYS_EIO_UNT_DISABLE_INVALID">
+    <Title>使用“单元信任级别 &lt;必需 (0)&gt;”停用 I/O 单元</Title>
+    <Description>I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />不允许停用带“必需的单元信任级别 (0)”的 I/O单元。<p /><p /></Description>
+    <Consequences>此 I/O 单元已被拒绝，依赖其的功能将无法工作。</Consequences>
+    <Actions>启动该单元或更改信任级别以纠正 I/O 单元配置。</Actions>
+  </Message>
+  <Message number="1122" eDefine="SYS_EIO_ILLEGAL_IP_ADDRESS">
+    <Title>IP 地址不正确</Title>
+    <Description>IP 地址 &lt;<arg format="%s" ordinal="1" />&gt;（位于协议 &lt;<arg format="%s" ordinal="2" />&gt; 内）不正确。</Description>
+    <Actions>纠正地址。</Actions>
+  </Message>
+  <Message number="1123" eDefine="SYS_EIO_NO_MATCHING_TRANSPORT">
+    <Title>无传输协议</Title>
+    <Description>找不到传输协议 &lt;<arg format="%s" ordinal="1" />&gt;（分配至应用程序协议 &lt;<arg format="%s" ordinal="2" />&gt;）。</Description>
+    <Actions>更改传输协议。</Actions>
+  </Message>
+  <Message number="1125" eDefine="SYS_EIO_PERMISSION_DENIED">
+    <Title>安装许可被拒绝</Title>
+    <Description>拒绝将目录 &lt;<arg format="%s" ordinal="1" />&gt; 安装在服务器 &lt; <arg format="%s" ordinal="2" />&gt;. </Description>
+    <Actions>更改用户或组 ID。</Actions>
+  </Message>
+  <Message number="1126" eDefine="SYS_EIO_NO_SUCH_DEVICE">
+    <Title>未导出目录</Title>
+    <Description>将目录 &lt;<arg format="%s" ordinal="1" />&gt; 安装为 &lt;<arg format="%s" ordinal="2" />&gt; 失败，因为该目录尚未导出至服务器计算机 &lt;<arg format="%s" ordinal="3" />&gt;. <p />协议: &lt; <arg format="%s" ordinal="4" />&gt;. </Description>
+    <Actions>将目录导出至服务器计算机。</Actions>
+  </Message>
+  <Message number="1128" eDefine="SYS_EIO_NFS_NOT_INSTALLED">
+    <Title>未安装以太网</Title>
+    <Description>要使用远程安装的磁盘则必须安装 Ethernet Services 选项。</Description>
+    <Actions>重启系统并安装 Ethernet Services 选项。</Actions>
+  </Message>
+  <Message number="1129" eDefine="SYS_EIO_MAX_DEVICES">
+    <Title>远程磁盘过多</Title>
+    <Description>已超过最大远程安装磁盘数量。<p />最大数量为 <arg format="%d" ordinal="1" />。</Description>
+    <Actions>减少远程安装磁盘的数量。</Actions>
+  </Message>
+  <Message number="1130" eDefine="SYS_EIO_MAX_SERVERS">
+    <Title>远程服务器过多</Title>
+    <Description>已超过远程安装磁盘的服务器最大数量。<p />最大数量为 <arg format="%d" ordinal="1" />。</Description>
+    <Actions>1. 减少服务器的数量。</Actions>
+  </Message>
+  <Message number="1131" eDefine="SYS_EIO_COULD_NOT_MOUNT">
+    <Title>无法安装目录</Title>
+    <Description>将目录 &lt;<arg format="%s" ordinal="1" />&gt; 安装在计算机 &lt;<arg format="%s" ordinal="2" />&gt; 上失败。<p />协议: &lt; <arg format="%s" ordinal="3" />&gt;. </Description>
+    <Actions>检查服务器设置。</Actions>
+  </Message>
+  <Message number="1141" eDefine="SYS_EIO_SIG_DEF_RANGE_ERR">
+    <Title>I/O 信号的默认值超出范围</Title>
+    <Description>       I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt;的 I/O 配置无效。<p />默认值超出范围。<p /><p />该 I/O 信号已被拒绝。</Description>
+    <Actions>更改 I/O 信号的默认值。</Actions>
+  </Message>
+  <Message number="1145" eDefine="SYS_EIO_IBS_MODE_CHANGE_ERR">
+    <Title>Interbus 总线失效</Title>
+    <Description>Interbus 总线已被切换至非运行模式。</Description>
+    <Actions>重新启动系统。<p />2. 检查是否已选择正确的 Interbus 启动项目。</Actions>
+  </Message>
+  <Message number="1147" eDefine="SYS_EIO_IBS_MBX_ERROR">
+    <Title>Interbus 网络没有响应</Title>
+    <Description>访问 Interbus 网络被拒绝。</Description>
+    <Actions>1. 检查 Interbus 电路板。<p />2. 检查内部 Interbus 配置。<p />3. 缩短从控 I/O 单元上的周期时间。</Actions>
+  </Message>
+  <Message number="1148" eDefine="SYS_EIO_IBS_MXI_RW_ERROR">
+    <Title>无法访问 Interbus 网络</Title>
+    <Description>在 <arg format="%s" ordinal="1" /> 期间访问 Interbus 服务接口被拒绝，错误代码为 0x<arg format="%d" ordinal="2" />。</Description>
+    <Actions>1. 检查内部 Interbus 配置。<p />2. Interbus 可能发生故障。必要时更换故障 I/O 单元。</Actions>
+  </Message>
+  <Message number="1156" eDefine="SYS_EIO_IPC_QFULL">
+    <Title>IPC 队列已满</Title>
+    <Description>发送至陷阱例行程序时，进程间通信 (IPC) 队列 &lt;<arg format="%s" ordinal="1" />&gt; 已满。<p /></Description>
+    <Actions>重新启动系统</Actions>
+  </Message>
+  <Message number="1158" eDefine="SYS_EIO_UNT_ADDR_INVALID">
+    <Title>地址超出范围。</Title>
+    <Description>I/O 配置无效。<p />I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 的地址无效（超出范围）。<p /><p />该 I/O 单元已被拒绝。</Description>
+    <Actions>1. 更改地址。<p />2. 检查地址语法。</Actions>
+  </Message>
+  <Message number="1163" eDefine="SYS_EIO_UNT_PROTECTED">
+    <Title>内部 I/O 单元上的 I/O 信号</Title>
+    <Description>I/O 配置无效。<p />用户定义的 I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 不能连接至内部 I/O 单元 &lt;<arg format="%s" ordinal="2" />&gt;<p /><p />。不允许将用户定义的 I/O 信号连接至内部 I/O 单元。<p /><p />该 I/O 信号已被拒绝。</Description>
+    <Actions>将 I/O 信号连至其他 I/O 单元。</Actions>
+  </Message>
+  <Message number="1164" eDefine="SYS_EIO_SIG_PROTECTED">
+    <Title>交叉连接中的内部 I/O 信号</Title>
+    <Description>I/O 配置包含无效的交叉连接。<p />&lt;Actor <arg format="%d" ordinal="1" /><arg format="%s" ordinal="2" />&gt; 为用户定义的 I/O 信号，而合成 I/O 信号 &lt;<arg format="%s" ordinal="3" />&gt; 为内部 I/O 信号。<p /><p />当用户定义的 I/O 信号将影响内部 I/O 信号时不允许定义交叉连接。</Description>
+    <Actions>纠正交叉连接，使合成表达式中没有内部 I/O 信号。</Actions>
+  </Message>
+  <Message number="1165" eDefine="SYS_EIO_FTP_DOWN">
+    <Title>FTP 服务器停机</Title>
+    <Description>与不信任的 FTP 服务器的连接断开。<p />IP 地址： &lt; <arg format="%s" ordinal="1" />&gt;. </Description>
+    <Actions>检查电缆和 FTP 服务器设置。</Actions>
+  </Message>
+  <Message number="1166" eDefine="SYS_EIO_FTP_TRUST_DOWN">
+    <Title>FTP 服务器停机</Title>
+    <Description>与信任的 FTP 服务器的连接断开。<p />IP 地址： &lt; <arg format="%s" ordinal="1" />&gt;. </Description>
+    <Actions>检查电缆和 FTP 服务器设置。</Actions>
+  </Message>
+  <Message number="1167" eDefine="SYS_EIO_FTP_TRANS_TCPIP">
+    <Title>传输协议错误</Title>
+    <Description>在配置中未找到匹配的传输协议。</Description>
+    <Actions>更改传输协议。</Actions>
+  </Message>
+  <Message number="1169" eDefine="SYS_EIO_FTP_NOT_INSTALLED">
+    <Title>未安装以太网</Title>
+    <Description>此系统未安装带 FTP 的 Ethernet Services 选项。</Description>
+    <Actions>重启系统并安装带 FTP 的 Ethernet Services 选项。</Actions>
+  </Message>
+  <Message number="1182" eDefine="SYS_EIO_CRS_RES_UNDEF">
+    <Title>I/O 信号未定义</Title>
+    <Description>I/O 配置无效。<p /><p />某个交叉连接的参数 &lt;合成 I/O 信号&gt; 引用未定义的I/O 信号 &lt;<arg format="%d" ordinal="1" />&gt;。<p /><p />该交叉连接已被拒绝。</Description>
+    <Actions>纠正交叉连接，使合成 I/O 信号引用现有的 I/O 信号。</Actions>
+  </Message>
+  <Message number="1183" eDefine="SYS_EIO_CRS_OPR_INVALID">
+    <Title>交叉连接包括无效的运算符</Title>
+    <Description>I/O 配置无效。<p /><p />某个交叉连接的参数 &lt;Operator <arg format="%d" ordinal="1" />&gt; 包含无效/未知的操作符 &lt;<arg format="%s" ordinal="2" />&gt;。<p /><p />逻辑操作符的有效值为：<p />- AND<p />- OR<p /><p />该交叉连接已被拒绝。</Description>
+    <Actions>纠正运算符。</Actions>
+  </Message>
+  <Message number="1185" eDefine="SYS_EIO_DUPLICATED_NAME">
+    <Title>重复名称</Title>
+    <Description>I/O 配置无效。<p />标识符 &lt;<arg format="%s" ordinal="1" />&gt; 已用作其他配置实例的名称。<p /><p />下列配置实例必须拥有唯一的名称：<p />- I/O 总线<p />- 单元类型<p />- I/O 单元<p />- I/O 信号<p />- 命令类型<p />- 命令<p />- I/O 访问级别<p />- CIP 路由 <p /><p />该配置实例已被拒绝。</Description>
+    <Actions>1. 在系统参数中重新命名某个配置实例。<p />2. 重新启动系统。</Actions>
+  </Message>
+  <Message number="1193" eDefine="SYS_EIO_MAPPING_OUTSIDE_DATA_AREA">
+    <Title>无效的物理 I/O 映射</Title>
+    <Description>I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 上的 I/O 映射错误。<p />I/O 单元使用的输入大小为 &lt;<arg format="%d" ordinal="2" /> 位，控制器可以处理最多 <arg format="%s" ordinal="3" />&gt; 位。<p />I/O 单元使用的输出大小为 &lt;<arg format="%d" ordinal="4" /> 位，控制器最多可以处理 <arg format="%s" ordinal="5" />&gt; 位。<p /></Description>
+    <Actions>检查物理 I/O 单元的配置。</Actions>
+  </Message>
+  <Message number="1196" eDefine="SYS_EIO_SIG_PHS_ENCODING_INVALID">
+    <Title>编码类型无效</Title>
+    <Description>       I/O 信号 &lt;<arg format="%s" ordinal="1" />&gt; 的 I/O 配置无效。<p />编码类型 &lt;<arg format="%s" ordinal="2" />&gt; 对于信号类型 &lt;<arg format="%d" ordinal="3" />&gt; 而言无效。<p /><p />有效的编码类型为：<p />- UNSIGNED<p />- TWO_COMP<p /><p />该 I/O 信号已被拒绝。</Description>
+    <Actions>纠正 I/O 信号的编码类型。</Actions>
+  </Message>
+  <Message number="1201" eDefine="SYS_EIO_BUS_UNKNOWN">
+    <Title>未知 I/O 总线</Title>
+    <Description>I/O 配置无效。<p />在系统中找不到 I/O 总线 &lt;<arg format="%s" ordinal="1" />&gt;。<p /><p />已安装的 I/O 总线为：<arg format="%s" ordinal="2" /><arg format="%s" ordinal="3" /><arg format="%s" ordinal="4" /><arg format="%s" ordinal="5" /></Description>
+    <Consequences>该 I/O 总线已被拒绝，所有依赖其的功能将无法工作。</Consequences>
+    <Actions>1. 确保系统已配置所需的 I/O 总线。<p />2. 确保现有的 I/O 总线选项已安装。<p />3. 检查 I/O 总线配置。</Actions>
+  </Message>
+  <Message number="1205" eDefine="SYS_EIO_COULD_NOT_MOUNT_FTP">
+    <Title>无法安装目录</Title>
+    <Description>将目录 &lt;<arg format="%s" ordinal="1" />&gt; 安装在计算机 &lt;<arg format="%s" ordinal="2" />&gt; 上失败。<p />协议: &lt; <arg format="%s" ordinal="3" />&gt;. </Description>
+    <Actions>1. 检查 FTP 服务器设置<p />2. 检查 FTP 客户端配置<p />3. 检查通信硬件和接线</Actions>
+  </Message>
+  <Message number="1220" eDefine="SYS_EIO_PBUS_NO_OPT">
+    <Title>未安装 Profibus 选项</Title>
+    <Description>已安装一个 Profibus-DP 主控/从控电路板，但尚未安装 Profibus 选项。</Description>
+    <Consequences>无法进行 Profibus 通信。如果未安装上述选项，配置 Profibus 时可能发生继发性错误。</Consequences>
+    <Causes>可能已尝试在未正确安装选项的情况下添加 Profibus 功能。</Causes>
+    <Actions>1. 如果需要 Profibus 选项：配置一个包含此选项的新系统，并安装系统。<p />2. 如果不需要 Profibus 选项：配置一个不包含此选项的新系统，并安装系统。</Actions>
+  </Message>
+  <Message number="1221" eDefine="SYS_EIO_PBUS_NO_FWFILE_FOUND">
+    <Title>找不到 Profibus 固件文件</Title>
+    <Description>未找到 Profibus &lt;<arg format="%s" ordinal="1" />&gt; 固件或无法读取。<p />电路板固件可能已过时。</Description>
+    <Actions>重新安装系统<p /></Actions>
+  </Message>
+  <Message number="1222" eDefine="SYS_EIO_PBUS_NO_BINCFG_FOUND">
+    <Title>找不到 Profibus 配置文件</Title>
+    <Description>找不到二进制 Profibus 配置文件。<p />- 文件：&lt;<arg format="%s" ordinal="1" />&gt;<p />- Â·¾¶£º &lt;<arg format="%s" ordinal="2" />&gt;.</Description>
+    <Actions>1. 确保文件存在。<p />2. 更改 I/O 配置中的路径。</Actions>
+  </Message>
+  <Message number="1223" eDefine="SYS_EIO_PBUS_BINCFG_PARSE_ERR">
+    <Title>Profibus 文件分析错误</Title>
+    <Description>二进制 Profibus 配置文件被破坏。（内部错误： <arg format="%s" ordinal="1" />) <p />- 文件:&lt; <arg format="%s" ordinal="2" />&gt; <p />- 路径： &lt; <arg format="%s" ordinal="3" />&gt; </Description>
+    <Actions>使用外部 Profibus 配置工具重新创建及下载二进制配置文件。</Actions>
+  </Message>
+  <Message number="1224" eDefine="SYS_EIO_PBUS_CHANNEL_FLASHED">
+    <Title>Profibus 信道已被更新</Title>
+    <Description>信道固件 <arg format="%s" ordinal="1" /> 已从 <arg format="%s" ordinal="2" />&gt; 更新为 &lt; <arg format="%s" ordinal="3" />&gt;. </Description>
+  </Message>
+  <Message number="1225" eDefine="SYS_EIO_PBUS_BAD_CFG_DATA">
+    <Title>Profibus 配置错误</Title>
+    <Description>本地从控信道的 DI/DO 比主控信道中配置的多。</Description>
+    <Actions>使外部 Profibus 主控信道的 DI/DO 数量大于或等于本地从控信道的 DI/DO 数量。</Actions>
+  </Message>
+  <Message number="1226" eDefine="SYS_EIO_PBUS_CFG_DATA_OK">
+    <Title>Profibus 配置正确</Title>
+    <Description>外部 Profibus 主信道的 DI/DO 数量现在多于或等于用于 DP_SLAVE 类型 I/O 单元的 DI/DO。</Description>
+    <Actions />
+  </Message>
+  <Message number="1227" eDefine="SYS_EIO_PBUS_DPS_INIT_FAILED">
+    <Title>初始化 Profibus 从控信道失败</Title>
+    <Description>Profibus-DP 主控/从控电路板上的从控信道未正确启动。 </Description>
+    <Consequences>无法在 Profibus 从控信道上进行通信。</Consequences>
+    <Causes>电路板固件可能发生故障。</Causes>
+    <Actions>1. 重新启动系统。<p />2. 更换发生故障的 Profibus 从控电路板。</Actions>
+  </Message>
+  <Message number="1228" eDefine="SYS_EIO_PBUS_BINCFG_MISMATCH">
+    <Title>Profibus 二进制配置故障</Title>
+    <Description>位于地址 &lt;<arg format="%i" ordinal="1" />&gt; 的从控电路板不接受二进制文件中的配置数据。</Description>
+    <Actions>使二进制文件中的配置数据与从控电路板的配置匹配，并重新启动系统</Actions>
+  </Message>
+  <Message number="1229" eDefine="SYS_EIO_PBUS_BINPRM_MISMATCH">
+    <Title>Profibus 二进制参数故障</Title>
+    <Description>位于地址 &lt;<arg format="%i" ordinal="1" />&gt; 的从控电路板不接受二进制文件中的参数数据。
+  </Description>
+    <Actions>使二进制文件中的参数数据与从控电路板的参数匹配，并重新启动系统。</Actions>
+  </Message>
+  <Message number="1230" eDefine="SYS_EIO_PBUS_BINARYFILE_MISMATCH">
+    <Title>I/O 单元配置错误</Title>
+    <Description>     I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 已在系统中配置，但在 Profibus 二进制文件中缺失或不正确。
+  </Description>
+    <Actions>     1. 检查/更改系统参数。<p />2. 检查/更改 Profibus 二进制文件。
+  </Actions>
+  </Message>
+  <Message number="1231" eDefine="SYS_EIO_PBUS_WRONG_UNIT">
+    <Title>连接了错误的 Profibus I/O 单元</Title>
+    <Description>     位于地址 &lt;<arg format="%d" ordinal="2" />&gt; 的 Profibus I/O 单元 &lt;<arg format="%s" ordinal="1" />&gt; 拥有错误的标识号。报告的标识号为 <arg format="%s" ordinal="3" />。预期标识号为 <arg format="%s" ordinal="4" />。</Description>
+    <Consequences>系统无法启动 I/O 单元，且 Profibus 上不能通信。</Consequences>
+    <Causes>- 位于地址 &lt;<arg format="%d" ordinal="5" />&gt; 的 I/O 单元可能为错误的 I/O 单元类型。<p />- 配置可能不正确，即二进制配置文件不正确或在某些情况下系统参数不正确。</Causes>
+    <Actions>1. 确保系统参数正确。<p />2. 确保 Profibus 二进制文件正确。<p />3. 更换 I/O 单元。</Actions>
+  </Message>
+</Domain>

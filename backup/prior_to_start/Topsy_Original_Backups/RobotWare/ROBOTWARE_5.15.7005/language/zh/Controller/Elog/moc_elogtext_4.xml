@@ -1,0 +1,490 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="MOC" domainNo="5" lang="zh" elogTextVersion="1.0" min="367" max="444">
+  <Message number="367" eDefine="SYS_ERR_MOC_SSYNC_MACHINE_STOP">
+    <Title>传感器同步机器停止</Title>
+    <Description>传感器同步设备 <arg format="%s" ordinal="1" /> 已设置机器停止信号 <arg format="%s" ordinal="2" />。 <p /></Description>
+    <Actions>重启机器人后再打开机器。停用传感器同步。</Actions>
+  </Message>
+  <Message number="368" eDefine="SYS_ERR_MOC_NO_EQUIDISTANT_EVENT_OBJECT">
+    <Title>等距事件之间的距离太短</Title>
+    <Description>事件相隔太近。内部资源（事件）结束。<p /> 任务： <arg format="%s" ordinal="1" /><p /> 程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>增加等距事件之间的距离或利用中间位置来减少区段长度。</Actions>
+  </Message>
+  <Message number="369" eDefine="SYS_ERR_MOC_FC_CONTACT_CALIBRATION_FAILED">
+    <Title>使用存储的偏差校准失败</Title>
+    <Description>未能使用存储的偏差校准传感器。</Description>
+    <Consequences>力度控制系统未校准。无法启动力度控制。</Consequences>
+    <Causes>只有之前执行过标准校准才可使用存储的偏差进行校准。</Causes>
+  </Message>
+  <Message number="370" eDefine="SYS_ERR_MOC_SENSOR_MEMORY_DATA_TRANSFER_ERROR">
+    <Title>向 SMB 内存传输数据失败</Title>
+    <Description>由于 SMB 断开，机械单元 <arg format="%s" ordinal="1" /> 不允许从机柜向 SMB 内存传输数据或传输中断。</Description>
+    <Causes>SMB 在校准或手动移动数据到 SMB 内存之前或之中被断开。</Causes>
+    <Actions>SMB 重新连接后，重试校准或手动将数据从机柜移到 SMB 内存。</Actions>
+  </Message>
+  <Message number="371" eDefine="SYS_ERR_MOC_FC_SPEED_CHANGE_SPEED_ERROR">
+    <Title>程序设定的速度过快</Title>
+    <Description>只有在程序速度低时才能执行速度更改功能。</Description>
+    <Causes>程序设定的速度过快。</Causes>
+    <Actions>降低程序中设定的速度或修改配置参数。</Actions>
+  </Message>
+  <Message number="372" eDefine="SYS_ERR_MOC_FC_SPEED_CHANGE_RECOVER_ERROR">
+    <Title>接触力过大</Title>
+    <Description>恢复阶段的接触力过大。</Description>
+    <Causes>恢复功能中程序设定的路径造成接触力过大。</Causes>
+    <Actions>检查并修改恢复功能或允许更大的接触力。</Actions>
+  </Message>
+  <Message number="373" eDefine="SYS_ERR_MOC_TOO_HIGH_EVENT_PRESET_TIME">
+    <Title>事件预设时间过长</Title>
+    <Description>配置的事件预设时间过长。最大值为 <arg format="%1.2f" ordinal="1" />。 </Description>
+    <Consequences>事件预设时间减少到最大值。</Consequences>
+    <Causes>如果动态解析度太低并且事件预设时间太长，机器人就会发生该错误。原因是计算机的内存有限制。</Causes>
+    <Actions>减小配置参数中的事件预设时间，使该值不得大于 <arg format="%1.2f" ordinal="1" />。 </Actions>
+  </Message>
+  <Message number="374" eDefine="SYS_ERR_MOC_FC_SPEED_CHANGE_PROGRAM_STOP_ERROR">
+    <Title>变速控制（FC SpeedChange） 程序停止错误</Title>
+    <Description>变速控制（FC SpeedChange）无法在恢复状态下停止机器人。</Description>
+    <Actions>移动程序指针，将机器人从当前位置略移开一点，然后重新启动程序。</Actions>
+  </Message>
+  <Message number="375" eDefine="SYS_ERR_MOC_DYNAMIC_LOAD_LIMIT_EXCEEDED">
+    <Title>动态负载过高</Title>
+    <Description>机器人 <arg format="%s" ordinal="1" /> 轴 <arg format="%d" ordinal="2" /> 所需的转矩过高。<p /></Description>
+    <Actions>如果是摆动，以下一项操作可能有所帮助：<p />- 减少此移动的摇动频率和摇幅。<p />- 降低处理速度。<p />- 如果使用小区域，则增加区尺寸。<p />- 如果编程点之间距离较近，则增加间隔距离。<p /><p />如果传送带跟踪：降低传送带的速度。</Actions>
+  </Message>
+  <Message number="376" eDefine="SYS_ERR_MOC_GEO_INTERPOLATION_FAILED">
+    <Title>几何内插失败。</Title>
+    <Description>任务。 <arg format="%s" ordinal="1" /><p />内插需要的几何体失败。<p />程序引用。 <arg format="%s" ordinal="2" /><p />（内部代码： <arg format="%d" ordinal="3" />）</Description>
+    <Actions>增加范围大小，移动编程点，更改工具方向或者更改内插方法。</Actions>
+  </Message>
+  <Message number="377" eDefine="SYS_ERR_FC_ONLY_ALLOWED_IN_POSITION_CONTROL">
+    <Title>仅允许在位置控制中进行</Title>
+    <Description>该指令仅允许在机器人处于位置控制模式之下时进行。 </Description>
+    <Causes>该错误根据调用仅允许在位置控制中处于力度控制模式之下时使用的指令。</Causes>
+    <Actions>只能在在机器人处于位置控制模式之下时调用该指令。 <p /></Actions>
+  </Message>
+  <Message number="378" eDefine="SYS_ERR_FC_MAX_FORCE_CHANGE_TUNE_ERROR">
+    <Title>FCSetMaxForceChangeTune 中的错误</Title>
+    <Description>指令 FCSetMaxForceChangeTune 中的参数 ForceChange 中的错误值。 </Description>
+    <Consequences>程序将停止。</Consequences>
+    <Causes>参数必须设置为大于零并小于配置值。</Causes>
+    <Actions>更改参数值。</Actions>
+  </Message>
+  <Message number="379" eDefine="SYS_ERR_MOC_ACTIVE_MECH_UNIT_MISMATCH">
+    <Title>活跃的机械单元已经更改</Title>
+    <Description>当调用 RestoPath 时，所有机械单元必须处于和调用 RestoPath 时同样的活跃状态。</Description>
+    <Actions>当调用 StorePath 时，请确认所有原本处于活跃状态的机械单元仍然都处于活跃状态，并且在调用 StorePath 时，没有其它的机械单元处于活跃状态。</Actions>
+  </Message>
+  <Message number="380" eDefine="SYS_ERR_MOC_SENSOR_MEMORY_CHECKSUM_ERROR">
+    <Title>校验和错误</Title>
+    <Description>       机械单元的 SMB 内存数据 <arg format="%s" ordinal="1" /> 存在错误的校验和。
+    </Description>
+    <Causes>新的 SMB 电路板。数据保存完成之前关闭系统。</Causes>
+    <Actions>- 加载新的配置文件。</Actions>
+  </Message>
+  <Message number="381" eDefine="SYS_ERR_MOC_TOO_LOW_SPEED">
+    <Title>速度太慢。</Title>
+    <Description>任务 <arg format="%s" ordinal="1" /><p />速度太慢（数字解析度）.<p />程序引用 <arg format="%s" ordinal="2" /></Description>
+    <Actions>提高编程速度。<p />在 multimove 应用程序中同时检查其它同步任务。</Actions>
+  </Message>
+  <Message number="382" eDefine="SYS_ERR_MOC_WEAVE_CALC_ERROR">
+    <Title>摆动样式错误</Title>
+    <Description>由于内部错误摆动样式计算失败。</Description>
+    <Actions>尝试重新启动。</Actions>
+  </Message>
+  <Message number="383" eDefine="SYS_ERR_MOC_CSS_ACT_FAILED_CFG">
+    <Title>笛卡尔软伺服配置错误</Title>
+    <Description>笛卡尔软伺服的某些配置参数无效。</Description>
+    <Consequences>系统将不启动。</Consequences>
+    <Causes>某些配置参数设置为<p />禁用值。</Causes>
+    <Actions>验证任何修改的参数都在允许的范围内。</Actions>
+  </Message>
+  <Message number="384" eDefine="SYS_ERR_MOC_CSS_ACT_FAILED_QUAT">
+    <Title>笛卡尔软伺服四元数无效</Title>
+    <Description>CSSAct 指令中工具、工作对象或者变元 RefOrient 的四元数无效。</Description>
+    <Consequences>笛卡尔软伺服将不会启动。<p /></Consequences>
+    <Actions>检查 CSSAct 指令中工具、工作对象或者变元 RefOrient 的四元数。</Actions>
+  </Message>
+  <Message number="385" eDefine="SYS_ERR_MOC_CSS_ACT_FAILED_ACTIVE">
+    <Title>笛卡尔软伺服启动失败</Title>
+    <Description>指令 CSSAct 失败。</Description>
+    <Causes>笛卡尔软伺服已启动。</Causes>
+    <Actions>笛卡尔软伺服需要先停用才能启动。</Actions>
+  </Message>
+  <Message number="386" eDefine="SYS_ERR_MOC_CSS_OFFSET_ACT_FAILED">
+    <Title>笛卡尔软伺服偏移启动失败</Title>
+    <Description>指令 CSSForceOffsetAct 失败。</Description>
+    <Consequences>力度偏移未启动。</Consequences>
+    <Causes>CSSForceOffsetAct 指令只有在笛卡尔软伺服启动时才允许使用。 </Causes>
+    <Actions>在使用指令 CSSForceOffsetAct 之前，用指令 CSSAct 启动笛卡尔软伺服。</Actions>
+  </Message>
+  <Message number="387" eDefine="SYS_ERR_MOC_CSS_CLOSE_TO_UNSTABLE">
+    <Title>笛卡尔软伺服接近不稳定</Title>
+    <Description>笛卡尔软伺服接近不稳定。<p /></Description>
+    <Consequences>为安全起见，机器人将停止运动。</Consequences>
+    <Causes>系统阻尼过低。</Causes>
+    <Actions>阻尼是使用刚度比计算得出的。<p />更改 CSSAct 指令中的 Stiffness 或 StiffnessNonSoftDir 的值。如果这样做不起作用，请增大配置参数 Damping Stability Limit 的值，或将参数 Stiffness 更改为阻尼比。</Actions>
+  </Message>
+  <Message number="388" eDefine="SYS_ERR_MOC_CSS_POS_SUPERVISION">
+    <Title>笛卡尔软伺服位置监控错误</Title>
+    <Description>用户定义的位置监控在“笛卡尔伺服”模式中触发。</Description>
+    <Consequences>机器人停止。</Consequences>
+    <Causes>位置误差大于配置中指定的允许范围。 </Causes>
+    <Actions>在配置中增加允许的位置误差或者修改程序。</Actions>
+  </Message>
+  <Message number="389" eDefine="SYS_ERR_MOC_CSS_SINGULARITY">
+    <Title>笛卡尔软伺服异常</Title>
+    <Description>机器人过于接近异常，会影响笛卡尔软伺服行为。<p /></Description>
+    <Consequences>机器人的行为会与指定的不同。</Consequences>
+    <Actions>修改程序以避免异常。</Actions>
+  </Message>
+  <Message number="390" eDefine="SYS_ERR_MOC_CSS_SPEED_SUPERVISION">
+    <Title>笛卡尔伺服速度监控</Title>
+    <Description>用户定义的速度监控在“笛卡尔伺服”模式中触发。</Description>
+    <Consequences>机器人停止。</Consequences>
+    <Causes>速度误差大于配置中指定的允许范围。 <p /><p /><p /><p /></Causes>
+    <Actions>在配置中增加允许的速度误差或者修改程序。 </Actions>
+  </Message>
+  <Message number="391" eDefine="SYS_ERR_MOC_CSS_MOVE_NOT_ALLOWED">
+    <Title>不允许笛卡尔伺服移动</Title>
+    <Description>已经检测到微动控制或程控移动。</Description>
+    <Consequences>指令移动被忽略。</Consequences>
+    <Actions>如果在 CSSAct 指令中使用了开关参数 AllowMove，则在笛卡尔软伺服期间只允许移动。</Actions>
+  </Message>
+  <Message number="392" eDefine="SYS_ERR_MOC_COMMUNICATION_ERROR_WITH_SAFEMOVE">
+    <Title>SafeMove 通信错误</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 上与 SafeMove 控制器的通信失败。</Description>
+    <Consequences>无法完成制动闸测试。</Consequences>
+    <Actions>检查是否连接了 SafeMove 硬件。</Actions>
+  </Message>
+  <Message number="393" eDefine="SYS_ERR_MOC_CSS_FORCE_IN_STIFF_DIR">
+    <Title>在非软指令中应用力度偏移</Title>
+    <Description>CSSForceOffsetAct 中的力度偏移方向与 CSSAct 指定的软方向不同。</Description>
+    <Consequences>机器人在软方向中变得更容易推动。在非软方向中，也可能存在与编程路径的位置偏差。</Consequences>
+    <Actions>确保在 CSSForceOffsetAct 中指定的方向与 CSSAct 中指定的方向一致。</Actions>
+  </Message>
+  <Message number="394" eDefine="SYS_ERR_MOC_REGAIN_POS_CLEARED_COORDINATED_FRAME">
+    <Title>单元路径被清除</Title>
+    <Description>机器人 <arg format="%s" ordinal="2" /> 已通过另一任务与单元 <arg format="%s" ordinal="1" /> 进行半协调，此单元的路径在 modpos、SyncMoveOff、SyncMoveSuspend、ActUnit、DeactUnit 或 ClearPath 之后被清除，无法从其他任务读取位置。</Description>
+    <Consequences>程序运行或重新启动将被中断。</Consequences>
+    <Actions>如果在机器人与单元之间处于半协调状态时 modpos 移动了单元的编程位置，则将单元移至新位置以定义路径并在机器人程序中移动 PP 以便重新启动程序。<p />如果在单元程序中执行 SyncMoveOff、SyncMoveSuspend、ActUnit、DeactUnit 或 ClearPath 之后启动半协调运动，则在所有程序中插入将单元移至精细点外加 WaitSyncTask 两项操作。<p />检查所有程序，以确定半协调运动是否通过精细点分隔、是否在半协调运动之前和之后执行 WaitSyncTask 指令以及单元是否在此期间发生了移动。 请注意，在半协调之后到 SyncMoveOn 和 SyncMoveResume 之前这段时间也需要执行 WaitSyncTask。</Actions>
+  </Message>
+  <Message number="395" eDefine="SYS_ERR_MOC_TOO_LOW_SPEED_LONG_SEGMENT">
+    <Title>编程移动过长</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />此移动对编程速度来说过长。路径计划中的数字解析度不足。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>速度会增加，即，比编程速度高。</Consequences>
+    <Actions>插入中间点或者增加速度。</Actions>
+  </Message>
+  <Message number="396" eDefine="SYS_ERR_MOC_FC_CROSS_SECTION_SUPERVISION_ERROR">
+    <Title>默认 FC 力度监控错误</Title>
+    <Description>默认的力度监控已触发，因为编程或测量的外部力度大于机器人类型的安全限制。</Description>
+    <Consequences>机器人将停止。</Consequences>
+    <Actions>修改程序以减少施加在机器人上的总外部力度。</Actions>
+  </Message>
+  <Message number="397" eDefine="SYS_ERR_MOC_FC_PATH_FRAME_ROTATION_SPEED_ERROR">
+    <Title>路径框架旋转速度误差</Title>
+    <Description>在将 FC Machining 与 设置为 FC_REFFRAME_PATH 的 ForceFrameRef 配合使用时，路径框架的旋转速度过高。</Description>
+    <Consequences>机器人将停止。</Consequences>
+    <Actions>降低编程速度，增加转角区，或者减少编程路径和表面之间的距离。</Actions>
+  </Message>
+  <Message number="398" eDefine="SYS_ERR_MOC_ABSACC_CIRCLE_FRAME_CHANGE">
+    <Title>AbsAcc 圆从变更框架开始</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />使用 AbsAcc 选项时，与另一个机器人协调的 MoveC 指令必须使用相同的工具和工作对象作为前一个移动指令。</Description>
+    <Consequences>机器人将停止。</Consequences>
+    <Actions>在 <arg format="%s" ordinal="2" /> 前更改移动指令，以便它们使用相同的框架。或者，使用与 MoveC 指令相同的框架向圆弧的起点添加一个（冗余的）MoveL。</Actions>
+  </Message>
+  <Message number="399" eDefine="SYS_ERR_MOC_ABSACC_CIRCLE_IS_FIRST_INSTR">
+    <Title>AbsAcc 圆是第一个移动指令</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />使用 AbsAcc 选项时，MoveC 不能是第一个移动指令。</Description>
+    <Consequences>机器人将停止。</Consequences>
+    <Actions>在 <arg format="%s" ordinal="2" /> 前添加移动指令，以使用相同的工具和框架。</Actions>
+  </Message>
+  <Message number="400" eDefine="SYS_ERR_MOC_CONFIG_INCONSISTENT_PARAMETER">
+    <Title>运动配置错误</Title>
+    <Description>MEASUREMENT_CHANNEL 的参数 disconnect_link_at_deactivate 与 measurement_link <arg format="%d" ordinal="1" /> 的不一致。 同一链路上所有信道的此参数必须使用相同的设置。</Description>
+    <Actions>检查配置文件。 <p />使用正确的参数对系统执行 I-启动。</Actions>
+  </Message>
+  <Message number="401" eDefine="SYS_ERR_MOC_STARTUP_SYNCH_FAILED">
+    <Title>启动同步失败</Title>
+    <Description>定义了系统中继 '<arg format="%s" ordinal="1" />'，但在启动期间未收到响应（已等待 <arg format="%d" ordinal="2" /> 分钟）。</Description>
+    <Actions>确保配置并连接了中继的 in_signal，并同时启动全部同步的系统。</Actions>
+  </Message>
+  <Message number="402" eDefine="SYS_ERR_MOC_CORR_ENDS_IN_ZONE">
+    <Title>纠正未在小点结束</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /> 指定纠正的最后一条移动指令必须为小点。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>将区域参数更改为小点。</Actions>
+  </Message>
+  <Message number="403" eDefine="SYS_ERR_MOC_NO_AW_BOARD">
+    <Title>AW 板未连接</Title>
+    <Description>在启动期间，未与总线 &lt;<arg format="%s" ordinal="2" />&gt; 上的单元 &lt;<arg format="%s" ordinal="1" />&gt; 建立通信。</Description>
+    <Consequences>它不能访问该单元或该单元上的信号，因为它当前未与控制器通信。</Consequences>
+    <Causes>单元未连接至系统或已连接，但获配置错误地址。</Causes>
+    <Actions>1. 确保所有单元地址都与配置匹配。<p />2. 确保所有地址都是唯一的，而且没有被一个以上的单元使用。<p />3. 更改地址和/或连接缺失的单元。<p />4. 如果更改地址，单元的电源必须重新接通（关闭，然后开启），以确保地址已更改。 </Actions>
+  </Message>
+  <Message number="404" eDefine="SYS_ERR_MOC_WRISTCIRCLE_EXT_AXIS_MOVEMENT">
+    <Title>“手腕内插”期间附加轴移动</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p />程序引用 <arg format="%s" ordinal="2" /><p /><p /> “手腕内插”期间，附加轴被编定为移动。</Description>
+    <Consequences>任务执行将会停止。</Consequences>
+    <Actions>进行“手腕内插”时，请确保没有附加轴被编定为移动。</Actions>
+  </Message>
+  <Message number="405" eDefine="SYS_ERR_MOC_WRISTCIRCLE_COORD_MOVEMENT">
+    <Title>“手腕内插”期间发生协调移动</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /> 程序引用 <arg format="%s" ordinal="2" /><p /><p /> 试图针对移动框架执行“手腕内插”。</Description>
+    <Consequences>任务执行将会停止。</Consequences>
+    <Actions>进行“手腕内插”时删除移动协调。</Actions>
+  </Message>
+  <Message number="406" eDefine="SYS_ERR_MOC_WRISTCIRCLE_Z_NOT_ON_PLANE">
+    <Title>“手腕内插”点不在圆面上</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /> 程序引用 <arg format="%s" ordinal="2" /><p /><p /> 目标 <arg format="%s" ordinal="4" /> 不在圆面上。偏差为 <arg format="%f" ordinal="3" /> mm。<p /><p />p1 = 起点 <p />p2 = 圆点 <p />p3 = 终点</Description>
+    <Consequences>对于剪切处理，剪切孔将不会是圆形的。</Consequences>
+    <Actions>如果要使用圆弧，则更改相应的目标，以便其位于圆面上。</Actions>
+  </Message>
+  <Message number="407" eDefine="SYS_ERR_MOC_WRISTCIRCLE_AXIS_LOCKED">
+    <Title>手腕轴已锁定</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /> 程序引用 <arg format="%s" ordinal="2" /><p /><p />无法使用 <arg format="%s" ordinal="4" /> 进行“手腕内插”，因为轴 <arg format="%d" ordinal="3" /> 已被锁定。</Description>
+    <Consequences>任务执行将会停止。</Consequences>
+    <Actions>更改为不涉及已锁定的轴的其他手腕轴组合。请注意，要进行“手腕内插”，机器人必须拥有至少两个可移动的手腕轴。</Actions>
+  </Message>
+  <Message number="408" eDefine="SYS_ERR_MOC_WRISTCIRCLE_JOINT_LIMIT">
+    <Title>手腕接点限制</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /> 程序引用 <arg format="%s" ordinal="2" /><p /><p />无法进行“手腕内插”，因为机器人的轴 <arg format="%d" ordinal="3" /> 将会违反接点限制。</Description>
+    <Consequences>任务执行将会停止。</Consequences>
+    <Actions>选择其他的机器人配置或其他的手腕轴组合。</Actions>
+  </Message>
+  <Message number="409" eDefine="SYS_ERR_MOC_WRISTCIRCLE_SOLVER_ERROR">
+    <Title>无法进行“手腕内插”</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /> 程序引用 <arg format="%s" ordinal="2" /><p /><p /> 使用 <arg format="%s" ordinal="3" />，编定的手腕内插在运动学上是不可行的。</Description>
+    <Consequences>任务执行将会停止。</Consequences>
+    <Actions>选择其他的机器人配置或其他的手腕轴组合。可能的手腕轴组合为：Wrist45、Wrist46 和 Wrist56。</Actions>
+  </Message>
+  <Message number="410" eDefine="SYS_ERR_MOC_WRISTCIRCLE_COLLINEAR_WRONG_ORDER">
+    <Title>共线目标错序</Title>
+    <Description>任务： <arg format="%s" ordinal="1" /><p /> 程序引用 <arg format="%s" ordinal="2" /><p /><p /> 编定的目标共线，但终点位于起点和圆点之间。</Description>
+    <Consequences>任务执行将会停止。</Consequences>
+    <Actions>如果要使用直线，将圆点与终点相互交换位置。</Actions>
+  </Message>
+  <Message number="411" eDefine="SYS_ERR_MOC_OUTSIDE_LOAD_DIAGRAM">
+    <Title>已超过允许的最大编定 TCP 载荷</Title>
+    <Description>机器人 <arg format="%s" ordinal="1" /> 目前定义的 TCP 载荷超过了机器人模型允许的最大载荷。</Description>
+    <Consequences>机器人将停止。</Consequences>
+    <Causes>目前的工具载荷和有效载荷的组合超过了机器人模型允许的最大载荷。</Causes>
+    <Actions>请确保总 TCP 载荷处于机器人的载荷图范围内。</Actions>
+  </Message>
+  <Message number="412" eDefine="SYS_ERR_MOC_FC_SPEED_CHANGE_TUNE_ERROR">
+    <Title>速度更改调节指令中存在错误</Title>
+    <Description>速度更改调节指令产生了错误。</Description>
+    <Consequences>机器人将停止。</Consequences>
+    <Causes>不允许速度更改调节指令，或者指定的参数无效。</Causes>
+    <Actions>检查参数值和调节类型，并确保正确地安装和配置了力度控制选项。</Actions>
+  </Message>
+  <Message number="413" eDefine="SYS_ERR_MOC_REC_BLEEDER_TEMPERATURE_ERROR">
+    <Title>泄流电阻过载错误</Title>
+    <Description>
+在驱动模块 <arg format="%d" ordinal="1" /> 中，连接至位于驱动单元位置 <arg format="%d" ordinal="2" /> 的整流器单元的泄流电阻发生过载。
+    </Description>
+    <Consequences>除非泄流电阻冷却下来，否则无法进行任何操作。系统转入“电机关闭”状态。</Consequences>
+    <Causes>1) 用户程序可能包含过多的操纵器轴减速。这种故障在系统包含其他轴时更有可能发生。<p />2) 泄流电阻的阻值有误。<p />3) 电机电缆发生相相或相地短路。</Causes>
+    <Actions>1) 通过重新编写用户程序来减少硬减速量。<p />2) 断开泄流电阻，然后检查电缆并测量泄流电阻。预期电阻应约为 <arg format="%d" ordinal="3" /> 欧姆。<p />3) 验证电机电缆未发生内部短路或同大地之间的短路。</Actions>
+  </Message>
+  <Message number="414" eDefine="SYS_ERR_MOC_REC_BLEEDER_TEMPERATURE_WARNING">
+    <Title>泄流电阻过载警告</Title>
+    <Description>
+在驱动模块 <arg format="%d" ordinal="1" /> 中，连接至位于驱动单元位置 <arg format="%d" ordinal="2" /> 的整流器单元的泄流电阻即将发生过载。
+    </Description>
+    <Consequences>虽可以工作，但系统会很快发生某个停止错误。</Consequences>
+    <Causes>1) 用户程序可能包含过多的操纵器轴减速。这种故障在系统包含其他轴时更有可能发生。<p />2) 泄流电阻的阻值有误。<p />3) 电机电缆发生相相或相地短路。</Causes>
+    <Actions>1) 通过重新编写用户程序来减少硬减速量。<p />2) 断开泄流电阻，然后检查电缆并测量泄流电阻。预期电阻应约为 <arg format="%d" ordinal="3" /> 欧姆。<p />3) 验证电机电缆未发生内部短路或同大地之间的短路。</Actions>
+  </Message>
+  <Message number="415" eDefine="SYS_ERR_MOC_MOTOR_TEMPERATURE_ERROR">
+    <Title>电机温度错误</Title>
+    <Description>       接点的电机温度 <arg format="%s" ordinal="1" /> 过高。
+    </Description>
+    <Consequences>直到电机完全冷却才能继续操作。系统进入“电机关闭”状态。</Consequences>
+    <Causes>用户程序可能含有过多的接点紧急加速和紧急减速。也有可能是接点的重力转矩或外力过大。</Causes>
+    <Actions>重写用户程序以减少电机使用。</Actions>
+  </Message>
+  <Message number="416" eDefine="SYS_ERR_MOC_MOTOR_TEMPERATURE_WARNING">
+    <Title>电机温度警告</Title>
+    <Description>       接点 <arg format="%s" ordinal="1" /> 的电机温度接近最大值。
+    </Description>
+    <Consequences>可以继续，但与最大允许温度的差值太小而无法维持长期操作。</Consequences>
+    <Causes>用户程序可能含有过多的接点紧急加速和紧急减速。也有可能是接点的重力转矩或外力过大。</Causes>
+    <Actions>重写用户程序以减少电机使用。</Actions>
+  </Message>
+  <Message number="417" eDefine="SYS_ERR_MOC_INVERTER_TEMPERATURE_ERROR">
+    <Title>驱动单元过载错误</Title>
+    <Description>
+关节 <arg format="%s" ordinal="2" /> 的驱动单元所达到的温度水平过高。关节连接到驱动模块 <arg format="%d" ordinal="1" /> 中的驱动单元，单元位置为 <arg format="%d" ordinal="3" />，节点为 <arg format="%d" ordinal="4" />。
+    </Description>
+    <Consequences>除非驱动单元冷却下来，否则无法进行任何操作。系统将转到“电机关闭”状态。</Consequences>
+    <Causes>
+1) 关节可能在高转矩情况下长时间运行。<p />2) 使用长电机电缆的机械臂中发生短路。
+    </Causes>
+    <Actions>
+1) 如果可能，请重新编写用户程序，以减少硬加速和硬减速的量。<p />2) 降低因重力或外力导致的静态转矩。<p />3) 检查电机电缆或电机内是否存在短路。<p />4) 检查是否有其他硬件事件日志。
+    </Actions>
+  </Message>
+  <Message number="418" eDefine="SYS_ERR_MOC_INVERTER_TEMPERATURE_WARNING">
+    <Title>驱动单元过载警告</Title>
+    <Description>
+关节 <arg format="%s" ordinal="2" /> 的驱动单元（连接至驱动模块 <arg format="%d" ordinal="1" />，驱动单元的位置为 <arg format="%d" ordinal="3" />，节点位置为 <arg format="%d" ordinal="4" />）正在接近过高的温度水平。
+    </Description>
+    <Consequences>虽可以继续操作，但由于相对于最高温度的裕度太小，因此将无法长时间操作。</Consequences>
+    <Causes>
+1) 关节可能在高转矩情况下长时间运行。<p />2) 使用长电机电缆的机械臂中发生短路。
+    </Causes>
+    <Actions>
+1) 如果可能，请重新编写用户程序，以减少硬加速和硬减速的量。<p />2) 降低因重力或外力导致的静态转矩。<p />3) 检查电机电缆或电机内是否存在短路。<p />4) 检查是否有其他硬件事件日志。
+    </Actions>
+  </Message>
+  <Message number="419" eDefine="SYS_ERR_MOC_COMMON_BASE_FRAME_ERROR">
+    <Title>公用 base_frame 错误</Title>
+    <Description>任务：<arg format="%s" ordinal="1" /><p /> base_frame 已被除机器人以外的其他任务移动，无法处理，原因 <arg format="%d" ordinal="3" />：<p />1 使用 MoveC 不支持 SingArea\Wrist。<p />2 必须通过第一个同步的 motion_group 移动 base_frame。<p />3 只可以处理一个公用 base_frame。<p />4 使用 MoveC 不支持 Absacc。<p />5 只能在同步移动中处理公用 base_frame。<p />程序引用 <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>1 使用 SingArea\Off。也可以使用 CirPathMode。<p />2,3 检查控制器和动作配置。<p />4 使用 MoveL 或删除 absacc。<p />5 使用 MoveAbsJ。</Actions>
+  </Message>
+  <Message number="420" eDefine="SYS_ERR_MOC_INDCNV_MECUNIT_ERROR">
+    <Title>IndCnv 机械单元错误</Title>
+    <Description>
+			机械单元 <arg format="%s" ordinal="1" /> 未根据 IndCnv 功能进行正确配置。
+		</Description>
+    <Consequences>程序停止执行。</Consequences>
+    <Causes>
+			机械单元 <arg format="%s" ordinal="1" /> 包含多个单体。<p />连接到 <arg format="%s" ordinal="1" /> 的单体不是 FREE_ROT 类型。<p />连接到 <arg format="%s" ordinal="1" /> 的单体未被定义为 Indexing Move（分度移动）单体。
+		</Causes>
+    <Actions>
+			确保机械单元 <arg format="%s" ordinal="1" /> 仅含一个单体。<p />确保配置参数 Motion/Single Type/Mechanics 为 FREE_ROT 类型。<p />确保配置参数 Motion/Single Type/Indexing Move 为 TRUE（真）。
+		</Actions>
+  </Message>
+  <Message number="421" eDefine="SYS_ERR_MOC_INDCNV_TRACK_SINGLE_ERROR">
+    <Title>IndCnv 跟踪单体错误</Title>
+    <Description>
+			单体 <arg format="%s" ordinal="1" /> 未被配置为 Indexing Move（分度移动）单体
+		</Description>
+    <Consequences>程序停止执行。</Consequences>
+    <Actions>确保配置参数 Process/Can Interface/Single To Track 是指一个 Motion/Single Type/Indexing Move 被设为 TRUE（真）的单体。</Actions>
+  </Message>
+  <Message number="422" eDefine="SYS_ERR_MOC_INDCNV_INDJDF_ERROR">
+    <Title>IndCnv 和独立接点错误</Title>
+    <Description>
+			处于分度模式的单体 <arg format="%s" ordinal="1" /> 不允许独立的接点指令。
+		</Description>
+    <Consequences>程序停止执行。</Consequences>
+    <Actions>使用轴作为独立接点之前，执行 RAPID 指令 IndCnvReset。</Actions>
+  </Message>
+  <Message number="423" eDefine="SYS_ERR_MOC_INDCNV_PRETRIG_TIME_TOO_LOW">
+    <Title>IndCnv Time before indexing move 过低</Title>
+    <Description>触发器发出信号与开始移换角度移动之间的时间配置得过低。</Description>
+    <Consequences>已停止程序执行。</Consequences>
+    <Actions>将系统参数“Motion/Single Type/Time before indexing move”至少增加到 <arg format="%s" ordinal="1" /> （毫秒）。<p />如果可能，去除或减少机器人加速限制。<p />有关进行一步的操作，请查阅《输送跟踪》应用手册。<p /><p /><p /></Actions>
+  </Message>
+  <Message number="424" eDefine="SYS_ERR_MOC_INDCNV_IRB_NOT_SUPPORTED">
+    <Title>不支持的 IndCnv 机器人类型</Title>
+    <Description>IndCnv 功能不支持所安装的机器人类型。</Description>
+    <Consequences>程序停止执行。</Consequences>
+  </Message>
+  <Message number="425" eDefine="SYS_ERR_MOC_FRICTION_FFW_NOT_ON">
+    <Title>Friction FFW 参数未启用 </Title>
+    <Description>只有将 Friction FFW On 设为 True，才能调节摩擦参数。</Description>
+    <Consequences>针对接点 <arg format="%s" ordinal="1" /> 的摩擦调节将没有效果。</Consequences>
+    <Actions>对于接点 <arg format="%s" ordinal="1" /> ，将参数 Friction FFW On 设为 True（在属于“运动”主题的 <arg format="%s" ordinal="2" /> 类型中）。</Actions>
+  </Message>
+  <Message number="426" eDefine="SYS_ERR_MOC_OUT_OF_DYN_SPLINE_OBJECTS">
+    <Title>超过插补对象数量</Title>
+    <Description>达到可用插补对象的最大数量。 当动态性能被设为极低的值（例如使用 AccSet 或 PathAccLim 命令）时，可能发生此问题。</Description>
+    <Consequences>程序将停止执行，系统转入“电机关闭”状态。</Consequences>
+    <Actions>在 "Motion "主题中的 "Motion Planner "类型的对应实例中，通过将 "Use additional interp. object batch" 系统参数的值增加 1，增加对象的数量。</Actions>
+  </Message>
+  <Message number="427" eDefine="SYS_ERR_MOC_NOT_SYNCHRONIZED_AFTER_CALIB">
+    <Title>校准后关节未同步</Title>
+    <Description>在对使用备用校准位置的关节 <arg format="%s" ordinal="1" /> 进行微调后，关节未移动至更新转数计数器的正常同步位置。</Description>
+    <Consequences> 系统将在下次重新启动或加电时取消同步关节。</Consequences>
+    <Actions>在用于清除转数计数器的正常位置清除转数计数器。</Actions>
+  </Message>
+  <Message number="428" eDefine="SYS_ERR_MOC_PSC_SOFTWARE_SYNCHRONIZATION">
+    <Title>SC 软件同步已开始</Title>
+    <Description>安全控制器软件同步步骤已经开始。</Description>
+  </Message>
+  <Message number="429" eDefine="SYS_ERR_MOC_DAMPING_OBSOLETE">
+    <Title>CSS 参数阻尼已过时。</Title>
+    <Description>有关阻尼的 CSS 参数已经过时。现在阻尼在所有方向上，由刚度与阻尼比率决定。要更改非软方向<p />的行为，请使用非软方向刚度参数。</Description>
+    <Actions>根据手册中的说明，将阻尼参数更改为非软方向刚度。</Actions>
+  </Message>
+  <Message number="430" eDefine="SYS_ERR_MOC_AXC_UNDERRUN_OF_REFERENCES">
+    <Title>轴计算机中发生欠载</Title>
+    <Description>驱动模块 <arg format="%s" ordinal="1" /> 中的轴计算机发现来自主机的数据欠载，因此停止了执行。</Description>
+    <Consequences>系统进入“系统暂停”状态。</Consequences>
+    <Causes> - 主机与轴计算机之间存在通讯错误/假信号。<p />- 之前的错误使系统处于高 CPU 载荷状态。<p />- 例如由过于频繁的 EIO 通信造成的主计算机载荷太高。 <p /></Causes>
+    <Actions> - 检查是否有其他错误日志。<p />- 检查主机和轴计算机上的以太网接线和连接器。<p />- 减少主机载荷。<p /></Actions>
+  </Message>
+  <Message number="433" eDefine="SYS_ERR_MOC_INDJDF_WARNING_CHANGE_TO_JOINT_BOUND">
+    <Title>位置更改为工作区域内部</Title>
+    <Description> 当执行“独立重置”指令时，关节 <arg format="%s" ordinal="1" /> 在其正常工作区域外部。 </Description>
+    <Consequences>位置被移至正常工作区域内部。</Consequences>
+    <Causes> 在独立模式下，关节被移动得太远。 <p />所配置的正常工作区域太小。 </Causes>
+    <Actions> 要避免警告，在执行 IndReset 指令或执行“PP 移至主程序”之前，将关节移回到其正常工作区域内部。 <p />增加正常工作区域。 </Actions>
+  </Message>
+  <Message number="434" eDefine="SYS_ERR_MOC_INDJDF_WARNING_OLD_RESET_CHANGE">
+    <Title>位置更改为工作区域内部</Title>
+    <Description> 当使用参变量 Old 执行“独立重置”指令时，关节 <arg format="%s" ordinal="1" /> 在其正常工作区域外部。 </Description>
+    <Consequences>位置被移至正常工作区域内部。</Consequences>
+    <Causes>在独立模式下，在 IndReset Old 之前关节被移动得太远。 <p />所配置的正常工作区域太小。 </Causes>
+    <Actions> 要避免警告，在执行 IndReset Old 指令或执行“PP 移至主程序”之前，将关节移回到其正常工作区域内部。 <p />增加正常工作区域。 </Actions>
+  </Message>
+  <Message number="435" eDefine="SYS_ERR_MOC_INCONSISTENT_CFG_PARAMETER">
+    <Title>配置参数不一致</Title>
+    <Description> 在实例 <arg format="%s" ordinal="2" /> 中，关节 <arg format="%s" ordinal="1" /> 的配置参数 "<arg format="%s" ordinal="3" />" 值不一致。 </Description>
+    <Consequences>系统无法启动</Consequences>
+    <Causes>两个或多个关节的同一配置参数具有不同的值。</Causes>
+    <Actions> 将指向相同实例或硬件的所有关节的此参数设置为相同值/名称。 </Actions>
+  </Message>
+  <Message number="436" eDefine="SYS_ERR_MOC_SINGULARITY_ERROR">
+    <Title>奇点错误</Title>
+    <Description>由于 <arg format="%s" ordinal="1" /> 的当前位置与编程位置之间存在奇点，无法达到编程位置。</Description>
+    <Causes>编程位置的配置数据指示机器人必须经过奇点到达此位置。</Causes>
+    <Actions>使用 SingArea\Wrist、ConfL\Off 或将运动指令更改为 MoveJ。</Actions>
+  </Message>
+  <Message number="437" eDefine="SYS_ERR_MOC_SLAVE_MOTION_PLANNER_WARNING">
+    <Title>从动轴连接到错误的动作路径文件</Title>
+    <Description>从动轴 <arg format="%s" ordinal="1" /> 所连接的动作路径文件的编号低于其相应主轴 <arg format="%s" ordinal="2" />。 </Description>
+    <Consequences>与正常设置相比，以电子方式链接的电机的性能将降低。</Consequences>
+    <Actions>更改动作配置，以使从动轴 <arg format="%s" ordinal="1" /> 与主轴 <arg format="%s" ordinal="2" /> 位于相同动作路径文件中，或者从动轴所在的动作路径文件的编号高于主轴所在的动作路径文件的编号。</Actions>
+  </Message>
+  <Message number="438" eDefine="SYS_ERR_MOC_MOTOR_OFF_WARNING">
+    <Title>电机关闭过程已超时</Title>
+    <Description>机械单元 <arg format="%s" ordinal="1" /> 无法在所配置的时间内完成电机关闭过程。</Description>
+    <Consequences>制动过程可能在轴静止之前已结束。</Consequences>
+    <Actions> 1) 如果轴的制动时间大于 5 秒的默认值，则通过将主题“动作”和类型“制动”中的系统参数“最大制动时间”设置为更高值来增大该值。<p />2) 重新启动控制器。<p />3) 重试。 </Actions>
+  </Message>
+  <Message number="439" eDefine="SYS_ERR_MOC_SOFT_SERVO_ACTIVATION_FAILED">
+    <Title>软伺服激活失败</Title>
+    <Description>关节 <arg format="%s" ordinal="1" /> 无法设置为软伺服模式。原因是轴在激活之前或激活期间的一小段时间内达到其最大转矩水平。</Description>
+    <Consequences>系统紧急停止，软激活命令也被取消。</Consequences>
+    <Actions>查明扭矩过高的原因。<p />- 检查是否发生了任何冲突。<p />- 检查载荷数据。<p />- 减小加速度或速度，以减低速度。<p />- 检查硬件。<p />- 移动程序指针并重新启动。</Actions>
+  </Message>
+  <Message number="440" eDefine="SYS_ERR_MOC_CORR_GEN_LOST">
+    <Title>找不到校正发电机</Title>
+    <Description>校正发电机已被删除</Description>
+    <Causes>在机器人运动期间执行 CorrDiscon 或 CorrClear 指令 </Causes>
+    <Actions>请等待机器人到达精细点或启动运动但不 \校正</Actions>
+  </Message>
+  <Message number="441" eDefine="SYS_ERR_MOC_SMB_LOW_VOLTAGE_ON_BATTERY_INPUTS">
+    <Title>电池输入电压过低</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 上的串行测量电路板、链路 <arg format="%d" ordinal="2" /> 和板编号 <arg format="%d" ordinal="3" /> 指示电压过低。 如果关闭主电源，转数计数器将丢失。<p />电池电压: <arg format="%f" ordinal="4" /> V<p />外部电压: <arg format="%f" ordinal="5" /> V
+</Description>
+    <Causes>电池未连接或已放电。 如果使用外部电源，则当前电压过低。</Causes>
+    <Actions>- 更换电池。<p />- 如果使用外部电源，检查电缆和电源。</Actions>
+  </Message>
+  <Message number="443" eDefine="SYS_ERR_MOC_TOO_FEW_EVENTS">
+    <Title>缺少内部事件对象</Title>
+    <Description>分配执行此指令的内部事件对象太少。</Description>
+    <Consequences>所有机械单元立即停止运动。</Consequences>
+    <Causes>分配的事件对象不够。</Causes>
+    <Actions>通过在 "Motion" 主题和 "Motion Planner" 类型中增加系统参数“内部事件对象数”分配更多的事件对象，并重新启动控制器。</Actions>
+  </Message>
+  <Message number="444" eDefine="SYS_ERR_MOC_MANIPULATOR_SUPERVISION">
+    <Title>运动监控</Title>
+    <Description>机械单元 <arg format="%s" ordinal="2" /> 上的轴 <arg format="%d" ordinal="1" /> 触发了过松臂检测。 </Description>
+    <Consequences> 机械单元 <arg format="%s" ordinal="2" /> 立即停止运动。 然后，它返回到其运行时所在路径上的一个位置。 此时，它将保持“电机开启”状态，并等待启动请求。 </Consequences>
+    <Causes>运动监控可能是由于检测到臂过松、冲突、外部过程中的载荷定义或力度不正确而触发的。</Causes>
+    <Actions> 1) 如果任何平行臂过松，请尽可能重新连接它们，然后确认故障，并按下教导器上的“启动”按钮继续操作。 <p /> 2) 如果可能，确认故障，并按下教导器上的“启动”按钮继续操作。 <p /> 3) 确保所有载荷已正确定义并测定。 <p /> 4) 如果机械单元暴露于来自外部过程的力作用之下，则使用 RAPID 命令或系统参数提升监控级别。 </Actions>
+  </Message>
+</Domain>

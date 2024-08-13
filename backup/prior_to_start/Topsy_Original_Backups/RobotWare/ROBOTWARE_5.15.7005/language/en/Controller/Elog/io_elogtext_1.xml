@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain elogDomain="EIO" domainNo="7" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="1001" max="1231">
+  <Message number="1001" eDefine="SYS_EIO_UNT_ADDR_DUPLICATED">
+    <Title>Duplicated address</Title>
+    <Description>The I/O configuration is invalid.<p />The same addresses have been given for I/O unit &lt;<arg format="%s" ordinal="1" />&gt; and I/O unit &lt;<arg format="%s" ordinal="2" />&gt;.<p /><p />I/O units connected to the same I/O bus must have unique addresses.<p /><p />This I/O unit has been rejected.</Description>
+    <Actions>1. Check that addresses are correct.<p />2. Check that the I/O units are connected to the correct I/O bus.</Actions>
+  </Message>
+  <Message number="1002" eDefine="SYS_EIO_UNT_DRV_INVALID">
+    <Title>Unit type undefined</Title>
+    <Description>The I/O configuration for I/O unit &lt;<arg format="%s" ordinal="1" />&gt; is invalid. </Description>
+    <Consequences>This unit type has been rejected, and no functions depending on this unit type will work.</Consequences>
+    <Causes>The unit type &lt;<arg format="%s" ordinal="2" />&gt; is unknown. All I/O units must refer to an existing, defined unit type. </Causes>
+    <Actions>1. Make sure the unit type is defined. <p />2. Make sure the unit type is correctly spelt.</Actions>
+  </Message>
+  <Message number="1003" eDefine="SYS_EIO_SIG_UNIT_INVALID">
+    <Title>I/O unit undefined</Title>
+    <Description>The I/O configuration for I/O signal &lt;<arg format="%s" ordinal="1" />&gt; is invalid.</Description>
+    <Consequences>This I/O signal has been rejected, and no functions depending on it will work.</Consequences>
+    <Causes>The I/O unit &lt;<arg format="%s" ordinal="2" />&gt; is unknown. All I/O signals must refer to an existing/defined I/O unit.
+    </Causes>
+    <Actions>1. Make sure the I/O unit is defined. <p />2. Make sure the I/O unit name is correctly spelt.</Actions>
+  </Message>
+  <Message number="1005" eDefine="SYS_EIO_SIG_PAS_FILTER">
+    <Title>Invalid filter time</Title>
+    <Description>The I/O configuration for I/O signal &lt;<arg format="%s" ordinal="1" />&gt; is invalid.<p />The passive filter time should either be 0 ms or in the range [<arg format="%d" ordinal="2" />, <arg format="%d" ordinal="3" />] ms.<p /><p />This I/O signal has been rejected.</Description>
+    <Actions>Correct the passive filter time for the I/O signal.</Actions>
+  </Message>
+  <Message number="1006" eDefine="SYS_EIO_SIG_ACT_FILTER">
+    <Title>Invalid filter time</Title>
+    <Description>The I/O configuration for I/O signal &lt;<arg format="%s" ordinal="1" />&gt; is invalid.<p />The active filter time should either be 0 ms or in the range [<arg format="%d" ordinal="2" />, <arg format="%d" ordinal="3" />] ms.<p /><p />This I/O signal has been rejected.</Description>
+    <Actions>Correct the active filter time for the I/O signal.</Actions>
+  </Message>
+  <Message number="1007" eDefine="SYS_EIO_SIG_LOG_MAXMIN">
+    <Title>Logical values out of range</Title>
+    <Description>The I/O configuration for I/O signal &lt;<arg format="%s" ordinal="1" />&gt; is invalid.<p />The logical minimum value must be less than the logical maximum value.<p /><p />This I/O signal has been rejected.</Description>
+    <Actions>Correct the logical values for the I/O signal so that the minimum value becomes less than the maximum value.</Actions>
+  </Message>
+  <Message number="1008" eDefine="SYS_EIO_SIG_PHY_MAXMIN">
+    <Title>Physical values out of range</Title>
+    <Description>
+      The I/O configuration for I/O signal &lt;<arg format="%s" ordinal="1" />&gt; is invalid.<p />The physical minimum value must be less than the physical maximum value.<p /><p />This I/O signal has been rejected.</Description>
+    <Actions>Correct the physical values for the I/O signal so that the minimum value becomes less than the maximum value.</Actions>
+  </Message>
+  <Message number="1017" eDefine="SYS_EIO_CRS_ACT_MISSING">
+    <Title>Cross connection without actor I/O signal</Title>
+    <Description>The I/O configuration is invalid.<p /><p />The parameter &lt;Actor <arg format="%d" ordinal="1" />&gt; of one of the cross connections have been omitted.<p /><p />Rules:<p />1. All cross connections must specify at least one actor signal, i.e. parameter &lt;Actor I/O signal 1&gt; must always be specified.<p />2. For each operator specified an actor I/O signal must follow, e.g. if parameter &lt;Operator 2&gt; is specified then parameter &lt;Actor 3&gt; must also be specified.<p /><p />This cross connection has been rejected.</Description>
+    <Actions>Correct the cross connection so the required actor I/O signals are specified.</Actions>
+  </Message>
+  <Message number="1019" eDefine="SYS_EIO_CRS_ACT_UNDEF">
+    <Title>I/O signal undefined</Title>
+    <Description>The I/O configuration of a cross connection is invalid.</Description>
+    <Consequences>The cross connection has been rejected, and no functions depending on it will work.</Consequences>
+    <Causes>The parameter &lt;Actor <arg format="%d" ordinal="1" />&gt; of one of the cross connections contains a reference to an undefined I/O signal &lt;<arg format="%s" ordinal="2" />&gt;.</Causes>
+    <Actions>
+      1. Make sure the I/O signal is defined. <p />2. Make sure the I/O signal name is correctly spelt.</Actions>
+  </Message>
+  <Message number="1020" eDefine="SYS_EIO_CRS_RES_MISSING">
+    <Title>Cross connection without resultant I/O signal</Title>
+    <Description>The I/O configuration is invalid.<p /><p />The parameter &lt;Resultant I/O signal&gt; of one of the cross connections have been omitted.<p />All cross connections must specify a resultant I/O signal.<p /><p />This cross connection has been rejected.</Description>
+    <Actions>Correct the cross connection so that there are one resultant I/O signal per cross connection.</Actions>
+  </Message>
+  <Message number="1021" eDefine="SYS_EIO_CRS_RES_DUPLICATE">
+    <Title>Duplicated cross connection resultants</Title>
+    <Description>The I/O configuration is invalid.<p /><p />Multiple cross connections have the same resultant I/O signal &lt;<arg format="%s" ordinal="1" />&gt;.<p />Having more than one cross connection that result in the setting of the same signal may cause unpredictable behaviours, as you cannot control their order of evaluation.<p /><p />The complete cross connection configuration has been rejected.</Description>
+    <Actions>Make sure that the I/O signal is not specified as the resultant of several cross connections.</Actions>
+  </Message>
+  <Message number="1037" eDefine="SYS_EIO_CRS_FEEDBACK">
+    <Title>Closed chain in cross connection</Title>
+    <Description>The I/O configuration is invalid.<p /><p />The I/O signal &lt;<arg format="%s" ordinal="1" />&gt; is part of a cross connection chain that is closed (i.e. forms a circular dependence that cannot be evaluated).<p /><p />The complete cross connection configuration has been rejected.</Description>
+    <Actions>Correct the configuration for the cross connections where the I/O signal above is part.</Actions>
+  </Message>
+  <Message number="1038" eDefine="SYS_EIO_CRS_INDX">
+    <Title>Cross connection max depth exceeded</Title>
+    <Description>The I/O configuration is invalid.<p /><p />The I/O signal &lt;<arg format="%s" ordinal="1" />&gt; is part of a cross connection chain that is too deep.<p />The maximum depth of a cross connection chain is &lt;<arg format="%d" ordinal="2" />&gt;.<p /><p />The complete cross connection configuration has been rejected.</Description>
+    <Actions>Make the cross connection less deep.</Actions>
+  </Message>
+  <Message number="1045" eDefine="SYS_EIO_SIG_FILTER_ERR">
+    <Title>Invalid filter specification</Title>
+    <Description>
+      The I/O configuration for I/O signal &lt;<arg format="%s" ordinal="1" />&gt; is invalid.<p />No filter times can be specified for this type of I/O signal.<p /><p />This I/O signal has been rejected.</Description>
+    <Actions>Set filter time to 0 or remove the statement.</Actions>
+  </Message>
+  <Message number="1049" eDefine="SYS_EIO_SIG_INVERT_ERR">
+    <Title>Analog I/O signal inverted</Title>
+    <Description>
+      The I/O configuration for I/O signal &lt;<arg format="%s" ordinal="1" />&gt; is invalid.<p />Analog I/O signals must not be inverted.<p /><p />Only digital and group I/O signals can be inverted.<p /><p />This I/O signal has been rejected.</Description>
+    <Actions>Remove the invert for the I/O signal (or change the signal type).</Actions>
+  </Message>
+  <Message number="1050" eDefine="SYS_EIO_CRS_ACT_NOT_DIG">
+    <Title>Cross connection with non-digital actor I/O signal</Title>
+    <Description>The I/O configuration is invalid.<p /><p />The parameter &lt;Actor <arg format="%d" ordinal="1" />&gt; of one of the cross connections refer to a I/O signal &lt;<arg format="%s" ordinal="2" />&gt;, that is not digital.<p />Only digital I/O signals can be cross connected.<p /><p />This cross connection has been rejected.</Description>
+    <Actions>Remove the non-digital I/O signal from the cross connection.</Actions>
+  </Message>
+  <Message number="1052" eDefine="SYS_EIO_CRS_TABLE_ERR">
+    <Title>Max number of cross connections exceeded</Title>
+    <Description>The I/O configuration is invalid.<p />The maximum number of cross connections, <arg format="%d" ordinal="1" /> ,in the I/O system has been exceeded.<p /><p />Not all the cross connections have been accepted.</Description>
+    <Actions>Modify the configuration of the I/O system (by reducing the number of cross connections) so that the maximum limit is not exceeded.</Actions>
+  </Message>
+  <Message number="1054" eDefine="SYS_EIO_SIG_SIGNALTYPE_INVALID">
+    <Title>Invalid signal type</Title>
+    <Description>
+      The I/O configuration for I/O signal &lt;<arg format="%s" ordinal="1" />&gt; is invalid.<p />The specified signal type &lt;<arg format="%s" ordinal="2" />&gt; is invalid/unknown.<p /><p />Valid signal types are:<p />- DI (Digital input)<p />- DO (Digital output)<p />- AI (Analog input)<p />- AO (Analog output)<p />- GI (Group input)<p />- GO (Group output)<p /><p />This I/O signal has been rejected.</Description>
+    <Actions>Correct the signal type of the I/O signal.</Actions>
+  </Message>
+  <Message number="1058" eDefine="SYS_EIO_UNT_CONTACT_LOST">
+    <Title>Lost communication with I/O unit</Title>
+    <Description>The previously working communication with I/O unit <arg format="%s" ordinal="1" /> with address <arg format="%s" ordinal="3" /> on I/O bus <arg format="%s" ordinal="2" /> has been lost.</Description>
+    <Consequences>It is not possible to access the I/O unit itself or I/O signals on the I/O unit since it is currently not communicating with the controller.</Consequences>
+    <Causes>The I/O unit may have been disconnected from the system.</Causes>
+    <Actions>1. Make sure that the bus cable is connected to the controller.<p />2. Make sure the I/O unit has is correctly powered. <p />3. Make sure the cabling to the I/O unit is correctly connected. </Actions>
+  </Message>
+  <Message number="1072" eDefine="SYS_EIO_NO_SAVE">
+    <Title>Cannot read stored signal value</Title>
+    <Description>
+      Cannot read the stored signal value for I/O signal &lt;<arg format="%s" ordinal="1" />&gt; as it is not stored.</Description>
+    <Actions>Change the configuration of the I/O signal by setting the store attribute.</Actions>
+  </Message>
+  <Message number="1076" eDefine="SYS_EIO_TRPRTP1_TIMEOUT">
+    <Title>Communication error from rtp1</Title>
+    <Description>No response from the serial line.</Description>
+    <Actions>Check the device or connection.</Actions>
+  </Message>
+  <Message number="1077" eDefine="SYS_EIO_TRPRTP1_RX_FULL">
+    <Title>Communication error from rtp1</Title>
+    <Description>Not possible to deliver the received message.</Description>
+    <Actions>Check the communication flow.</Actions>
+  </Message>
+  <Message number="1078" eDefine="SYS_EIO_TRPRTP1_BAD_FRAME">
+    <Title>Communication error from rtp1</Title>
+    <Description>The response from the device has an invalid frame sequence.</Description>
+    <Actions>Check for noise on the serial line.</Actions>
+  </Message>
+  <Message number="1080" eDefine="SYS_EIO_DRV_TABLE_ERR">
+    <Title>Max number of unit types exceeded</Title>
+    <Description>The I/O configuration is invalid.<p />The maximum number, <arg format="%d" ordinal="1" />, of unit types in the I/O system has been exceeded.</Description>
+    <Actions>Modify the configuration of the I/O system (by reducing the number of unit types) so that the maximum limit is not exceeded.</Actions>
+  </Message>
+  <Message number="1081" eDefine="SYS_EIO_PHS_TABLE_ERR">
+    <Title>Max number of physical I/O signals exceeded</Title>
+    <Description>The I/O configuration is invalid.<p />The maximum number, <arg format="%d" ordinal="1" />, of physical I/O signals (bit-mappings) in the I/O system has been exceeded.</Description>
+    <Actions>Modify the configuration of the I/O system (by reducing the number of physical I/O signals) so that the maximum limit is not exceeded.</Actions>
+  </Message>
+  <Message number="1082" eDefine="SYS_EIO_SIG_TABLE_ERR">
+    <Title>Max number of user I/O signals exceeded</Title>
+    <Description>The I/O configuration is invalid.<p />The maximum number, <arg format="%d" ordinal="1" />, of user I/O signals in the I/O system has been exceeded.</Description>
+    <Actions>Modify the configuration of the I/O system (by reducing the number of I/O signals) so that the maximum limit is not exceeded. </Actions>
+  </Message>
+  <Message number="1083" eDefine="SYS_EIO_SYM_TABLE_ERR">
+    <Title>Max number of symbols exceeded</Title>
+    <Description>The I/O configuration is invalid.<p />The maximum number, <arg format="%d" ordinal="1" />, of symbols in the I/O system has been exceeded.<p /><p />The number of symbols is the sum of all namned configuration instances:<p />- I/O Buses<p />- Unit types<p />- I/O Units<p />- I/O Signals<p />- Command types<p />- Commands<p />- I/O Access levels<p />- CIP Routes</Description>
+    <Actions>Modify the configuration of the I/O system (by reducing the number of symbols) so that the maximum limit is not exceeded.</Actions>
+  </Message>
+  <Message number="1084" eDefine="SYS_EIO_TRG_TABLE_ERR">
+    <Title>Max number of subscribed I/O signals exceeded</Title>
+    <Description>The I/O configuration is invalid.<p />The maximum number, <arg format="%d" ordinal="1" />, of subscribed I/O signals in the I/O system has been exceeded.</Description>
+    <Actions>Modify the configuration of the I/O system (by reducing the number of subscriptions) so that the maximum limit is not exceeded.<p /></Actions>
+  </Message>
+  <Message number="1085" eDefine="SYS_EIO_UNT_TABLE_ERR">
+    <Title>Max number of I/O units exceeded</Title>
+    <Description>The I/O configuration is invalid.<p />The maximum number, <arg format="%d" ordinal="1" />, of I/O units in the I/O system has been exceeded.</Description>
+    <Actions>Modify the configuration of the I/O system (by reducing the number of I/O units) so that the maximum limit is not exceeded. </Actions>
+  </Message>
+  <Message number="1097" eDefine="SYS_EIO_SIG_STORE_ERR">
+    <Title>Input I/O signal stored</Title>
+    <Description>
+      The I/O configuration for I/O signal &lt;<arg format="%s" ordinal="1" />&gt; is invalid.<p />Input I/O signals must not be stored.<p /><p />Only output I/O signals can be stored.<p /><p />This I/O signal has been rejected.</Description>
+    <Actions>Remove the store for the I/O signal (or change the signal type).</Actions>
+  </Message>
+  <Message number="1098" eDefine="SYS_EIO_NFS_DOWN">
+    <Title>NFS server lost</Title>
+    <Description>The contact with the NFS server &lt;<arg format="%s" ordinal="1" />&gt; is lost.</Description>
+    <Actions>1. The NFS server.<p />2. The network connection.<p />3. The NFS client.</Actions>
+  </Message>
+  <Message number="1099" eDefine="SYS_EIO_NFS_TRUST_DOWN">
+    <Title>Trusted NFS server lost</Title>
+    <Description>The contact with the trusted NFS server &lt;<arg format="%s" ordinal="1" />&gt; is lost.</Description>
+    <Actions>1. The NFS server.<p />2. The network connection.<p />3. The NFS client.</Actions>
+  </Message>
+  <Message number="1100" eDefine="SYS_EIO_BUS_TABLE_ERR">
+    <Title>Max number of I/O buses exceeded</Title>
+    <Description>The I/O configuration is invalid.<p />The maximum number, <arg format="%d" ordinal="1" />, of I/O buses in the I/O system has been exceeded.</Description>
+    <Actions>Modify the configuration of the I/O system (by reducing the number of I/O buses) so that the maximum limit is not exceeded.</Actions>
+  </Message>
+  <Message number="1101" eDefine="SYS_EIO_UNT_BUS_INVALID">
+    <Title>I/O bus undefined</Title>
+    <Description>The I/O configuration for I/O unit &lt;<arg format="%s" ordinal="1" />&gt; is invalid.<p />The I/O bus &lt;<arg format="%s" ordinal="2" />&gt; cannot be found in the system. An I/O unit must refer to a defined I/O bus.<p /><p />Installed I/O buses are:<arg format="%s" ordinal="3" /><arg format="%s" ordinal="4" /><arg format="%s" ordinal="5" /></Description>
+    <Consequences>This I/O unit has been rejected, and no functions depending on it will work.</Consequences>
+    <Actions>1. Make sure the I/O bus is defined. <p />2. Make sure the I/O bus name is correctly spelt.</Actions>
+  </Message>
+  <Message number="1108" eDefine="SYS_EIO_IBS_PF_ERR">
+    <Title>Interbus I/O unit failure</Title>
+    <Description>I/O unit &lt;<arg format="%s" ordinal="1" />&gt; at address &lt;<arg format="%s" ordinal="2" />&gt; reported peripheral fault. Interbus specific error code: <arg format="%d" ordinal="3" />.</Description>
+    <Consequences>The I/O unit cannot be contacted by the control system. Parts of the Interbus network will not be accessible, depending on the network topology and the nature of the fault.</Consequences>
+    <Causes>A number of errors may cause this. Further information may be found in the standard Interbus documentation.</Causes>
+    <Actions>1. Make sure the I/O unit at the above address is functioning correctly. <p />2. Check the Interbus specific error code as specified in the Interbus Manuals: Firmware Service and Error Messages.</Actions>
+  </Message>
+  <Message number="1109" eDefine="SYS_EIO_IBS_BUS_ERR_U">
+    <Title>Interbus bus failure</Title>
+    <Description>The control system has lost communication with the Interbus network. There is no error message from any Interbus board.</Description>
+    <Consequences>Parts of the Interbus network will not be accessible, depending on the network topology and the nature of the fault.</Consequences>
+    <Causes>A number of errors may cause this. Further information may be found in the standard Interbus documentation.</Causes>
+    <Actions>
+      1. Make sure the Customer Power Supply unit, supplying the Interbus network with power, is working correctly. Replace any faulty I/O unit. <p />2. Make sure any fuses are correctly connected. <p />3. Make sure all communication cables and connectors are working correctly and of the recommended type. <p />4. Check network topology and cable length. <p />5. Restart the system.</Actions>
+  </Message>
+  <Message number="1110" eDefine="SYS_EIO_IBS_ERR_DESCR">
+    <Title>Interbus bus failure</Title>
+    <Description>The control system has lost communication with the I/O unit at address &lt;<arg format="%d" ordinal="1" />.<arg format="%d" ordinal="2" />&gt;. Interbus specific error code: <arg format="%d" ordinal="3" />.</Description>
+    <Consequences>Parts of the Interbus network will not be accessible, depending on the network topology and the nature of the fault.</Consequences>
+    <Causes>A number of errors may cause this. Further information may be found in the standard Interbus documentation.</Causes>
+    <Actions>1. Make sure the I/O unit at the above address is functioning correctly. <p />2. Check the Interbus specific error code as specified in the Interbus Manuals: Firmware Service and Error Messages.</Actions>
+  </Message>
+  <Message number="1111" eDefine="SYS_EIO_IBS_PROD_ID_ERR">
+    <Title>ID code mismatch</Title>
+    <Description>The ID code &lt;<arg format="%d" ordinal="2" />&gt; read from Interbus I/O unit &lt;<arg format="%s" ordinal="1" />&gt; doesn't match the expected value <arg format="%d" ordinal="3" /> from the unit type configuration.</Description>
+    <Consequences>The I/O unit has not been configured, and cannot be used by the system.</Consequences>
+    <Causes>Wrong ID code value may have been introduced to the system parameters. The Interbus network may have been configured with a I/O unit with the wrong ID code.</Causes>
+    <Actions>Check the ID code of the I/O unit's unit type in the system parameters. How to check the configuration file is detailed in the Trouble Shooting Manual. <p />2. Replace the I/O unit with another using the correct ID code in the Interbus configuration as specified in the supplier's documentation. <p />3. Specify a generic unit type in the system parameters: ibsGeneric and ibsSlave.</Actions>
+  </Message>
+  <Message number="1114" eDefine="SYS_EIO_INVALID_IP">
+    <Title>Invalid IP address</Title>
+    <Description>The IP address &lt;<arg format="%s" ordinal="1" />&gt; is not valid.</Description>
+    <Actions>Check the Communication configuration.</Actions>
+  </Message>
+  <Message number="1115" eDefine="SYS_EIO_INVALID_SUBMASK">
+    <Title>Invalid subnet mask</Title>
+    <Description>The subnet mask &lt;<arg format="%s" ordinal="1" />&gt; is not valid.</Description>
+    <Actions>Check the Communication configuration.</Actions>
+  </Message>
+  <Message number="1116" eDefine="SYS_EIO_UNT_DISABLE_INVALID">
+    <Title>Deactivated I/O unit with Unit Trustlevel &lt;Required (0)&gt;</Title>
+    <Description>The I/O configuration of I/O unit &lt;<arg format="%s" ordinal="1" />&gt; is invalid.<p />I/O units with Unit Trustlevel Required (0) are not allowed to be Deactivated.<p /><p /></Description>
+    <Consequences>This I/O unit has been rejected, and no functions depending on it will work.</Consequences>
+    <Actions>Correct the configuration of the I/O unit by either Activating it or changing the Unit Trustlevel.</Actions>
+  </Message>
+  <Message number="1122" eDefine="SYS_EIO_ILLEGAL_IP_ADDRESS">
+    <Title>Incorrect IP address</Title>
+    <Description>The address &lt;<arg format="%s" ordinal="1" />&gt; in protocol &lt;<arg format="%s" ordinal="2" />&gt; is not a correct IP address.</Description>
+    <Actions>Correct the address.</Actions>
+  </Message>
+  <Message number="1123" eDefine="SYS_EIO_NO_MATCHING_TRANSPORT">
+    <Title>No transmission protocol</Title>
+    <Description>The transmission protocol &lt;<arg format="%s" ordinal="1" />&gt; given for application protocol &lt;<arg format="%s" ordinal="2" />&gt; could not be found.</Description>
+    <Actions>Change the transmission protocol.</Actions>
+  </Message>
+  <Message number="1125" eDefine="SYS_EIO_PERMISSION_DENIED">
+    <Title>Mount Permission denied</Title>
+    <Description>Permission was denied to mount the directory &lt;<arg format="%s" ordinal="1" />&gt; on the server &lt;<arg format="%s" ordinal="2" />&gt;.</Description>
+    <Actions>Change the User or Group ID.</Actions>
+  </Message>
+  <Message number="1126" eDefine="SYS_EIO_NO_SUCH_DEVICE">
+    <Title>Directory not exported</Title>
+    <Description>Mounting directory &lt;<arg format="%s" ordinal="1" />&gt; as &lt;<arg format="%s" ordinal="2" />&gt; failed since it is not exported on the server computer &lt;<arg format="%s" ordinal="3" />&gt;.<p />Protocol: &lt;<arg format="%s" ordinal="4" />&gt;.</Description>
+    <Actions>Export the directory on the server computer.</Actions>
+  </Message>
+  <Message number="1128" eDefine="SYS_EIO_NFS_NOT_INSTALLED">
+    <Title>Ethernet not installed</Title>
+    <Description>The Ethernet Services option has to be installed when using remote mounted disk.</Description>
+    <Actions>Reboot and install the Ethernet Services option.</Actions>
+  </Message>
+  <Message number="1129" eDefine="SYS_EIO_MAX_DEVICES">
+    <Title>Too many remote disks</Title>
+    <Description>The maximum number of remote mounted disks have been exceeded.<p />The maximum number is <arg format="%d" ordinal="1" />.</Description>
+    <Actions>Reduce the number of remote mounted disks.</Actions>
+  </Message>
+  <Message number="1130" eDefine="SYS_EIO_MAX_SERVERS">
+    <Title>Too many remote servers</Title>
+    <Description>The maximum number of servers for remote mounted disks have been exceeded.<p />The maximum number is <arg format="%d" ordinal="1" />.</Description>
+    <Actions>1. Reduce the number of servers.</Actions>
+  </Message>
+  <Message number="1131" eDefine="SYS_EIO_COULD_NOT_MOUNT">
+    <Title>Could not mount directory</Title>
+    <Description>Mounting directory &lt;<arg format="%s" ordinal="1" />&gt; on the computer &lt;<arg format="%s" ordinal="2" />&gt; failed.<p />Protocol: &lt;<arg format="%s" ordinal="3" />&gt;.</Description>
+    <Actions>Check the server setup.</Actions>
+  </Message>
+  <Message number="1141" eDefine="SYS_EIO_SIG_DEF_RANGE_ERR">
+    <Title>Default value for I/O signal out of range</Title>
+    <Description>
+      The I/O configuration for I/O signal &lt;<arg format="%s" ordinal="1" />&gt; is invalid.<p />The default value is out of range.<p /><p />This I/O signal has been rejected.</Description>
+    <Actions>Change the default value for the I/O signal.</Actions>
+  </Message>
+  <Message number="1145" eDefine="SYS_EIO_IBS_MODE_CHANGE_ERR">
+    <Title>Interbus bus has been deactivated</Title>
+    <Description>The Interbus bus has switched to a none running mode.</Description>
+    <Actions>Restart the system. <p />2. Check that correct Interbus boot project is selected.</Actions>
+  </Message>
+  <Message number="1147" eDefine="SYS_EIO_IBS_MBX_ERROR">
+    <Title>No response from the Interbus network</Title>
+    <Description>Access to the Interbus network is denied.</Description>
+    <Actions>1. Check the Interbus board.<p />2. Check the internal Interbus configuration.<p />3. Reduce the cycle time on the slave I/O unit.</Actions>
+  </Message>
+  <Message number="1148" eDefine="SYS_EIO_IBS_MXI_RW_ERROR">
+    <Title>No access to the Interbus network</Title>
+    <Description>Access to the Interbus service interface is denied during <arg format="%s" ordinal="1" />, error code is 0x<arg format="%d" ordinal="2" />.</Description>
+    <Actions>1. Check the internal Interbus configuration.<p />2. The Interbus may be faulty. Replace any faulty I/O unit if required.</Actions>
+  </Message>
+  <Message number="1156" eDefine="SYS_EIO_IPC_QFULL">
+    <Title>IPC queue full</Title>
+    <Description>The interprocess communication (IPC) queue &lt;<arg format="%s" ordinal="1" />&gt; was full, when sending to trap routine.<p /></Description>
+    <Actions>Restart the system.</Actions>
+  </Message>
+  <Message number="1158" eDefine="SYS_EIO_UNT_ADDR_INVALID">
+    <Title>Address out of range</Title>
+    <Description>The I/O configuration is invalid.<p />The address of I/O unit &lt;<arg format="%s" ordinal="1" />&gt; is invalid (out of range).<p /><p />This I/O unit has been rejected.</Description>
+    <Actions>1. Change the address.<p />2. Check the address syntax.</Actions>
+  </Message>
+  <Message number="1163" eDefine="SYS_EIO_UNT_PROTECTED">
+    <Title>I/O signal on internal I/O unit</Title>
+    <Description>The I/O configuration is invalid.<p />The user-defined I/O signal &lt;<arg format="%s" ordinal="1" />&gt; must not be connected to the internal I/O unit &lt;<arg format="%s" ordinal="2" />&gt;<p /><p />User defined I/O signals are not allowed to be connected to internal I/O units.<p /><p />This I/O signal has been rejected.</Description>
+    <Actions>Connect the I/O signal to another I/O unit.</Actions>
+  </Message>
+  <Message number="1164" eDefine="SYS_EIO_SIG_PROTECTED">
+    <Title>Internal I/O signal in cross connection</Title>
+    <Description>The I/O configuration contains an invalid cross connection.<p />The &lt;Actor <arg format="%d" ordinal="1" /><arg format="%s" ordinal="2" />&gt; is a user-defined I/O signal whereas the resultant I/O signal &lt;<arg format="%s" ordinal="3" />&gt; is an internal I/O signal.<p /><p />It is not allowed to define cross connections where user-defined I/O signals affect internal I/O signals.</Description>
+    <Actions>Correct the cross connection so that there are no internal I/O signals in the resultant expression.</Actions>
+  </Message>
+  <Message number="1165" eDefine="SYS_EIO_FTP_DOWN">
+    <Title>FTP server went down</Title>
+    <Description>The connection to a non-trusted FTP server has been lost.<p />IP address: &lt;<arg format="%s" ordinal="1" />&gt;.</Description>
+    <Actions>Check cable and FTP server settings.</Actions>
+  </Message>
+  <Message number="1166" eDefine="SYS_EIO_FTP_TRUST_DOWN">
+    <Title>FTP server went down</Title>
+    <Description>The connection to a trusted FTP server has been lost.<p />IP address: &lt;<arg format="%s" ordinal="1" />&gt;.</Description>
+    <Actions>Check cable and FTP server settings.</Actions>
+  </Message>
+  <Message number="1167" eDefine="SYS_EIO_FTP_TRANS_TCPIP">
+    <Title>Wrong transmission protocol</Title>
+    <Description>No matching transmission protocol was found in the configuration.</Description>
+    <Actions>Change the transmission protocol.</Actions>
+  </Message>
+  <Message number="1169" eDefine="SYS_EIO_FTP_NOT_INSTALLED">
+    <Title>Ethernet not installed</Title>
+    <Description>The option Ethernet Services with FTP is not installed on this system.</Description>
+    <Actions>Reboot and install the Ethernet Services with FTP option.</Actions>
+  </Message>
+  <Message number="1182" eDefine="SYS_EIO_CRS_RES_UNDEF">
+    <Title>I/O signal undefined</Title>
+    <Description>The I/O configuration is invalid.<p /><p />The parameter &lt;Resultant I/O signal&gt; of one of the cross connections contains a reference to an undefined I/O signal &lt;<arg format="%d" ordinal="1" />&gt;.<p /><p />This cross connection has been rejected.</Description>
+    <Actions>Correct the cross connection so that the resultant I/O signal refers to an existing I/O signal.</Actions>
+  </Message>
+  <Message number="1183" eDefine="SYS_EIO_CRS_OPR_INVALID">
+    <Title>Cross connection with invalid operator</Title>
+    <Description>The I/O configuration is invalid.<p /><p />The parameter &lt;Operator <arg format="%d" ordinal="1" />&gt; of one of the cross connections contains an invalid/unknown operator &lt;<arg format="%s" ordinal="2" />&gt;.<p /><p />Valid values for the logical operator are:<p />- AND<p />- OR<p /><p />This cross connection has been rejected.</Description>
+    <Actions>Correct the operator.</Actions>
+  </Message>
+  <Message number="1185" eDefine="SYS_EIO_DUPLICATED_NAME">
+    <Title>Duplicated name</Title>
+    <Description>The I/O configuration is invalid.<p />The identifier &lt;<arg format="%s" ordinal="1" />&gt; has already been used as the name of another configuration instance.<p /><p />The following configuration instances must have unique names:<p />- I/O Buses<p />- Unit types<p />- I/O Units<p />- I/O Signals<p />- Command types<p />- Commands<p />- I/O Access levels<p />- CIP Routes<p /><p />This configuration instance has been rejected.</Description>
+    <Actions>1. Rename one of the configuration instances in system parameters.<p />2. Restart the system.</Actions>
+  </Message>
+  <Message number="1193" eDefine="SYS_EIO_MAPPING_OUTSIDE_DATA_AREA">
+    <Title>Invalid physical I/O mapping</Title>
+    <Description>I/O mapping error on I/O unit &lt;<arg format="%s" ordinal="1" />&gt;.<p /> 
+	The I/O unit uses an input size of &lt;<arg format="%d" ordinal="2" /> bits, the controller can handle maximum <arg format="%s" ordinal="3" />&gt; bits.<p />
+	The I/O unit uses an output size of &lt;<arg format="%d" ordinal="4" /> bits, the controller can handle maximum <arg format="%s" ordinal="5" />&gt; bits.<p /></Description>
+    <Actions>Check configuration for the physical I/O unit.</Actions>
+  </Message>
+  <Message number="1196" eDefine="SYS_EIO_SIG_PHS_ENCODING_INVALID">
+    <Title>Invalid encoding type</Title>
+    <Description>
+      The I/O configuration for I/O signal &lt;<arg format="%s" ordinal="1" />&gt; is invalid.<p />The encoding type &lt;<arg format="%s" ordinal="2" />&gt; is not valid for signal type &lt;<arg format="%d" ordinal="3" />&gt;.<p /><p />Valid encoding types are:<p />- UNSIGNED<p />- TWO_COMP<p /><p />This I/O signal has been rejected.</Description>
+    <Actions>Correct the encoding type for the I/O signal.</Actions>
+  </Message>
+  <Message number="1201" eDefine="SYS_EIO_BUS_UNKNOWN">
+    <Title>Unknown I/O bus</Title>
+    <Description>The I/O configuration is invalid.<p />The I/O bus &lt;<arg format="%s" ordinal="1" />&gt; cannot be found in the system.<p /><p />Installed I/O buses are:<arg format="%s" ordinal="2" /><arg format="%s" ordinal="3" /><arg format="%s" ordinal="4" /><arg format="%s" ordinal="5" /></Description>
+    <Consequences>This I/O bus has been rejected, and no functions depending on it will work.</Consequences>
+    <Actions>1. Make sure the system has been configured with the desired I/O bus. <p />2. Make sure the I/O bus option at hand is installed. <p />3. Check the configuration for I/O bus.</Actions>
+  </Message>
+  <Message number="1205" eDefine="SYS_EIO_COULD_NOT_MOUNT_FTP">
+    <Title>Could not mount directory</Title>
+    <Description>Mounting directory &lt;<arg format="%s" ordinal="1" />&gt; on the computer &lt;<arg format="%s" ordinal="2" />&gt; failed.<p />Protocol: &lt;<arg format="%s" ordinal="3" />&gt;.</Description>
+    <Actions>1. Check the FTP server setup.<p />2. Check the FTP client configuration. <p />3. Check communication hardware, cabling.</Actions>
+  </Message>
+  <Message number="1220" eDefine="SYS_EIO_PBUS_NO_OPT">
+    <Title>No Profibus option has been installed</Title>
+    <Description>A Profibus-DP master/slave board has been fitted, but no Profibus option has been installed.</Description>
+    <Consequences>No communication on the Profibus is possible. There may be consequential errors from configuring Profibus when no such option has been installed.</Consequences>
+    <Causes>An attempt may have been made to add the Profibus functionality, without installing the option correctly.</Causes>
+    <Actions>1. If the Profibus option is required: configure a new system with this option, and install the system. <p />2. If the Profibus option is not required: configure a new system without this option, and install the system.</Actions>
+  </Message>
+  <Message number="1221" eDefine="SYS_EIO_PBUS_NO_FWFILE_FOUND">
+    <Title>Profibus firmware file not found</Title>
+    <Description>The Profibus &lt;<arg format="%s" ordinal="1" />&gt; firmware file not found or not readable.<p />The board firmware may be out of date.</Description>
+    <Actions>Reinstall the system.<p /></Actions>
+  </Message>
+  <Message number="1222" eDefine="SYS_EIO_PBUS_NO_BINCFG_FOUND">
+    <Title>Profibus configuration file not found</Title>
+    <Description>The binary Profibus configuration file was not found.<p />- File: &lt;<arg format="%s" ordinal="1" />&gt;<p />- Path: &lt;<arg format="%s" ordinal="2" />&gt;.</Description>
+    <Actions>1. Make sure the file exists.<p />2. Change the path in the I/O configuration.</Actions>
+  </Message>
+  <Message number="1223" eDefine="SYS_EIO_PBUS_BINCFG_PARSE_ERR">
+    <Title>Profibus file parse error</Title>
+    <Description>The binary Profibus configuration file is corrupt. (Internal error: <arg format="%s" ordinal="1" />)<p />- File: &lt;<arg format="%s" ordinal="2" />&gt;<p />- Path: &lt;<arg format="%s" ordinal="3" />&gt;.</Description>
+    <Actions>Recreate and download the binary configuration file using the external Profibus configuration tool.</Actions>
+  </Message>
+  <Message number="1224" eDefine="SYS_EIO_PBUS_CHANNEL_FLASHED">
+    <Title>Profibus channel has been reflashed</Title>
+    <Description>The <arg format="%s" ordinal="1" /> channel firmware of the Profibus board has been updated from &lt;<arg format="%s" ordinal="2" />&gt; to &lt;<arg format="%s" ordinal="3" />&gt;.</Description>
+  </Message>
+  <Message number="1225" eDefine="SYS_EIO_PBUS_BAD_CFG_DATA">
+    <Title>Profibus configuration error</Title>
+    <Description>The local slave channel has more DI/DO than the configuration in its master.</Description>
+    <Actions>Make the number of DI/DO of the external Profibus master more or equal than the local slave.</Actions>
+  </Message>
+  <Message number="1226" eDefine="SYS_EIO_PBUS_CFG_DATA_OK">
+    <Title>Profibus configuration ok</Title>
+    <Description>The number of DI/DO of the external Profibus master is now more or equal than for the I/O unit of DP_SLAVE type.</Description>
+    <Actions />
+  </Message>
+  <Message number="1227" eDefine="SYS_EIO_PBUS_DPS_INIT_FAILED">
+    <Title>Initialization of Profibus slave failed</Title>
+    <Description>The slave channel on the Profibus-DP master/slave board did not start up correctly. </Description>
+    <Consequences>No communication on the Profibus slave channel is possible.</Consequences>
+    <Causes>The board hardware may be malfunctioning.</Causes>
+    <Actions>1. Restart the system. <p />2. Replace the Profibus slave board if faulty.</Actions>
+  </Message>
+  <Message number="1228" eDefine="SYS_EIO_PBUS_BINCFG_MISMATCH">
+    <Title>Profibus binary configuration fault</Title>
+    <Description>The configuration data in the binary file is not accepted by the slave at address &lt;<arg format="%i" ordinal="1" />&gt;.</Description>
+    <Actions>Make the configuration data in the binary file match the configuration for the slave and reboot the system</Actions>
+  </Message>
+  <Message number="1229" eDefine="SYS_EIO_PBUS_BINPRM_MISMATCH">
+    <Title>Profibus binary parameter fault</Title>
+    <Description>The parameter data in the binary file is not accepted by the slave at address &lt;<arg format="%i" ordinal="1" />&gt;.
+  </Description>
+    <Actions>Make the parameter data in the binary file match the parameters for the slave and reboot the system.</Actions>
+  </Message>
+  <Message number="1230" eDefine="SYS_EIO_PBUS_BINARYFILE_MISMATCH">
+    <Title>I/O unit configuration error</Title>
+    <Description>
+    I/O unit &lt;<arg format="%s" ordinal="1" />&gt; is configured in system parameters but is missing or incorrect in Profibus binary file.
+  </Description>
+    <Actions>
+    1. Check/change system parameters.<p />2. Check/change Profibus binary file.
+  </Actions>
+  </Message>
+  <Message number="1231" eDefine="SYS_EIO_PBUS_WRONG_UNIT">
+    <Title>Wrong Profibus I/O unit is connected</Title>
+    <Description>
+    Profibus I/O unit &lt;<arg format="%s" ordinal="1" />&gt; at address &lt;<arg format="%d" ordinal="2" />&gt; has the wrong identity number. Reported identity number is <arg format="%s" ordinal="3" />. Expected identity number is <arg format="%s" ordinal="4" />.</Description>
+    <Consequences>The system will not be able to Activate the I/O unit and no communication on the Profibus will be possible.</Consequences>
+    <Causes>-The I/O unit at address &lt;<arg format="%d" ordinal="5" />&gt; may be the wrong type of I/O unit. <p />-The configuration may be incorrect, i.e. an incorrect binary configuration file and in some cases incorrect system parameters.</Causes>
+    <Actions>1. Make sure the system parameters are correct. <p />2. Make sure the Profibus binary file is correct. <p />3. Replace the I/O unit.</Actions>
+  </Message>
+</Domain>

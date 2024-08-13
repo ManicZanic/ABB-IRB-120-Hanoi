@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="HW" domainNo="3" lang="zh" elogTextVersion="1.0" min="9422" max="9531">
+  <Message number="9422" eDefine="SYS_ERR_HW_DM_DRV_WATCHDOG">
+    <Title>驱动单元监控器超时</Title>
+    <Description>超过驱动模块 <arg format="%d" ordinal="1" /> 中驱动单元（编号 <arg format="%d" ordinal="3" /> ）监控定时器的时限。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>驱动单元接线不良或安装了错误的硬件。也可能是因为驱动单元出现内部错误。</Causes>
+    <Actions>1) 执行关机，然后重新启动系统。<p />2) 如果问题继续存在，请取出并更换有故障的驱动单元。</Actions>
+  </Message>
+  <Message number="9423" eDefine="SYS_ERR_HW_DM_DRV_INT_WARNING">
+    <Title>驱动单元内部警告</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" />中驱动单元（编号 <arg format="%d" ordinal="3" /> ）的内部测量警告。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>可能是控制电缆、DC-Link 连接（短接条或电缆）或内部硬件有问题。</Causes>
+    <Actions>1)检查该单元中的控制电缆和 DC-Link 连接（短接条或电缆）是否正确插入。<p />2) 重新启动系统。</Actions>
+  </Message>
+  <Message number="9424" eDefine="SYS_ERR_HW_DM_DRV_INT_ERROR">
+    <Title>驱动单元内部错误</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" />中驱动单元（编号 <arg format="%d" ordinal="3" /> ）的内部测量警告。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>驱动单元接线不良或安装了错误的硬件。可能是控制电缆、DC-Link 连接（汇流条或电缆）或内部硬件有问题。</Causes>
+    <Actions>1)确保该单元中的控制电缆和 DC-Link 连接（短接条或电缆）是否正确连接。<p />2) 执行关机，然后重新启动系统。<p />3) 如果问题继续存在，请取出并更换有故障的单元。</Actions>
+  </Message>
+  <Message number="9425" eDefine="SYS_ERR_HW_DM_DRV_MEAS_ERR">
+    <Title>驱动单元测量失败</Title>
+    <Description>与接点 <arg format="%s" ordinal="2" /> 连接的驱动模块 <arg format="%d" ordinal="1" />中，驱动单元（编号 <arg format="%d" ordinal="3" />）的某一当前测量电路出现故障。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>原因可能是整流器和驱动单元之间的 DC-Li nk 连接存在故障或缺失</Causes>
+    <Actions>1)确保整流器和驱动单元之间的 DC-Link 连接（短接条或电缆）正确连接。<p />2) 检查整流器和驱动单元上的 LED 指示灯。有关 LED 指示灯的重要性请参阅《故障排除手册》中的说明。</Actions>
+  </Message>
+  <Message number="9426" eDefine="SYS_ERR_HW_DM_RECT_INT_ERROR">
+    <Title>整流器内部故障</Title>
+    <Description>与驱动模块 <arg format="%d " ordinal="1" />连接的通信链接 <arg format="%d" ordinal="4" /> 上的整流器检测到内部故障。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>原因可能是整流器和驱动单元之间的信号连接存在故障或缺失。</Causes>
+    <Actions>1)确保整流器和驱动单元之间的信号电缆正确连接。<p />2) 检查整流器和驱动单元上的 LED 指示灯。有关 LED 指示灯的重要性请参阅《故障排除手册》中的说明。</Actions>
+  </Message>
+  <Message number="9427" eDefine="SYS_ERR_HW_DM_RECT_COMMS_MISSING">
+    <Title>整流器通信中断</Title>
+    <Description>与驱动模块 <arg format="%d" ordinal="1" /> 中驱动系统通信链接 <arg format="%d" ordinal="4" /> 上整流器的通信中断。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>原因可能是整流器和驱动单元之间的信号连接存在故障或缺失。</Causes>
+    <Actions>1) 确保整流器和驱动单元之间的信号电缆正确连接。<p />2) 执行关机，然后重新启动系统。<p />3) 如果问题继续存在，请取出并更换有故障的单元。</Actions>
+  </Message>
+  <Message number="9428" eDefine="SYS_ERR_HW_DM_RECT_GLOB_ERR">
+    <Title>整流器启动错误</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 中驱动通信链接 <arg format="%d" ordinal="4" />上的整流器检测到启动错误。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>也可能是因为整流器单元出现内部错误。</Causes>
+    <Actions>1)确保整流器和驱动单元之间的信号电缆正确连接。<p />2) 执行关机，然后重新启动系统。<p />3) 如果问题继续存在，请取出并更换有故障的整流器单元。</Actions>
+  </Message>
+  <Message number="9431" eDefine="SYS_ERR_HW_DM_DRV_IMAGE_UPDATE">
+    <Title>正在更新驱动单元软件</Title>
+    <Description>正在更新驱动模块 <arg format="%d" ordinal="1" /> 中的驱动单元软件。<p /><p />请等待升级完成。这一过程将持续约 3.5 分钟。<p /><p />注意：下载完毕前请不要关闭电源或重新启动控制柜。<p /><p /></Description>
+    <Actions>请等待…</Actions>
+  </Message>
+  <Message number="9432" eDefine="SYS_ERR_HW_DM_WRONG_BOOT_VERSION">
+    <Title>驱动单元中不兼容的引导版本</Title>
+    <Description>驱动模块中的引导版本 <arg format="%d" ordinal="1" /> 为不允许采用的版本 <arg format="%d" ordinal="3" />。允许采用的最新引导版本为 <arg format="%d" ordinal="2" />。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>引导版本与硬件版本不兼容。</Causes>
+    <Actions>1) 将驱动单元更换为采用了最新可用引导版本或更高版本的驱动单元。</Actions>
+  </Message>
+  <Message number="9434" eDefine="SYS_ERR_HW_DM_DRIVE_START_FAILURE">
+    <Title>驱动单元启动失败</Title>
+    <Description>驱动模块中的驱动单元 <arg format="%d" ordinal="1" /> 无法启动。驱动系统引导状态 = <arg format="%d" ordinal="2" />。驱动系统 dsp1 状态 = <arg format="%d" ordinal="3" /><p /></Description>
+    <Consequences>无法操作机器人。</Consequences>
+    <Causes>多次出现错误会导致此情况。</Causes>
+    <Actions>1) 关闭模块主电源，然后再开启它。注意正常重启并不足以解决问题！<p />2) 如果问题继续存在，请更换驱动单元。</Actions>
+  </Message>
+  <Message number="9435" eDefine="SYS_ERR_HW_DM_EXT_DRIVE_NOT_FOUND">
+    <Title>找不到附加轴驱动单元</Title>
+    <Description>系统无法检测驱动模块 <arg format="%d" ordinal="2" /> 中的接点 <arg format="%s" ordinal="1" /> 的附加轴。</Description>
+    <Consequences>系统进入 SYS_FAIL 状态。</Consequences>
+    <Causes>可能的原因：<p />1) 有已配置的附加轴，但驱动模块中没有驱动单元。<p />2) 有外部驱动单元，但未将电缆连接至主驱动单元上的 X<arg format="%d" ordinal="3" /> 连接器位置。<p />3) 附加轴驱动器和主驱动单元之间的电缆已损坏。<p /><p /><p /></Causes>
+    <Actions>1) 检测驱动模块是否包含足够数量的附加轴驱动器。<p />2) 检测配置键中是否未定义比连接至驱动模块中的外部驱动单元更多的外部驱动单元。<p />3) 检测附加轴驱动单元和主驱动单元之间的电缆已正确插入正确的连接器位置。<p />4) 如果电缆存在且已正确插入，则电缆可能已损坏，应将其更换。</Actions>
+  </Message>
+  <Message number="9440" eDefine="SYS_ERR_HW_DM_BLDR_OPEN">
+    <Title>泄流电阻电路断路</Title>
+    <Description>与驱动模块 <arg format="%d" ordinal="1" />中驱动系统链接 <arg format="%d" ordinal="4" />上的整流器连接的泄流电阻断路。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>原因可能是泄流电阻电缆或泄流电阻损坏。</Causes>
+    <Actions>1)确保泄流电阻电缆与整流器单元正确连接。<p />2)测量电缆和电阻的阻值，确保它们能正常工作。测量前应断开连接。<p />3) 更换所有故障组件。</Actions>
+  </Message>
+  <Message number="9441" eDefine="SYS_ERR_HW_DM_BLDR_SHORT">
+    <Title>泄流电阻电路短路</Title>
+    <Description>与驱动模块 <arg format="%d" ordinal="1" />中驱动系统链接 <arg format="%d" ordinal="4" />上的整流器连接的泄流电阻短路。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>原因可能是泄流电阻电缆或泄流电阻损坏。</Causes>
+    <Actions>1)确保泄流电阻电缆与整流器单元正确连接。<p />2)测量电缆和电阻的阻值，确保它们能正常工作。测量前应断开连接。<p />3) 更换所有故障组件。</Actions>
+  </Message>
+  <Message number="9442" eDefine="SYS_ERR_HW_DM_BLDR_LOW_RESISTANCE">
+    <Title>泄流电阻过小</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" />中，驱动通信链接 <arg format="%d" ordinal="4" />上整流器的泄流电阻过小。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>因泄流电阻阻值错误或某个泄流电阻出现故障而导致短路。</Causes>
+    <Actions>1) 检查泄流电阻，确保其阻值正确，符合该驱动模块配置。<p />2) 检查电阻是否存在故障。有关如何检查配置文件的详细说明请参阅《故障排除手册》。</Actions>
+  </Message>
+  <Message number="9443" eDefine="SYS_ERR_HW_DM_BLDR_WARNING">
+    <Title>泄流电阻过载警告</Title>
+    <Description>泄流电阻消耗的功率接近过载，驱动模块 <arg format="%d" ordinal="1" /> 中驱动通信链路 <arg format="%d" ordinal="4" /> 上的整流器无法适应。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入“系统暂停”状态。</Consequences>
+    <Causes>用户程序可能包含过多操纵器紧急制动操作，如果系统装有附加轴，则更有可能出现这种情况。</Causes>
+    <Actions>1) 重写用户程序，减少紧急制动的数量。</Actions>
+  </Message>
+  <Message number="9444" eDefine="SYS_ERR_HW_DM_BLDR_OVERLOAD">
+    <Title>泄流电阻过载错误</Title>
+    <Description>泄流电阻过载，驱动模块 <arg format="%d" ordinal="1" /> 中驱动通信链路 <arg format="%d" ordinal="4" /> 上的整流器无法适应。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入“系统暂停”状态。</Consequences>
+    <Causes>用户程序可能包含过多的操纵器紧急制动操作或过高的操纵器有效载荷。如果系统装有附加轴，则更有可能出现这种情况。</Causes>
+    <Actions>1) 重写用户程序，减少紧急制动的数量。</Actions>
+  </Message>
+  <Message number="9450" eDefine="SYS_ERR_HW_DM_COOLING_FAN_POWER">
+    <Title>风扇单元电源故障</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 中的风扇单元电源超出允许电压范围。</Description>
+    <Consequences>- </Consequences>
+    <Causes>主风扇电源单元故障或该电源单元的供电超出允许电压范围。</Causes>
+    <Actions>1) 检查风扇电缆是否正确插入。<p />2) 检查所有风扇是否正在运转。3) 检查主风扇电源单元的输入电压。更换故障单元。<p /></Actions>
+  </Message>
+  <Message number="9451" eDefine="SYS_ERR_HW_DM_COOLING_FAN_SPEED">
+    <Title>风扇单元故障</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 中的风扇单元出现故障。</Description>
+    <Consequences>- </Consequences>
+    <Causes>风扇单元故障，电源不足，或风扇电缆未正确连接。</Causes>
+    <Actions>1) 确保风扇电缆正确连接。<p />2) 确保所有风扇正在运转且气流畅通无阻。<p />3) 测量为该风扇供电的驱动单元的输出电压。更换故障单元。<p /><p /></Actions>
+  </Message>
+  <Message number="9452" eDefine="SYS_ERR_HW_DM_CBFAN1_ERROR">
+    <Title>轴计算机散热风扇故障</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 中轴计算机的散热风扇出现故障。</Description>
+    <Actions>1) 检查风扇电缆是否正确插入。<p />2) 更换有问题的风扇单元。</Actions>
+  </Message>
+  <Message number="9453" eDefine="SYS_ERR_HW_DM_CBFAN2_ERROR">
+    <Title>变压器散热风扇故障</Title>
+    <Description>为驱动模块 <arg format="%d" ordinal="1" /> 供电的变压器的散热风扇出现故障。<p /><p /></Description>
+    <Actions>检查风扇电缆是否正确插入。<p />2) 更换有问题的风扇单元。</Actions>
+  </Message>
+  <Message number="9460" eDefine="SYS_ERR_HW_DM_DC_LOW">
+    <Title>DC －Link 电压过低</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" />中，驱动通信链接 <arg format="%d" ordinal="4" />上整流器的 DC-Link 链接电压过低。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>DC－Llink 短接条未正确连接，或机器人处于 Motors ON （电机上电）状态时三相电源中断。机器人处于 Motors ON （电机上电）状态（断开安全链）时也可能断开电源接触器。也可能是因为输入主电源电压过低。</Causes>
+    <Actions>1) 确保 DC-link 短接条正确连接。<p />2) 确保电源持续供电。<p />3) 确保安全链完好无损。<p />4) 确保驱动模块电源的输出电压保持在产品手册规定的可接受范围内。</Actions>
+  </Message>
+  <Message number="9461" eDefine="SYS_ERR_HW_DM_DC_HIGH">
+    <Title>DC 链路电压过高</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 中，驱动通信链路 <arg format="%d" ordinal="4" /> 上整流器的 DC 链路电压过高。 </Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入“系统暂停”状态。</Consequences>
+    <Causes>用户程序可能包含过多操纵器紧急制动操作，如果系统装有附加轴，则更有可能出现这种情况。制动电阻损坏。</Causes>
+    <Actions>1) 检查泄流电阻，确保其阻值正确，符合该驱动模块配置。<p />2) 检查电阻是否存在故障。<p />3) 如有可能，请重写用户程序，减少紧急制动量。</Actions>
+  </Message>
+  <Message number="9462" eDefine="SYS_ERR_HW_DM_DC_CRITICALY_HIGH">
+    <Title>DC 链路电压处于临界状态</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 中，驱动通信链路 <arg format="%d" ordinal="4" /> 上整流器的 DC 链路电压严重过高。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入“系统暂停”状态。</Consequences>
+    <Causes>用户程序可能包含过多操纵器紧急制动操作，如果系统装有附加轴，则更有可能出现这种情况。制动电阻损坏。</Causes>
+    <Actions>1) 检查泄流电阻，确保其阻值正确，符合该驱动模块配置。<p />2) 检查电阻是否存在故障。<p />3) 重写用户程序，减少紧急制动的数量。</Actions>
+  </Message>
+  <Message number="9463" eDefine="SYS_ERR_HW_DM_SHC_GLITCH">
+    <Title>电机相短路警告</Title>
+    <Description>在驱动模块 <arg format="%d" ordinal="1" />中与接点 <arg format="%s" ordinal="2" /> 连接的电机中检测到电机/电机电缆出现短暂的短路。</Description>
+    <Consequences>- </Consequences>
+    <Causes>这可能是因为触点或电机绕组受到灰尘或金属碎片的污染。</Causes>
+    <Actions>如果问题不再持续，则不必采取任何措施。</Actions>
+  </Message>
+  <Message number="9464" eDefine="SYS_ERR_HW_DM_SHC_ERROR">
+    <Title>电机相电路短路</Title>
+    <Description>在驱动模块 <arg format="%d" ordinal="1" />的驱动单元（编号 <arg format="%d" ordinal="3" />）中，接点 <arg format="%s" ordinal="2" /> 上的电机或电机电缆出现短路。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>可能是因为电机或电机电缆受损。原因还包括电缆接触器受到污染或电机绕组故障。</Causes>
+    <Actions>1)确保电机电缆与驱动单元正确连接。<p />2)测量电缆和电机的电阻，检查其是否完好。测量前应断开连接。<p />3) 更换所有故障组件。</Actions>
+  </Message>
+  <Message number="9465" eDefine="SYS_ERR_HW_DM_MAX_MEAS_CURR_GLITCH">
+    <Title>电机电流警告</Title>
+    <Description>电机电流高于允许的范围，驱动模块 <arg format="%s" ordinal="1" /> 中驱动单元编号 <arg format="%d" ordinal="3" /> 的接点 <arg format="%s" ordinal="2" /> 无法承受。</Description>
+    <Consequences>-</Consequences>
+    <Causes>电机荷载过高或电机停转（可能是由碰撞引起）。 </Causes>
+    <Actions>1) 检查机器人是否受到任何碰撞。<p />2) 如果可能，请减小用户程序中的速度值。<p />3) 如果采用附加轴，检查电机荷载是否大大超出驱动单元的承受能力。</Actions>
+  </Message>
+  <Message number="9466" eDefine="SYS_ERR_HW_DM_MAX_MEAS_CURR">
+    <Title>电机电流过载</Title>
+    <Description>电机电流过大，驱动模块 <arg format="%d" ordinal="1" /> 中驱动单元（编号 <arg format="%d" ordinal="3" />）的接点 <arg format="%s" ordinal="2" /> 无法承受。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入“系统暂停”状态。</Consequences>
+    <Causes>电机荷载过高或电机停转（可能是由碰撞引起）。 </Causes>
+    <Actions>1) 检查机器人是否受到任何碰撞。<p />2) 如果可能，请减小用户程序中的速度值。<p />3) 如果采用附加轴，检查电机荷载是否大大超出驱动单元的承受能力。</Actions>
+  </Message>
+  <Message number="9467" eDefine="SYS_ERR_HW_DM_TEMP_WARN">
+    <Title>驱动单元温度警告</Title>
+    <Description>温度超过驱动模块 <arg format="%d" ordinal="1" /> 中驱动单元（编号 <arg format="%d" ordinal="3" />）的警告水平，该水平为三个异常级别中的最低级。</Description>
+    <Consequences>-</Consequences>
+    <Causes>环境温度过高，散热风扇出现故障，或用户程序消耗的电流超过驱动系统的供电能力。</Causes>
+    <Actions>1) 检查风扇是否正在运转以及气流是否受阻。<p />2) 检查环境温度是否超过机柜的额定值。<p />3) 如果系统装有附加轴，请检查电机功率是否大于驱动单元的承受能力。<p />4) 如有可能，请重写用户程序，减少紧急加速的次数。</Actions>
+  </Message>
+  <Message number="9468" eDefine="SYS_ERR_HW_DM_TEMP_ALARM">
+    <Title>驱动单元温度警报</Title>
+    <Description>温度超过驱动模块 <arg format="%d" ordinal="1" /> 中驱动单元（编号 <arg format="%d" ordinal="3" />）的警告水平，该水平为三个异常级别中的第二级。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入“系统暂停”状态。</Consequences>
+    <Causes>环境温度过高，散热风扇出现故障，或用户程序消耗的电流超过驱动系统的供电能力。</Causes>
+    <Actions>1) 检查风扇是否正在运转以及气流是否受阻。<p />2) 检查环境温度是否超过机柜的额定值。<p />3) 如果系统装有附加轴，请检查电机功率是否大于驱动单元的承受能力。<p />4) 如有可能，请重写用户程序，减少紧急加速的次数。</Actions>
+  </Message>
+  <Message number="9469" eDefine="SYS_ERR_HW_DM_TEMP_ERROR">
+    <Title>驱动单元温度处于临界状态</Title>
+    <Description>温度超过驱动模块 <arg format="%d" ordinal="1" /> 中驱动单元（编号 <arg format="%d" ordinal="3" />）的临界水平，该水平是三个异常等级中的最高级。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入“系统暂停”状态。</Consequences>
+    <Causes>环境温度过高，散热风扇出现故障，或用户程序消耗的电流超过驱动系统的供电能力。</Causes>
+    <Actions>1) 检查风扇是否正在运转以及气流是否受阻。<p />2) 检查环境温度是否超过机柜的额定值。<p />3) 如果系统装有附加轴，请检查电机功率是否大于驱动单元的承受能力。<p />4) 如有可能，请重写用户程序，减少紧急加速的次数。</Actions>
+  </Message>
+  <Message number="9470" eDefine="SYS_ERR_HW_DM_PDEV_WARN">
+    <Title>功率半导体警告</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 中编号为 <arg format="%d" ordinal="3" /> 的驱动单元中的接点 <arg format="%s" ordinal="2" /> 的功率半导体接近过载。</Description>
+    <Consequences>-</Consequences>
+    <Causes>电机荷载过高，电机停转（可能是由碰撞引起），电机荷载过高，或散热不良。</Causes>
+    <Actions>1) 检查机器人是否受到任何碰撞。<p />2) 检查风扇是否正在运转以及气流是否受阻。<p />3) 检查环境温度是否超过机柜的额定值。<p />4) 如果系统装有附加轴，请检查电机功率是否大于驱动单元的承受能力。<p />5) 如有可能，请重写用户程序，减少紧急加速的次数。</Actions>
+  </Message>
+  <Message number="9471" eDefine="SYS_ERR_HW_DM_PDEV_ERROR">
+    <Title>功率半导体过载错误</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 中编号为 <arg format="%d" ordinal="3" /> 的驱动单元中的接点 <arg format="%s" ordinal="2" /> 的功率半导体已过载。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入“系统暂停”状态。</Consequences>
+    <Causes>电机荷载过高，电机停转（可能是由碰撞引起），电机荷载过高，或散热不良。</Causes>
+    <Actions>1) 检查机器人是否受到任何碰撞。<p />2) 检查风扇是否正在运转以及气流是否受阻。<p />3) 检查环境温度是否超过机柜的额定值。<p />4) 如果系统装有附加轴，请检查电机功率是否大于驱动单元的承受能力。<p />5) 如有可能，请重写用户程序，减少紧急加速的次数。</Actions>
+  </Message>
+  <Message number="9472" eDefine="SYS_ERR_HW_DM_INCOMING_PHASE_MISSING">
+    <Title>输入电源相位缺失</Title>
+    <Description>与驱动模块 <arg format="%d" ordinal="1" /> 中的通信链路 <arg format="%d" ordinal="4" /> 相连的整流器检测到某一相位出现功率损失。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入“系统暂停”状态。</Consequences>
+    <Causes>原因包括电源实际电压降低，“电机开启”接触器出现故障，或其接线有问题，或机柜中三相电源的其它部件有问题。这种故障很少与其它故障同时发生，如发生这种情况，可在错误日志上查找相关信息。</Causes>
+    <Actions>1) 确保电源开关关闭，并且存在电源电压。如果无电压，则表明问题由电源电缆连接器或工厂电源引起。<p />2) 如果电压正常，断开输入电源电缆，测量三相电源链中所有组件上的三个相位的电阻。从最接近整流器的接触器开始，朝主开关向后工作。可手动关闭接触器后执行测试。参阅机柜的电气图。<p />3) 检查整流器单元上的 LED 指示灯。有关 LED 指示灯的重要性请参阅《故障排除手册》中的说明。<p />4) 如果电压正常，请检查与该日志消息在同一时间出现的其它错误日志消息。</Actions>
+  </Message>
+  <Message number="9473" eDefine="SYS_ERR_HW_DM_MAINS_MISISNG">
+    <Title>所有输入电源相位缺失</Title>
+    <Description>与驱动模块 <arg format="%d" ordinal="1" /> 中的通信链路 <arg format="%d" ordinal="4" /> 相连的整流器检测到某一相位或更多相位出现功率损失。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入“系统暂停”状态。</Consequences>
+    <Causes>原因包括电源实际电压降低，电机开启摂接触器出现故障，或其接线有问题，或机柜中三相电源的其它部件有问题。这种故障很少与其它故障同时发生，如发生这种情况，可在错误日志上查找相关信息。</Causes>
+    <Actions>1) 确保电源开关关闭，并且存在电源电压。如果无电压，则表明问题由电源电缆连接器或工厂电源引起。<p />2) 如果电压正常，断开输入电源电缆，测量三相电源链中所有组件上的三个相位的电阻。从最接近整流器的接触器开始，朝主开关向后工作。可手动关闭接触器后执行测试。参阅机柜的电气图。<p />3) 检查整流器单元上的 LED 指示灯。有关 LED 指示灯的重要性请参阅《故障排除手册》中的说明。<p />4) 如果电压正常，请检查与该日志消息在同一时间出现的其它错误日志消息。<p /></Actions>
+  </Message>
+  <Message number="9474" eDefine="SYS_ERR_HW_DM_MAINS_CURR_WARN">
+    <Title>整流器电流警告</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 中与通信链接 <arg format="%d" ordinal="4" /> 相连的整流器接近过载。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>电机总电流大于整流器的供电能力。</Causes>
+    <Actions>1)如有可能，请重写用户程序，减少紧急加速的次数。</Actions>
+  </Message>
+  <Message number="9475" eDefine="SYS_ERR_HW_DM_MAINS_OVERLOAD">
+    <Title>整流器电流错误</Title>
+    <Description>与驱动模块 <arg format="%d" ordinal="1" /> 中通信链接 <arg format="%d" ordinal="4" /> 相连的整流器达到过载。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>电机总电流大于整流器的供电能力。</Causes>
+    <Actions>1)如有可能，请重写用户程序，减少紧急加速的次数。</Actions>
+  </Message>
+  <Message number="9476" eDefine="SYS_ERR_HW_DM_RECTIFIER_TEMP_WARN">
+    <Title>整流器温度警告</Title>
+    <Description>在驱动模块 <arg format="%d" ordinal="1" /> 中，与通信链路 <arg format="%d" ordinal="4" /> 相连的整流器温度接近极限。 </Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入“系统暂停”状态。</Consequences>
+    <Causes>散热风扇出现故障，或气流受阻。环境温度过高，或系统运行期间长时间处于荷载过高状态。</Causes>
+    <Actions>1) 检查风扇是否正在运转以及气流是否受阻。<p />2) 检查环境温度是否超过机柜的额定值。<p />3) 如果系统装有附加轴，请检查电机功率是否大于驱动单元的承受能力。<p />4) 如有可能，请重写用户程序，减少紧急加速的次数。</Actions>
+  </Message>
+  <Message number="9477" eDefine="SYS_ERR_HW_DM_RECTIFIER_TEMP_ERROR">
+    <Title>整流器温度错误</Title>
+    <Description>在驱动模块 <arg format="%d" ordinal="1" /> 中，与通信链路 <arg format="%d" ordinal="4" /> 相连的整流器温度达到极限。 </Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入“系统暂停”状态。</Consequences>
+    <Causes>散热风扇出现故障，或气流受阻。环境温度过高，或系统运行期间长时间处于荷载过高状态。</Causes>
+    <Actions>1) 检查风扇是否正在运转以及气流是否受阻。<p />2) 检查环境温度是否超过机柜的额定值。<p />3) 如果系统装有附加轴，请检查电机功率是否大于驱动单元的承受能力。<p />4) 如有可能，请重写用户程序，减少紧急加速的次数。</Actions>
+  </Message>
+  <Message number="9478" eDefine="SYS_ERR_HW_DM_PTC_INT_ERROR">
+    <Title>内部电机 PTC 温度错误</Title>
+    <Description>与驱动模块 <arg format="%d" ordinal="1" /> 连接的一台或更多机器人电机的温度达到极限。 </Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入“系统暂停”状态。</Consequences>
+    <Causes>电机停转（可能由碰撞引起），电机过载，或环境温度高于机器人的额定水平。 </Causes>
+    <Actions>1) 检查机器人是否受到任何碰撞。<p />2) 检查环境温度是否超过机器人的额定值。<p />3) 让机器人充分散热，然后重新运行系统。更换因过热而受损的电机。<p />4) 如有可能，请重写用户程序，减少紧急加速的次数。</Actions>
+  </Message>
+  <Message number="9479" eDefine="SYS_ERR_HW_DM_PTC_EXT_ERROR">
+    <Title>外部电机 PTC 温度错误</Title>
+    <Description>与驱动模块 <arg format="%d" ordinal="1" /> 连接的一台或更多附加轴电机的温度达到极限。 </Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入“系统暂停”状态。</Consequences>
+    <Causes>电机停转（可能由碰撞引起），电机过载，或环境温度高于机器人的额定水平。 </Causes>
+    <Actions>1) 检查附加轴是否受到任何碰撞。<p />2) 检查环境温度是否超过额定值。<p />3) 让电机充分散热，然后重新运行系统。更换因过热而受损的电机。<p />4) 如有可能，请重写用户程序，减少紧急加速的次数。</Actions>
+  </Message>
+  <Message number="9482" eDefine="SYS_ERR_HW_DM_INCOMING_MAINS_TOO_HIGH">
+    <Title>电源电压过高</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 中检测到的电源电压过高。</Description>
+    <Consequences>无法操作机器人。</Consequences>
+    <Causes>电源变压器接线错误，或外接电源电压过高。</Causes>
+    <Actions>1) 测量驱动模块中主接触器上的输入电源电压。确保电压保持在该模块规定的范围内。<p />2) 参阅机器人产品手册中的详细说明检查电源变压器的接线。</Actions>
+  </Message>
+  <Message number="9483" eDefine="SYS_ERR_DM_DC_BUS_SHORT_CIRCUIT">
+    <Title>DC -Link 短路</Title>
+    <Description>在驱动模块 <arg format="%d" ordinal="1" />的 DC-Link 上检测到短路。</Description>
+    <Consequences>无法操作机器人。</Consequences>
+    <Causes>DC 短接条接线不良，或其接触面受到污染，从而造成短路。</Causes>
+    <Actions>1) 检查 DC-Link短接条是否正确连接。<p />2) 检查所有触点是否受污染。</Actions>
+  </Message>
+  <Message number="9484" eDefine="SYS_ERR_HW_DM_CHAIN_OPEN_ERROR">
+    <Title>运行链在电机开启状态下打开</Title>
+    <Description>运行链 <arg format="%d" ordinal="2" /> 在系统处于电机开启状态时打开。驱动系统 <arg format="%d" ordinal="1" /> 中出现问题。 </Description>
+    <Consequences>系统转入“系统中断”状态。</Consequences>
+    <Causes>1) 安全系统上的电缆和连接被拔下或损坏。<p />2) 驱动模块中此运行链的接触器可能因为接触器本身的机械问题被卡住。<p />3) 接触器上的辅助接触器可能因为不当电流行为或安全系统的连接电缆有问题而受到影响。</Causes>
+    <Actions>1) 检查电机接触器是否被卡住。<p />2) 更换有问题的电机连接器。</Actions>
+  </Message>
+  <Message number="9485" eDefine="SYS_ERR_HW_DM_CHAIN_CLOSE_ERROR">
+    <Title>运行链在电机关闭状态下关闭</Title>
+    <Description>系统处于电机开启状态时，运行链 <arg format="%d" ordinal="2" /> 打开。驱动系统 <arg format="%d" ordinal="1" /> 中出现问题。 </Description>
+    <Consequences>系统进入“系统暂停”状态。</Consequences>
+    <Causes>1) 放在驱动模块中的运行链的接触器已被手动拉下。<p />2) 该接触器被焊在关闭位置。 </Causes>
+    <Actions>1) 如果接触器没有松开并保持在拉下位置，则关闭系统并更换接触器。<p />2) 如果接触器被手动拉下，则将此消息视为警告。</Actions>
+  </Message>
+  <Message number="9486" eDefine="SYS_ERR_HW_DM_DC_LINK_MISSING">
+    <Title>DC 链接未连接</Title>
+    <Description>连接到驱动模块 <arg format="%d" ordinal="1" />（驱动单元编号 <arg format="%d" ordinal="3" /> ）中的驱动服务接点 <arg format="%d" ordinal="2" /> 的 DC 链接缺失或连接错误。</Description>
+    <Consequences>系统进入 SYS_HALT。</Consequences>
+    <Causes>1) DC Bussbar 缺失或连接不正确。<p />2) 若 bussbar 连接正确，则可能是报告错误的驱动单元出现故障。</Causes>
+    <Actions>1) 检查 DC Bussbar 是否正确连接到所有驱动单元</Actions>
+  </Message>
+  <Message number="9500" eDefine="SYS_ERR_HW_DM_DS_LOGIC_WARN">
+    <Title>驱动单元逻辑电压警告</Title>
+    <Description>驱动模块电源为驱动模块 <arg format="%d" ordinal="1" /> 中主驱动单元提供的 24 V 电源超出正常范围。</Description>
+    <Consequences>- </Consequences>
+    <Causes>- 驱动模块电源的 24 V 电源超出正常范围。</Causes>
+    <Actions>1) 确保驱动模块电源和主驱动单元之间的供电电缆正确连接。<p />2) 检查电源单元的 LED 指示灯是否为红色。有关 LED 指示灯的详细含义请参阅《故障排除手册》中的说明。</Actions>
+  </Message>
+  <Message number="9501" eDefine="SYS_ERR_HW_DM_DS_LOGIC_ERROR">
+    <Title>驱动单元逻辑电压错误</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 中主驱动单元的 24V 电源超出正常范围。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>电源单元的 24 V 电源超出正常范围。</Causes>
+    <Actions>1) 确保电源单元和主驱动单元之间的供电电缆正确连接。<p />2) 检查电源单元的 LED 指示灯是否为红色。有关 LED 指示灯的详细含义请参阅《故障排除手册》中的说明。</Actions>
+  </Message>
+  <Message number="9502" eDefine="SYS_ERR_HW_DM_RECTIFIER_LOGIC_WARN">
+    <Title>整流器逻辑电压错误</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 中整流器的 24V 电源超出正常范围。</Description>
+    <Consequences>- </Consequences>
+    <Causes>驱动单元和整流器之间的电缆连接不良，或驱动单元的电源电压超出正常范围。</Causes>
+    <Actions>1) 检查电源单元和整流器单元之间的供电电缆正确连接。<p />2) 检查驱动单元供电电缆中的 24V 电压…</Actions>
+  </Message>
+  <Message number="9503" eDefine="SYS_ERR_HW_DM_PSU_OVERTEMP">
+    <Title>电源温度过高</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 驱动模块电源中的温度达到临界级。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>风扇单元出现故障，散热气流受阻，或环境温度过高。</Causes>
+    <Actions>1) 注意！约 10 分钟内不要重新启动控制器，使其充分散热。<p />2) 确保风扇正在运转且气流畅通无阻。<p />3) 确保环境温度不超过驱动模块的额定值。<p />4) 确保电源连接器与轴计算机正确连接。</Actions>
+  </Message>
+  <Message number="9504" eDefine="SYS_ERR_HW_DM_PSU_BREAK_POWER_LOST">
+    <Title>制动器电源过载</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 中的制动器电源电路消耗过多的电流。 </Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入“系统暂停”状态。</Consequences>
+    <Causes>制动器供电电缆故障（短路），或附加轴电机的制动器消耗过多的功率。如果电源单元的电缆未正确连接到驱动模块，也可能会出现这一故障。</Causes>
+    <Actions>1) 确保电源电缆与驱动单元正确连接。<p />2) 检查制动器供电电缆是否短路。<p />3) 确保附加轴电机消耗的总电流不超过驱动模块的规定值。<p />4) 确保电源连接器与轴计算机正确连接。<p />5) 确保 24V 制动器电压在规定的范围内。请参阅《IRC5 产品手册》中的“电路图”。</Actions>
+  </Message>
+  <Message number="9505" eDefine="SYS_ERR_HW_DM_PSU_INCOMING_MAINS_LOST">
+    <Title>电源电压损失</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 中电源单元的电源中断。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS FAIL 状态。</Consequences>
+    <Causes>驱动模块上的主电源开关关闭。输入电源电缆损坏（断裂），或电源电路断路器跳闸。如果电源单元的连接器未正确连接到轴计算机，也可能会出现这一故障。</Causes>
+    <Actions>1) 检查驱动模块的主电源开关是否打开，然后重新启动系统。<p />2) 检查电源单元的连接器是否正确连接到轴计算机。<p />3) 测量电源接触器的电压，确保电源持续供电。<p />4) 检查驱动模块中的电源保险丝/电路断路器是否断开。<p /></Actions>
+  </Message>
+  <Message number="9520" eDefine="SYS_ERR_HW_AXC_COMMS_LOST">
+    <Title>与驱动模块的通信中断</Title>
+    <Description>主机与驱动模块 <arg format="%d" ordinal="1" />失去联系。</Description>
+    <Consequences>系统进入 SYS HALT（系统暂停）状态。排除这一故障前无法进行任何操作。</Consequences>
+    <Causes>原因包括电缆断裂，连接器接线不良，或电缆中的干扰过大。</Causes>
+    <Actions>1) 确保控制模块和驱动模块之间的电缆完好无损，且两个连接器正确连接。<p />2) 确保机器人接线附近无极度电磁干扰辐射。</Actions>
+  </Message>
+  <Message number="9521" eDefine="SYS_ERR_HW_AXC_COMMS_WARNING">
+    <Title>驱动模块通信警告</Title>
+    <Description>在驱动模块 <arg format="%d" ordinal="1" />的以太网链接上检测到大量的通信错误。<p /><p />原因可能是外部噪音源对电缆造成干扰。</Description>
+    <Actions>检查电缆、驱动模块或计算机模块附近是否存在活动的电磁干扰源。</Actions>
+  </Message>
+  <Message number="9522" eDefine="SYS_ERR_HW_AXC_BOARD_NOT_FOUND">
+    <Title>轴计算机未找到</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 中的轴计算机未连接到主机。</Description>
+    <Consequences>系统进入 SYS FAIL 状态。纠正该错误之前无法进行任何操作。</Consequences>
+    <Causes>原因包括电缆断裂，连接器接线不良，电源中断。</Causes>
+    <Actions>1)确保驱动模块 <arg format="%d" ordinal="1" /> 上的主电源开关已接通。<p />2) 确保控制模块和驱动模块之间的电缆完好无损，且两个连接器正确连接。<p />3) 确保电缆与主机单元机器人通信卡或以太网电路板（如果已安装 MultiMore 选件）上正确的 AXC 连接器连接。<p />4) 重新启动系统。<p />5) 确保驱动模块 <arg format="%d" ordinal="1" /> 中的电源单元正常工作。<p /></Actions>
+  </Message>
+  <Message number="9523" eDefine="SYS_ERR_HW_AXC_BOARD_NOT_USED">
+    <Title>未使用的轴计算机已连接</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 中的轴计算机与主机连接，但未被使用。</Description>
+    <Causes>这可能是因为配置存在问题。</Causes>
+    <Actions>1. 断开未使用的轴计算机，或对系统进行设置后使用该轴计算机。<p />2. 重新启动系统。 <p /></Actions>
+  </Message>
+  <Message number="9524" eDefine="SYS_ERR_HW_DM_CMD_TIMEOUT">
+    <Title>驱动模块指令超时</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 未响应指令 <arg format="%d" ordinal="2" />。系统出于安全考虑终止了该程序。<p /><p /></Description>
+    <Actions>1. 检查驱动模块是否开启。<p />2. 检查主机和轴计算机之间的电缆<p />3. 重新启动系统。  </Actions>
+  </Message>
+  <Message number="9525" eDefine="SYS_ERR_HW_AXC_STARTUP_ERROR">
+    <Title>驱动模块启动错误</Title>
+    <Description>
+系统未能完成驱动模块 <arg format="%d" ordinal="1" /> 的初始化阶段。
+    </Description>
+    <Consequences>系统将转到“系统故障”状态。 </Consequences>
+    <Causes>系统未能完成该驱动模块的初始化阶段。</Causes>
+    <Actions>
+1) 使用主电源开关重启系统来进行重试。<p />2) 检查其他硬件事件日志消息。
+    </Actions>
+  </Message>
+  <Message number="9530" eDefine="SYS_ERR_HW_AXC_CB_COMMS_LOST">
+    <Title>轴计算机与安全系统的通信中断</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 中的轴计算机和安全系统之间的通信中断。 </Description>
+    <Consequences>系统转入“系统故障”状态。</Consequences>
+    <Causes>这可能是轴计算机和安全系统之间的通信电缆问题或连接故障造成的。也可能是因为存在严重干扰或者安全系统断电造成的。 </Causes>
+    <Actions>1) 检查轴计算机与安全系统之间的电缆是否完好无损并且正确连接。<p />2) 检查连接到安全系统的电源。<p />3) 确保机器人线路附近没有极强的电磁干扰。 </Actions>
+  </Message>
+  <Message number="9531" eDefine="SYS_ERR_HW_CB_GLITCH_TEST_NOT_OK">
+    <Title>运行链错误测试功能未运行</Title>
+    <Description>运行链错误测试操作未执行。这个问题是由与驱动模块 <arg format="%d" ordinal="1" /> 中的轴计算机相连的安全系统发现的。 </Description>
+    <Consequences>系统转入“系统中断”状态。</Consequences>
+    <Causes>这可能是内部错误引起的。</Causes>
+    <Actions>请联系当地的 ABB 支持部门。</Actions>
+  </Message>
+</Domain>

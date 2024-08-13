@@ -1,0 +1,539 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="OPR" domainNo="1" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="2" max="174">
+  <Message number="2" eDefine="SYS_ERR_OPR_ARL_READY">
+    <Title>Program pointer has been reset</Title>
+    <Description>The program pointer of task <arg format="%s" ordinal="3" /> has been reset.</Description>
+    <Consequences>When started, program execution will start on the first instruction of the task's entry routine. NOTE that the manipulator may move to unexpected position when restarted!</Consequences>
+    <Causes>The operator has probably requested this action manually.</Causes>
+  </Message>
+  <Message number="9" eDefine="SYS_ERR_OPR_ARL_HEAPFULL">
+    <Title>Work memory full</Title>
+    <Description>The task <arg format="%s" ordinal="3" /> has no memory left for new RAPID instructions or data.</Description>
+    <Actions>Save the program and then restart the system.</Actions>
+  </Message>
+  <Message number="10" eDefine="SYS_ERR_OPR_MSTATE_STB">
+    <Title>Motors OFF state </Title>
+    <Description>The system is in the Motors OFF state. It enters this state either after switching from Manual mode to Automatic, or after the Motors ON circuit has been opened during program execution.</Description>
+    <Consequences>No operation will be possible until after closing the Motors ON circuit. The manipulator's axes are meanwhile held in position by mechanical holding brakes.</Consequences>
+  </Message>
+  <Message number="11" eDefine="SYS_ERR_OPR_MSTATE_RUN">
+    <Title>Motors ON state</Title>
+    <Description>The system is in the Motors ON state.</Description>
+    <Consequences>The Motors ON circuit has been closed., enabling power supply to the manipulator's motors. Normal operation may be resumed.</Consequences>
+  </Message>
+  <Message number="12" eDefine="SYS_ERR_OPR_MSTATE_GRDSTOP">
+    <Title>Safety guard stop state </Title>
+    <Description>The system is in the Guard stop state. It enters this state either after switching from Automatic mode to Manual, or after the Motors ON circuit has been opened by an Emergency Stop, General Stop, Automatic Stop or Superior Stop. </Description>
+    <Consequences>No operation will be possible until after closing the Motors ON circuit. The manipulator's axes are meanwhile held in position by mechanical holding brakes.</Consequences>
+    <Causes>Any safety device connected to the system's stop inputs have been opened. These are shown in the Circuit Diagram.</Causes>
+    <Actions>1. Check which safety device caused the stop. <p />2. Close the device. <p />3. To resume operation, switch the system back to state Motors ON.</Actions>
+  </Message>
+  <Message number="13" eDefine="SYS_ERR_OPR_MSTATE_EMSTOP">
+    <Title>Emergency stop state </Title>
+    <Description>The system is in the Emergency stop state, since the Motors ON circuit has been opened by an Emergency Stop device. </Description>
+    <Consequences>All program execution and thus robot actions are immediately halted. The robot axes are meanwhile held in position by mechanical holding brakes.</Consequences>
+    <Causes>Any emergency stop device connected to the emergency stop input have been opened. These may be internal (on the controller or on the teach pendant) or external (devices connected by the system builder). The internal devices are shown in the Circuit Diagram.</Causes>
+    <Actions>1) Check which emergency stop device caused the stop. <p />2) Close/reset the device. <p />3) To resume operation, switch the system back to state Motors ON by pressing this button on the Control Module.</Actions>
+  </Message>
+  <Message number="14" eDefine="SYS_ERR_OPR_MSTATE_SYSFAIL">
+    <Title>System failure state </Title>
+    <Description>Execution of all NORMAL tasks has been stopped due to malfunction.</Description>
+    <Consequences>No start of program execution or manual manipulator jogging will be possible until after the system has been restarted.</Consequences>
+    <Causes>A large number of malfunctions may cause this condition. Please use the teach pendant or RobotStudio to check other event log messages for events occurring at this time!</Causes>
+    <Actions>1. Determine what caused the stop by studying the event log. <p />2. Remedy the fault. <p />3. Restart the system as detailed in the Operator's Manual.</Actions>
+  </Message>
+  <Message number="15" eDefine="SYS_ERR_OPR_OPMODE_MANR">
+    <Title>Manual mode selected</Title>
+    <Description>The system is in the Manual mode.</Description>
+    <Consequences>Programmed operation is possible, but only with a max. speed of 250 mm/s. The manipulator may also be jogged manually after pressing the enabling device on the teach pendant.</Consequences>
+  </Message>
+  <Message number="16" eDefine="SYS_ERR_OPR_OPMODE_AUTO_CH">
+    <Title>Automatic mode requested</Title>
+    <Description>The system has been ordered to go to the Automatic mode.</Description>
+    <Consequences>The system will go to the Automatic mode after confirmed from teach pendant.</Consequences>
+  </Message>
+  <Message number="17" eDefine="SYS_ERR_OPR_OPMODE_AUTO">
+    <Title>Automatic mode confirmed</Title>
+    <Description>The system is in the Automatic mode.</Description>
+    <Consequences>The enabling device is disconnected. The robot can move without human intervention.</Consequences>
+  </Message>
+  <Message number="18" eDefine="SYS_ERR_OPR_OPMODE_MANF_CH">
+    <Title>Manual mode full speed requested </Title>
+    <Description>The system has been ordered to go to the Manual mode without any speed restraints.</Description>
+    <Consequences>The system will go to the Manual mode full speed.</Consequences>
+  </Message>
+  <Message number="19" eDefine="SYS_ERR_OPR_OPMODE_MANF">
+    <Title>Manual mode full speed confirmed</Title>
+    <Description>The system is in the Manual mode without any speed restraints.</Description>
+    <Consequences>Programmed operation is possible while pressing the hold-to-run button on the teach pendant. The manipulator may also be jogged manually after pressing the enabling device on the teach pendant.</Consequences>
+  </Message>
+  <Message number="20" eDefine="SYS_ERR_OPR_PRDSTA_PGMERR">
+    <Title>Execution error state</Title>
+    <Description>The program execution in task <arg format="%s" ordinal="2" /> has been stopped due to a spontaneous error.</Description>
+    <Consequences>No program execution will be possible until the error has been removed.</Consequences>
+    <Causes>A large number of malfunctions may cause this condition. Please use the teach pendant or RobotStudio to check other event log messages for events occurring at this time!</Causes>
+    <Actions>1. Determine what caused the stop by studying the event log. <p />2. Remedy the fault.<p />3. If neccesary, move Program Pointer to main before pressing start button. </Actions>
+  </Message>
+  <Message number="21" eDefine="SYS_ERR_OPR_PRDSTA_PGMERR_RESET">
+    <Title>Execution error reset</Title>
+    <Description>
+      The program execution in task <arg format="%s" ordinal="2" /> has left a spontaneous error state.
+    </Description>
+  </Message>
+  <Message number="24" eDefine="SYS_ERR_OPR_PRDSTA_COLDET_TRIGGERED">
+    <Title>Collision triggered</Title>
+    <Description>Some mechanical part of the manipulator has collided with a piece of fixed equipment in the cell.</Description>
+    <Consequences>Manipulator movement is interrupted and program execution is stopped.</Consequences>
+  </Message>
+  <Message number="25" eDefine="SYS_ERR_OPR_PRDSTA_COLDET_RESETTED">
+    <Title>Collision confirmed</Title>
+    <Description>The collision detection has been confirmed. </Description>
+    <Actions />
+  </Message>
+  <Message number="26" eDefine="SYS_ERR_OPR_PRDSTA_COLDET_CONFIRMED_OK">
+    <Title>Collision retraction</Title>
+    <Description>The manipulator has attempted to back away from the obstacle, into which it collided, and succeeded.</Description>
+    <Consequences>The system is ready to go back to normal operation.</Consequences>
+  </Message>
+  <Message number="27" eDefine="SYS_ERR_OPR_PRDSTA_COLDET_CONFIRMED_ERROR">
+    <Title>Collision retraction fail</Title>
+    <Description>The manipulator has attempted to back away from the obstacle, into which it collided, and failed.</Description>
+    <Consequences>The system is NOT ready to go back to normal operation.</Consequences>
+    <Causes>This may be caused by the robot being stuck to the object into which it collided.</Causes>
+    <Actions>1) Go to Manual Mode. <p />2) Manually run the robot away from the object. <p />3) Resume operation by restarting the program.</Actions>
+  </Message>
+  <Message number="30" eDefine="SYS_ERR_OPR_MECSTA_COMM">
+    <Title>All axes commutated </Title>
+    <Description>After checking, the system has found all manipulator axes to be commutated.</Description>
+    <Consequences>Normal operation is possible.</Consequences>
+  </Message>
+  <Message number="31" eDefine="SYS_ERR_OPR_MECSTA_CALIB">
+    <Title>All axes calibrated </Title>
+    <Description>After checking, the system has found all manipulator axes to be calibrated.</Description>
+    <Consequences>Normal operation is possible.</Consequences>
+  </Message>
+  <Message number="32" eDefine="SYS_ERR_OPR_MECSTA_A_SYNC">
+    <Title>All revolution counters updated </Title>
+    <Description>After checking, the system has found all revolution counters for all manipulator axes to be updated.</Description>
+    <Consequences>Normal operation is possible.</Consequences>
+  </Message>
+  <Message number="33" eDefine="SYS_ERR_OPR_MECSTA_S_SYNC">
+    <Title>All axes synchronized </Title>
+    <Description>After checking, the system has found all manipulator axes to be synchronized.</Description>
+    <Consequences>Normal operation is possible.</Consequences>
+  </Message>
+  <Message number="34" eDefine="SYS_ERR_OPR_MECSTA_NOT_COMM">
+    <Title>Axis not commutated </Title>
+    <Description>After checking, the system has found that one or more manipulator axes are not commutated.</Description>
+    <Consequences>To enable operation, all manipulator axes must be commutated.</Consequences>
+    <Causes>The manipulator drive motor and related units may have been altered, e.g. after replacing a faulty unit.</Causes>
+    <Actions>Commutate the manipulator axes as detailed in the manipulator Product Manual.</Actions>
+  </Message>
+  <Message number="35" eDefine="SYS_ERR_OPR_MECSTA_NOT_CALIB">
+    <Title>Axis not calibrated </Title>
+    <Description>After checking, the system has found that one or more manipulator axes are not calibrated.</Description>
+    <Consequences>To enable operation, all manipulator axes must be calibrated.</Consequences>
+    <Causes>The manipulator drive motor and related units may have been altered, e.g. after replacing a faulty unit.</Causes>
+    <Actions>Calibrate the manipulator axes as detailed in the manipulator Product Manual.</Actions>
+  </Message>
+  <Message number="36" eDefine="SYS_ERR_OPR_MECSTA_NOT_A_SYNC">
+    <Title>Revolution counter not updated </Title>
+    <Description>After checking, the system has found that the revolution counters of one or more manipulator axes are not updated.</Description>
+    <Consequences>To enable operation, the revolution counters of all manipulator axes must be updated.</Consequences>
+    <Causes>The manipulator drive motor and related units may have been altered, e.g. after replacing a faulty unit.</Causes>
+    <Actions>Update the revolution counters of all manipulator axes as detailed in the manipulator Product Manual.</Actions>
+  </Message>
+  <Message number="37" eDefine="SYS_ERR_OPR_MECSTA_NOT_S_SYNC">
+    <Title>Axis not synchronized </Title>
+    <Description>After checking, the system has found that one or more manipulator axes are not synchronized.</Description>
+    <Consequences>To enable operation, all manipulator axes must be synchronized.</Consequences>
+    <Causes>The manipulator drive motor and related units may have been altered, e.g. after replacing a faulty unit.</Causes>
+    <Actions>Synchronize the manipulator axes as detailed in the manipulator Product Manual.</Actions>
+  </Message>
+  <Message number="38" eDefine="SYS_ERR_OPR_MECSTA_SMB">
+    <Title>SMB memory is OK</Title>
+    <Description>During startup, the system has found that all data on the Serial Measurement Board (SMB) is OK.</Description>
+    <Consequences>Operation is possible.</Consequences>
+  </Message>
+  <Message number="39" eDefine="SYS_ERR_OPR_MECSTA_NOT_SMB">
+    <Title>SMB memory is not OK</Title>
+    <Description>During startup, the system has found that data in the Serial Measurement Board (SMB) memory is not OK.</Description>
+    <Consequences>All data must be OK before automatic operation is possible. Manually jogging the robot is possible.</Consequences>
+    <Causes>There are differences between the data stored on the SMB and the data stored in the controller. This may be due to replacement of SMB, controller or both.</Causes>
+    <Actions>1) Update the Serial Measurement Board data as detailed in Operator's Manual, IRC5.</Actions>
+  </Message>
+  <Message number="40" eDefine="SYS_ERR_OPR_ARL_LOAD">
+    <Title>Program loaded </Title>
+    <Description>A program or program module has been loaded into task <arg format="%s" ordinal="3" />. After loading, <arg format="%i" ordinal="4" /> bytes memory remain. The size of the loaded program is <arg format="%i" ordinal="5" />. </Description>
+  </Message>
+  <Message number="41" eDefine="SYS_ERR_OPR_ARL_ERASE">
+    <Title>Program deleted</Title>
+    <Description>A program or program module was deleted from task <arg format="%s" ordinal="3" />. </Description>
+    <Consequences>If the deleted program contained the task entry routine, the program will no longer be executable. </Consequences>
+    <Causes>The program may have been removed manually.</Causes>
+    <Actions>1) Define an entry routine in one of the task's remaining programs, or:<p />2) Load a program containing an entry routine.</Actions>
+  </Message>
+  <Message number="42" eDefine="SYS_ERR_OPR_MECSTA_RECALIBRATED">
+    <Title>Axis recalibrated</Title>
+    <Description>Fine calibration or rev counter update was made for an axis in an already synchronized mechanical unit.</Description>
+  </Message>
+  <Message number="43" eDefine="SYS_ERR_OPR_PGM_RESET">
+    <Title>Restart failed</Title>
+    <Description>The task <arg format="%s" ordinal="3" /> can't restart.</Description>
+  </Message>
+  <Message number="44" eDefine="SYS_ERR_OPR_ARL_UPDATE_PC">
+    <Title>Program Pointer updated</Title>
+    <Description>The task <arg format="%s" ordinal="3" /> could have changed the Program Pointer position. </Description>
+    <Actions />
+  </Message>
+  <Message number="45" eDefine="SYS_ERR_OPR_WARM_START">
+    <Title>System restarted</Title>
+    <Description>An already installed system was restarted. </Description>
+    <Actions />
+  </Message>
+  <Message number="46" eDefine="SYS_ERR_OPR_COLD_START">
+    <Title>System restarted in cold mode </Title>
+    <Description>First start after installation. </Description>
+    <Actions />
+  </Message>
+  <Message number="48" eDefine="SYS_ERR_OPR_BACKGRND_STOP">
+    <Title>Background task did stop</Title>
+    <Description>The task <arg format="%s" ordinal="1" /> stopped without reason.</Description>
+    <Actions />
+  </Message>
+  <Message number="51" eDefine="SYS_ERR_OPR_UNDEF_EVENTROUT">
+    <Title>Event routine error</Title>
+    <Description>The task <arg format="%s" ordinal="2" /> could not start the specified system event routine <arg format="%s" ordinal="3" />. The routine is either unknown to the system or the program is unlinkable. </Description>
+    <Actions>Insert the routine in a system module or correct the program.</Actions>
+  </Message>
+  <Message number="52" eDefine="SYS_ERR_OPR_REGAIN_START">
+    <Title>Regain start</Title>
+    <Description>A regain movement has started.</Description>
+    <Actions />
+  </Message>
+  <Message number="53" eDefine="SYS_ERR_OPR_REGAIN_READY">
+    <Title>Regain ready</Title>
+    <Description>The regain movement is ready.</Description>
+    <Actions />
+  </Message>
+  <Message number="54" eDefine="SYS_ERR_OPR_REGAIN_REJECT">
+    <Title>Regain rejected</Title>
+    <Description>Regain on path not possible, as one client has already ordered it. </Description>
+    <Actions>A new regain movement is ordered during an already started regain movement. Reduce the number of start orders from e.g system I/O</Actions>
+  </Message>
+  <Message number="55" eDefine="SYS_ERR_OPR_PATH_PROC_RESTART">
+    <Title>Path process restarted</Title>
+    <Description>The path process has been restarted.</Description>
+    <Actions />
+  </Message>
+  <Message number="60" eDefine="SYS_ERR_OPR_ENABLE_TEST">
+    <Title>Test of enable chain</Title>
+    <Description>The enable chain is always tested at startup. If the test failed an error message concerning enable will follow. </Description>
+    <Actions>If enable chain test at startup failed the related error message will be "Enable chain timeout" </Actions>
+  </Message>
+  <Message number="61" eDefine="SYS_ERR_OPR_MODPOS">
+    <Title>A target has been modified</Title>
+    <Description>A target in module <arg format="%s" ordinal="1" /> in task <arg format="%s" ordinal="2" /> has been modified or tuned.<p />Start line <arg format="%d" ordinal="3" />, column <arg format="%d" ordinal="4" />, end line <arg format="%d" ordinal="5" />.</Description>
+  </Message>
+  <Message number="62" eDefine="SYS_ERR_OPR_EDIT_LINE">
+    <Title>A module has been edited.</Title>
+    <Description>Module <arg format="%s" ordinal="1" /> in task <arg format="%s" ordinal="2" /> has been edited between lines: <arg format="%d" ordinal="3" />, <arg format="%d" ordinal="4" />.</Description>
+  </Message>
+  <Message number="63" eDefine="SYS_ERR_OPR_EDIT">
+    <Title>Module has been edited</Title>
+    <Description>Module <arg format="%s" ordinal="1" /> in task <arg format="%s" ordinal="2" /> has been edited.</Description>
+  </Message>
+  <Message number="64" eDefine="SYS_ERR_OPR_MOD_ERASE">
+    <Title>A module has been erased.</Title>
+    <Description>Module <arg format="%s" ordinal="1" /> in task <arg format="%s" ordinal="2" /> has been erased.</Description>
+  </Message>
+  <Message number="65" eDefine="SYS_ERR_OPR_USER_MODIFY_RAPID">
+    <Title>New user has started to modify RAPID.</Title>
+    <Description>User <arg format="%s" ordinal="1" /> has started with RAPID program modifications in task <arg format="%s" ordinal="2" />.</Description>
+  </Message>
+  <Message number="66" eDefine="SYS_ERR_OPR_CANT_LOAD">
+    <Title>Not possible to load system module</Title>
+    <Description>System module <arg format="%s" ordinal="2" /> in task <arg format="%s" ordinal="1" /> cannot be loaded since the file is not found.</Description>
+  </Message>
+  <Message number="67" eDefine="SYS_ERR_OPR_PP_RESET">
+    <Title>Program Pointer Reset</Title>
+    <Description>Unable to reset the program pointer for task <arg format="%s" ordinal="1" />.</Description>
+    <Consequences>The program will not start.</Consequences>
+    <Causes>- No program is loaded.<p />- The main routine is missing.<p />- There are errors in the program.</Causes>
+    <Actions>1. Load program if no program is loaded.<p />2. Check that the program has a main routine. If there is no main routine, add one.<p />3. Check for errors in the program and correct them.<p />4. See previous error messages in the Event log.<p /></Actions>
+  </Message>
+  <Message number="68" eDefine="SYS_ERR_OPR_START">
+    <Title>Start Program</Title>
+    <Description>Unable to start program for task <arg format="%s" ordinal="1" />.</Description>
+    <Consequences>The program will not execute.</Consequences>
+  </Message>
+  <Message number="74" eDefine="SYS_ERR_OPR_NFS_UP">
+    <Title>NFS server up </Title>
+    <Description>The control system communicates correctly with the NFS server <arg format="%s" ordinal="1" />. </Description>
+  </Message>
+  <Message number="75" eDefine="SYS_ERR_OPR_NFS_DOWN">
+    <Title>NFS server down </Title>
+    <Description>The control system is not able to communicate correctly with the NFS server <arg format="%s" ordinal="1" />. </Description>
+    <Consequences>If the server <arg format="%s" ordinal="2" /> is defined as TRUSTED, robot program execution will be stopped. If the server is defined as NON-TRUSTED, execution will proceed. These definitions are specified in the Application manual - Robot communication and I/O control.</Consequences>
+    <Causes>If this message is displayed at first start-up, the server configuration may be incorrect. If displayed during operation, the previously working communication has been lost due to a broken connection. Also see the I/O event log!</Causes>
+    <Actions>1. Check the NFS server configuration. <p />2. Check all communication hardware, cables and such.<p />3. Check NFS client configuration on the controller.</Actions>
+  </Message>
+  <Message number="76" eDefine="SYS_ERR_OPR_FTP_UP">
+    <Title>FTP server up </Title>
+    <Description>The control system communicates correctly with the FTP server <arg format="%s" ordinal="1" />. </Description>
+  </Message>
+  <Message number="77" eDefine="SYS_ERR_OPR_FTP_DOWN">
+    <Title>FTP server down </Title>
+    <Description>The control system is not able to communicate correctly with the FTP server <arg format="%s" ordinal="1" />. </Description>
+    <Consequences>If the server <arg format="%s" ordinal="2" /> is defined as TRUSTED, robot program execution will be stopped. If the server is defined as NON-TRUSTED, execution will proceed. These definitions are specified in the Application manual - Robot communication and I/O control.</Consequences>
+    <Causes>If this message is displayed at first start-up, the server configuration may be incorrect. If displayed during operation, the previously working communication has been lost due to a broken connection. Also see the I/O event log!</Causes>
+    <Actions>1. Check the FTP server configuration. <p />2. Check all communication hardware, cables and such. <p />3. Check the FTP client configuration on the controller.</Actions>
+  </Message>
+  <Message number="80" eDefine="SYS_ERR_OPR_BACKGRND_OLDLOAD">
+    <Title>An updated RAPID file is found</Title>
+    <Description>The SEMISTATIC task <arg format="%s" ordinal="1" /> has an older version of a module installed than the source <arg format="%s" ordinal="2" /></Description>
+    <Actions>Restart the system with a P-START to install the newer version.</Actions>
+  </Message>
+  <Message number="81" eDefine="SYS_ERR_OPR_BACKGRND_LOAD">
+    <Title>Background task <arg format="%s" ordinal="1" /></Title>
+    <Description>failed to load a newer version of a module. The source of the module is <arg format="%s" ordinal="2" />.</Description>
+    <Actions>See previous messages for the cause or restart the system with a P-START to load the newer version.</Actions>
+  </Message>
+  <Message number="82" eDefine="SYS_ERR_OPR_BACKGRND_TRUSTLEVEL_SYSFAIL">
+    <Title>RAPID Task supervision</Title>
+    <Description>Task <arg format="%s" ordinal="1" /> is not running. The system will be set in SysFail state. It's now impossible to change to motors on <arg format="%s" ordinal="2" />.</Description>
+    <Actions>See previous messages for the cause. Restart the system to reset the error state.</Actions>
+  </Message>
+  <Message number="83" eDefine="SYS_ERR_OPR_BACKGRND_TRUSTLEVEL_SYSHALT">
+    <Title>RAPID Task supervision</Title>
+    <Description>Task <arg format="%s" ordinal="1" /> is not running. The system will be set in motors off state. <arg format="%s" ordinal="2" /></Description>
+    <Actions>See previous messages for the cause.</Actions>
+  </Message>
+  <Message number="84" eDefine="SYS_ERR_OPR_BACKGRND_TRUSTLEVEL_SYSSTOP">
+    <Title>RAPID Task supervision</Title>
+    <Description>Task <arg format="%s" ordinal="1" /> is not running. All NORMAL tasks will also be stopped.</Description>
+    <Actions>See previous messages for the cause.</Actions>
+  </Message>
+  <Message number="85" eDefine="SYS_ERR_OPR_NOT_STOPPED">
+    <Title>RAPID Task supervision</Title>
+    <Description>Task <arg format="%s" ordinal="1" /> can't be stopped. The trustLevel is set to a safety level. </Description>
+    <Actions>If the task should be possible to stop change the trustLevel or task type in the system parameters menu.</Actions>
+  </Message>
+  <Message number="86" eDefine="SYS_ERR_OPR_PURGE_REGAINED">
+    <Title>Robot is purged OK</Title>
+    <Description>Purging pressure regained after a purge fault. </Description>
+    <Actions />
+  </Message>
+  <Message number="87" eDefine="SYS_ERR_OPR_PURGE_STATE">
+    <Title>Purge state: <arg format="%s" ordinal="1" />.</Title>
+    <Description>State changed. </Description>
+    <Actions />
+  </Message>
+  <Message number="90" eDefine="SYS_ERR_OPR_PSTART_READY">
+    <Title>P-Start done</Title>
+    <Description>A P-Start is done.</Description>
+    <Consequences>After restart the system's state will be resumed except for manually loaded programs and modules. Static and semistatic tasks are restarted from the beginning, not from the state they had when the system was stopped.<p />Modules will be installed and loaded in accordance with the set configuration. System parameters will not be affected.</Consequences>
+    <Causes>1. The P-start was ordered by the user.<p />2. The system forced the P-start due to inconsistent data, malfunction or unrecoverable task state.</Causes>
+  </Message>
+  <Message number="91" eDefine="SYS_ERR_OPR_RESTART_PROTECTED">
+    <Title>Restart not possible</Title>
+    <Description>A restart after collision detection is not possible before acknowledge the error dialogue. </Description>
+    <Actions />
+  </Message>
+  <Message number="92" eDefine="SYS_ERR_OPR_TRUST3_IO_LOST">
+    <Title>(Re)start not possible</Title>
+    <Description>(Re)start is not possible due to lost contact with IO module <arg format="%s" ordinal="1" /> configured with trustlevel 3. </Description>
+    <Actions />
+  </Message>
+  <Message number="93" eDefine="SYS_ERR_OPR_NO_RESTART_IN_SYSHALT">
+    <Title>(Re)start not possible</Title>
+    <Description>(Re)start of task <arg format="%s" ordinal="1" /> is not possible before a warm start is done.</Description>
+    <Actions>The background task is configured with Trustlevel set to SysHalt</Actions>
+  </Message>
+  <Message number="95" eDefine="SYS_ERR_OPR_TASK_PANEL_STATE_OFF">
+    <Title>At least one task is unchecked in the task selection panel</Title>
+    <Description>One or more of the NORMAL tasks are unchecked in the task selection panel when performing a (re)start.</Description>
+    <Actions />
+  </Message>
+  <Message number="96" eDefine="SYS_ERR_OPR_MECH_NOT_ACTIVE">
+    <Title>
+      <arg format="%s" ordinal="1" /> not active!</Title>
+    <Description>The workobject <arg format="%s" ordinal="2" /> contains a coordinated mechanical unit which is not activated.</Description>
+    <Actions>Activate the mechanical unit and perform the operation again.</Actions>
+  </Message>
+  <Message number="97" eDefine="SYS_ERR_OPR_NO_RESTART_RAPID_BLOCKED">
+    <Title>Restart not possible</Title>
+    <Description>The task <arg format="%s" ordinal="1" /> is set in blocked state and the program is for that reason not possible to restart from the current program position.</Description>
+    <Actions>The Program Pointer must be moved before restart.</Actions>
+  </Message>
+  <Message number="98" eDefine="SYS_ERR_OPR_NO_RESTART_SYSFAIL_BLOCKED">
+    <Title>Restart not possible</Title>
+    <Description>The task <arg format="%s" ordinal="1" /> has been in system failure state and the program is for that reason not possible to restart from the current program position.</Description>
+    <Actions>The Program Pointer must be moved before restart.</Actions>
+  </Message>
+  <Message number="99" eDefine="SYS_ERR_OPR_NO_SOFT_STOP_RESTART">
+    <Title>Program start rejected</Title>
+    <Description>The system has performed a soft stop, and the program may not be restarted. </Description>
+    <Consequences>The system goes to the Motors OFF state and can not be started. The full meaning of this status is described in the Trouble shooting manual, IRC5.</Consequences>
+    <Causes>The soft stop may be caused by opening the safety circuit. </Causes>
+    <Actions>1) Check the safety circuits for an open switch. <p />2) Go to Motors ON and restart the program.</Actions>
+  </Message>
+  <Message number="106" eDefine="SYS_ERR_OPR_SIS_CALENDER_TIME_REACHED">
+    <Title>Service Message</Title>
+    <Description>It's time for service for robot <arg format="%s" ordinal="2" /> because it is <arg format="%s" ordinal="1" /> days since the last service.</Description>
+    <Actions />
+  </Message>
+  <Message number="107" eDefine="SYS_ERR_OPR_SIS_CALENDER_TIME_REACHED_SOON">
+    <Title>Service Message</Title>
+    <Description>It remains <arg format="%s" ordinal="1" /> days for robot <arg format="%s" ordinal="2" /> until it's time for service.</Description>
+    <Actions />
+  </Message>
+  <Message number="108" eDefine="SYS_ERR_OPR_SIS_PROD_TIME_REACHED">
+    <Title>Service Message</Title>
+    <Description>It's time for service for robot <arg format="%s" ordinal="2" /> cause it's <arg format="%s" ordinal="1" /> hours of production since last service. </Description>
+    <Actions />
+  </Message>
+  <Message number="109" eDefine="SYS_ERR_OPR_SIS_PROD_TIME_REACHED_SOON">
+    <Title>Service Message</Title>
+    <Description>It remains <arg format="%s" ordinal="1" /> hours of production for robot <arg format="%s" ordinal="2" /> to next service.</Description>
+    <Actions />
+  </Message>
+  <Message number="110" eDefine="SYS_ERR_OPR_SIS_L_10_h_REACHED">
+    <Title>Service Message</Title>
+    <Description>The gearbox at <arg format="%s" ordinal="1" /> of robot <arg format="%s" ordinal="2" /> needs service.</Description>
+    <Actions />
+  </Message>
+  <Message number="111" eDefine="SYS_ERR_OPR_SIS_L_10_h_REACHED_SOON">
+    <Title>Service Message</Title>
+    <Description>The gearbox at <arg format="%s" ordinal="1" /> of robot <arg format="%s" ordinal="3" /> has reached <arg format="%s" ordinal="2" /> of its service interval.</Description>
+    <Actions />
+  </Message>
+  <Message number="112" eDefine="SYS_ERR_OPR_SIS_CALENDER_SETTING_WARNING">
+    <Title>Service Message</Title>
+    <Description>The system date and time has changed.<p />This could cause problems with the SIS calender notification.</Description>
+    <Actions>The SIS parameters Calender Limit and Calender Warning might need to be changed<p /><p /></Actions>
+  </Message>
+  <Message number="120" eDefine="SYS_ERR_OPR_ARL_STOP_INSTR">
+    <Title>Program stopped</Title>
+    <Description>The task <arg format="%s" ordinal="2" /> has stopped. The reason is that an external or internal stop after current instruction has occurred. </Description>
+    <Actions />
+  </Message>
+  <Message number="121" eDefine="SYS_ERR_OPR_ARL_STOP_EXIT">
+    <Title>Program stopped</Title>
+    <Description>The task <arg format="%s" ordinal="2" /> has stopped. The reason is that the task has reached an exit instruction. </Description>
+    <Actions />
+  </Message>
+  <Message number="122" eDefine="SYS_ERR_OPR_ARL_STOP_RDY">
+    <Title>Program stopped</Title>
+    <Description>The task <arg format="%s" ordinal="2" /> has stopped. The reason is that the task is ready. </Description>
+    <Actions />
+  </Message>
+  <Message number="123" eDefine="SYS_ERR_OPR_ARL_STOP_RDYST">
+    <Title>Program stopped</Title>
+    <Description>The task <arg format="%s" ordinal="2" /> has stopped. The reason is that the task is ready with this step. </Description>
+    <Actions />
+  </Message>
+  <Message number="124" eDefine="SYS_ERR_OPR_ARL_STOP_BRK">
+    <Title>Program stopped</Title>
+    <Description>The task <arg format="%s" ordinal="2" /> has stopped. The reason is that the task has reached a break instruction. </Description>
+    <Actions />
+  </Message>
+  <Message number="125" eDefine="SYS_ERR_OPR_ARL_STOP_EXT_INT">
+    <Title>Program stopped</Title>
+    <Description>The task <arg format="%s" ordinal="2" /> has stopped. The reason is that an external or internal stop has occurred. </Description>
+    <Actions />
+  </Message>
+  <Message number="126" eDefine="SYS_ERR_OPR_ARL_STOP_ERR">
+    <Title>Program stopped</Title>
+    <Description>The task <arg format="%s" ordinal="2" /> has stopped. The reason is that an error has occurred. </Description>
+    <Actions />
+  </Message>
+  <Message number="127" eDefine="SYS_ERR_OPR_ARL_STOP_BWD">
+    <Title>Backward execution not possible</Title>
+    <Description>The task <arg format="%s" ordinal="2" /> has stopped. The reason is that it is not possible to execute backward past beginning of instruction list. </Description>
+    <Actions />
+  </Message>
+  <Message number="128" eDefine="SYS_ERR_OPR_ARL_STOP_BWD_INSTR">
+    <Title>Backward execution not possible</Title>
+    <Description>The task <arg format="%s" ordinal="2" /> has stopped. The reason is that it is not possible to execute backward past the instruction. </Description>
+    <Actions />
+  </Message>
+  <Message number="129" eDefine="SYS_ERR_OPR_ARL_STOP_EVTROUT">
+    <Title>Program stopped</Title>
+    <Description>The task <arg format="%s" ordinal="2" /> has stopped. The reason is that the event routine for RESET or POWER_ON is ready. </Description>
+    <Actions />
+  </Message>
+  <Message number="130" eDefine="SYS_ERR_OPR_ARL_STOP_MOVE">
+    <Title>Program stopped</Title>
+    <Description>The task <arg format="%s" ordinal="2" /> has stopped. The reason is that the task is ready with this move step. </Description>
+    <Actions />
+  </Message>
+  <Message number="131" eDefine="SYS_ERR_OPR_ARL_STOP_RDYUSR">
+    <Title>Program stopped</Title>
+    <Description>The task <arg format="%s" ordinal="2" /> has stopped. The reason is that the routine called from system IO interrupt is ready.</Description>
+    <Actions />
+  </Message>
+  <Message number="132" eDefine="SYS_ERR_OPR_ARL_STOP_UNDEF">
+    <Title>Program stopped</Title>
+    <Description>The task <arg format="%s" ordinal="2" /> has stopped. The reason could not be determined.<p /></Description>
+    <Actions />
+  </Message>
+  <Message number="133" eDefine="SYS_ERR_OPR_ARL_STOP_UNDO">
+    <Title>Program stopped</Title>
+    <Description>The task <arg format="%s" ordinal="2" /> has stopped. The reason is that the task is ready with the execution of the UNDO handlers.</Description>
+  </Message>
+  <Message number="150" eDefine="SYS_ERR_OPR_ARL_START_UNK_ORIG">
+    <Title>Program started</Title>
+    <Description>Execution of task <arg format="%s" ordinal="2" /> has been started from the first instruction of the task's entry routine. The originator could not be determined.</Description>
+    <Actions />
+  </Message>
+  <Message number="151" eDefine="SYS_ERR_OPR_ARL_START_EXT_ORIG">
+    <Title>Program started</Title>
+    <Description>Execution of task <arg format="%s" ordinal="2" /> has been started from the first instruction of the task's entry routine. The originator is an external client.</Description>
+    <Actions />
+  </Message>
+  <Message number="152" eDefine="SYS_ERR_OPR_ARL_START_UNDO_ORIG">
+    <Title>Program started</Title>
+    <Description>Execution of task <arg format="%s" ordinal="2" /> has been started from the first instruction of the task's entry routine. The start order was initiated by an action causing the UNDO handler to execute.<p /><p /></Description>
+  </Message>
+  <Message number="155" eDefine="SYS_ERR_OPR_ARL_RESTART_UNK_ORIG">
+    <Title>Program restarted</Title>
+    <Description>Execution of task <arg format="%s" ordinal="2" /> has been restarted from where it was previously stopped. The originator could not be determined.</Description>
+    <Actions />
+  </Message>
+  <Message number="156" eDefine="SYS_ERR_OPR_ARL_RESTART_EXT_ORIG">
+    <Title>Program restarted</Title>
+    <Description>Execution of task <arg format="%s" ordinal="2" /> has been restarted from where it was previously stopped. The originator is an external client.</Description>
+    <Actions />
+  </Message>
+  <Message number="157" eDefine="SYS_ERR_OPR_ARL_RESTART_UNDO_ORIG">
+    <Title>Program restarted</Title>
+    <Description>Execution of task <arg format="%s" ordinal="2" /> has been restarted from where it was previously stopped. The restart order was initiated by an action causing the UNDO handler to execute.<p /></Description>
+  </Message>
+  <Message number="170" eDefine="SYS_ERR_OPR_BGRND_REFSTART_EMPTY">
+    <Title>Background task <arg format="%s" ordinal="1" /></Title>
+    <Description>refuse to start. Task is empty.</Description>
+    <Actions />
+  </Message>
+  <Message number="171" eDefine="SYS_ERR_OPR_BGRND_REFSTART_STATE">
+    <Title>Background task <arg format="%s" ordinal="1" /></Title>
+    <Description>refuse to start. Wrong state.</Description>
+    <Actions />
+  </Message>
+  <Message number="172" eDefine="SYS_ERR_OPR_BGRND_REFSTART_PC">
+    <Title>Background task <arg format="%s" ordinal="1" /></Title>
+    <Description>refuse to start. Can't set PP to the main routine.</Description>
+    <Causes>The module that contains the main routine was not loaded since the module file is missing in the target directory.<p /><p />The module that contains the main routine was not loaded since the configuration file has no entry for automatic loading of the module.<p /><p />The main routine is missing.<p /><p />The main entry is corrupted.</Causes>
+    <Actions>Load the module by hand or perform an I-start when the cause of the problem is removed.</Actions>
+  </Message>
+  <Message number="173" eDefine="SYS_ERR_OPR_BGRND_REFSTART_EXEC">
+    <Title>Background task <arg format="%s" ordinal="1" /></Title>
+    <Description>refuse to start. Can't set the execution mode.</Description>
+    <Actions />
+  </Message>
+  <Message number="174" eDefine="SYS_ERR_OPR_BGRND_REFSTART_ORDER">
+    <Title>Background task <arg format="%s" ordinal="1" /></Title>
+    <Description>refuse to start. The start order failed.</Description>
+    <Actions />
+  </Message>
+</Domain>

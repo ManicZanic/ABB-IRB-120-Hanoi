@@ -1,0 +1,30 @@
+$
+$ 	EDS File for the ABB DeviceNet Slave for the DSQC603 card
+$
+
+
+[File]
+
+	DescText	= "This is an EDS file created by Rockwell Software's EDS Installation Wizard.";                                                                                                              
+	CreateDate	= 06-12-2003;                                    
+	CreateTime	= 13:57:18;                                      
+	ModDate		= 04-16-2008;                                       
+	ModTime		= 13:57:18;
+	Revision	= 1.1;                                      
+
+[Device]
+	VendCode    = 0x8;                                          $ Vendor Code
+	VendName    = "S-S Technologies, Inc.";
+	ProdType    = 0xc;                                          $ Product Type
+	ProdTypeStr = "Communication Adapter";
+	ProdCode    = 0xc;                                          $ Product Code
+	MajRev      = 0x3;                                          $ Major Rev
+	MinRev      = 0x09;                                         $ Minor Rev
+	ProdName    = "5136-DNP-PCI DNSCAN";
+	Catalog     = "";
+
+[IO_Info]
+	Default     = 0x0001;
+	PollInfo    = 0x0001,1,1;
+	Input1      = 8,0,0x0001,"",6,"20 04 24 64 30 03","";
+	Output1     = 8,0,0x0001,"",6,"20 04 24 65 30 03","";

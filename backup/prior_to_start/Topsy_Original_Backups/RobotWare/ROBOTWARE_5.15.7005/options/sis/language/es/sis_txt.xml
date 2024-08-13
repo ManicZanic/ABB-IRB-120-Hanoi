@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Resource Name="sis_texts" Language="es">
+  <Text Name="1">
+    <Value>Ok</Value>
+    <Comment>Used for function keys TPReadFK, no_of_char 5</Comment>
+  </Text>
+  <Text Name="2">
+    <Value>Restb</Value>
+    <Comment>Used for function keys TPReadFK, no_of_char 5</Comment>
+  </Text>
+  <Text Name="3">
+    <Value>Sí</Value>
+    <Comment>Used for function keys TPReadFK, no_of_char 5</Comment>
+  </Text>
+  <Text Name="4">
+    <Value>No</Value>
+    <Comment>Used for function keys TPReadFK, no_of_char 5</Comment>
+  </Text>
+  <Text Name="5">
+    <Value>OK</Value>
+    <Comment>Status of issue i.e. Gear Oil OK, no_of_char 5</Comment>
+  </Text>
+  <Text Name="6">
+    <Value>NOK</Value>
+    <Comment>Status of issue i.e. Gear Oil NOK, no_of_char 5</Comment>
+  </Text>
+  <Text Name="7">
+    <Value>Salir</Value>
+    <Comment>Exit of service routine, no_of_char 5</Comment>
+  </Text>
+  <Text Name="8">
+    <Value>Canc.</Value>
+    <Comment>no_of_char 5 </Comment>
+  </Text>
+  <Text Name="10">
+    <Value>Sistema de información de servicio</Value>
+    <Comment>Title in main window, no_of_char 38</Comment>
+  </Text>
+  <Text Name="11">
+    <Value>Tiempo calendar.</Value>
+    <Comment>First item in main window's menu Calendar Time, no_of_char 15</Comment>
+  </Text>
+  <Text Name="12">
+    <Value>Tiempo funcio.</Value>
+    <Comment>Second item in main window's menu Product Time, no_of_char 15</Comment>
+  </Text>
+  <Text Name="13">
+    <Value>Caja reductora</Value>
+    <Comment>Third item in main window's menu Gear oil, no_of_char 15</Comment>
+  </Text>
+  <Text Name="20">
+    <Value>¿Desea salir?</Value>
+    <Comment>Exit or no, no_of_char 39</Comment>
+  </Text>
+  <Text Name="21">
+    <Value>¿Desea restablecer?</Value>
+    <Comment>Reset or not reset, no_of_char 39</Comment>
+  </Text>
+  <Text Name="22">
+    <Value>¡Intervalo de servicio excedido!</Value>
+    <Comment>Service level exceeded, no_of_char 39</Comment>
+  </Text>
+  <Text Name="23">
+    <Value>¡Sin datos disponibles!</Value>
+    <Comment>Promted when there's no data available, no_of_char 39
+    </Comment>
+  </Text>
+  <Text Name="30">
+    <Value>Serv. anterior:</Value>
+    <Comment>First item Calendar Time window, no_of_char 15</Comment>
+  </Text>
+  <Text Name="31">
+    <Value>Tiem.transcur.:</Value>
+    <Comment>Second item Calendar Time window, Elapsed days since last service, no_of_char 15</Comment>
+  </Text>
+  <Text Name="32">
+    <Value>Servicio sigu.:</Value>
+    <Comment>Third item Calendar Time window Date of next service, no_of_char 15</Comment>
+  </Text>
+  <Text Name="33">
+    <Value>Tiemp. restante:</Value>
+    <Comment>Fourth item Calendar Time window, Days to next service, no_of_char 15</Comment>
+  </Text>
+  <Text Name="34">
+    <Value>día(s)</Value>
+    <Comment>Unit of time, no_of_char 16</Comment>
+  </Text>
+  <Text Name="40">
+    <Value>Intervalo srv.:</Value>
+    <Comment>First item in Production window, Total number of production hours, no_of_char 15</Comment>
+  </Text>
+  <Text Name="41">
+    <Value>Tiem.transcur.:</Value>
+    <Comment>Second item Production window, Number of production hours since last service, no_of_char 15</Comment>
+  </Text>
+  <Text Name="42">
+    <Value>Tiemp.restante:</Value>
+    <Comment>Third item Production window, Number of production hours to last service, no_of_char 15</Comment>
+  </Text>
+  <Text Name="43">
+    <Value>h</Value>
+    <Comment>Unit of time, no_of_char 15</Comment>
+  </Text>
+  <Text Name="44">
+    <Value>min</Value>
+    <Comment>Unit of time, no_of_char 15</Comment>
+  </Text>
+  <Text Name="50">
+    <Value>Eje</Value>
+    <Comment>Joint, no_of_char 5</Comment>
+  </Text>
+  <Text Name="51">
+    <Value>Tiem.consumido:</Value>
+    <Comment>Consumed time of estimated service interval, Perscent, no_of_char 15</Comment>
+  </Text>
+  <Text Name="52">
+    <Value>Tiem. transcur.:</Value>
+    <Comment>Time since last service, no_of_char 16</Comment>
+  </Text>
+  <Text Name="53">
+    <Value>Tiempo restante:</Value>
+    <Comment>Estimated remaining time, no_of_char 16</Comment>
+  </Text>
+  <Text Name="54">
+    <Value>h</Value>
+    <Comment>Unit of time, no_of_char 16</Comment>
+  </Text>
+  <Text Name="55">
+    <Value>Seleccionar una unidad mecánica</Value>
+    <Comment>Second unit, simple instruction, no_of_char 39</Comment>
+  </Text>
+  <Text Name="56">
+    <Value>No hay datos de SIS disponibles para</Value>
+    <Comment>no_of_char 39</Comment>
+  </Text>
+</Resource>

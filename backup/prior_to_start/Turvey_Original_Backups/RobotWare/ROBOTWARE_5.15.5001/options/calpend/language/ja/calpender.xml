@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<Resource Name="CALPEND" Language="eng">
+  <Text Name="100">
+    <Value>Error reading from device</Value>
+    <Comment></Comment>
+  </Text>
+  <Text Name="101">
+    <Value>Sensor A incorrectly connected</Value>
+    <Comment></Comment>
+  </Text>
+  <Text Name="102">
+    <Value>Wrong address for sensor A</Value>
+    <Comment></Comment>
+  </Text>
+  <Text Name="103">
+    <Value>Sensor B incorrectly connected</Value>
+    <Comment></Comment>
+  </Text>
+  <Text Name="104">
+    <Value>Wrong address for sensor B</Value>
+    <Comment></Comment>
+  </Text>
+  <Text Name="105">
+    <Value>No contact with Unit</Value>
+    <Comment></Comment>
+  </Text>
+  <Text Name="106">
+    <Value>Unexpected error!</Value>
+    <Comment></Comment>
+  </Text>
+  <Text Name="107">
+    <Value>Incorrect COM2 setup.</Value>
+    <Comment></Comment>
+  </Text>
+  <Text Name="108">
+    <Value>Timeout! No Barcode has been scanned.</Value>
+    <Comment></Comment>
+  </Text>
+  <Text Name="109">
+    <Value>Error reading Barcode, aborting.</Value>
+    <Comment></Comment>
+  </Text>
+  <Text Name="110">
+    <Value>Error returned by function</Value>
+    <Comment></Comment>
+  </Text>
+</Resource>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.TPU.Screens.Calibrate">
+  <Forms>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Calibrate.TpuWndSelectMechanicalUnit" Text="校准" Width="320" Height="192" Background="SkinCalibrate.jpg" Icon="CalibrateUnit32.gif">
+      <Menu ref="menuTpuWndSelectMechanicalUnit" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Calibrate.TpuWndCalibrateMechanicalUnit" Text="校准" Width="320" Height="192" Background="SkinCalibrate.jpg" Icon="CalibrateUnit32.gif">
+      <Menu ref="menuTpuWndCalibrateMechanicalUnit" />
+      <Controls />
+    </Form>
+  </Forms>
+  <Menus>
+    <Menu ID="menuTpuWndSelectMechanicalUnit">
+      <MenuItem ID="UpdateRev" Text="更新转数计数器" />
+      <MenuItem ID="FineCalib" Text="精细校准" />
+    </Menu>
+    <Menu ID="menuTpuWndCalibrateMechanicalUnit">
+      <MenuItem ID="All" Text="所有的" Grant="UAS_CALIBRATE" />
+      <MenuItem ID="Dummy" Text="" />
+      <MenuItem ID="Dummy" Text="" />
+      <MenuItem ID="Dummy" Text="" />
+      <MenuItem ID="Action" Text="" Grant="UAS_CALIBRATE" />
+    </Menu>
+  </Menus>
+  <Strings>
+    <String ID="MechanicalUnit" Text="机械单元" />
+    <String ID="Status" Text="状态" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.RobMechUnitStatus.Initiated" Text="初始的" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.RobMechUnitStatus.Locked" Text="锁上的" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.RobMechUnitStatus.LockedShow" Text="锁上的" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.RobMechUnitStatus.NotAMSSynchronized" Text="转数计数器未更新" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.RobMechUnitStatus.NotSMSSynchronized" Text="转数计数器未更新" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.RobMechUnitStatus.NotCalibrated" Text="未校准" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.RobMechUnitStatus.NotCommutated" Text="未整流" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.RobMechUnitStatus.Synchronized" Text="校准的" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Motion.RobMechUnitStatus.Undefined" Text="未定义的" />
+    <String ID="UpdateRevolutionCountersOnUnit" Text="更新转数计数器：{0}" />
+    <String ID="FineCalibrateUnit" Text="精细校准：{0}" />
+    <String ID="Axis" Text="轴" />
+    <String ID="State" Text="状态" />
+    <String ID="OnlyAllowedInManualMode" Text="只允许手动模式" />
+    <String ID="Action.UpdateRev" Text="更新转数计数器" />
+    <String ID="Action.FineCalib" Text="精细校准" />
+    <String ID="EnterUpdateRevolutionCounters" Text="更新转数计数器可能改变程序位置 .你确定想要继续吗？" />
+    <String ID="EnterFineCalibration" Text="用外部设备来放置机器人在精细校准位置.更改校准参数可能改变程序位置.你确定想要继续吗？" />
+    <String ID="PerformUpdateRevolutionCounters" Text="选择的轴转数计数器将被更新.这项操作不可恢复.点OK来继续，取消则计数器不更新" />
+    <String ID="PerformFineCalibration" Text="选择的轴转数计数器将被更新.这项操作不可恢复.点OK来继续，取消则参数不更新" />
+    <String ID="UpdatingRevolutionCountersForAxisPleaseWait" Text="更新转数计数器对轴：'{0}'                              请等待..." />
+    <String ID="FineCalibratingAxesPleaseWait" Text="精细校准轴：'{0}'                                            请等待..." />
+  </Strings>
+</Resources>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.TPU.Screens.Robot.Configuration">
+  <Forms>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Robot.Configuration.TpuWndConfiguration" Text="配置" Width="320" Height="192">
+      <Controls />
+    </Form>
+  </Forms>
+  <Menus />
+  <Strings />
+</Resources>

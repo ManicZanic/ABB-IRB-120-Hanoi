@@ -1,0 +1,508 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Domain elogDomain="MOC" domainNo="5" lang="en" elogTextVersion="1.0" xmlns="urn:abb-robotics-elog-text" min="367" max="444">
+  <Message number="367" eDefine="SYS_ERR_MOC_SSYNC_MACHINE_STOP">
+    <Title>Sensor Sync machine stop</Title>
+    <Description>Sensor Sync device <arg format="%s" ordinal="1" /> has set machine stop signal <arg format="%s" ordinal="2" />.<p /></Description>
+    <Actions>Do not restart robot before machine is open. Sensor sync is disabled.</Actions>
+  </Message>
+  <Message number="368" eDefine="SYS_ERR_MOC_NO_EQUIDISTANT_EVENT_OBJECT">
+    <Title>Too Short distance between equidistant events</Title>
+    <Description>The events are too close together. End of internal resources (events). <p />Task: <arg format="%s" ordinal="1" /><p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Increase the distance between equidistant events or use intermediate positions to decrease segment length.</Actions>
+  </Message>
+  <Message number="369" eDefine="SYS_ERR_MOC_FC_CONTACT_CALIBRATION_FAILED">
+    <Title>Calibration using stored offset failed</Title>
+    <Description>Failed to calibrate the sensor using stored offset.</Description>
+    <Consequences>The force control system is not calibrated. It is not possible to activate force control.</Consequences>
+    <Causes>Calibration using stored offset is only possible if a normal calibration has been performed earlier.</Causes>
+  </Message>
+  <Message number="370" eDefine="SYS_ERR_MOC_SENSOR_MEMORY_DATA_TRANSFER_ERROR">
+    <Title>Transfer of data to SMB memory failed</Title>
+    <Description>Transfer of data from cabinet to SMB memory not allowed or interrupted for mechanical unit <arg format="%s" ordinal="1" /> due to disconnect of SMB.</Description>
+    <Causes>SMB was disconnected before or during calibration or manual move of data to SMB memory.</Causes>
+    <Actions>Retry to calibrate or manually move data from cabinet to SMB memory when SMB is reconnected.</Actions>
+  </Message>
+  <Message number="371" eDefine="SYS_ERR_MOC_FC_SPEED_CHANGE_SPEED_ERROR">
+    <Title>The programmed speed is too high</Title>
+    <Description>The speed change functionality is only allowed for low programmed speed.</Description>
+    <Causes>The programmed speed is too high.</Causes>
+    <Actions>Lower the programmed speed or modify the configuration parameters.</Actions>
+  </Message>
+  <Message number="372" eDefine="SYS_ERR_MOC_FC_SPEED_CHANGE_RECOVER_ERROR">
+    <Title>Contact force too high</Title>
+    <Description>The contact force is too high during the recover phase.</Description>
+    <Causes>The programmed path in the recover function causes too high contact forces.</Causes>
+    <Actions>Check and modify the recover function or allow higher contact force.</Actions>
+  </Message>
+  <Message number="373" eDefine="SYS_ERR_MOC_TOO_HIGH_EVENT_PRESET_TIME">
+    <Title>Too high Event Preset Time</Title>
+    <Description>The configured Event Preset Time is too high. The maximum value is <arg format="%1.2f" ordinal="1" />.</Description>
+    <Consequences>The Event Preset Time is reduced to the maximum value.</Consequences>
+    <Causes>This error can occur for robots with a low Dynamic Resolution and a high Event Preset Time. The reason is a computer memory limitation.</Causes>
+    <Actions>Reduce the Event Preset Time in the configuration parameters to a value no higher than <arg format="%1.2f" ordinal="1" />.</Actions>
+  </Message>
+  <Message number="374" eDefine="SYS_ERR_MOC_FC_SPEED_CHANGE_PROGRAM_STOP_ERROR">
+    <Title>FC SpeedChange program stop error</Title>
+    <Description>FC SpeedChange cannot stop robot at recover state.</Description>
+    <Actions>Move program pointer, jog robot away from current position and restart the program.</Actions>
+  </Message>
+  <Message number="375" eDefine="SYS_ERR_MOC_DYNAMIC_LOAD_LIMIT_EXCEEDED">
+    <Title>Dynamic load too high</Title>
+    <Description>Required torque for robot <arg format="%s" ordinal="1" /> axis <arg format="%d" ordinal="2" /> too high.<p /></Description>
+    <Actions>If weaving one of these actions may help: <p />- Reduce weave frequency or weave amplitude for this movement.<p />- Reduce process speed.<p />- Increase zone size if small zones are used.<p />- Increase distance between programmed points if they are close.<p /><p />If Conveyor Tracking: Reduce conveyor speed.</Actions>
+  </Message>
+  <Message number="376" eDefine="SYS_ERR_MOC_GEO_INTERPOLATION_FAILED">
+    <Title>Geometric interpolation failed.</Title>
+    <Description>Task. <arg format="%s" ordinal="1" /><p />Failed to interpolate the desired geometry.<p />Program Ref. <arg format="%s" ordinal="2" /><p />(Internal code: <arg format="%d" ordinal="3" />)</Description>
+    <Actions>Increase the zone size, move the programmed point, change tool orientation or change interpolation method.</Actions>
+  </Message>
+  <Message number="377" eDefine="SYS_ERR_FC_ONLY_ALLOWED_IN_POSITION_CONTROL">
+    <Title>Only allowed in position control</Title>
+    <Description>The instruction is only allowed when the robot is in position control mode. </Description>
+    <Causes>The error depends on calling an instruction that is only allowed to be used in position control while in force control mode.</Causes>
+    <Actions>Call the instruction only when the robot is in position control mode. <p /></Actions>
+  </Message>
+  <Message number="378" eDefine="SYS_ERR_FC_MAX_FORCE_CHANGE_TUNE_ERROR">
+    <Title>Error in FCSetMaxForceChangeTune</Title>
+    <Description>Incorrect value of the parameter ForceChange in instruction FCSetMaxForceChangeTune.</Description>
+    <Consequences>The program will stop.</Consequences>
+    <Causes>The parameter must be set larger than zero and less than the configured value.</Causes>
+    <Actions>Change the parameter value.</Actions>
+  </Message>
+  <Message number="379" eDefine="SYS_ERR_MOC_ACTIVE_MECH_UNIT_MISMATCH">
+    <Title>Active mechanical units have changed</Title>
+    <Description>When calling RestoPath all mechanical units have to be in the same active state as when StorePath was called.</Description>
+    <Actions>Make sure that all mechanical units that were active when calling StorePath still are and that no other mechanical unit is active when calling RestoPath.</Actions>
+  </Message>
+  <Message number="380" eDefine="SYS_ERR_MOC_SENSOR_MEMORY_CHECKSUM_ERROR">
+    <Title>Checksum error</Title>
+    <Description>
+      Data in SMB memory for mechanical unit <arg format="%s" ordinal="1" /> has erroneous checksum.
+    </Description>
+    <Causes>New SMB-board. System shut down before data save finished.</Causes>
+    <Actions>- Load new configuration files.</Actions>
+  </Message>
+  <Message number="381" eDefine="SYS_ERR_MOC_TOO_LOW_SPEED">
+    <Title>Speed too low.</Title>
+    <Description>Task. <arg format="%s" ordinal="1" /><p />The speed is too low (numerical resolution).<p />Program Ref. <arg format="%s" ordinal="2" /></Description>
+    <Actions>Increase the programmed speed. <p />Check also the other synchronized tasks in a multimove application.</Actions>
+  </Message>
+  <Message number="382" eDefine="SYS_ERR_MOC_WEAVE_CALC_ERROR">
+    <Title>Weave pattern error</Title>
+    <Description>Calculation of weave pattern has failed due to an internal error.</Description>
+    <Actions>Try to restart.</Actions>
+  </Message>
+  <Message number="383" eDefine="SYS_ERR_MOC_CSS_ACT_FAILED_CFG">
+    <Title>Cartesian Soft Servo configuration error</Title>
+    <Description>Some configuration parameter for Cartesian Soft Servo is not valid.</Description>
+    <Consequences>The system will not start.</Consequences>
+    <Causes>Some configuration parameter has been set to a <p />value that is not allowed.</Causes>
+    <Actions>Verify that any modified parameter are within allowed limits.</Actions>
+  </Message>
+  <Message number="384" eDefine="SYS_ERR_MOC_CSS_ACT_FAILED_QUAT">
+    <Title>Cartesian Soft Servo quaternions invalid</Title>
+    <Description>The quaternions of the tool, workobject or the argument RefOrient in the CSSAct instruction are invalid.</Description>
+    <Consequences>Cartesian Soft Servo will not activate.<p /></Consequences>
+    <Actions>Check the quaternions of the tool, workobject or the argument RefOrient in the CSSAct instruction.</Actions>
+  </Message>
+  <Message number="385" eDefine="SYS_ERR_MOC_CSS_ACT_FAILED_ACTIVE">
+    <Title>Cartesian Soft Servo activation failed</Title>
+    <Description>The instruction CSSAct failed.</Description>
+    <Causes>Cartesian Soft Servo already active.</Causes>
+    <Actions>Cartesian Soft Servo needs to be deactivated before it can be activated.</Actions>
+  </Message>
+  <Message number="386" eDefine="SYS_ERR_MOC_CSS_OFFSET_ACT_FAILED">
+    <Title>Cartesian Soft Servo offset activation failed</Title>
+    <Description>The instruction CSSForceOffsetAct failed.</Description>
+    <Consequences>Force offset was not activated.</Consequences>
+    <Causes>CSSForceOffsetAct  instruction is only allowed when Cartesian Soft Servo is active. </Causes>
+    <Actions>Activate Cartesian Soft Servo with the instruction CSSAct before using the instruction CSSForceOffsetAct .</Actions>
+  </Message>
+  <Message number="387" eDefine="SYS_ERR_MOC_CSS_CLOSE_TO_UNSTABLE">
+    <Title>Cartesian Soft Servo close to unstable</Title>
+    <Description>Cartesian Soft Servo is close to unstable.<p /></Description>
+    <Consequences>The robot is halted as a security measure.</Consequences>
+    <Causes>The system damping is too low.</Causes>
+    <Actions>The damping is calculated from a ratio of stiffness.<p />Change the value of Stiffness or StiffnessNonSoftDir in the CSSAct instruction. If that does not help increase the value of the configuration parameter Damping Stability Limit or change the parameter Stiffness to damping ratio</Actions>
+  </Message>
+  <Message number="388" eDefine="SYS_ERR_MOC_CSS_POS_SUPERVISION">
+    <Title>Cartesian Soft Servo position supervision error</Title>
+    <Description>The user defined position supervision in Cartesian Soft Servo  mode trigged.</Description>
+    <Consequences>The robot halts.</Consequences>
+    <Causes>The position error is larger than the allowed range specified in the configuration. </Causes>
+    <Actions>Increase the allowed position error in the configuration or modify the program.</Actions>
+  </Message>
+  <Message number="389" eDefine="SYS_ERR_MOC_CSS_SINGULARITY">
+    <Title>Cartesian Soft Servo singularity</Title>
+    <Description>The robot is too close to singularity which effects the Cartesian Soft Servo behaviour.<p /></Description>
+    <Consequences>The robot behaviour will be different from specified.</Consequences>
+    <Actions>Modify the program to avoid the singularity.</Actions>
+  </Message>
+  <Message number="390" eDefine="SYS_ERR_MOC_CSS_SPEED_SUPERVISION">
+    <Title>Cartesian Soft Servo speed supervision</Title>
+    <Description>The user defined speed supervision in Cartesian Soft Servo mode trigged.</Description>
+    <Consequences>The robot halts.</Consequences>
+    <Causes>The speed error is larger than the allowed range specified in the configuration. <p /><p /><p /><p /></Causes>
+    <Actions>Increase the allowed speed error in the configuration or modify the program. </Actions>
+  </Message>
+  <Message number="391" eDefine="SYS_ERR_MOC_CSS_MOVE_NOT_ALLOWED">
+    <Title>Cartesian Soft Servo movement not allowed</Title>
+    <Description>Jogging or a programmed movement has been detected.</Description>
+    <Consequences>The ordered movement is ignored.</Consequences>
+    <Actions>Movement during Cartesian Soft Servo is only allowed if the switch AllowMove has been used in the CSSAct instruction.</Actions>
+  </Message>
+  <Message number="392" eDefine="SYS_ERR_MOC_COMMUNICATION_ERROR_WITH_SAFEMOVE">
+    <Title>SafeMove communication error</Title>
+    <Description>Communication with SafeMove controller on drive module <arg format="%d" ordinal="1" /> has failed.</Description>
+    <Consequences>Brake tests can not be done.</Consequences>
+    <Actions>Check if SafeMove hardware is connected.</Actions>
+  </Message>
+  <Message number="393" eDefine="SYS_ERR_MOC_CSS_FORCE_IN_STIFF_DIR">
+    <Title>Force offset applied in non-soft direction</Title>
+    <Description>The force-offset direction in CSSForceOffsetAct is not the same as the soft direction specified by CSSAct.</Description>
+    <Consequences>The robot will not become easier to push in the soft direction. There can also be position deviations from the programmed path in the non-soft directions.</Consequences>
+    <Actions>Make sure the direction given in CSSForceOffsetAct is compatible with the direction given in CSSAct.</Actions>
+  </Message>
+  <Message number="394" eDefine="SYS_ERR_MOC_REGAIN_POS_CLEARED_COORDINATED_FRAME">
+    <Title>The Path for the Unit is cleared</Title>
+    <Description>The Robot <arg format="%s" ordinal="2" /> is semi coordinated to Unit <arg format="%s" ordinal="1" /> from another task and the Path for the Unit is cleared after modpos, SyncMoveOff, SyncMoveSuspend, ActUnit, DeactUnit or ClearPath and the position cannot be read from other tasks.</Description>
+    <Consequences>Program run or restart will be interrupted.</Consequences>
+    <Actions>If the programmed position of the Unit is moved by modpos when the Robot is semi coordinated to the Unit, then step the Unit to the new position to define the path and move the PP in the Robot program to be able to restart the program.<p />If the semi coordinated move starts after SyncMoveOff, SyncMoveSuspend, ActUnit, DeactUnit or ClearPath in the program of the Unit then insert a move of the Unit to a finepoint plus WaitSyncTask in all programs.<p />Check all programs that the semi coordinated movement is separated with finepoints and WaitSyncTask instructions before and after the movement and that the Unit is not moved between. Note that WaitSyncTask also is needed after the semi coordination before SyncMoveOn and SyncMoveResume.</Actions>
+  </Message>
+  <Message number="395" eDefine="SYS_ERR_MOC_TOO_LOW_SPEED_LONG_SEGMENT">
+    <Title>Too long programmed move</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />This move is too long for the programmed speed. The numerical resolution in the path planning is not enough.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Consequences>The speed will be increased i.e. higher than the programmed speed.</Consequences>
+    <Actions>Insert intermediate points or increase the speed.</Actions>
+  </Message>
+  <Message number="396" eDefine="SYS_ERR_MOC_FC_CROSS_SECTION_SUPERVISION_ERROR">
+    <Title>Default FC force supervision error</Title>
+    <Description>The default force supervision has trigged because the programmed or measured external forces are larger than the safety limit for the robot type.</Description>
+    <Consequences>The robot will stop.</Consequences>
+    <Actions>Modify the program to decrease the total external force acting on the robot.</Actions>
+  </Message>
+  <Message number="397" eDefine="SYS_ERR_MOC_FC_PATH_FRAME_ROTATION_SPEED_ERROR">
+    <Title>Path frame rotation speed error</Title>
+    <Description>The rotation speed of the path frame is too high when using FC Machining with ForceFrameRef set to FC_REFFRAME_PATH.</Description>
+    <Consequences>The robot will stop.</Consequences>
+    <Actions>Reduce programmed speed, increase corner zones, or decrease the distance between the programmed path and the surface.</Actions>
+  </Message>
+  <Message number="398" eDefine="SYS_ERR_MOC_ABSACC_CIRCLE_FRAME_CHANGE">
+    <Title>AbsAcc circle begins with a frame change</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /> When having the AbsAcc option, MoveC instructions that are coordinated to another robot must use the same tool and work object as the previous move instruction.</Description>
+    <Consequences>The robot will stop.</Consequences>
+    <Actions>Change the move instruction before <arg format="%s" ordinal="2" /> so that they both use the same frames. Alternatively, add a (redundant) MoveL to the start point of the circle arc, using the same frames as the MoveC instruction.</Actions>
+  </Message>
+  <Message number="399" eDefine="SYS_ERR_MOC_ABSACC_CIRCLE_IS_FIRST_INSTR">
+    <Title>AbsAcc circle is first movement instruction</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p /> When having the AbsAcc option, MoveC cannot be the first movement instruction.</Description>
+    <Consequences>The robot will stop.</Consequences>
+    <Actions>Add a movement instruction before <arg format="%s" ordinal="2" />, using the same tool and frames.</Actions>
+  </Message>
+  <Message number="400" eDefine="SYS_ERR_MOC_CONFIG_INCONSISTENT_PARAMETER">
+    <Title>Motion configuration error</Title>
+    <Description>The parameter disconnect_link_at_deactivate for MEASUREMENT_CHANNEL was inconsistent for measurement_link <arg format="%d" ordinal="1" />. All channels on the same link have to have the same setting for this parameter.</Description>
+    <Actions>Check the configuration file. <p /> I-start the system with correct parameters.</Actions>
+  </Message>
+  <Message number="401" eDefine="SYS_ERR_MOC_STARTUP_SYNCH_FAILED">
+    <Title>Startup synchronization failed</Title>
+    <Description>The system relay '<arg format="%s" ordinal="1" />' is defined but no response was received during the startup(waited for <arg format="%d" ordinal="2" /> minutes).</Description>
+    <Actions>Make sure that the in_signal of the relay is configured and connected and startup all synchronized systems simultaneously.</Actions>
+  </Message>
+  <Message number="402" eDefine="SYS_ERR_MOC_CORR_ENDS_IN_ZONE">
+    <Title>Correction is not ended in a finepoint</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The last move instruction with correction specified has to be a finepoint.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>Change the zone parameter to fine.</Actions>
+  </Message>
+  <Message number="403" eDefine="SYS_ERR_MOC_NO_AW_BOARD">
+    <Title>AW board not connected</Title>
+    <Description>During startup, no communication was established with unit &lt;<arg format="%s" ordinal="1" />&gt; on bus &lt;<arg format="%s" ordinal="2" />&gt;.</Description>
+    <Consequences>It is not possible to access the unit or signals on the unit, since it is currently not communicating with the controller.</Consequences>
+    <Causes>The unit is either not connected to the system, or it is connected, but has been assigned the wrong address.</Causes>
+    <Actions>1. Make sure all unit addresses match the configuration. <p />2. Make sure all addresses are unique, and not used by more than one unit. <p />3. Change the address and/or connect the missing unit. <p />4. If you changed the address, the power supply to the unit must be cycled (switched OFF and then back ON), to make sure the address has been changed. </Actions>
+  </Message>
+  <Message number="404" eDefine="SYS_ERR_MOC_WRISTCIRCLE_EXT_AXIS_MOVEMENT">
+    <Title>Additional axis movement during Wrist Interpolation</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Program Ref. <arg format="%s" ordinal="2" /><p /><p />An additional axis is programmed to move during Wrist Interpolation.</Description>
+    <Consequences>The task execution will stop.</Consequences>
+    <Actions>Make sure that no additional axis is programmed to move while doing Wrist Interpolation.</Actions>
+  </Message>
+  <Message number="405" eDefine="SYS_ERR_MOC_WRISTCIRCLE_COORD_MOVEMENT">
+    <Title>Coordinated movement during Wrist Interpolation</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Program Ref. <arg format="%s" ordinal="2" /><p /><p />Attempt to do Wrist Interpolation against a moving frame.</Description>
+    <Consequences>The task execution will stop.</Consequences>
+    <Actions>Remove movement coordination while doing the Wrist Interpolation.</Actions>
+  </Message>
+  <Message number="406" eDefine="SYS_ERR_MOC_WRISTCIRCLE_Z_NOT_ON_PLANE">
+    <Title>Wrist Interpolation point not on circle plane</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Program Ref. <arg format="%s" ordinal="2" /><p /><p />The target <arg format="%s" ordinal="4" /> is not on the circle plane. The deviation is <arg format="%f" ordinal="3" /> mm.<p /><p />p1 = starting point<p />p2 = circle point<p />p3 = end point</Description>
+    <Consequences>For a cutting process, the cut hole will not be circular.</Consequences>
+    <Actions>If a circular arc is intended, then change the corresponding target so that it is on the circle plane.</Actions>
+  </Message>
+  <Message number="407" eDefine="SYS_ERR_MOC_WRISTCIRCLE_AXIS_LOCKED">
+    <Title>Wrist axis locked</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Program Ref. <arg format="%s" ordinal="2" /><p /><p />Cannot do Wrist Interpolation using <arg format="%s" ordinal="4" /> because axis <arg format="%d" ordinal="3" /> is locked.</Description>
+    <Consequences>The task execution will stop.</Consequences>
+    <Actions>Change to another wrist axis combination that does not involve the locked axis. Note that the robot must have at least two movable wrist axes to do Wrist Interpolation.</Actions>
+  </Message>
+  <Message number="408" eDefine="SYS_ERR_MOC_WRISTCIRCLE_JOINT_LIMIT">
+    <Title>Wrist joint limit</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Program Ref. <arg format="%s" ordinal="2" /><p /><p />Cannot do Wrist Interpolation because robot axis <arg format="%d" ordinal="3" /> will violate a joint limit.</Description>
+    <Consequences>The task execution will stop.</Consequences>
+    <Actions>Choose another robot configuration or another wrist axis combination.</Actions>
+  </Message>
+  <Message number="409" eDefine="SYS_ERR_MOC_WRISTCIRCLE_SOLVER_ERROR">
+    <Title>Wrist Interpolation not possible</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Program Ref. <arg format="%s" ordinal="2" /><p /><p />The programmed Wrist Interpolation is not kinematically possible using <arg format="%s" ordinal="3" />.</Description>
+    <Consequences>The task execution will stop.</Consequences>
+    <Actions>Choose another robot configuration or another wrist axis combination. Possible wrist axis combinations are: Wrist45, Wrist46, and Wrist56.</Actions>
+  </Message>
+  <Message number="410" eDefine="SYS_ERR_MOC_WRISTCIRCLE_COLLINEAR_WRONG_ORDER">
+    <Title>Collinear targets in wrong order</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />Program Ref. <arg format="%s" ordinal="2" /><p /><p />The programmed targets are collinear, but the end point is between the start point and the circle point.</Description>
+    <Consequences>The task execution will stop.</Consequences>
+    <Actions>If a straight line is intended, then let the circle point and the end point swap places with each other.</Actions>
+  </Message>
+  <Message number="411" eDefine="SYS_ERR_MOC_OUTSIDE_LOAD_DIAGRAM">
+    <Title>Maximum allowed programmed TCP load exceeded</Title>
+    <Description>The currently defined TCP load for robot <arg format="%s" ordinal="1" /> exceeds the maximum allowed load for the robot model.</Description>
+    <Consequences>The robot will stop.</Consequences>
+    <Causes>The combination of the current tool load and payload exceeds the maximum load allowed for the robot model.</Causes>
+    <Actions>Make sure that the total TCP load is inside the load diagram for the robot.</Actions>
+  </Message>
+  <Message number="412" eDefine="SYS_ERR_MOC_FC_SPEED_CHANGE_TUNE_ERROR">
+    <Title>Error in speed change tuning instruction</Title>
+    <Description>The speed change tuning instruction resulted in an error.</Description>
+    <Consequences>The robot will stop.</Consequences>
+    <Causes>The speed change tuning instruction was not allowed, or the parameters given were invalid.</Causes>
+    <Actions>Check the values for the parameter and tuning type, and make sure the correct force control option is installed and configured correctly.</Actions>
+  </Message>
+  <Message number="413" eDefine="SYS_ERR_MOC_REC_BLEEDER_TEMPERATURE_ERROR">
+    <Title>Bleeder resistor overload error</Title>
+    <Description>
+      In drive module <arg format="%d" ordinal="1" />, the bleeder resistor connected to the rectifier unit at drive unit position <arg format="%d" ordinal="2" /> was overloaded.
+    </Description>
+    <Consequences>No operation will be possible until the bleeder resistor has cooled down. The system goes to Motors Off state.</Consequences>
+    <Causes>1) The user program may contain too much deceleration of the manipulator's axes. This fault is more likely if the system contains additional axes.<p />2) Bleeder resistor has wrong resistance. <p />3) Short circuit in motor cable between phase to phase or phase to ground.</Causes>
+    <Actions>1) Rewrite the user program to reduce the amount of hard decelerations.<p />2) Disconnect the bleeder and check the cable and measure the bleeder resistance. The expected resistance should be approximately <arg format="%d" ordinal="3" /> ohms. <p />3) Verify that the motor cables has no short circuits internally or to ground.</Actions>
+  </Message>
+  <Message number="414" eDefine="SYS_ERR_MOC_REC_BLEEDER_TEMPERATURE_WARNING">
+    <Title>Bleeder resistor overload warning</Title>
+    <Description>
+      In drive module <arg format="%d" ordinal="1" />, the bleeder resistor connected to the rectifier unit at drive unit position <arg format="%d" ordinal="2" /> is close to overload.
+    </Description>
+    <Consequences>Operation will be possible but system is close to a stopping error.</Consequences>
+    <Causes>1) The user program may contain too much deceleration of the manipulator's axes. This fault is more likely if the system contains additional axes.<p />2) Bleeder resistor has wrong resistance. <p />3) Short circuit in motor cable between phase to phase or phase to ground.</Causes>
+    <Actions>1) Rewrite the user program to reduce the amount of hard decelerations.<p />2) Disconnect the bleeder and check the cable and measure the bleeder resistance. The expected resistance should be approximately <arg format="%d" ordinal="3" /> ohms. <p />3) Verify that the motor cables has no short circuits internally or to ground.</Actions>
+  </Message>
+  <Message number="415" eDefine="SYS_ERR_MOC_MOTOR_TEMPERATURE_ERROR">
+    <Title>Motor temperature error</Title>
+    <Description>
+      Motor temperature for joint <arg format="%s" ordinal="1" /> is too high.
+    </Description>
+    <Consequences>It is not possible to continue until the motor has cooled down. The system goes to Motors Off state.</Consequences>
+    <Causes>The user program may contain too much hard acceleration and deceleration of the joint. Gravity torque or external forces for the joint can also be too high.</Causes>
+    <Actions>Rewrite the user program to reduce the motor utilization.</Actions>
+  </Message>
+  <Message number="416" eDefine="SYS_ERR_MOC_MOTOR_TEMPERATURE_WARNING">
+    <Title>Motor temperature warning</Title>
+    <Description>
+      The motor temperature for joint <arg format="%s" ordinal="1" /> is close to maximum value.
+    </Description>
+    <Consequences>It is possible to continue but the margin to maximum allowed temperature is too low to sustain long term operation.</Consequences>
+    <Causes>The user program may contain too much hard acceleration and hard deceleration of the joint. The gravity torque or external forces for the joint can also be too high.</Causes>
+    <Actions>Rewrite the user program to reduce the motor utilization.</Actions>
+  </Message>
+  <Message number="417" eDefine="SYS_ERR_MOC_INVERTER_TEMPERATURE_ERROR">
+    <Title>Drive unit overload error</Title>
+    <Description>
+      The drive unit for joint <arg format="%s" ordinal="2" /> has reached a too high temperature level. The joint is connected to drive module <arg format="%d" ordinal="1" /> with the drive unit at unit position <arg format="%d" ordinal="3" /> and node <arg format="%d" ordinal="4" />.
+    </Description>
+    <Consequences>No operation will be possible until the drive has cooled down. The system goes to Motors Off state.</Consequences>
+    <Causes>
+      1) The joint may be running with a too high torque for extended periods of time. <p />2) Short circuit in the manipulator using long motor cables.
+    </Causes>
+    <Actions>
+      1) If possible, rewrite the user program to reduce the amount of hard acceleration and hard deceleration. <p />2) Reduce the static torque due to gravity or external forces.<p />3) Check for short circuit in the motor cable or in the motor.<p />4) Check for other hardware event logs.
+    </Actions>
+  </Message>
+  <Message number="418" eDefine="SYS_ERR_MOC_INVERTER_TEMPERATURE_WARNING">
+    <Title>Drive unit overload warning</Title>
+    <Description>
+      The drive unit for joint <arg format="%s" ordinal="2" />, connected to drive module <arg format="%d" ordinal="1" /> with the drive unit at unit position <arg format="%d" ordinal="3" /> and node <arg format="%d" ordinal="4" /> is approaching a too high temperature level.
+    </Description>
+    <Consequences>It is possible to continue but margin to max temperature is too low for long term operation.</Consequences>
+    <Causes>
+      1) The joint may be running with a too high torque for extended periods of time. <p />2) Short circuit in the manipulator using long motor cables.
+    </Causes>
+    <Actions>
+      1) If possible, rewrite the user program to reduce the amount of hard acceleration and hard deceleration. <p />2) Reduce the static torque due to gravity or external forces.<p />3) Check for short circuit in the motor cable or in the motor.<p />4) Check for other hardware event logs.
+    </Actions>
+  </Message>
+  <Message number="419" eDefine="SYS_ERR_MOC_COMMON_BASE_FRAME_ERROR">
+    <Title>Common base_frame error</Title>
+    <Description>Task: <arg format="%s" ordinal="1" /><p />The base_frame is moved by another task than the robot and could not be solved, reason <arg format="%d" ordinal="3" />:<p />1 SingArea\Wrist not supported with MoveC.<p />2 The base_frame must be moved by first synchronized motion_group.<p />3 Only one common base_frame can be handled.<p />4 Absacc not supported with MoveC.<p />5 The common base_frame can only be solved in synchronized move.<p />Program Ref. <arg format="%s" ordinal="2" /><p /></Description>
+    <Actions>1 Use SingArea\Off. The CirPathMode can also be used.<p />2,3 Check Controller and Motion configuraion.<p />4 Use MoveL or remove absacc.<p />5 Use MoveAbsJ.</Actions>
+  </Message>
+  <Message number="420" eDefine="SYS_ERR_MOC_INDCNV_MECUNIT_ERROR">
+    <Title>IndCnv Mechanical Unit Error</Title>
+    <Description>
+			The mechanical unit <arg format="%s" ordinal="1" /> is not correctly configured for IndCnv functionality.
+		</Description>
+    <Consequences>Program execution is stopped.</Consequences>
+    <Causes>
+			The mechanical unit <arg format="%s" ordinal="1" /> consists of more than one single.<p />The single connected to <arg format="%s" ordinal="1" /> is not of type FREE_ROT.<p />The single connected to <arg format="%s" ordinal="1" /> is not defined as an Indexing Move single.
+		</Causes>
+    <Actions>
+			Make sure mechanical unit <arg format="%s" ordinal="1" /> consists of only one single.<p />Make sure configuration parameter Motion/Single Type/Mechanics is of type FREE_ROT.<p />Make sure configuration parameter Motion/Single Type/Indexing Move is TRUE.
+		</Actions>
+  </Message>
+  <Message number="421" eDefine="SYS_ERR_MOC_INDCNV_TRACK_SINGLE_ERROR">
+    <Title>IndCnv Tracking Single Error</Title>
+    <Description>
+			The single <arg format="%s" ordinal="1" /> is not configured as an Indexing Move single
+		</Description>
+    <Consequences>Program execution is stopped.</Consequences>
+    <Actions>Make sure configuration parameter Process/Can Interface/Single To Track refers to a single with Motion/Single Type/Indexing Move set to TRUE.</Actions>
+  </Message>
+  <Message number="422" eDefine="SYS_ERR_MOC_INDCNV_INDJDF_ERROR">
+    <Title>IndCnv and Independent joint error</Title>
+    <Description>
+			Independent joint instructions are not allowed when single <arg format="%s" ordinal="1" /> is in indexing mode.
+		</Description>
+    <Consequences>Program execution is stopped.</Consequences>
+    <Actions>Execute the RAPID instruction IndCnvReset before using the axis as an independent joint.</Actions>
+  </Message>
+  <Message number="423" eDefine="SYS_ERR_MOC_INDCNV_PRETRIG_TIME_TOO_LOW">
+    <Title>IndCnv Time before indexing move too low</Title>
+    <Description>The time between trig signal and start of indexing movement is configured too low.</Description>
+    <Consequences>The program execution is stopped.</Consequences>
+    <Actions>Increase system parameter "Motion/Single Type/Time before indexing move" to at least <arg format="%s" ordinal="1" /> (ms).<p />Remove or decrease robot acceleration limitations if possible.<p />Please consult the Conveyor Tracking application manual for further actions.<p /><p /><p /></Actions>
+  </Message>
+  <Message number="424" eDefine="SYS_ERR_MOC_INDCNV_IRB_NOT_SUPPORTED">
+    <Title>IndCnv Robot type not supported</Title>
+    <Description>The IndCnv functionality does not support the installed robot type.</Description>
+    <Consequences>The program execution is stopped.</Consequences>
+  </Message>
+  <Message number="425" eDefine="SYS_ERR_MOC_FRICTION_FFW_NOT_ON">
+    <Title>Friction FFW parameter is not On </Title>
+    <Description>Tuning friction parameters requires Friction FFW On to be set to True.</Description>
+    <Consequences>Friction tuning for joint <arg format="%s" ordinal="1" /> will have no effect.</Consequences>
+    <Actions>Set parameter Friction FFW On to True for joint <arg format="%s" ordinal="1" /> in the type <arg format="%s" ordinal="2" /> that belongs to the topic Motion.</Actions>
+  </Message>
+  <Message number="426" eDefine="SYS_ERR_MOC_OUT_OF_DYN_SPLINE_OBJECTS">
+    <Title>Out of interpolation objects</Title>
+    <Description>The maximum number of available interpolation objects has been reached. This can occur if the dynamic performance is set to a very low value e.g. by use of the AccSet or PathAccLim command.</Description>
+    <Consequences>The program execution is stopped and the system goes to motors off state.</Consequences>
+    <Actions>Increase the number of objects by increasing the value of the "Use additional interp. object batch" system parameter by 1, in the corresponding instance of type Motion Planner in the Topic Motion.</Actions>
+  </Message>
+  <Message number="427" eDefine="SYS_ERR_MOC_NOT_SYNCHRONIZED_AFTER_CALIB">
+    <Title>Joint not synchronized after calibration</Title>
+    <Description>After fine calibration of joint <arg format="%s" ordinal="1" /> witch is using alternative calibration position, the joint has not been moved to normal synchronize position for updating the revolution counter.</Description>
+    <Consequences> The system will unsynchronize the joint next time the system makes a restart or power up.</Consequences>
+    <Actions>Clear the revolution counter in normal position for clearing revolution counter.</Actions>
+  </Message>
+  <Message number="428" eDefine="SYS_ERR_MOC_PSC_SOFTWARE_SYNCHRONIZATION">
+    <Title>SC Software synchronization started</Title>
+    <Description>Safety Controller software synchronization procedure has started.</Description>
+  </Message>
+  <Message number="429" eDefine="SYS_ERR_MOC_DAMPING_OBSOLETE">
+    <Title>CSS parameter damping obsolete.</Title>
+    <Description>The CSS parameters regarding damping is obsolete. The damping is now in all directions set by the stiffness to damping ratio. To change the behaviour <p />of the non soft directions, use the parameters stiffness non soft directions.</Description>
+    <Actions>Change the damping parameters to stiffness non soft directions according to description in the manual.</Actions>
+  </Message>
+  <Message number="430" eDefine="SYS_ERR_MOC_AXC_UNDERRUN_OF_REFERENCES">
+    <Title>Underrun in the Axis computer</Title>
+    <Description>The Axis computer in drive module <arg format="%s" ordinal="1" /> has detected underrun of data from the Main computer and therefore stopped the execution.</Description>
+    <Consequences>The system goes to SYS HALT.</Consequences>
+    <Causes> - There is a communication error/glitch between the Main computer and the Axis computer.<p /> - A previous error has put the system in a high CPU load state.<p /> - High load in the Main computer, for example generated by to frequent EIO communication. <p /></Causes>
+    <Actions> - Check for other error logs.<p /> - Check the ethernet cabling and connector on both Main and Axis computer.<p /> - Reduce load on main computer.<p /></Actions>
+  </Message>
+  <Message number="433" eDefine="SYS_ERR_MOC_INDJDF_WARNING_CHANGE_TO_JOINT_BOUND">
+    <Title>Position changed to inside working area</Title>
+    <Description> The joint <arg format="%s" ordinal="1" /> is outside its normal working area when a Independent Reset instruction is executed. </Description>
+    <Consequences>The position is moved to inside the normal working area.</Consequences>
+    <Causes> The joint has been moved too far away in independent mode. <p /> The configured normal working area is too small. </Causes>
+    <Actions> To avoid warning - move the joint back to inside its normal working area before the instruction IndReset executed or PP to Main is done. <p /> Increase the normal working area. </Actions>
+  </Message>
+  <Message number="434" eDefine="SYS_ERR_MOC_INDJDF_WARNING_OLD_RESET_CHANGE">
+    <Title>Position changed to inside working area</Title>
+    <Description> The joint <arg format="%s" ordinal="1" /> is outside its normal working area when a Independent Reset instruction is executed with argument Old. </Description>
+    <Consequences>The position is moved to inside the normal working area.</Consequences>
+    <Causes>The joint has been moved too far away in independent mode before IndReset Old. <p /> The configured normal working area is too small. </Causes>
+    <Actions> To avoid warning - move the joint back to inside its normal working area before the instruction IndReset Old executed or PP to Main is done. <p /> Increase the normal working area.	</Actions>
+  </Message>
+  <Message number="435" eDefine="SYS_ERR_MOC_INCONSISTENT_CFG_PARAMETER">
+    <Title>Inconsistient configuration parameter</Title>
+    <Description>	The joint <arg format="%s" ordinal="1" /> has an inconsistient value in the configuration parameter "<arg format="%s" ordinal="3" />" in instance <arg format="%s" ordinal="2" />. </Description>
+    <Consequences>System can not start up.</Consequences>
+    <Causes>Two or more joints has different values on same configuration parameter.</Causes>
+    <Actions> Set the same value/name on the parameter for all joints that are pointing to the same instance or hardware.
+		</Actions>
+  </Message>
+  <Message number="436" eDefine="SYS_ERR_MOC_SINGULARITY_ERROR">
+    <Title>Singularity error</Title>
+    <Description>It is not possible to reach the programmed position since there is a singular point between the current position for <arg format="%s" ordinal="1" /> and the programmed position.</Description>
+    <Causes>The configuration data for the programmed position is such that the Robot must pass though a singular point to reach the position.</Causes>
+    <Actions>Use SingArea\Wrist, ConfL\Off or change the movement instruction to MoveJ.</Actions>
+  </Message>
+  <Message number="437" eDefine="SYS_ERR_MOC_SLAVE_MOTION_PLANNER_WARNING">
+    <Title>Follower axis is connected to wrong Motion Planner</Title>
+    <Description>The follower axis <arg format="%s" ordinal="1" /> is connected to a Motion Planner with a lower number than its corresponding master axis <arg format="%s" ordinal="2" />. </Description>
+    <Consequences>The performance of the Electronically Linked Motors will be decreased compared to the normal setup.</Consequences>
+    <Actions>Change the Motion configuration in such a way that the follower axis <arg format="%s" ordinal="1" /> is in the same Motion Planner or in a Motion Planner with a higher number than the master axis <arg format="%s" ordinal="2" />.</Actions>
+  </Message>
+  <Message number="438" eDefine="SYS_ERR_MOC_MOTOR_OFF_WARNING">
+    <Title>Motor off sequence has timed out</Title>
+    <Description>The mechanical unit <arg format="%s" ordinal="1" /> has not been able to finish the motor off sequence during configured time.</Description>
+    <Consequences>The brake sequence can be ended before the axes standing still.</Consequences>
+    <Actions>
+        1) If the time to brake axis is longer than the default value of 5 seconds, increase the value by setting the system parameter Max Brake Time in topic Motion and type Brake to a higher value.<p />
+        2) Restart the controller.<p />
+        3) Try again.
+    </Actions>
+  </Message>
+  <Message number="439" eDefine="SYS_ERR_MOC_SOFT_SERVO_ACTIVATION_FAILED">
+    <Title>Soft servo activation failure</Title>
+    <Description>The joint <arg format="%s" ordinal="1" /> has not been able to set to soft servo mode.  The reason for this is that the axis has reached its maximum torque level a short time before or during activation.</Description>
+    <Consequences>The system makes an emergency stop and the soft activation command is canceled.</Consequences>
+    <Actions>Find the reason for the high torque.<p />-Check if any collision has occurred.<p />-Check load data.<p />-Reduce acceleration or speed to reduce speed.<p />-Check hardware.<p />-Move the program pointer and restart.</Actions>
+  </Message>
+  <Message number="440" eDefine="SYS_ERR_MOC_CORR_GEN_LOST">
+    <Title>Correction generator lost</Title>
+    <Description>Correction generator has been removed</Description>
+    <Causes>Instruction CorrDiscon or CorrClear during robot movement </Causes>
+    <Actions>Wait until robot reach fine point or start movement without \Corr</Actions>
+  </Message>
+  <Message number="441" eDefine="SYS_ERR_MOC_SMB_LOW_VOLTAGE_ON_BATTERY_INPUTS">
+    <Title>Low voltage on battery inputs</Title>
+    <Description>The Serial Measurement Board on drive module <arg format="%d" ordinal="1" />, link <arg format="%d" ordinal="2" /> and board number <arg format="%d" ordinal="3" /> indicates low voltage. If main power is switched off the revolution counters will be lost.<p />Battery voltage: <arg format="%f" ordinal="4" /> V<p />External voltage: <arg format="%f" ordinal="5" /> V
+</Description>
+    <Causes>The battery is not connected or discharged. If external power supply is used, too low voltage is present.</Causes>
+    <Actions>- Replace battery.<p />- If external power supply is used - check cables and power source.</Actions>
+  </Message>
+  <Message number="443" eDefine="SYS_ERR_MOC_TOO_FEW_EVENTS">
+    <Title>Lack of Internal Event Objects</Title>
+    <Description>Too few internal event objects were allocated to execute the instruction.</Description>
+    <Consequences>The movement of all mechanical units was halted immediately.</Consequences>
+    <Causes>Not enough event objects were allocated.</Causes>
+    <Actions>Allocate more event objects by increasing the system parameter Number of Internal Event Objects in topic Motion and type Motion Planner and restart the controller.</Actions>
+  </Message>
+  <Message number="444" eDefine="SYS_ERR_MOC_MANIPULATOR_SUPERVISION">
+    <Title>Motion supervision</Title>
+    <Description>
+			Loose arm detection triggered for axis <arg format="%d" ordinal="1" /> on mechanical unit <arg format="%s" ordinal="2" />.
+		</Description>
+    <Consequences>
+			The movement of mechanical unit <arg format="%s" ordinal="2" /> is halted immediately. It then returns to a position on the path on which it was running.
+			There, it will remain in status Motors ON, awaiting a start request.
+		</Consequences>
+    <Causes>Triggering of the motion supervision may be caused by a detection of loose arm, collision, incorrect load definition or forces in external process.</Causes>
+    <Actions>
+			1) If any of the parallel arms has come loose reattach them if possible, then acknowledge the fault, and resume operation by pressing the Start button on the teach pendant. <p />
+			2) If possible, acknowledge the fault, and resume operation by pressing the Start button on the teach pendant. <p />
+			3) Make sure any loads are defined and identified correctly. <p />
+			4) If the mechanical unit is exposed to forces from the external processes, use RAPID command or system parameters to raise the supervision level.
+		</Actions>
+  </Message>
+</Domain>

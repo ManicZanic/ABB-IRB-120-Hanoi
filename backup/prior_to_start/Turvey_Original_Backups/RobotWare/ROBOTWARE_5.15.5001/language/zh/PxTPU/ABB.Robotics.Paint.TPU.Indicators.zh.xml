@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.TPU.Indicators">
+  <Forms>
+    <Form Name="ABB.Robotics.Paint.TPU.Indicators.TpuWndModeChanged" Text="模式已更改" Width="320" Height="192">
+      <Menu ref="menuTpuWndModeChanged" />
+      <Controls />
+    </Form>
+  </Forms>
+  <Menus>
+    <Menu ID="menuTpuWndModeChanged">
+      <MenuItem ID="OK" Text="OK" />
+      <MenuItem ID="btn2" Text="" />
+      <MenuItem ID="btn3" Text="" />
+      <MenuItem ID="btn4" Text="" />
+      <MenuItem ID="Acknowledge" Text="获知" />
+    </Menu>
+  </Menus>
+  <Strings>
+    <String ID="TpuWndModeChanged.AutomaticModeHasBeenSelected" Text="自动模式已选择" />
+    <String ID="TpuWndModeChanged.ManualFullSpeedModeHasBeenSelected" Text="手动高速模式已选择" />
+    <String ID="TpuWndModeChanged.OperatingModeIsChanged" Text="操作模式已更改" />
+    <String ID="TpuWndModeChanged.DisabledTasksWillBeEnabled" Text="禁止的任务将被使能" />
+    <String ID="TpuWndModeChanged.ThereAreDisabledTasks" Text="存在禁止的任务" />
+    <String ID="TpuWndModeChanged.SimulationOfSignalsWillBeRemoved" Text="仿真信号将被移除" />
+    <String ID="TpuWndModeChanged.ThereAreSimulatedSignals" Text="存在仿真的信号" />
+    <String ID="TpuWndModeChanged.ProgramPointerWillBeResetToMain" Text="程序指针将被重设到Main" />
+    <String ID="TpuWndModeChanged.ProgramExecutionWillNotStartAtMain" Text="程序不会从Main处开始执行" />
+    <String ID="TpuWndModeChanged.SpeedWillBeChangedTo100%" Text="速度会被改为100%" />
+    <String ID="TpuWndModeChanged.SpeedIsNot100%" Text="速度不是100%" />
+    <String ID="TpuWndModeChanged.TheRunningModeWillBeChanged" Text="运行模式将被更改" />
+    <String ID="TpuWndModeChanged.StaticSemiStaticTasksWillBeStarted" Text="静态/半静态任务将开始执行" />
+    <String ID="TpuWndModeChanged.FirstSelectAcknowledgeAndThenOK" Text="首先选择已获知然后选OK" />
+    <String ID="TpuWndModeChanged.SelectOKToAcknowledgeTheChangeOfOperatingMode" Text="选择OK以获知操作模式的更改" />
+    <String ID="TpuWndModeChanged.ToCancelSwitchBackToMANUAL" Text="放弃，返回到MANUAL" />
+    <String ID="CommunicationLostRestarting" Text="通信失帧。重启示教器" />
+    <String ID="ContollerGoneToSysFail" Text="控制器系统失败。正常操作不能进行" />
+  </Strings>
+</Resources>

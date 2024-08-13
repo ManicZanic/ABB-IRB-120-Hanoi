@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ********** -->
+<!-- SIO domain -->
+<!-- ********** -->
+<Domain cfgName="SIO" resourceID="SIO001" xmlns="urn:abb-robotics-cfg-rules" cfgRulesVersion="1.3" helpID="HLP_SIO_001">
+	<!-- ***************** -->
+	<!-- Physcial Channels -->
+	<!-- ***************** -->
+	<Type cfgName="COM_PHY_CHANNEL" resourceID="SIO002" addRemoveInstances="true" instanceVisibility="showAll" helpID="HLP_SIO_002">
+		<Parameter cfgName="Name" resourceID="SIO003" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" helpID="HLP_SIO_003"/>
+		<Parameter cfgName="Connector" resourceID="SIO004" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" helpID="HLP_SIO_004">
+      <ListValue userEdit="false">
+         <EmptyValue />
+      </ListValue>
+			<LookupParameterValue domainCfgName="SIO" typeCfgName="COM_PHY_CONNECTOR" parameterCfgName="Name" userEdit="false">
+			</LookupParameterValue>
+		</Parameter>	
+		<Parameter cfgName="Baudrate" resourceID="SIO007" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" helpID="HLP_SIO_006">
+			<ListValue userEdit="true">
+				<CfgValue  resourceID="SIO008">300</CfgValue>
+				<CfgValue  resourceID="SIO009">600</CfgValue>
+				<CfgValue  resourceID="SIO010">1200</CfgValue>
+				<CfgValue  resourceID="SIO011">2400</CfgValue>
+				<CfgValue  resourceID="SIO012">4800</CfgValue>
+				<CfgValue  resourceID="SIO013">9600</CfgValue>
+				<CfgValue  resourceID="SIO014">19200</CfgValue>
+				<CfgValue  resourceID="SIO015">38400</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilter parameterCfgName="Connector" operand="valEqual" operandCfgValue="COM1"/>
+				<ConditionFilter parameterCfgName="Connector" operand="valEqual" operandCfgValue="COM2"/>
+				<ConditionFilter parameterCfgName="Connector" operand="valEqual" operandCfgValue="COM3"/>
+			</DisplayFilterGroup>
+		</Parameter>      		
+		<Parameter cfgName="Parity" resourceID="SIO016" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" helpID="HLP_SIO_007">
+			<ListValue userEdit="false">
+				<CfgValue  resourceID="SIO017">none</CfgValue>
+				<CfgValue  resourceID="SIO018">odd</CfgValue>
+				<CfgValue  resourceID="SIO019">even</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilter parameterCfgName="Connector" operand="valEqual" operandCfgValue="COM1"/>
+				<ConditionFilter parameterCfgName="Connector" operand="valEqual" operandCfgValue="COM2"/>
+				<ConditionFilter parameterCfgName="Connector" operand="valEqual" operandCfgValue="COM3"/>
+			</DisplayFilterGroup>
+		</Parameter>
+		<Parameter cfgName="NoOfBits" resourceID="SIO020" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" helpID="HLP_SIO_008">
+			<ListValue userEdit="false">
+				<CfgValue  resourceID="SIO021">7</CfgValue>
+				<CfgValue  resourceID="SIO022">8</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilter parameterCfgName="Connector" operand="valEqual" operandCfgValue="COM1"/>
+				<ConditionFilter parameterCfgName="Connector" operand="valEqual" operandCfgValue="COM2"/>
+				<ConditionFilter parameterCfgName="Connector" operand="valEqual" operandCfgValue="COM3"/>
+			</DisplayFilterGroup>
+		</Parameter>
+		<Parameter cfgName="NoOfStopBits" resourceID="SIO023" userInput="cfgDefaultOk" parameterType="typeFloat" modifyOptions="modRestartWarm" helpID="HLP_SIO_009">
+			<ListValue userEdit="false">
+				<CfgValue  resourceID="SIO024">1</CfgValue>
+				<CfgValue  resourceID="SIO025">2</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilter parameterCfgName="Connector" operand="valEqual" operandCfgValue="COM1"/>
+				<ConditionFilter parameterCfgName="Connector" operand="valEqual" operandCfgValue="COM2"/>
+				<ConditionFilter parameterCfgName="Connector" operand="valEqual" operandCfgValue="COM3"/>
+				</DisplayFilterGroup>
+		</Parameter>
+		<Parameter cfgName="FlowControl" resourceID="SIO026" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" helpID="HLP_SIO_010">
+			<ListValue userEdit="false">
+				<CfgValue  resourceID="SIO027">none</CfgValue>
+				<CfgValue  resourceID="SIO028">rts/cts</CfgValue>
+				<CfgValue  resourceID="SIO029">xon/xoff</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilter parameterCfgName="Connector" operand="valEqual" operandCfgValue="COM1"/>
+				<ConditionFilter parameterCfgName="Connector" operand="valEqual" operandCfgValue="COM2"/>
+				<ConditionFilter parameterCfgName="Connector" operand="valEqual" operandCfgValue="COM3"/>
+			</DisplayFilterGroup>
+		</Parameter>
+		<Parameter cfgName="Duplex" resourceID="SIO030" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" helpID="HLP_SIO_011">
+			<ListValue userEdit="false">
+				<CfgValue  resourceID="SIO031">full</CfgValue>
+				<CfgValue  resourceID="SIO032">half</CfgValue>
+			</ListValue>
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilter parameterCfgName="Connector" operand="valEqual" operandCfgValue="COM1"/>
+				<ConditionFilter parameterCfgName="Connector" operand="valEqual" operandCfgValue="COM2"/>
+				<ConditionFilter parameterCfgName="Connector" operand="valEqual" operandCfgValue="COM3"/>
+			</DisplayFilterGroup>
+		</Parameter>
+	</Type>
+	<!-- ****************** -->
+	<!-- Transmission Level -->
+	<!-- ****************** -->
+	<Type cfgName="COM_TRP" resourceID="SIO033" addRemoveInstances="true" instanceVisibility="showAll" helpID="HLP_SIO_012">
+		<Parameter cfgName="Name" resourceID="SIO034" userInput="cfgDefaultOk" parameterType="typeStringNormal"  modifyOptions="modRestartWarm" helpID="HLP_SIO_013"/>
+		<Parameter cfgName="Type" resourceID="SIO035" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" helpID="HLP_SIO_014">
+      <ListValue userEdit="false">
+         <EmptyValue />
+      </ListValue>
+			<LookupParameterValue domainCfgName="SIO" typeCfgName="COM_TRP_TYPE" parameterCfgName="Name" userEdit="false">
+			</LookupParameterValue>
+		</Parameter>
+		<Parameter cfgName="PhyChannel" resourceID="SIO038" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" helpID="HLP_SIO_015">
+      <ListValue userEdit="false">
+         <EmptyValue />
+      </ListValue>
+			<LookupParameterValue domainCfgName="SIO" typeCfgName="COM_PHY_CHANNEL" parameterCfgName="Name" userEdit="false">
+			</LookupParameterValue>
+		</Parameter>
+		<Parameter cfgName="LocalAdress" resourceID="SIO040" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" helpID="HLP_SIO_016">
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilter parameterCfgName="Type" operand="valEqual" operandCfgValue="PPP"/>
+			</DisplayFilterGroup>
+			<QuantityData>
+				<ipAddress unit="dot format"/>
+			</QuantityData>
+		</Parameter>
+		<Parameter cfgName="RemoteAdress" resourceID="SIO041" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" helpID="HLP_SIO_017">
+			<DisplayFilterGroup condition="valOr">
+				<ConditionFilter parameterCfgName="Type" operand="valEqual" operandCfgValue="PPP"/>
+        		<ConditionFilter parameterCfgName="Type" operand="valEqual" operandCfgValue="SOCKDEV"/>
+        		<ConditionFilter parameterCfgName="Type" operand="valEqual" operandCfgValue="LTAPPTCP"/>
+      		</DisplayFilterGroup>
+			<QuantityData>
+				<ipAddress unit="dot format"/>
+			</QuantityData>
+		</Parameter>
+	</Type>
+  <!-- ***************** -->
+  <!-- Application level -->
+  <!-- ***************** -->
+  <Type cfgName="COM_APP" resourceID="SIO042" addRemoveInstances="true" instanceVisibility="showAll" helpID="HLP_SIO_018">
+  	<Parameter cfgName="Name" resourceID="SIO043" userInput="cfgDefaultOk" parameterType="typeStringRAPID"  modifyOptions="modRestartWarm" helpID="HLP_SIO_019"/>
+  	<Parameter cfgName="Type" resourceID="SIO044" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" helpID="HLP_SIO_020">
+    	<ListValue userEdit="false">
+        <EmptyValue />
+    	</ListValue>
+    	<LookupParameterValue domainCfgName="SIO" typeCfgName="COM_APP_TYPE" parameterCfgName="Name" userEdit="false">
+     	</LookupParameterValue>
+  	</Parameter>
+    <Parameter cfgName="Trp" resourceID="SIO046" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" helpID="HLP_SIO_021">
+		<LookupParameterValue domainCfgName="SIO" typeCfgName="COM_TRP" parameterCfgName="Name" userEdit="false">
+		</LookupParameterValue>
+		<DisplayFilter parameterCfgName="Type" operand="valNotEqual" operandCfgValue="CAMERA" />
+	</Parameter>
+    <Parameter cfgName="ServerAddress" resourceID="SIO047" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" helpID="HLP_SIO_022">
+      <DisplayFilterGroup condition="valOr">
+        <ConditionFilter parameterCfgName="Type" operand="valEqual" operandCfgValue="FTP" />
+        <ConditionFilter parameterCfgName="Type" operand="valEqual" operandCfgValue="NFS" />
+      </DisplayFilterGroup>
+    	<QuantityData>
+		    <ipAddress unit="dot format"/>
+		  </QuantityData>
+	  </Parameter>	
+    <Parameter cfgName="Trusted" resourceID="SIO048" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" helpID="HLP_SIO_023">
+    	<ListValue userEdit="false">
+    		<CfgValue resourceID="SIO049">1</CfgValue>
+    		<CfgValue resourceID="SIO050">0</CfgValue>
+    	</ListValue>
+      <DisplayFilterGroup condition="valOr">
+        <ConditionFilter parameterCfgName="Type" operand="valEqual" operandCfgValue="FTP" />
+        <ConditionFilter parameterCfgName="Type" operand="valEqual" operandCfgValue="NFS" />
+      </DisplayFilterGroup>
+    </Parameter>
+    <Parameter cfgName="LocalPath" resourceID="SIO051" userInput="cfgDefaultOk" parameterType="typeStringRAPID" modifyOptions="modRestartWarm" helpID="HLP_SIO_024">
+      <DisplayFilterGroup condition="valOr">
+        <ConditionFilter parameterCfgName="Type" operand="valEqual" operandCfgValue="FTP" />
+        <ConditionFilter parameterCfgName="Type" operand="valEqual" operandCfgValue="NFS" />
+      </DisplayFilterGroup>
+    </Parameter>
+    <Parameter cfgName="ServerPath" resourceID="SIO052" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" helpID="HLP_SIO_025">
+      <DisplayFilterGroup condition="valOr">
+        <ConditionFilter parameterCfgName="Type" operand="valEqual" operandCfgValue="FTP" />
+        <ConditionFilter parameterCfgName="Type" operand="valEqual" operandCfgValue="NFS" />
+      </DisplayFilterGroup>
+    </Parameter>
+    <Parameter cfgName="Username" resourceID="SIO053" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" helpID="HLP_SIO_026">
+    	<DisplayFilter parameterCfgName="Type" operand="valEqual" operandCfgValue="FTP"/>
+    </Parameter>
+    <Parameter cfgName="Password" resourceID="SIO054" userInput="cfgDefaultOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" helpID="HLP_SIO_027">
+    	<DisplayFilter parameterCfgName="Type" operand="valEqual" operandCfgValue="FTP"/>
+    </Parameter>
+    <Parameter cfgName="CommPartSize" resourceID="SIO055" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" helpID="HLP_SIO_028">
+    	<DisplayFilter parameterCfgName="Type" operand="valEqual" operandCfgValue="FTP"/>
+    </Parameter>
+    <Parameter cfgName="MaxFileSize" resourceID="SIO056" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" helpID="HLP_SIO_029">
+    	<DisplayFilter parameterCfgName="Type" operand="valEqual" operandCfgValue="FTP"/>
+    </Parameter>
+    <Parameter cfgName="UserID" resourceID="SIO057" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" helpID="HLP_SIO_030">
+    	<DisplayFilter parameterCfgName="Type" operand="valEqual" operandCfgValue="NFS"/>
+    </Parameter>
+    <Parameter cfgName="GroupID" resourceID="SIO058" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" helpID="HLP_SIO_031">
+    	<DisplayFilter parameterCfgName="Type" operand="valEqual" operandCfgValue="NFS"/>
+    </Parameter>
+	  <Parameter cfgName="ShowDevice" resourceID="SIO059" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" helpID="HLP_SIO_032">
+		  <ListValue userEdit="false">
+			  <CfgValue resourceID="SIO049">1</CfgValue>
+			  <CfgValue resourceID="SIO050">0</CfgValue>
+		  </ListValue>
+		  <DisplayFilterGroup condition="valOr">
+			  <ConditionFilter parameterCfgName="Type" operand="valEqual" operandCfgValue="FTP" />
+			  <ConditionFilter parameterCfgName="Type" operand="valEqual" operandCfgValue="NFS" />
+		  </DisplayFilterGroup>
+	  </Parameter>
+     <Parameter cfgName="MAC" resourceID="SIO060" userInput="cfgDefaultNotOk" parameterType="typeStringNormal" modifyOptions="modRestartWarm" helpID="HLP_SIO_033">
+        <DisplayFilter parameterCfgName="Type" operand="valEqual" operandCfgValue="CAMERA"/>
+     </Parameter>
+     <Parameter cfgName="VisionIdx" resourceID="SIO061" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" helpID="HLP_SIO_034">
+        <DisplayFilter parameterCfgName="Type" operand="valEqual" operandCfgValue="CAMERA"/>
+     </Parameter>
+     <Parameter cfgName="CommTimeout" resourceID="SIO062" userInput="cfgDefaultOk" parameterType="typeInteger" modifyOptions="modRestartWarm" helpID="HLP_SIO_035">
+        <DisplayFilter parameterCfgName="Type" operand="valEqual" operandCfgValue="CAMERA"/>
+     </Parameter>
+  </Type>
+</Domain>

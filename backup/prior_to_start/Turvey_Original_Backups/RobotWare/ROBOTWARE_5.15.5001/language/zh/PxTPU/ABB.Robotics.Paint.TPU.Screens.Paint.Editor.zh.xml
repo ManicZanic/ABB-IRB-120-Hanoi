@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.TPU.Screens.Paint.Editor">
+  <Forms>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.Editor.TpuWndMeasureWObj" Text="定义工件" Width="320" Height="192" Icon="Configuration32.gif">
+      <Menu ref="menuTpuWndMeasureWObj" />
+      <Controls>
+        <Control ID="cbObject" Text="工件框架" Name="ABB.Robotics.Paint.TPU.Controls.TpuCheckbox" Left="163" Top="28" Width="151" Height="20" />
+        <Control ID="cbUser" Text="用户框架" Name="ABB.Robotics.Paint.TPU.Controls.TpuCheckbox" Left="6" Top="28" Width="151" Height="20" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.Editor.TpuPopupMeasuringResults" Text="" Width="246" Height="188">
+      <Controls>
+        <Control ID="btnOK" Text="OK" Name="ABB.Robotics.Paint.TPU.Controls.TpuButton" Left="107" Top="165" Width="65" Height="20" />
+        <Control ID="btnCancel" Text="取消" Name="ABB.Robotics.Paint.TPU.Controls.TpuButton" Left="178" Top="165" Width="65" Height="20" />
+        <Control ID="lblSaveValues" Text="应用改更？" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="4" Top="165" Width="105" Height="20" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.Editor.TpuPopupSetProgramPointer" Text="" Width="246" Height="188">
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.Editor.TpuWndDefineTool" Text="定义工具" Width="320" Height="192" Icon="Configuration32.gif">
+      <Menu ref="menuTpuWndDefineTool" />
+      <Controls>
+        <Control ID="lblTxtMethod" Text="方法：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="3" Top="27" Width="60" Height="18" />
+        <Control ID="lblTxtTool" Text="工具：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="3" Top="3" Width="60" Height="18" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.Editor.TpuPopupTeachResult" Text="" Width="220" Height="161">
+      <Controls>
+        <Control ID="btnCancel" Text="取消：" Name="ABB.Robotics.Paint.TPU.Controls.TpuButton" Left="148" Top="129" Width="64" Height="24" />
+        <Control ID="btnOK" Text="OK" Name="ABB.Robotics.Paint.TPU.Controls.TpuButton" Left="76" Top="129" Width="64" Height="24" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.Editor.TpuWndDataBrowser" Text="数据" Width="320" Height="192">
+      <Menu ref="menuTpuWndDataBrowser" />
+      <Controls>
+        <Control ID="lblType" Text="数据类型：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="11" Top="13" Width="68" Height="19" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.Editor.TpuWndEditor" Text="编辑器" Width="320" Height="192">
+      <Menu ref="menuTpuWndEditor" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.Editor.TpuWndEditValue" Text="值 " Width="320" Height="192">
+      <Menu ref="menuTpuWndEditValue" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.Editor.TpuWndModules" Text="模块" Width="320" Height="192" Icon="Documents32.gif">
+      <Menu ref="menuTpuWndModules" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.Editor.TpuWndChangeInstruction" Text="更改指令" Width="320" Height="192" Icon="ProgramEdit32.gif">
+      <Menu ref="menuTpuWndChangeInstruction" />
+      <Controls>
+        <Control ID="lblCurrentInstruction" Text="-" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="0" Top="5" Width="320" Height="20" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.Editor.TpuWndRoutines" Text="例行程序" Width="320" Height="192" Icon="Documents32.gif">
+      <Menu ref="menuTpuWndRoutines" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.Editor.TpuWndExecution" Text="执行" Width="320" Height="192">
+      <Menu ref="menuTpuWndExecution" />
+      <Controls>
+        <Control ID="lblSpeed" Text="速度：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="225" Top="2" Width="48" Height="16" />
+        <Control ID="lblTask" Text="任务：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="4" Top="2" Width="39" Height="16" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.Editor.TpuWndSelectTask" Text="选择任务" Width="320" Height="192">
+      <Menu ref="menuTpuWndSelectTask" />
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.Editor.TpuPopupNewDataDeclaration" Text="" Width="265" Height="180">
+      <Controls>
+        <Control ID="btnCancel" Text="取消" Name="ABB.Robotics.Paint.TPU.Controls.TpuButton" Left="139" Top="151" Width="64" Height="24" />
+        <Control ID="btnOK" Text="OK" Name="ABB.Robotics.Paint.TPU.Controls.TpuButton" Left="61" Top="151" Width="64" Height="24" />
+        <Control ID="lblModule" Text="模块：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="8" Top="127" Width="91" Height="18" />
+        <Control ID="lblTask" Text="任务" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="8" Top="103" Width="91" Height="18" />
+        <Control ID="lblType" Text="类型：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="8" Top="55" Width="91" Height="18" />
+        <Control ID="lblStorage" Text="存储：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="8" Top="79" Width="91" Height="18" />
+        <Control ID="lblScope" Text="范围：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="8" Top="31" Width="91" Height="18" />
+        <Control ID="lblName" Text="名称：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="8" Top="7" Width="91" Height="18" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.Editor.TpuPopupNewDataDeclaration" Text="" Width="265" Height="180" />
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.Editor.TpuInfoPanel" Text="" Width="320" Height="16">
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.Editor.TpuPopupNewModule" Text="" Width="300" Height="172">
+      <Controls>
+        <Control ID="btnOK" Text="OK" Name="ABB.Robotics.Paint.TPU.Controls.TpuButton" Left="161" Top="145" Width="62" Height="20" />
+        <Control ID="btnCancel" Text="取消" Name="ABB.Robotics.Paint.TPU.Controls.TpuButton" Left="231" Top="145" Width="62" Height="20" />
+        <Control ID="lblTypeText" Text="类型：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="3" Top="90" Width="100" Height="20" />
+        <Control ID="lblNameText" Text="名称：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="3" Top="60" Width="100" Height="20" />
+        <Control ID="lblNewModuleText" Text="新模块" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="3" Top="3" Width="294" Height="20" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.Editor.TpuPopupNewRoutineDeclaration" Text="" Width="265" Height="120">
+      <Controls>
+        <Control ID="btnCancel" Text="取消：" Name="ABB.Robotics.Paint.TPU.Controls.TpuButton" Left="139" Top="90" Width="64" Height="24" />
+        <Control ID="btnOK" Text="OK" Name="ABB.Robotics.Paint.TPU.Controls.TpuButton" Left="61" Top="90" Width="64" Height="24" />
+        <Control ID="lblType" Text="类型：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="8" Top="55" Width="91" Height="18" />
+        <Control ID="lblScope" Text="范围：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="8" Top="31" Width="91" Height="18" />
+        <Control ID="lblName" Text="名称：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="8" Top="7" Width="91" Height="18" />
+      </Controls>
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.Editor.TpuPopupSelectServiceRoutine" Text="" Width="280" Height="172">
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.Editor.TpuPopupSelectSymbol" Text="" Width="280" Height="172">
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.Editor.TpuRapidPickListPanel" Text="" Width="60" Height="192">
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.Editor.TpuRapidProgramSidePanel" Text="" Width="60" Height="172">
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.Editor.TpuRapidProgramViewer" Text="" Width="320" Height="192">
+      <Controls />
+    </Form>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.Paint.Editor.TpuRapidSymbolProperty" Text="" Width="50" Height="32">
+      <Controls />
+    </Form>
+  </Forms>
+  <Menus>
+    <Menu ID="menuTpuWndExecution">
+      <MenuItem ID="Task" Text="任务" />
+      <MenuItem ID="Speed" Text="速度" Grant="UAS_SPEED_DECREASE" GrantMode="Automatic">
+        <MenuItem ID="Speed.25%" Text="25%" Grant="UAS_SPEED_DECREASE" GrantMode="Automatic" />
+        <MenuItem ID="Speed.100%" Text="100%" Grant="UAS_SPEED_DECREASE" GrantMode="Automatic" />
+        <MenuItem ID="Speed.Decrease" Text="-%" Grant="UAS_SPEED_DECREASE" GrantMode="Automatic" />
+        <MenuItem ID="Speed.Increase" Text="+%" Grant="UAS_SPEED_DECREASE" GrantMode="Automatic" />
+      </MenuItem>
+      <MenuItem ID="Step" Text="步进">
+        <MenuItem ID="Step.In" Text="进入" Grant="UAS_RAPID_EXECUTE" />
+        <MenuItem ID="Step.Over" Text="跃过" Grant="UAS_RAPID_EXECUTE" />
+        <MenuItem ID="Step.Out" Text="跳出" Grant="UAS_RAPID_EXECUTE" />
+        <MenuItem ID="Step.Motion" Text="动作 " Grant="UAS_RAPID_EXECUTE" />
+      </MenuItem>
+      <MenuItem ID="Cycle" Text="周期">
+        <MenuItem ID="Cycle.Once" Text="一次" Grant="UAS_RAPID_EXECUTE" />
+        <MenuItem ID="Cycle.Forever" Text="永久" Grant="UAS_RAPID_EXECUTE" />
+      </MenuItem>
+      <MenuItem ID="ResetPP" Text="复位PP" Grant="UAS_RAPID_EXECUTE" />
+    </Menu>
+    <Menu ID="menuTpuWndMeasureWObj">
+      <MenuItem ID="OK" Text="OK" Grant="UAS_RAPID_CURRVALUE" />
+      <MenuItem ID="Cancel" Text="取消" />
+      <MenuItem ID="ModPos" Text="修改坐标点" Grant="UAS_RAPID_CURRVALUE" />
+    </Menu>
+    <Menu ID="menuTpuWndDefineTool">
+      <MenuItem ID="OK" Text="OK" Grant="UAS_RAPID_CURRVALUE" />
+      <MenuItem ID="Cancel" Text="取消" />
+      <MenuItem ID="ModPos" Text="修改坐标点" Grant="UAS_RAPID_CURRVALUE" />
+      <MenuItem ID="Method" Text="方法" />
+    </Menu>
+    <Menu ID="menuTpuWndDataBrowser">
+      <MenuItem ID="DataTypes" Text="数据类型">
+        <MenuItem ID="DataTypes.Used" Text="使用的" />
+        <MenuItem ID="DataTypes.All" Text="所有" />
+      </MenuItem>
+      <MenuItem ID="New" Text="新的" Grant="UAS_RAPID_CURRVALUE" />
+      <MenuItem ID="Edit" Text="编辑" Grant="UAS_RAPID_CURRVALUE">
+        <MenuItem ID="Edit.Delete" Text="删除" Grant="UAS_RAPID_CURRVALUE" />
+        <MenuItem ID="Edit.Define" Text="定义" Grant="UAS_RAPID_CURRVALUE" />
+      </MenuItem>
+      <MenuItem ID="Refresh" Text="刷新" />
+      <MenuItem ID="Save" Text="保存" Grant="UAS_RAPID_LOADPROGRAM" />
+    </Menu>
+    <Menu ID="menuTpuWndEditor">
+      <MenuItem ID="PickList" Text="选用表" Grant="UAS_RAPID_CURRVALUE">
+        <MenuItem ID="PickList.InsBefore" Text="指令前" Grant="UAS_RAPID_CURRVALUE" />
+        <MenuItem ID="PickList.InsAfter" Text="指令后" Grant="UAS_RAPID_CURRVALUE" />
+      </MenuItem>
+      <MenuItem ID="Modules" Text="模块" />
+      <MenuItem ID="SetPP" Text="设置PP" Grant="UAS_RAPID_EXECUTE" />
+      <MenuItem ID="ModPos" Text="修改坐标点" Grant="UAS_RAPID_MODPOS" />
+      <MenuItem ID="Speed" Text="速度" Grant="UAS_SPEED_DECREASE" GrantMode="Automatic">
+        <MenuItem ID="Speed.25%" Text="25%" Grant="UAS_SPEED_DECREASE" GrantMode="Automatic" />
+        <MenuItem ID="Speed.100%" Text="100%" Grant="UAS_SPEED_DECREASE" GrantMode="Automatic" />
+        <MenuItem ID="Speed.Increase" Text="+%" Grant="UAS_SPEED_DECREASE" GrantMode="Automatic" />
+        <MenuItem ID="Speed.Decrease" Text="-%" Grant="UAS_SPEED_DECREASE" GrantMode="Automatic" />
+      </MenuItem>
+      <MenuItem ID="Enable" Text="使能">
+        <MenuItem ID="Enable.Appl" Text="Appl" />
+        <MenuItem ID="Enable.MtrlSupp" Text="MtrlSupp" />
+      </MenuItem>
+      <MenuItem ID="Routines" Text="程序" />
+      <MenuItem ID="Edit" Text="编辑">
+        <MenuItem ID="Edit.Delete" Text="删除" Grant="UAS_RAPID_EDIT" />
+        <MenuItem ID="Edit.Copy" Text="复制" Grant="UAS_RAPID_EDIT" />
+        <MenuItem ID="Edit.Paste" Text="粘贴" Grant="UAS_RAPID_EDIT" />
+        <MenuItem ID="Edit.Value" Text="值" Grant="UAS_RAPID_EDIT" />
+        <MenuItem ID="Edit.Find" Text="查找" />
+        <MenuItem ID="Edit.GoTo" Text="跳至" />
+      </MenuItem>
+      <MenuItem ID="Execution" Text="执行">
+        <MenuItem ID="Execution.SyntaxChk" Text="语法检查" />
+        <MenuItem ID="Execution.Step" Text="步进">
+          <MenuItem ID="Execution.Step.In" Text="步入" Grant="UAS_RAPID_EXECUTE" />
+          <MenuItem ID="Execution.Step.Over" Text="跃过" Grant="UAS_RAPID_EXECUTE" />
+          <MenuItem ID="Execution.Step.Out" Text="跳出" Grant="UAS_RAPID_EXECUTE" />
+          <MenuItem ID="Execution.Step.Motion" Text="动作" Grant="UAS_RAPID_EXECUTE" />
+        </MenuItem>
+        <MenuItem ID="Execution.Cycle" Text="周期" Grant="UAS_RAPID_EXECUTE">
+          <MenuItem ID="Execution.Cycle.Once" Text="一次" Grant="UAS_RAPID_EXECUTE" />
+          <MenuItem ID="Execution.Cycle.Forever" Text="永久" Grant="UAS_RAPID_EXECUTE" />
+        </MenuItem>
+        <MenuItem ID="Execution.Motion" Text="运动">
+          <MenuItem ID="Execution.Motion.Motion" Text="运动" Grant="UAS_RAPID_DEBUG" />
+          <MenuItem ID="Execution.Motion.NoMotion" Text="无运动" Grant="UAS_RAPID_DEBUG" />
+        </MenuItem>
+      </MenuItem>
+      <MenuItem ID="View" Text="查看">
+        <MenuItem ID="View.LineNumbers" Text="行号#" />
+        <MenuItem ID="View.FollowPP" Text="跟踪程序指针" />
+      </MenuItem>
+      <MenuItem ID="ServRout" Text="伺服例行程序">
+        <MenuItem ID="ServRout.Call" Text="调用" Grant="UAS_RAPID_EXECUTE" />
+        <MenuItem ID="ServRout.Cancel" Text="取消" />
+      </MenuItem>
+    </Menu>
+    <Menu ID="menuTpuWndEditValue">
+      <MenuItem ID="Copy" Text="复制" Grant="UAS_RAPID_CURRVALUE" />
+      <MenuItem ID="Paste" Text="粘贴" Grant="UAS_RAPID_CURRVALUE" />
+      <MenuItem ID="Zero" Text="0" Grant="UAS_RAPID_CURRVALUE" />
+      <MenuItem ID="Ok" Text="OK" Grant="UAS_RAPID_CURRVALUE" />
+      <MenuItem ID="Cancel" Text="取消" />
+    </Menu>
+    <Menu ID="menuTpuWndModules">
+      <MenuItem ID="Load" Text="载入" Grant="UAS_RAPID_LOADPROGRAM" />
+      <MenuItem ID="Unload" Text="卸载" Grant="UAS_RAPID_LOADPROGRAM" />
+      <MenuItem ID="New" Text="新的" Grant="UAS_RAPID_LOADPROGRAM" />
+      <MenuItem ID="Save" Text="保存" Grant="UAS_RAPID_LOADPROGRAM" />
+      <MenuItem ID="Delete" Text="删除" Grant="UAS_RAPID_LOADPROGRAM" />
+      <MenuItem ID="SysMods" Text="系统模块" />
+    </Menu>
+    <Menu ID="menuTpuWndRoutines" />
+    <Menu ID="menuTpuWndSelectTask" />
+    <Menu ID="menuTpuWndChangeInstruction">
+      <MenuItem ID="Optional" Text="Optional" Grant="UAS_RAPID_CURRVALUE">
+        <MenuItem ID="Optional.Command" Text="" />
+      </MenuItem>
+      <MenuItem ID="Value" Text="值" Grant="UAS_RAPID_CURRVALUE" />
+      <MenuItem ID="New" Text="新的" Grant="UAS_RAPID_CURRVALUE" />
+      <MenuItem ID="Ok" Text="OK" Grant="UAS_RAPID_CURRVALUE" />
+      <MenuItem ID="Cancel" Text="取消" />
+    </Menu>
+  </Menus>
+  <Strings>
+    <String ID="Busy" Text="忙碌..." />
+    <String ID="Loading" Text="载入..." />
+    <String ID="Copied" Text="复制的" />
+    <String ID="OpenModule" Text="打开模块:" />
+    <String ID="DeleteModule" Text="删除模块:" />
+    <String ID="NoErrorsFound" Text="未发现错误" />
+    <String ID="ModuleLoaded" Text="载入模块" />
+    <String ID="ModuleDeleted" Text="模块'{0}'已删除" />
+    <String ID="ModuleUnloaded" Text="模块'{0}'已卸载" />
+    <String ID="SystemModuleNotUnloaded" Text="系统模块未卸载！" />
+    <String ID="ModuleSaved" Text="模块'{0}'已保存" />
+    <String ID="ModuleCreated" Text="模块'{0}'已创建" />
+    <String ID="AskForSaveFollowingModules" Text="模块'{0}'已更改，要保存吗？" />
+    <String ID="SavingModules" Text="保存模块..." />
+    <String ID="ErrorSaving" Text="保存'{0}'错误" />
+    <String ID="Name" Text="名称" />
+    <String ID="Task" Text="任务" />
+    <String ID="Type" Text="类型" />
+    <String ID="Dynamic" Text="动态" />
+    <String ID="System" Text="系统" />
+    <String ID="Program" Text="程序" />
+    <String ID="PleaseWait" Text="请等待..." />
+    <String ID="AmbiguousModuleName" Text="相同名称的模块已存在！重装载模块？" />
+    <String ID="ConfirmDeleteModule" Text="本次操作不可恢复.你确定要删除'{0}'?" />
+    <String ID="ModuleChangedUnloadLoseChanges" Text="模块'{0}'已更改.卸载模块并放弃更改？" />
+    <String ID="AskForModPos" Text="选择的位置将被更改.确定要更改位置？" />
+    <String ID="PositionWasModified" Text="位置被更改" />
+    <String ID="ModuleUnloadedFromTask" Text="模块已卸载！" />
+    <String ID="UasNotGranted" Text="'{0}'不被许可" />
+    <String ID="InLinePoint" Text="*" />
+    <String ID="Abc..." Text="Abc..." />
+    <String ID="New" Text="新的" />
+    <String ID="Find" Text="查找：" />
+    <String ID="FollowingTextWasNotFound" Text="未找到以下文本：{0}" />
+    <String ID="GoTo" Text="跳至:" />
+    <String ID="Global" Text="全局的" />
+    <String ID="Local" Text="本地的" />
+    <String ID="Name" Text="名称" />
+    <String ID="AskForValueHasChanged" Text="值已更改！应用更改吗？" />
+    <String ID="AskForInstructionHasChanged" Text="指令已更改！应用更改吗？" />
+    <String ID="OK" Text="OK" />
+    <String ID="Sym" Text="Sym" />
+    <String ID="Abc" Text="Abc" />
+    <String ID="Percent" Text="{0}%" />
+    <String ID="StepOrPlayWithoutPP" Text="PP未设.要设置PP到指针吗？" />
+    <String ID="StepOrPlayOutsideProc" Text="PP未设.要设置PP到Main吗？" />
+    <String ID="Argument" Text="参数" />
+    <String ID="Value" Text="值" />
+    <String ID="Module" Text="模块" />
+    <String ID="Instruction" Text="指令:{0}" />
+    <String ID="InstructionOptionalAgruments" Text="{0},可选的参数" />
+    <String ID="Status" Text="状态" />
+    <String ID="Used" Text="使用的" />
+    <String ID="NotUsed" Text="未用的" />
+    <String ID="Use" Text="使用" />
+    <String ID="DontUse" Text="不用" />
+    <String ID="123.." Text="123..." />
+    <String ID="Abc.." Text="Abc.." />
+    <String ID="EnablingApplicatorFailed" Text="使能雾化器失败！" />
+    <String ID="DisablingApplicatorFailed" Text="禁用雾化器失败！" />
+    <String ID="EnablingMaterialSupplyFailed" Text="使能材料供给失败！" />
+    <String ID="DisablingMaterialSupplyFailed" Text="禁用材料供给失败！" />
+    <String ID="DeleteRoutineQuestion" Text="你确定想要删除程序’{0}‘？" />
+    <String ID="Procedure" Text="进程" />
+    <String ID="UserRoutineText" Text="程序指针在程序中不能显示" />
+    <String ID="NotAllowedToEditSyntax" Text="选择的模块有一个语法错误，不支持编辑.请配置离线工具并重装载" />
+    <String ID="PPWillBeLost" Text="如果要装载另一个模块PP将丢失.希望继续吗？" />
+    <String ID="PPInModuleWillBeLost" Text="如果卸载选择的模块PP将丢失，希望继续吗？" />
+    <String ID="InvalidData" Text="'{0}'有一个无效的数据对于部件'{1}' 修正数据再试" />
+    <String ID="ModuleSaved" Text="模块'{0}'已保存" />
+    <String ID="FailedToSaveModule" Text="保存模块{0}到{1}失败" />
+    <String ID="AreYouSureYouWantToSave" Text="你确定想要保存{0}?" />
+    <String ID="AreYouSureYouWantToDelete" Text="你确定想要删除'{0}'?操作不可恢复" />
+    <String ID="PPWillBeLost" Text="如果要装载另一个模块PP将丢失.希望继续吗？" />
+    <String ID="Method" Text="方法" />
+    <String ID="Point" Text="Point" />
+    <String ID="Status" Text="状态" />
+    <String ID="Point1" Text="Point1" />
+    <String ID="Point2" Text="Point2" />
+    <String ID="Point3" Text="Point3" />
+    <String ID="ElongatorPointX" Text="Elongator PointX" />
+    <String ID="ElongatorPointZ" Text="Elongator PointZ" />
+    <String ID="Undefined" Text="-" />
+    <String ID="Modified" Text="已更改" />
+    <String ID="MilliMeter" Text="mm" />
+    <String ID="MinError" Text="Min Error" />
+    <String ID="MaxError" Text="Max Error" />
+    <String ID="MeanError" Text="Mean Error" />
+    <String ID="X" Text="X:" />
+    <String ID="Y" Text="Y:" />
+    <String ID="Z" Text="Z:" />
+    <String ID="UnableToTeachTCP" Text="不能用当然位置来示教TCP" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Rapid.TcpCalibrationMode.Translation" Text="TCP(default orient.)" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Rapid.TcpCalibrationMode.OrientationY" Text="TCP&amp;Z" />
+    <String ID="ABB.Robotics.Paint.Controller.IRC5.Rapid.TcpCalibrationMode.OrientationYZ" Text="TCP&amp;Z,X" />
+    <String ID="Point" Text="Point" />
+    <String ID="Status" Text="状态" />
+    <String ID="Status.Unmodified" Text="-" />
+    <String ID="Status.Modified" Text="已更改" />
+    <String ID="UserPointX1" Text="User Point X1" />
+    <String ID="UserPointX2" Text="User Point X2" />
+    <String ID="UserPointY1" Text="User Point Y1" />
+    <String ID="ObjectPointX1" Text="Object Point X1" />
+    <String ID="ObjectPointX2" Text="Object Point X2" />
+    <String ID="ObjectPointY1" Text="Object Point Y1" />
+    <String ID="Object" Text="工件" />
+    <String ID="User" Text="用户" />
+    <String ID="Initializing" Text="初始化" />
+    <String ID="PpNotSet" Text="程序指针未设置" />
+    <String ID="Title.Name" Text="名称" />
+    <String ID="Title.State" Text="状态" />
+  </Strings>
+</Resources>

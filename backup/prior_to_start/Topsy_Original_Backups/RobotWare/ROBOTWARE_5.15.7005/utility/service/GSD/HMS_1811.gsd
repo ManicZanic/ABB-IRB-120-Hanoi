@@ -1,0 +1,181 @@
+;===============================================================================
+; Profibus Device Database of HMS Industrial Networks.
+;
+; Model:       Anybus-CC PROFIBUS DP-V1
+; Description: Anybus-CC PROFIBUS DP-V1 slave
+; Language:    English
+; Author:      HMS Industrial Networks
+; WWW:         www.anybus.com
+;
+; Revision log:
+; 1.04   2005-05-26 Updated Revision, Software_Release and Model_Name.
+;                   Increased C1_Response_timeout and C2_Response_Timeout.
+; 1.03   2005-03-14 Updated Revision, Software_Release and Implementation_Type.
+; 1.02   2004-11-29 Updated Revision, Software_Release, I/O lengths,
+;                   Diag length, C1 and C2 data lengths.
+; 1.01   2004-10-29 Updated Revision and Implementation_Type.
+; 1.00   2004-09028 First release
+;
+;===============================================================================
+#Profibus_DP
+
+GSD_Revision        = 3
+
+; Device identification
+Vendor_Name         = "HMS Industrial Networks"
+Model_Name          = "Anybus-CC PROFIBUS DP-V1"
+Revision            = "1.04"
+Ident_Number        = 0x1811
+Protocol_Ident      = 0                ; DP protocol
+Station_Type        = 0                ; Slave device
+FMS_supp            = 0                ; FMS not supported
+Slave_Family        = 0                ; General device
+Hardware_Release    = "Version 1.00"
+Software_Release    = "Version 1.04"
+
+; Supported hardware features
+Redundancy          = 0                ; not supported
+Repeater_Ctrl_Sig   = 2                ; TTL
+24V_Pins            = 0                ; not connected
+Implementation_Type = "VPC3+C"
+
+; Supported DP features
+Freeze_Mode_supp    = 1                ; supported
+Sync_Mode_supp      = 1                ; supported
+Auto_Baud_supp      = 1                ; supported
+Set_Slave_Add_supp  = 1                ; supported
+Fail_Safe           = 1                ; supported
+
+; Supported baudrates
+9.6_supp            = 1
+19.2_supp           = 1
+45.45_supp          = 1
+93.75_supp          = 1
+187.5_supp          = 1
+500_supp            = 1
+1.5M_supp           = 1
+3M_supp             = 1
+6M_supp             = 1
+12M_supp            = 1
+
+; Maximum responder time for supported baudrates
+MaxTsdr_9.6         = 15
+MaxTsdr_19.2        = 15
+MaxTsdr_45.45       = 15
+MaxTsdr_93.75       = 15
+MaxTsdr_187.5       = 15
+MaxTsdr_500         = 15
+MaxTsdr_1.5M        = 25
+MaxTsdr_3M          = 50
+MaxTsdr_6M          = 100
+MaxTsdr_12M         = 200
+
+; Maximum polling frequency
+Min_Slave_Intervall = 1                ; 100 us
+
+; I/O related keywords
+Modular_Station     = 1                ; modular
+Max_Module          = 152
+Max_Input_Len       = 152
+Max_Output_Len      = 152
+Max_Data_Len        = 152
+Modul_Offset        = 1
+
+; Diagnostic related keywords
+User_Prm_Data_Len   = 3
+User_Prm_Data       = 0xC0,0x00,0x00
+Max_Diag_Data_Len   = 80
+
+;Status diagnostic messages
+Unit_Diag_Area=16-17
+Value(0)  = "Status not changed"
+Value(1)  = "Status appears"
+Value(2)  = "Status disappears"
+Unit_Diag_Area_End
+
+Unit_Diag_Area=24-31
+Value(0)   = "Minor, recoverable"
+Value(16)  = "Minor, unrecoverable"
+Value(32)  = "Major, recoverable"
+Unit_Diag_Area_End
+
+Unit_Diag_Area=32-39
+Value(16)  = "Generic Error"
+Value(32)  = "Current"
+Value(33)  = "Current, device input side"
+Value(34)  = "Current, inside the device"
+Value(35)  = "Current, device output side"
+Value(48)  = "Voltage"
+Value(49)  = "Mains Voltage"
+Value(50)  = "Voltage inside the device"
+Value(51)  = "Output Voltage"
+Value(64)  = "Temperature"
+Value(65)  = "Ambient Temperature"
+Value(66)  = "Device Temperature"
+Value(80)  = "Device Hardware"
+Value(96)  = "Device Software"
+Value(97)  = "Internal Software"
+Value(98)  = "User Software"
+Value(99)  = "Data Set"
+Value(112) = "Additional Modules"
+Value(128) = "Monitoring"
+Value(129) = "Communication"
+Value(130) = "Protocol Error"
+Value(144) = "External Error"
+Value(240) = "Additional Functions"
+Value(255) = "Device specific"
+Unit_Diag_Area_End
+
+
+; DPV1 related keywords
+DPV1_Slave 	            = 1
+Check_Cfg_Mode          = 1
+
+C1_Read_Write_supp      = 1
+C1_Max_Data_Len         = 64
+C1_Response_Timeout     = 100  ;1 sec
+
+C2_Read_Write_supp      = 1
+C2_Max_Data_Len         = 64
+C2_Response_Timeout     = 100  ;1 sec
+C2_Max_Count_Channels   = 1
+
+Max_Initiate_PDU_Length = 52
+
+; Definition of modules
+Module = "Input 1 byte" 0x90           ;Byte, Consistency over whole module
+1
+EndModule
+;
+Module = "Input 1 word" 0xD0           ;Word, Consistency over whole module
+2
+EndModule
+;
+Module = "Input 2 words" 0xD1          ;Word, Consistency over whole module
+3
+EndModule
+;
+Module = "Input 4 words" 0xD3          ;Word, Consistency over whole module
+4
+EndModule
+;
+Module = "Output 1 byte" 0xA0          ;Byte, Consistency over whole module
+5
+EndModule
+;
+Module = "Output 1 words" 0xE0         ;Word, Consistency over whole module
+6
+EndModule
+;
+Module = "Output 2 words" 0xE1         ;Word, Consistency over whole module
+7
+EndModule
+;
+Module = "Output 4 words" 0xE3         ;Word, Consistency over whole module
+8
+EndModule
+;
+
+
+
+

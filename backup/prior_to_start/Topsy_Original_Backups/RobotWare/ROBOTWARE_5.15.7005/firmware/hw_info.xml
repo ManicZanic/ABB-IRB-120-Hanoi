@@ -1,0 +1,189 @@
+<HW id="DSQC611" ver="0" rev="0">
+	<SW_Ver>B</SW_Ver>
+	<SW_Rev>4</SW_Rev>
+	<SW_File>d611_b4.m</SW_File>
+</HW>
+<HW id="DSQC611" ver="B" rev="1">
+	<SW_Ver>B</SW_Ver>
+	<SW_Rev>4</SW_Rev>
+	<SW_File>d611_b4.m</SW_File>
+</HW>
+<HW id="DSQC611" ver="C" rev="1">
+	<SW_Ver>D</SW_Ver>
+	<SW_Rev>5</SW_Rev>
+	<SW_File>d611_d5.m</SW_File>
+</HW>
+<HW id="DSQC611" ver="D" rev="1">
+	<SW_Ver>D</SW_Ver>
+	<SW_Rev>5</SW_Rev>
+	<SW_File>d611_d5.m</SW_File>
+</HW>
+<HW id="DSQC611" ver="E" rev="1">
+	<SW_Ver>D</SW_Ver>
+	<SW_Rev>5</SW_Rev>
+	<SW_File>d611_d5.m</SW_File>
+</HW>
+<HW id="DSQC617" ver="3" rev="3">
+  <SW_Ver>3</SW_Ver>
+  <SW_Rev>53</SW_Rev>
+  <SW_File>drive_image_v0353.chk</SW_File>
+</HW>
+<HW id="DSQC617" ver="3" rev="4">
+  <SW_Ver>3</SW_Ver>
+  <SW_Rev>53</SW_Rev>
+  <SW_File>drive_image_v0353.chk</SW_File>
+</HW>
+<HW id="DSQC617" ver="3" rev="5">
+  <SW_Ver>3</SW_Ver>
+  <SW_Rev>53</SW_Rev>
+  <SW_File>drive_image_v0353.chk</SW_File>
+</HW>
+<HW id="ARC_WELD_IO_BOARD" ver="0" rev="0">
+	<SW_Ver>A</SW_Ver>
+	<SW_Rev>3</SW_Rev>
+	<SW_File>aw_board_image_a3.m</SW_File>
+</HW>
+<HW id="ARC_WELD_IO_BOARD" ver="A" rev="1">
+	<SW_Ver>A</SW_Ver>
+	<SW_Rev>3</SW_Rev>
+	<SW_File>aw_board_image_a3.m</SW_File>
+</HW>
+
+<HW id="SxTPU" ver="1.0" rev="0">
+	<Major>5</Major>
+	<Minor>15</Minor>
+	<Build>7005</Build>
+	<Revision>07</Revision>
+	<SW_File>nk.nb0</SW_File>
+</HW>
+<HW id="SxTPU" ver="2.0" rev="0">
+	<Major>5</Major>
+	<Minor>15</Minor>
+	<Build>7005</Build>
+	<Revision>07</Revision>
+	<SW_File>SxTPU2.nb0</SW_File>
+</HW>
+<HW id="SxTPU" ver="3.0" rev="0">
+  <Major>5</Major>
+  <Minor>15</Minor>
+  <Build>7005</Build>
+  <Revision>07</Revision>
+  <Bootloader_ver>3.8</Bootloader_ver>
+  <Bootloader_file>eboot.bin</Bootloader_file>
+  <SW_File>SxTPU3.bin</SW_File>
+</HW>
+
+<HW id="PANELBOARD" ver="G" rev="1">
+	<SW_Ver>F</SW_Ver>
+	<SW_Rev>6</SW_Rev>
+	<SW_File>/firmware/d630_f.m</SW_File>
+</HW>
+<HW id="PANELBOARD" ver="F" rev="1">
+	<SW_Ver>F</SW_Ver>
+	<SW_Rev>6</SW_Rev>
+	<SW_File>/firmware/d630_f.m</SW_File>
+</HW>
+<HW id="PANELBOARD" ver="E" rev="1">
+	<SW_Ver>F</SW_Ver>
+	<SW_Rev>6</SW_Rev>
+	<SW_File>/firmware/d630_f.m</SW_File>
+</HW>
+<HW id="PANELBOARD" ver="D" rev="1">
+	<SW_Ver>F</SW_Ver>
+	<SW_Rev>6</SW_Rev>
+	<SW_File>/firmware/d630_f.m</SW_File>
+</HW>
+<HW id="PANELBOARD" ver="C" rev="1">
+	<SW_Ver>C</SW_Ver>
+	<SW_Rev>2</SW_Rev>
+	<SW_File>/firmware/d613_c.m</SW_File>
+</HW>
+<HW id="PANELBOARD" ver="B" rev="3">
+	<SW_Ver>B</SW_Ver>
+	<SW_Rev>4</SW_Rev>
+	<SW_File>/firmware/d613_b.m</SW_File>
+</HW>
+<HW id="PANELBOARD" ver="A" rev="1">
+	<SW_Ver>A</SW_Ver>
+	<SW_Rev>10</SW_Rev>
+	<SW_File>/firmware/d613_a.m</SW_File>
+</HW>
+<HW id="PANELBOARD" ver="?" rev="255">
+	<SW_Ver>A</SW_Ver>
+	<SW_Rev>11</SW_Rev>
+	<SW_File>/firmware/d613_a_11.m</SW_File>
+</HW>
+<HW id="PANELBOARD" ver="?" rev="0">
+	<SW_Ver>B</SW_Ver>
+	<SW_Rev>4</SW_Rev>
+	<SW_File>/firmware/d630_b.m</SW_File>
+</HW>
+
+
+<HW id="DSQC601" ver="0" rev="0">
+	<SW_Ver>15</SW_Ver>
+	<FPGA_Ver>25</FPGA_Ver>
+	<SW_File>axcboot.bin</SW_File>
+</HW>
+<HW id="DSQC601" ver="0" rev="1">
+	<SW_Ver>15</SW_Ver>
+	<FPGA_Ver>25</FPGA_Ver>
+	<SW_File>axcboot.bin</SW_File>
+</HW>
+<HW id="DSQC601" ver="0" rev="2">
+	<SW_Ver>15</SW_Ver>
+	<FPGA_Ver>25</FPGA_Ver>
+	<SW_File>axcboot.bin</SW_File>
+</HW>
+<HW id="DSQC601" ver="0" rev="3">
+	<SW_Ver>15</SW_Ver>
+	<FPGA_Ver>25</FPGA_Ver>
+	<SW_File>axcboot.bin</SW_File>
+</HW>
+<HW id="DSQC601" ver="0" rev="4">
+	<SW_Ver>15</SW_Ver>
+	<FPGA_Ver>25</FPGA_Ver>
+	<SW_File>axcboot.bin</SW_File>
+</HW>
+<HW id="DSQC601" ver="0" rev="5">
+	<SW_Ver>15</SW_Ver>
+	<FPGA_Ver>25</FPGA_Ver>
+	<SW_File>axcboot.bin</SW_File>
+</HW>
+<HW id="DSQC601" ver="0" rev="6">
+	<SW_Ver>15</SW_Ver>
+	<FPGA_Ver>25</FPGA_Ver>
+	<SW_File>axcboot.bin</SW_File>
+</HW>
+<HW id="DSQC601" ver="0" rev="7">
+	<SW_Ver>15</SW_Ver>
+	<FPGA_Ver>25</FPGA_Ver>
+	<SW_File>axcboot.bin</SW_File>
+</HW>
+<HW id="DSQC601" ver="0" rev="8">
+	<SW_Ver>15</SW_Ver>
+	<FPGA_Ver>25</FPGA_Ver>
+	<SW_File>axcboot.bin</SW_File>
+</HW>
+<HW id="DSQC601" ver="0" rev="9">
+	<SW_Ver>15</SW_Ver>
+	<FPGA_Ver>101</FPGA_Ver>
+	<SW_File>axcboot.bin</SW_File>
+</HW>
+<HW id="DSQC601" ver="0" rev="10">
+	<SW_Ver>15</SW_Ver>
+	<FPGA_Ver>101</FPGA_Ver>
+	<SW_File>axcboot.bin</SW_File>
+</HW>
+<HW id="DSQC635" ver="0" rev="0">
+	<SW_Ver>15</SW_Ver>
+	<FPGA_Ver>101</FPGA_Ver>
+	<SW_File>axcboot.bin</SW_File>
+</HW>
+<HW id="DSQC662" ver="0" rev="0">
+  <SW_Ver>11</SW_Ver>
+</HW>
+<HW id="PDP01" ver="0" rev="0">
+  <SW_Ver>20</SW_Ver>
+</HW>
+

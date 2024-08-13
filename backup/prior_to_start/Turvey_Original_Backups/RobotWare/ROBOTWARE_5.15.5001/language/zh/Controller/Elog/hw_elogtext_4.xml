@@ -1,0 +1,406 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Domain xmlns="urn:abb-robotics-elog-text" elogDomain="HW" domainNo="3" lang="zh" elogTextVersion="1.0" min="7250" max="9421">
+  <Message number="7250" eDefine="SYS_ERR_HW_AUX_GLITCH_MODE_STOP">
+    <Title>自动模式停止电路存在假信号</Title>
+    <Description>几毫秒内检测到信号有两次或多次状态变化。导致此消息最可能的原因是 MODE_STOP 电路接触不良。</Description>
+    <Consequences>电机可能会关闭。 </Consequences>
+    <Actions>检查安全系统上 Auto_Mode_Stop（或 Test_Mode_Stop / 使动装置）的电缆和连接。</Actions>
+  </Message>
+  <Message number="7251" eDefine="SYS_ERR_HW_AUX_GLITCH_DLY_STOP">
+    <Title>延时停止电路存在假信号</Title>
+    <Description>几毫秒内检测到信号有两次或多次状态变化。导致此消息最可能的原因是 DLY_STOP 电路接触不良。</Description>
+    <Consequences>电机可能会关闭。 </Consequences>
+    <Actions>检查安全系统上 DLY_STOP 的电缆和连接。</Actions>
+  </Message>
+  <Message number="7252" eDefine="SYS_ERR_HW_AUX_GLITCH_GM_STOP">
+    <Title>常规模式停止电路存在假信号</Title>
+    <Description>几毫秒内检测到信号有两次或多次状态变化。导致此消息最可能的原因是 GM_STOP 电路接触不良。</Description>
+    <Consequences>电机可能会关闭。 </Consequences>
+    <Actions>检查安全系统上 GM_STOP 的电缆和连接。</Actions>
+  </Message>
+  <Message number="7253" eDefine="SYS_ERR_HW_AUX_GLITCH_RUN_CH_SIB">
+    <Title>SIB 运行链存在假信号</Title>
+    <Description>几毫秒内检测到信号有两次或多次状态变化。导致此消息最可能的原因是安全接口电路板 (SIB) 的 Run_Chain 电路接触不良。</Description>
+    <Consequences>电机可能会关闭。 </Consequences>
+    <Actions>1. 检查安全系统上的电缆和连接。<p />2. 检查是否存在其他有关外部连接的错误消息（互锁）。 </Actions>
+  </Message>
+  <Message number="7254" eDefine="SYS_ERR_HW_AUX_GLITCH_RUN_CH_MIB">
+    <Title>MIB 运行链存在假信号</Title>
+    <Description>几毫秒内检测到信号有两次或多次状态变化。导致此消息最可能的原因是机械臂接口电路板 (MIB) 的 Run_Chain 电路接触不良。</Description>
+    <Consequences>CBS 和 CBS 动作的电机可能会关闭。 </Consequences>
+    <Actions>1. 检查安全系统上的电缆和连接。<p />2. 检查是否存在其他有关外部连接的错误消息（互锁）。 </Actions>
+  </Message>
+  <Message number="7255" eDefine="SYS_ERR_HW_AUX_GLITCH_CAB_ILCK">
+    <Title>机柜互联电路存在假信号</Title>
+    <Description>几毫秒内检测到信号有两次或多次状态变化。导致此消息最可能的原因是机柜互联电路接触不良。</Description>
+    <Consequences>喷涂设备可能会关闭。</Consequences>
+    <Actions>检查安全系统上的机柜互联电缆和连接。</Actions>
+  </Message>
+  <Message number="7256" eDefine="SYS_ERR_HW_AUX_GLITCH_HV_ILCK">
+    <Title>高压互联电路存在假信号</Title>
+    <Description>几毫秒内检测到信号有两次或多次状态变化。导致此消息最可能的原因是高压互联电路接触不良。</Description>
+    <Consequences>高压可能会关闭。 </Consequences>
+    <Actions>检查安全系统上的高压互联电缆和连接。</Actions>
+  </Message>
+  <Message number="7257" eDefine="SYS_ERR_HW_AUX_GLITCH_EXT_SYS2_ILCK_IN">
+    <Title>系统 2 互联电路存在假信号</Title>
+    <Description>几毫秒内检测到信号有两次或多次状态变化。导致此消息最可能的原因是系统 2 互联电路接触不良。</Description>
+    <Consequences>喷涂设备可能会关闭。 </Consequences>
+    <Actions>检查安全系统上的系统 2 互联电缆和连接。</Actions>
+  </Message>
+  <Message number="7258" eDefine="SYS_ERR_HW_AUX_GLITCH_EXT_PROCESS_ILCK">
+    <Title>过程互联电路存在假信号</Title>
+    <Description>几毫秒内检测到信号有两次或多次状态变化。导致此消息最可能的原因是过程互联电路接触不良。</Description>
+    <Consequences>喷涂设备可能会关闭。 </Consequences>
+    <Actions>检查安全系统上的过程互联电缆和连接。</Actions>
+  </Message>
+  <Message number="7259" eDefine="SYS_ERR_HW_AUX_GLITCH_AUX_RUN_CH">
+    <Title>AUX 互联电路存在假信号</Title>
+    <Description>几毫秒内检测到信号有两次或多次状态变化。导致此消息最可能的原因是 AUX 运行链电路接触不良。通常用于采用盒式门铃系统 (CBS) 的门。</Description>
+    <Consequences>系统 2 的电机和动作可能会关闭。 </Consequences>
+    <Actions>检查安全系统上的 AUX 运行链电缆和连接。</Actions>
+  </Message>
+  <Message number="7260" eDefine="SYS_ERR_HW_AUX_BRAKE_DRIVER_FAULT">
+    <Title>制动闸驱动故障</Title>
+    <Description>机械臂控制电路板 (MCOB) <arg format="%i" ordinal="1" /> 上的制动闸监控检测到轴 <arg format="%d" ordinal="2" /> 存在驱动故障，并已打开所有制动闸。 </Description>
+    <Actions>1. 检查/调换 MCOB。 </Actions>
+  </Message>
+  <Message number="7501" eDefine="SYS_ERR_HW_BSP_FILESYSTEM_UNKNOWN">
+    <Title>未知的 Filesystem：USB 设备</Title>
+    <Description>不支持具有逻辑单元 <arg format="%d" ordinal="1" /> 的 USB 设备上的 filesystem 类型。</Description>
+    <Consequences>无法访问带逻辑单元 <arg format="%d" ordinal="1" /> 的 USB 设备。filesystem 属于类型 <arg format="%s" ordinal="2" />。在带逻辑数目 <arg format="%d" ordinal="1" /> 的 USB 设备上的文件无法访问。 </Consequences>
+    <Causes>用一种未支持的文件系统类型格式化 filesystem。</Causes>
+    <Actions>用 FAT32 filesystem 格式化 USB 设备。</Actions>
+  </Message>
+  <Message number="7502" eDefine="SYS_ERR_HW_ATA_REMOVED">
+    <Title>拆卸海量存储设备</Title>
+    <Description>拆卸海量存储设备。</Description>
+    <Consequences>系统进入 sys fail 状态。在海量存储设备上的 filesystem 可能损坏。在海量存储设备上的文件可能损坏。在海量存储设备上的文件无法访问。</Consequences>
+    <Causes>海量存储设备已拆除或者存在功能故障。</Causes>
+    <Actions>检查海量存储设备的位置牢固。如果问题继续存在，在另一设备上尝试。</Actions>
+  </Message>
+  <Message number="8100" eDefine="SYS_ERR_HW_SENSOR_SYS_CONFIGURATION_FAULT">
+    <Title>配置错误</Title>
+    <Description>驱动模块检测到测量链接存在配置错误。<p />驱动模块：<arg format="%.f" ordinal="1" /><p />测量链接：<arg format="%.f" ordinal="2" /><p />电路板位置： <arg format="%.f" ordinal="3" /></Description>
+    <Actions>- 检查测量链接的配置。<p />- 检查测量电路板的配置。<p />- 检查测量节点的配置。</Actions>
+  </Message>
+  <Message number="8101" eDefine="SYS_ERR_HW_SENSOR_SYS_TRANSMISSION_FAIL">
+    <Title>SMB 通信故障</Title>
+    <Description>在驱动模块 <arg format="%.f" ordinal="1" /> 中的测量链路 <arg format="%.f" ordinal="2" /> 上检测到轴计算机和串行测量电路板之间存在传输故障。</Description>
+    <Consequences>系统进入“系统故障”状态并丢失校准消息。</Consequences>
+    <Causes>原因包括接触不良或电缆（屏蔽）损坏，特别是采用非 ABB 专用附加轴电缆时。也可能是因为串行测量电路板或轴计算机出现故障。</Causes>
+    <Actions>1) 参阅机器人产品手册中的详细说明，重新设置机器人的转数计数器。<p />2) 确保串行测量电路板和轴计算机之间的电缆正确连接且符合 ABB 设定的规格。<p />3) 确保电缆屏蔽两端正确连接。<p />4) 确保机器人接线附近无极度电磁干扰辐射。<p />5) 确保串行测量电路板和轴计算机正常工作。更换故障单元。 </Actions>
+  </Message>
+  <Message number="8102" eDefine="SYS_ERR_HW_SENSOR_SYS_FPGA_INTERNAL_ERROR">
+    <Title>内部故障</Title>
+    <Description>测量系统在驱动模块 <arg format="%.f" ordinal="1" /> 中的测量链接 <arg format="%.f" ordinal="2" /> 上检测到硬件或软件故障。</Description>
+    <Consequences>系统进入 SYS HALT 状态并丢失校准信息。</Consequences>
+    <Causes>原因包括机器人单元中的某些暂时性干扰或轴计算机故障。</Causes>
+    <Actions>1) 重新启动系统。<p />2) 参阅机器人产品手册中的详细说明，重新设置机器人的转数计数器。<p />3) 确保机器人接线附近无极度的电磁干扰。<p />4) 确保轴计算机正常工作。更换故障单元。</Actions>
+  </Message>
+  <Message number="8103" eDefine="SYS_ERR_HW_SENSOR_SYS_TRANSMISSION_TIMEOUT">
+    <Title>与 SMB 的通信中断。</Title>
+    <Description>在驱动模块 <arg format="%.f" ordinal="1" /> 中的测量链路 <arg format="%.f" ordinal="2" /> 上，轴计算机和串行测量电路板之间的通信中断。</Description>
+    <Consequences>系统进入“系统暂停”状态并丢失校准信息。</Consequences>
+    <Causes>原因包括接触不良或电缆（屏蔽）损坏，特别是采用非 ABB 专用附加轴电缆时。也可能是因为串行测量电路板或轴计算机出现故障。</Causes>
+    <Actions>1) 参阅机器人产品手册中的详细说明，重新设置机器人的转数计数器。<p />2) 确保串行测量电路板和轴计算机之间的电缆正确连接且符合 ABB 设定的规格。 <p />3) 确保电缆屏蔽两端正确连接。<p />4) 确保机器人接线附近无极度电磁干扰辐射。 <p />5) 确保串行测量电路板和轴计算机正常工作。更换故障单元。 </Actions>
+  </Message>
+  <Message number="8104" eDefine="SYS_ERR_HW_SENSOR_SYS_TEACH_MODE_OVER_SPEED">
+    <Title>Teach 模式中超速</Title>
+    <Description>连接到驱动模块 <arg format="%d" ordinal="1" /> 的一个或多个机器人轴超过 teach 操作模式的最高速度。</Description>
+    <Consequences>系统进入“系统暂停”状态。</Consequences>
+    <Causes>可能是在“电机关闭”状态下手动运行了机器人。也可能是因为电机轴和附加轴分解器之间的关系和换向失调，这种情况主要出现在安装过程中。</Causes>
+    <Actions>1) 按“启用设备”键尝试恢复操作。<p />2) 检查同一时间出现的其它事件日志消息，以确定实际原因。<p />3) 对当前电机执行重新换向操作。有关这一操作的详细说明见《附加轴手册》。</Actions>
+  </Message>
+  <Message number="8105" eDefine="SYS_ERR_HW_MEA_WARNING_CFG_NOT_FOUND">
+    <Title>数据未找到！</Title>
+    <Description>未找到测量电路板的配置数据。<p />系统将使用默认数据。<p />驱动模块： <arg format="%.f" ordinal="1" /><p />测量链接： <arg format="%.f" ordinal="2" /><p />电路板节点： <arg format="%.f" ordinal="3" /></Description>
+    <Actions>检查配置。</Actions>
+  </Message>
+  <Message number="8200" eDefine="SYS_ERR_HW_SMB_BATTERY_DEPLETED">
+    <Title>电池备份丢失</Title>
+    <Description>机器人中的串口测量板 (SMB) 的后备电池 <arg format="%.f" ordinal="3" /> 已丢失，电池连接在测量链接 <arg format="%.f" ordinal="2" /> 上的驱动模块 <arg format="%.f" ordinal="1" />  上。</Description>
+    <Consequences>SMB 电池电源中断时，机器人将会丢失转数计数器数据。此警告将会重复记录。</Consequences>
+    <Causes>这可能是由于 SMB 电池已放电或未连接。对于某些机器人型号，SMB 电池电源是通过机器人信号电缆中的跳线供电的（请参阅 IRC5 电路图），断开电缆会阻断电池供电。某些早期版本的机器人使用的是可充电电池，这些电池必须至少充电 18 小时才能正常工作。</Causes>
+    <Actions>1) 确保将已充电的 SMB 电池连接到电路板。<p />2) 注意！断开机器人信号电缆可能会断开 SMB 电池供电，从而触发电池警告开始记录。<p />3) 遵循《校准》或《产品手册》中的详细说明，通过更新转数计数器来重设电池电源警告。<p />4) 如果电池放电，请更换电池。</Actions>
+  </Message>
+  <Message number="8201" eDefine="SYS_ERR_HW_SMB_NO_SERIAL_BOARD">
+    <Title>串行电路板未找到</Title>
+    <Description>未找到测量链接上的串口测量板。<p />驱动模块： <arg format="%.f" ordinal="1" /><p />测量链接： <arg format="%.f" ordinal="2" /><p />测量电路板： <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>－检查系统配置参数。<p />－检查串口测量板的接头和电缆。<p />－更换串口测量板。</Actions>
+  </Message>
+  <Message number="8203" eDefine="SYS_ERR_HW_SMB_OFFSET_X">
+    <Title>SMB 偏移 X 误差</Title>
+    <Description>串口测量板上的 X 信号偏移误差。<p />驱动模块： <arg format="%.f" ordinal="1" /><p />测量链接： <arg format="%.f" ordinal="2" /><p />测量电路板： <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>－更换串口测量板。</Actions>
+  </Message>
+  <Message number="8204" eDefine="SYS_ERR_HW_SMB_OFFSET_Y">
+    <Title>SMB Y 信号偏移误差</Title>
+    <Description>串口测量板上的 Y 信号偏移误差。<p />驱动模块： <arg format="%.f" ordinal="1" /><p />测量链接： <arg format="%.f" ordinal="2" /><p />测量电路板： <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>－更换串口测量板</Actions>
+  </Message>
+  <Message number="8205" eDefine="SYS_ERR_HW_SMB_LINEAR_X_Y">
+    <Title>SMB 线性误差</Title>
+    <Description>串口测量板上的 X-Y 信号差异存在线性误差。<p />出现警告时系统会保持工作。<p />出现错误时系统不工作。<p />驱动模块： <arg format="%.f" ordinal="1" /><p /> 测量链接： <arg format="%.f" ordinal="2" /><p />测量电路板： <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>－更换串口测量板。</Actions>
+  </Message>
+  <Message number="8206" eDefine="SYS_ERR_HW_SMB_LINEAR_X">
+    <Title>SMB X 信号线性误差</Title>
+    <Description>串口测量板上的 X 信号线性误差。<p />驱动模块： <arg format="%.f" ordinal="1" /><p />测量链接： <arg format="%.f" ordinal="2" /><p />测量电路板： <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>－更换串口测量板</Actions>
+  </Message>
+  <Message number="8207" eDefine="SYS_ERR_HW_SMB_LINEAR_Y">
+    <Title>SMB Y 信号线性误差</Title>
+    <Description>串口测量板上的 Y 信号线性误差。<p />驱动模块： <arg format="%.f" ordinal="1" /><p />测量链接： <arg format="%.f" ordinal="2" /><p />测量电路板： <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>－更换串口测量板。</Actions>
+  </Message>
+  <Message number="8208" eDefine="SYS_ERR_HW_SMB_RESOLVER_HIGH_VOLTAGE">
+    <Title>分解器错误</Title>
+    <Description>X 或 Y 分解器信号电压过高。<p />X 和 Y 的平方和超过最高值。<p />接点： <arg format="%s" ordinal="1" /><p />驱动模块： <arg format="%d" ordinal="2" /><p /> 测量链接： <arg format="%.f" ordinal="3" /><p />测量电路板： <arg format="%.f" ordinal="4" /><p />电路板节点： <arg format="%.f" ordinal="5" /><p /></Description>
+    <Actions>－检查分解器和分解器接头。<p />－更换串口测量板。<p />－更换分解器。</Actions>
+  </Message>
+  <Message number="8209" eDefine="SYS_ERR_HW_SMB_RESOLVER_LOW_VOLTAGE">
+    <Title>分解器错误</Title>
+    <Description>X 或 Y 分解器信号电压过低。<p />X 和 Y 的平方和过小。<p />接点： <arg format="%s" ordinal="1" /><p />驱动模块： <arg format="%d" ordinal="2" /><p /> 测量链接： <arg format="%.f" ordinal="3" /><p />测量电路板： <arg format="%.f" ordinal="4" /><p />电路板节点： <arg format="%.f" ordinal="5" /><p /></Description>
+    <Actions>－检查分解器和分解器接头。<p />－更换串口测量板。<p />－更换分解器。</Actions>
+  </Message>
+  <Message number="8210" eDefine="SYS_ERR_HW_SMB_SMS_REGISTER_TRANSMISSION_FAULT">
+    <Title>传输故障。</Title>
+    <Description>串口测量板 SMS 通信失败。<p />状态： <arg format="%d" ordinal="1" /><p />驱动模块： <arg format="%.f" ordinal="2" /><p /> 测量链接： <arg format="%.f" ordinal="3" /><p />测量电路板： <arg format="%.f" ordinal="4" /><p />电路板节点： <arg format="%.f" ordinal="5" /><p /></Description>
+    <Actions>－重新启动系统。<p />－检查 SMB 通信电缆和接头。<p />－更换串口测量板。</Actions>
+  </Message>
+  <Message number="8211" eDefine="SYS_ERR_HW_SMB_FUNCTIONALLITY_NOT_SUPPORTED">
+    <Title>功能错误</Title>
+    <Description>串口测量板不支持 7 根轴。<p />驱动模块： <arg format="%.f" ordinal="1" /><p />测量链接： <arg format="%.f" ordinal="2" /><p />测量电路板： <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>－检查第 7 根轴的配置。<p />－将串口测量板换为具有 7 轴功能的电路板。</Actions>
+  </Message>
+  <Message number="8212" eDefine="SYS_ERR_HW_SMB_WARNING_CFG_NOT_FOUND">
+    <Title>数据未找到！</Title>
+    <Description>未找到串口测量板的配置数据。系统将使用默认数据。<p />驱动模块： <arg format="%.f" ordinal="1" /><p /> 测量链接： <arg format="%.f" ordinal="2" /><p />测量电路板： <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>－检查配置。</Actions>
+  </Message>
+  <Message number="8213" eDefine="SYS_ERR_HW_SMB_WARNING_BATTERY_LOW">
+    <Title>电池电量低。</Title>
+    <Description>串行测量电路板上的电池电量即将耗尽。找适当的机会更换电池。<p />驱动模块：<arg format="%.f" ordinal="1" /><p />测量链接：<arg format="%.f" ordinal="2" /><p />测量电路板： <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- 更换串行测量电路板上的电池。</Actions>
+  </Message>
+  <Message number="8214" eDefine="SYS_ERR_HW_SMB_BATTERY_SHUT_DOWN_FAIL">
+    <Title>电池故障。</Title>
+    <Description>电池通电关闭失败。电池仍将处于正常模式。<p />驱动模块： <arg format="%.f" ordinal="1" /><p /> 测量链接： <arg format="%.f" ordinal="2" /><p />测量电路板： <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- 重试关机操作。<p />－更换串口测量板。</Actions>
+  </Message>
+  <Message number="8215" eDefine="SYS_ERR_HW_SMB_BATTERY_FLAG_STUCK">
+    <Title>电池监控故障。</Title>
+    <Description>对串行测量电路板中的电池监控电路进行重置时出现故障。 <p />驱动模块： <arg format="%.f" ordinal="1" /><p />测量链接： <arg format="%.f" ordinal="2" /><p />测量电路板: <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- 重复更新转数计数器以将接点连接到 SMB。<p />- 更换串行测量电路板。</Actions>
+  </Message>
+  <Message number="8216" eDefine="SYS_ERR_HW_SMB_DSQC633C_NOT_SUPPORTED">
+    <Title>SMB 功能错误。</Title>
+    <Description>串行测量电路板不支持所需的功能。<p />驱动模块：<arg format="%.f" ordinal="1" /><p />测量链接：<arg format="%.f" ordinal="2" /><p />测量电路板： <arg format="%.f" ordinal="3" /><p /></Description>
+    <Actions>- 用有 DSQC633C 功能的电路板更换串行测量电路板。</Actions>
+  </Message>
+  <Message number="8230" eDefine="SYS_ERR_HW_PMC_CARD_NOT_CONNECTED">
+    <Title>PMC 卡连接不当</Title>
+    <Description>在动作配置中配置的 PMC 卡未连接或无法正常工作。<p /></Description>
+    <Consequences>无法运行需要该 PMC 卡的应用程序。</Consequences>
+    <Causes>PMC 卡未连接或已损坏。</Causes>
+    <Actions>请检查连接到驱动模块 <arg format="%d" ordinal="1" /> 中的轴计算机的 PMC 卡。</Actions>
+  </Message>
+  <Message number="8231" eDefine="SYS_ERR_HW_PMC_NO_CHANNELS_ENABLED">
+    <Title>PMC 卡不能启动</Title>
+    <Description>在动作配置中配置的 PMC 卡未正确安装，不能启动。</Description>
+    <Consequences>无法运行使用该 PMC 卡的应用程序。</Consequences>
+    <Causes>此错误可能是动作配置中的错误。<p /></Causes>
+    <Actions>请检查动作配置中该卡的信道限值。</Actions>
+  </Message>
+  <Message number="8232" eDefine="SYS_ERR_HW_PMC_MAX_CHANNELS_REACHED">
+    <Title>PMC 的信道数量已达到最大值</Title>
+    <Description>在动作配置中配置的 PMC 卡未正确安装，不能启动。</Description>
+    <Consequences>无法运行使用该 PMC 卡的应用程序。</Consequences>
+    <Causes>此错误可能是动作配置中的错误。<p /></Causes>
+    <Actions>请检查动作配置中该卡的信道限值。</Actions>
+  </Message>
+  <Message number="8233" eDefine="SYS_ERR_HW_FT_CABLE_SAFETY_CHECK_FAILED">
+    <Title>力度传感器安全信道错误</Title>
+    <Description>力度传感器和测量电路板之间电缆中的安全信道处于配置的安全信道电压级别之下。力度传感器连接到驱动模块 <arg format="%d" ordinal="1" /> 中的轴计算机。</Description>
+    <Consequences>系统将进入 SYS HALT 状态，无法运行使用该传感器的应用程序，除非连接或替换电缆。在动作配置中可以断开安全信道监控。</Consequences>
+    <Causes>1. 电缆连接错误。<p />2. 电缆连接器或电缆本身损坏。<p />3. 传感器电缆没有安全信道。</Causes>
+    <Actions>确定电缆连接正确，检查电缆两端的连接器和电缆本身。更换已损坏的电缆和连接器。</Actions>
+  </Message>
+  <Message number="8234" eDefine="SYS_ERR_HW_MAX_F_T_REACHED">
+    <Title>已达到最大力度或转矩</Title>
+    <Description>与驱动模块 <arg format="%d" ordinal="1" /> 中轴计算机连接的力度传感器的测量力度和转矩比配置值要高。</Description>
+    <Consequences>因为系统将不会停止。</Consequences>
+    <Causes>应用到传感器上的力度或转矩比配置值要高。 其原因可能是预定的参照值过高。 配置也可能出错。</Causes>
+    <Actions>如果环境对传感器应用了过高的力度或转矩，请检查程序中的力度和转矩参照值。</Actions>
+  </Message>
+  <Message number="8235" eDefine="SYS_ERR_HW_FT_INPUT_SATURATION_WARNING">
+    <Title>力度传感器输入的饱和警告</Title>
+    <Description>和力度传感器连接的测量电路板的模拟输入值已经饱和并且饱和时间已达到警告级别。<p /> 测量电路板和轴计算机在驱动模块 <arg format="%d" ordinal="1" /> 连接。</Description>
+    <Actions>检查施加在力度 / 力矩传感器上的荷载。<p />检查电缆、传感器和测量电路板没有损坏。<p />增加系统参数：在警告之前计算饱和时间</Actions>
+  </Message>
+  <Message number="8236" eDefine="SYS_ERR_HW_FT_INPUT_SATURATION_ERROR">
+    <Title>力度传感器输入的饱和错误</Title>
+    <Description>和力度传感器连接的测量电路板的模拟输入值已经饱和并且饱和时间已经达到错误级别。测量电路板和轴计算机在驱动模块 <arg format="%d " ordinal="1" /> 上和轴计算机连接</Description>
+    <Consequences>系统将停止</Consequences>
+    <Actions>检查施加到力度 / 力矩传感器上的荷载。检查电缆、传感器和测量电路板有无损坏。增加系统参数：在警告之前计算饱和时间 </Actions>
+  </Message>
+  <Message number="8237" eDefine="SYS_ERR_HW_SENSOR_SYS_FMB_CONFIGURATION">
+    <Title>“测力板”配置错误</Title>
+    <Description>
+连接到力传感器的“测力板”的配置输入值有错误。将该“测力板”连接到驱动模块 <arg format="%d " ordinal="1" />，母线 <arg format="%d " ordinal="2" />。
+    </Description>
+    <Consequences>系统将转到“系统故障”状态。</Consequences>
+    <Actions>检查配置。</Actions>
+  </Message>
+  <Message number="9401" eDefine="SYS_ERR_HW_DM_DELTA_IM">
+    <Title>转矩电流参考误差</Title>
+    <Description>接点 <arg format="%s" ordinal="2" /> 连接到驱动模块 <arg format="%.d" ordinal="1" /> 后，转矩电流参考值增加过快。 <p /><p /></Description>
+    <Consequences>-</Consequences>
+    <Causes>分解器反馈不良或速度回路增益失调。</Causes>
+    <Actions>1) 检查该接点的分解器电缆和分解器接地。如果该接点是一根附加轴，请检查配置文件中的电机数据是否正确。有关如何检查配置文件的详情请参阅《故障排除手册》。<p />2) 减小速度回路的增益。</Actions>
+  </Message>
+  <Message number="9402" eDefine="SYS_ERR_HW_DM_DELTA_RFI">
+    <Title>电机角度参考误差警告</Title>
+    <Description>接点 <arg format="%s" ordinal="2" /> 连接到驱动模块 <arg format="%.d" ordinal="1" /> 后，电机角度参考值增加过快。 <p /><p /></Description>
+    <Consequences>-</Consequences>
+    <Causes>分解器反馈不良或速度回路增益失调。</Causes>
+    <Actions>1) 检查该接点的分解器电缆和分解器接地。如果该接点是一根附加轴，请检查配置文件中的电机数据是否正确。有关如何检查配置文件的详情请参阅《故障排除手册》。<p />2) 减小速度回路的增益。</Actions>
+  </Message>
+  <Message number="9403" eDefine="SYS_ERR_HW_DM_IQ_UNDERCURR">
+    <Title>转矩回路电流不足</Title>
+    <Description>接点 <arg format="%.s" ordinal="2" /> 连接到驱动模块 <arg format="%.d" ordinal="1" /> 后，转矩电流控制器检测到的电流过低。 <p /><p /></Description>
+    <Consequences>- </Consequences>
+    <Causes>配置文件中的电机数据错误或 DC 总线电压过低。</Causes>
+    <Actions>1) 检查该接点配置文件中的电机数据是否正确。 有关如何检查配置文件的详情请参阅《故障排除手册》。<p />2) 检查事件日志中是否存在 DC 总线错误。<p />3) 检查输入电源电压是否在规定的范围内。<p />4) 检查电机电缆是否损坏或接线不良。 </Actions>
+  </Message>
+  <Message number="9404" eDefine="SYS_ERR_HW_DM_IQ_OVERCURR">
+    <Title>转矩回路电流过低</Title>
+    <Description>接点 <arg format="%.s" ordinal="2" /> 连接到驱动模块 <arg format="%.d" ordinal="1" /> 后，场电流控制器检测到的电流过高。 </Description>
+    <Consequences>- </Consequences>
+    <Causes>配置文件中的电机数据可能存在错误。</Causes>
+    <Actions>1) 检查该接点配置文件中的电机数据是否正确。有关如何检查配置文件的详情请参阅《故障排除手册》。<p />2) 检查事件日志中是否存在 DC 总线错误。<p />3) 检查输入电源电压是否在规定的范围内。<p />4) 检查电机电缆是否损坏或接线不良。</Actions>
+  </Message>
+  <Message number="9405" eDefine="SYS_ERR_HW_DM_IQ_PWM_MAX">
+    <Title>转矩控制器的 PWM 达到最高值</Title>
+    <Description>接点 <arg format="%.s" ordinal="2" /> 连接到驱动模块 <arg format="%.d" ordinal="1" /> 时，转矩电流控制回路已达到饱和状态。<p /><p /></Description>
+    <Consequences>- </Consequences>
+    <Causes>电源电压过低或电机绕组及电机电缆损坏。</Causes>
+    <Actions>1) 检查事件日志中是否存在 DC 总线错误。<p />2) 检查输入电源电压是否在规定的范围内。<p />3) 检查电机电缆和电机绕组是否存在断路。</Actions>
+  </Message>
+  <Message number="9406" eDefine="SYS_ERR_HW_DM_ID_ERRMAX">
+    <Title>场回路电流过低</Title>
+    <Description>接点 <arg format="%.s" ordinal="2" /> 连接到驱动模块 <arg format="%.d" ordinal="1" /> 后，场电流控制回路产生的电流过高。 </Description>
+    <Consequences>- </Consequences>
+    <Causes>配置文件中的电机数据可能存在错误。</Causes>
+    <Actions>1) 检查事件日志中是否存在 DC 总线错误。<p />2) 检查输入电源电压是否在规定的范围内。<p />3) 检查电机电缆和电机绕组。</Actions>
+  </Message>
+  <Message number="9407" eDefine="SYS_ERR_HW_DM_WRONG_TYPE_CODE_DU">
+    <Title>驱动单元类型码错误</Title>
+    <Description>驱动单元中针对驱动模块 <arg format="%d" ordinal="1" /> 的接点 <arg format="%s" ordinal="2" /> 的类型码与配置文件中指定的类型码不同。 已安装的驱动单元类型是 <arg format="%s" ordinal="3" />，而配置的类型为 <arg format="%s" ordinal="4" />。 </Description>
+    <Consequences>除非纠正该故障，否则无法工作。系统转入“系统中断”状态。</Consequences>
+    <Causes>配置文件可能包含错误值；配置密钥可能不正确；或硬件类型可能有误。如果最近更换过驱动单元，则有可能安装了类型码错误的驱动单元，或者未将密钥更换为与正确的硬件/软件组合对应的密钥。</Causes>
+    <Actions>1) 确保配置文件中的值同所安装的硬件匹配。<p />2) 确保配置密钥同所安装的硬件/软件组合匹配。在《故障排除手册》中详述了如何检查配置文件。<p />3) 如果最近更换过驱动单元，请确保所使用的单元具有正确的类型码。</Actions>
+  </Message>
+  <Message number="9408" eDefine="SYS_ERR_HW_DM_WRONG_TYPE_CODE_RECT">
+    <Title>整流器单元类型码错误</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 中的整流器单元 <arg format="%s" ordinal="2" /> 的类型码与配置文件中指定的类型码不同。安装的整流器单元类型是 <arg format="%s" ordinal="3" />，配置的类型为 <arg format="%s" ordinal="4" />。 </Description>
+    <Consequences>除非纠正该故障，否则无法工作。系统将进入 SYS FAIL 状态。</Consequences>
+    <Causes>配置文件可能包含错误的值；配置密钥可能不正确；或者硬件类型可能有误。如果最近更换过整流器单元，则有可能安装了类型码错误的整流器单元，或者未将密钥更换为与正确的硬件/软件组合相对应的密钥</Causes>
+    <Actions>1) 确保配置文件中的值与所安装的硬件相匹配。<p />2) 确保配置密钥与所安装的硬件/软件组合相匹配。《故障排除手册》详述了如何检查配置文件。<p />3) 如果最近更换过整流器单元，请确保采用了类型码正确的单元。</Actions>
+  </Message>
+  <Message number="9409" eDefine="SYS_ERR_HW_DM_WRONG_TYPE_CODE_CAP">
+    <Title>电容器单元类型码错误。</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 中电容器单元 <arg format="%d" ordinal="2" /> 的类型码与配置文件中指定的类型码不同。安装的电容器单元类型是 <arg format="%s" ordinal="3" />，配置类型为 <arg format="%s" ordinal="4" />。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>配置文件包含错误值，配置密钥不正确，或硬件类型错误。如果最近更换过电容器单元，则有可能安装了类型码错误的电容器单元，或者未将密钥更换为与正确的硬件/软件组合对应的密钥</Causes>
+    <Actions>1) 确保配置文件中的值与安装的硬件匹配。<p />2) 确保配置密钥与安装的硬件/软件组合匹配。有关如何检查配置文件的详细说明请参阅《故障排除手册》。<p />3) 如果最近更换过电容器单元，请确保采用了具有正确类型码的单元。</Actions>
+  </Message>
+  <Message number="9410" eDefine="SYS_ERR_HW_DS_COMM_RATE_WARN">
+    <Title>驱动单元通信警报
+</Title>
+    <Description>在驱动模块 <arg format="%.d" ordinal="1" />中轴计算机和驱动单元编号 <arg format="%d" ordinal="3" /> 之间检测到大量的通信错误。（单位时间错误率）
+</Description>
+    <Consequences>如果通信错误的数量继续增多，则控制器将面临被迫停止的风险。
+</Consequences>
+    <Causes>外部噪音可能会对通信信号造成干扰。
+</Causes>
+    <Actions>1) 检查轴计算机和主驱动单元之间的通信链路电缆是否正确连接。<p />2) 检查模块是否正确接地。<p />3) 检查驱动模块附近是否存在外部电磁杂讯源。
+</Actions>
+  </Message>
+  <Message number="9411" eDefine="SYS_ERR_HW_DS_COMM_ERROR">
+    <Title>通信错误过多</Title>
+    <Description>在轴计算机和驱动模块 <arg format="%.d" ordinal="1" /> 中的驱动单元 <arg format="%d" ordinal="3" /> 之间检测到已连续丢失 4 个或更多的通信包。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入“系统暂停”状态。</Consequences>
+    <Causes>轴计算机和主驱动单元之间的通信链路电缆损坏，驱动模块未正确接地，或通信信号受过多的杂讯干扰。</Causes>
+    <Actions>1) 检查轴计算机和主驱动单元之间的通信链路电缆是否正确连接。<p />2) 检查模块是否正确接地。<p />3) 检查驱动模块附近是否存在外部电磁杂讯源。</Actions>
+  </Message>
+  <Message number="9412" eDefine="SYS_ERR_HW_DS_NODE_COMM_ERROR">
+    <Title>丢失过多的参考值更新</Title>
+    <Description>在驱动模块 <arg format="%.d" ordinal="1" />中检测到已丢失过多的接点 <arg format="%.s" ordinal="2" />通信包。<p /><p /></Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>轴计算机和主驱动单元之间的通信链接电缆损坏，驱动模块未正确接地，或通信信号受过多的杂讯干扰。</Causes>
+    <Actions>1) 检查轴计算机和主驱动单元之间的通信链接电缆是否正确连接。<p />2) 检查模块是否正确接地。<p />3) 检查驱动模块附近是否存在外部电磁杂讯源。</Actions>
+  </Message>
+  <Message number="9413" eDefine="SYS_ERR_HW_SOFTWARE_NOT_SYNCHRONISED">
+    <Title>驱动程序不同步</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 中的轴计算机软件与接点 <arg format="%s" ordinal="2" />的驱动程序不同步。软件状态不稳定。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>可能是系统定时存在错误。</Causes>
+    <Actions>1) 重新启动控制器。<p />2) 如果问题继续存在，请联系当时的 ABB 代理..</Actions>
+  </Message>
+  <Message number="9414" eDefine="SYS_ERR_HW_UNKNOWN_TYPE_CODE_CAP">
+    <Title>未知电容器类型码</Title>
+    <Description>系统无法识别驱动模块 <arg format="%d" ordinal="1" /> 中电容器单元 <arg format="%s" ordinal="2" /> 的类型码。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>安装的电容器类型不对，或软件不支持所采用的电容器版本。</Causes>
+    <Actions>1) 检查安装的电容器单元的类型。如类型错误则更换电容器。<p />2) 如果问题继续存在，请联系当地的 ABB 代理..</Actions>
+  </Message>
+  <Message number="9415" eDefine="SYS_ERR_HW_DM_COM_LOST_ERR">
+    <Title>与驱动单元的通信中断</Title>
+    <Description>与驱动模块 <arg format="%d" ordinal="1" /> 中驱动单元（编号 <arg format="%d" ordinal="3" /> ）的通信中断。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>轴计算机和主驱动单元之间的通信链接电缆损坏，驱动模块未正确接地，或通信信号受过多的杂讯干扰。</Causes>
+    <Actions>1) 检查轴计算机和主驱动单元之间的通信链接电缆是否正确连接。<p />2) 检查模块是否正确接地。<p />3) 检查驱动模块附近是否存在外部电磁杂讯源。</Actions>
+  </Message>
+  <Message number="9416" eDefine="SYS_ERR_HW_DM_DRIVE_NOT_RESPONDING">
+    <Title>驱动单元无响应</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 中的主驱动单元无响应。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>轴计算机和主驱动单元之间的通信链接电缆损坏，或软件中被锁定。</Causes>
+    <Actions>1) 检查轴计算机和主驱动单元之间的通信链接电缆是否正确连接。<p />2) 重新启动控制器。<p />3) 如果问题继续存在，请联系当地的 ABB 代理..</Actions>
+  </Message>
+  <Message number="9417" eDefine="SYS_ERR_HW_DM_NO_DRIVE_SW_FOUND">
+    <Title>无法找到驱动程序版本文件</Title>
+    <Description>系统无法在磁盘上定位有效的驱动程序版本。<p /><p />文件可能已被误删。没有这一文件就无法检查是否需要更新驱动单元的软件。</Description>
+    <Actions>请联系当地的 ABB 代理。</Actions>
+  </Message>
+  <Message number="9418" eDefine="SYS_ERR_HW_DM_UNKNOWN_TYPE_CODE_DU">
+    <Title>未知驱动单元类型码</Title>
+    <Description>系统无法识别驱动模块 <arg format="%d" ordinal="1" /> 中驱动单元 <arg format="%s" ordinal="2" /> 的类型码。安装的驱动单元类型是 <arg format="%d" ordinal="3" />，配置类型为 <arg format="%d" ordinal="4" />。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>驱动单元接线不良或硬件故障。</Causes>
+    <Actions>1) 确保驱动单元上的电缆正确连接。<p />2) 确保控制器支持该驱动单元。<p />3) 如果最近更换过驱动单元，请确保采用了具有正确类型码的单元。</Actions>
+  </Message>
+  <Message number="9419" eDefine="SYS_ERR_HW_DM_UNKNOWN_TYPE_CODE_RECT">
+    <Title>未知整流器类型码</Title>
+    <Description>系统无法识别驱动模块 <arg format="%d" ordinal="1" /> 中整流器单元 <arg format="%s" ordinal="2" /> 的类型码。安装的整流器单元类型是 <arg format="%d" ordinal="3" />，配置类型为 <arg format="%d" ordinal="4" />。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>驱动单元接线不良或硬件故障。</Causes>
+    <Actions>1) 确保整流器单元上的电缆正确连接。<p />2) 确保控制器支持该整流器单元。<p />3) 如果最近更换过整流器单元，请确保采用了具有正确类型码的单元。</Actions>
+  </Message>
+  <Message number="9420" eDefine="SYS_ERR_HW_DM_DRV_BIT_FAILURE">
+    <Title>驱动单元内置测试失败</Title>
+    <Description>驱动模块 <arg format="%d" ordinal="1" /> 中的驱动单元（编号 <arg format="%d" ordinal="3" /> ）检测到内部硬件故障。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>测试软件未正常运行，或实际硬件出现故障。</Causes>
+    <Actions>1) 执行关机，然后重新启动系统。<p />2) 如果问题继续存在，请取出并更换有故障的驱动单元。</Actions>
+  </Message>
+  <Message number="9421" eDefine="SYS_ERR_HW_DM_DRV_CONFIG_TEST_ERR">
+    <Title>驱动单元配置测试失败</Title>
+    <Description>驱动模块 <arg format="%s" ordinal="1" /> 中的驱动单元（编号 <arg format="%d" ordinal="3" /> ）检测到内部错误。</Description>
+    <Consequences>纠正该错误之前无法进行操作。系统进入 SYS HALT 状态。</Consequences>
+    <Causes>驱动单元接线不良或安装了错误的硬件。</Causes>
+    <Actions>1) 执行关机，然后重新启动系统。<p />2) 如果问题继续存在，请取出并更换有故障的驱动单元。</Actions>
+  </Message>
+</Domain>

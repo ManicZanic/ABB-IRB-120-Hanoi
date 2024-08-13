@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Resources Assembly="ABB.Robotics.Paint.TPU.Screens.UAS">
+  <Forms>
+    <Form Name="ABB.Robotics.Paint.TPU.Screens.UAS.TpuWndLogin" Text="登录" Width="320" Height="192" Background="SkinUser.jpg" Icon="Keys32.gif">
+      <Menu ref="menuTpuWndLogin" />
+      <Controls>
+        <Control ID="lblPassword" Text="密码：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="147" Top="113" Width="170" Height="20" />
+        <Control ID="lblUserText" Text="当前用户：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="6" Top="20" Width="311" Height="20" />
+        <Control ID="lblUser" Text="用户：" Name="ABB.Robotics.Paint.TPU.Controls.TpuLabel" Left="147" Top="61" Width="170" Height="20" />
+      </Controls>
+    </Form>
+  </Forms>
+  <Menus>
+    <Menu ID="menuTpuWndLogin">
+      <MenuItem ID="Login" Text="登录" />
+      <MenuItem ID="Logout" Text="退出" />
+    </Menu>
+  </Menus>
+  <Strings>
+    <String ID="Password" Text="密码" />
+    <String ID="CurrentUser" Text="当然用户：{0}" />
+    <String ID="AlreadyLoggedIn" Text="{0}已经登录" />
+    <String ID="SuccessfullyLoggedIn" Text="{0}成功登录" />
+    <String ID="InvalidPassword" Text="无效的密码" />
+  </Strings>
+</Resources>
