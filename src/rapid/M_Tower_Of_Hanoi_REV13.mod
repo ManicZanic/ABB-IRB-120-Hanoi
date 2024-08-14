@@ -17,9 +17,7 @@ MODULE M_Tower_Of_Hanoi
     !2024-08-04:    @ManicZanic - Generated russan nesting doll style program to handle NOD values up to 10 discs.
     !                           - Added step count variables.
     !                           - Moved NOD selection to R_Shaft_Stroke_Test routine for easier counter selection.
-    !2024-08-14:    @Austin - Added fibonnaci as proof of concept for recursion in RAPID (can be removed, leaving in for now)
-    !                       - Added basic recursive solution to ToH problem (R_Recursive_Tower_Solution)
-    !                           - Note: Movement logic not yet implemented, this simply TPWrites correct steps 
+    !2024-08-14:    @Austin - Added basic recursive solution to ToH problem (R_Recursive_Tower_Solution)
     !*****************************************************
 
 
@@ -35,14 +33,14 @@ MODULE M_Tower_Of_Hanoi
     PERS num GSafe:=75;  !GripperSafeHeight
     PERS num NOD:=7;     !NUMBER OF STACKED DISCS
     PERS num NStart:=1;  !START POSITION
-    PERS num NEnd:=2;    !END POSITION
+    PERS num NEnd:=3;    !END POSITION
     PERS num NLoop:=1;   !LOOP COUNT
     PERS num NMotionActive:=1;      !0 ENABLES ROBOT MoveMENT WHILE 1 DISABLES ROBOT MoveMENT
-    PERS num NStepCount:=0;         !COMPLETED STEP COUNTER
+    PERS num NStepCount:=8;         !COMPLETED STEP COUNTER
     PERS num NtenDisc_Count:=26243; !TOTAL NUMBER OF CYCLES TO COMPLETE A 10 DISC TOWER.
     VAR speeddata VSpeed:=v500;     !CURRENT VELOCITY
     PERS num NSpeed:=4;             !SPEED SELECTION
-    PERS num NJob:=7;             !JOB SELECTION
+    PERS num NJob:=6;             !JOB SELECTION
     VAR num NFooBar:=0;              !TEMP VAR FOR CALLING FUNC'S
     
     !WORKING DATA
@@ -73,18 +71,7 @@ MODULE M_Tower_Of_Hanoi
     CONST robtarget Shaft2:=[[0,0,0],[0.707106781,0,0.707106781,0],[0,0,0,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
     CONST robtarget Shaft3:=[[0,-200,0],[0.707106781,0,0.707106781,0],[-1,-1,0,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
 
-FUNC num R_Fibonacci(num nFibVal)
-    IF nFibVal < 0 THEN
-        TPWrite "Bad input.";
-    ELSEIF nFibVal = 0 THEN
-            RETURN 0;
-    ELSEIF (nFibVal = 1 OR nFibVal = 2) THEN
-        RETURN 1;
-    ELSE
-        RETURN (R_Fibonacci(nFibVal - 1) + R_Fibonacci(nFibVal - 2));
-    ENDIF
-ENDFUNC
-    
+
 FUNC num R_Recursive_Tower_Solution(num NCounter, num NFromRod, num NToRod, num NAuxRod)
     !Modeled after https://www.geeksforgeeks.org/c-program-for-tower-of-hanoi/
     IF NCounter = 0 THEN
@@ -94,6 +81,11 @@ FUNC num R_Recursive_Tower_Solution(num NCounter, num NFromRod, num NToRod, num 
     TPWrite "Disk to move: "\Num:=NCounter;
     TPWrite "Source rod: "\Num:=NFromRod;
     TPWrite "Destination Rod: "\Num:=NToRod;
+    TPWrite "Moving...";
+    NStart:=NFromRod;
+    NEnd:=NToRod;
+    R_Pick_N_Place;
+    TPWrite "Move complete. Onto next move...";
     TPWrite "****************************************";
     NFooBar:=R_Recursive_Tower_Solution(NCounter-1, NAuxRod, NToRod, NFromRod);
     RETURN 0;
@@ -117,7 +109,7 @@ ENDFUNC
     NSpeed:=UINumEntry(\Header:="Set Speed"\Message:="Set Robot Velocity 1=Slow 2=Medium 3=Fast 4=JUST DON'T"\Icon:=iconInfo\InitValue:=NSpeed\MinValue:=0\MaxValue:=4);
  ENDPROC
    PROC R_Job_Selection()
-    Njob:=UINumEntry(\Header:="Choose Project To Run"\MsgArray:=["1=HomePosition, 2=StoragePosition, 3=TowersOfHanoi", "4=CameraMan, 5=YogaPose", "6=Fibonacci Sequence, 7=Recursive Hanoi Solver"]\Icon:=iconInfo\InitValue:=Njob\MinValue:=0\MaxValue:=50);
+    Njob:=UINumEntry(\Header:="Choose Project To Run"\MsgArray:=["1=HomePosition, 2=StoragePosition, 3=TowersOfHanoi", "4=CameraMan, 5=YogaPose", "6=Recursive Hanoi Solver"]\Icon:=iconInfo\InitValue:=Njob\MinValue:=0\MaxValue:=50);
  ENDPROC
     PROC main()
         !Run when program pointer is reset to top of main
@@ -142,11 +134,8 @@ ENDFUNC
             R_YogaPose:
         ENDIF
         IF NJob = 6 THEN
-            NFooBar:=R_Fibonacci(UINumEntry(\Message:="Which number of the Fibonacci sequence would you like?"));
-            TPWrite "Fib result:"\Num:=NFooBar;
-        ENDIF
-        IF NJob = 7 THEN
-            NFooBar:=R_Recursive_Tower_Solution(UINumEntry(\Message:="How many discs?"), 1, 3, 2); !Moving from rod 1 to rod 3, rod 2 is aux
+            Initialize;
+            NFooBar:=R_Recursive_Tower_Solution(NOD, 1, 3, 2); !Moving from rod 1 to rod 3, rod 2 is aux
         ENDIF
         Stop;
     ENDPROC
