@@ -1,0 +1,52 @@
+#
+# Generated backup file, do not edit.
+#
+# Originally at: C:/Users/PFollansbee/AppData/Local/Temp/aad80547
+# 2024-08-20  08:15:06
+#
+>>SYSTEM_ID:
+120-501650
+
+>>PRODUCTS_ID:
+RobotWare Version: 5.16.0005.00
+
+  RW Control module key
+  RobotWare OS and English
+  644-5 Chinese
+  748-1 DeviceNet Lean
+  608-1 World Zones
+  616-1 PC Interface
+  623-1 Multitasking
+  RW Drive module 1 key
+  ABB standard manipulator
+  IRB 120
+  120-0.58/3
+  Drive System 09 120/140/1400/1600/260 Compact
+  1-Phase Power Supply
+  No additional drive
+
+>>ROBOT_TYPE:
+120-0.58/3
+
+>>HOME:
+All public files and directories
+
+>>SYSPAR:
+SYS.cfg
+PROC.cfg
+EIO.cfg
+SIO.cfg
+MOC.cfg
+MMC.cfg
+
+
+>>TASK1: (T_ROB1,,)
+SYSMOD\user.sys @ user.sys
+PROGMOD\CM_Num_Props.mod @ cm_num_props.mod
+PROGMOD\CM_Disk.mod @ cm_disk.mod
+PROGMOD\CM_Num_Properties.mod @ cm_num_properties.mod
+PROGMOD\M_Tower_Of_Hanoi.mod @ m_tower_of_hanoi.mod
+PROGMOD\M_Initialize.mod @ m_initialize.mod
+
+
+>>EOF:
