@@ -30,7 +30,7 @@ MODULE M_Tower_Of_Hanoi
     PERS tooldata tGripperTool:=[TRUE,[[0.000145392,0,140.499655058],[1,0,-0.000000126,0]],[1,[0,0,75],[1,0,0,0],0,0,0]];
     TASK PERS wobjdata wobjTower:=[FALSE,TRUE,"",[[0,600,150],[0.707106781,0,0,0.707106781]],[[0,0,0],[1,0,0,0]]];
     TASK PERS wobjdata wobjTower1:=[FALSE,TRUE,"",[[600,0,150],[1,0,0,0]],[[0,0,0],[1,0,0,0]]];
-    PERS bool bTOHMenu:=TRUE;
+    LOCAL PERS bool bTOHMenu:=TRUE;
 	
     !TOWER OF HANOI VARIABLES
     PERS num NDH:=6.35;!NOMINAL DISK HEIGHT

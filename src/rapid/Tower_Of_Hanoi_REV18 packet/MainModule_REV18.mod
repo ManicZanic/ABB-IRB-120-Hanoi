@@ -18,6 +18,7 @@ MODULE MainModule
     !    !                           - Added Yoga Pose positions 
     !    !                           - Added blank JustDance program
     !    !2024-08-22:    @ManicZanic - Removed unused code
+    !    !                           - Removed task specific ToolData
     !    !*****************************************************
 
     PERS bool bMenu:=TRUE;
@@ -97,7 +98,7 @@ MODULE MainModule
             CASE 5:
             CASE 6:
             CASE 7:
-                MoveAbsJ jHomePos,v500,fine,tGripperTool;
+                MoveAbsJ jHomePos,v500,fine,tool0;
                 RETURN ;
                 bMenu:=False;
             ENDTEST
@@ -131,7 +132,7 @@ MODULE MainModule
             CASE 5:
             CASE 6:
             CASE 7:
-                MoveAbsJ jStorage,v500,fine,tGripperTool;
+                MoveAbsJ jStorage,v500,fine,tool0;
                 RETURN ;
                 bMenu:=False;
             ENDTEST
@@ -175,13 +176,13 @@ MODULE MainModule
 
     PROC R_CameraMan()
         IF NCameraLoop=2 THEN
-            MoveAbsJ jCameraMan,v500,fine,tGripperTool;
+            MoveAbsJ jCameraMan,v500,fine,tool0;
             NCameraLoop:=1;
         ENDIF
-        MoveL p1,v100,z50,tGripperTool;
-        MoveL p2,v100,z50,tGripperTool;
-        MoveL p3,v100,z50,tGripperTool;
-        MoveL p4,v100,z50,tGripperTool;
+        MoveL p1,v100,z50,tool0;
+        MoveL p2,v100,z50,tool0;
+        MoveL p3,v100,z50,tool0;
+        MoveL p4,v100,z50,tool0;
         R_CameraMan;
     ENDPROC
 
@@ -217,16 +218,16 @@ MODULE MainModule
                 RETURN ;
             CASE 5:
             CASE 6:
-                MoveAbsJ jCobra,v500,fine,tGripperTool;
+                MoveAbsJ jCobra,v500,fine,tool0;
                 RETURN ;
             CASE 7:
-                MoveAbsJ jDoggyStyle,v500,fine,tGripperTool;
+                MoveAbsJ jDoggyStyle,v500,fine,tool0;
                 RETURN ;
             CASE 8:
-                MoveAbsJ jCamel,v500,fine,tGripperTool;
+                MoveAbsJ jCamel,v500,fine,tool0;
                 RETURN ;
             CASE 9:
-                MoveAbsJ jChair,v500,fine,tGripperTool;
+                MoveAbsJ jChair,v500,fine,tool0;
                 RETURN ;
                 bMenu:=False;
             ENDTEST
