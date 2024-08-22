@@ -18,15 +18,8 @@ MODULE MainModule
     !    !                           - Added Yoga Pose positions 
     !    !                           - Added blank JustDance program
     !    !*****************************************************
-    RECORD menu_selection
-        num list_selection;
-        num button_selection;
-    ENDRECORD
 
-
-    PERS bool bServList:=TRUE;
     PERS bool bMenu:=TRUE;
-
     PERS num NCameraLoop:=1;!CAMERAMAN LOOP SWITCH
 
     CONST jointtarget jHomePos:=[[0,0,0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];

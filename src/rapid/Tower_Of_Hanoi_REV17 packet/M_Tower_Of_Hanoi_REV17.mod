@@ -28,7 +28,8 @@ MODULE M_Tower_Of_Hanoi
     PERS tooldata tGripperTool:=[TRUE,[[0.000145392,0,140.499655058],[1,0,-0.000000126,0]],[1,[0,0,75],[1,0,0,0],0,0,0]];
     TASK PERS wobjdata wobjTower:=[FALSE,TRUE,"",[[0,600,150],[0.707106781,0,0,0.707106781]],[[0,0,0],[1,0,0,0]]];
     TASK PERS wobjdata wobjTower1:=[FALSE,TRUE,"",[[600,0,150],[1,0,0,0]],[[0,0,0],[1,0,0,0]]];
-
+    PERS bool bTOHMenu:=TRUE;
+	
     !TOWER OF HANOI VARIABLES
     PERS num NDH:=6.35;!NOMINAL DISK HEIGHT
     PERS num NDD:=40;!NOMINAL DISK DIAMETER
@@ -74,8 +75,8 @@ MODULE M_Tower_Of_Hanoi
         VAR btnres btnresMainMenu;
         CONST Listitem ListOptions{7}:=[["","Run Program"],["","Set Number of Discs"],["","Set Nominal Disc Dimension"],["","Set Nominal Disc Height"],["","Set Nominal Shaft Length"],["","Set Speed"],["","Activate / Deactivate Motion"]];
 
-        bMenu:=True;
-        WHILE bMenu DO
+        bTOHMenu:=True;
+        WHILE bTOHMenu DO
             nMenuOption:=UIListView(\Result:=btnresMainMenu\Header:="Tower Of Hanoi MAIN MENU",ListOptions\Buttons:=btnOKCancel\Icon:=iconInfo);
             IF btnresMainMenu=resCancel return ;
             TEST nMenuOption
@@ -99,10 +100,10 @@ MODULE M_Tower_Of_Hanoi
             CASE 7:
                 NMotionActive:=UINumEntry(\Header:="Motion Activation"\Message:="Enter 1 to Enable Motion Enter 0 to Disable Motion"\Icon:=iconInfo\InitValue:=NMotionActive\MinValue:=0\MaxValue:=1);
                 R_Tower_Of_Hanoi_Menu;
-                bMenu:=False;
+                bTOHMenu:=False;
             ENDTEST
         ENDWHILE
-        bMenu:=True;
+        bTOHMenu:=True;
     ENDPROC
 
     PROC R_Set_SPEEEEEED()
@@ -111,8 +112,8 @@ MODULE M_Tower_Of_Hanoi
         VAR num change_speed:=5;
         CONST Listitem ListOptions{7}:=[["","Super Slow"],["","Slow"],["","Normal"],["","Fast"],["","Super Fast"],[""," "],["","JUST DONT!!!"]];
 
-        bMenu:=True;
-        WHILE bMenu DO
+        bTOHMenu:=True;
+        WHILE bTOHMenu DO
             nMenuOption:=UIListView(\Result:=btnresMainMenu\Header:="Select Desired Speed",ListOptions\Buttons:=btnOKCancel\Icon:=iconInfo);
             IF btnresMainMenu=resCancel return ;
             TEST nMenuOption
@@ -136,10 +137,10 @@ MODULE M_Tower_Of_Hanoi
                 VSpeed:=V10;
                 R_Tower_Of_Hanoi_Menu;
                 SpeedRefresh change_speed;
-                bMenu:=False;
+                bTOHMenu:=False;
             ENDTEST
         ENDWHILE
-        bMenu:=True;
+        bTOHMenu:=True;
     ENDPROC
 
     FUNC num R_Recursive_Tower_Solution(num NCounter,num NFromRod,num NToRod,num NAuxRod)
@@ -166,8 +167,8 @@ MODULE M_Tower_Of_Hanoi
         VAR btnres btnresMainMenu;
         CONST Listitem ListOptions{7}:=[["","CAUTION: ROBOT MAY MOVE"],[""," "],["","Select solution method and press OK to run program"],["","Press CANCEL to return to previous menu"],[""," "],["","STANDARD"],["","RECURSION"]];
 
-        bMenu:=True;
-        WHILE bMenu DO
+        bTOHMenu:=True;
+        WHILE bTOHMenu DO
             nMenuOption:=UIListView(\Result:=btnresMainMenu\Header:="Tower Of Hanoi PROGRAM MENU",ListOptions\Buttons:=btnOKCancel\Icon:=iconWarning);
             IF btnresMainMenu=resCancel return ;
             TEST nMenuOption
@@ -194,10 +195,10 @@ MODULE M_Tower_Of_Hanoi
                 NFooBar:=R_Recursive_Tower_Solution(NOD,1,3,2);
                 RETURN ;
                 !Moving from rod 1 to rod 3, rod 2 is aux;
-                bMenu:=False;
+                bTOHMenu:=False;
             ENDTEST
         ENDWHILE
-        bMenu:=True;
+        bTOHMenu:=True;
     ENDPROC
 
     PROC Initialize()
