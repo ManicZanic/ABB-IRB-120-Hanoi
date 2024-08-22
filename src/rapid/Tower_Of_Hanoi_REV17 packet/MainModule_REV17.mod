@@ -17,6 +17,7 @@ MODULE MainModule
     !    !                           - Formatted text
     !    !                           - Added Yoga Pose positions 
     !    !                           - Added blank JustDance program
+    !    !2024-08-22:    @ManicZanic - Removed unused code
     !    !*****************************************************
 
     PERS bool bMenu:=TRUE;

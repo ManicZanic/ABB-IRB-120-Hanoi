@@ -23,6 +23,8 @@ MODULE M_Tower_Of_Hanoi
     !    !                           - Reintegrated Recursive Solution into TOH module.
     !    !                           - Upgraded the speed selection menu
     !    !                           - Fromatted text
+    !    !2024-08-22:    @ManicZanic - Removed unused code
+    !    !                           - Added bTOHmenu bool data
     !    !*****************************************************
 
     PERS tooldata tGripperTool:=[TRUE,[[0.000145392,0,140.499655058],[1,0,-0.000000126,0]],[1,[0,0,75],[1,0,0,0],0,0,0]];
