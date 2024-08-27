@@ -1,8 +1,8 @@
 MODULE M_Template
     !    !*****************************************************
     !    !Module Name:   M_TEMPLATE
-    !    !Version:       1.01
-    !    !Description:   Robot program to solve Tower of Haanoi
+    !    !Version:       1.22
+    !    !Description:   Program Template
     !    !Date:          2024-08-22
     !    !Author:        @ManicZanic
     !    !               
@@ -10,6 +10,7 @@ MODULE M_Template
     !    !Change Log:
     !    !2024-08-22:    @ManicZanic - Orignal core structure developed
     !    !                           - Added Task specific Bool data
+    !    !2024-08-22:    @ManicZanic - Set VersionID to match other modules
     !    !*****************************************************
     
     LOCAL PERS bool bTemplateMenu:=TRUE;

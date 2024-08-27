@@ -1,11 +1,12 @@
 MODULE M_Tower_Of_Hanoi
     !    !*****************************************************
     !    !Module Name:   M_Tower_Of_Hanoi
-    !    !Version:       1.01
+    !    !Version:       1.22
     !    !Description:   Robot program to solve Tower of Haanoi
     !    !Date:          2024-08-01
     !    !Author:        @ManicZanic
     !    !               @ELIICE
+    !    !               @Austin
     !    !*****************************************************
     !    !Change Log:
     !    !2024-08-01:    @ManicZanic - Orignal core structure developed
@@ -25,6 +26,8 @@ MODULE M_Tower_Of_Hanoi
     !    !                           - Fromatted text
     !    !2024-08-22:    @ManicZanic - Removed unused code
     !    !                           - Added bTOHmenu bool data
+    !    !2024-08-23:    @ManicZanic - Commented out parameters to maybe use later
+    !    !2024-08-26:    @ManicZanic - Moved Speed to main
     !    !*****************************************************
 
     PERS tooldata tGripperTool:=[TRUE,[[0.000145392,0,140.499655058],[1,0,-0.000000126,0]],[1,[0,0,75],[1,0,0,0],0,0,0]];
@@ -45,8 +48,6 @@ MODULE M_Tower_Of_Hanoi
     PERS num NMotionActive:=1;!0 ENABLES ROBOT MoveMENT WHILE 1 DISABLES ROBOT MoveMENT
     PERS num NStepCount:=0;!COMPLETED STEP COUNTER
     PERS num NtenDisc_Count:=26243;!TOTAL NUMBER OF CYCLES TO COMPLETE A 10 DISC TOWER IN STANDARD MODE.
-    VAR speeddata VSpeed:=V300;!CURRENT VELOCITY
-    PERS num NSpeed:=3;!SPEED SELECTION
     PERS num NJob:=4;!JOB SELECTION
     VAR num NFooBar:=0;!TEMP VAR FOR CALLING FUNC'S
 
@@ -83,7 +84,7 @@ MODULE M_Tower_Of_Hanoi
             IF btnresMainMenu=resCancel return ;
             TEST nMenuOption
             CASE 1:
-                R_Tower_Of_Hanoi;
+                R_Tower_Of_Hanoi_SolSel;
             CASE 2:
                 NOD:=UINumEntry(\Header:="Update Number Of Discs"\Message:="Enter Number Of Stacked Discs"\Icon:=iconInfo\InitValue:=NOD\MinValue:=0\MaxValue:=10);
                 R_Tower_Of_Hanoi_Menu;
@@ -102,43 +103,6 @@ MODULE M_Tower_Of_Hanoi
             CASE 7:
                 NMotionActive:=UINumEntry(\Header:="Motion Activation"\Message:="Enter 1 to Enable Motion Enter 0 to Disable Motion"\Icon:=iconInfo\InitValue:=NMotionActive\MinValue:=0\MaxValue:=1);
                 R_Tower_Of_Hanoi_Menu;
-                bTOHMenu:=False;
-            ENDTEST
-        ENDWHILE
-        bTOHMenu:=True;
-    ENDPROC
-
-    PROC R_Set_SPEEEEEED()
-        VAR num nMenuOption;
-        VAR btnres btnresMainMenu;
-        VAR num change_speed:=5;
-        CONST Listitem ListOptions{7}:=[["","Super Slow"],["","Slow"],["","Normal"],["","Fast"],["","Super Fast"],[""," "],["","JUST DONT!!!"]];
-
-        bTOHMenu:=True;
-        WHILE bTOHMenu DO
-            nMenuOption:=UIListView(\Result:=btnresMainMenu\Header:="Select Desired Speed",ListOptions\Buttons:=btnOKCancel\Icon:=iconInfo);
-            IF btnresMainMenu=resCancel return ;
-            TEST nMenuOption
-            CASE 1:
-                VSpeed:=V150;
-                R_Tower_Of_Hanoi_Menu;
-            CASE 2:
-                VSpeed:=V300;
-                R_Tower_Of_Hanoi_Menu;
-            CASE 3:
-                VSpeed:=V500;
-                R_Tower_Of_Hanoi_Menu;
-            CASE 4:
-                VSpeed:=V1000;
-                R_Tower_Of_Hanoi_Menu;
-            CASE 5:
-                VSpeed:=V2500;
-                R_Tower_Of_Hanoi_Menu;
-            CASE 6:
-            CASE 7:
-                VSpeed:=V10;
-                R_Tower_Of_Hanoi_Menu;
-                SpeedRefresh change_speed;
                 bTOHMenu:=False;
             ENDTEST
         ENDWHILE
@@ -164,10 +128,10 @@ MODULE M_Tower_Of_Hanoi
         RETURN 0;
     ENDFUNC
 
-    PROC R_Tower_Of_Hanoi()
+    PROC R_Tower_Of_Hanoi_SolSel()
         VAR num nMenuOption;
         VAR btnres btnresMainMenu;
-        CONST Listitem ListOptions{7}:=[["","CAUTION: ROBOT MAY MOVE"],[""," "],["","Select solution method and press OK to run program"],["","Press CANCEL to return to previous menu"],[""," "],["","STANDARD"],["","RECURSION"]];
+        CONST Listitem ListOptions{7}:=[["","Select solution method and press OK to run program"],["","Press CANCEL to return to previous menu"],[""," "],[""," "],[""," "],["","STANDARD"],["","RECURSION"]];
 
         bTOHMenu:=True;
         WHILE bTOHMenu DO
@@ -175,28 +139,39 @@ MODULE M_Tower_Of_Hanoi
             IF btnresMainMenu=resCancel return ;
             TEST nMenuOption
             CASE 1:
+                TPErase;
+                TPwrite "Wrong hole...WRONG HOLE!!!!!";
+                waittime 5;
+                TPErase;
             CASE 2:
+                TPErase;
+                TPwrite "Wrong hole...WRONG HOLE!!!!!";
+                waittime 5;
+                TPErase;
+                R_Tower_Of_Hanoi_SolSel;
             CASE 3:
-                TPErase;
-                TPwrite "Wrong hole...WRONG HOLE!!!!!";
-                waittime 5;
-                TPErase;
             CASE 4:
-                TPErase;
-                TPwrite "Wrong hole...WRONG HOLE!!!!!";
-                waittime 5;
-                TPErase;
-                RETURN ;
             CASE 5:
+                R_Set_SPEEEEEED;
+                R_Tower_Of_Hanoi_SolSel;
             CASE 6:
+            answer:= UIMessageBox ( \Header:="CAUTION: ROBOT MAY MOVE" \MsgArray:=CautionMessage \BtnArray:=RunCancel \Icon:=IconWarning); 
+            IF answer = 1 THEN 
                 Initialize;
-                R_Shaft_Stroke_Test;
-                RETURN ;
+                R_Tower_Of_Hanoi;
+            ELSEIF answer = 2 THEN 
+                Main;
+            ENDIF
+                Main;
             CASE 7:
+            answer:= UIMessageBox ( \Header:="CAUTION: ROBOT MAY MOVE" \MsgArray:=CautionMessage \BtnArray:=RunCancel \Icon:=IconWarning); 
+            IF answer = 1 THEN 
                 Initialize;
-                NFooBar:=R_Recursive_Tower_Solution(NOD,1,3,2);
-                RETURN ;
-                !Moving from rod 1 to rod 3, rod 2 is aux;
+                NFooBar:=R_Recursive_Tower_Solution(NOD,1,3,2);!Moving from rod 1 to rod 3, rod 2 is aux;
+            ELSEIF answer = 2 THEN 
+                Main;
+            ENDIF
+                Main;
                 bTOHMenu:=False;
             ENDTEST
         ENDWHILE
@@ -259,7 +234,7 @@ MODULE M_Tower_Of_Hanoi
         MoveL Shaft3,v100,fine,tGripperTool;
     ENDPROC
 
-    PROC R_Shaft_Stroke_Test()
+    PROC R_Tower_Of_Hanoi()
         MoveAbsJ jHomePos,v500,fine,tGripperTool;
         NStepCount:=0;!Resets NStepCount to 0
         NLoop:=1;!Resets NLoop to 0
