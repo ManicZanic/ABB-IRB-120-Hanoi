@@ -1,0 +1,14 @@
+To load these modules to a RobotStudio virtual controller
+1. Open the RAPID tab.
+2. Locate T_ROB1 on the left side of the screen (120-501650_Turvey, TAPID, T_ROB1)
+3. Right Click T_ROB1
+4. Select Load Module
+5. Navigate to your desired module folder.
+6. Highlight all modules you wish to load
+	NOTE if upgrading to latest revision load all modules in this folder.
+7. Press Open
+8. Say YES to all notification stating a module with the same name already exists in the task. 
+9. Open your virtual flex pendant.
+10. ensure motors are on.
+11. press PP to Main in the production window
+12. Press play and explore the new interface, programs, and features of the latest edition.
