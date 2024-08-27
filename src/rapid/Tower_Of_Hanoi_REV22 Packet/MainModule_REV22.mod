@@ -86,7 +86,7 @@ MODULE MainModule
             CASE 10:
                 TPErase;
                 TPWrite "HEY LOOK A ROCKET SHIP";
-                WaitTime 2;
+                WaitTime 1;
                 TPWrite "8=====D~~...___";
                 WaitTime 5;
                 TPErase;
@@ -257,13 +257,13 @@ MODULE MainModule
             CASE 8:
             answer:= UIMessageBox ( \Header:="CAUTION: ROBOT MAY MOVE" \MsgArray:=CautionMessage \BtnArray:=RunCancel \Icon:=IconWarning); 
             IF answer = 1 THEN 
+                MoveAbsJ jStarGazer,v500,fine,tool0;
                 TPErase;
                 TPWrite "HEY LOOK A ROCKET SHIP";
                 WaitTime 2;
-                MoveAbsJ jStarGazer,v500,fine,tool0;
                 TPWrite "*      *      *";
                 TPWrite "*    *       *    *";
-                TPWrite "8=====D~~...___";
+                TPWrite "   8=====D~~...___";
                 TPWrite "*      *      *";
                 TPWrite "*    *       *    *";
                 WaitTime 5;
