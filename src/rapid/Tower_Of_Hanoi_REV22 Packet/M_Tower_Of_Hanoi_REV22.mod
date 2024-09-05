@@ -142,6 +142,8 @@ MODULE M_Tower_Of_Hanoi
             nMenuOption:=UIListView(\Result:=btnresMainMenu\Header:="Tower Of Hanoi PROGRAM MENU",ListOptions\Buttons:=btnOKCancel\Icon:=iconWarning);
             IF btnresMainMenu=resCancel return ;
             TEST nMenuOption
+            CASE 1: wrong_hole;
+            CASE 2: wrong_hole;
             CASE 5: R_Set_SPEEEEEED;
             CASE 6:
                 IF ROBOT_MAY_MOVE() THEN 
