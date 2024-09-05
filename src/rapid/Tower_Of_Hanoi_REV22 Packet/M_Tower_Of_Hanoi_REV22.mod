@@ -28,6 +28,12 @@ MODULE M_Tower_Of_Hanoi
     !    !                           - Added bTOHmenu bool data
     !    !2024-08-23:    @ManicZanic - Commented out parameters to maybe use later
     !    !2024-08-26:    @ManicZanic - Moved Speed to main
+    !    !2024-09-05:    @Follansbeast - Refactored a bunch of code
+    !    !                           - Created shaft_data record and associated array to streamline initialization and pick and place.
+    !    !                           - Renamed variables so they are clear what they are doing where they are being used
+    !    !                           - Cleaned up menus
+    !    !                           - Added "BoolToggle" function
+    !    !                           - Cleaned up tier procedures 3-10 into single "R_Tier" procedure
     !    !*****************************************************
 
     RECORD record_shaft_data
