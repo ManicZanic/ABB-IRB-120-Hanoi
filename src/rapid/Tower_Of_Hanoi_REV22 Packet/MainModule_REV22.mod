@@ -23,6 +23,12 @@ MODULE MainModule
     !    !2024-08-26:    @ManicZanic - Modified motion alert notification interface.
     !    !                           - Created universal speed selection progam
     !    !                           - Modified Yoga Poses
+    !    !2024-09-05:    @Follansbeast - Added "The_Conductor" dance move
+    !    !2024-09-05:    @Follansbeast - Refactored a bunch of code
+    !    !                           - Cleaned up menus and removed faulty recursive calls
+    !    !                           - Separated 'rocket_ship', 'pervert', 'Move_Home', 'ROBOT_MAY_MOVE', 'wrong_hole', and 'move_to_yoga_pose' into their own procedures to simplify calling
+    !    !                           - Cleaned up and strcutured 'R_DancingQueen' using arrays and for loops
+    !    !                           - Pushed global variables into relevant functions where possible to reduce scope
     !    !*****************************************************
 
     PERS tooldata tMain:=[TRUE,[[0.000145392,0,140.499655058],[1,0,-0.000000126,0]],[1,[0,0,75],[1,0,0,0],0,0,0]];
@@ -150,7 +156,7 @@ MODULE MainModule
             CASE 2: VSpeed:=V300;
             CASE 3: VSpeed:=V500;
             CASE 4: VSpeed:=V1000;
-            CASE 5: VSpeed:=V6000;
+            CASE 5: VSpeed:=V3000;
             CASE 6:
             CASE 7: VSpeed:=V10;
             ENDTEST
