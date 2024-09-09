@@ -42,11 +42,11 @@ MODULE M_Tower_Of_Hanoi
     PERS num GOFz:=25;!GripperOffset
     PERS num GSafe:=75;!GripperSafeHeight
     PERS num NOD:=3;!NUMBER OF STACKED DISCS
-    PERS num NStart:=1;!START POSITION
-    PERS num NEnd:=2;!END POSITION
+    PERS num NStart:=2;!START POSITION
+    PERS num NEnd:=3;!END POSITION
     PERS num NLoop:=1;!LOOP COUNT
     PERS num NMotionActive:=1;!0 ENABLES ROBOT MoveMENT WHILE 1 DISABLES ROBOT MoveMENT
-    PERS num NStepCount:=0;!COMPLETED STEP COUNTER
+    PERS num NStepCount:=11;!COMPLETED STEP COUNTER
     PERS num NtenDisc_Count:=26243;!TOTAL NUMBER OF CYCLES TO COMPLETE A 10 DISC TOWER IN STANDARD MODE.
     PERS num NJob:=4;!JOB SELECTION
     VAR num NFooBar:=0;!TEMP VAR FOR CALLING FUNC'S
@@ -56,7 +56,7 @@ MODULE M_Tower_Of_Hanoi
     PERS num NShaft1Z1:=165;
     PERS num NShaft1Z2:=61.825;
     PERS num NShaft1Z3:=58.65;
-    PERS num NShaft1Z4:=-5.95;
+    PERS num NShaft1Z4:=-25;
     PERS num NShaft2X1:=-20;
     PERS num NShaft2Z1:=165;
     PERS num NShaft2Z2:=61.825;
@@ -66,7 +66,7 @@ MODULE M_Tower_Of_Hanoi
     PERS num NShaft3Z1:=165;
     PERS num NShaft3Z2:=61.825;
     PERS num NShaft3Z3:=58.65;
-    PERS num NShaft3Z4:=0;
+    PERS num NShaft3Z4:=19.05;
 
 
     CONST robtarget Shaft1:=[[0,200,0],[0.707106781,0,0.707106781,0],[0,0,-1,1],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
